@@ -24,11 +24,16 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 
 ## About Me
 
-With a bachelor's degree in history from the University of Southern Mississippi, supplemented by nearly 6 years of experience as a loss mitigation specialist at Regions Mortgage and a content review analyst at YouTube, I have honed my analytical skills and attention to detail. Over the past 3 years, I've dedicated myself to mastering data analytics, specializing in AI, predictive analytics, and data visualization.
+With a bachelor's degree in history from the University of Southern Mississippi, supplemented by nearly 6 years of experience as a loss mitigation specialist at Regions Mortgage and a content review analyst at YouTube, I have honed my analytical skills and attention to detail. My journey into data analytics began three years ago, driven by a passion for uncovering meaningful insights and driving actionable results through data. 
 
-### Hobbies and Interests
+During my tenure at Regions Mortgage, I specialized in mitigating financial risks and optimizing outcomes through meticulous data analysis. This experience provided a solid foundation in understanding complex datasets and their impact on strategic decision-making. Transitioning to YouTube, I further developed my analytical prowess by ensuring content integrity and adherence to regulatory standards—a role that sharpened my focus on data governance and compliance within digital platforms.
 
-Outside of data analytics, I am a shodan in Aikido. I took up th practice in 2001, gaining discipline, focus, and resilience, qualities that I apply to my professional endeavors. In the oh-so-HOT summers, here in Austin, I try to make it out to the Green Belt's swimming pools as much as possible! 
+Over the past three years, I've dedicated myself to mastering data analytics, specializing in AI, predictive analytics, and data visualization. Proficient in SQL for efficient data manipulation and Python for statistical analysis, I leverage these skills to extract actionable insights and drive business value. My expertise extends to using tools like Tableau and D3.js to create compelling visualizations that communicate complex data in intuitive ways.
+
+Outside of my professional endeavors, I am a first-degree black belt in Aikido, a martial art that embodies discipline and harmony. This journey reflects my commitment to continuous learning and resilience—values that shape my approach to tackling challenges in data analytics. I am deeply involved in Austin's cultural community, actively participating in local events and volunteering for causes that resonate with my values of community engagement and positive social impact.
+
+As I continue to evolve in the field of data analytics, I am driven by a passion for innovation and a commitment to leveraging data-driven strategies to solve real-world problems. I strive to integrate my diverse skill set, professional experience, and personal values to deliver robust data solutions that empower organizations and drive sustainable growth.
+
 
 ## Highlight Projects
 
