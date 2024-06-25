@@ -6,10 +6,6 @@ callouts: callouts
 show_sidebar: true
 ---
 
-<div class="profile-photo">
-    <img src="assets/images/profile-image.jpg" alt="Robert Grantham" class="profile-photo" loading="lazy">
-</div>
-
 # Transforming Data into Actionable Insights
 
 ### Empowering Businesses with Cutting-Edge Data Analytics
