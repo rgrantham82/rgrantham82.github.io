@@ -1,6 +1,6 @@
 ---
 title: Welcome to my portfolio!
-subtitle: 
+subtitle: Here, I showcase various data analytics projects I've worked on. You'll find a collection of projects that highlight my skills and expertise in SQL, fraud detection, etc. Each project includes a brief description and links to further details.
 layout: page
 callouts: callouts
 show_sidebar: true
@@ -10,48 +10,7 @@ show_sidebar: true
 
 ### Empowering Businesses with Cutting-Edge Data Analytics
 
-I specialize in leveraging AI, Predictive Analytics, and Data Visualization to provide businesses with precise and actionable insights. My goal is to drive strategic decisions and innovative solutions.
-
-<div class='tableauPlaceholder' id='viz1719013741336'>
-    <noscript>
-        <a href='#'>
-            <img alt='Austin Violent Crime Insights Dashboard' src='https://public.tableau.com/static/images/Au/AustinViolentCrimeInsightsDashboard/Dashboard1/1_rss.png' style='border: none' />
-        </a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='AustinViolentCrimeInsightsDashboard/Dashboard1' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https://public.tableau.com/static/images/Au/AustinViolentCrimeInsightsDashboard/Dashboard1/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-    </object>
-</div>
-
-<script type='text/javascript'>
-    var divElement = document.getElementById('viz1719013741336');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    if (divElement.offsetWidth > 800) {
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-    } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-    } else {
-        vizElement.style.width = '100%';
-        vizElement.style.height = '1477px';
-    }
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
+I specialize in leveraging AI, Predictive Analytics, and Data Visualization to provide businesses with precise and actionable insights. With a background in mortgage loss mitigation and consumer tech, including roles at Regions Mortgage and YouTube, I bring a unique blend of analytical rigor and industry experience to every project.
 
 ### Testimonials
 
@@ -63,32 +22,34 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 2. **Predictive Modeling:** Forecast future trends and behaviors with high accuracy, allowing businesses to proactively address challenges and opportunities.
 3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
 
-<a href="mailto:robertgrantham40@gmail.com" class="btn-secondary">Contact Me for a Customized Data Solution</a>
+## About Me
 
-### Features
+With a bachelor's degree in history from the University of Southern Mississippi, supplemented by nearly 6 years of experience as a loss mitigation specialist at Regions Mortgage and a content review analyst at YouTube, I have honed my analytical skills and attention to detail. Over the past 3 years, I've dedicated myself to mastering data analytics, specializing in AI, predictive analytics, and data visualization.
 
-- **Advanced AI Integration:** Implement AI and machine learning models to enhance data analytics capabilities.
-- **Comprehensive Data Analysis:** Provide end-to-end data analysis services from data collection to actionable insights.
-- **Custom Dashboards:** Design and develop custom dashboards that offer real-time data visualization and reporting.
-- **Data Governance:** Ensure data quality, security, and compliance with best practices and regulations.
-- **Continuous Intelligence:** Enable real-time analytics to support ongoing decision-making processes.
+### Hobbies and Interests
 
-## Highlight Project: Austin Violent Crime Dashboard
+Outside of data analytics, I am a shodan in Aikido. I took up th practice in 2001, gaining discipline, focus, and resilience, qualities that I apply to my professional endeavors. In the oh-so-HOT summers, here in Austin, I try to make it out to the Green Belt's swimming pools as much as possible! 
 
-### Project Overview
+## Highlight Projects
+
+### Austin Violent Crime Insights Dashboard
+
+#### Project Overview
 
 The Austin Violent Crime Dashboard is an interactive tool that visualizes crime data across Austin, TX. It leverages data analytics and visualization techniques to provide insights into crime trends and patterns, aiding law enforcement and policymakers in making informed decisions.
 
-### Key Features
+#### Key Features
 
 - **Interactive Maps:** Display crime hotspots and trends geographically.
 - **Time Series Analysis:** Visualize crime data over time to identify patterns and anomalies.
 - **Detailed Reports:** Generate comprehensive reports for specific areas or time periods.
 - **Predictive Analytics:** Use machine learning models to forecast future crime trends and help allocate resources efficiently.
 
-### Explore the Austin Violent Crime Dashboard
+### Police Shootings Analysis
 
-<a href="/projects/austin-violent-crime-dashboard" class="btn-primary">Explore the Dashboard</a>
+#### Project Overview
+
+Analyzing police shootings data to understand patterns and factors influencing incidents.
 
 ### Visit My Blog
 
