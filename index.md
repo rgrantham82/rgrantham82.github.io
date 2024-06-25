@@ -1,6 +1,6 @@
 ---
-title: Robert Grantham 
-subtitle: Data Analyst Portfolio 
+title: Welcome to my portfolio!
+subtitle: 
 layout: page
 callouts: home_callouts
 show_sidebar: true
