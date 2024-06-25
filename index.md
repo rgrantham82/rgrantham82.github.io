@@ -6,15 +6,15 @@ callouts: home_callouts
 show_sidebar: true
 ---
 
+<div class="profile-photo">
+    <img src="assets/images/profile-image.jpg" alt="Robert Grantham" class="profile-photo" loading="lazy">
+</div>
+
 # Transforming Data into Actionable Insights
 
 ### Empowering Businesses with Cutting-Edge Data Analytics
 
 I specialize in leveraging AI, Predictive Analytics, and Data Visualization to provide businesses with precise and actionable insights. My goal is to drive strategic decisions and innovative solutions.
-
-<div class="profile-photo">
-    <img src="assets/images/profile-image.jpg" alt="Robert Grantham" class="profile-photo" loading="lazy">
-</div>
 
 <div class="cta-buttons">
     <div class="cta-button">
