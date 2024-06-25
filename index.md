@@ -50,9 +50,3 @@ The Austin Violent Crime Dashboard is an interactive tool that visualizes crime 
 #### Project Overview
 
 Analyzing police shootings data to understand patterns and factors influencing incidents.
-
-### Visit My Blog
-
-Stay updated with my latest thoughts and insights on data analytics, AI, and more.
-
-<a href="/blog" class="btn-primary">Visit the Blog</a>
