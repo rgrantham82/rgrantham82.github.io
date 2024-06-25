@@ -2,7 +2,7 @@
 title: Welcome to my portfolio!
 subtitle: 
 layout: page
-callouts: home_callouts
+callouts: callouts
 show_sidebar: true
 ---
 
