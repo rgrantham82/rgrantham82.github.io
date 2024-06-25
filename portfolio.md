@@ -3,7 +3,7 @@ layout: page
 title: Portfolio
 subtitle: 
 description: 
-gallery: projects
+showcase: projects
 show_sidebar: false
 ---
 
