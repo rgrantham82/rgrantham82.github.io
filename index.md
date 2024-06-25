@@ -16,18 +16,6 @@ show_sidebar: true
 
 I specialize in leveraging AI, Predictive Analytics, and Data Visualization to provide businesses with precise and actionable insights. My goal is to drive strategic decisions and innovative solutions.
 
-<div class="cta-buttons">
-    <div class="cta-button">
-        <a href="/projects" class="btn-primary">Explore My Work</a>
-    </div>
-    <div class="cta-button">
-        <a href="mailto:robertgrantham40@gmail.com" class="btn-secondary">Schedule a Consultation</a>
-    </div>
-    <div class="cta-button">
-        <a href="/assets/files/Robert_Grantham_Resume.pdf" class="btn-secondary">Download My Resume</a>
-    </div>
-</div>
-
 <div class='tableauPlaceholder' id='viz1719013741336'>
     <noscript>
         <a href='#'>
