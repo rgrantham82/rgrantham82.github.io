@@ -1,0 +1,30 @@
+style: is-light
+height: is-medium
+items:
+  - title: Explore My Work
+    subtitle: Discover My Projects
+    icon: fa-folder-open
+    description: >
+      Dive into my portfolio to see the diverse range of data analytics projects I have worked on.
+
+      From sales performance dashboards to healthcare data integration, explore how I turn data into actionable insights.
+    call_to_action_name: View Projects
+    call_to_action_link: /portfolio.md
+  - title: Contact Me for a Customized Data Solution
+    subtitle: Let's Collaborate
+    icon: fa-envelope
+    description: >
+      Need a data-driven approach to tackle your business challenges?
+
+      Get in touch with me to discuss customized data solutions that meet your specific needs.
+    call_to_action_name: Get in Touch
+    call_to_action_link: mailto:robertgrantham40@gmail.com
+  - title: View My Resume
+    subtitle: Learn About My Background
+    icon: fa-file-alt
+    description: >
+      Interested in my professional journey and experience?
+
+      View my resume to get a detailed overview of my skills, background, and expertise in data analytics.
+    call_to_action_name: View Resume
+    call_to_action_link: /assets/files/Robert_Grantham_Resume.pdf
