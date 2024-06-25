@@ -12,6 +12,17 @@ show_sidebar: true
 
 I specialize in leveraging AI, Predictive Analytics, and Data Visualization to provide businesses with precise and actionable insights. My goal is to drive strategic decisions and innovative solutions.
 
+<style>
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 20px auto;
+        display: block;
+    }
+</style>
+
 <div class="profile-photo">
     <img src="assets/images/profile-image.jpg" alt="Robert Grantham" class="profile-photo" loading="lazy">
 </div>
