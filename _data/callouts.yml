@@ -9,7 +9,7 @@ items:
 
       From sales performance dashboards to healthcare data integration, explore how I turn data into actionable insights.
     call_to_action_name: View Projects
-    call_to_action_link: /portfolio.md
+    call_to_action_link: /portfolio
   - title: Contact Me for a Customized Data Solution
     subtitle: Let's Collaborate
     icon: fa-envelope
