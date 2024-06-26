@@ -1,47 +1,53 @@
-- title: SQL Examples
-  images:
-    - link: https://github.com/rgrantham82/SQL_Examples
-      large_link: /assets/images/sql-screenshot.PNG
-      alt: SQL Examples Image
-      description: Example SQL queries and solutions.
-      ratio: is-16by9
+intro: |-
+  Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.
 
-- title: Fraud Detection Project
-  images:
-    - link: https://github.com/rgrantham82/fraud-detection
-      large_link: /assets/images/fraud-detection-plot.png
-      alt: Fraud Detection Image
-      description: Fraud detection project details.
-      ratio: is-16by9
+  [Explore my GitHub repository](https://github.com/rgrantham82) for more projects and details.
 
-- title: Forecasting Mini-Course Sales
-  images:
-    - link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
-      large_link: /assets/images/mini-course-sales-forecast.png
-      alt: Forecasting Sales Image
-      description: Kaggle forecasting mini-course sales.
-      ratio: is-16by9
+items:
+  - title: SQL Examples
+    images:
+      - link: https://github.com/rgrantham82/SQL_Examples
+        large_link: /assets/images/sql-screenshot.PNG
+        alt: SQL Examples Image
+        description: Example SQL queries and solutions.
+        ratio: is-16by9
 
-- title: Predicting Credit Approval
-  images:
-    - link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
-      large_link: /assets/images/credit-approval-screenshot.PNG
-      alt: Credit Approval Image
-      description: Kaggle project on predicting credit approval.
-      ratio: is-16by9
+  - title: Fraud Detection Project
+    images:
+      - link: https://github.com/rgrantham82/fraud-detection
+        large_link: /assets/images/fraud-detection-plot.png
+        alt: Fraud Detection Image
+        description: Fraud detection project details.
+        ratio: is-16by9
 
-- title: Austin Violent Crime Insights Dashboard
-  images:
-    - link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
-      large_link: /assets/images/Austin Violent Crime Insights Dashboard.png
-      alt: Austin Crime Dashboard Image
-      description: Tableau dashboard on Austin violent crime insights.
-      ratio: is-16by9
+  - title: Forecasting Mini-Course Sales
+    images:
+      - link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
+        large_link: /assets/images/mini-course-sales-forecast.png
+        alt: Forecasting Sales Image
+        description: Kaggle forecasting mini-course sales.
+        ratio: is-16by9
 
-- title: Police Shootings Analysis
-  images:
-    - link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
-      large_link: /assets/images/police-shootings-plot.png
-      alt: Police Shootings Analysis Image
-      description: Analysis of police shootings data.
-      ratio: is-16by9
+  - title: Predicting Credit Approval
+    images:
+      - link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
+        large_link: /assets/images/credit-approval-screenshot.PNG
+        alt: Credit Approval Image
+        description: Kaggle project on predicting credit approval.
+        ratio: is-16by9
+
+  - title: Austin Violent Crime Insights Dashboard
+    images:
+      - link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
+        large_link: /assets/images/Austin Violent Crime Insights Dashboard.png
+        alt: Austin Crime Dashboard Image
+        description: Tableau dashboard on Austin violent crime insights.
+        ratio: is-16by9
+
+  - title: Police Shootings Analysis
+    images:
+      - link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
+        large_link: /assets/images/police-shootings-plot.png
+        alt: Police Shootings Analysis Image
+        description: Analysis of police shootings data.
+        ratio: is-16by9
