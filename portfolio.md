@@ -3,6 +3,6 @@ layout: page
 title: Projects
 subtitle: 
 description: 
-showcase: projects
+gallery: projects
 show_sidebar: false
 ---
