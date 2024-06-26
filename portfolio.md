@@ -1,21 +1,23 @@
 ---
 layout: page
-title: Portfolio
-subtitle: Discover My Data Analytics Projects
-description: Delve into a variety of data analytics projects showcasing my skills in SQL, predictive analytics, data visualization, and more.
+title: Projects
+subtitle: Explore My Data Analytics Projects
+description: Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.
 show_sidebar: false
 ---
 
 <div class="container">
   <section class="section">
     <div class="content">
-      
+      <h1>Welcome to my Portfolio</h1>
+      <p>Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.</p>
+      <p><a href="https://github.com/rgrantham82">Explore my GitHub repository</a> for more projects and details.</p>
     </div>
     
     <div class="columns is-multiline">
       <!-- SQL Examples -->
       <div class="column is-one-third">
-        <div class="card">
+        <div class="card project-card">
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://github.com/rgrantham82/SQL_Examples">
@@ -32,13 +34,16 @@ show_sidebar: false
             <div class="content">
               Example SQL queries and solutions.
             </div>
+            <footer class="card-footer">
+              <a href="https://github.com/rgrantham82/SQL_Examples" class="card-footer-item">View Project</a>
+            </footer>
           </div>
         </div>
       </div>
 
       <!-- Fraud Detection Project -->
       <div class="column is-one-third">
-        <div class="card">
+        <div class="card project-card">
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://github.com/rgrantham82/fraud-detection">
@@ -55,13 +60,16 @@ show_sidebar: false
             <div class="content">
               Fraud detection project details.
             </div>
+            <footer class="card-footer">
+              <a href="https://github.com/rgrantham82/fraud-detection" class="card-footer-item">View Project</a>
+            </footer>
           </div>
         </div>
       </div>
 
       <!-- Forecasting Mini-Course Sales -->
       <div class="column is-one-third">
-        <div class="card">
+        <div class="card project-card">
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales">
@@ -78,13 +86,16 @@ show_sidebar: false
             <div class="content">
               Kaggle forecasting mini-course sales.
             </div>
+            <footer class="card-footer">
+              <a href="https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales" class="card-footer-item">View Project</a>
+            </footer>
           </div>
         </div>
       </div>
 
       <!-- Predicting Credit Approval -->
       <div class="column is-one-third">
-        <div class="card">
+        <div class="card project-card">
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://www.kaggle.com/code/robertgrantham/predicting-credit-approval">
@@ -101,13 +112,16 @@ show_sidebar: false
             <div class="content">
               Kaggle project on predicting credit approval.
             </div>
+            <footer class="card-footer">
+              <a href="https://www.kaggle.com/code/robertgrantham/predicting-credit-approval" class="card-footer-item">View Project</a>
+            </footer>
           </div>
         </div>
       </div>
 
       <!-- Austin Violent Crime Insights Dashboard -->
       <div class="column is-one-third">
-        <div class="card">
+        <div class="card project-card">
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link">
@@ -124,13 +138,16 @@ show_sidebar: false
             <div class="content">
               Tableau dashboard on Austin violent crime insights.
             </div>
+            <footer class="card-footer">
+              <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" class="card-footer-item">View Project</a>
+            </footer>
           </div>
         </div>
       </div>
 
       <!-- Police Shootings Analysis -->
       <div class="column is-one-third">
-        <div class="card">
+        <div class="card project-card">
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://www.kaggle.com/code/robertgrantham/police-shootings-analysis">
@@ -147,9 +164,46 @@ show_sidebar: false
             <div class="content">
               Analysis of police shootings data.
             </div>
+            <footer class="card-footer">
+              <a href="https://www.kaggle.com/code/robertgrantham/police-shootings-analysis" class="card-footer-item">View Project</a>
+            </footer>
           </div>
         </div>
       </div>
     </div>
   </section>
 </div>
+
+<style>
+  /* Project Card Styles */
+  .project-card {
+    transition: transform 0.2s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .project-card-image {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card-footer-item {
+    background-color: #3273dc;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .card-footer-item:hover {
+    background-color: #276cda;
+  }
+</style>
