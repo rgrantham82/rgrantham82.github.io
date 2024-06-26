@@ -6,10 +6,11 @@ description: [Explore my GitHub repository](https://github.com/rgrantham82) for 
 show_sidebar: false
 ---
 
-<!-- SQL Examples -->
+<div class="columns is-multiline">
+  <!-- SQL Examples -->
   <div class="column is-one-third">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image project-card-image">
         <figure class="image is-4by3">
           <a href="https://github.com/rgrantham82/SQL_Examples">
             <img src="/assets/images/sql-screenshot.PNG" alt="SQL Examples Image">
@@ -29,7 +30,7 @@ show_sidebar: false
   <!-- Fraud Detection Project -->
   <div class="column is-one-third">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image project-card-image">
         <figure class="image is-4by3">
           <a href="https://github.com/rgrantham82/fraud-detection">
             <img src="/assets/images/fraud-detection-plot.png" alt="Fraud Detection Image">
@@ -49,7 +50,7 @@ show_sidebar: false
   <!-- Forecasting Mini-Course Sales -->
   <div class="column is-one-third">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image project-card-image">
         <figure class="image is-4by3">
           <a href="https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales">
             <img src="/assets/images/mini-course-sales-forecast.png" alt="Forecasting Sales Image">
@@ -69,7 +70,7 @@ show_sidebar: false
   <!-- Predicting Credit Approval -->
   <div class="column is-one-third">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image project-card-image">
         <figure class="image is-4by3">
           <a href="https://www.kaggle.com/code/robertgrantham/predicting-credit-approval">
             <img src="/assets/images/credit-approval-screenshot.PNG" alt="Credit Approval Image">
@@ -89,7 +90,7 @@ show_sidebar: false
   <!-- Austin Violent Crime Insights Dashboard -->
   <div class="column is-one-third">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image project-card-image">
         <figure class="image is-4by3">
           <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link">
             <img src="/assets/images/Austin Violent Crime Insights Dashboard.png" alt="Austin Crime Dashboard Image">
@@ -109,7 +110,7 @@ show_sidebar: false
   <!-- Police Shootings Analysis -->
   <div class="column is-one-third">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image project-card-image">
         <figure class="image is-4by3">
           <a href="https://www.kaggle.com/code/robertgrantham/police-shootings-analysis">
             <img src="/assets/images/police-shootings-plot.png" alt="Police Shootings Analysis Image">
@@ -125,5 +126,7 @@ show_sidebar: false
         <div class="content"> Analysis of police shootings data. </div>
       </div>
     </div>
+  </div>
+</div>
   </div>
 </div>
