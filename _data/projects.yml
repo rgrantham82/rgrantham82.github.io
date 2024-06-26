@@ -10,7 +10,7 @@ items:
         large_link: /assets/images/sql-screenshot.PNG
         alt: SQL Examples Image
         description: Example SQL queries and solutions.
-        ratio: is-16by9
+        ratio: is-4by3
 
   - title: Fraud Detection Project
     images:
@@ -18,7 +18,7 @@ items:
         large_link: /assets/images/fraud-detection-plot.png
         alt: Fraud Detection Image
         description: Fraud detection project details.
-        ratio: is-16by9
+        ratio: is-4by3
 
   - title: Forecasting Mini-Course Sales
     images:
@@ -26,7 +26,7 @@ items:
         large_link: /assets/images/mini-course-sales-forecast.png
         alt: Forecasting Sales Image
         description: Kaggle forecasting mini-course sales.
-        ratio: is-16by9
+        ratio: is-4by3
 
   - title: Predicting Credit Approval
     images:
@@ -34,7 +34,7 @@ items:
         large_link: /assets/images/credit-approval-screenshot.PNG
         alt: Credit Approval Image
         description: Kaggle project on predicting credit approval.
-        ratio: is-16by9
+        ratio: is-4by3
 
   - title: Austin Violent Crime Insights Dashboard
     images:
@@ -42,7 +42,7 @@ items:
         large_link: /assets/images/Austin Violent Crime Insights Dashboard.png
         alt: Austin Crime Dashboard Image
         description: Tableau dashboard on Austin violent crime insights.
-        ratio: is-16by9
+        ratio: is-4by3
 
   - title: Police Shootings Analysis
     images:
@@ -50,4 +50,4 @@ items:
         large_link: /assets/images/police-shootings-plot.png
         alt: Police Shootings Analysis Image
         description: Analysis of police shootings data.
-        ratio: is-16by9
+        ratio: is-4by3
