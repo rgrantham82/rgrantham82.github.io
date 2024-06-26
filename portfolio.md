@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Projects
-subtitle: 
-description: [Explore my GitHub repository](https://github.com/rgrantham82) for more projects and details.
+title: Portfolio
+subtitle: Discover My Data Analytics Projects
+description: Delve into a variety of data analytics projects showcasing my skills in SQL, predictive analytics, data visualization, and more.
 show_sidebar: false
 ---
 
