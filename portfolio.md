@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Portfolio
 subtitle: Explore My Data Analytics Projects
 description: Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.
 show_sidebar: false
@@ -9,7 +9,7 @@ show_sidebar: false
 <div class="container">
   <section class="section">
     <div class="content">
-      <h1>Welcome to my Portfolio</h1>
+      <h1>Welcome to my Projects</h1>
       <p>Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.</p>
       <p><a href="https://github.com/rgrantham82">Explore my GitHub repository</a> for more projects and details.</p>
     </div>
