@@ -28,11 +28,3 @@ items:
       View my resume to get a detailed overview of my skills, background, and expertise in data analytics.
     call_to_action_name: View Resume
     call_to_action_link: /assets/files/Robert_Grantham_Resume.pdf
-  - title: Visit My Blog
-    subtitle: Read Latest Insights
-    icon: fa-rss
-    description: >
-      Stay updated with my thoughts and insights on data analytics, AI, and more. Explore articles covering industry trends, case studies, and practical tips.
-
-    call_to_action_name: Visit Blog
-    call_to_action_link: /blog
