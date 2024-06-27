@@ -45,17 +45,4 @@
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Card Footer Button Styling */
-.card-footer-item {
-  background-color: #3273dc;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-.card-footer-item:hover {
-  background-color: #276cda;
-}
+} 
