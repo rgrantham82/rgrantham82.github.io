@@ -39,8 +39,8 @@ items:
   - title: Austin Violent Crime Insights Dashboard
     images:
       - link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
-        large_link: /assets/images/Austin Violent Crime Insights Dashboard.png
-        alt: Austin Crime Dashboard Image
+        large_link: /assets/images/austin-crime-dashboard.html
+        alt: Austin Crime Dashboard 
         description: Tableau dashboard on Austin violent crime insights.
         ratio: is-4by3
 
