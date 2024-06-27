@@ -14,9 +14,38 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
-/* Additional Hero Section Styling (if needed) */
+/* Hero Section */
 .hero {
-  /* Add any additional hero section styling here */
+  background-color: #f0f0f0; /* Light background color */
+  padding: 100px 0; /* Padding top and bottom */
+  text-align: center; /* Center align text */
+  color: #333; /* Dark text color */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Larger font size for main heading */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.hero p {
+  font-size: 1.2rem; /* Font size for paragraphs */
+  margin-bottom: 30px; /* Bottom margin for spacing */
+}
+
+.hero .button {
+  background-color: #3273dc; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside button */
+  font-size: 1rem; /* Font size for button text */
+  text-transform: uppercase; /* Uppercase button text */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.hero .button:hover {
+  background-color: #276cda; /* Darker background color on hover */
 }
 
 /* Project Card Image Styling */
