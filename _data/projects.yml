@@ -23,8 +23,8 @@ items:
   - title: Forecasting Mini-Course Sales
     images:
       - link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
-        large_link: /assets/images/mini-course-sales-forecast.png
-        alt: Forecasting Sales Image
+        large_link: /assets/images/interactive-sales-forecast.html
+        alt: Forecasting Sales Interactive Chart 
         description: Kaggle forecasting mini-course sales.
         ratio: is-4by3
 
