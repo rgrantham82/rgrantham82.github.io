@@ -4,6 +4,37 @@
 // Import Main CSS file from theme
 @import "main";
 
+/* Color Variables */
+:root {
+  --slate-blue-dark: #4e5a8e;
+  --slate-blue-light: #6a78b0;
+  --cream: #f5f5dc;
+  --eggshell-white: #f0ead6;
+  --black: #000000;
+}
+
+/* General Styles */
+body {
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--slate-blue-dark);
+}
+
+/* Header and Hero Section */
+header,
+.hero {
+  background-color: var(--slate-blue-dark);
+  color: var(--cream);
+}
+
+/* Footer */
+footer {
+  background-color: var(--slate-blue-light);
+  color: var(--cream);
+}
+
 /* Profile Photo */
 .profile-photo {
   width: 150px; /* Adjust width as needed */
@@ -45,4 +76,4 @@
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-} 
+}
