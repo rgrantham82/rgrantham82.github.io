@@ -16,6 +16,7 @@
 /* General Styles */
 body {
   color: var(--black);
+  background-color: var(--eggshell-white); /* Optional: Set a background color for the body */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,6 +28,10 @@ header,
 .hero {
   background-color: var(--slate-blue-dark);
   color: var(--cream);
+}
+
+.hero {
+  color: var(--eggshell-white); /* Ensure the text in the hero section is eggshell white */
 }
 
 /* Footer */
