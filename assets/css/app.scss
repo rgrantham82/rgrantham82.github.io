@@ -1,43 +1,53 @@
 ---
 ---
 
-// Import Main CSS file from theme
+/* Import Main CSS file from theme */
 @import "main";
 
 /* Color Variables */
 :root {
-  --slate-blue-dark: #4e5a8e;
-  --slate-blue-light: #6a78b0;
-  --cream: #f5f5dc;
-  --eggshell-white: #f0ead6;
+  --slate-blue-dark: #6A5ACD;
+  --slate-blue-light: #778899;
+  --cream: #F0EAD6;
   --black: #000000;
 }
 
 /* General Styles */
 body {
   color: var(--black);
-  background-color: var(--eggshell-white); /* Optional: Set a background color for the body */
+  background-color: var(--cream); /* Optional: Set a background color for the body */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--slate-blue-dark);
-}
-
-/* Header and Hero Section */
-header,
-.hero {
+/* Headers and Navigation */
+.navbar.is-primary,
+.hero.is-primary {
   background-color: var(--slate-blue-dark);
   color: var(--cream);
 }
 
-.hero {
-  color: var(--eggshell-white); /* Ensure the text in the hero section is eggshell white */
+.navbar.is-primary .navbar-item,
+.navbar.is-primary .navbar-link,
+.navbar.is-primary .navbar-burger span,
+.hero.is-primary .title,
+.hero.is-primary .subtitle {
+  color: var(--cream);
 }
 
 /* Footer */
-footer {
-  background-color: var(--slate-blue-light);
+.footer.is-primary {
+  background-color: var(--slate-blue-dark);
   color: var(--cream);
+}
+
+.footer.is-primary p a {
+  color: var(--cream);
+}
+
+/* Headings */
+.title,
+.subtitle,
+h1, h2, h3, h4, h5, h6 {
+  color: var(--slate-blue-dark);
 }
 
 /* Profile Photo */
