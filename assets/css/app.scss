@@ -64,3 +64,48 @@
 .card-footer-item:hover {
   background-color: #276cda;
 }
+
+/* Footer Section */
+.footer {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 40px 0; /* Padding top and bottom */
+}
+
+.footer .container {
+  max-width: 1200px; /* Max width of the container */
+  margin: 0 auto; /* Center align container */
+}
+
+.footer h3 {
+  font-size: 1.5rem; /* Larger font size for headers */
+  color: #333; /* Dark text color */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.footer p {
+  font-size: 1rem; /* Regular font size for paragraphs */
+  color: #666; /* Medium dark text color */
+  margin-bottom: 10px; /* Bottom margin for spacing */
+}
+
+.footer a {
+  color: #3273dc; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer a:hover {
+  color: #276cda; /* Darker link color on hover */
+}
+
+.footer .columns {
+  margin-top: 20px; /* Top margin for columns */
+}
+
+.footer .columns .column {
+  padding: 0 10px; /* Padding for columns */
+}
+
+.footer .content.is-small {
+  margin-top: 20px; /* Top margin for content sections */
+}
