@@ -14,40 +14,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
-/* Hero Section */
-.hero {
-  background-color: #f0f0f0; /* Light background color */
-  padding: 100px 0; /* Padding top and bottom */
-  text-align: center; /* Center align text */
-  color: #333; /* Dark text color */
-}
-
-.hero h1 {
-  font-size: 3rem; /* Larger font size for main heading */
-  margin-bottom: 20px; /* Bottom margin for spacing */
-}
-
-.hero p {
-  font-size: 1.2rem; /* Font size for paragraphs */
-  margin-bottom: 30px; /* Bottom margin for spacing */
-}
-
-.hero .button {
-  background-color: #3273dc; /* Button background color */
-  color: #fff; /* Button text color */
-  border: none; /* Remove button border */
-  border-radius: 4px; /* Rounded corners */
-  padding: 10px 20px; /* Padding inside button */
-  font-size: 1rem; /* Font size for button text */
-  text-transform: uppercase; /* Uppercase button text */
-  cursor: pointer; /* Cursor style */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
-}
-
-.hero .button:hover {
-  background-color: #276cda; /* Darker background color on hover */
-}
-
 /* Project Card Image Styling */
 .project-card-image {
   width: 100%;
@@ -92,49 +58,4 @@
 
 .card-footer-item:hover {
   background-color: #276cda;
-}
-
-/* Footer Section */
-.footer {
-  background-color: #f8f9fa; /* Light background color */
-  padding: 40px 0; /* Padding top and bottom */
-}
-
-.footer .container {
-  max-width: 1200px; /* Max width of the container */
-  margin: 0 auto; /* Center align container */
-}
-
-.footer h3 {
-  font-size: 1.5rem; /* Larger font size for headers */
-  color: #333; /* Dark text color */
-  margin-bottom: 20px; /* Bottom margin for spacing */
-}
-
-.footer p {
-  font-size: 1rem; /* Regular font size for paragraphs */
-  color: #666; /* Medium dark text color */
-  margin-bottom: 10px; /* Bottom margin for spacing */
-}
-
-.footer a {
-  color: #3273dc; /* Link color */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-.footer a:hover {
-  color: #276cda; /* Darker link color on hover */
-}
-
-.footer .columns {
-  margin-top: 20px; /* Top margin for columns */
-}
-
-.footer .columns .column {
-  padding: 0 10px; /* Padding for columns */
-}
-
-.footer .content.is-small {
-  margin-top: 20px; /* Top margin for content sections */
 }
