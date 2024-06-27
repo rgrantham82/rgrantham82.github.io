@@ -11,7 +11,6 @@ show_sidebar: false
     <div class="content">
       <h1>Welcome to my Projects</h1>
       <p>Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.</p>
-      <p><a href="https://github.com/rgrantham82">Explore my GitHub repository</a> for more projects and details.</p>
     </div>
     
     <div class="columns is-multiline">
@@ -73,7 +72,7 @@ show_sidebar: false
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales">
-                <img src="/assets/images/mini-course-sales-forecast.png" alt="Forecasting Sales Image">
+                <img src="/assets/images/interactive-sales-forecast.html" alt="Forecasting Sales Image">
               </a>
             </figure>
           </div>
@@ -125,7 +124,7 @@ show_sidebar: false
           <div class="card-image project-card-image">
             <figure class="image is-4by3">
               <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link">
-                <img src="/assets/images/Austin Violent Crime Insights Dashboard.png" alt="Austin Crime Dashboard Image">
+                <img src="/assets/images/austin-crime-dashboard.html" alt="Austin Crime Dashboard Image">
               </a>
             </figure>
           </div>
