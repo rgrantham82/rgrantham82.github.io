@@ -5,10 +5,11 @@
 
 /* Color Variables */
 :root {
-  --slate-blue-dark: #6A5ACD;
-  --slate-blue-light: #778899;
-  --cream: #F0EAD6;
   --black: #000000;
+  --cream: #FFF8E7;
+  --blue: #1E90FF;
+  --purple: #6A5ACD;
+  --light-purple: #9370DB;
 }
 
 /* General Styles */
@@ -20,7 +21,7 @@ body {
 /* Headers and Navigation */
 .navbar.is-primary,
 .hero.is-primary {
-  background-color: var(--slate-blue-dark);
+  background-color: var(--blue);
   color: var(--cream);
 }
 
@@ -34,7 +35,7 @@ body {
 
 /* Footer */
 .footer.is-primary {
-  background-color: var(--slate-blue-dark);
+  background-color: var(--purple);
   color: var(--cream);
 }
 
@@ -46,7 +47,7 @@ body {
 .title,
 .subtitle,
 h1, h2, h3, h4, h5, h6 {
-  color: var(--slate-blue-dark);
+  color: var(--blue);
 }
 
 /* Profile Photo */
