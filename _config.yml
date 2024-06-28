@@ -28,12 +28,6 @@ disqus:
 
 plugins:
   - jekyll-remote-theme
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-seo-tag
-  - kramdown-parser-gfm
-  - jekyll-redirect-from
 
 #google_analytics: UA-code-here
 cookie_policy: /cookie-policy/
