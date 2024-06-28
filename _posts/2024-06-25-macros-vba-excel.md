@@ -2,10 +2,10 @@
 layout: post
 title:  "Automating Monthly Sales Report Generation with Macros and VBA in Excel"
 date:   2024-06-25
-description: "Learn how to automate monthly sales report generation using macros and VBA in Excel, enhancing efficiency and accuracy."
+description: Learn how to automate monthly sales report generation using macros and VBA in Excel, enhancing efficiency and accuracy.
 tags: Excel Macros VBA Reports 
 published: true
-canonical_url: 
+canonical_url: https://rgrantham82.github.io/2024/06/25/macros-vba-excel.html
 ---
 
 As a data analyst, efficiency and accuracy in report generation are critical. One powerful way to achieve this is by using macros and VBA (Visual Basic for Applications) in Excel to automate repetitive tasks. In this blog post, I'll walk you through a practical example of how to automate the process of generating a monthly sales report. This will involve importing data from multiple sources, cleaning it, performing necessary calculations, and generating a summary report—all with a single click.
