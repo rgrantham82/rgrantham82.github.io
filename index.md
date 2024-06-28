@@ -22,6 +22,8 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 2. **Predictive Modeling:** Forecast future trends and behaviors with high accuracy, allowing businesses to proactively address challenges and opportunities.
 3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
 
+![Profile Photo](/assets/images/profile-photo.jpg)
+
 ## About Me
 
 With a bachelor's degree in history from the University of Southern Mississippi, supplemented by nearly 6 years of experience as a loss mitigation specialist at Regions Mortgage and a content review analyst at YouTube, I have honed my analytical skills and attention to detail. My journey into data analytics began three years ago, driven by a passion for uncovering meaningful insights and driving actionable results through data. 
