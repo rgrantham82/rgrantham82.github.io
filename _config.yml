@@ -24,14 +24,7 @@ paginate_path: "/blog/page:num"
 disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-  # shortname: my_disqus_shortname
   shortname: rgrantham
-
-sass:
-  style: compressed
-  source_dir: _sass
-  load_paths: 
-    - _sass
 
 plugins:
   - jekyll-remote-theme
@@ -41,6 +34,16 @@ plugins:
   - jekyll-seo-tag
   - kramdown-parser-gfm
   - jekyll-redirect-from
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 livereload: true
 
