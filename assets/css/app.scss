@@ -1,7 +1,6 @@
 ---
 ---
 
-/* Import Main CSS file from theme */
 @import "main";
 
 /* Color Variables */
@@ -91,33 +90,4 @@ h1, h2, h3, h4, h5, h6 {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Accessibility Improvements */
-.navbar-burger {
-  outline: none;
-}
-
-.navbar-burger[aria-expanded="true"] span {
-  background-color: var(--cream);
-}
-
-a {
-  color: var(--slate-blue-dark);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-button {
-  outline: none;
-  &:focus {
-    box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.5);
-  }
-}
-
-/* Footer */
-.footer .content p a:hover {
-  text-decoration: underline;
 }
