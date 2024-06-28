@@ -40,8 +40,7 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
     link_text: View Sales Forecasting Project
     tags: Forecasting, Sales Analysis, Kaggle
-    github: N/A
-
+    
   - title: Predicting Credit Approval
     subtitle: Credit Risk Assessment
     description: |-
@@ -53,8 +52,7 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
     link_text: View Credit Approval Project
     tags: Predictive Analytics, Credit Risk, Kaggle
-    github: N/A
-
+   
   - title: Austin Violent Crime Insights Dashboard
     subtitle: Interactive Crime Data Visualization
     description: |-
@@ -66,7 +64,6 @@ items:
     link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
     link_text: View Austin Crime Dashboard
     tags: Data Visualization, Crime Analysis, Tableau
-    github: N/A
 
   - title: Police Shootings Analysis
     subtitle: In-depth Data Examination
@@ -79,4 +76,3 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
     link_text: View Police Shootings Analysis Project
     tags: Data Analysis, Statistical Analysis, Kaggle
-    github: N/A
