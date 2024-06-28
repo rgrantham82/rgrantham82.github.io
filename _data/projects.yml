@@ -1,8 +1,7 @@
 intro: |-
   Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.
 
-  [Explore more about my work on GitHub](https://github.com/rgrantham82)
-
+  
 items:
   - title: SQL Examples
     subtitle: Data Query Solutions
@@ -36,7 +35,7 @@ items:
       Analyzed sales data from a mini-course using various forecasting techniques to predict future sales trends. This project involved data preprocessing, model building, and evaluation to provide accurate sales forecasts.
 
       The insights derived from this analysis help in making informed business decisions.
-    image: /assets/images/interactive-sales-forecast.html
+    image: /assets/images/mini-course-sales-forecast.png
     image_ratio: is-4by3
     link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
     link_text: View Sales Forecasting Project
