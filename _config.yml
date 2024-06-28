@@ -27,6 +27,11 @@ disqus:
   # shortname: my_disqus_shortname
   shortname: rgrantham
 
+sass:
+  style: compressed
+  source_dir: _sass
+  load_paths: 
+    - _sass
 
 plugins:
   - jekyll-remote-theme
