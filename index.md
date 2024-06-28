@@ -22,7 +22,12 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 2. **Predictive Modeling:** Forecast future trends and behaviors with high accuracy, allowing businesses to proactively address challenges and opportunities.
 3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
 
-![Profile Photo](/assets/images/profile-image.jpg)
+<div class="hero">
+  <div class="profile-photo">
+    <img src="/assets/images/profile-image.jpg" alt="Profile Photo">
+  </div>
+  <!-- Other hero content -->
+</div>
 
 ## About Me
 
