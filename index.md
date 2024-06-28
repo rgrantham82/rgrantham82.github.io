@@ -27,7 +27,7 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
     <img src="/assets/images/profile-image.jpg" alt="Profile Photo">
   </div>
   <!-- Other hero content -->
-</div>
+</div>){:style="width: 150px; border-radius: 50%; margin-bottom: 20px;"}
 
 ## About Me
 
