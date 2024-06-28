@@ -1,52 +1,83 @@
 intro: |-
   Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.
 
+  [Explore more about my work on GitHub](https://github.com/rgrantham82)
 
 items:
   - title: SQL Examples
-    images:
-      - link: https://github.com/rgrantham82/SQL_Examples
-        large_link: /assets/images/sql-screenshot.PNG
-        alt: SQL Examples Image
-        description: Example SQL queries and solutions.
-        ratio: is-4by3
+    subtitle: Data Query Solutions
+    description: |-
+      A collection of example SQL queries and solutions showcasing my ability to work with databases and extract meaningful insights. These examples demonstrate various SQL techniques and best practices.
+
+      Explore the different approaches and optimizations used to handle complex queries efficiently.
+    image: /assets/images/sql-screenshot.PNG
+    image_ratio: is-4by3
+    link: https://github.com/rgrantham82/SQL_Examples
+    link_text: View SQL Examples Project
+    tags: SQL, Data Query, Database
+    github: rgrantham82/SQL_Examples
 
   - title: Fraud Detection Project
-    images:
-      - link: https://github.com/rgrantham82/fraud-detection
-        large_link: /assets/images/fraud-detection-plot.png
-        alt: Fraud Detection Image
-        description: Fraud detection project details.
-        ratio: is-4by3
+    subtitle: AI-driven Fraud Prevention
+    description: |-
+      Developed a comprehensive fraud detection system using machine learning algorithms to identify and prevent fraudulent activities. The project involved building predictive models that analyze transaction data to detect suspicious patterns.
+
+      The system effectively reduces financial losses and enhances security measures.
+    image: /assets/images/fraud-detection-plot.png
+    image_ratio: is-4by3
+    link: https://github.com/rgrantham82/fraud-detection
+    link_text: View Fraud Detection Project
+    tags: Machine Learning, AI, Fraud Prevention
+    github: rgrantham82/fraud-detection
 
   - title: Forecasting Mini-Course Sales
-    images:
-      - link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
-        large_link: /assets/images/interactive-sales-forecast.html
-        alt: Forecasting Sales Interactive Chart 
-        description: Kaggle forecasting mini-course sales.
-        ratio: is-4by3
+    subtitle: Sales Prediction Analysis
+    description: |-
+      Analyzed sales data from a mini-course using various forecasting techniques to predict future sales trends. This project involved data preprocessing, model building, and evaluation to provide accurate sales forecasts.
+
+      The insights derived from this analysis help in making informed business decisions.
+    image: /assets/images/interactive-sales-forecast.html
+    image_ratio: is-4by3
+    link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
+    link_text: View Sales Forecasting Project
+    tags: Forecasting, Sales Analysis, Kaggle
+    github: N/A
 
   - title: Predicting Credit Approval
-    images:
-      - link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
-        large_link: /assets/images/credit-approval-screenshot.PNG
-        alt: Credit Approval Image
-        description: Kaggle project on predicting credit approval.
-        ratio: is-4by3
+    subtitle: Credit Risk Assessment
+    description: |-
+      Built a predictive model to assess credit approval based on various applicant features. The project utilizes machine learning algorithms to predict the likelihood of credit approval, aiding financial institutions in risk management.
+
+      This analysis improves decision-making processes and minimizes credit risk.
+    image: /assets/images/credit-approval-screenshot.PNG
+    image_ratio: is-4by3
+    link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
+    link_text: View Credit Approval Project
+    tags: Predictive Analytics, Credit Risk, Kaggle
+    github: N/A
 
   - title: Austin Violent Crime Insights Dashboard
-    images:
-      - link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
-        large_link: /assets/images/austin-crime-dashboard.html
-        alt: Austin Crime Dashboard 
-        description: Tableau dashboard on Austin violent crime insights.
-        ratio: is-4by3
+    subtitle: Interactive Crime Data Visualization
+    description: |-
+      Developed an interactive Tableau dashboard to analyze violent crime data in Austin, TX. The dashboard provides insights into crime patterns and helps in identifying high-risk areas, supporting law enforcement and community safety initiatives.
+
+      Explore the interactive visualizations to gain a deeper understanding of crime trends.
+    image: /assets/images/austin-crime-dashboard.html
+    image_ratio: is-4by3
+    link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
+    link_text: View Austin Crime Dashboard
+    tags: Data Visualization, Crime Analysis, Tableau
+    github: N/A
 
   - title: Police Shootings Analysis
-    images:
-      - link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
-        large_link: /assets/images/police-shootings-plot.png
-        alt: Police Shootings Analysis Image
-        description: Analysis of police shootings data.
-        ratio: is-4by3
+    subtitle: In-depth Data Examination
+    description: |-
+      Conducted a thorough analysis of police shootings data to uncover trends and insights. This project involves data wrangling, statistical analysis, and visualization to provide a comprehensive overview of police shootings in the United States.
+
+      The findings offer valuable perspectives on law enforcement practices and public safety.
+    image: /assets/images/police-shootings-plot.png
+    image_ratio: is-4by3
+    link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
+    link_text: View Police Shootings Analysis Project
+    tags: Data Analysis, Statistical Analysis, Kaggle
+    github: N/A
