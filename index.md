@@ -23,11 +23,11 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
 
 <div class="hero">
-  <div class="profile-photo">
+  <div class="profile-photo" style="width: 150px; border-radius: 50%; margin-bottom: 20px;">
     <img src="/assets/images/profile-image.jpg" alt="Profile Photo">
   </div>
   <!-- Other hero content -->
-</div>){:style="width: 150px; border-radius: 50%; margin-bottom: 20px;"}
+</div>
 
 ## About Me
 
