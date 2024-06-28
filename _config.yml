@@ -1,10 +1,81 @@
-remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
+# Site Settings
+lang: en
+title: Robert Grantham 
+tagline: Robert Grantham 
+email: robertgrantham40@gmail.com
+description: >
+  Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience.
+
+# baseurl: "/bulma-clean-theme"
+url: "https://rgrantham82.github.io"
+permalink: pretty
+favicon: /assets/images/favicon.svg
+#gh_sponsor: chrisrhymes
+#hide_share_buttons: true
+theme_color: '#6A5ACD'  # Updated to slate blue dark
+#fixed_navbar: top
+#direction: one of <ltr, rtl, auto>, default: ltr
+force_theme: light
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: rgrantham
+
+
 plugins:
   - jekyll-remote-theme
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-feed
   - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
 
-footer_menu: footer 
-  
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+  # load_paths: 
+    # - node_modules
+
+#google_analytics: UA-code-here
+cookie_policy: /cookie-policy/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Robert Grantham"
+      layout: post
+      #image: https://via.placeholder.com/1200x800
+      show_sidebar: true
+
+markdown: kramdown
+highlighter: rouge
+
+footer_menu: footer
