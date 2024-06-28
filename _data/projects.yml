@@ -61,7 +61,7 @@ items:
       Developed an interactive Tableau dashboard to analyze violent crime data in Austin, TX. The dashboard provides insights into crime patterns and helps in identifying high-risk areas, supporting law enforcement and community safety initiatives.
 
       Explore the interactive visualizations to gain a deeper understanding of crime trends.
-    image: /assets/images/austin-crime-dashboard.html
+    image: /assets/images/Austin Violent Crime Insights Dashboard.png
     image_ratio: is-4by3
     link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
     link_text: View Austin Crime Dashboard
