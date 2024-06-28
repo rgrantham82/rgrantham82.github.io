@@ -9,6 +9,8 @@ description: >
 # baseurl: "/bulma-clean-theme"
 url: "https://rgrantham82.github.io"
 permalink: pretty
+# With GitHub Pages Gem
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 favicon: /assets/images/favicon.svg
 #gh_sponsor: chrisrhymes
 #hide_share_buttons: true
