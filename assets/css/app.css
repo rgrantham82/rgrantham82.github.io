@@ -82,3 +82,45 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Additional Styles */
+/* Buttons */
+.button.is-primary {
+  background-color: var(--blue);
+  color: var(--cream);
+  border: none;
+}
+
+.button.is-primary:hover {
+  background-color: var(--light-purple);
+  color: var(--cream);
+}
+
+/* Links */
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--light-purple);
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--black);
+  background-color: var(--cream);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--light-purple);
+  outline: none;
+}
