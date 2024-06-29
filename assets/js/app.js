@@ -1,64 +1,48 @@
-document.addEventListener('alpine:init', () => {
-    // Cookie banner functionality
-    Alpine.data('cookieBanner', () => ({
-        showBanner: Cookies.get('showCookieBanner') !== 'false',
-
-        acceptCookies() {
-            Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
-            Cookies.set('cookiesAccepted', 'true', { expires: 7, path: '/' });
-            this.showBanner = false;
-        },
-
-        rejectCookies() {
-            Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
-            this.showBanner = false;
-        }
-    }));
-
-    // Navigation menu functionality
-    Alpine.data('navMenu', () => ({
-        openNav: false,
-
-        toggleNav() {
-            this.openNav = !this.openNav;
-        }
-    }));
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+// Cookie banner handling
+document.addEventListener('DOMContentLoaded', function() {
+  function acceptCookies() {
+    Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
+    Cookies.set('cookiesAccepted', 'true', { expires: 7, path: '/' });
+    toggleCookieBanner();
+  }
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+  function rejectCookies() {
+    Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
+    toggleCookieBanner();
+  }
 
-    // Mobile menu toggle for Bulma navbar
-    const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    if (navbarBurgers.length > 0) {
-        navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
-                const target = el.dataset.target;
-                const targetElement = document.getElementById(target);
-
-                el.classList.toggle('is-active');
-                targetElement.classList.toggle('is-active');
-            });
-        });
+  function toggleCookieBanner() {
+    var showBanner = Cookies.get('showCookieBanner');
+    var banner = document.getElementById('cookieBanner');
+    if (showBanner === 'false') {
+      banner.style.display = 'none';
+    } else {
+      banner.style.display = 'block';
     }
+  }
 
-    // Close mobile menu on link click
-    document.querySelectorAll('.navbar-item').forEach(el => {
-        el.addEventListener('click', () => {
-            if (document.querySelector('.navbar-burger.is-active')) {
-                document.querySelector('.navbar-burger').classList.remove('is-active');
-                document.querySelector('.navbar-menu').classList.remove('is-active');
-            }
-        });
-    });
+  document.getElementById('acceptCookies').addEventListener('click', acceptCookies);
+  document.getElementById('rejectCookies').addEventListener('click', rejectCookies);
+  toggleCookieBanner();
+});
+
+// Navbar burger toggle
+document.addEventListener('DOMContentLoaded', function() {
+  var burger = document.querySelector('.navbar-burger');
+  var menu = document.querySelector('.navbar-menu');
+  
+  burger.addEventListener('click', function() {
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  });
 });
