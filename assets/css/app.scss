@@ -94,28 +94,3 @@ a {
 .hero-body {
   padding: 4rem 1.5rem;
 }
-
-footer {
-  padding: 2rem 1.5rem;
-  background-color: #6A5ACD;
-  color: white;
-
-  a {
-    color: white;
-    text-decoration: underline;
-
-    &:hover {
-      color: #483D8B;
-    }
-  }
-}
-
-.image {
-  margin: 0 auto;
-
-  img {
-    border-radius: 50%;
-    width: 128px;
-    height: 128px;
-  }
-}
