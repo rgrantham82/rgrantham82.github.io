@@ -43,32 +43,66 @@ a {
   .title, .subtitle {
     color: white;
   }
+}
+
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.callout {
+  padding: 2rem;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #6A5ACD;
+  }
+
+  .callout-icon {
+    font-size: 3rem;
+    color: #6A5ACD;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    color: #333;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: #777;
+  }
 
   .button {
-    background-color: white;
-    color: #6A5ACD;
+    margin-top: 1rem;
+    background-color: #6A5ACD;
+    color: white;
 
     &:hover {
       background-color: #483D8B;
-      color: white;
     }
   }
 }
 
-.callout-icon {
-  color: #6A5ACD;
-
-  &:hover {
-    color: #483D8B;
-  }
+.columns {
+  display: flex;
+  justify-content: center;
 }
 
-.footer {
-  background-color: #333;
+.hero-body {
+  padding: 4rem 1.5rem;
+}
+
+footer {
+  padding: 2rem 1.5rem;
+  background-color: #6A5ACD;
   color: white;
 
   a {
-    color: #6A5ACD;
+    color: white;
+    text-decoration: underline;
 
     &:hover {
       color: #483D8B;
@@ -76,23 +110,12 @@ a {
   }
 }
 
-// Responsive adjustments
-@media screen and (max-width: 768px) {
-  .navbar-menu {
-    background-color: #6A5ACD;
+.image {
+  margin: 0 auto;
 
-    .navbar-item {
-      color: white;
-
-      &:hover {
-        background-color: #483D8B;
-        color: white;
-      }
-    }
+  img {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
   }
-}
-
-// Custom styles for the profile photo
-.profile-photo {
-  background: none; // Removes the blue background from the profile photo
 }
