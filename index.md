@@ -6,6 +6,16 @@ callouts: callouts
 show_sidebar: true
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WZFJ98W4K');
+</script>
+
 # Transforming Data into Actionable Insights
 
 ### Empowering Businesses with Cutting-Edge Data Analytics
