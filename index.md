@@ -28,6 +28,7 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
   </div>
   <!-- Other hero content -->
 </div>
+
 ## About Me
 
 With a bachelor's degree in history from the University of Southern Mississippi, supplemented by nearly 6 years of experience as a loss mitigation specialist at Regions Mortgage and a content review analyst at YouTube, I have honed my analytical skills and attention to detail. My journey into data analytics began three years ago, driven by a passion for uncovering meaningful insights and driving actionable results through data. 
