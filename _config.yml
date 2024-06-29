@@ -1,33 +1,31 @@
 # Site Settings
 lang: en
-title: Robert Grantham 
-tagline: Robert Grantham 
+title: Robert Grantham
+tagline: Robert Grantham
 email: robertgrantham40@gmail.com
 description: >
   Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience.
 
-# baseurl: "/bulma-clean-theme"
+# URL and Base URL
 url: "https://rgrantham82.github.io"
+baseurl: ""
 permalink: pretty
-# With GitHub Pages Gem
-remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
-favicon: /assets/images/favicon.svg
-#gh_sponsor: chrisrhymes
-#hide_share_buttons: true
-theme_color: '#6A5ACD'  # Updated to slate blue dark
-#fixed_navbar: top
-#direction: one of <ltr, rtl, auto>, default: ltr
-force_theme: light
 
+# Theme
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
+theme_color: '#6A5ACD'  # Updated to slate blue dark
+force_theme: light
+favicon: /assets/images/favicon.svg
+
+# Pagination
 paginate: 5
 paginate_path: "/blog/page:num"
 
 # Disqus Comments
 disqus:
-  # Leave shortname blank to disable comments site-wide.
-  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   shortname: rgrantham
 
+# Plugins
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
@@ -37,6 +35,7 @@ plugins:
   - kramdown-parser-gfm
   - jekyll-redirect-from
 
+# Exclusions
 exclude: 
   - Gemfile
   - clean-theme.gemspec
@@ -47,17 +46,21 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+# LiveReload
 livereload: true
 
+# Sass
 sass:
   style: compressed
   source_dir: _sass
-  # load_paths: 
-    # - node_modules
 
+# Google Analytics
 #google_analytics: UA-code-here
+
+# Cookie Policy
 cookie_policy: /cookie-policy/
 
+# Defaults
 defaults:
   -
     scope:
@@ -72,5 +75,29 @@ defaults:
     values:
       author: "Robert Grantham"
       layout: post
-      #image: https://via.placeholder.com/1200x800
       show_sidebar: true
+
+# Metadata for SEO
+seo:
+  title: Robert Grantham's Data Analytics Portfolio
+  description: Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more.
+  author: Robert Grantham
+  lang: en
+  site_name: Robert Grantham's Portfolio
+  twitter:
+    card: summary_large_image
+    creator: "@RobertGrantham"
+  image: "/assets/images/profile_photo.jpg"
+
+# Social Media Links
+social:
+  linkedin: https://www.linkedin.com/in/robertgrantham82
+  github: https://github.com/rgrantham82
+  email: mailto:robertgrantham40@gmail.com
+
+# Custom variables
+custom_vars:
+  primary_color: '#6A5ACD'
+  secondary_color: '#483D8B'
+  light_color: '#f4f4f9'
+  dark_color: '#333'
