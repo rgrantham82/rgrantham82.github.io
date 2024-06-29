@@ -23,12 +23,11 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
 
 <div class="hero">
-  <div class="profile-photo" style="width: 150px; border-radius: 50%; margin-bottom: 20px;">
-    <img src="/assets/images/profile-image.jpg" alt="Profile Photo">
+  <div class="profile-photo" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin-bottom: 20px;">
+    <img src="/assets/images/profile-image.jpg" alt="Profile Photo" style="width: 100%; height: 100%; object-fit: cover;">
   </div>
   <!-- Other hero content -->
 </div>
-
 ## About Me
 
 With a bachelor's degree in history from the University of Southern Mississippi, supplemented by nearly 6 years of experience as a loss mitigation specialist at Regions Mortgage and a content review analyst at YouTube, I have honed my analytical skills and attention to detail. My journey into data analytics began three years ago, driven by a passion for uncovering meaningful insights and driving actionable results through data. 
