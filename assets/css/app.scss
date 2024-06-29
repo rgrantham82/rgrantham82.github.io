@@ -3,19 +3,18 @@
 
 @import "main";
 
-/* Color Variables */
-:root {
-  --black: #000000;
-  --cream: #FFF8E7;
-  --blue: #1E90FF;
-  --purple: #6A5ACD;
-  --light-purple: #9370DB;
-}
-
 /* General Styles */
 body {
   color: var(--black);
   background-color: var(--cream);
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.container {
+  max-width: 1200px; /* Adjust container width */
+  margin: 0 auto; /* Center container horizontally */
+  padding: 20px; /* Add padding around container */
 }
 
 /* Headers and Navigation */
@@ -23,6 +22,8 @@ body {
 .hero.is-primary {
   background-color: var(--blue);
   color: var(--cream);
+  padding: 20px; /* Add padding to headers */
+  margin-bottom: 20px; /* Add margin below headers */
 }
 
 .navbar.is-primary .navbar-item,
@@ -37,45 +38,25 @@ body {
 .footer.is-primary {
   background-color: var(--purple);
   color: var(--cream);
+  padding: 20px; /* Add padding to footer */
+  margin-top: 20px; /* Add margin above footer */
 }
 
 .footer.is-primary p a {
   color: var(--cream);
 }
 
-/* Headings */
-.title,
-.subtitle,
-h1, h2, h3, h4, h5, h6 {
-  color: var(--blue);
+/* Main Content Sections */
+.section {
+  padding: 40px 0; /* Adjust top and bottom padding for sections */
 }
 
-/* Project Card Image Styling */
-.project-card-image {
-  width: 100%;
-  height: 0;
-  padding-bottom: 75%;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-/* Card Hover Effects */
+/* Project Card Styling */
 .project-card {
-  transition: transform 0.2s ease-in-out;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px; /* Increase margin between project cards */
 }
 
 .project-card:hover {
