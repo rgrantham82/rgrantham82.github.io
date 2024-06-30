@@ -35,33 +35,40 @@ document.addEventListener('alpine:init', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    // Navbar burger toggle
+    const navbarBurgers = Array.from(document.querySelectorAll('.navbar-burger'));
+    navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const targetElement = document.getElementById(target);
 
-    if (navbarBurgers.length > 0) {
-        navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
-                const target = el.dataset.target;
-                const targetElement = document.getElementById(target);
-
-                el.classList.toggle('is-active');
-                targetElement.classList.toggle('is-active');
-            });
-        });
-    }
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            el.classList.toggle('is-active');
+            targetElement.classList.toggle('is-active');
         });
     });
-});
 
-// Cookie banner handling
-document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Cookie banner handling
+    const cookieBanner = document.getElementById('cookieBanner');
+    const showBanner = Cookies.get('showCookieBanner') !== 'false';
+
+    function toggleCookieBanner() {
+        if (!showBanner) {
+            cookieBanner.style.display = 'none';
+        } else {
+            cookieBanner.style.display = 'block';
+        }
+    }
+
     function acceptCookies() {
         Cookies.set('showCookieBanner', 'false', {
             expires: 7,
@@ -82,28 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleCookieBanner();
     }
 
-    function toggleCookieBanner() {
-        var showBanner = Cookies.get('showCookieBanner');
-        var banner = document.getElementById('cookieBanner');
-        if (showBanner === 'false') {
-            banner.style.display = 'none';
-        } else {
-            banner.style.display = 'block';
-        }
+    if (cookieBanner) {
+        document.getElementById('acceptCookies').addEventListener('click', acceptCookies);
+        document.getElementById('rejectCookies').addEventListener('click', rejectCookies);
+        toggleCookieBanner();
     }
-
-    document.getElementById('acceptCookies').addEventListener('click', acceptCookies);
-    document.getElementById('rejectCookies').addEventListener('click', rejectCookies);
-    toggleCookieBanner();
-});
-
-// Navbar burger toggle
-document.addEventListener('DOMContentLoaded', function() {
-    var burger = document.querySelector('.navbar-burger');
-    var menu = document.querySelector('.navbar-menu');
-
-    burger.addEventListener('click', function() {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-    });
 });
