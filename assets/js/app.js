@@ -4,23 +4,18 @@ document.addEventListener('alpine:init', () => {
         showBanner: Cookies.get('showCookieBanner') !== 'false',
 
         acceptCookies() {
-            Cookies.set('showCookieBanner', 'false', {
-                expires: 7,
-                path: '/'
-            });
-            Cookies.set('cookiesAccepted', 'true', {
-                expires: 7,
-                path: '/'
-            });
+            this.setCookies('true');
             this.showBanner = false;
         },
 
         rejectCookies() {
-            Cookies.set('showCookieBanner', 'false', {
-                expires: 7,
-                path: '/'
-            });
+            this.setCookies('false');
             this.showBanner = false;
+        },
+
+        setCookies(value) {
+            Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
+            Cookies.set('cookiesAccepted', value, { expires: 7, path: '/' });
         }
     }));
 
@@ -39,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarBurgers = Array.from(document.querySelectorAll('.navbar-burger'));
     navbarBurgers.forEach(el => {
         el.addEventListener('click', () => {
-            const target = el.dataset.target;
-            const targetElement = document.getElementById(target);
-
+            const targetElement = document.getElementById(el.dataset.target);
             el.classList.toggle('is-active');
             targetElement.classList.toggle('is-active');
         });
@@ -62,30 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const showBanner = Cookies.get('showCookieBanner') !== 'false';
 
     function toggleCookieBanner() {
-        if (!showBanner) {
-            cookieBanner.style.display = 'none';
-        } else {
-            cookieBanner.style.display = 'block';
-        }
+        cookieBanner.style.display = showBanner ? 'block' : 'none';
     }
 
     function acceptCookies() {
-        Cookies.set('showCookieBanner', 'false', {
-            expires: 7,
-            path: '/'
-        });
-        Cookies.set('cookiesAccepted', 'true', {
-            expires: 7,
-            path: '/'
-        });
+        Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
+        Cookies.set('cookiesAccepted', 'true', { expires: 7, path: '/' });
         toggleCookieBanner();
     }
 
     function rejectCookies() {
-        Cookies.set('showCookieBanner', 'false', {
-            expires: 7,
-            path: '/'
-        });
+        Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
         toggleCookieBanner();
     }
 
