@@ -6,6 +6,9 @@
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
 
+// Define colors
+$light-slate-blue: #778899; // light slate blue
+
 // Global styles
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -14,11 +17,11 @@ body {
 }
 
 a {
-  color: #007bff; // blue for links
+  color: $light-slate-blue; // light slate blue for links
   text-decoration: none;
 
   &:hover {
-    color: #0056b3; // darker blue for hover
+    color: darken($light-slate-blue, 15%); // darker light slate blue for hover
   }
 }
 
@@ -57,12 +60,12 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: #007bff; // blue border on hover
+    border-color: $light-slate-blue; // light slate blue border on hover
   }
 
   .callout-icon {
     font-size: 3rem;
-    color: #007bff; // blue
+    color: $light-slate-blue; // light slate blue
   }
 
   h3 {
@@ -77,11 +80,11 @@ a {
 
   .button {
     margin-top: 1rem;
-    background-color: #007bff; // blue
+    background-color: $light-slate-blue; // light slate blue
     color: #ffffff; // white
 
     &:hover {
-      background-color: #0056b3; // darker blue
+      background-color: darken($light-slate-blue, 15%); // darker light slate blue
     }
   }
 }
