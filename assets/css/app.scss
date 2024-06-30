@@ -8,6 +8,7 @@
 
 // Define colors
 $light-slate-blue: #778899; // light slate blue
+$conservative-gold: #b8860b; // conservative gold
 
 // Global styles
 body {
@@ -70,7 +71,7 @@ a {
 
   h3 {
     margin-top: 1rem;
-    color: #333333; // dark gray
+    color: $conservative-gold; // conservative gold
   }
 
   p {
@@ -96,4 +97,17 @@ a {
 
 .hero-body {
   padding: 4rem 1.5rem;
+}
+
+.footer {
+  background-color: #f8f9fa; // very light gray
+  color: #333333; // dark gray
+
+  a {
+    color: $conservative-gold; // conservative gold for links in footer
+
+    &:hover {
+      color: darken($conservative-gold, 15%); // darker gold for hover
+    }
+  }
 }
