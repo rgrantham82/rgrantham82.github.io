@@ -3,76 +3,94 @@
 
 @import "main";
 // Import Bulma and FontAwesome
-@import 'https: //cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
-@import 'https: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
 
 // Global styles
 body {
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	background-color: #f4f4f9;
-	color: #333
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
 }
+
 a {
-	color: #6A5ACD;
-	text-decoration: none;
-	&:hover {
-		color: #483D8B
+  color: #6A5ACD;
+  text-decoration: none;
+
+  &:hover {
+    color: #483D8B;
+  }
 }
-}
+
 .navbar {
-	background-color: #6A5ACD;
-	.navbar-item {
-		color: #FFFFFF;
-		&:hover {
-			background-color: #483D8B;
-			color: #FFFFFF
+  background-color: #6A5ACD;
+
+  .navbar-item {
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: #483D8B;
+      color: #FFFFFF;
+    }
+  }
 }
-	}
-}
+
 .hero {
-	background-color: #6A5ACD;
-	color: #FFFFFF;
-	.title, .subtitle {
-		color: #FFFFFF
+  background-color: #6A5ACD;
+  color: #FFFFFF;
+
+  .title,
+  .subtitle {
+    color: #FFFFFF;
+  }
 }
-}
+
 .section {
-	padding: 3rem 1.5rem
+  padding: 3rem 1.5rem;
 }
+
 .callout {
-	padding: 2rem;
-	border: 1px solid #eaeaea;
-	background-color: #fff;
-	border-radius: 5px;
-	transition: all 0.3s ease;
-	&:hover {
-		border-color: #6A5ACD
+  padding: 2rem;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #6A5ACD;
+  }
+
+  .callout-icon {
+    font-size: 3rem;
+    color: #6A5ACD;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    color: #333;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: #777;
+  }
+
+  .button {
+    margin-top: 1rem;
+    background-color: #6A5ACD;
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: #483D8B;
+    }
+  }
 }
-	.callout-icon {
-		font-size: 3rem;
-		color: #6A5ACD
-}
-	h3 {
-		margin-top: 1rem;
-		color: #333
-}
-	p {
-		margin-top: 0.5rem;
-		color: #777
-}
-	.button {
-		margin-top: 1rem;
-		background-color: #6A5ACD;
-		color: #FFFFFF;
-		&:hover {
-			background-color: #483D8B
-}
-	}
-}
+
 .columns {
-	display: flex;
-	justify-content: center
+  display: flex;
+  justify-content: center;
 }
+
 .hero-body {
-	padding: 4rem 1.5rem
+  padding: 4rem 1.5rem;
 }
