@@ -9,39 +9,39 @@
 // Global styles
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #f5f5f5; // light gray
+  color: #333333; // dark gray
 }
 
 a {
-  color: #6A5ACD;
+  color: #007bff; // blue for links
   text-decoration: none;
 
   &:hover {
-    color: #483D8B;
+    color: #0056b3; // darker blue for hover
   }
 }
 
 .navbar {
-  background-color: #6A5ACD;
+  background-color: #ffffff; // white
 
   .navbar-item {
-    color: #FFFFFF;
+    color: #333333; // dark gray
 
     &:hover {
-      background-color: #483D8B;
-      color: #FFFFFF;
+      background-color: #e9ecef; // very light gray
+      color: #333333; // dark gray
     }
   }
 }
 
 .hero {
-  background-color: #6A5ACD;
-  color: #FFFFFF;
+  background-color: #ffffff; // white
+  color: #333333; // dark gray
 
   .title,
   .subtitle {
-    color: #FFFFFF;
+    color: #333333; // dark gray
   }
 }
 
@@ -51,37 +51,37 @@ a {
 
 .callout {
   padding: 2rem;
-  border: 1px solid #eaeaea;
-  background-color: #fff;
+  border: 1px solid #cccccc; // light gray border
+  background-color: #ffffff; // white
   border-radius: 5px;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: #6A5ACD;
+    border-color: #007bff; // blue border on hover
   }
 
   .callout-icon {
     font-size: 3rem;
-    color: #6A5ACD;
+    color: #007bff; // blue
   }
 
   h3 {
     margin-top: 1rem;
-    color: #333;
+    color: #333333; // dark gray
   }
 
   p {
     margin-top: 0.5rem;
-    color: #777;
+    color: #777777; // medium gray
   }
 
   .button {
     margin-top: 1rem;
-    background-color: #6A5ACD;
-    color: #FFFFFF;
+    background-color: #007bff; // blue
+    color: #ffffff; // white
 
     &:hover {
-      background-color: #483D8B;
+      background-color: #0056b3; // darker blue
     }
   }
 }
