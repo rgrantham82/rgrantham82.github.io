@@ -1,36 +1,38 @@
 <footer class="footer">
   <div class="container">
     {% if site.footer_menu %}
-      <div class="columns is-multiline">
+      <div class="columns is-multiline is-centered">
         {% for item in site.data[site.footer_menu] %}
-          <div class="column has-text-centered">
-            <div>
-              <a href="{{ item.link | relative_url }}" class="link">
-                {% if item.name == 'GitHub' %}
-                  <i class="fab fa-github"></i> <!-- Font Awesome GitHub icon -->
-                {% elsif item.name == 'LinkedIn' %}
-                  <i class="fab fa-linkedin"></i> <!-- Font Awesome LinkedIn icon -->
-                {% else %}
-                  {{ item.name }}
-                {% endif %}
-              </a>
-            </div>
+          <div class="column is-narrow has-text-centered">
+            <a href="{{ item.link | relative_url }}" class="link" aria-label="{{ item.name }}">
+              {% if item.name == 'GitHub' %}
+                <i class="fab fa-github"></i> <!-- Font Awesome GitHub icon -->
+              {% elsif item.name == 'LinkedIn' %}
+                <i class="fab fa-linkedin"></i> <!-- Font Awesome LinkedIn icon -->
+              {% else %}
+                {{ item.name }}
+              {% endif %}
+            </a>
           </div>
         {% endfor %}
       </div>
     {% endif %}
     <div class="content is-small has-text-centered">
-      <p>Portfolio of <a href="https://rgrantham82.github.io">Robert Grantham</a></p>
+      <p>Portfolio of <a href="https://rgrantham82.github.io" target="_blank" rel="noopener noreferrer">Robert Grantham</a></p>
       <p>Austin, TX | Contact: <a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a></p>
-      <p>Connect on <a href="https://www.linkedin.com/in/robertgrantham82">
+      <p>
+        Connect on 
+        <a href="https://www.linkedin.com/in/robertgrantham82" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
       </p>
-      <p>Follow me on <a href="https://github.com/rgrantham82">
+      <p>
+        Follow me on 
+        <a href="https://github.com/rgrantham82" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <i class="fab fa-github"></i> GitHub
         </a>
       </p>
-      <p>Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+      <p>Theme built by <a href="https://www.csrhymes.com" target="_blank" rel="noopener noreferrer">C.S. Rhymes</a></p>
       <p>&copy; {{ "now" | date: "%Y" }} Robert Grantham. All rights reserved.</p>
     </div>
   </div>
