@@ -75,7 +75,7 @@ defaults:
     values:
       author: "Robert Grantham"
       layout: post
-      show_sidebar: true
+      show_sidebar: false
 
 # Metadata for SEO
 seo:
