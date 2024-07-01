@@ -83,10 +83,7 @@ seo:
   description: Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more.
   author: Robert Grantham
   lang: en
-  site_name: Robert Grantham's Portfolio
-  twitter:
-    card: summary_large_image
-    creator: "@RobertGrantham"
+  site_name: Robert Grantham
   image: "/assets/images/profile_photo.jpg"
 
 # Social Media Links
