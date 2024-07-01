@@ -2,3 +2,97 @@
 ---
 
 @import 'main';
+
+// Define color variables
+$soft-ivory: #F7F7F7;
+$slate-gray: #667C89;
+$deep-charcoal: #333333;
+$misty-blue: #B0C4DE;
+$warm-taupe: #D2B48C;
+
+// Apply colors to various elements
+
+body {
+    background-color: $soft-ivory;
+    color: $deep-charcoal;
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $deep-charcoal;
+}
+
+a {
+    color: $slate-gray;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header, .footer {
+    background-color: $misty-blue;
+    color: $deep-charcoal;
+    padding: 10px 20px;
+}
+
+.button {
+    background-color: $warm-taupe;
+    color: $deep-charcoal;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($warm-taupe, 10%);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: $misty-blue;
+    color: $deep-charcoal;
+    padding: 10px;
+
+    .nav-link {
+        color: $deep-charcoal;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: lighten($misty-blue, 10%);
+        }
+    }
+}
+
+.card {
+    background-color: $soft-ivory;
+    border: 1px solid $slate-gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: $misty-blue;
+    color: $deep-charcoal;
+    padding: 10px;
+    border-bottom: 1px solid $slate-gray;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-footer {
+    background-color: $misty-blue;
+    color: $deep-charcoal;
+    padding: 10px;
+    border-top: 1px solid $slate-gray;
+}
