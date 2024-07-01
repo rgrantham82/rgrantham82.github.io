@@ -33,7 +33,7 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
 
 <figure class="image is-150x150">
-  <img class="is-rounded" src="assets/images/profile-image.png" />
+  <img class="is-rounded" src="assets/images/profile-image.jpg" />
 </figure>
 
 ## About Me
