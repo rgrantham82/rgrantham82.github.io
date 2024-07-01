@@ -15,7 +15,7 @@ permalink: pretty
 remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 theme_color: '#778899'  # Updated to slate blue dark
 force_theme: light
-favicon: /assets/images/favicon.png
+favicon: /assets/images/favicon~2.png
 
 # Pagination
 paginate: 5
