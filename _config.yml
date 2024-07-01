@@ -91,10 +91,3 @@ social:
   linkedin: https://www.linkedin.com/in/robertgrantham82
   github: https://github.com/rgrantham82
   email: mailto:robertgrantham40@gmail.com
-
-# Custom variables
-custom_vars:
-  primary_color: '#778899'
-  secondary_color: '#f5f5f5'
-  light_color: '#333333'
-  dark_color: '#b8860b'
