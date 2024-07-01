@@ -10,8 +10,15 @@ $deep-charcoal: #333333;
 $misty-blue: #B0C4DE;
 $warm-taupe: #D2B48C;
 
-// Apply colors to various elements
+// Set Bulma variables
+$body-background-color: $soft-ivory;
+$body-color: $deep-charcoal;
 
+$primary: $misty-blue;
+$link: $slate-gray;
+$link-hover: darken($slate-gray, 10%);
+
+// Apply colors to various elements
 body {
     background-color: $soft-ivory;
     color: $deep-charcoal;
@@ -31,12 +38,32 @@ a {
     }
 }
 
-.header, .footer {
+// Navbar styles
+.navbar {
     background-color: $misty-blue;
     color: $deep-charcoal;
-    padding: 10px 20px;
+    padding: 5px 15px; // Adjusted padding for a more compact look
+    font-size: 14px; // Adjusted font size for a more compact look
+
+    .navbar-item {
+        color: $deep-charcoal;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: lighten($misty-blue, 10%);
+        }
+    }
+
+    .navbar-link {
+        color: $deep-charcoal;
+
+        &:hover {
+            background-color: lighten($misty-blue, 10%);
+        }
+    }
 }
 
+// Button styles
 .button {
     background-color: $warm-taupe;
     color: $deep-charcoal;
@@ -50,50 +77,43 @@ a {
     }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.navbar {
-    background-color: $misty-blue;
-    color: $deep-charcoal;
-    padding: 5px 15px;  // Adjusted padding for a more compact look
-    font-size: 14px;    // Adjusted font size for a more compact look
-
-    .nav-link {
-        color: $deep-charcoal;
-        padding: 5px 10px;
-
-        &:hover {
-            background-color: lighten($misty-blue, 10%);
-        }
-    }
-}
-
+// Card styles
 .card {
     background-color: $soft-ivory;
     border: 1px solid $slate-gray;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
+
+    .card-header {
+        background-color: $misty-blue;
+        color: $deep-charcoal;
+        padding: 10px;
+        border-bottom: 1px solid $slate-gray;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card-footer {
+        background-color: $misty-blue;
+        color: $deep-charcoal;
+        padding: 10px;
+        border-top: 1px solid $slate-gray;
+    }
 }
 
-.card-header {
+// Container styles
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+// Header and footer styles
+.header, .footer {
     background-color: $misty-blue;
     color: $deep-charcoal;
-    padding: 10px;
-    border-bottom: 1px solid $slate-gray;
-}
-
-.card-body {
-    padding: 15px;
-}
-
-.card-footer {
-    background-color: $misty-blue;
-    color: $deep-charcoal;
-    padding: 10px;
-    border-top: 1px solid $slate-gray;
+    padding: 10px 20px;
 }
