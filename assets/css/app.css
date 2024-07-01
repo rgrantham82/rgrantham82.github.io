@@ -1,6 +1,7 @@
-// Import Bulma and FontAwesome
-@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+---
+---
+
+@import 'main'
 
 // Define colors
 $light-slate-blue: #778899; // light slate blue
