@@ -59,7 +59,8 @@ a {
 .navbar {
     background-color: $misty-blue;
     color: $deep-charcoal;
-    padding: 10px;
+    padding: 5px 15px;  // Adjusted padding for a more compact look
+    font-size: 14px;    // Adjusted font size for a more compact look
 
     .nav-link {
         color: $deep-charcoal;
