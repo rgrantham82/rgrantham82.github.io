@@ -42,8 +42,8 @@ a {
 .navbar {
     background-color: $misty-blue;
     color: $deep-charcoal;
-    padding: 5px 15px; // Adjusted padding for a more compact look
-    font-size: 14px; // Adjusted font size for a more compact look
+    padding: 10px 15px; // Reduced padding for a more compact look
+    font-size: 14px; // Optionally adjusted font size for consistency
 
     .navbar-item {
         color: $deep-charcoal;
@@ -116,4 +116,24 @@ a {
     background-color: $misty-blue;
     color: $deep-charcoal;
     padding: 10px 20px;
+}
+
+// Hero section styles
+.hero {
+    background-color: $misty-blue;
+    color: $deep-charcoal;
+    padding: 40px; // Adjust padding as per your design
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $deep-charcoal; // Ensure headings in hero section match the color scheme
+    }
+
+    a {
+        color: $slate-gray;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
