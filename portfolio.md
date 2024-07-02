@@ -27,7 +27,14 @@ show_sidebar: false
     <style>
         .project-card {
             margin-bottom: 30px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .project-card.in-view {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .project-card:hover {
@@ -38,9 +45,7 @@ show_sidebar: false
         .project-img {
             width: 100%;
             height: 200px;
-            /* Fixed height for all images */
             object-fit: cover;
-            /* Ensures the image covers the entire area */
         }
     </style>
 </head>
@@ -126,6 +131,43 @@ show_sidebar: false
     <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
+
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function onVisibilityChange(el, callback) {
+                var old_visible;
+                return function () {
+                    var visible = isElementInViewport(el);
+                    if (visible != old_visible) {
+                        old_visible = visible;
+                        if (visible) {
+                            callback();
+                        }
+                    }
+                }
+            }
+
+            var cards = document.querySelectorAll('.project-card');
+
+            for (var i = 0; i < cards.length; i++) {
+                (function(card) {
+                    var handler = onVisibilityChange(card, function() {
+                        card.classList.add('in-view');
+                    });
+
+                    handler();
+                    window.addEventListener('scroll', handler);
+                    window.addEventListener('resize', handler);
+                })(cards[i]);
+            }
         });
     </script>
 </body>
