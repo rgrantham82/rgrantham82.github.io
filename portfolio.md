@@ -9,11 +9,14 @@ show_sidebar: false
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-7WZFJ98W4K');
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7WZFJ98W4K');
 </script>
 
 <head>
@@ -21,7 +24,6 @@ show_sidebar: false
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analytics Projects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
 </head>
 
 <body>
@@ -42,7 +44,7 @@ show_sidebar: false
             <!-- Project 2 -->
             <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                    <img src="assets/images/fraud-detection-plot.png" alt="Fraud Detection Plot" class="card-img-top project-img">
+                    <img src="/assets/images/fraud-detection-plot.png" alt="Fraud Detection Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Fraud Detection Project</h5>
                         <p class="card-text">AI-driven fraud prevention system visualization.</p>
@@ -53,7 +55,7 @@ show_sidebar: false
             <!-- Project 3 -->
             <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                    <img src="assets/images/mini-course-sales-forecast.png" alt="Sales Forecast Plot" class="card-img-top project-img">
+                    <img src="/assets/images/mini-course-sales-forecast.png" alt="Sales Forecast Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Forecasting Mini-Course Sales</h5>
                         <p class="card-text">Sales prediction analysis for a mini-course.</p>
@@ -116,4 +118,3 @@ show_sidebar: false
         });
     </script>
 </body>
- 
