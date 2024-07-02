@@ -127,10 +127,12 @@ a {
 #cookieBanner {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+    display: none;
 }
 
 #cookieBanner.fade-in {
     opacity: 1;
+    display: block;
 }
 
 #cookieBanner.fade-out {
