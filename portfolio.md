@@ -21,22 +21,7 @@ show_sidebar: false
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analytics Projects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .project-card {
-            margin-bottom: 30px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -46,7 +31,7 @@ show_sidebar: false
             <!-- Project 1 -->
             <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                    <img src="assets/images/sql-screenshot.PNG" alt="SQL Examples Screenshot" class="card-img-top project-img">
+                    <img src="/assets/images/sql-screenshot.PNG" alt="SQL Examples Screenshot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">SQL Examples</h5>
                         <p class="card-text">Example of SQL queries and solutions.</p>
@@ -79,7 +64,7 @@ show_sidebar: false
             <!-- Project 4 -->
             <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                    <img src="assets/images/credit-approval-screenshot.PNG" alt="Credit Approval Screenshot" class="card-img-top project-img">
+                    <img src="/assets/images/credit-approval-screenshot.PNG" alt="Credit Approval Screenshot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Predicting Credit Approval</h5>
                         <p class="card-text">Predictive model for credit approval assessment.</p>
@@ -90,7 +75,7 @@ show_sidebar: false
             <!-- Project 5 -->
             <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                    <img src="assets/images/Austin Violent Crime Insights Dashboard.png" alt="Austin Crime Dashboard" class="card-img-top project-img">
+                    <img src="/assets/images/Austin Violent Crime Insights Dashboard.png" alt="Austin Crime Dashboard" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Austin Violent Crime Insights Dashboard</h5>
                         <p class="card-text">Interactive Crime Data Visualization</p>
@@ -101,7 +86,7 @@ show_sidebar: false
             <!-- Project 6 -->
             <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                    <img src="assets/images/police-shootings-plot.png" alt="Police Shootings Plot" class="card-img-top project-img">
+                    <img src="/assets/images/police-shootings-plot.png" alt="Police Shootings Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Police Shootings Analysis</h5>
                         <p class="card-text">In-depth data examination of police shootings.</p>
@@ -112,7 +97,7 @@ show_sidebar: false
             <!-- Project 7 -->
             <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                    <img src="assets/images/annual_income_vs_investment_amount.png" alt="Client Segmentation Visualization" class="card-img-top project-img">
+                    <img src="/assets/images/client-segmentation-plot.png" alt="Client Segmentation Visualization" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Client Segmentation Project</h5>
                         <p class="card-text">Client segmentation based on various attributes such as annual income, investment amount, and engagement score.</p>
