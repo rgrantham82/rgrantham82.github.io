@@ -44,7 +44,6 @@ show_sidebar: false
 
 <body>
     <div class="container">
-        <h1 class="my-4">Data Analytics Projects</h1>
         <div class="row">
             <!-- Project 1 -->
             <div class="col-lg-4 col-md-6 project-card">
