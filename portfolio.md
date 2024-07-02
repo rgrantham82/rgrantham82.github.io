@@ -54,7 +54,6 @@ show_sidebar: false
                     <img src="/assets/images/sql-screenshot.PNG" alt="SQL Examples Screenshot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">SQL Examples</h5>
-                        <p class="card-text">Example of SQL queries and solutions.</p>
                         <a href="https://github.com/rgrantham82/SQL_Examples" class="btn btn-primary" data-toggle="tooltip" title="View SQL Examples Project">View Project</a>
                     </div>
                 </div>
@@ -64,8 +63,7 @@ show_sidebar: false
                 <div class="card">
                     <img src="/assets/images/fraud-detection-plot.png" alt="Fraud Detection Plot" class="card-img-top project-img">
                     <div class="card-body">
-                        <h5 class="card-title">Fraud Detection Project</h5>
-                        <p class="card-text">AI-driven fraud prevention system visualization.</p>
+                        <h5 class="card-title">Fraud Detection</h5>
                         <a href="https://github.com/rgrantham82/fraud-detection" class="btn btn-primary" data-toggle="tooltip" title="View Fraud Detection Project">View Project</a>
                     </div>
                 </div>
@@ -76,7 +74,6 @@ show_sidebar: false
                     <img src="/assets/images/mini-course-sales-forecast.png" alt="Sales Forecast Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Forecasting Mini-Course Sales</h5>
-                        <p class="card-text">Sales prediction analysis for a mini-course.</p>
                         <a href="https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales" class="btn btn-primary" data-toggle="tooltip" title="View Sales Forecasting Project">View Project</a>
                     </div>
                 </div>
@@ -87,7 +84,6 @@ show_sidebar: false
                     <img src="/assets/images/credit-approval-screenshot.PNG" alt="Credit Approval Screenshot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Predicting Credit Approval</h5>
-                        <p class="card-text">Predictive model for credit approval assessment.</p>
                         <a href="https://www.kaggle.com/code/robertgrantham/predicting-credit-approval" class="btn btn-primary" data-toggle="tooltip" title="View Credit Approval Project">View Project</a>
                     </div>
                 </div>
@@ -98,7 +94,6 @@ show_sidebar: false
                     <img src="/assets/images/Austin Violent Crime Insights Dashboard.png" alt="Austin Crime Dashboard" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Austin Violent Crime Insights Dashboard</h5>
-                        <p class="card-text">Interactive Crime Data Visualization</p>
                         <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Dashboard">View Project</a>
                     </div>
                 </div>
@@ -109,7 +104,6 @@ show_sidebar: false
                     <img src="/assets/images/police-shootings-plot.png" alt="Police Shootings Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Police Shootings Analysis</h5>
-                        <p class="card-text">In-depth data examination of police shootings.</p>
                         <a href="https://www.kaggle.com/code/robertgrantham/police-shootings-analysis" class="btn btn-primary" data-toggle="tooltip" title="View Police Shootings Analysis Project">View Project</a>
                     </div>
                 </div>
@@ -119,8 +113,7 @@ show_sidebar: false
                 <div class="card">
                     <img src="/assets/images/client-segmentation-plot.png" alt="Client Segmentation Visualization" class="card-img-top project-img">
                     <div class="card-body">
-                        <h5 class="card-title">Client Segmentation Project</h5>
-                        <p class="card-text">Client segmentation based on various attributes such as annual income, investment amount, and engagement score.</p>
+                        <h5 class="card-title">Client Segmentation</h5>
                         <a href="/assets/files/client-segmentation.html" class="btn btn-primary" data-toggle="tooltip" title="View Client Segmentation Project">View Project</a>
                     </div>
                 </div>
