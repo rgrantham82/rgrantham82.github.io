@@ -59,6 +59,7 @@ show_sidebar: false
                     <img src="/assets/images/sql-screenshot.PNG" alt="SQL Examples Screenshot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">SQL Examples</h5>
+                        <p class="card-text">A collection of SQL queries showcasing various database operations, including data retrieval, manipulation, and aggregation.</p>
                         <a href="https://github.com/rgrantham82/SQL_Examples" class="btn btn-primary" data-toggle="tooltip" title="View SQL Examples Project">View Project</a>
                     </div>
                 </div>
@@ -69,6 +70,7 @@ show_sidebar: false
                     <img src="/assets/images/fraud-detection-plot.png" alt="Fraud Detection Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Fraud Detection</h5>
+                        <p class="card-text">Developed a machine learning model to detect fraudulent transactions, improving the accuracy of fraud detection systems.</p>
                         <a href="https://github.com/rgrantham82/fraud-detection" class="btn btn-primary" data-toggle="tooltip" title="View Fraud Detection Project">View Project</a>
                     </div>
                 </div>
@@ -79,6 +81,7 @@ show_sidebar: false
                     <img src="/assets/images/mini-course-sales-forecast.png" alt="Sales Forecast Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Forecasting Mini-Course Sales</h5>
+                        <p class="card-text">Implemented time series analysis techniques to forecast sales for an online mini-course, enabling better inventory management.</p>
                         <a href="https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales" class="btn btn-primary" data-toggle="tooltip" title="View Sales Forecasting Project">View Project</a>
                     </div>
                 </div>
@@ -89,6 +92,7 @@ show_sidebar: false
                     <img src="/assets/images/credit-approval-screenshot.PNG" alt="Credit Approval Screenshot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Predicting Credit Approval</h5>
+                        <p class="card-text">Built a predictive model to assess credit approval chances based on applicant information, aiding in risk assessment.</p>
                         <a href="https://www.kaggle.com/code/robertgrantham/predicting-credit-approval" class="btn btn-primary" data-toggle="tooltip" title="View Credit Approval Project">View Project</a>
                     </div>
                 </div>
@@ -99,6 +103,7 @@ show_sidebar: false
                     <img src="/assets/images/Austin Violent Crime Insights Dashboard.png" alt="Austin Crime Dashboard" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Austin Violent Crime Insights Dashboard</h5>
+                        <p class="card-text">Created a Tableau dashboard to visualize and analyze violent crime data in Austin, providing insights for law enforcement and policymakers.</p>
                         <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Dashboard">View Project</a>
                     </div>
                 </div>
@@ -109,6 +114,7 @@ show_sidebar: false
                     <img src="/assets/images/police-shootings-plot.png" alt="Police Shootings Plot" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Police Shootings Analysis</h5>
+                        <p class="card-text">Analyzed data on police shootings to identify patterns and trends, contributing to discussions on law enforcement practices.</p>
                         <a href="https://www.kaggle.com/code/robertgrantham/police-shootings-analysis" class="btn btn-primary" data-toggle="tooltip" title="View Police Shootings Analysis Project">View Project</a>
                     </div>
                 </div>
@@ -119,6 +125,7 @@ show_sidebar: false
                     <img src="/assets/images/client-segmentation-plot.png" alt="Client Segmentation Visualization" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Client Segmentation</h5>
+                        <p class="card-text">Performed client segmentation analysis to identify distinct customer groups, helping businesses tailor their marketing strategies.</p>
                         <a href="/client-segmentation" class="btn btn-primary" data-toggle="tooltip" title="View Client Segmentation Project">View Project</a>
                     </div>
                 </div>
