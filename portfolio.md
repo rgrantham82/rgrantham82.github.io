@@ -24,6 +24,22 @@ show_sidebar: false
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analytics Projects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .project-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
