@@ -1,7 +1,7 @@
-<footer class="footer">
+<footer class="footer" style="background-color: #E8F4F8;">
   <div class="container">
     {% if site.footer_menu %}
-      <div class="columns is-multiline is-centered">
+      <div class="columns is-multiline is-centered fade-in">
         {% for item in site.data[site.footer_menu] %}
           <div class="column is-narrow has-text-centered">
             <a href="{{ item.link | relative_url }}" class="link" aria-label="{{ item.name }}">
