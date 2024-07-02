@@ -50,17 +50,47 @@ $input-padding: 10px;
 
 @import 'main';
 
+// Define Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonHover {
+  from {
+    background-color: $primary;
+  }
+  to {
+    background-color: darken($primary, 10%);
+  }
+}
+
 // Additional Custom Styles
 body {
     background-color: $gray;
     color: $dark;
     font-family: $family-sans-serif;
+    animation: fadeIn 1s ease-in-out;
 }
 
 a {
     color: $link;
     &:hover {
         color: darken($link, 10%);
+        animation: fadeIn 0.5s ease-in-out;
     }
 }
 
@@ -68,9 +98,11 @@ a {
     background-color: $primary;
     color: $white;
     border-color: $primary;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     &:hover {
         background-color: darken($primary, 10%);
         border-color: darken($primary, 10%);
+        animation: buttonHover 0.3s ease-in-out;
     }
 }
 
@@ -79,6 +111,7 @@ a {
     color: $white;
     .hero-body {
         padding: $spacing-3 $spacing-2;
+        animation: slideInFromLeft 1s ease-in-out;
     }
 }
 
@@ -88,4 +121,5 @@ a {
     padding: $spacing $spacing-2;
     border-radius: $input-radius;
     box-shadow: 0 2px 4px rgba($black, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
