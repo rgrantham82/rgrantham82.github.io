@@ -144,7 +144,7 @@ show_sidebar: false
 
             function onVisibilityChange(el, callback) {
                 var old_visible;
-                return function () {
+                return function() {
                     var visible = isElementInViewport(el);
                     if (visible != old_visible) {
                         old_visible = visible;
