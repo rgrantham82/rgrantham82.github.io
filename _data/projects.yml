@@ -1,7 +1,6 @@
 intro: |-
   Welcome to my portfolio showcasing various data analytics projects I've worked on. Each project demonstrates my skills in SQL, predictive analytics, data visualization, and more.
 
-  
 items:
   - title: SQL Examples
     subtitle: Data Query Solutions
@@ -40,7 +39,7 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
     link_text: View Sales Forecasting Project
     tags: Forecasting, Sales Analysis, Kaggle
-    
+
   - title: Predicting Credit Approval
     subtitle: Credit Risk Assessment
     description: |-
@@ -52,7 +51,7 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
     link_text: View Credit Approval Project
     tags: Predictive Analytics, Credit Risk, Kaggle
-   
+
   - title: Austin Violent Crime Insights Dashboard
     subtitle: Interactive Crime Data Visualization
     description: |-
@@ -76,3 +75,15 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
     link_text: View Police Shootings Analysis Project
     tags: Data Analysis, Statistical Analysis, Kaggle
+
+  - title: Client Segmentation Project
+    subtitle: Market Analysis and Strategy Development
+    description: |-
+      Performed client segmentation using clustering algorithms to identify distinct customer groups based on various attributes. This project involved analyzing synthetic client data, visualizing clusters, and developing targeted marketing and engagement strategies for each segment.
+
+      The interactive D3.js chart allows for an in-depth exploration of client segments and their characteristics.
+    image: /assets/images/client-segmentation-chart.png
+    image_ratio: is-4by3
+    link: /client-segmentation
+    link_text: View Client Segmentation Project
+    tags: Clustering, Market Analysis, D3.js
