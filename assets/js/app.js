@@ -14,8 +14,14 @@ document.addEventListener('alpine:init', () => {
         },
 
         setCookies(value) {
-            Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
-            Cookies.set('cookiesAccepted', value, { expires: 7, path: '/' });
+            Cookies.set('showCookieBanner', 'false', {
+                expires: 7,
+                path: '/'
+            });
+            Cookies.set('cookiesAccepted', value, {
+                expires: 7,
+                path: '/'
+            });
         },
 
         animateBannerOut() {
@@ -80,13 +86,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function acceptCookies() {
-        Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
-        Cookies.set('cookiesAccepted', 'true', { expires: 7, path: '/' });
+        Cookies.set('showCookieBanner', 'false', {
+            expires: 7,
+            path: '/'
+        });
+        Cookies.set('cookiesAccepted', 'true', {
+            expires: 7,
+            path: '/'
+        });
         animateBannerOut();
     }
 
     function rejectCookies() {
-        Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
+        Cookies.set('showCookieBanner', 'false', {
+            expires: 7,
+            path: '/'
+        });
         animateBannerOut();
     }
 
