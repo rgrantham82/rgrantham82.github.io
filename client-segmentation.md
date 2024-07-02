@@ -39,93 +39,105 @@ The client segmentation analysis is performed using a combination of exploratory
 
 The interactive chart below visualizes clients' investment amounts against their annual income, color-coded by their investment preference. This visualization helps in identifying clusters of clients with similar investment behaviors.
 
-<div class="chart" id="chart"></div>
+<style>
+  .axis-label {
+    font: 14px sans-serif;
+  }
+  .tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+</style>
+<body>
+  <div id="scatterplot"></div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const margin = {top: 20, right: 30, bottom: 40, left: 50};
+    const width = 800 - margin.left - margin.right;
+    const height = 600 - margin.top - margin.bottom;
 
-<script src="https://d3js.org/d3.v6.min.js"></script>
-<script>
-// Load the data
-d3.csv("assets/files/synthetic_client_data.csv").then(data => {
-    // Parse the data
-    data.forEach(d => {
-        d.Age = +d.Age;
-        d.Annual_Income = +d['Annual Income'];
-        d.Investment_Amount = +d['Investment Amount'];
-        d.Transaction_Frequency = +d['Transaction Frequency'];
-        d.Engagement_Score = +d['Engagement Score'];
-    });
+    const svg = d3.select("#scatterplot")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    // Set dimensions and margins for the chart
-    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
-    const width = 960 - margin.left - margin.right;
-    const height = 500 - margin.top - margin.bottom;
+    d3.csv("/assets/files/synthetic_client_data.csv").then(data => {
+      data.forEach(d => {
+        d['Annual Income'] = +d['Annual Income'];
+        d['Investment Amount'] = +d['Investment Amount'];
+      });
 
-    // Append SVG element
-    const svg = d3.select("#chart")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
-
-    // Set scales
-    const x = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.Annual_Income)])
+      const x = d3.scaleLinear()
+        .domain(d3.extent(data, d => d['Annual Income']))
         .range([0, width]);
 
-    const y = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.Investment_Amount)])
+      const y = d3.scaleLinear()
+        .domain(d3.extent(data, d => d['Investment Amount']))
         .range([height, 0]);
 
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+      const color = d3.scaleOrdinal()
+        .domain(["Low", "Medium", "High"])
+        .range(["#1f77b4", "#ff7f0e", "#2ca02c"]);
 
-    // Add X axis
-    svg.append("g")
+      const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+      svg.append("g")
         .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x));
-
-    // Add Y axis
-    svg.append("g")
-        .call(d3.axisLeft(y));
-
-    // Add dots
-    svg.append('g')
-        .selectAll("dot")
-        .data(data)
-        .enter()
-        .append("circle")
-        .attr("cx", d => x(d.Annual_Income))
-        .attr("cy", d => y(d.Investment_Amount))
-        .attr("r", 5)
-        .style("fill", d => color(d['Investment Preference']));
-
-    // Add labels
-    svg.append("text")
+        .call(d3.axisBottom(x))
+        .append("text")
+        .attr("class", "axis-label")
         .attr("x", width / 2)
-        .attr("y", height + margin.top + 20)
+        .attr("y", margin.bottom)
         .style("text-anchor", "middle")
         .text("Annual Income");
 
-    svg.append("text")
+      svg.append("g")
+        .call(d3.axisLeft(y))
+        .append("text")
+        .attr("class", "axis-label")
         .attr("transform", "rotate(-90)")
-        .attr("y", 0 - margin.left)
-        .attr("x", 0 - (height / 2))
+        .attr("x", -height / 2)
+        .attr("y", -margin.left)
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text("Investment Amount");
-});
-</script>
 
-<style>
-    /* Add some basic styling */
-    body {
-        font-family: Arial, sans-serif;
-    }
-    .chart {
-        margin: 20px auto;
-        width: 80%;
-        height: 500px;
-    }
-</style>
+      svg.selectAll(".dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "dot")
+        .attr("cx", d => x(d['Annual Income']))
+        .attr("cy", d => y(d['Investment Amount']))
+        .attr("r", 5)
+        .style("fill", d => color(d['Risk Tolerance']))
+        .on("mouseover", function(event, d) {
+          tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+          tooltip.html(`Income: ${d['Annual Income']}<br>Investment: ${d['Investment Amount']}`)
+            .style("left", (event.pageX + 5) + "px")
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+          tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
+        });
+    });
+  </script>
+</body>
 
 # Recommendations Based on Cluster Analysis
 
