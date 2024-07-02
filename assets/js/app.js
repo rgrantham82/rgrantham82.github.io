@@ -5,17 +5,25 @@ document.addEventListener('alpine:init', () => {
 
         acceptCookies() {
             this.setCookies('true');
-            this.showBanner = false;
+            this.animateBannerOut();
         },
 
         rejectCookies() {
             this.setCookies('false');
-            this.showBanner = false;
+            this.animateBannerOut();
         },
 
         setCookies(value) {
             Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
             Cookies.set('cookiesAccepted', value, { expires: 7, path: '/' });
+        },
+
+        animateBannerOut() {
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.add('fade-out');
+            setTimeout(() => {
+                this.showBanner = false;
+            }, 500); // Match the animation duration
         }
     }));
 
@@ -25,6 +33,14 @@ document.addEventListener('alpine:init', () => {
 
         toggleNav() {
             this.openNav = !this.openNav;
+            const navMenu = document.getElementById('navMenu');
+            if (this.openNav) {
+                navMenu.classList.add('slide-in');
+                navMenu.classList.remove('slide-out');
+            } else {
+                navMenu.classList.add('slide-out');
+                navMenu.classList.remove('slide-in');
+            }
         }
     }));
 });
@@ -56,17 +72,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleCookieBanner() {
         cookieBanner.style.display = showBanner ? 'block' : 'none';
+        if (showBanner) {
+            cookieBanner.classList.add('fade-in');
+        }
     }
 
     function acceptCookies() {
         Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
         Cookies.set('cookiesAccepted', 'true', { expires: 7, path: '/' });
-        toggleCookieBanner();
+        animateBannerOut();
     }
 
     function rejectCookies() {
         Cookies.set('showCookieBanner', 'false', { expires: 7, path: '/' });
-        toggleCookieBanner();
+        animateBannerOut();
+    }
+
+    function animateBannerOut() {
+        cookieBanner.classList.add('fade-out');
+        setTimeout(() => {
+            cookieBanner.style.display = 'none';
+        }, 500); // Match the animation duration
     }
 
     if (cookieBanner) {
