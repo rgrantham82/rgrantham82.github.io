@@ -37,7 +37,10 @@ show_sidebar: false
 
         .project-img {
             width: 100%;
-            height: auto;
+            height: 200px;
+            /* Fixed height for all images */
+            object-fit: cover;
+            /* Ensures the image covers the entire area */
         }
     </style>
 </head>
