@@ -9,7 +9,7 @@ published: true
 canonical_url: https://rgrantham82.github.io/2024/07/01/cta-lgbt-community-support.html
 ---
 
-In an era where political landscapes can shift dramatically, the role of data analytics in advocating for and protecting vulnerable communities has never been more crucial. As we face the potential reelection of an administration that may be unfriendly towards the LGBT community, it is imperative that we, as data analysts and scientists, utilize our skills to bolster resilience, support advocacy efforts, and safeguard the rights and wellbeing of LGBT individuals.
+In an era where political landscapes can shift dramatically, the role of data analytics in advocating for and protecting vulnerable communities has never been more crucial. As we face the potential reelection of an administration, that previously demonstrated hostility towards the LGBT community, unseen since the Regan administration, it is imperative that we, as data analysts and scientists, utilize our skills to bolster resilience, support advocacy efforts, and safeguard the rights and wellbeing of LGBT individuals.
 
 ### The Power of Data Analytics
 
