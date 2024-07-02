@@ -71,9 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const showBanner = Cookies.get('showCookieBanner') !== 'false';
 
     function toggleCookieBanner() {
-        cookieBanner.style.display = showBanner ? 'block' : 'none';
         if (showBanner) {
             cookieBanner.classList.add('fade-in');
+            cookieBanner.style.display = 'block';
+        } else {
+            cookieBanner.style.display = 'none';
         }
     }
 
