@@ -1,5 +1,5 @@
----
----
+--- 
+--- 
 
 // Customize Colors
 $primary: #87CEEB; // Serene Sky Blue
@@ -52,30 +52,33 @@ $input-padding: 10px;
 
 // Define Animations
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 @keyframes buttonHover {
-  from {
-    background-color: $primary;
-  }
-  to {
-    background-color: darken($primary, 10%);
-  }
+    from {
+        background-color: $primary;
+    }
+
+    to {
+        background-color: darken($primary, 10%);
+    }
 }
 
 // Additional Custom Styles
@@ -88,6 +91,7 @@ body {
 
 a {
     color: $link;
+
     &:hover {
         color: darken($link, 10%);
         animation: fadeIn 0.5s ease-in-out;
@@ -99,6 +103,7 @@ a {
     color: $white;
     border-color: $primary;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+
     &:hover {
         background-color: darken($primary, 10%);
         border-color: darken($primary, 10%);
@@ -109,6 +114,7 @@ a {
 .hero {
     background-color: $primary;
     color: $white;
+
     .hero-body {
         padding: $spacing-3 $spacing-2;
         animation: slideInFromLeft 1s ease-in-out;
@@ -171,39 +177,43 @@ $background: #E8F4F8; // Alice Blue
 $text: #333333; // Dark Charcoal
 
 body {
-  background-color: $background;
-  color: $text;
+    background-color: $background;
+    color: $text;
 }
 
 a {
-  color: $primary;
-  &:hover {
-    color: $secondary;
-  }
+    color: $primary;
+
+    &:hover {
+        color: $secondary;
+    }
 }
 
 // Animations
 .fade-in {
-  opacity: 0;
-  animation: fadeInAnimation 1s forwards;
+    opacity: 0;
+    animation: fadeInAnimation 1s forwards;
 }
 
 @keyframes fadeInAnimation {
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
 
 // Footer Styling
 .footer {
-  background-color: $background;
-  .content {
-    color: $text;
-  }
-  a {
-    color: $primary;
-    &:hover {
-      color: $secondary;
+    background-color: $background;
+
+    .content {
+        color: $text;
     }
-  }
+
+    a {
+        color: $primary;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
 }
