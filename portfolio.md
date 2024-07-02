@@ -119,7 +119,7 @@ show_sidebar: false
                     <img src="/assets/images/client-segmentation-plot.png" alt="Client Segmentation Visualization" class="card-img-top project-img">
                     <div class="card-body">
                         <h5 class="card-title">Client Segmentation</h5>
-                        <a href="/assets/files/client-segmentation.md" class="btn btn-primary" data-toggle="tooltip" title="View Client Segmentation Project">View Project</a>
+                        <a href="/assets/files/client-segmentation" class="btn btn-primary" data-toggle="tooltip" title="View Client Segmentation Project">View Project</a>
                     </div>
                 </div>
             </div>
