@@ -32,7 +32,7 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 2. **Predictive Modeling:** Forecast future trends and behaviors with high accuracy, allowing businesses to proactively address challenges and opportunities.
 3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
 
-<figure class="image is-128x128">
+<figure class="image is-128x128 fade-in">
   <img class="is-rounded" src="assets/images/profile-image.jpg" />
 </figure>
 
@@ -72,4 +72,3 @@ Analyzing police shootings data to understand patterns and factors influencing i
 - **Geospatial Analysis:** Map out the locations and frequencies of police shootings.
 - **Temporal Analysis:** Analyze shooting incidents over time to identify trends and seasonal variations.
 - **Factor Analysis:** Investigate factors such as time of day, location type, and officer demographics influencing shooting incidents.
-
