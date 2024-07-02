@@ -162,3 +162,48 @@ a {
         opacity: 1;
     }
 }
+
+// Color Scheme
+$primary: #87CEEB; // Serene Sky Blue
+$secondary: #4C8C9C; // Steel Teal
+$accent: #F5F5DC; // Beige
+$background: #E8F4F8; // Alice Blue
+$text: #333333; // Dark Charcoal
+
+body {
+  background-color: $background;
+  color: $text;
+}
+
+a {
+  color: $primary;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+// Animations
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+// Footer Styling
+.footer {
+  background-color: $background;
+  .content {
+    color: $text;
+  }
+  a {
+    color: $primary;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
