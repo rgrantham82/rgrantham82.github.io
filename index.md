@@ -26,6 +26,8 @@ I specialize in leveraging AI, Predictive Analytics, and Data Visualization to p
 
 "Robert transformed our data strategy, leading to a 30% increase in operational efficiency within six months. His expertise in predictive analytics and AI-driven insights is unmatched." - Drew Brandt, Vaco
 
+"Robert's ability to translate complex data into clear and actionable insights has been invaluable. His work has consistently exceeded our expectations, leading to significant improvements in our operations." - Dakotah Hicock, Senior Developer at Aristocrat
+
 ### Value Propositions
 
 1. **AI-Enhanced Analytics:** Utilize advanced AI techniques to automate and enhance data analysis, providing deeper insights and faster decision-making.
