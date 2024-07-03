@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home Page -->
+    <url>
+        <loc>https://rgrantham82.github.io/</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Portfolio Page -->
+    <url>
+        <loc>https://rgrantham82.github.io/portfolio</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- SQL Examples Project -->
+    <url>
+        <loc>https://github.com/rgrantham82/SQL_Examples</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Fraud Detection Project -->
+    <url>
+        <loc>https://github.com/rgrantham82/fraud-detection</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Forecasting Mini-Course Sales Project -->
+    <url>
+        <loc>https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Predicting Credit Approval Project -->
+    <url>
+        <loc>https://www.kaggle.com/code/robertgrantham/predicting-credit-approval</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Austin Violent Crime Insights Dashboard Project -->
+    <url>
+        <loc>https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Police Shootings Analysis Project -->
+    <url>
+        <loc>https://www.kaggle.com/code/robertgrantham/police-shootings-analysis</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Client Segmentation Project -->
+    <url>
+        <loc>https://rgrantham82.github.io/client-segmentation</loc>
+        <lastmod>2024-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
