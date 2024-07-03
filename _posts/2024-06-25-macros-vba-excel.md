@@ -8,6 +8,16 @@ published: true
 canonical_url: https://rgrantham82.github.io/2024/06/25/macros-vba-excel.html
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WZFJ98W4K');
+</script>
+
 As a data analyst, efficiency and accuracy in report generation are critical. One powerful way to achieve this is by using macros and VBA (Visual Basic for Applications) in Excel to automate repetitive tasks. In this blog post, I'll walk you through a practical example of how to automate the process of generating a monthly sales report. This will involve importing data from multiple sources, cleaning it, performing necessary calculations, and generating a summary report—all with a single click.
 
 #### Why Automate with VBA?
