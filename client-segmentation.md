@@ -5,8 +5,6 @@ layout: page
 show_sidebar: false
 ---
 
-# Client Segmentation
-
 ## Introduction
 
 Client segmentation is a crucial process in data analytics that involves dividing a broad consumer or business market into sub-groups of consumers based on shared characteristics. This project aims to segment clients based on various attributes such as age, gender, annual income, investment amount, investment preference, transaction frequency, risk tolerance, and engagement score. The goal is to identify patterns and insights that can help in better understanding the client base and tailoring strategies accordingly.
