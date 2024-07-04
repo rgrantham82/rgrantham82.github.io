@@ -9,16 +9,14 @@ show_sidebar: false
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-7WZFJ98W4K');
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-7WZFJ98W4K');
 </script>
-
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
@@ -159,7 +157,7 @@ show_sidebar: false
               </div>
             </div>
             <script>
-              document.addEventListener("DOMContentLoaded", function () {
+              document.addEventListener("DOMContentLoaded", function() {
                 const cards = document.querySelectorAll(".project-card");
                 const observer = new IntersectionObserver((entries) => {
                   entries.forEach((entry) => {
@@ -179,4 +177,3 @@ show_sidebar: false
     </div>
   </div>
 </section>
-
