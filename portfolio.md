@@ -135,11 +135,11 @@ show_sidebar: false
                 <!-- Project 8 -->
                 <div class="col-lg-4 col-md-6 project-card">
                   <div class="card">
-                    <img src="/assets/images/client-segmentation.png" alt="Client Segmentation Visualization" class="card-img-top project-img" />
+                    <img src="/assets/images/client-segmentation-plot.png" alt="Client Segmentation Visualization" class="card-img-top project-img" />
                     <div class="card-body">
                       <h5 class="card-title">Client Segmentation</h5>
                       <p class="card-text">Utilized clustering techniques to segment clients based on purchasing behavior, enabling targeted marketing strategies.</p>
-                      <a href="/assets/files/client-segmentation.pdf" class="btn btn-primary" data-toggle="tooltip" title="View Client Segmentation Project">View Project</a>
+                      <a href="/client-segmentation" class="btn btn-primary" data-toggle="tooltip" title="View Client Segmentation Project">View Project</a>
                     </div>
                   </div>
                 </div>
