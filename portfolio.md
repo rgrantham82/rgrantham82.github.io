@@ -22,33 +22,27 @@ show_sidebar: false
 <div class="projects">
     <div class="project">
         <h3>Fraud Detection</h3>
-        <img src="assets/images/fraud-detection.png" alt="Fraud Detection Project" class="lazy" data-src="assets/images/fraud-detection.png">
+        <img src="/assets/images/fraud-detection.png" alt="Fraud Detection Project" class="lazy" data-src="assets/images/fraud-detection.png">
         <p>This project focuses on detecting fraudulent transactions using machine learning techniques. It includes data preprocessing, feature engineering, model training, and evaluation.</p>
         <a href="https://github.com/rgrantham82/fraud-detection" class="btn btn-primary">View on GitHub</a>
     </div>
     <div class="project">
         <h3>Violent Crimes Dashboard for Austin, TX</h3>
-        <img src="assets/images/violent-crimes-dashboard.png" alt="Violent Crimes Dashboard" class="lazy" data-src="assets/images/violent-crimes-dashboard.png">
+        <img src="/assets/images/violent-crimes-dashboard.png" alt="Violent Crimes Dashboard" class="lazy" data-src="assets/images/violent-crimes-dashboard.png">
         <p>An interactive dashboard showcasing violent crime trends in Austin, TX. The dashboard is built using Tableau and provides insights into crime hotspots, trends over time, and more.</p>
         <a href="https://public.tableau.com/views/AustinCrimeDashboard/CrimeDashboard" class="btn btn-primary">View Dashboard</a>
     </div>
     <div class="project">
         <h3>Client Segmentation</h3>
-        <img src="assets/images/client-segmentation.png" alt="Client Segmentation" class="lazy" data-src="assets/images/client-segmentation.png">
+        <img src="/assets/images/client-segmentation.png" alt="Client Segmentation" class="lazy" data-src="assets/images/client-segmentation.png">
         <p>This project involves segmenting clients based on their behavior and demographics using clustering algorithms. The results are visualized using interactive charts built with D3.js.</p>
         <a href="client-segmentation.md" class="btn btn-primary">View Project</a>
     </div>
     <div class="project">
         <h3>New Orleans Slave Sales Analysis</h3>
-        <img src="assets/images/new-orleans-slave-sales.png" alt="New Orleans Slave Sales Analysis" class="lazy" data-src="assets/images/new-orleans-slave-sales.png">
+        <img src="/assets/images/new-orleans-slave-sales.png" alt="New Orleans Slave Sales Analysis" class="lazy" data-src="assets/images/new-orleans-slave-sales.png">
         <p>An analysis of historical data on slave sales in New Orleans. This project includes data cleaning, analysis, and visualization of sales patterns over time using D3.js.</p>
         <a href="https://github.com/rgrantham82/new-orleans-slave-sales-analysis" class="btn btn-primary">View on GitHub</a>
-    </div>
-    <div class="project">
-        <h3>Data Integrity and Optimization</h3>
-        <img src="assets/images/data-integrity-optimization.png" alt="Data Integrity and Optimization" class="lazy" data-src="assets/images/data-integrity-optimization.png">
-        <p>This project focuses on improving data integrity and optimizing performance using the Austin Crime Reports dataset and additional datasets. Detailed methods and results are documented in a blog post.</p>
-        <a href="data-integrity-optimization.md" class="btn btn-primary">Read Blog Post</a>
     </div>
 </div>
 
