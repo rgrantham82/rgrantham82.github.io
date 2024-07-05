@@ -13,7 +13,7 @@ permalink: pretty
 
 # Theme
 remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
-theme_color: '#778899'  # Updated to slate blue dark
+theme_color: '#87CEEB'  
 force_theme: light
 favicon: /assets/images/favicon~2.png
 
