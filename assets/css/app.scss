@@ -128,34 +128,40 @@ a {
     to { transform: translateX(0); }
 }
 
-/* Fade-in animation class */
-.fadeInAnimation {
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-/* Slide-in-from-left animation class */
-.slideInFromLeft {
-    animation: slideInFromLeft 1s ease-in-out forwards;
-}
-
-/* Example additional animations */
+/* Keyframes for zoom-in animation */
 @keyframes zoomIn {
     from { transform: scale(0.5); }
     to { transform: scale(1); }
 }
 
-.zoomInAnimation {
-    animation: zoomIn 0.5s ease-in-out forwards;
-}
-
+/* Keyframes for bounce-in animation */
 @keyframes bounceIn {
     0% { transform: scale(0.5); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
 
+/* Animation classes */
+.fadeInAnimation {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.slideInFromLeft {
+    animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.zoomInAnimation {
+    animation: zoomIn 0.5s ease-in-out forwards;
+}
+
 .bounceInAnimation {
     animation: bounceIn 0.7s ease-in-out forwards;
+}
+
+/* Ensure elements animate when in view */
+.in-view {
+    opacity: 1;
+    transform: none;
 }
 
 // Footer Styling
