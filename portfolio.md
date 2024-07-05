@@ -129,7 +129,7 @@ show_sidebar: false
               <!-- Project 8 -->
               <div class="col-lg-4 col-md-6 project-card">
                 <div class="card">
-                  <img src="/assets/images/austin-crime-reports.png" alt="Austin Crime Reports" class="card-img-top project-img" />
+                  <img src="/assets/images/data_integrity_optimization_final.png" alt="Austin Crime Reports" class="card-img-top project-img" />
                   <div class="card-body">
                     <h5 class="card-title">Data Integrity and Optimization Using Austin Crime Reports</h5>
                     <p class="card-text">Investigated data integrity and optimization techniques on Austin Crime Reports dataset, enhancing data reliability and efficiency.</p>
