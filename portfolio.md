@@ -137,7 +137,7 @@ show_sidebar: false
                     <div class="card-body">
                       <h5 class="card-title">Data Integrity and Optimization Using Austin Crime Reports</h5>
                       <p class="card-text">Investigated data integrity and optimization techniques on Austin Crime Reports dataset, enhancing data reliability and efficiency.</p>
-                      <a href="[/assets/files/austin-crime-reports.pdf](https://github.com/rgrantham82/data-integrity-optimization/tree/main)" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Reports Project">View Repository</a>
+                      <a href="[(https://github.com/rgrantham82/data-integrity-optimization/tree/main)]" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Reports Project">View Repository</a>
                     </div>
                   </div>
                 </div>
