@@ -56,7 +56,7 @@ show_sidebar: false
                   <div class="card-body">
                     <h5 class="card-title">SQL Examples</h5>
                     <p class="card-text">A collection of SQL queries showcasing various database operations, including data retrieval, manipulation, and aggregation.</p>
-                    <a href="https://github.com/rgrantham82/SQL_Examples" class="btn btn-primary" data-toggle="tooltip" title="View SQL Examples Project">View Project</a>
+                    <a href="https://github.com/rgrantham82/SQL_Examples" class="btn btn-primary" data-toggle="tooltip" title="View SQL Examples Repository">View Project</a>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@ show_sidebar: false
                   <div class="card-body">
                     <h5 class="card-title">Fraud Detection</h5>
                     <p class="card-text">Developed a machine learning model to detect fraudulent transactions, improving the accuracy of fraud detection systems.</p>
-                    <a href="https://github.com/rgrantham82/fraud-detection" class="btn btn-primary" data-toggle="tooltip" title="View Fraud Detection Project">View Project</a>
+                    <a href="https://github.com/rgrantham82/fraud-detection" class="btn btn-primary" data-toggle="tooltip" title="View Fraud Detection Project">View Repository</a>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ show_sidebar: false
                   <div class="card-body">
                     <h5 class="card-title">Austin Violent Crime Insights Dashboard</h5>
                     <p class="card-text">Created a Tableau dashboard to visualize and analyze violent crime data in Austin, providing insights for law enforcement and policymakers.</p>
-                    <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Dashboard">View Project</a>
+                    <a href="https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Dashboard">View Dashboard</a>
                   </div>
                 </div>
               </div>
