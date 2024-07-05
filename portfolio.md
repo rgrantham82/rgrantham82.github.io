@@ -121,18 +121,6 @@ show_sidebar: false
                     </div>
                   </div>
                 </div>
-                <!-- Project 7 -->
-                <div class="col-lg-4 col-md-6 project-card">
-                  <div class="card">
-                    <img src="/assets/images/New Orleans Slave Sales.png" alt="New Orleans Slave Sales Visualization" class="card-img-top project-img" />
-                    <div class="card-body">
-                      <h5 class="card-title">New Orleans Slave Sales Analysis</h5>
-                      <p class="card-text">Conducted a detailed analysis of historical slave sales data from New Orleans, providing insights into the economic and social aspects of slavery.</p>
-                      <a href="https://github.com/rgrantham82/new-orleans-slave-sales-analysis" class="btn btn-primary" data-toggle="tooltip" title="View New Orleans Slave Sales Analysis Project">View Project</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project 8 -->
                 <div class="col-lg-4 col-md-6 project-card">
                   <div class="card">
                     <img src="/assets/images/client-segmentation-plot.png" alt="Client Segmentation Visualization" class="card-img-top project-img" />
@@ -143,14 +131,13 @@ show_sidebar: false
                     </div>
                   </div>
                 </div>
-                <!-- Project 9 -->
                 <div class="col-lg-4 col-md-6 project-card">
                   <div class="card">
                     <img src="/assets/images/austin-crime-reports.png" alt="Austin Crime Reports" class="card-img-top project-img" />
                     <div class="card-body">
                       <h5 class="card-title">Data Integrity and Optimization Using Austin Crime Reports</h5>
                       <p class="card-text">Investigated data integrity and optimization techniques on Austin Crime Reports dataset, enhancing data reliability and efficiency.</p>
-                      <a href="/assets/files/austin-crime-reports.pdf" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Reports Project">View Project</a>
+                      <a href="[/assets/files/austin-crime-reports.pdf](https://github.com/rgrantham82/data-integrity-optimization/tree/main)" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Reports Project">View Repository</a>
                     </div>
                   </div>
                 </div>
