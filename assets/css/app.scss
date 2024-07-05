@@ -1,36 +1,26 @@
----
----
-
 // Customize Colors
 $primary: #87CEEB; // Serene Sky Blue
-$link: $primary; // Use primary color for links
-$info: #3273dc; // Example of semantic color (can be customized)
-$success: #23d160;
-$warning: #ffdd57;
-$danger: #ff3860;
+$secondary: #4C8C9C; // Steel Teal
+$accent: #F5F5DC; // Beige
+$background: #E8F4F8; // Alice Blue
+$text: #333333; // Dark Charcoal
 $white: #fff;
 $black: #363636;
-$light: #f5f5f5;
-$dark: #363636;
-$gray: #CCCCCC; // Soft Gray
-$green: #8FBC8F; // Seafoam Green
-$peach: #FFDAB9; // Peach
-$coral: #F08080; // Light Coral
+$gray: #CCCCCC;
 
 // Typography
-$family-sans-serif: 'Arial', sans-serif;
-$family-serif: 'Georgia', serif;
-$size-1: 3rem;
-$size-2: 2.5rem;
-$size-3: 2rem;
-$size-4: 1.5rem;
-$size-5: 1.25rem;
-$size-6: 1rem;
-$size-7: 0.75rem;
+$font-family-sans-serif: 'Arial', sans-serif;
+$font-family-serif: 'Georgia', serif;
+$font-size-1: 2.5rem;
+$font-size-2: 2rem;
+$font-size-3: 1.75rem;
+$font-size-4: 1.25rem;
+$font-size-5: 1rem;
+$font-size-6: 0.875rem;
+$font-size-7: 0.75rem;
 
 // Spacing
 $spacing: 1.5rem;
-$spacing-1: $spacing;
 $spacing-2: $spacing * 1.5;
 $spacing-3: $spacing * 2;
 
@@ -50,185 +40,111 @@ $input-padding: 10px;
 
 @import 'main';
 
-// Define Animations
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes slideInFromLeft {
-	from {
-		transform: translateX(-100%);
-	}
-
-	to {
-		transform: translateX(0);
-	}
-}
-
-@keyframes buttonHover {
-	from {
-		background-color: $primary;
-	}
-
-	to {
-		background-color: darken($primary, 10%);
-	}
-}
-
-// Additional Custom Styles
+// Global Styles
 body {
-	background-color: $gray;
-	color: $dark;
-	font-family: $family-sans-serif;
-	animation: fadeIn 1s ease-in-out;
+  background-color: $background;
+  color: $text;
+  font-family: $font-family-sans-serif;
 }
 
 a {
-	color: $link;
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.3s ease;
 
-	&:hover {
-		color: darken($link, 10%);
-		animation: fadeIn 0.5s ease-in-out;
-	}
+  &:hover {
+    color: $secondary;
+  }
 }
 
 .button {
-	background-color: $primary;
-	color: $white;
-	border-color: $primary;
-	transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: $primary;
+  color: $white;
+  border: 2px solid $primary;
+  border-radius: $input-radius;
+  padding: $input-padding $input-padding * 1.5;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 
-	&:hover {
-		background-color: darken($primary, 10%);
-		border-color: darken($primary, 10%);
-		animation: buttonHover 0.3s ease-in-out;
-	}
-}
-
-.hero {
-	background-color: $primary;
-	color: $white;
-
-	.hero-body {
-		padding: $spacing-3 $spacing-2;
-		animation: slideInFromLeft 1s ease-in-out;
-	}
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
 }
 
 .section {
-	background-color: $white;
-	color: $dark;
-	padding: $spacing $spacing-2;
-	border-radius: $input-radius;
-	box-shadow: 0 2px 4px rgba($black, 0.1);
-	animation: fadeIn 1s ease-in-out;
+  background-color: $white;
+  color: $text;
+  padding: $spacing $spacing-2;
+  border-radius: $input-radius;
+  box-shadow: 0 2px 4px rgba($black, 0.1);
 }
 
-#cookieBanner {
-	opacity: 1;
-	transition: opacity 0.5s ease-in-out;
-	display: none;
+.hero {
+  background-color: $primary;
+  color: $white;
+  padding: $spacing $spacing-2;
+  border-radius: $input-radius;
+
+  .hero-body {
+    padding: $spacing-3 $spacing-2;
+  }
 }
 
-#cookieBanner.fade-in {
-	opacity: 1;
-	display: block;
+.project-card {
+  margin-bottom: $spacing;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: $input-radius;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba($black, 0.1);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 }
 
-#cookieBanner.fade-out {
-	opacity: 0;
-}
-
-#navMenu {
-	transform: translateX(-100%);
-	transition: transform 0.5s ease-in-out;
-}
-
-#navMenu.slide-in {
-	transform: translateX(0);
-}
-
-#navMenu.slide-out {
-	transform: translateX(-100%);
-}
-
-.image.fade-in {
-	opacity: 0;
-	animation: fadeInAnimation 1s forwards;
-}
-
-@keyframes fadeInAnimation {
-	to {
-		opacity: 1;
-	}
-}
-
-// Color Scheme
-$primary: #87CEEB; // Serene Sky Blue
-$secondary: #4C8C9C; // Steel Teal
-$accent: #F5F5DC; // Beige
-$background: #E8F4F8; // Alice Blue
-$text: #333333; // Dark Charcoal
-
-body {
-	background-color: $background;
-	color: $text;
-}
-
-a {
-	color: $primary;
-
-	&:hover {
-		color: $secondary;
-	}
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 // Animations
-.fade-in {
-	opacity: 0;
-	animation: fadeInAnimation 1s forwards;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@keyframes fadeInAnimation {
-	to {
-		opacity: 1;
-	}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 // Footer Styling
 .footer {
-	background-color: $background;
+  background-color: $background;
+  color: $text;
+  padding: $spacing;
+  text-align: center;
+  border-top: 1px solid $gray;
 
-	.content {
-		color: $text;
-	}
+  .content {
+    margin: 0 auto;
+    max-width: 960px;
+  }
 
-	a {
-		color: $primary;
+  a {
+    color: $primary;
+    text-decoration: none;
+    transition: color 0.3s ease;
 
-		&:hover {
-			color: $secondary;
-		}
-	}
-}
-
-.project-card {
-	margin-bottom: 30px;
-	transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-	transform: scale(1.05);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project-img {
-	width: 100%;
-	height: auto;
+    &:hover {
+      color: $secondary;
+    }
+  }
 }
