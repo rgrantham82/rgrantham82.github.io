@@ -6,8 +6,17 @@ description: Welcome to my portfolio showcasing various data analytics projects 
 show_sidebar: false
 ---
 
-<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
 
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-7WZFJ98W4K');
+</script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,14 +29,17 @@ show_sidebar: false
       opacity: 0;
       transform: translateY(20px);
     }
+
     .project-card.in-view {
       opacity: 1;
       transform: translateY(0);
     }
+
     .project-card:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
+
     .project-img {
       width: 100%;
       height: 200px;
@@ -35,7 +47,6 @@ show_sidebar: false
     }
   </style>
 </head>
-
 <body>
   <section class="section">
     <div class="container">
@@ -131,7 +142,6 @@ show_sidebar: false
       </div>
     </div>
   </section>
-
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const cards = document.querySelectorAll(".project-card");
@@ -148,5 +158,3 @@ show_sidebar: false
     });
   </script>
 </body>
-
-</html>
