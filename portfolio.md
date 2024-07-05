@@ -109,7 +109,7 @@ show_sidebar: false
                 <div class="card">
                   <img src="/assets/images/police-shootings-plot.png" alt="Police Shootings Plot" class="card-img-top project-img" />
                   <div class="card-body">
-                    <h5 class="card-title">Police Shootings Analysis</h5>
+                    <h5 class="card-title">Police Shootings</h5>
                     <p class="card-text">Analyzed data on police shootings to identify patterns and trends, contributing to discussions on law enforcement practices.</p>
                     <a href="https://www.kaggle.com/code/robertgrantham/police-shootings-analysis" class="btn btn-primary" data-toggle="tooltip" title="View Police Shootings Analysis Project">View Project</a>
                   </div>
@@ -121,7 +121,7 @@ show_sidebar: false
                   <img src="/assets/images/client-segmentation-plot.png" alt="Client Segmentation Visualization" class="card-img-top project-img" />
                   <div class="card-body">
                     <h5 class="card-title">Client Segmentation</h5>
-                    <p class="card-text">Utilized clustering techniques to segment clients based on purchasing behavior, enabling targeted marketing strategies.</p>
+                    <p class="card-text">Utilized clustering techniques to segment clients based on purchasing behavior, enabling targeted marketing strategies for a local Austin investment firm.</p>
                     <a href="/client-segmentation" class="btn btn-primary" data-toggle="tooltip" title="View Client Segmentation Project">View Project</a>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ show_sidebar: false
                 <div class="card">
                   <img src="/assets/images/data_integrity_optimization_final.png" alt="Austin Crime Reports" class="card-img-top project-img" />
                   <div class="card-body">
-                    <h5 class="card-title">Data Integrity and Optimization Using Austin Crime Reports</h5>
+                    <h5 class="card-title">Data Integrity and Optimization</h5>
                     <p class="card-text">Investigated data integrity and optimization techniques on Austin Crime Reports dataset, enhancing data reliability and efficiency.</p>
                     <a href="https://github.com/rgrantham82/data-integrity-optimization/tree/main" class="btn btn-primary" data-toggle="tooltip" title="View Austin Crime Reports Project">View Repository</a>
                   </div>
