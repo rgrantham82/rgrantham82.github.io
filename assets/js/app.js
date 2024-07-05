@@ -13,7 +13,7 @@ function addSlideInAnimation() {
     });
 }
 
-// Event listeners for animations
+// Event listener for animations
 document.addEventListener('DOMContentLoaded', () => {
     addFadeInAnimation();
     addSlideInAnimation();
