@@ -1,7 +1,7 @@
 # Site Settings
 lang: en
 title: Robert Grantham
-tagline: Robert Grantham
+tagline: Robert Grantham's Data Analytics Portfolio
 email: robertgrantham40@gmail.com
 description: >
   Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience.
@@ -55,7 +55,7 @@ sass:
   source_dir: _sass
 
 # Google Analytics
-#google_analytics: UA-code-here
+# google_analytics: UA-code-here
 
 # Cookie Policy
 cookie_policy: /cookie-policy/
@@ -80,11 +80,12 @@ defaults:
 # Metadata for SEO
 seo:
   title: Robert Grantham's Data Analytics Portfolio
-  description: Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more.
+  description: >
+    Explore the portfolio of Robert Grantham, showcasing expertise in SQL, predictive analytics, data visualization, and more. Discover projects that highlight skills and experience in data analysis.
   author: Robert Grantham
   lang: en
   site_name: Robert Grantham
-  image: "/assets/images/profile_photo.jpg"
+  image: "/assets/images/profile_image.jpg"
 
 # Social Media Links
 social:
