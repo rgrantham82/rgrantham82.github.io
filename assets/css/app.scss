@@ -1,3 +1,6 @@
+---
+---
+
 // Customize Colors
 $primary: #87CEEB; // Serene Sky Blue
 $secondary: #4C8C9C; // Steel Teal
@@ -45,6 +48,7 @@ body {
   background-color: $background;
   color: $text;
   font-family: $font-family-sans-serif;
+  line-height: 1.6; // Adjust line-height for better readability
 }
 
 a {
@@ -69,6 +73,7 @@ a {
   &:hover {
     background-color: darken($primary, 10%);
     border-color: darken($primary, 10%);
+    color: $white; // Ensure text color change on hover
   }
 }
 
