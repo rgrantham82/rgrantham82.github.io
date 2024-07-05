@@ -1,4 +1,4 @@
-// Function to handle animations
+// Function to handle fade-in animation
 function addFadeInAnimation() {
     const fadeInElements = document.querySelectorAll('.fade-in');
     fadeInElements.forEach(element => {
@@ -6,6 +6,7 @@ function addFadeInAnimation() {
     });
 }
 
+// Function to handle slide-in-from-left animation
 function addSlideInAnimation() {
     const slideInElements = document.querySelectorAll('.slide-in-from-left');
     slideInElements.forEach(element => {
@@ -13,10 +14,28 @@ function addSlideInAnimation() {
     });
 }
 
-// Event listener for animations
+// Function to handle zoom-in animation
+function addZoomInAnimation() {
+    const zoomInElements = document.querySelectorAll('.zoom-in');
+    zoomInElements.forEach(element => {
+        element.classList.add('zoomInAnimation');
+    });
+}
+
+// Function to handle bounce-in animation
+function addBounceInAnimation() {
+    const bounceInElements = document.querySelectorAll('.bounce-in');
+    bounceInElements.forEach(element => {
+        element.classList.add('bounceInAnimation');
+    });
+}
+
+// Event listeners for animations
 document.addEventListener('DOMContentLoaded', () => {
     addFadeInAnimation();
     addSlideInAnimation();
+    addZoomInAnimation();
+    addBounceInAnimation();
 });
 
 // Function to show/hide the cookie banner
@@ -81,3 +100,28 @@ function preloadImage(img) {
 
 // Event listener for lazy loading images
 document.addEventListener('DOMContentLoaded', lazyLoadImages);
+
+// Function to handle intersection observer for elements with animation
+function handleIntersectionAnimations() {
+    const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in-from-left, .zoom-in, .bounce-in');
+    const config = {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.1
+    };
+
+    let observer = new IntersectionObserver((entries, self) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                self.unobserve(entry.target);
+            }
+        });
+    }, config);
+
+    elementsToAnimate.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Event listener for intersection animations
+document.addEventListener('DOMContentLoaded', handleIntersectionAnimations);
