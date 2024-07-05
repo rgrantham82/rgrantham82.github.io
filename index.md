@@ -50,7 +50,6 @@ Outside of my professional endeavors, I am a first-degree black belt in Aikido, 
 
 As I continue to evolve in the field of data analytics, I am driven by a passion for innovation and a commitment to leveraging data-driven strategies to solve real-world problems. I strive to integrate my diverse skill set, professional experience, and personal values to deliver robust data solutions that empower organizations and drive sustainable growth.
 
-
 ## Highlight Projects
 
 ### Austin Violent Crime Insights Dashboard
