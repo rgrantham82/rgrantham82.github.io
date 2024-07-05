@@ -56,7 +56,7 @@ show_sidebar: false
                   <div class="card-body">
                     <h5 class="card-title">SQL Examples</h5>
                     <p class="card-text">A collection of SQL queries showcasing various database operations, including data retrieval, manipulation, and aggregation.</p>
-                    <a href="https://github.com/rgrantham82/SQL_Examples" class="btn btn-primary" data-toggle="tooltip" title="View SQL Examples Repository">View Project</a>
+                    <a href="https://github.com/rgrantham82/SQL_Examples" class="btn btn-primary" data-toggle="tooltip" title="View SQL Examples Repository">View Repository</a>
                   </div>
                 </div>
               </div>
