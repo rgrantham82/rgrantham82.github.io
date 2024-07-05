@@ -1,120 +1,83 @@
-document.addEventListener('alpine:init', () => {
-    // Cookie banner functionality
-    Alpine.data('cookieBanner', () => ({
-        showBanner: Cookies.get('showCookieBanner') !== 'false',
+// Function to handle animations
+function addFadeInAnimation() {
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    fadeInElements.forEach(element => {
+        element.classList.add('fadeInAnimation');
+    });
+}
 
-        acceptCookies() {
-            this.setCookies('true');
-            this.animateBannerOut();
-        },
+function addSlideInAnimation() {
+    const slideInElements = document.querySelectorAll('.slide-in-from-left');
+    slideInElements.forEach(element => {
+        element.classList.add('slideInFromLeft');
+    });
+}
 
-        rejectCookies() {
-            this.setCookies('false');
-            this.animateBannerOut();
-        },
-
-        setCookies(value) {
-            Cookies.set('showCookieBanner', 'false', {
-                expires: 7,
-                path: '/'
-            });
-            Cookies.set('cookiesAccepted', value, {
-                expires: 7,
-                path: '/'
-            });
-        },
-
-        animateBannerOut() {
-            const banner = document.getElementById('cookieBanner');
-            banner.classList.add('fade-out');
-            setTimeout(() => {
-                this.showBanner = false;
-            }, 500); // Match the animation duration
-        }
-    }));
-
-    // Navigation menu functionality
-    Alpine.data('navMenu', () => ({
-        openNav: false,
-
-        toggleNav() {
-            this.openNav = !this.openNav;
-            const navMenu = document.getElementById('navMenu');
-            if (this.openNav) {
-                navMenu.classList.add('slide-in');
-                navMenu.classList.remove('slide-out');
-            } else {
-                navMenu.classList.add('slide-out');
-                navMenu.classList.remove('slide-in');
-            }
-        }
-    }));
-});
-
+// Event listeners for animations
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar burger toggle
-    const navbarBurgers = Array.from(document.querySelectorAll('.navbar-burger'));
-    navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-            const targetElement = document.getElementById(el.dataset.target);
-            el.classList.toggle('is-active');
-            targetElement.classList.toggle('is-active');
-        });
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Cookie banner handling
-    const cookieBanner = document.getElementById('cookieBanner');
-    const showBanner = Cookies.get('showCookieBanner') !== 'false';
-
-    function toggleCookieBanner() {
-        if (showBanner) {
-            cookieBanner.classList.add('fade-in');
-            cookieBanner.style.display = 'block';
-        } else {
-            cookieBanner.style.display = 'none';
-        }
-    }
-
-    function acceptCookies() {
-        Cookies.set('showCookieBanner', 'false', {
-            expires: 7,
-            path: '/'
-        });
-        Cookies.set('cookiesAccepted', 'true', {
-            expires: 7,
-            path: '/'
-        });
-        animateBannerOut();
-    }
-
-    function rejectCookies() {
-        Cookies.set('showCookieBanner', 'false', {
-            expires: 7,
-            path: '/'
-        });
-        animateBannerOut();
-    }
-
-    function animateBannerOut() {
-        cookieBanner.classList.add('fade-out');
-        setTimeout(() => {
-            cookieBanner.style.display = 'none';
-        }, 500); // Match the animation duration
-    }
-
-    if (cookieBanner) {
-        document.getElementById('acceptCookies').addEventListener('click', acceptCookies);
-        document.getElementById('rejectCookies').addEventListener('click', rejectCookies);
-        toggleCookieBanner();
-    }
+    addFadeInAnimation();
+    addSlideInAnimation();
 });
+
+// Function to show/hide the cookie banner
+function showCookieBanner() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    cookieBanner.classList.add('fade-in');
+    cookieBanner.style.display = 'block';
+}
+
+function hideCookieBanner() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    cookieBanner.classList.remove('fade-in');
+    cookieBanner.classList.add('fade-out');
+    setTimeout(() => {
+        cookieBanner.style.display = 'none';
+    }, 500); // Match the duration of the fade-out animation
+}
+
+// Event listener for the cookie banner
+document.getElementById('acceptCookies').addEventListener('click', hideCookieBanner);
+
+// Function to handle navigation menu
+function toggleNavMenu() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('slide-in');
+    navMenu.classList.toggle('slide-out');
+}
+
+// Event listener for the navigation menu button
+document.getElementById('navToggle').addEventListener('click', toggleNavMenu);
+
+// Intersection Observer for lazy loading images
+function lazyLoadImages() {
+    const images = document.querySelectorAll('.lazy');
+    const config = {
+        rootMargin: '0px 0px 50px 0px',
+        threshold: 0
+    };
+
+    let observer = new IntersectionObserver((entries, self) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                preloadImage(entry.target);
+                self.unobserve(entry.target);
+            }
+        });
+    }, config);
+
+    images.forEach(image => {
+        observer.observe(image);
+    });
+}
+
+function preloadImage(img) {
+    const src = img.getAttribute('data-src');
+    if (!src) {
+        return;
+    }
+    img.src = src;
+    img.classList.add('fade-in');
+}
+
+// Event listener for lazy loading images
+document.addEventListener('DOMContentLoaded', lazyLoadImages);
