@@ -67,7 +67,6 @@ show_sidebar: true
 
 ### Austin Violent Crime Insights Dashboard
 
-<div class="zoom-in">
   **Project Overview:**
   The Austin Violent Crime Dashboard is an interactive tool that visualizes crime data across Austin, TX. It leverages data analytics and visualization techniques to provide insights into crime trends and patterns, aiding law enforcement and policymakers in making informed decisions.
 
@@ -76,11 +75,9 @@ show_sidebar: true
   - **Time Series Analysis:** Visualize crime data over time to identify patterns and anomalies.
   - **Detailed Reports:** Generate comprehensive reports for specific areas or time periods.
   - **Predictive Analytics:** Use machine learning models to forecast future crime trends and help allocate resources efficiently.
-</div>
 
 ### Police Shootings Analysis
 
-<div class="bounce-in">
   **Project Overview:**
   Analyzing police shootings data to understand patterns and factors influencing incidents.
 
@@ -89,4 +86,4 @@ show_sidebar: true
   - **Geospatial Analysis:** Map out the locations and frequencies of police shootings.
   - **Temporal Analysis:** Analyze shooting incidents over time to identify trends and seasonal variations.
   - **Factor Analysis:** Investigate factors such as time of day, location type, and officer demographics influencing shooting incidents.
-</div>
+
