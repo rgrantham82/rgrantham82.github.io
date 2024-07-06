@@ -23,21 +23,40 @@ show_sidebar: false
   <title>Data Analytics Projects</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    .project-card {
-      margin-bottom: 30px;
-      transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-      opacity: 0;
-      transform: translateY(20px);
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .project-card.in-view {
-      opacity: 1;
-      transform: translateY(0);
+    @keyframes hoverEffect {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .project-card {
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
     }
 
     .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      animation: hoverEffect 0.6s ease;
     }
 
     .project-img {
