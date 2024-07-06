@@ -1,0 +1,18 @@
+main:
+  - title: "Home"
+    url: "/"
+  - title: "Portfolio"
+    url: "/portfolio"
+  - title: "Blog"
+    url: "/blog"
+  
+social:
+  - title: "LinkedIn"
+    url: "https://www.linkedin.com/in/robertgrantham82"
+    icon: "fab fa-linkedin"
+  - title: "GitHub"
+    url: "https://github.com/rgrantham82"
+    icon: "fab fa-github"
+  - title: "Email"
+    url: "mailto:robertgrantham40@gmail.com"
+    icon: "fas fa-envelope"
