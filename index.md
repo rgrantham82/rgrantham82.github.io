@@ -51,7 +51,6 @@ show_sidebar: true
 
 ## About Me
 
-<div class="slide-in-from-left">
   With a bachelor's degree in history from the University of Southern Mississippi, supplemented by nearly 6 years of experience as a loss mitigation specialist at Regions Mortgage and a content review analyst at YouTube, I have honed my analytical skills and attention to detail. My journey into data analytics began three years ago, driven by a passion for uncovering meaningful insights and driving actionable results through data.
 
   During my tenure at Regions Mortgage, I specialized in mitigating financial risks and optimizing outcomes through meticulous data analysis. This experience provided a solid foundation in understanding complex datasets and their impact on strategic decision-making. Transitioning to YouTube, I further developed my analytical prowess by ensuring content integrity and adherence to regulatory standards—a role that sharpened my focus on data governance and compliance within digital platforms.
@@ -61,7 +60,6 @@ show_sidebar: true
   Outside of my professional endeavors, I am a first-degree black belt in Aikido, a martial art that embodies discipline and harmony. This journey reflects my commitment to continuous learning and resilience—values that shape my approach to tackling challenges in data analytics. I am deeply involved in Austin's cultural community, actively participating in local events and volunteering for causes that resonate with my values of community engagement and positive social impact.
 
   As I continue to evolve in the field of data analytics, I am driven by a passion for innovation and a commitment to leveraging data-driven strategies to solve real-world problems. I strive to integrate my diverse skill set, professional experience, and personal values to deliver robust data solutions that empower organizations and drive sustainable growth.
-</div>
 
 ## Highlight Projects
 
