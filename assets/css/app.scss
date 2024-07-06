@@ -183,6 +183,37 @@ a {
   transform: none;
 }
 
+// Default state before animation
+.fadeInUpAnimation, .slideInFromLeftAnimation, .zoomInAnimation, .bounceInAnimation {
+  opacity: 0;
+  transform: translateY(20px); // Default transform for fadeInUp
+}
+
+.in-view.fadeInUpAnimation {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.in-view.slideInFromLeftAnimation {
+  animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.in-view.zoomInAnimation {
+  animation: zoomIn 0.5s ease-in-out forwards;
+}
+
+.in-view.bounceInAnimation {
+  animation: bounceIn 0.7s ease-in-out forwards;
+}
+
+// Override default transform for other animations
+.slideInFromLeftAnimation {
+  transform: translateX(-100%);
+}
+
+.zoomInAnimation, .bounceInAnimation {
+  transform: scale(0.5);
+}
+
 // Footer Styling
 .footer {
   background-color: $background;
