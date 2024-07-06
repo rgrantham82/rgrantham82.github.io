@@ -7,7 +7,7 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
+
     <!-- Portfolio Page -->
     <url>
         <loc>https://rgrantham82.github.io/portfolio</loc>
@@ -16,10 +16,11 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Blog Page -->
     <url>
-        <loc>https://rgrantham82.github.io/client-segmentation</loc>
+        <loc>https://rgrantham82.github.io/blog</loc>
         <lastmod>2024-07-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
