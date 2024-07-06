@@ -36,17 +36,14 @@ show_sidebar: true
 
 ### Value Propositions
 
-<div class="fade-in delay-3s">
   1. **AI-Enhanced Analytics:** Utilize advanced AI techniques to automate and enhance data analysis, providing deeper insights and faster decision-making.
-</div>
 
-<div class="fade-in delay-4s">
+
   2. **Predictive Modeling:** Forecast future trends and behaviors with high accuracy, allowing businesses to proactively address challenges and opportunities.
-</div>
 
-<div class="fade-in delay-5s">
+
   3. **Data Visualization Mastery:** Translate complex data into intuitive and actionable visualizations that drive informed decision-making across all levels of the organization.
-</div>
+
 
 <figure class="image is-128x128 fade-in delay-6s">
   <img class="is-rounded" src="assets/images/profile-image.jpg" />
