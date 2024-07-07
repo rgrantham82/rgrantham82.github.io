@@ -15,7 +15,7 @@ permalink: pretty
 remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 force_theme: light
 favicon: /assets/images/favicon~2.png
-theme_color: #333333
+theme_color: '#333333'
 
 # Pagination
 paginate: 5
