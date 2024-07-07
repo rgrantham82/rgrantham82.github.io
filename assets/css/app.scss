@@ -1,8 +1,6 @@
 ---
 ---
 
-@import 'main';
-
 /* Define the color palette */
 :root {
   --soft-ivory: #F8F8F6;
@@ -11,6 +9,8 @@
   --misty-blue: #B0C7D4;
   --warm-taupe: #C6A57B;
 }
+
+@import 'main';
 
 /* Navbar consistency and animation */
 .navbar {
