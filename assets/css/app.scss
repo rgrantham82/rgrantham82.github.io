@@ -1,7 +1,6 @@
 ---
 ---
 
-@import 'main';
 
 /* Define the color palette */
 :root {
@@ -12,6 +11,8 @@
   --warm-taupe: #C6A57B;
 }
  
+@import 'main';
+
 /* Navbar consistency and animation */
 .navbar {
   min-height: 80px;
