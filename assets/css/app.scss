@@ -3,7 +3,7 @@
 
 @import 'main';
 
-/* Define the color palette */
+// Define the color palette
 :root {
   --soft-ivory: #F8F8F6;
   --slate-gray: #718792;
@@ -11,24 +11,21 @@
   --misty-blue: #B0C7D4;
   --warm-taupe: #C6A57B;
 }
- 
-/* Navbar consistency and animation */
+
+// Navbar consistency and animation
 .navbar {
   min-height: 80px;
-  background-color: var(--deep-charcoal);
   transition: background-color 0.3s, min-height 0.3s;
 }
 
 .navbar.is-scrolled {
-  background-color: var(--slate-gray);
+  background-color: var(--deep-charcoal);
   min-height: 60px;
 }
 
-/* Hero section animation */
+// Hero section animation
 .hero.is-animated {
   animation: fadeIn 1s ease-in-out;
-  background-color: var(--misty-blue);
-  color: var(--deep-charcoal);
 }
 
 @keyframes fadeIn {
@@ -40,7 +37,7 @@
   }
 }
 
-/* Project card animations */
+// Project card animations
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -71,8 +68,6 @@
   margin-bottom: 30px;
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
-  background-color: var(--soft-ivory);
-  color: var(--deep-charcoal);
 }
 
 .project-card:hover {
@@ -84,29 +79,3 @@
   height: 200px;
   object-fit: cover;
 }
-
-/* General styles */
-body {
-  background-color: var(--soft-ivory);
-  color: var(--deep-charcoal);
-}
-
-a {
-  color: var(--slate-gray);
-}
-
-a:hover {
-  color: var(--warm-taupe);
-}
-
-/* Button styles */
-.button {
-  background-color: var(--warm-taupe);
-  color: var(--soft-ivory);
-}
-
-.button:hover {
-  background-color: var(--slate-gray);
-  color: var(--soft-ivory);
-}
-
