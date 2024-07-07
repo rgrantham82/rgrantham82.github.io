@@ -17,57 +17,7 @@ show_sidebar: false
   gtag('js', new Date());
   gtag('config', 'G-7WZFJ98W4K');
 </script>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Analytics Projects</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes hoverEffect {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    .project-card {
-      margin-bottom: 30px;
-      opacity: 0;
-      animation: fadeInUp 0.6s ease forwards;
-    }
-
-    .project-card:hover {
-      animation: hoverEffect 0.6s ease;
-    }
-
-    .project-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-  </style>
-</head>
-<body>
-  <section class="section">
+<section class="section">
     <div class="container">
       <div class="row">
         <!-- Project 1 -->
@@ -161,19 +111,4 @@ show_sidebar: false
       </div>
     </div>
   </section>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const cards = document.querySelectorAll(".project-card");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-          }
-        });
-      });
-      cards.forEach((card) => {
-        observer.observe(card);
-      });
-    });
-  </script>
-</body>
+ 
