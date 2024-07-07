@@ -1,241 +1,111 @@
 ---
 ---
 
-// Customize Colors
-$primary: #87CEEB; // Serene Sky Blue
-$secondary: #4C8C9C; // Steel Teal
-$accent: #F5F5DC; // Beige
-$background: #E8F4F8; // Alice Blue
-$text: #333333; // Dark Charcoal
-$white: #fff;
-$black: #363636;
-$gray: #CCCCCC;
-
-// Typography
-$font-family-sans-serif: 'Arial', sans-serif;
-$font-family-serif: 'Georgia', serif;
-$font-size-1: 2.5rem;
-$font-size-2: 2rem;
-$font-size-3: 1.75rem;
-$font-size-4: 1.25rem;
-$font-size-5: 1rem;
-$font-size-6: 0.875rem;
-$font-size-7: 0.75rem;
-
-// Spacing
-$spacing: 1.5rem;
-$spacing-2: $spacing * 1.5;
-$spacing-3: $spacing * 2;
-
-// Responsive Breakpoints
-$tablet: 768px;
-$desktop: 1024px;
-$widescreen: 1280px;
-$fullhd: 1440px;
-
-// Grid System
-$columns: 12;
-$gap: 32px;
-
-// Forms
-$input-radius: 4px;
-$input-padding: 10px;
+/* Define the color palette */
+:root {
+  --soft-ivory: #F8F8F6;
+  --slate-gray: #718792;
+  --deep-charcoal: #333333;
+  --misty-blue: #B0C7D4;
+  --warm-taupe: #C6A57B;
+}
 
 @import 'main';
 
-// Global Styles
-body {
-  background-color: $background;
-  color: $text;
-  font-family: $font-family-sans-serif;
-  line-height: 1.6; // Adjust line-height for better readability
+/* Navbar consistency and animation */
+.navbar {
+  min-height: 80px;
+  background-color: var(--deep-charcoal);
+  transition: background-color 0.3s, min-height 0.3s;
 }
 
-a {
-  color: $primary;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.navbar.is-scrolled {
+  background-color: var(--slate-gray);
+  min-height: 60px;
+}
 
-  &:hover {
-    color: $secondary;
+/* Hero section animation */
+.hero.is-animated {
+  animation: fadeIn 1s ease-in-out;
+  background-color: var(--misty-blue);
+  color: var(--deep-charcoal);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-.button {
-  background-color: $primary;
-  color: $white;
-  border: 2px solid $primary;
-  border-radius: $input-radius;
-  padding: $input-padding $input-padding * 1.5;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-
-  &:hover {
-    background-color: darken($primary, 10%);
-    border-color: darken($primary, 10%);
-    color: $white; // Ensure text color change on hover
-  }
-}
-
-.section {
-  background-color: $white;
-  color: $text;
-  padding: $spacing $spacing-2;
-  border-radius: $input-radius;
-  box-shadow: 0 2px 4px rgba($black, 0.1);
-}
-
-.hero {
-  background-color: $primary;
-  color: $white;
-  padding: $spacing $spacing-2;
-  border-radius: $input-radius;
-
-  .hero-body {
-    padding: $spacing-3 $spacing-2;
-  }
-}
-
-.project-card {
-  margin-bottom: $spacing;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: $input-radius;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba($black, 0.1);
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-}
-
-.project-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-// Animations
+/* Project card animations */
 @keyframes fadeInUp {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Keyframes for slide-in animation */
-@keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-/* Keyframes for zoom-in animation */
-@keyframes zoomIn {
-  from {
-    transform: scale(0.5);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* Keyframes for bounce-in animation */
-@keyframes bounceIn {
+@keyframes hoverEffect {
   0% {
-    transform: scale(0.5);
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   }
   100% {
     transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 }
 
-/* Animation classes */
-.fadeInUpAnimation {
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.slideInFromLeftAnimation {
-  animation: slideInFromLeft 1s ease-in-out forwards;
-}
-
-.zoomInAnimation {
-  animation: zoomIn 0.5s ease-in-out forwards;
-}
-
-.bounceInAnimation {
-  animation: bounceIn 0.7s ease-in-out forwards;
-}
-
-/* Ensure elements animate when in view */
-.in-view {
-  opacity: 1;
-  transform: none;
-}
-
-// Default state before animation
-.fadeInUpAnimation, .slideInFromLeftAnimation, .zoomInAnimation, .bounceInAnimation {
+.project-card {
+  margin-bottom: 30px;
   opacity: 0;
-  transform: translateY(20px); // Default transform for fadeInUp
+  animation: fadeInUp 0.6s ease forwards;
+  background-color: var(--soft-ivory);
+  color: var(--deep-charcoal);
 }
 
-.in-view.fadeInUpAnimation {
-  animation: fadeInUp 1s ease-out forwards;
+.project-card:hover {
+  animation: hoverEffect 0.6s ease;
 }
 
-.in-view.slideInFromLeftAnimation {
-  animation: slideInFromLeft 1s ease-in-out forwards;
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.in-view.zoomInAnimation {
-  animation: zoomIn 0.5s ease-in-out forwards;
+/* General styles */
+body {
+  background-color: var(--soft-ivory);
+  color: var(--deep-charcoal);
 }
 
-.in-view.bounceInAnimation {
-  animation: bounceIn 0.7s ease-in-out forwards;
+a {
+  color: var(--slate-gray);
 }
 
-// Override default transform for other animations
-.slideInFromLeftAnimation {
-  transform: translateX(-100%);
+a:hover {
+  color: var(--warm-taupe);
 }
 
-.zoomInAnimation, .bounceInAnimation {
-  transform: scale(0.5);
+/* Button styles */
+.button {
+  background-color: var(--warm-taupe);
+  color: var(--soft-ivory);
 }
 
-// Footer Styling
-.footer {
-  background-color: $background;
-  color: $text;
-  padding: $spacing;
-  text-align: center;
-  border-top: 1px solid $gray;
-
-  .content {
-    margin: 0 auto;
-    max-width: 960px;
-  }
-
-  a {
-    color: $primary;
-    text-decoration: none;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $secondary;
-    }
-  }
+.button:hover {
+  background-color: var(--slate-gray);
+  color: var(--soft-ivory);
 }
-
- 
