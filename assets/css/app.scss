@@ -11,8 +11,6 @@
   --warm-taupe: #C6A57B;
 }
  
-@import 'main';
-
 /* Navbar consistency and animation */
 .navbar {
   min-height: 80px;
@@ -110,3 +108,5 @@ a:hover {
   background-color: var(--slate-gray);
   color: var(--soft-ivory);
 }
+
+@import 'main';
