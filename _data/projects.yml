@@ -8,11 +8,11 @@ items:
     image: /assets/images/sql-screenshot.PNG
     image_ratio: is-4by3
     link: https://github.com/rgrantham82/SQL_Examples
-    link_text: View SQL Examples Project
+    link_text: View Repository 
     tags: SQL, Data Query, Database
     github: rgrantham82/SQL_Examples
 
-  - title: Fraud Detection Project
+  - title: Fraud Detection
     subtitle: AI-driven Fraud Prevention
     description: |-
       Developed a comprehensive fraud detection system using machine learning algorithms to identify and prevent fraudulent activities. The project involved building predictive models that analyze transaction data to detect suspicious patterns.
@@ -21,7 +21,7 @@ items:
     image: /assets/images/fraud-detection-plot.png
     image_ratio: is-4by3
     link: https://github.com/rgrantham82/fraud-detection
-    link_text: View Fraud Detection Project
+    link_text: View Repository 
     tags: Machine Learning, AI, Fraud Prevention
     github: rgrantham82/fraud-detection
 
@@ -34,7 +34,7 @@ items:
     image: /assets/images/mini-course-sales-forecast.png
     image_ratio: is-4by3
     link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
-    link_text: View Sales Forecasting Project
+    link_text: View Project
     tags: Forecasting, Sales Analysis, Kaggle
 
   - title: Predicting Credit Approval
@@ -46,7 +46,7 @@ items:
     image: /assets/images/credit-approval-screenshot.PNG
     image_ratio: is-4by3
     link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
-    link_text: View Credit Approval Project
+    link_text: View Project
     tags: Predictive Analytics, Credit Risk, Kaggle
 
   - title: Austin Violent Crime Insights Dashboard
@@ -58,10 +58,10 @@ items:
     image: /assets/images/Austin Violent Crime Insights Dashboard.png
     image_ratio: is-4by3
     link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
-    link_text: View Austin Crime Dashboard
+    link_text: View Dashboard
     tags: Data Visualization, Crime Analysis, Tableau
 
-  - title: Police Shootings Analysis
+  - title: Police Shootings
     subtitle: In-depth Data Examination
     description: |-
       Conducted a thorough analysis of police shootings data to uncover trends and insights. This project involves data wrangling, statistical analysis, and visualization to provide a comprehensive overview of police shootings in the United States.
@@ -70,10 +70,10 @@ items:
     image: /assets/images/police-shootings-plot.png
     image_ratio: is-4by3
     link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
-    link_text: View Police Shootings Analysis Project
+    link_text: View Project 
     tags: Data Analysis, Statistical Analysis, Kaggle
 
-  - title: Client Segmentation Project
+  - title: Client Segmentation
     subtitle: Market Analysis and Strategy Development
     description: |-
       Performed client segmentation using clustering algorithms to identify distinct customer groups based on various attributes. This project involved analyzing synthetic client data, visualizing clusters, and developing targeted marketing and engagement strategies for each segment.
@@ -82,5 +82,5 @@ items:
     image: /assets/images/client-segmentation-plot.png
     image_ratio: is-4by3
     link: /client-segmentation
-    link_text: View Client Segmentation Project
+    link_text: View Project
     tags: Clustering, Market Analysis, D3.js
