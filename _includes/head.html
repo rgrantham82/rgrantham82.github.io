@@ -1,132 +1,134 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#87CEEB">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon~2.png">
-    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
-    <title>Welcome to my portfolio! | Robert Grantham</title>
-    <meta name="generator" content="Jekyll v3.9.5" />
-    <meta property="og:title" content="Welcome to my portfolio!" />
-    <meta property="og:locale" content="en" />
-    <meta name="description" content="Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience." />
-    <meta property="og:description" content="Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience." />
-    <link rel="canonical" href="https://rgrantham82.github.io/" />
-    <meta property="og:url" content="https://rgrantham82.github.io/" />
-    <meta property="og:site_name" content="Robert Grantham" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="Welcome to my portfolio!" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "description": "Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience.",
-        "headline": "Welcome to my portfolio!",
-        "name": "Robert Grantham",
-        "url": "https://rgrantham82.github.io/"
-      }
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-              observer.unobserve(entry.target);
-            }
-          });
-        });
-        document.querySelectorAll('.fadeInUp, .slideInFromLeft, .zoomIn').forEach((el) => {
-          observer.observe(el);
-        });
-      });
-    </script>
-    <style>
-      /* Navbar consistency and animation */
-      .navbar {
-        min-height: 80px;
-        transition: background-color 0.3s, min-height 0.3s;
-      }
-
-      .navbar.is-scrolled {
-        background-color: #4a4a4a;
-        min-height: 60px;
-      }
-
-      /* Hero section animation */
-      .hero.is-animated {
-        animation: fadeIn 1s ease-in-out;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      /* Project card animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes hoverEffect {
-        0% {
-          transform: scale(1);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        50% {
-          transform: scale(1.05);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        100% {
-          transform: scale(1);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      .project-card {
-        margin-bottom: 30px;
-        opacity: 0;
-        animation: fadeInUp 0.6s ease forwards;
-      }
-
-      .project-card:hover {
-        animation: hoverEffect 0.6s ease;
-      }
-
-      .project-img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-    </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const navbar = document.querySelector('.navbar');
-        const hero = document.querySelector('.hero');
-
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 50) {
-            navbar.classList.add('is-scrolled');
-          } else {
-            navbar.classList.remove('is-scrolled');
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#87CEEB">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/images/favicon~2.png">
+  <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+  <title>Welcome to my portfolio! | Robert Grantham</title>
+  <meta name="generator" content="Jekyll v3.9.5" />
+  <meta property="og:title" content="Welcome to my portfolio!" />
+  <meta property="og:locale" content="en" />
+  <meta name="description" content="Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience." />
+  <meta property="og:description" content="Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience." />
+  <link rel="canonical" href="https://rgrantham82.github.io/" />
+  <meta property="og:url" content="https://rgrantham82.github.io/" />
+  <meta property="og:site_name" content="Robert Grantham" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Welcome to my portfolio!" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "description": "Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience.",
+      "headline": "Welcome to my portfolio!",
+      "name": "Robert Grantham",
+      "url": "https://rgrantham82.github.io/"
+    }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
           }
         });
-
-        hero.classList.add('is-animated');
       });
-    </script>
-  </head>
+      document.querySelectorAll('.fadeInUp, .slideInFromLeft, .zoomIn').forEach((el) => {
+        observer.observe(el);
+      });
+    });
+  </script>
+  <style>
+    /* Navbar consistency and animation */
+    .navbar {
+      min-height: 80px;
+      transition: background-color 0.3s, min-height 0.3s;
+    }
+
+    .navbar.is-scrolled {
+      background-color: #4a4a4a;
+      min-height: 60px;
+    }
+
+    /* Hero section animation */
+    .hero.is-animated {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Project card animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes hoverEffect {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .project-card {
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .project-card:hover {
+      animation: hoverEffect 0.6s ease;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbar = document.querySelector('.navbar');
+      const hero = document.querySelector('.hero');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('is-scrolled');
+        } else {
+          navbar.classList.remove('is-scrolled');
+        }
+      });
+      hero.classList.add('is-animated');
+    });
+  </script>
+</head>
