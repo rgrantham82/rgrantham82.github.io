@@ -1,19 +1,7 @@
-<!-- Alpine.js for reactive components -->
+<!-- head-scripts.html -->
 <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
-
-<!-- JSON-LD structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "description": "Welcome to the portfolio of Robert Grantham, a data analyst with expertise in SQL, predictive analytics, data visualization, and more. Explore projects and insights that showcase my skills and experience.",
-  "headline": "Welcome to my portfolio!",
-  "name": "Robert Grantham",
-  "url": "https://rgrantham82.github.io/"
-}
-</script>
-
-<!-- Intersection Observer script for animations -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
@@ -29,8 +17,6 @@
     });
   });
 </script>
-
-<!-- Navbar scroll effect and hero section animation -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
