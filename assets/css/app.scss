@@ -113,11 +113,4 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 }
-
-@import "custom_styles"; // The SCSS code above
-
-/* Import custom styles */
-@import "components/navbar";
-@import "components/hero";
-@import "components/project-cards";
-@import "components/footer";
+ 
