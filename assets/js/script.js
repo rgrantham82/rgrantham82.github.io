@@ -40,13 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle navbar link active state
-    const navLinks = document.querySelectorAll('.navbar a');
-    const currentLocation = window.location.pathname;
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentLocation) {
-            link.classList.add('active');
-        }
+    // Accordion functionality
+    document.querySelectorAll('.accordion').forEach(accordion => {
+        accordion.addEventListener('click', function() {
+            this.classList.toggle('active');
+            let panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
     });
 });
