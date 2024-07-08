@@ -68,18 +68,27 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .about-image img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Skills Section */
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+
 .skills-content ul {
     list-style-type: none;
     padding: 0;
+    columns: 2;
 }
 
 .skills-content ul li {
