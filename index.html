@@ -1,18 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Grantham's Data Analyst Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Robert Grantham - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="/assets/js/script.js" defer></script>
 </head>
+
 <body>
-    {% include header.html %}
-    <section id="home">
-        <h1>Welcome to My Data Analyst Portfolio</h1>
-        <p>Explore my projects, skills, and experience in data analysis.</p>
-    </section>
-    {% include footer.html %}
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero is-primary is-bold animate-on-scroll">
+            <div class="container">
+                <h1 class="title">Welcome to Robert Grantham's Data Analyst Portfolio</h1>
+                <h2 class="subtitle">Explore my projects and expertise in data analysis and visualization</h2>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="columns is-multiline" id="project-cards">
+                    <!-- Project cards will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Fetch and render header and footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+
+            // Function to fetch and inject header and footer
+            async function fetchAndInjectHeaderFooter() {
+                try {
+                    // Fetch header content
+                    const headerResponse = await fetch('/_includes/header.html');
+                    const headerText = await headerResponse.text();
+                    headerPlaceholder.innerHTML = headerText;
+
+                    // Fetch footer content
+                    const footerResponse = await fetch('/_includes/footer.html');
+                    const footerText = await footerResponse.text();
+                    footerPlaceholder.innerHTML = footerText;
+                } catch (error) {
+                    console.error('Error fetching header or footer:', error);
+                }
+            }
+
+            // Call the function to fetch and inject header and footer
+            await fetchAndInjectHeaderFooter();
+
+            // Function to fetch and render project cards
+            async function fetchAndRenderProjectCards() {
+                try {
+                    const response = await fetch('/assets/data/projects.json'); // Replace with your actual JSON endpoint
+                    const projects = await response.json();
+
+                    const projectCardsContainer = document.getElementById('project-cards');
+
+                    projects.forEach(project => {
+                        const projectCard = `
+                            <div class="column is-one-third animate-on-scroll">
+                                <div class="card project-card">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img src="${project.image}" alt="${project.title}">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <p class="title is-4">${project.title}</p>
+                                                <p class="subtitle is-6">${project.subtitle}</p>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>${project.description}</p>
+                                            <a href="${project.link}" class="button is-primary" target="_blank">${project.link_text}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        projectCardsContainer.innerHTML += projectCard;
+                    });
+
+                } catch (error) {
+                    console.error('Error fetching or parsing projects:', error);
+                }
+            }
+
+            // Call the function to fetch and render project cards
+            await fetchAndRenderProjectCards();
+        });
+    </script>
+
 </body>
+
 </html>
