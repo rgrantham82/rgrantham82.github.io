@@ -11,23 +11,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">Robert Grantham</a>
-                <button class="navbar-toggle" aria-label="Toggle navigation">
-                    <span class="navbar-toggle-icon"></span>
-                </button>
-                <div class="navbar-menu">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="blog.html" class="active">Blog</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
 
     <main>
         <section class="hero is-primary is-bold animate-on-scroll">
@@ -46,63 +31,34 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="content has-text-centered">
-                <p>&copy; 2024 Robert Grantham. All rights reserved.</p>
-                <p><a href="https://linkedin.com/in/robertgrantham82">LinkedIn</a> | <a href="https://github.com/rgrantham82">GitHub</a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
 
-    <!-- Fetch and render blog posts -->
+    <!-- Fetch and render header and footer -->
     <script>
-        document.addEventListener('DOMContentLoaded', async function() {
-            const blogPostsContainer = document.getElementById('blog-posts');
+        document.addEventListener('DOMContentLoaded', async function () {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            const footerPlaceholder = document.getElementById('footer-placeholder');
 
-            // Function to fetch and render blog posts
-            async function fetchAndRenderBlogPosts() {
+            // Function to fetch and inject header and footer
+            async function fetchAndInjectHeaderFooter() {
                 try {
-                    const response = await fetch('/_posts/posts.json'); // Replace with your actual JSON endpoint
-                    const posts = await response.json();
+                    // Fetch header content
+                    const headerResponse = await fetch('/_includes/header.html');
+                    const headerText = await headerResponse.text();
+                    headerPlaceholder.innerHTML = headerText;
 
-                    posts.forEach(post => {
-                        const postDate = new Date(post.date);
-                        const formattedDate = postDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
-                        const postCard = `
-                            <div class="column is-one-third animate-on-scroll">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure class="image is-4by3">
-                                            <img src="${post.image}" alt="${post.title}">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media">
-                                            <div class="media-content">
-                                                <p class="title is-4">${post.title}</p>
-                                                <p class="subtitle is-6">${formattedDate}</p>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            ${post.excerpt}
-                                            <a href="${post.url}">Read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        blogPostsContainer.innerHTML += postCard;
-                    });
-
+                    // Fetch footer content
+                    const footerResponse = await fetch('/_includes/footer.html');
+                    const footerText = await footerResponse.text();
+                    footerPlaceholder.innerHTML = footerText;
                 } catch (error) {
-                    console.error('Error fetching blog posts:', error);
+                    console.error('Error fetching header or footer:', error);
                 }
             }
 
-            // Call the function to fetch and render blog posts
-            await fetchAndRenderBlogPosts();
+            // Call the function to fetch and inject header and footer
+            await fetchAndInjectHeaderFooter();
         });
     </script>
 
