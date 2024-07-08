@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - Robert Grantham's Data Analyst Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Robert Grantham</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="/assets/js/script.js" defer></script>
 </head>
+
 <body>
-    {% include header.html %}
-    <main>
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container">
         {{ content }}
-    </main>
-    {% include footer.html %}
+    </div>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Fetch and render header and footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+
+            // Function to fetch and inject header and footer
+            async function fetchAndInjectHeaderFooter() {
+                try {
+                    // Fetch header content
+                    const headerResponse = await fetch('/_includes/header.html');
+                    const headerText = await headerResponse.text();
+                    headerPlaceholder.innerHTML = headerText;
+
+                    // Fetch footer content
+                    const footerResponse = await fetch('/_includes/footer.html');
+                    const footerText = await footerResponse.text();
+                    footerPlaceholder.innerHTML = footerText;
+                } catch (error) {
+                    console.error('Error fetching header or footer:', error);
+                }
+            }
+
+            // Call the function to fetch and inject header and footer
+            await fetchAndInjectHeaderFooter();
+        });
+    </script>
+
 </body>
+
 </html>
