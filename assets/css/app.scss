@@ -3,8 +3,6 @@
 
 @import 'main';
 
-// app.scss
-
 // Define the color palette
 $soft-ivory: #F8F8F6;
 $slate-gray: #718792;
@@ -12,9 +10,6 @@ $deep-charcoal: #333333;
 $misty-blue: #B0C7D4;
 $warm-taupe: #C6A57B;
 $hero-darken: #B0C7D4; // Dark color for hero background
-
-// Import Bulma
-@import 'bulma/bulma';
 
 // Custom styles
 .hero {
