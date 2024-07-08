@@ -40,4 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle navbar link active state
+    const navLinks = document.querySelectorAll('.navbar a');
+    const currentLocation = window.location.pathname;
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentLocation) {
+            link.classList.add('active');
+        }
+    });
 });
