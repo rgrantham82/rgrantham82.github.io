@@ -1,33 +1,23 @@
 <header class="navbar">
     <div class="container">
         <div class="navbar-brand">
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+            <a class="navbar-item" href="{{ '/' | relative_url }}">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
             </a>
+            <div class="navbar-burger navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <div class="navbar-menu">
-            <div class="navbar-end">
-                <a class="navbar-item" href="/">Home</a>
-                <a class="navbar-item" href="/about.html">About</a>
-                <a class="navbar-item" href="/portfolio.html">Portfolio</a>
-                <a class="navbar-item" href="/blog.html">Blog</a>
-                <a class="navbar-item" href="/contact.html">Contact</a>
+            <div class="navbar-start">
+                <a class="navbar-item" href="{{ '/' | relative_url }}">Home</a>
+                <a class="navbar-item" href="{{ '/about.html' | relative_url }}">About</a>
+                <a class="navbar-item" href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
+                <a class="navbar-item" href="{{ '/blog.html' | relative_url }}">Blog</a>
+                <a class="navbar-item" href="{{ '/contact.html' | relative_url }}">Contact</a>
             </div>
         </div>
     </div>
 </header>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Toggle navbar on mobile devices
-        const navbarBurger = document.querySelector('.navbar-burger');
-        const navbarMenu = document.querySelector('.navbar-menu');
-
-        navbarBurger.addEventListener('click', () => {
-            navbarBurger.classList.toggle('is-active');
-            navbarMenu.classList.toggle('is-active');
-        });
-    });
-</script>
