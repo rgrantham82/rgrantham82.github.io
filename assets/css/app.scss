@@ -10,6 +10,8 @@ $hero-darken: #B0C7D4;
 
 @import 'main';
 
+$hero-darken: $hero-darken;
+
 // Custom styles
 .hero {
   background-color: $hero-darken;
