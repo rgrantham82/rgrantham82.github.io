@@ -1,139 +1,24 @@
 ---
 ---
 
+// Define the color palette
+$soft-ivory: #F8F8F6;
+$slate-gray: #718792;
+$deep-charcoal: #333333;
+$misty-blue: #B0C7D4;
+$hero-darken: #B0C7D4; 
+
+$hero-darken: $hero-darken;
+
 @import 'main';
 
-// Define color variables
-$soft-ivory: #F7F7F7;
-$slate-gray: #667C89;
-$deep-charcoal: #333333;
-$misty-blue: #B0C4DE;
-$warm-taupe: #D2B48C;
-
-// Set Bulma variables
-$body-background-color: $soft-ivory;
-$body-color: $deep-charcoal;
-
-$primary: $misty-blue;
-$link: $slate-gray;
-$link-hover: darken($slate-gray, 10%);
-
-// Apply colors to various elements
-body {
-    background-color: $soft-ivory;
-    color: $deep-charcoal;
-    font-family: 'Arial', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: $deep-charcoal;
-}
-
-a {
-    color: $slate-gray;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-// Navbar styles
-.navbar {
-    background-color: $misty-blue;
-    color: $deep-charcoal;
-    padding: 10px 15px; // Reduced padding for a more compact look
-    font-size: 14px; // Optionally adjusted font size for consistency
-
-    .navbar-item {
-        color: $deep-charcoal;
-        padding: 5px 10px;
-
-        &:hover {
-            background-color: lighten($misty-blue, 10%);
-        }
-    }
-
-    .navbar-link {
-        color: $deep-charcoal;
-
-        &:hover {
-            background-color: lighten($misty-blue, 10%);
-        }
-    }
-}
-
-// Button styles
-.button {
-    background-color: $warm-taupe;
-    color: $deep-charcoal;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: darken($warm-taupe, 10%);
-    }
-}
-
-// Card styles
-.card {
-    background-color: $soft-ivory;
-    border: 1px solid $slate-gray;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-
-    .card-header {
-        background-color: $misty-blue;
-        color: $deep-charcoal;
-        padding: 10px;
-        border-bottom: 1px solid $slate-gray;
-    }
-
-    .card-content {
-        padding: 15px;
-    }
-
-    .card-footer {
-        background-color: $misty-blue;
-        color: $deep-charcoal;
-        padding: 10px;
-        border-top: 1px solid $slate-gray;
-    }
-}
-
-// Container styles
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-// Header and footer styles
-.header, .footer {
-    background-color: $misty-blue;
-    color: $deep-charcoal;
-    padding: 10px 20px;
-}
-
-// Hero section styles
+// Custom styles
 .hero {
-    background-color: $misty-blue;
-    color: $deep-charcoal;
-    padding: 40px; // Adjust padding as per your design
-
-    h1, h2, h3, h4, h5, h6 {
-        color: $deep-charcoal; // Ensure headings in hero section match the color scheme
-    }
-
-    a {
-        color: $slate-gray;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+  background-color: $hero-darken;
+  color: $soft-ivory;
+  .title, .subtitle {
+    color: $soft-ivory;
+  }
 }
+
+// Other styles...

@@ -8,6 +8,16 @@ published: true
 canonical_url: https://rgrantham82.github.io/2024/06/25/macros-vba-excel.html
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WZFJ98W4K');
+</script>
+
 As a data analyst, efficiency and accuracy in report generation are critical. One powerful way to achieve this is by using macros and VBA (Visual Basic for Applications) in Excel to automate repetitive tasks. In this blog post, I'll walk you through a practical example of how to automate the process of generating a monthly sales report. This will involve importing data from multiple sources, cleaning it, performing necessary calculations, and generating a summary report—all with a single click.
 
 #### Why Automate with VBA?
@@ -100,6 +110,59 @@ Sub CreateSummaryReport()
     ActiveChart.Location Where:=xlLocationAsObject, Name:="Summary Report"
 End Sub
 ```
+
+<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rectangle -->
+  <rect width="600" height="800" fill="#f8f9fa" />
+
+  <!-- Step 1: Recording a Macro for Data Import -->
+  <rect x="50" y="50" width="500" height="60" rx="10" fill="#007bff" />
+  <text x="300" y="85" font-size="18" text-anchor="middle" fill="white">Step 1: Recording a Macro for Data Import</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="110" x2="300" y2="140" stroke="#343a40" stroke-width="2" />
+  <polygon points="295,140 305,140 300,150" fill="#343a40" />
+
+  <!-- Step 2: Writing a VBA Script for Automation -->
+  <rect x="50" y="150" width="500" height="60" rx="10" fill="#17a2b8" />
+  <text x="300" y="185" font-size="18" text-anchor="middle" fill="white">Step 2: Writing a VBA Script for Automation</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="210" x2="300" y2="240" stroke="#343a40" stroke-width="2" />
+  <polygon points="295,240 305,240 300,250" fill="#343a40" />
+
+  <!-- Sub-step: ImportSalesData -->
+  <rect x="100" y="260" width="400" height="60" rx="10" fill="#6c757d" />
+  <text x="300" y="295" font-size="16" text-anchor="middle" fill="white">Sub-step: ImportSalesData</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="320" x2="300" y2="350" stroke="#343a40" stroke-width="2" />
+  <polygon points="295,350 305,350 300,360" fill="#343a40" />
+
+  <!-- Sub-step: CleanAndFormatData -->
+  <rect x="100" y="360" width="400" height="60" rx="10" fill="#6c757d" />
+  <text x="300" y="395" font-size="16" text-anchor="middle" fill="white">Sub-step: CleanAndFormatData</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="420" x2="300" y2="450" stroke="#343a40" stroke-width="2" />
+  <polygon points="295,450 305,450 300,460" fill="#343a40" />
+
+  <!-- Sub-step: CalculateSalesMetrics -->
+  <rect x="100" y="460" width="400" height="60" rx="10" fill="#6c757d" />
+  <text x="300" y="495" font-size="16" text-anchor="middle" fill="white">Sub-step: CalculateSalesMetrics</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="520" x2="300" y2="550" stroke="#343a40" stroke-width="2" />
+  <polygon points="295,550 305,550 300,560" fill="#343a40" />
+
+  <!-- Sub-step: CreateSummaryReport -->
+  <rect x="100" y="560" width="400" height="60" rx="10" fill="#6c757d" />
+  <text x="300" y="595" font-size="16" text-anchor="middle" fill="white">Sub-step: CreateSummaryReport</text>
+
+  <!-- Final Step: Generate Monthly Sales Report -->
+  <rect x="50" y="650" width="500" height="60" rx="10" fill="#28a745" />
+  <text x="300" y="685" font-size="18" text-anchor="middle" fill="white">Final Step: Generate Monthly Sales Report</text>
+</svg>
 
 ### Explanation
 
