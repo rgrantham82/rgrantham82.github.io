@@ -2,21 +2,22 @@
 ---
 
 // Define the color palette
-$soft-ivory: #F8F8F6;
+$soft-ivory: #f8f8f6;
 $slate-gray: #718792;
 $deep-charcoal: #333333;
-$misty-blue: #B0C7D4;
-$hero-darken: #B0C7D4; 
+$misty-blue: #b0c7d4;
+$hero-darken: #b0c7d4;
 
 $hero-darken: $hero-darken;
 
-@import 'main';
+@import "main";
 
 // Custom styles
 .hero {
   background-color: $hero-darken;
   color: $soft-ivory;
-  .title, .subtitle {
+  .title,
+  .subtitle {
     color: $soft-ivory;
   }
 }
