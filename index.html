@@ -1,67 +1,138 @@
----
-layout: default
----
-
-<main>
-    <section class="hero is-primary is-bold animate-on-scroll">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Grantham's Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
         <div class="container">
-            <h1 class="title">Welcome to Robert Grantham's Data Analyst Portfolio</h1>
-            <h2 class="subtitle">Explore my projects and expertise in data analysis and visualization</h2>
+            <div class="navbar-brand">Robert Grantham</div>
+            <div class="navbar-toggle">&#9776;</div>
+            <nav class="navbar-menu">
+                <div class="navbar-item"><a href="#about">About</a></div>
+                <div class="navbar-item"><a href="#skills">Skills</a></div>
+                <div class="navbar-item"><a href="#experience">Experience</a></div>
+                <div class="navbar-item"><a href="#education">Education</a></div>
+                <div class="navbar-item"><a href="#portfolio">Portfolio</a></div>
+                <div class="navbar-item"><a href="#contact">Contact</a></div>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <section class="section">
+    <main>
+        <section id="hero" class="section animate-on-scroll">
+            <div class="container">
+                <h1 class="title">Welcome to My Portfolio</h1>
+                <p class="subtitle">I'm Robert Grantham, a Data Analyst with a passion for uncovering insights from data.</p>
+                <a href="#portfolio" class="button">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="section animate-on-scroll">
+            <h2 class="title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm Robert Grantham, a data analyst with a passion for turning raw data into actionable insights. I have a Bachelor's degree in History from the University of Southern Mississippi and extensive experience in loss mitigation and content review. Over the past three years, I've trained extensively in data analysis, AI, predictive analytics, and data visualization.</p>
+                    <p>I'm currently based in Austin, TX, and I'm actively seeking full-time employment in data analytics. When I'm not crunching numbers, I enjoy practicing Aikido and learning about new advancements in AI and machine learning.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/profile.jpg" alt="Profile Picture">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section animate-on-scroll">
+            <h2 class="title">Skills</h2>
+            <div class="skills-content">
+                <ul>
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Excel</li>
+                    <li>Machine Learning</li>
+                    <li>Data Visualization</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="section animate-on-scroll">
+            <h2 class="title">Experience</h2>
+            <div class="accordion">Loss Mitigation Specialist at Regions Mortgage (2011-2017)</div>
+            <div class="accordion-content">
+                <p>Worked on identifying and mitigating potential losses in mortgage portfolios. Implemented strategies that reduced delinquency rates and improved customer retention.</p>
+            </div>
+            <div class="accordion">Content Review Analyst at YouTube through BCforward (2018-2020)</div>
+            <div class="accordion-content">
+                <p>Reviewed and analyzed user-generated content to ensure compliance with community guidelines. Provided feedback and recommendations to improve content quality and user engagement.</p>
+            </div>
+        </section>
+
+        <section id="education" class="section animate-on-scroll">
+            <h2 class="title">Education</h2>
+            <div class="accordion">Bachelor's Degree in History - University of Southern Mississippi (2009)</div>
+            <div class="accordion-content">
+                <p>Graduated with a Bachelor's degree in History, developing strong research, analytical, and writing skills.</p>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section animate-on-scroll">
+            <h2 class="title">Portfolio</h2>
+            <div class="container">
+                <div class="project-card">
+                    <div class="card-front">
+                        <h3>Violent Crimes Dashboard for Austin, TX</h3>
+                        <p>Interactive dashboard analyzing violent crimes in Austin, TX using various data visualization techniques.</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Details</h3>
+                        <p>Tools: Tableau, SQL</p>
+                        <p>Description: This project involved creating an interactive dashboard to visualize trends and patterns in violent crimes in Austin, TX.</p>
+                        <a href="https://github.com/rgrantham82/violent-crimes-dashboard">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-front">
+                        <h3>Fraud Detection Analysis</h3>
+                        <p>Implemented machine learning models to detect fraudulent transactions.</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Details</h3>
+                        <p>Tools: Python, Scikit-learn, Pandas</p>
+                        <p>Description: This project focused on using machine learning techniques to identify and prevent fraudulent transactions.</p>
+                        <a href="https://github.com/rgrantham82/fraud-detection">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <section id="contact" class="section animate-on-scroll">
+            <h2 class="title">Contact</h2>
+            <p>If you're interested in my work or have any questions, feel free to reach out to me:</p>
+            <ul>
+                <li>Email: <a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/robertgrantham82">linkedin.com/in/robertgrantham82</a></li>
+                <li>GitHub: <a href="https://github.com/rgrantham82">github.com/rgrantham82</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <div class="columns is-multiline" id="project-cards">
-                <!-- Project cards will be dynamically added here -->
+            <p>&copy; 2024 Robert Grantham. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/robertgrantham82">LinkedIn</a>
+                <a href="https://github.com/rgrantham82">GitHub</a>
             </div>
         </div>
-    </section>
-</main>
-
-<script>
-    document.addEventListener('DOMContentLoaded', async function () {
-        const projectCardsContainer = document.getElementById('project-cards');
-
-        // Function to fetch and render project cards
-        async function fetchAndRenderProjectCards() {
-            try {
-                const response = await fetch('/assets/data/projects.json'); // Replace with your actual JSON endpoint
-                const projects = await response.json();
-
-                projects.forEach(project => {
-                    const projectCard = `
-                        <div class="column is-one-third animate-on-scroll">
-                            <div class="card project-card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="${project.image}" alt="${project.title}">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-content">
-                                            <p class="title is-4">${project.title}</p>
-                                            <p class="subtitle is-6">${project.subtitle}</p>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <p>${project.description}</p>
-                                        <a href="${project.link}" class="button is-primary" target="_blank">${project.link_text}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    projectCardsContainer.innerHTML += projectCard;
-                });
-
-            } catch (error) {
-                console.error('Error fetching or parsing projects:', error);
-            }
-        }
-
-        // Call the function to fetch and render project cards
-        await fetchAndRenderProjectCards();
-    });
-</script>
+    </footer>
+</body>
+</html>
