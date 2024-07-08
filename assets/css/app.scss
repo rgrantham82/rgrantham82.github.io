@@ -8,9 +8,9 @@ $deep-charcoal: #333333;
 $misty-blue: #B0C7D4;
 $hero-darken: #B0C7D4; 
 
-@import 'main';
-
 $hero-darken: $hero-darken;
+
+@import 'main';
 
 // Custom styles
 .hero {
