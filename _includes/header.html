@@ -1,11 +1,35 @@
-<header>
-    <nav>
-        <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
-            <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-            <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-            <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-        </ul>
-    </nav>
+<header class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <strong>Robert Grantham</strong>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+                <a class="navbar-item" href="/portfolio.html">
+                    Portfolio
+                </a>
+                <a class="navbar-item" href="/about.html">
+                    About
+                </a>
+                <a class="navbar-item" href="/blog.html">
+                    Blog
+                </a>
+                <a class="navbar-item" href="/contact.html">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </div>
 </header>
