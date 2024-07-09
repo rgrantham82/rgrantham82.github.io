@@ -15,36 +15,138 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background-color); /* Use light grey as background */
+  background-color: var(--background-color);
   padding: 0;
-  margin: 0 20px; /* Add margin to the body */
+  margin: 0 20px;
 }
 
 header,
 footer {
   width: 100%;
-  background-color: var(--header-footer-background); /* Example background color */
-  color: var(--header-footer-text); /* Example text color */
-  text-align: center; /* Center align text */
-  /* Add any other styles as needed */
+  background-color: var(--header-footer-background);
+  color: var(--header-footer-text);
+  text-align: center;
+}
+
+.about-container, .projects-section, .skills-section, .blog-section {
+  padding: 2em;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.circular-image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: var(--text-color);
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  margin: 1em;
+  text-align: center;
+  padding: 1em;
+}
+
+.project-card img {
+  max-width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1em;
+}
+
+.project-card h3 {
+  margin: 0.5em 0;
+  color: #007BFF;
+}
+
+.project-card p {
+  margin-bottom: 1em;
+}
+
+.btn, .btn-github {
+  display: inline-block;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-github {
+  background: #24292e;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.skills-section li {
+  background: #f1f1f1;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.blog-section article {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.blog-section h3 {
+  margin: 0.5em 0;
+}
+
+.blog-section p {
+  margin: 0.5em 0;
 }
 
 .main-content {
-  padding: 20px; /* Example padding for main content area */
+  padding: 20px;
 }
 
 /* Container */
 .container {
   width: 100%;
-  max-width: 1200px; /* Adjust maximum width for main content */
-  margin: 0 auto; /* Center align the container */
-  padding: 0 20px; /* Add padding inside the container if needed */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Hero Section */
 .hero {
-  background-color: var(--secondary-color); /* Lavender background */
-  color: var(--text-color); /* Adjust text color for readability */
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   padding: 60px 0;
   text-align: center;
 }
@@ -52,7 +154,7 @@ footer {
 .hero .btn,
 .hero .resume-btn {
   margin: 10px;
-  background-color: var(--accent-color); /* Vibrant orange button background */
+  background-color: var(--accent-color);
   color: var(--text-color);
   padding: 10px 20px;
   text-decoration: none;
@@ -61,7 +163,7 @@ footer {
 
 .hero .btn:hover,
 .hero .resume-btn:hover {
-  background-color: rgba(255, 171, 64, 0.9); /* Darker orange on hover */
+  background-color: rgba(255, 171, 64, 0.9);
 }
 
 /* Navbar */
@@ -94,7 +196,7 @@ footer {
 }
 
 .navbar-toggle {
-  display: none; /* Initially hide on larger screens */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -104,27 +206,27 @@ footer {
 
 @media (max-width: 768px) {
   .navbar-toggle {
-    display: block; /* Display toggle button on smaller screens */
+    display: block;
   }
 
   .nav-links {
-    display: none; /* Hide nav links by default on small screens */
+    display: none;
     position: absolute;
-    top: 100%; /* Adjust dropdown position */
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--header-footer-background);
     padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.is-active {
-    display: flex; /* Show nav links when is-active class is added */
+    display: flex;
     flex-direction: column;
   }
 
   .nav-links li {
-    margin: 10px 0; /* Adjust list item margin */
+    margin: 10px 0;
   }
 }
 
@@ -132,7 +234,7 @@ footer {
 #about {
   padding: 60px 0;
   text-align: center;
-  background-color: var(--primary-color); /* Serene Sky Blue */
+  background-color: var(--primary-color);
 }
 
 .about-container {
@@ -147,7 +249,7 @@ footer {
   height: 150px;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 5px solid var(--primary-color); /* Use serene sky blue border */
+  border: 5px solid var(--primary-color);
   transition: transform 0.3s ease;
 }
 
@@ -177,7 +279,7 @@ footer {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Grid layout with 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -210,7 +312,7 @@ footer {
 
 .project-card .btn,
 .project-card .btn-github {
-  background-color: var(--accent-color); /* Vibrant orange button background */
+  background-color: var(--accent-color);
   color: var(--text-color);
   padding: 10px 20px;
   text-decoration: none;
@@ -221,7 +323,7 @@ footer {
 
 .project-card .btn:hover,
 .project-card .btn-github:hover {
-  background-color: rgba(255, 171, 64, 0.9); /* Darker orange on hover */
+  background-color: rgba(255, 171, 64, 0.9);
 }
 
 /* Blog Section */
@@ -251,7 +353,7 @@ footer {
 
 footer p {
   margin: 0;
-  font-size: 14px; /* Adjust font size for better readability */
+  font-size: 14px;
 }
 
 .social-icons {
@@ -259,7 +361,7 @@ footer p {
   padding: 0;
   margin: 10px 0 0;
   display: flex;
-  justify-content: center; /* Center align icons */
+  justify-content: center;
 }
 
 .social-icons li {
@@ -268,7 +370,7 @@ footer p {
 
 .social-icons li a {
   color: var(--header-footer-text);
-  font-size: 1.5em; /* Adjust icon size */
+  font-size: 1.5em;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -295,7 +397,7 @@ footer p {
 /* Flip animation for project cards */
 .project-card {
   transition: transform 0.6s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d;/* Flip animation for project cards */.     
   perspective: 1000px;
 }
 
