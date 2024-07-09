@@ -1,62 +1,50 @@
----
-layout: default
-title: Home
----
+--- 
+layout: default 
+title: Home 
+--- 
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            {% for project in site.data.projects.items %}
-            <div class="project-card">
-                <img src="{{ project.image }}" alt="{{ project.title }}">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.subtitle }}</p>
-                <p>{{ project.description | truncatewords: 20 }}</p>
-                <a href="{{ project.link_text }}">{{ project.link_text }}</a>
-                {% if project.github %}
-                <a href="{{ project.github }}" class="btn-github">View on GitHub</a>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>SQL & Database Management</li>
-            <li>Machine Learning & AI</li>
-            <li>Data Visualization (Tableau, D3.js)</li>
-            <li>Predictive Analytics</li>
-            <li>Data Wrangling & Cleaning</li>
-            <li>Python & R Programming</li>
-            <li>Excel & Google Sheets</li>
-            <li>Project Management</li>
-            <li>Problem-Solving</li>
-            <li>Communication & Collaboration</li>
-        </ul>
-    </section>
-
-    <section id="blog">
-        <h2>Blog</h2>
-        {% for post in site.posts %}
-        <article>
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        </article>
-        {% endfor %}
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/mlekeyqk" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
- 
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container"> {% for project in site.data.projects.items %} <div class="project-card">
+      <img src="{{ project.image }}" alt="{{ project.title }}">
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.subtitle }}</p>
+      <p>{{ project.description | truncatewords: 20 }}</p>
+      <a href="{{ project.link_text }}">{{ project.link_text }}</a> {% if project.github %} <a href="{{ project.github }}" class="btn-github">View on GitHub</a> {% endif %}
+    </div> {% endfor %} </div>
+</section>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>SQL & Database Management</li>
+    <li>Machine Learning & AI</li>
+    <li>Data Visualization (Tableau, D3.js)</li>
+    <li>Predictive Analytics</li>
+    <li>Data Wrangling & Cleaning</li>
+    <li>Python & R Programming</li>
+    <li>Excel & Google Sheets</li>
+    <li>Project Management</li>
+    <li>Problem-Solving</li>
+    <li>Communication & Collaboration</li>
+  </ul>
+</section>
+<section id="blog">
+  <h2>Blog</h2> {% for post in site.posts %} <article>
+    <h3>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h3>
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  </article> {% endfor %}
+</section>
+<section id="contact">
+  <h2>Contact</h2>
+  <form action="https://formspree.io/f/mlekeyqk" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
