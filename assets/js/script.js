@@ -1,124 +1,124 @@
 // Fade in elements when they come into view
-  document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.section-transition');
+document.addEventListener('DOMContentLoaded', function () {
+   const sections = document.querySelectorAll('.section-transition');
 
-    const options = {
+   const options = {
       threshold: 0.5
-    };
+   };
 
-    const observer = new IntersectionObserver(function (entries, observer) {
+   const observer = new IntersectionObserver(function (entries, observer) {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+         if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+         }
       });
-    }, options);
+   }, options);
 
-    sections.forEach(section => {
+   sections.forEach(section => {
       observer.observe(section);
-    });
-  }); 
+   });
+});
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Intersection Observer for scrolling animations
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('section-visible');
-        entry.target.classList.remove('section-hidden');
-        observer.unobserve(entry.target);
+document.addEventListener('DOMContentLoaded', function () {
+   // Intersection Observer for scrolling animations
+   const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            entry.target.classList.add('section-visible');
+            entry.target.classList.remove('section-hidden');
+            observer.unobserve(entry.target);
+         }
+      });
+   }, {
+      threshold: 0.1
+   });
+
+   // Apply observer to elements with 'section-transition' class
+   document.querySelectorAll('.section-transition').forEach(element => {
+      element.classList.add('section-hidden'); // Hide initially
+      observer.observe(element);
+   });
+
+   // Flip project cards (Using Alpine.js for dynamic behavior)
+   document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+         card.classList.toggle('flipped');
+      });
+   });
+
+   // Accordion functionality (Using Alpine.js for simplicity)
+   document.querySelectorAll('.accordion').forEach(accordion => {
+      accordion.addEventListener('click', () => {
+         accordion.classList.toggle('active');
+      });
+   });
+
+   // Initialize Alpine.js components
+   Alpine.data('projectCard', () => ({
+      flipped: false,
+      toggle() {
+         this.flipped = !this.flipped;
       }
-    });
-  }, {
-    threshold: 0.1
-  });
+   }));
 
-  // Apply observer to elements with 'section-transition' class
-  document.querySelectorAll('.section-transition').forEach(element => {
-    element.classList.add('section-hidden'); // Hide initially
-    observer.observe(element);
-  });
+   // Animate elements on scroll
+   const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+   const animateObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            animateObserver.unobserve(entry.target);
+         }
+      });
+   }, {
+      threshold: 0.1
+   });
 
-  // Flip project cards (Using Alpine.js for dynamic behavior)
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('flipped');
-    });
-  });
+   elementsToAnimate.forEach(element => {
+      animateObserver.observe(element);
+   });
 
-  // Accordion functionality (Using Alpine.js for simplicity)
-  document.querySelectorAll('.accordion').forEach(accordion => {
-    accordion.addEventListener('click', () => {
-      accordion.classList.toggle('active');
-    });
-  });
+   // Smooth scroll to anchor links
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+         e.preventDefault();
+         const target = this.getAttribute('href');
+         const duration = 1000; // Adjust scrolling speed if needed
+         smoothScroll(target, duration);
+      });
+   });
 
-  // Initialize Alpine.js components
-  Alpine.data('projectCard', () => ({
-    flipped: false,
-    toggle() {
-      this.flipped = !this.flipped;
-    }
-  }));
+   // Toggle navbar on mobile devices
+   const navbarToggle = document.querySelector('.navbar-toggle');
+   const navLinks = document.querySelector('.nav-links');
 
-  // Animate elements on scroll
-  const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-  const animateObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        animateObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  elementsToAnimate.forEach(element => {
-    animateObserver.observe(element);
-  });
-
-  // Smooth scroll to anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = this.getAttribute('href');
-      const duration = 1000; // Adjust scrolling speed if needed
-      smoothScroll(target, duration);
-    });
-  });
-
-  // Toggle navbar on mobile devices
-  const navbarToggle = document.querySelector('.navbar-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  navbarToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('is-active');
-  });
+   navbarToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('is-active');
+   });
 });
 
 // Function to smooth scroll to anchor links
 function smoothScroll(target, duration) {
-  const targetElement = document.querySelector(target);
-  const targetPosition = targetElement.getBoundingClientRect().top;
-  const startPosition = window.pageYOffset;
-  let startTime = null;
+   const targetElement = document.querySelector(target);
+   const targetPosition = targetElement.getBoundingClientRect().top;
+   const startPosition = window.pageYOffset;
+   let startTime = null;
 
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const ease = easeInOutQuad(timeElapsed, startPosition, targetPosition, duration);
-    window.scrollTo(0, ease);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
+   function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const ease = easeInOutQuad(timeElapsed, startPosition, targetPosition, duration);
+      window.scrollTo(0, ease);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+   }
 
-  function easeInOutQuad(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 * t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) - 1) + b;
-  }
+   function easeInOutQuad(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+   }
 
-  requestAnimationFrame(animation);
+   requestAnimationFrame(animation);
 }
