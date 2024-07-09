@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<section id="about" class="about-container section-transition">
+<section id="about" class="about-container fade-in">
   <img src="assets/images/profile-image.jpg" alt="Robert Grantham" class="circular-image">
   <h2>About Me</h2>
   <p>Hi, I'm Robert Grantham, a dedicated and passionate data analyst with a strong background in AI, predictive analytics, and data visualization. With a Bachelor's degree in History from the University of Southern Mississippi and over six years of experience in loss mitigation and content review, I have honed my analytical skills and developed a keen eye for detail.</p>
@@ -12,7 +12,7 @@ title: Home
   <p>Currently residing in Austin, TX, I am actively seeking full-time employment as a data analyst. I am committed to making a positive impact through data and look forward to contributing my expertise to a forward-thinking organization.</p>
 </section>
 
-<section id="projects" class="section-transition">
+<section id="projects" class="projects-section fade-in">
   <h2>Projects</h2>
   <div class="projects-container">
     {% for project in site.data.projects.items %}
@@ -30,7 +30,7 @@ title: Home
   </div>
 </section>
 
-<section id="skills" class="section-transition">
+<section id="skills" class="skills-section fade-in">
   <h2>Skills</h2>
   <ul>
     <li>SQL & Database Management</li>
@@ -46,10 +46,10 @@ title: Home
   </ul>
 </section>
 
-<section id="blog" class="section-transition">
+<section id="blog" class="blog-section fade-in">
   <h2>Blog</h2>
   {% for post in site.posts %}
-  <article>
+  <article class="animate-on-scroll">
     <h3>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </h3>
@@ -57,3 +57,4 @@ title: Home
   </article>
   {% endfor %}
 </section>
+
