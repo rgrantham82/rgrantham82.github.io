@@ -77,12 +77,51 @@ header {
   font-size: 1.5rem;
 }
 
-/* Hero Section */
+/* Footer */
+footer {
+  background-color: var(--header-footer-background);
+  color: var(--header-footer-text);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1; /* Ensure above hero section */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons a {
+  color: var(--header-footer-text);
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}
+
+/* Adjusted Hero Section */
 .hero {
-  background-image: url('assets/images/hero-background.jpg');
-  background-size: cover;
-  background-color: var(--primary-color);
-  background-position: center;
+  background-color: var(--primary-color); /* Update to a suitable color for readability */
   color: #fff;
   text-align: center;
   padding: 200px 0;
@@ -118,15 +157,6 @@ header {
 .hero .btn:hover,
 .hero .resume-btn:hover {
   background-color: rgba(255, 171, 64, 0.9);
-}
-
-header,
-footer {
-  width: 100%;
-  background-color: var(--header-footer-background);
-  color: var(--header-footer-text);
-  text-align: center;
-  padding: 10px 10px;
 }
 
 /* Sections */
