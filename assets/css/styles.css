@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color); /* Use light grey as background */
-  margin: 20px;
+  margin: 0 20px;
   padding: 0;
 }
 
@@ -24,7 +24,7 @@ body {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -173,7 +173,7 @@ footer {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Grid layout with 2 columns */
   gap: 20px;
 }
 
