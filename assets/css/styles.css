@@ -85,7 +85,7 @@ header {
   font-size: 1.5rem;
 }
 
-/* Footer */
+/* Updated CSS for centered footer content */
 footer {
   background-color: var(--header-footer-background);
   color: var(--header-footer-text);
@@ -93,6 +93,7 @@ footer {
   padding: 20px 0;
   position: relative;
   z-index: 1;
+  /* Ensure above hero section */
 }
 
 .footer-content {
