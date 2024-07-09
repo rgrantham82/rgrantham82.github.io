@@ -16,10 +16,21 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color); /* Use light grey as background */
-  margin: 0 20px;
-  padding: 0;
+  padding: 0
+  margin: 0 20px; /* Add margin to the body */
 }
 
+header,
+footer {
+  width: 100%;
+  background-color: #333; /* Example background color */
+  color: #fff; /* Example text color */
+  /* Add any other styles as needed */
+}
+
+.main-content {
+  padding: 20px; /* Example padding for main content area */
+ 
 /* Container */
   .container {
   width: 100%;
