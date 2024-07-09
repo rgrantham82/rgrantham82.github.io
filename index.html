@@ -3,48 +3,145 @@ layout: default
 title: Home 
 --- 
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects-container"> {% for project in site.data.projects.items %} <div class="project-card">
-      <img src="{{ project.image }}" alt="{{ project.title }}">
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.subtitle }}</p>
-      <p>{{ project.description | truncatewords: 20 }}</p>
-      <a href="{{ project.link_text }}">{{ project.link_text }}</a> {% if project.github %} <a href="{{ project.github }}" class="btn-github">View on GitHub</a> {% endif %}
-    </div> {% endfor %} </div>
-</section>
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>SQL & Database Management</li>
-    <li>Machine Learning & AI</li>
-    <li>Data Visualization (Tableau, D3.js)</li>
-    <li>Predictive Analytics</li>
-    <li>Data Wrangling & Cleaning</li>
-    <li>Python & R Programming</li>
-    <li>Excel & Google Sheets</li>
-    <li>Project Management</li>
-    <li>Problem-Solving</li>
-    <li>Communication & Collaboration</li>
-  </ul>
-</section>
-<section id="blog">
-  <h2>Blog</h2> {% for post in site.posts %} <article>
-    <h3>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h3>
-    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-  </article> {% endfor %}
-</section>
-<section id="contact">
-  <h2>Contact</h2>
-  <form action="https://formspree.io/f/mlekeyqk" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
+    <section id="about" class="about-container section-transition">
+
+      <img src="assets/images/profile-image.jpg" alt="Robert Grantham"
+        class="circular-image">
+
+      <h2>About Me</h2>
+
+      <p>Hello! I'm Robert Grantham, a data analyst with a passion for AI,
+        machine learning, and data visualization. With a strong background in
+        SQL, Python, R, and Tableau, I aim to provide data-driven insights that
+        drive meaningful decisions. I'm based in Austin, TX, and actively
+        seeking opportunities to apply my skills in a full-time role.</p>
+
+    </section>
+
+    <section id="skills" class="section-transition">
+
+      <h2>Skills</h2>
+
+      <div class="skills-content">
+
+        <ul>
+
+          <li>SQL & Database Management</li>
+
+          <li>Machine Learning & AI</li>
+
+          <li>Data Visualization (Tableau, D3.js)</li>
+
+          <li>Predictive Analytics</li>
+
+          <li>Data Wrangling & Cleaning</li>
+
+          <li>Python & R Programming</li>
+
+          <li>Excel & Google Sheets</li>
+
+          <li>Project Management</li>
+
+          <li>Problem-Solving</li>
+
+          <li>Communication & Collaboration</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <section id="projects" class="section-transition">
+
+      <h2>Projects</h2>
+
+      <div class="projects-container">
+
+        <div class="project-card">
+
+          <img src="/assets/images/project1.jpg" alt="Project 1">
+
+          <h3>Project 1</h3>
+
+          <p>Brief description of Project 1.</p>
+
+          <a href="#" class="btn">View Project</a>
+
+          <a href="https://github.com/rgrantham82/project1"
+            class="btn-github">GitHub</a>
+
+        </div>
+
+        <div class="project-card">
+
+          <img src="/assets/images/project2.jpg" alt="Project 2">
+
+          <h3>Project 2</h3>
+
+          <p>Brief description of Project 2.</p>
+
+          <a href="#" class="btn">View Project</a>
+
+          <a href="https://github.com/rgrantham82/project2"
+            class="btn-github">GitHub</a>
+
+        </div>
+
+        <div class="project-card">
+
+          <img src="/assets/images/project3.jpg" alt="Project 3">
+
+          <h3>Project 3</h3>
+
+          <p>Brief description of Project 3.</p>
+
+          <a href="#" class="btn">View Project</a>
+
+          <a href="https://github.com/rgrantham82/project3"
+            class="btn-github">GitHub</a>
+
+        </div>
+
+        <!-- Add more projects as needed -->
+
+      </div>
+
+    </section>
+
+    <section id="blog" class="section-transition">
+
+      <h2>Blog</h2>
+
+      <article>
+
+        <h3><a href="#">Blog Post Title</a></h3>
+
+        <p>Brief summary of the blog post content.</p>
+
+      </article>
+
+      <article>
+
+        <h3><a href="#">Another Blog Post Title</a></h3>
+
+        <p>Brief summary of another blog post content.</p>
+
+      </article>
+
+      <!-- Add more blog posts as needed -->
+
+    </section>
+
+    <section id="cta" class="section-transition">
+
+      <h2>Call to Action</h2>
+
+      <p>If you're looking for a skilled data analyst to join your team, let's
+        connect! Download my resume below to learn more about my background and
+        experience.</p>
+
+      <a href="/assets/files/Robert_Grantham_Resume.pdf"
+        class="btn resume-btn">Download My Resume</a>
+
+    </section>
