@@ -8,7 +8,6 @@ items:
     image: /assets/images/sql-screenshot.PNG
     image_ratio: is-4by3
     link: https://github.com/rgrantham82/SQL_Examples
-    link_text: View Repository 
     tags: SQL, Data Query, Database
     github: rgrantham82/SQL_Examples
 
@@ -21,7 +20,6 @@ items:
     image: /assets/images/fraud-detection-plot.png
     image_ratio: is-4by3
     link: https://github.com/rgrantham82/fraud-detection
-    link_text: View Repository 
     tags: Machine Learning, AI, Fraud Prevention
     github: rgrantham82/fraud-detection
 
