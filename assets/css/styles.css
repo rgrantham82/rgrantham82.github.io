@@ -81,6 +81,7 @@ header {
 .hero {
   background-image: url('assets/images/hero-background.jpg');
   background-size: cover;
+  background-color: var(--primary-color);
   background-position: center;
   color: #fff;
   text-align: center;
