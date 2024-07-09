@@ -95,3 +95,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     smoothScroll(target, duration);
   });
 });
+
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navbarToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('is-active');
+});
