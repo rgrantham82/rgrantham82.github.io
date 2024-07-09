@@ -18,9 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(element);
   });
 
-  // Smooth scrolling for internal links (Bootstrap handles this)
-  // Toggle navbar on mobile devices (Bootstrap handles this with data-toggle attributes)
-
   // Flip project cards (Using Alpine.js for dynamic behavior)
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -43,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }));
 
-  // Animate elements on scroll (Bootstrap's scrollspy can handle this with data-spy attributes)
+  // Animate elements on scroll
   const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
   const animateObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -58,6 +55,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   elementsToAnimate.forEach(element => {
     animateObserver.observe(element);
+  });
+
+  // Smooth scroll to anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = this.getAttribute('href');
+      const duration = 1000; // Adjust scrolling speed if needed
+      smoothScroll(target, duration);
+    });
+  });
+
+  // Toggle navbar on mobile devices
+  const navbarToggle = document.querySelector('.navbar-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navbarToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('is-active');
   });
 });
 
@@ -85,20 +100,3 @@ function smoothScroll(target, duration) {
 
   requestAnimationFrame(animation);
 }
-
-// Smooth scroll to anchor links on click
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = this.getAttribute('href');
-    const duration = 1000; // Adjust scrolling speed if needed
-    smoothScroll(target, duration);
-  });
-});
-
-const navbarToggle = document.querySelector('.navbar-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-navbarToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('is-active');
-});
