@@ -1,118 +1,266 @@
 /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
     color: #333;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
 }
 
 a {
-    color: #333;
+    color: #007bff;
     text-decoration: none;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #007BFF;
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background: #333;
     color: #fff;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1 {
-    font-size: 2.5em;
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-h2 {
-    font-size: 2em;
+header nav ul li {
+    margin-left: 2rem;
 }
 
-h3 {
-    font-size: 1.5em;
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
 }
 
-/* Layout */
-#intro {
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: #007bff;
+    color: #fff;
+    padding: 6rem 2rem;
     text-align: center;
-    padding: 2em 0;
-    background-color: #007BFF;
-    color: #fff;
 }
 
-#portfolio, #skills, #blog, #contact {
-    padding: 2em 0;
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-section .btn-primary {
+    background: #ff6f61;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero-section .btn-primary:hover {
+    background: #e65c50;
+}
+
+/* Projects Section Styles */
+.projects-section {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .project-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1em;
-    flex: 1 1 calc(33.333% - 1em);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 5px;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
 }
 
-.project-card-content {
-    padding: 1em 0;
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* About Me Image */
-.about-image img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card .btn-secondary {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.project-card .btn-secondary:hover {
+    background: #0056b3;
+}
+
+/* Skills Section Styles */
+.skills-section {
+    padding: 4rem 2rem;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skills-list li {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+/* Blog Section Styles */
+.blog-section {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+.blog-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+    font-size: 1rem;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 4rem 2rem;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.contact-section button {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Animations */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s;
-}
-
-.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Fade In/Out Animations */
-.fade-in {
-    animation: fadeIn 1s forwards;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -122,43 +270,13 @@ h3 {
     }
 }
 
-.fade-out {
-    animation: fadeOut 1s forwards;
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-/* Accordion Styles */
-.accordion {
-    background-color: #eee;
-    cursor: pointer;
-    padding: 1em;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-}
-
-.accordion:hover {
-    background-color: #ccc;
-}
-
-.accordion-content {
-    padding: 0 1em;
-    display: none;
-    overflow: hidden;
-    background-color: #f9f9f9;
-}
-
-.accordion-content p {
-    padding: 1em;
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
