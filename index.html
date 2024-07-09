@@ -3,145 +3,101 @@ layout: default
 title: Home 
 --- 
 
-    <section id="about" class="about-container section-transition">
+  <section id="about" class="about-container">
 
-      <img src="assets/images/profile-image.jpg" alt="Robert Grantham"
-        class="circular-image">
+    <img src="assets/images/profile-image.jpg" alt="Robert Grantham"
+      class="circular-image">
 
-      <h2>About Me</h2>
+    <h2>About Me</h2>
 
-      <p>Hello! I'm Robert Grantham, a data analyst with a passion for AI,
-        machine learning, and data visualization. With a strong background in
-        SQL, Python, R, and Tableau, I aim to provide data-driven insights that
-        drive meaningful decisions. I'm based in Austin, TX, and actively
-        seeking opportunities to apply my skills in a full-time role.</p>
+    <p>Hello! I'm Robert Grantham, a data analyst with a passion for AI, machine
+      learning, and data visualization. With a strong background in SQL, Python,
+      R, and Tableau, I aim to transform complex data into actionable insights.
+      My goal is to leverage data to drive business decisions and create
+      impactful solutions.</p>
 
-    </section>
+  </section>
 
-    <section id="skills" class="section-transition">
+  <section id="projects">
 
-      <h2>Skills</h2>
+    <h2>Projects</h2>
 
-      <div class="skills-content">
+    <div class="projects-container">
 
-        <ul>
+      {% for project in site.data.projects.items %}
 
-          <li>SQL & Database Management</li>
+      <div class="project-card">
 
-          <li>Machine Learning & AI</li>
+        <img src="{{ project.image }}" alt="{{ project.title }}">
 
-          <li>Data Visualization (Tableau, D3.js)</li>
+        <h3>{{ project.title }}</h3>
 
-          <li>Predictive Analytics</li>
+        <p>{{ project.subtitle }}</p>
 
-          <li>Data Wrangling & Cleaning</li>
+        <p>{{ project.description | truncatewords: 20 }}</p>
 
-          <li>Python & R Programming</li>
+        <a href="{{ project.link_text }}"
+          class="btn">{{ project.link_text }}</a>
 
-          <li>Excel & Google Sheets</li>
+        {% if project.github %}
 
-          <li>Project Management</li>
+        <a href="{{ project.github }}" class="btn-github">View on GitHub</a>
 
-          <li>Problem-Solving</li>
-
-          <li>Communication & Collaboration</li>
-
-        </ul>
+        {% endif %}
 
       </div>
 
-    </section>
+      {% endfor %}
 
-    <section id="projects" class="section-transition">
+    </div>
 
-      <h2>Projects</h2>
+  </section>
 
-      <div class="projects-container">
+  <section id="skills">
 
-        <div class="project-card">
+    <h2>Skills</h2>
 
-          <img src="/assets/images/project1.jpg" alt="Project 1">
+    <ul>
 
-          <h3>Project 1</h3>
+      <li>SQL & Database Management</li>
 
-          <p>Brief description of Project 1.</p>
+      <li>Machine Learning & AI</li>
 
-          <a href="#" class="btn">View Project</a>
+      <li>Data Visualization (Tableau, D3.js)</li>
 
-          <a href="https://github.com/rgrantham82/project1"
-            class="btn-github">GitHub</a>
+      <li>Predictive Analytics</li>
 
-        </div>
+      <li>Data Wrangling & Cleaning</li>
 
-        <div class="project-card">
+      <li>Python & R Programming</li>
 
-          <img src="/assets/images/project2.jpg" alt="Project 2">
+      <li>Excel & Google Sheets</li>
 
-          <h3>Project 2</h3>
+      <li>Project Management</li>
 
-          <p>Brief description of Project 2.</p>
+      <li>Problem-Solving</li>
 
-          <a href="#" class="btn">View Project</a>
+      <li>Communication & Collaboration</li>
 
-          <a href="https://github.com/rgrantham82/project2"
-            class="btn-github">GitHub</a>
+    </ul>
 
-        </div>
+  </section>
 
-        <div class="project-card">
+  <section id="blog">
 
-          <img src="/assets/images/project3.jpg" alt="Project 3">
+    <h2>Blog</h2>
 
-          <h3>Project 3</h3>
+    {% for post in site.posts %}
 
-          <p>Brief description of Project 3.</p>
+    <article>
 
-          <a href="#" class="btn">View Project</a>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 
-          <a href="https://github.com/rgrantham82/project3"
-            class="btn-github">GitHub</a>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
 
-        </div>
+    </article>
 
-        <!-- Add more projects as needed -->
+    {% endfor %}
 
-      </div>
-
-    </section>
-
-    <section id="blog" class="section-transition">
-
-      <h2>Blog</h2>
-
-      <article>
-
-        <h3><a href="#">Blog Post Title</a></h3>
-
-        <p>Brief summary of the blog post content.</p>
-
-      </article>
-
-      <article>
-
-        <h3><a href="#">Another Blog Post Title</a></h3>
-
-        <p>Brief summary of another blog post content.</p>
-
-      </article>
-
-      <!-- Add more blog posts as needed -->
-
-    </section>
-
-    <section id="cta" class="section-transition">
-
-      <h2>Call to Action</h2>
-
-      <p>If you're looking for a skilled data analyst to join your team, let's
-        connect! Download my resume below to learn more about my background and
-        experience.</p>
-
-      <a href="/assets/files/Robert_Grantham_Resume.pdf"
-        class="btn resume-btn">Download My Resume</a>
-
-    </section>
+  </section>
+ 
