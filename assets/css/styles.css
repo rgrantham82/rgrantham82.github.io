@@ -40,6 +40,14 @@ footer {
   padding: 0 20px;
   margin: 60px auto;
   max-width: 1200px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-container.visible, .projects-section.visible, .skills-section.visible, .blog-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .circular-image {
@@ -48,6 +56,13 @@ footer {
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.circular-image:hover {
+  transform: scale(1.1);
 }
 
 h2 {
@@ -126,6 +141,14 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#blog article.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #blog article h3 {
@@ -136,86 +159,36 @@ p {
   margin-bottom: 10px;
 }
 
-/* Contact Section */
-#contact {
+/* Skills Section */
+#skills {
   padding: 60px 20px;
   background-color: var(--surface-color);
   text-align: center;
 }
 
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-container form {
-  max-width: 600px;
-  width: 100%;
-}
-
-.contact-container form input,
-.contact-container form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.contact-container form input[type="submit"] {
-  background-color: var(--accent-color);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-container form input[type="submit"]:hover {
-  background-color: darken(var(--accent-color), 10%);
-}
-
-/* Footer */
-footer {
-  background-color: var(--header-footer-background);
-  color: var(--header-footer-text);
-  text-align: center;
-  padding: 20px 0;
-}
-
-.social-icons {
+#skills ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
-  display: flex;
-  justify-content: center;
+  columns: 2;
 }
 
-.social-icons li {
-  margin: 0 10px;
+#skills ul li {
+  margin-bottom: 10px;
 }
 
-.social-icons li a {
-  color: var(--header-footer-text);
-  font-size: 1.5em;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease forwards;
 }
 
-.social-icons li a:hover {
-  color: var(--accent-color);
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-/* Accessibility styles */
-a:focus {
-  outline: 2px solid var(--accent-color);
-}
-
-button:focus {
-  outline: 2px solid var(--accent-color);
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid var(--accent-color);
-}
- 
