@@ -1,72 +1,66 @@
 ---
-title: Robert Grantham 
 layout: default
+title: Home
 ---
 
-        <section id="intro" class="animate-on-scroll">
-            <h1>Robert Grantham</h1>
-            <p>Data Analyst | AI Enthusiast | Visualization Expert</p>
-            <a href="#portfolio" class="btn">View My Work</a>
-        </section>
+<section id="hero" class="hero-section animate-on-scroll">
+    <h1>Robert Grantham</h1>
+    <p>Data Analyst | AI Enthusiast | Visualization Expert</p>
+    <a href="#projects" class="btn-primary">View My Work</a>
+</section>
 
-        <section id="portfolio" class="animate-on-scroll">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                {% for project in site.data.projects.items %}
-                <div class="project-card">
-                    <img src="{{ project.image }}" alt="{{ project.title }}">
-                    <div class="project-card-content">
-                        <h3>{{ project.title }}</h3>
-                        <h4>{{ project.subtitle }}</h4>
-                        <p>{{ project.description | truncatewords: 20 }}</p>
-                        <a href="{{ project.link }}" class="btn">{{ project.link_text }}</a>
-                        {% if project.github %}
-                        <a href="https://github.com/{{ project.github }}" class="btn">View on GitHub</a>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
+<section id="projects" class="projects-section animate-on-scroll">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        {% for project in site.data.projects.items %}
+        <div class="project-card">
+            <img src="{{ project.image }}" alt="{{ project.title }}">
+            <h3>{{ project.title }}</h3>
+            <p class="project-subtitle">{{ project.subtitle }}</p>
+            <p>{{ project.description | truncatewords: 20 }}</p>
+            <a href="{{ project.link }}" class="btn-secondary">{{ project.link_text }}</a>
+            {% if project.github %}
+            <a href="{{ project.github }}" class="btn-secondary">View on GitHub</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
 
-        <section id="skills" class="animate-on-scroll">
-            <h2>Skills</h2>
-            <ul>
-                <li>SQL & Database Management</li>
-                <li>Machine Learning & AI</li>
-                <li>Data Visualization (Tableau, D3.js)</li>
-                <li>Predictive Analytics</li>
-                <li>Data Wrangling & Cleaning</li>
-                <li>Python & R Programming</li>
-                <li>Excel & Google Sheets</li>
-                <li>Project Management</li>
-                <li>Problem-Solving</li>
-                <li>Communication & Collaboration</li>
-            </ul>
-        </section>
+<section id="skills" class="skills-section animate-on-scroll">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>SQL & Database Management</li>
+        <li>Machine Learning & AI</li>
+        <li>Data Visualization (Tableau, D3.js)</li>
+        <li>Predictive Analytics</li>
+        <li>Data Wrangling & Cleaning</li>
+        <li>Python & R Programming</li>
+        <li>Excel & Google Sheets</li>
+        <li>Project Management</li>
+        <li>Problem-Solving</li>
+        <li>Communication & Collaboration</li>
+    </ul>
+</section>
 
-        <section id="blog" class="animate-on-scroll">
-            <h2>Blog</h2>
-            {% for post in site.posts %}
-            <div class="post-excerpt">
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-            </div>
-            {% endfor %}
-        </section>
+<section id="blog" class="blog-section animate-on-scroll">
+    <h2>Blog</h2>
+    <div class="blog-posts">
+        {% for post in site.posts %}
+        <article class="blog-post">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
 
-        <section id="contact" class="animate-on-scroll">
-            <h2>Contact</h2>
-            <form action="https://formspree.io/f/mbjnwpgb" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </section>
+<section id="contact" class="contact-section animate-on-scroll">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/{{ site.email }}" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="_replyto" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+</section>
