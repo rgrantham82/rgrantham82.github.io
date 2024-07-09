@@ -9,23 +9,103 @@
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  margin: 0 20px;
   color: #333;
   background-color: var(--primary-color); /* Use serene sky blue as background */
 }
 
 /* Container */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px; /* Adjust maximum width for main content */
+  margin: 0 auto; /* Center align the container */
+  padding: 0 20px; /* Add padding inside the container if needed */
+}
+
+/* Header and Footer */
+header,
+footer {
+  width: 100%;
+  background-color: #333; /* Example background color */
+  color: #fff; /* Example text color */
+  padding: 10px 0; /* Add padding for header and footer */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  position: relative; /* Ensure relative positioning for absolute dropdown */
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+.navbar-toggle {
+  display: none; /* Initially hide on larger screens */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute; /* Position toggle button absolutely */
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block; /* Display toggle button on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default on small screens */
+    position: absolute;
+    top: 100%; /* Adjust dropdown position */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Optional: Set background color for dropdown */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: Add shadow */
+  }
+
+  .nav-links.is-active {
+    display: flex; /* Show nav links when is-active class is added */
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Optional: Adjust list item margin */
+  }
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
 }
 
 /* Hero Section */
 .hero {
   background-color: var(--secondary-color); /* Lavender background */
   color: #333; /* Adjust text color for readability */
-  padding: 60px 0;
   text-align: center;
 }
 
@@ -44,76 +124,8 @@ body {
   background-color: #ff9900; /* Darker orange on hover */
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    position: relative; /* Ensure relative positioning for absolute dropdown */
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #ffcc00;
-}
-
-.navbar-toggle {
-    display: none; /* Initially hide on larger screens */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    position: absolute; /* Position toggle button absolutely */
-    top: 10px;
-    right: 10px;
-}
-
-@media (max-width: 768px) {
-    .navbar-toggle {
-        display: block; /* Display toggle button on smaller screens */
-    }
-
-    .nav-links {
-        display: none; /* Hide nav links by default on small screens */
-        position: absolute;
-        top: 100%; /* Adjust dropdown position */
-        left: 0;
-        width: 100%;
-        background-color: #fff; /* Optional: Set background color for dropdown */
-        padding: 10px 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: Add shadow */
-    }
-
-    .nav-links.is-active {
-        display: flex; /* Show nav links when is-active class is added */
-        flex-direction: column;
-    }
-
-    .nav-links li {
-        margin: 10px 0; /* Optional: Adjust list item margin */
-    }
-}
-
 /* About Section */
 #about {
-  padding: 60px 0;
   text-align: center;
 }
 
@@ -138,10 +150,6 @@ body {
 }
 
 /* Skills Section */
-#skills {
-  padding: 60px 0;
-}
-
 #skills ul {
   list-style: none;
   padding: 0;
@@ -154,12 +162,8 @@ body {
 
 /* Projects Section */
 #projects {
-  padding: 60px 0;
-}
-
-.projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -207,10 +211,6 @@ body {
 }
 
 /* Blog Section */
-#blog {
-  padding: 60px 0;
-}
-
 #blog article {
   margin-bottom: 40px;
 }
@@ -225,38 +225,30 @@ body {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px; /* Adjust font size for better readability */
+  text-align: center;
+  padding: 20px 0;
 }
 
 .social-icons {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0; /* Adjust margin for better spacing */
-    display: flex;
-    justify-content: center; /* Center align icons */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .social-icons li a {
-    color: #fff;
-    font-size: 1.5em; /* Adjust icon size */
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #fff;
+  font-size: 1.5em; /* Adjust icon size */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .social-icons li a:hover {
-    color: #ffcc00;
+  color: #ffcc00;
 }
 
 /* Add smooth transitions */
