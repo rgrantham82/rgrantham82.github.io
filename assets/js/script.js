@@ -1,3 +1,12 @@
+// Toggle GitHub links visibility
+  const githubToggles = document.querySelectorAll('.btn-github-toggle');
+  githubToggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+      const content = this.nextElementSibling;
+      content.classList.toggle('show');
+    });
+  });
+
 // Fade in elements when they come into view
 document.addEventListener('DOMContentLoaded', function () {
    const sections = document.querySelectorAll('.section-transition');
