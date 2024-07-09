@@ -21,10 +21,15 @@ title: Home
       <h3>{{ project.title }}</h3>
       <p>{{ project.subtitle }}</p>
       <p>{{ project.description | truncatewords: 20 }}</p>
-      <a href="{{ project.link_text }}" class="btn">{{ project.link_text }}</a>
-      {% if project.github %}
-      <a href="{{ project.github }}" class="btn-github">View on GitHub</a>
-      {% endif %}
+      <div class="btn-container">
+        <a href="{{ project.link_text }}" class="btn">{{ project.link_text }}</a>
+        {% if project.github %}
+        <button class="btn-github-toggle">View on GitHub</button>
+        <div class="github-content">
+          <a href="{{ project.github }}" class="btn-github">GitHub Repository</a>
+        </div>
+        {% endif %}
+      </div>
     </div>
     {% endfor %}
   </div>
@@ -57,4 +62,3 @@ title: Home
   </article>
   {% endfor %}
 </section>
-
