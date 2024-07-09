@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color); /* Use light grey as background */
-  margin: 0;
+  margin: 20px;
   padding: 0;
 }
 
@@ -24,7 +24,7 @@ body {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: auto;
   padding: 0 20px;
 }
 
