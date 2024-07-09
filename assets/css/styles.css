@@ -43,58 +43,16 @@ body {
   background-color: #ff9900; /* Darker orange on hover */
 }
 
-/* Navbar */
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-}
-
+/* Navbar (Bootstrap will handle most of the styling) */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+  background-color: #fff; /* Set by Bootstrap */
+  border-bottom: 1px solid #eee; /* Set by Bootstrap */
 }
 
 .navbar a.logo {
   font-weight: 700;
   text-decoration: none;
   color: #333;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-  }
-
-  nav ul.is-active {
-    display: flex;
-  }
 }
 
 /* About Section */
@@ -150,8 +108,8 @@ nav ul li a {
 }
 
 .project-card {
-  background-color: #fff;
-  border: 1px solid #eee;
+  background-color: #fff; /* Set by Bootstrap */
+  border: 1px solid #eee; /* Set by Bootstrap */
   border-radius: 10px;
   padding: 20px;
   text-align: center;
