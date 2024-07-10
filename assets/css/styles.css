@@ -214,7 +214,7 @@ footer {
     text-align: center;
 }
 
-.about-container .about-image {
+.about-container .circular-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -223,7 +223,7 @@ footer {
     transition: transform 0.3s;
 }
 
-.about-container .about-image:hover {
+.about-container .circular-image:hover {
     transform: scale(1.1);
 }
 
