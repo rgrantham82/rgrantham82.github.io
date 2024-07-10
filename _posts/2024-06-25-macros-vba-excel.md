@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title:  "Automating Monthly Sales Report Generation with Macros and VBA in Excel"
 date:   2024-06-25
 description: Learn how to automate monthly sales report generation using macros and VBA in Excel, enhancing efficiency and accuracy.
