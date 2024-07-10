@@ -1,25 +1,18 @@
 ---
 layout: default
+title: Blog
 ---
 
-{% include head.html %}
-
-<body>
-
-  {% include header.html %}
-
-  <main class="container">
-    {{ content }}
-  </main>
-
-  {% include footer.html %}
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-EaR8s5gB6sb2b4od4+2nhMn0zqbBqlN5PsfyL2Xwp0C2wZDl4zkEm6XpjJg3Jr1G" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script defer src="/assets/js/script.js"></script>
-
-</body>
-
-</html>
+<section id="blog" class="blog-section fade-in">
+  <div class="container">
+    <h2>Blog</h2>
+    {% for post in site.posts %}
+    <article class="animate-on-scroll">
+      <h3>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
