@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title:  "Leveraging Data Analytics to Support the LGBT Community in Challenging Times"
 date:   2024-07-01
 description: A call to action for data analysts and scientists to leverage their skills in support of the LGBT community during challenging times.
