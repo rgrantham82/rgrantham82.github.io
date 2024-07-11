@@ -10,6 +10,8 @@ items:
     link: https://github.com/rgrantham82/SQL_Examples
     tags: SQL, Data Query, Database
     github: rgrantham82/SQL_Examples
+    back_content: |-
+      <p>Check out the repository on GitHub for more details and examples.</p>
 
   - title: Fraud Detection
     subtitle: AI-driven Fraud Prevention
@@ -22,6 +24,8 @@ items:
     link: https://github.com/rgrantham82/fraud-detection
     tags: Machine Learning, AI, Fraud Prevention
     github: rgrantham82/fraud-detection
+    back_content: |-
+      <p>Visit the GitHub repository to explore the project implementation and results.</p>
 
   - title: Forecasting Mini-Course Sales
     subtitle: Sales Prediction Analysis
@@ -34,6 +38,8 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/forecasting-mini-course-sales
     link_text: View Project
     tags: Forecasting, Sales Analysis, Kaggle
+    back_content: |-
+      <p>Explore the project on Kaggle to delve deeper into the sales forecasting methodology.</p>
 
   - title: Predicting Credit Approval
     subtitle: Credit Risk Assessment
@@ -46,6 +52,8 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/predicting-credit-approval
     link_text: View Project
     tags: Predictive Analytics, Credit Risk, Kaggle
+    back_content: |-
+      <p>Check out the project on Kaggle to understand the credit risk assessment methodology.</p>
 
   - title: Austin Violent Crime Insights Dashboard
     subtitle: Interactive Crime Data Visualization
@@ -58,6 +66,8 @@ items:
     link: https://public.tableau.com/views/AustinViolentCrimeInsightsDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
     link_text: View Dashboard
     tags: Data Visualization, Crime Analysis, Tableau
+    back_content: |-
+      <p>View the interactive Tableau dashboard for detailed insights into Austin's crime data.</p>
 
   - title: Police Shootings
     subtitle: In-depth Data Examination
@@ -70,6 +80,8 @@ items:
     link: https://www.kaggle.com/code/robertgrantham/police-shootings-analysis
     link_text: View Project 
     tags: Data Analysis, Statistical Analysis, Kaggle
+    back_content: |-
+      <p>Explore the detailed analysis of police shootings data for insights into law enforcement.</p>
 
   - title: Client Segmentation
     subtitle: Market Analysis and Strategy Development
@@ -82,3 +94,5 @@ items:
     link: /client-segmentation.html
     link_text: View Project 
     tags: Clustering, Market Analysis, D3.js
+    back_content: |-
+      <p>Explore the detailed client segmentation analysis and strategies developed.</p>
