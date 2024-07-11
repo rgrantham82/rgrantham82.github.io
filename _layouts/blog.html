@@ -2,42 +2,31 @@
 layout: default
 title: Blog
 ---
-
-{% include head.html %}
-
-<body>
-  {% include header.html %}
-
-  <main id="content">
-    <section id="blog" class="blog-section fade-in">
-      <div class="container">
-        <h2>{{ page.title }}</h2>
-        <p class="text-muted">{{ page.date | date: "%B %d, %Y" }}</p>
-        
-        <article class="blog-post">
-          {{ content }}
-        </article>
-
-        <hr>
-
-        <!-- Author Information -->
-        <div class="author-info">
-          <div class="row">
+<section id="blog" class="blog-section fade-in">
+   <div class="container">
+      <h2>{{ page.title }}</h2>
+      <p class="text-muted">{{ page.date | date: "%B %d, %Y" }}</p>
+      <article class="blog-post">
+         {{ content }}
+      </article>
+      <hr>
+      <!-- Author Information -->
+      <div class="author-info">
+         <div class="row">
             <div class="col-md-3">
-              <img src="/assets/images/profile-image.jpg" alt="Author" class="img-fluid rounded-circle">
+               <img src="/assets/images/profile-image.jpg" alt="Author" class="img-fluid rounded-circle">
             </div>
             <div class="col-md-9">
-              <h4>About the Author</h4>
-              <p>Robert Grantham is a data analyst passionate about leveraging data to drive business decisions. Connect with Robert on <a href="https://www.linkedin.com/in/robertgrantham82/">LinkedIn</a>.</p>
+               <h4>About the Author</h4>
+               <p>Robert Grantham is a data analyst passionate about leveraging data to drive business decisions. Connect with Robert on <a href="https://www.linkedin.com/in/robertgrantham82/">LinkedIn</a>.</p>
             </div>
-          </div>
-        </div>
-
-        <!-- Disqus Comments -->
-        <div class="comments-section">
-          <h4>Comments</h4>
-          <div id="disqus_thread"></div>
-          <script>
+         </div>
+      </div>
+      <!-- Disqus Comments -->
+      <div class="comments-section">
+         <h4>Comments</h4>
+         <div id="disqus_thread"></div>
+         <script>
             var disqus_config = function () {
               this.page.url = '{{ page.canonical_url | absolute_url }}';
               this.page.identifier = '{{ page.url }}';
@@ -48,19 +37,13 @@ title: Blog
               s.setAttribute('data-timestamp', +new Date());
               (d.head || d.body).appendChild(s);
             })();
-          </script>
-        </div>
+         </script>
       </div>
-    </section>
-  </main>
-
-  {% include footer.html %}
-
-  <!-- Bootstrap JS, Popper.js, and jQuery (CDN) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-EaR8s5gB6sb2b4od4+2nhMn0zqbBqlN5PsfyL2Xwp0C2wZDl4zkEm6XpjJg3Jr1G" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-  <!-- Custom Script -->
-  <script defer src="/assets/js/script.js"></script>
-</body>
+   </div>
+</section>
+<!-- Bootstrap JS, Popper.js, and jQuery (CDN) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-EaR8s5gB6sb2b4od4+2nhMn0zqbBqlN5PsfyL2Xwp0C2wZDl4zkEm6XpjJg3Jr1G" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- Custom Script -->
+<script defer src="/assets/js/script.js"></script>
