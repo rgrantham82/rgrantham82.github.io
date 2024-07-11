@@ -107,6 +107,12 @@ main {
     transition: margin-top 0.3s;
 }
 
+/* Centering all section headers */
+h2,
+h3 {
+  text-align: center;
+}
+
 h2,
 p {
     margin-bottom: 1em;
