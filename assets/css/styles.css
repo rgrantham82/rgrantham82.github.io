@@ -445,6 +445,41 @@ footer {
     background-color: rgba(255, 171, 64, 0.9);
 }
 
+/* Center section headers */
+section h2 {
+  text-align: center;
+}
+
+/* Skills section styling */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.skills-list li {
+  margin: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Animations */
 
 @keyframes fadeIn {
