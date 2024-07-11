@@ -56,6 +56,7 @@ header.scrolled {
     padding: 5px 0;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -88,7 +89,6 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* Navbar toggle button */
 .navbar-toggle {
   background: none;
   border: none;
@@ -207,51 +207,89 @@ footer {
 }
 
 /* Hero section */
-
 .hero {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 200px 0;
-    text-align: center;
-    animation: fadeIn 1s ease-in;
+  background: linear-gradient(135deg, #87CEEB, #E0FFFF);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 1s ease-in;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideInFromLeft 1s ease-in;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: slideInFromLeft 1s ease-in;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    animation: slideInFromRight 1s ease-in;
+  font-size: 1.5rem;
+  margin: 20px 0 30px;
+  animation: slideInFromRight 1s ease-in;
 }
 
-.hero .btn,
-.hero .resume-btn {
-    background-color: var(--accent-color);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-right: 10px;
-    transition: background-color 0.3s;
+.hero a.btn, 
+.hero a.resume-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.hero .btn:hover,
-.hero .resume-btn:hover {
-    background-color: rgba(255, 171, 64, 0.9);
+.hero a.btn:hover, 
+.hero a.resume-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Sections */
-
 .section {
     padding: 60px 20px;
     margin: 60px auto;
