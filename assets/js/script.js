@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarToggle = document.querySelector('.navbar-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navbarToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('is-active'); // Toggle visibility of nav links
+  });
+});
+
 // Smooth scrolling function
 function smoothScroll(target, duration) {
   const targetElement = document.querySelector(target);
