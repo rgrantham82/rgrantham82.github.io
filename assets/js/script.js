@@ -1,1 +1,116 @@
-const githubToggles=document.querySelectorAll(".btn-github-toggle");function smoothScroll(e,t){const n=document.querySelector(e).getBoundingClientRect().top,o=window.pageYOffset;let c=null;requestAnimationFrame(function e(s){null===c&&(c=s);const r=s-c,i=(l=r,a=o,d=n,(l/=t/2)<1?d/2*l*l+a:-d/2*(--l*(l-2)-1)+a);var l,a,d;window.scrollTo(0,i),r<t&&requestAnimationFrame(e)})}githubToggles.forEach(e=>{e.addEventListener("click",function(){this.nextElementSibling.classList.toggle("show")})}),document.addEventListener("DOMContentLoaded",function(){const e=document.querySelectorAll(".section-transition"),t=new IntersectionObserver(function(e,t){e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("visible"),t.unobserve(e.target))})},{threshold:.5});e.forEach(e=>{t.observe(e)})}),document.addEventListener("DOMContentLoaded",function(){const e=new IntersectionObserver(t=>{t.forEach(t=>{t.isIntersecting&&(t.target.classList.add("section-visible"),t.target.classList.remove("section-hidden"),e.unobserve(t.target))})},{threshold:.1});document.querySelectorAll(".section-transition").forEach(t=>{t.classList.add("section-hidden"),e.observe(t)}),document.querySelectorAll(".project-card").forEach(e=>{e.addEventListener("click",()=>{e.classList.toggle("flipped")})}),document.querySelectorAll(".accordion").forEach(e=>{e.addEventListener("click",()=>{e.classList.toggle("active")})}),Alpine.data("projectCard",()=>({flipped:!1,toggle(){this.flipped=!this.flipped}}));const t=document.querySelectorAll(".animate-on-scroll"),n=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("visible"),n.unobserve(e.target))})},{threshold:.1});t.forEach(e=>{n.observe(e)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();smoothScroll(this.getAttribute("href"),1e3)})});const o=document.querySelector(".navbar-toggle"),c=document.querySelector(".nav-links");o.addEventListener("click",()=>{c.classList.toggle("is-active")})});
+// Smooth scrolling function
+function smoothScroll(target, duration) {
+  const targetElement = document.querySelector(target);
+  const targetPosition = targetElement.getBoundingClientRect().top;
+  const startPosition = window.pageYOffset;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const ease = easeInOutQuad(timeElapsed, startPosition, targetPosition, duration);
+    window.scrollTo(0, ease);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+// GitHub toggle buttons
+const githubToggles = document.querySelectorAll(".btn-github-toggle");
+githubToggles.forEach(toggle => {
+  toggle.addEventListener("click", function() {
+    this.nextElementSibling.classList.toggle("show");
+  });
+});
+
+// IntersectionObserver for fade-in animations
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(".section-transition");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+// IntersectionObserver for section visibility
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(".section-transition");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("section-visible");
+        entry.target.classList.remove("section-hidden");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    section.classList.add("section-hidden");
+    observer.observe(section);
+  });
+});
+
+// Toggle flip effect on project cards
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+});
+
+// Alpine.js data for project card flip
+Alpine.data("projectCard", () => ({
+  flipped: false,
+  toggle() {
+    this.flipped = !this.flipped;
+  }
+}));
+
+// IntersectionObserver for elements with animate-on-scroll class
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(event) {
+    event.preventDefault();
+    const target = this.getAttribute("href");
+    smoothScroll(target, 1000);
+  });
+});
+
+// Toggle mobile menu
+const navbarToggle = document.querySelector(".navbar-toggle");
+const navLinks = document.querySelector(".nav-links");
+navbarToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("is-active");
+});
