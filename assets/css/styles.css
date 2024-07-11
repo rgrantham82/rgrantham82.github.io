@@ -171,39 +171,64 @@ footer {
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
 .social-icons li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .social-icons a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    transition: color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
-.social-icons .fa {
-    margin: 0 10px;
+/* Animation for footer content */
+.footer-content {
+  animation: slideInFromBottom 1s ease-in-out;
+  animation-fill-mode: both;
 }
 
-.copyright {
-    margin: 0;
+/* Animation for social icons */
+.social-icons {
+  animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Hero section */
