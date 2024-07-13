@@ -18,14 +18,16 @@ title: Home
     <h2>Projects</h2>
     <div class="projects-container">
         {% for project in site.data.projects.items %}
-        <div class="project-card" x-data="projectCard()">
+        <div class="project-card" x-data="{ flipped: false }">
             <div class="card-front">
                 <img src="{{ project.image }}" alt="{{ project.title }}">
                 <h3>{{ project.title }}</h3>
                 <p>{{ project.subtitle }}</p>
                 <p>{{ project.description | truncatewords: 20 }}</p>
-                <a href="{{ project.link_text }}" class="btn">{{ project.link_text }}</a> {% if project.github %}
-                <a href="{{ project.github }}" class="btn-github">View on GitHub</a> {% endif %}
+                <a href="{{ project.link }}" class="btn">{{ project.link_text }}</a>
+                {% if project.github %}
+                <a href="https://github.com/{{ project.github }}" class="btn-github">View on GitHub</a>
+                {% endif %}
             </div>
             <div class="card-back" x-show="flipped" @click.away="flipped = false" x-html="`${project.back_content}`">
                 <!-- Back content, populated dynamically -->
