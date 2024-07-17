@@ -98,11 +98,11 @@ items:
       Conducted a comprehensive analysis of the Austin Crime Reports dataset, focusing on data integrity and optimization. This project involved identifying data quality issues, implementing cleaning strategies, and optimizing data storage for efficient querying and analysis.
       
       The improved dataset supports accurate crime analysis and enhances data-driven decision-making.
-    image: /assets/images/data-integrity-optimization.png
+    image: /assets/images/data_integrity_optimization_final.png
     image_ratio: is-4by3
     link: https://github.com/rgrantham82/data-integrity-optimization
     link_text: View Project
     tags: Data Integrity, Optimization, Crime Analysis
-    github: rgrantham82/austin-crime-reports
+    github: rgrantham82/data-integrity-optimization
     back_content: |-
       <p>Visit the GitHub repository to explore the data integrity and optimization techniques used in this project.</p>
