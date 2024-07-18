@@ -56,3 +56,23 @@ function smoothScroll(target, duration) {
 
   requestAnimationFrame(animation);
 }
+
+// Scroll-to-top button functionality
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollToTopButton = document.createElement("button");
+  scrollToTopButton.classList.add("scroll-to-top");
+  scrollToTopButton.innerHTML = "↑";
+  document.body.appendChild(scrollToTopButton);
+
+  window.addEventListener("scroll", function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  });
+
+  scrollToTopButton.addEventListener("click", function() {
+    smoothScroll("#top", 1000);
+  });
+});
