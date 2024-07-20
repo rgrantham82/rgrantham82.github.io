@@ -9,14 +9,13 @@
 
 /* Root variables */
 :root {
-    --primary-color: #87CEEB;
-    --primary-color-dark: #6CA5C8;
-    --secondary-color: #E0E0E0;
-    --accent-color: #FF7F50;
+    --primary-color: #4A4A4A;
+    --secondary-color: #BDBDBD;
+    --accent-color: #F44336;
     --surface-color: #FFFFFF;
-    --text-color: #333333;
-    --background-color: #F8F8F8;
-    --header-footer-background: #333333;
+    --text-color: #212121;
+    --background-color: #F5F5F5;
+    --header-footer-background: #212121;
     --header-footer-text: #FFFFFF;
 }
 
@@ -52,7 +51,7 @@ header {
 }
 
 header.scrolled {
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color);
     padding: 5px 0;
 }
 
@@ -85,7 +84,7 @@ header.scrolled {
 .nav-links a:hover,
 .social-icons a:hover,
 a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .navbar-toggle {
@@ -211,15 +210,15 @@ footer {
 }
 
 .social-icons a {
-    color: #fff;
+    color: var(--header-footer-text);
     text-decoration: none;
     font-size: 1.5em;
     transition: color 0.3s;
 }
 
 .hero {
-    background: linear-gradient(135deg, #87CEEB, #E0FFFF);
-    color: #fff;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--header-footer-text);
     text-align: center;
     padding: 100px 20px;
     animation: fadeIn 1s ease-in;
@@ -254,8 +253,8 @@ footer {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
+    color: var(--header-footer-text);
+    background-color: var(--accent-color);
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -264,7 +263,7 @@ footer {
 
 .hero a.btn:hover,
 .hero a.resume-btn:hover {
-    background-color: #0056b3;
+    background-color: darken(var(--accent-color), 10%);
 }
 
 .section {
@@ -324,7 +323,7 @@ footer {
 }
 
 .blog-article {
-    background: #fff;
+    background: var(--surface-color);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -363,7 +362,7 @@ footer {
 
 .project-card {
     background-color: #fff;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -387,8 +386,8 @@ footer {
 
 .project-card .btn,
 .project-card .btn-github {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: var(--primary-color);
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -403,7 +402,7 @@ footer {
 
 .project-card .btn:hover,
 .project-card .btn-github:hover {
-    background-color: rgba(255, 171, 64, 0.9);
+    background-color: var(--primary-color-dark);
 }
 
 /* Contact section */
@@ -411,7 +410,7 @@ footer {
 #contact {
     padding: 60px 0;
     background-color: var(--primary-color-dark);
-    color: var(--header-footer-text);
+    color: #fff;
     animation: fadeIn 1s ease-in;
 }
 
@@ -441,13 +440,13 @@ footer {
 .contact-info p,
 .contact-info a {
     margin-bottom: 10px;
-    color: var(--header-footer-text);
+    color: #fff;
     text-decoration: none;
     animation: fadeIn 1s ease-in;
 }
 
 .contact-info a:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .contact-form form {
@@ -457,7 +456,7 @@ footer {
 
 .contact-form label {
     margin-bottom: 5px;
-    color: var(--header-footer-text);
+    color: #fff;
     font-weight: bold;
 }
 
@@ -471,7 +470,7 @@ footer {
 }
 
 .contact-form input[type="submit"] {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -479,7 +478,7 @@ footer {
 }
 
 .contact-form input[type="submit"]:hover {
-    background-color: darken(var(--accent-color), 10%);
+    background-color: var(--primary-color-dark);
 }
 
 /* Keyframes for animations */
