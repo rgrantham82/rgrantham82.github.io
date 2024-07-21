@@ -10,6 +10,49 @@ layout: default
     margin: 0 auto;
     padding: 20px;
   }
+  
+  .content-wrapper h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .content-wrapper ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .content-wrapper ol {
+    margin-left: 20px;
+  }
+  
+  .content-wrapper .tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 4px;
+    font-size: 12px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .scroll-to-top.visible {
+    display: block;
+  }
 </style>
 
 <div class="content-wrapper">
@@ -32,7 +75,7 @@ layout: default
         <li><strong>Risk Tolerance</strong>: The risk tolerance level of the client.</li>
         <li><strong>Engagement Score</strong>: An engagement score for the client.</li>
      </ul>
-     <p>The dataset is sourced from a synthetic dataset designed to mimic real-world client data. For more details, visit the <a href="https://www.kaggle.com/code/robertgrantham/client-segmentation" target="_blank">accompanying Kaggle notebook</a>.</p>
+     <p>The dataset is sourced from a synthetic dataset designed to mimic real-world client data. For more details, visit the <a href="https://www.kaggle.com/code/robertgrantham/client-segmentation" target="_blank" rel="noopener noreferrer">accompanying Kaggle notebook</a>.</p>
   </section>
 
   <section id="methodology">
@@ -102,84 +145,104 @@ layout: default
      <p>The client segmentation analysis provides valuable insights into the different types of clients based on their investment behaviors and preferences. This information can be used to tailor marketing strategies, improve customer service, and develop personalized financial products that better meet the needs of different client segments.</p>
      <p>By understanding the unique characteristics and behaviors of each client segment, businesses can enhance their engagement and satisfaction, ultimately leading to increased loyalty and profitability.</p>
   </footer>
+  
+  <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
 </div>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-   const margin = {top: 20, right: 30, bottom: 40, left: 50};
-   const width = 800 - margin.left - margin.right;
-   const height = 600 - margin.top - margin.bottom;
+  // Scroll-to-top button functionality
+  document.addEventListener("DOMContentLoaded", function() {
+    const scrollToTopButton = document.querySelector(".scroll-to-top");
 
-   const svg = d3.select("#scatterplot")
-     .append("svg")
-     .attr("width", width + margin.left + margin.right)
-     .attr("height", height + margin.top + margin.bottom)
-     .append("g")
-     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    window.addEventListener("scroll", function() {
+      if (window.pageYOffset > 300) {
+        scrollToTopButton.classList.add("visible");
+      } else {
+        scrollToTopButton.classList.remove("visible");
+      }
+    });
 
-   d3.csv("/assets/files/synthetic_client_data.csv").then(data => {
-     data.forEach(d => {
-       d['Annual Income'] = +d['Annual Income'];
-       d['Investment Amount'] = +d['Investment Amount'];
-     });
+    scrollToTopButton.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
 
-     const x = d3.scaleLinear()
-       .domain(d3.extent(data, d => d['Annual Income']))
-       .range([0, width]);
+  // D3.js Scatterplot
+  const margin = {top: 20, right: 30, bottom: 40, left: 50};
+  const width = 800 - margin.left - margin.right;
+  const height = 600 - margin.top - margin.bottom;
 
-     const y = d3.scaleLinear()
-       .domain(d3.extent(data, d => d['Investment Amount']))
-       .range([height, 0]);
+  const svg = d3.select("#scatterplot")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-     const color = d3.scaleOrdinal()
-       .domain(["Low", "Medium", "High"])
-       .range(["#1f77b4", "#ff7f0e", "#2ca02c"]);
+  d3.csv("/assets/files/synthetic_client_data.csv").then(data => {
+    data.forEach(d => {
+      d['Annual Income'] = +d['Annual Income'];
+      d['Investment Amount'] = +d['Investment Amount'];
+    });
 
-     const tooltip = d3.select("body").append("div")
-       .attr("class", "tooltip")
-       .style("opacity", 0);
+    const x = d3.scaleLinear()
+      .domain(d3.extent(data, d => d['Annual Income']))
+      .range([0, width]);
 
-     svg.append("g")
-       .attr("transform", `translate(0,${height})`)
-       .call(d3.axisBottom(x))
-       .append("text")
-       .attr("class", "axis-label")
-       .attr("x", width / 2)
-       .attr("y", 30)
-       .style("text-anchor", "middle")
-       .text("Annual Income");
+    const y = d3.scaleLinear()
+      .domain(d3.extent(data, d => d['Investment Amount']))
+      .range([height, 0]);
 
-     svg.append("g")
-       .call(d3.axisLeft(y))
-       .append("text")
-       .attr("class", "axis-label")
-       .attr("x", -height / 2)
-       .attr("y", -margin.left)
-       .attr("dy", "1em")
-       .style("text-anchor", "middle")
-       .text("Investment Amount");
+    const color = d3.scaleOrdinal()
+      .domain(["Low", "Medium", "High"])
+      .range(["#1f77b4", "#ff7f0e", "#2ca02c"]);
 
-     svg.append("g")
-       .selectAll("dot")
-       .data(data)
-       .enter()
-       .append("circle")
-       .attr("cx", d => x(d['Annual Income']))
-       .attr("cy", d => y(d['Investment Amount']))
-       .attr("r", 5)
-       .style("fill", d => color(d['Investment Preference']))
-       .on("mouseover", (event, d) => {
-         tooltip.transition()
-           .duration(200)
-           .style("opacity", .9);
-         tooltip.html(`Income: ${d['Annual Income']}<br>Investment: ${d['Investment Amount']}`)
-           .style("left", (event.pageX + 5) + "px")
-           .style("top", (event.pageY - 28) + "px");
-       })
-       .on("mouseout", d => {
-         tooltip.transition()
-           .duration(500)
-           .style("opacity", 0);
-       });
-   });
+    const tooltip = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+    svg.append("g")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisBottom(x))
+      .append("text")
+      .attr("class", "axis-label")
+      .attr("x", width / 2)
+      .attr("y", 30)
+      .style("text-anchor", "middle")
+      .text("Annual Income");
+
+    svg.append("g")
+      .call(d3.axisLeft(y))
+      .append("text")
+      .attr("class", "axis-label")
+      .attr("x", -height / 2)
+      .attr("y", -margin.left)
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Investment Amount");
+
+    svg.append("g")
+      .selectAll("dot")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("cx", d => x(d['Annual Income']))
+      .attr("cy", d => y(d['Investment Amount']))
+      .attr("r", 5)
+      .style("fill", d => color(d['Investment Preference']))
+      .on("mouseover", (event, d) => {
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", .9);
+        tooltip.html(`Income: ${d['Annual Income']}<br>Investment: ${d['Investment Amount']}`)
+          .style("left", (event.pageX + 5) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", d => {
+        tooltip.transition()
+          .duration(500)
+          .style("opacity", 0);
+      });
+  });
 </script>
