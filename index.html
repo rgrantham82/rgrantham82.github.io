@@ -47,25 +47,26 @@ title: Home
   </section>
 
   <section id="skills" class="skills-section fade-in">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    <ul class="skills-list">
-      <li>SQL & Database Management</li>
-      <li>Machine Learning & AI</li>
-      <li>Data Visualization (Tableau, D3.js)</li>
-      <li>Predictive Analytics</li>
-      <li>Data Wrangling & Cleaning</li>
-      <li>Python & R Programming</li>
-      <li>Excel & Google Sheets</li>
-      <li>Project Management</li>
-      <li>Problem-Solving</li>
-      <li>Communication & Collaboration</li>
-    </ul>
-  </div>
-</section>
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <ul class="skills-list">
+        <li>SQL & Database Management</li>
+        <li>Machine Learning & AI</li>
+        <li>Data Visualization (Tableau, D3.js)</li>
+        <li>Predictive Analytics</li>
+        <li>Data Wrangling & Cleaning</li>
+        <li>Python & R Programming</li>
+        <li>Excel & Google Sheets</li>
+        <li>Project Management</li>
+        <li>Problem-Solving</li>
+        <li>Communication & Collaboration</li>
+      </ul>
+    </div>
+  </section>
 
   <section id="blog" class="blog-section fade-in">
-    <h2>Blog</h2> {% for post in site.posts %}
+    <h2>Blog</h2> 
+    {% for post in site.posts %}
     <article class="animate-on-scroll">
       <h3>
         <a href="{{ post.url }}">{{ post.title }}</a>
@@ -73,5 +74,24 @@ title: Home
       <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
     </article>
     {% endfor %}
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section fade-in">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/mbjnwpgb" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 </div>
