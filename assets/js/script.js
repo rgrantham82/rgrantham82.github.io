@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); // Stop observing once the element is visible
       }
     });
   }, { threshold: 0.1 });
@@ -25,9 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", event => {
-      event.preventDefault();
+      event.preventDefault(); // Prevent default anchor behavior
       const target = document.querySelector(anchor.getAttribute("href"));
-      target.scrollIntoView({ behavior: "smooth" });
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
   });
 
