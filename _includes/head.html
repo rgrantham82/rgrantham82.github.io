@@ -9,7 +9,7 @@
 <meta property="og:title" content="{{ page.title }} | Robert Grantham">
 <meta property="og:description" content="Robert Grantham's data analytics portfolio, showcasing skills in AI, predictive analytics, data visualization, and more.">
 <meta property="og:image" content="https://rgrantham82.github.io/assets/images/profile-image.jpg">
-<meta property="og:url" content="https://rgrantham82.github.io/{{ page.url }}">
+<meta property="og:url" content="https://rgrantham82.github.io{{ page.url }}">
 <meta property="og:type" content="website">
 <!-- Twitter Card Metadata -->
 <meta name="twitter:card" content="summary_large_image">
@@ -20,18 +20,8 @@
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <!-- Theme Color for Mobile Browsers -->
 <meta name="theme-color" content="#87CEEB">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-7WZFJ98W4K');
-</script>
 <!-- Google Fonts - Montserrat -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
 <noscript>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </noscript>
@@ -53,3 +43,14 @@
 <script defer src="/assets/js/script.js"></script>
 <!-- Web App Manifest -->
 <link rel="manifest" href="/manifest.json">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-7WZFJ98W4K');
+</script>
