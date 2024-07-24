@@ -12,27 +12,6 @@
 
 /* Global styles */
 
-/* Reset default browser styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Root variables */
-:root {
-    --primary-color: #87CEEB; /* Serene Sky Blue */
-    --secondary-color: #2C3E50; /* Dark Blue */
-    --accent-color: #FF6F61; /* Coral */
-    --surface-color: #FFFFFF;
-    --text-color: #212121;
-    --background-color: #F5F5F5;
-    --header-footer-background: #2C3E50;
-    --header-footer-text: #FFFFFF;
-}
-
-/* Typography and basic layout */
-
 body {
     font-family: Montserrat, sans-serif;
     line-height: 1.6;
