@@ -1,4 +1,4 @@
-/* Root variables */
+/* Root Variables */
 :root {
     --primary-color: #87CEEB; /* Serene Sky Blue */
     --secondary-color: #2C3E50; /* Dark Blue */
@@ -10,10 +10,9 @@
     --header-footer-text: #FFFFFF;
 }
 
-/* Global styles */
-
+/* Global Styles */
 body {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -27,8 +26,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header and navigation */
-
+/* Header and Navigation */
 header {
     padding: 10px 0;
     position: fixed;
@@ -50,15 +48,13 @@ header.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: padding 0.3s;
 }
 
 .nav-links {
     list-style-type: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
-    transition: transform 0.3s;
 }
 
 .nav-links li {
@@ -84,35 +80,15 @@ a:hover {
     cursor: pointer;
     padding: 10px;
     display: none;
-    /* Hidden by default, shown in media query */
 }
 
 .navbar-toggle i {
     font-size: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar-toggle {
-        display: none;
-        /* Hide toggle button on larger screens */
-    }
-
-    .nav-links {
-        display: flex;
-        align-items: center;
-    }
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .navbar-toggle {
         display: block;
-        /* Show toggle button on smaller screens */
     }
 
     .nav-links {
@@ -134,25 +110,12 @@ a:hover {
     .nav-links.active {
         transform: translateY(0);
     }
-
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .contact-info,
-    .contact-form {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
-    }
 }
 
-/* Main content areas */
-
+/* Main Content */
 main {
     margin-top: 70px;
-    /* Adjust according to header height */
     padding: 20px;
-    transition: margin-top 0.3s;
 }
 
 h2,
@@ -167,7 +130,6 @@ p {
 }
 
 /* Footer */
-
 footer {
     padding: 20px 0;
     background-color: var(--header-footer-background);
@@ -182,18 +144,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s, opacity 0.3s;
-    animation: slideInFromBottom 1s ease-in-out;
-    animation-fill-mode: both;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-    animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
 .social-icons li {
@@ -207,12 +163,12 @@ footer {
     transition: color 0.3s;
 }
 
+/* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--header-footer-text);
     text-align: center;
     padding: 100px 20px;
-    animation: fadeIn 1s ease-in;
 }
 
 .hero .container {
@@ -220,12 +176,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.hero .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    animation: slideInFromLeft 1s ease-in;
 }
 
 .hero h1 {
@@ -236,7 +186,6 @@ footer {
 .hero p {
     font-size: 1.5rem;
     margin: 20px 0 30px;
-    animation: slideInFromRight 1s ease-in;
 }
 
 .hero a.btn,
@@ -257,6 +206,7 @@ footer {
     background-color: darken(var(--accent-color), 10%);
 }
 
+/* Sections */
 .section {
     padding: 60px 20px;
     margin: 60px auto;
@@ -269,7 +219,6 @@ footer {
 .section.visible {
     opacity: 1;
     transform: translateY(0);
-    animation: fadeInUp 1s ease-in;
 }
 
 .about-container {
@@ -280,32 +229,30 @@ footer {
     text-align: center;
 }
 
-.about-container .about-image {
+.about-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--primary-color);
     transition: transform 0.3s, opacity 0.3s;
-    animation: zoomIn 1s ease-in;
 }
 
-.about-container .about-image:hover {
+.about-image:hover {
     transform: scale(1.1);
     opacity: 0.8;
 }
 
-.about-container .about-text {
+.about-text {
     max-width: 800px;
     margin-top: 20px;
     font-size: 1.1rem;
     color: var(--text-color);
-    animation: slideInFromBottom 1s ease-in;
 }
 
+/* Blog Section */
 #blog {
     padding: 60px 0;
-    animation: fadeIn 1s ease-in;
 }
 
 .blog-container {
@@ -320,7 +267,6 @@ footer {
     padding: 20px;
     margin: 20px 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: zoomIn 1s ease-in;
 }
 
 .blog-article:hover {
@@ -353,10 +299,9 @@ footer {
     color: var(--accent-color);
 }
 
-/* Projects section */
+/* Projects Section */
 #projects {
     padding: 60px 0;
-    animation: fadeIn 1s ease-in;
 }
 
 .projects-container {
@@ -372,7 +317,6 @@ footer {
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    animation: zoomIn 1s ease-in;
 }
 
 .project-card img {
@@ -397,251 +341,54 @@ footer {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
-    margin-bottom: 10px;
-    transition: background-color 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
+    transition: background-color 0.3s ease;
 }
 
 .project-card .btn:hover,
 .project-card .btn-github:hover {
-    background-color: var(--primary-color-dark);
+    background-color: darken(var(--primary-color), 10%);
 }
 
-/* New Sections */
-.services {
-    background: var(--primary-color);
-    color: var(--header-footer-text);
-    padding: 60px 0;
-    text-align: center;
-    animation: fadeIn 1s ease-in;
-}
-
-.services h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.service-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-card {
-    background: var(--surface-color);
-    color: var(--text-color);
-    width: 250px;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.testimonials {
-    background: var(--secondary-color);
-    color: var(--header-footer-text);
-    padding: 60px 0;
-    text-align: center;
-    animation: fadeIn 1s ease-in;
-}
-
-.testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.testimonial-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.testimonial-card {
-    background: var(--surface-color);
-    color: var(--text-color);
-    width: 250px;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.testimonial-card .testimonial-author {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: var(--primary-color);
-}
-
-.faq {
-    background: var(--background-color);
-    padding: 60px 0;
-    text-align: center;
-    animation: fadeIn 1s ease-in;
-}
-
-.faq h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    background: var(--surface-color);
-    color: var(--text-color);
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.faq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.faq-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 1rem;
-    line-height: 1.6;
-    display: none;
-    margin-top: 10px;
-}
-
-.faq-item.active p {
-    display: block;
-}
-
-.skills-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skills-list li {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skills-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
     }
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--header-footer-background);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
     }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
-@keyframes slideInFromRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromBottom {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
+    .nav-links.active {
         transform: translateY(0);
-        opacity: 1;
     }
-}
 
-@keyframes zoomIn {
-    from {
-        transform: scale(0.5);
-        opacity: 0;
+    .section {
+        padding: 40px 20px;
     }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    .hero h1 {
+        font-size: 2.5rem;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .hero a.btn,
+    .hero a.resume-btn {
+        font-size: 1rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
     }
 }
