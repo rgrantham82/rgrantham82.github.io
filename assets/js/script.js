@@ -1,53 +1,69 @@
 // Alpine.js data for project card flip
-Alpine.data("projectCard", () => ({
-  flipped: false,
-  toggle() {
-    this.flipped = !this.flipped;
-  }
-}));
+document.addEventListener("alpine:init", () => {
+  Alpine.data("projectCard", () => ({
+    flipped: false,
+    toggle() {
+      this.flipped = !this.flipped;
+    }
+  }));
+});
 
 // Wait for DOM content to load
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize IntersectionObserver
+  initializeIntersectionObserver();
+  // Initialize Smooth Scrolling for anchor links
+  initializeSmoothScrolling();
+  // Initialize Scroll-to-Top button
+  initializeScrollToTopButton();
+});
 
-  // IntersectionObserver for elements with animate-on-scroll class
+function initializeIntersectionObserver() {
   const elements = document.querySelectorAll(".animate-on-scroll");
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
+  
+  elements.forEach(element => observer.observe(element));
+
+  function handleIntersection(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // Stop observing once the element is visible
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }
+}
 
-  elements.forEach(element => observer.observe(element));
-
-  // Smooth scrolling for anchor links
+function initializeSmoothScrolling() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", event => {
-      event.preventDefault(); // Prevent default anchor behavior
+      event.preventDefault();
       const target = document.querySelector(anchor.getAttribute("href"));
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
       }
     });
   });
+}
 
-  // Scroll-to-top button functionality
+function initializeScrollToTopButton() {
   const scrollToTopButton = document.createElement("button");
   scrollToTopButton.classList.add("scroll-to-top");
   scrollToTopButton.innerHTML = "↑";
   document.body.appendChild(scrollToTopButton);
 
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", toggleScrollToTopButtonVisibility);
+  scrollToTopButton.addEventListener("click", scrollToTop);
+
+  function toggleScrollToTopButtonVisibility() {
     if (window.pageYOffset > 300) {
       scrollToTopButton.classList.add("visible");
     } else {
       scrollToTopButton.classList.remove("visible");
     }
-  });
+  }
 
-  scrollToTopButton.addEventListener("click", () => {
+  function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
+  }
+}
