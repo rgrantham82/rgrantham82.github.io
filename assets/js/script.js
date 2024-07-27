@@ -1,4 +1,3 @@
-// Alpine.js data for project card flip
 document.addEventListener("alpine:init", () => {
   Alpine.data("projectCard", () => ({
     flipped: false,
@@ -8,13 +7,9 @@ document.addEventListener("alpine:init", () => {
   }));
 });
 
-// Wait for DOM content to load
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize IntersectionObserver
   initializeIntersectionObserver();
-  // Initialize Smooth Scrolling for anchor links
   initializeSmoothScrolling();
-  // Initialize Scroll-to-Top button
   initializeScrollToTopButton();
 });
 
@@ -35,14 +30,22 @@ function initializeIntersectionObserver() {
 }
 
 function initializeSmoothScrolling() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", event => {
+  document.body.addEventListener('click', event => {
+    if (event.target.matches('a[href^="#"]')) {
       event.preventDefault();
-      const target = document.querySelector(anchor.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
+      const targetId = event.target.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        // Fallback for browsers that do not support smooth scrolling
+        if (!CSS.supports('scroll-behavior', 'smooth')) {
+          window.scroll({
+            top: targetElement.offsetTop,
+            behavior: "smooth"
+          });
+        }
       }
-    });
+    }
   });
 }
 
@@ -50,6 +53,7 @@ function initializeScrollToTopButton() {
   const scrollToTopButton = document.createElement("button");
   scrollToTopButton.classList.add("scroll-to-top");
   scrollToTopButton.innerHTML = "↑";
+  scrollToTopButton.setAttribute('aria-label', 'Scroll to top');
   document.body.appendChild(scrollToTopButton);
 
   window.addEventListener("scroll", toggleScrollToTopButtonVisibility);
@@ -65,5 +69,9 @@ function initializeScrollToTopButton() {
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    // Fallback for browsers that do not support smooth scrolling
+    if (!CSS.supports('scroll-behavior', 'smooth')) {
+      window.scroll(0, 0);
+    }
   }
 }
