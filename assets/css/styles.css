@@ -1,13 +1,12 @@
 /* Color variables */
 :root {
-    --primary-color: #87CEEB; /* Serene Sky Blue */
-    --secondary-color: #2C3E50; /* Dark Blue */
-    --accent-color: #FF6F61; /* Coral */
-    --surface-color: #FFFFFF;
-    --text-color: #212121;
-    --background-color: #F5F5F5;
-    --header-footer-background: #2C3E50;
-    --header-footer-text: #FFFFFF;
+  --primary-color: #00aaff;
+  --secondary-color: #002244;
+  --accent-color: #ffdd57;
+  --background-color: #f0f0f0;
+  --text-color: #333333;
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--accent-color);
 }
 
 /* Other variables */
