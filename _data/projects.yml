@@ -89,9 +89,7 @@ items:
     subtitle: Market Analysis and Strategy Development
     description: |-
       Performed client segmentation using clustering algorithms to identify distinct customer groups based on various attributes for an Austin investment firm. This involved analyzing synthetic client data, visualizing clusters, and developing targeted marketing and engagement strategies for each segment.
-      
-      The interactive D3.js chart allows for an in-depth exploration of client segments and their characteristics.
-    image: /assets/images/client-segmentation-plot.png
+    image: /assets/images/__results___7_2.png
     image_ratio: is-4by3
     link: /client-segmentation.html
     link_text: View Project
