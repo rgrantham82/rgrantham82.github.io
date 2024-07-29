@@ -27,44 +27,85 @@ body {
 /* Header Styles */
 header {
   background-color: #f8f9fa; /* Light gray background */
-  padding: 10px 20px; /* Reduced padding for less vertical space */
+  padding: 5px 0; /* Reduced padding for less vertical space */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 }
 
-header h1 {
-  margin: 0; /* Remove default margin */
-  font-size: 1.5em; /* Adjust font size as needed */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Horizontal padding */
+}
+
+.navbar-brand {
+  font-size: 1.5em;
   color: #333; /* Dark text color */
+  text-decoration: none;
 }
 
-header h2 {
-  margin: 5px 0 0; /* Reduced margin for subtitle */
-  font-size: 1em; /* Adjust font size as needed */
-  color: #666; /* Gray text color for subtitle */
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on smaller screens */
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-nav {
-  margin: 10px 0 0; /* Reduced margin for navigation */
+.navbar-toggle-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  display: block;
+  margin: 4px 0;
+  transition: all 0.3s;
 }
 
-nav ul {
-  padding: 0;
+.nav-links {
   list-style: none;
-  display: flex; /* Horizontal layout for navigation items */
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  margin-right: 15px; /* Space between navigation items */
+.nav-links li {
+  margin-left: 15px; /* Space between navigation items */
 }
 
-nav ul li a {
+.nav-links a {
   text-decoration: none;
   color: #007bff; /* Link color */
   font-weight: bold;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
   text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block; /* Show toggle button on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default, shown when toggle is active */
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f9fa;
+    position: absolute;
+    top: 50px; /* Adjust based on the height of the navbar */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Vertical spacing for items in mobile view */
+    text-align: center;
+  }
 }
 
 /* Additional global styles for content */
@@ -100,6 +141,22 @@ section h2, section h3, section h4 {
 
 .scroll-to-top.visible {
   display: block; /* Show when visible */
+}
+
+/* Additional global styles for content */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Adjust padding for overall content spacing */
+}
+
+/* Specific section styles */
+section {
+  margin-bottom: 20px; /* Adjust margin for spacing between sections */
+}
+
+section h2, section h3, section h4 {
+  margin: 10px 0; /* Adjust margin for section headings */
 }
 
 header,
