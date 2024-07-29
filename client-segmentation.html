@@ -9,62 +9,43 @@ layout: default
     <h2>Introduction</h2>
     <p>Client segmentation is a crucial process in data analytics that involves dividing a broad consumer or business market into sub-groups of consumers based on shared characteristics. This project aims to segment clients based on various attributes such as age, gender, annual income, investment amount, investment preference, transaction frequency, risk tolerance, and engagement score. The goal is to identify patterns and insights that can help in better understanding the client base and tailoring strategies accordingly.</p>
   </section>
+
   <section id="data-description">
     <h2>Data Description</h2>
     <p>The dataset used for this analysis includes the following attributes:</p>
     <ul>
-      <li>
-        <strong>Client ID</strong>: Unique identifier for each client.
-      </li>
-      <li>
-        <strong>Age</strong>: Age of the client.
-      </li>
-      <li>
-        <strong>Gender</strong>: Gender of the client.
-      </li>
-      <li>
-        <strong>Annual Income</strong>: Annual income of the client.
-      </li>
-      <li>
-        <strong>Investment Amount</strong>: Amount invested by the client.
-      </li>
-      <li>
-        <strong>Investment Preference</strong>: Type of investment preferred by the client.
-      </li>
-      <li>
-        <strong>Transaction Frequency</strong>: Number of transactions made by the client.
-      </li>
-      <li>
-        <strong>Risk Tolerance</strong>: The risk tolerance level of the client.
-      </li>
-      <li>
-        <strong>Engagement Score</strong>: An engagement score for the client.
-      </li>
+      <li><strong>Client ID</strong>: Unique identifier for each client.</li>
+      <li><strong>Age</strong>: Age of the client.</li>
+      <li><strong>Gender</strong>: Gender of the client.</li>
+      <li><strong>Annual Income</strong>: Annual income of the client.</li>
+      <li><strong>Investment Amount</strong>: Amount invested by the client.</li>
+      <li><strong>Investment Preference</strong>: Type of investment preferred by the client.</li>
+      <li><strong>Transaction Frequency</strong>: Number of transactions made by the client.</li>
+      <li><strong>Risk Tolerance</strong>: The risk tolerance level of the client.</li>
+      <li><strong>Engagement Score</strong>: An engagement score for the client.</li>
     </ul>
-    <p>The dataset is sourced from a synthetic dataset designed to mimic real-world client data. For more details, visit the <a href="https://www.kaggle.com/code/robertgrantham/client-segmentation" target="_blank" rel="noopener noreferrer">accompanying Kaggle notebook</a>. </p>
+    <p>The dataset is sourced from a synthetic dataset designed to mimic real-world client data. For more details, visit the <a href="https://www.kaggle.com/code/robertgrantham/client-segmentation" target="_blank" rel="noopener noreferrer">accompanying Kaggle notebook</a>.</p>
   </section>
+
   <section id="methodology">
     <h2>Methodology</h2>
     <p>The client segmentation analysis is performed using a combination of exploratory data analysis (EDA) and clustering techniques. Key steps include:</p>
     <ol>
-      <li>
-        <strong>Data Cleaning</strong>: Handling missing values, outliers, and ensuring data consistency.
-      </li>
-      <li>
-        <strong>Exploratory Data Analysis (EDA)</strong>: Understanding the distribution and relationships between different attributes.
-      </li>
-      <li>
-        <strong>Clustering</strong>: Applying clustering algorithms to segment clients into distinct groups.
-      </li>
+      <li><strong>Data Cleaning</strong>: Handling missing values, outliers, and ensuring data consistency.</li>
+      <li><strong>Exploratory Data Analysis (EDA)</strong>: Understanding the distribution and relationships between different attributes.</li>
+      <li><strong>Clustering</strong>: Applying clustering algorithms to segment clients into distinct groups.</li>
     </ol>
   </section>
+
   <section id="results">
     <h2>Results</h2>
     <p>The interactive chart below visualizes clients' investment amounts against their annual income, color-coded by their investment preference. This visualization helps in identifying clusters of clients with similar investment behaviors.</p>
     <div id="scatterplot"></div>
   </section>
+
   <section id="recommendations">
     <h2>Recommendations Based on Cluster Analysis</h2>
+
     <section id="cluster-0">
       <h3>Cluster 0: Mutual Funds Investors</h3>
       <h4>Characteristics:</h4>
@@ -78,30 +59,29 @@ layout: default
         <li>Investment Preference: 100% prefer mutual funds</li>
         <li>Risk Tolerance: Balanced distribution of low (33.43%) and medium (34.54%) risk tolerance</li>
       </ul>
+
       <h4>Recommendations:</h4>
       <ol>
-        <li>
-          <strong>Targeted Marketing Campaigns:</strong>
+        <li><strong>Targeted Marketing Campaigns:</strong>
           <ul>
             <li>Create marketing campaigns focused on mutual funds, highlighting the benefits and performance of various mutual fund options.</li>
             <li>Use personalized messaging that resonates with both male and female clients.</li>
           </ul>
         </li>
-        <li>
-          <strong>Educational Content:</strong>
+        <li><strong>Educational Content:</strong>
           <ul>
             <li>Develop and distribute educational content about mutual funds, including investment strategies, risk management, and long-term benefits.</li>
             <li>Host webinars and workshops to engage this cluster and increase their financial literacy.</li>
           </ul>
         </li>
-        <li>
-          <strong>Risk Management Tools:</strong>
+        <li><strong>Risk Management Tools:</strong>
           <ul>
             <li>Offer tools and resources to help clients manage their risk tolerance, such as risk assessment quizzes and personalized risk management plans.</li>
           </ul>
         </li>
       </ol>
     </section>
+
     <section id="cluster-1">
       <h3>Cluster 1: Stock Investors</h3>
       <h4>Characteristics:</h4>
@@ -115,29 +95,28 @@ layout: default
         <li>Investment Preference: 100% prefer stocks</li>
         <li>Risk Tolerance: Balanced distribution of low (33.39%) and medium (33.71%) risk tolerance</li>
       </ul>
+
       <h4>Recommendations:</h4>
       <ol>
-        <li>
-          <strong>Enhanced Trading Platform:</strong>
+        <li><strong>Enhanced Trading Platform:</strong>
           <ul>
             <li>Provide an enhanced trading platform with advanced tools and features for stock trading, such as real-time market data, advanced charting tools, and automated trading options.</li>
           </ul>
         </li>
-        <li>
-          <strong>Market Insights and Analysis:</strong>
+        <li><strong>Market Insights and Analysis:</strong>
           <ul>
             <li>Offer in-depth market insights and analysis, including stock market trends, expert opinions, and daily market summaries.</li>
             <li>Send regular newsletters with stock market updates and investment tips.</li>
           </ul>
         </li>
-        <li>
-          <strong>Loyalty Programs:</strong>
+        <li><strong>Loyalty Programs:</strong>
           <ul>
             <li>Implement loyalty programs to reward frequent traders with benefits such as reduced trading fees, priority customer support, and exclusive access to premium research reports.</li>
           </ul>
         </li>
       </ol>
     </section>
+
     <section id="cluster-2">
       <h3>Cluster 2: Real Estate and Other Investors</h3>
       <h4>Characteristics:</h4>
@@ -151,24 +130,22 @@ layout: default
         <li>Investment Preference: Mixed preference for real estate (49.75%) and other options</li>
         <li>Risk Tolerance: Slightly more inclined towards low (33.81%) than medium (32.10%) risk tolerance</li>
       </ul>
+
       <h4>Recommendations:</h4>
       <ol>
-        <li>
-          <strong>Diverse Investment Options:</strong>
+        <li><strong>Diverse Investment Options:</strong>
           <ul>
             <li>Highlight diverse investment options, including real estate, REITs, and alternative investments.</li>
             <li>Create tailored investment portfolios that include a mix of real estate and other asset classes to meet their preferences.</li>
           </ul>
         </li>
-        <li>
-          <strong>Engagement and Support:</strong>
+        <li><strong>Engagement and Support:</strong>
           <ul>
             <li>Maintain high engagement through personalized support, regular check-ins, and proactive advice on managing and growing their investments.</li>
             <li>Offer dedicated relationship managers to provide personalized investment advice and support.</li>
           </ul>
         </li>
-        <li>
-          <strong>Content and Resources:</strong>
+        <li><strong>Content and Resources:</strong>
           <ul>
             <li>Develop content that covers real estate investment strategies, market trends, and the benefits of diversifying into other asset classes.</li>
             <li>Provide detailed guides on real estate investment, including property evaluation, financing options, and market analysis.</li>
@@ -177,10 +154,12 @@ layout: default
       </ol>
     </section>
   </section>
+
   <section id="conclusion">
     <h2>Conclusion</h2>
     <p>The client segmentation analysis provides valuable insights into the different types of clients based on their investment behaviors and preferences. This information can be used to tailor marketing strategies, improve customer service, and develop personalized financial products that better meet the needs of different client segments.</p>
     <p>By understanding the unique characteristics and behaviors of each client segment, businesses can enhance their engagement and satisfaction, ultimately leading to increased loyalty and profitability.</p>
   </section>
+  
   <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
 </div>
