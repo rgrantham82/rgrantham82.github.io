@@ -24,25 +24,89 @@ body {
   padding: 20px;
 }
 
+/* Header Styles */
+header {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 10px 20px; /* Reduced padding for less vertical space */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+header h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Adjust font size as needed */
+  color: #333; /* Dark text color */
+}
+
+header h2 {
+  margin: 5px 0 0; /* Reduced margin for subtitle */
+  font-size: 1em; /* Adjust font size as needed */
+  color: #666; /* Gray text color for subtitle */
+}
+
+nav {
+  margin: 10px 0 0; /* Reduced margin for navigation */
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex; /* Horizontal layout for navigation items */
+}
+
+nav ul li {
+  margin-right: 15px; /* Space between navigation items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007bff; /* Link color */
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Additional global styles for content */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Adjust padding for overall content spacing */
+}
+
+/* Specific section styles */
+section {
+  margin-bottom: 20px; /* Adjust margin for spacing between sections */
+}
+
+section h2, section h3, section h4 {
+  margin: 10px 0; /* Adjust margin for section headings */
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  opacity: 0.8;
+}
+
+.scroll-to-top.visible {
+  display: block; /* Show when visible */
+}
+
 header,
 footer {
   background-color: var(--header-footer-background);
   color: var(--header-footer-text);
   transition: background-color 0.3s, padding 0.3s;
-}
-
-header {
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header.scrolled {
-  background-color: var(--primary-color);
-  padding: 5px 0;
 }
 
 .navbar {
