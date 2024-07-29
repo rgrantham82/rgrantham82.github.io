@@ -9,6 +9,38 @@
   --header-footer-text: #ffffff;
 }
 
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .content-wrapper h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .content-wrapper ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .content-wrapper ol {
+    margin-left: 20px;
+  }
+  
+  .content-wrapper .tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 4px;
+    font-size: 12px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
 footer,
 header {
   background-color: var(--header-footer-background);
