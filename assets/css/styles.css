@@ -11,7 +11,6 @@
 }
 
 /* Global styles */
-
 body {
     font-family: Montserrat, sans-serif;
     line-height: 1.6;
@@ -28,7 +27,6 @@ body {
 }
 
 /* Header and navigation */
-
 header {
     padding: 10px 0;
     position: fixed;
@@ -83,8 +81,7 @@ a:hover {
     border: none;
     cursor: pointer;
     padding: 10px;
-    display: none;
-    /* Hidden by default, shown in media query */
+    display: none; /* Hidden by default, shown in media query */
 }
 
 .navbar-toggle i {
@@ -99,8 +96,7 @@ a:hover {
     }
 
     .navbar-toggle {
-        display: none;
-        /* Hide toggle button on larger screens */
+        display: none; /* Hide toggle button on larger screens */
     }
 
     .nav-links {
@@ -111,8 +107,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .navbar-toggle {
-        display: block;
-        /* Show toggle button on smaller screens */
+        display: block; /* Show toggle button on smaller screens */
     }
 
     .nav-links {
@@ -147,10 +142,8 @@ a:hover {
 }
 
 /* Main content areas */
-
 main {
-    margin-top: 70px;
-    /* Adjust according to header height */
+    margin-top: 70px; /* Adjust according to header height */
     padding: 20px;
     transition: margin-top 0.3s;
 }
@@ -167,7 +160,6 @@ p {
 }
 
 /* Footer */
-
 footer {
     padding: 20px 0;
     background-color: var(--header-footer-background);
@@ -207,12 +199,26 @@ footer {
     transition: color 0.3s;
 }
 
+/* Hero Section with Left Fade-In Animation */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-image: url('{{ site.baseurl }}/assets/images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--header-footer-text);
     text-align: center;
     padding: 100px 20px;
-    animation: fadeIn 1s ease-in;
+    animation: slideInFromLeft 1.5s ease-out;
 }
 
 .hero .container {
@@ -222,39 +228,16 @@ footer {
     flex-direction: column;
 }
 
-.hero .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    animation: slideInFromLeft 1s ease-in;
-}
-
 .hero h1 {
     font-size: 3rem;
     margin: 0;
+    animation: slideInFromLeft 1.5s ease-out;
 }
 
 .hero p {
     font-size: 1.5rem;
     margin: 20px 0 30px;
-    animation: slideInFromRight 1s ease-in;
-}
-
-.hero a.btn,
-.hero a.resume-btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    color: var(--header-footer-text);
-    background-color: var(--accent-color);
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.hero a.btn:hover,
-.hero a.resume-btn:hover {
-    background-color: darken(var(--accent-color), 10%);
+    animation: slideInFromLeft 2s ease-out;
 }
 
 .section {
