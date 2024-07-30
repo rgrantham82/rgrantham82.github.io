@@ -246,7 +246,7 @@ section h4 {
 	animation: fadeIn 1s ease-in;
 }
 
-.blog-container .about-image {
+.author-details .about-image {
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
