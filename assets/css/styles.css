@@ -235,9 +235,14 @@ section h2, section h3, section h4 {
   animation: fadeIn 1s ease-in;
 }
 
-.blog-container {
-  max-width: 800px;
-  margin: 0 auto;
+.blog-container .about-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  transition: transform 0.3s, opacity 0.3s;
+  animation: zoomIn 1s ease-in;
 }
 
 .blog-article {
