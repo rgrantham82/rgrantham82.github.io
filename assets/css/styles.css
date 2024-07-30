@@ -285,6 +285,29 @@ section h2, section h3, section h4 {
   color: var(--accent-color);
 }
 
+.author-info {
+    margin-top: 20px;
+  }
+
+  .author-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    transition: transform 0.3s, opacity 0.3s;
+    animation: zoomIn 1s ease-in;
+  }
+
+  .comments-section {
+    margin-top: 40px;
+  }
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
