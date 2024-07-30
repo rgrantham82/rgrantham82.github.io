@@ -241,6 +241,52 @@ section h4 {
 }
 
 /* Blog Section */
+/* General content styling for blog posts */
+.blog-post h2, .blog-post h3, .blog-post h4 {
+  text-align: center; /* Center align headers */
+}
+
+.blog-post p, .blog-post ul, .blog-post ol, .blog-post pre, .blog-post code {
+  text-align: left; /* Left align paragraphs, lists, and code */
+  margin-left: 20px; /* Indent left for readability */
+}
+
+.blog-post pre {
+  background-color: #f8f8f8; /* Light background for code blocks */
+  border-left: 3px solid var(--primary-color); /* Highlight left border */
+  padding: 10px;
+  overflow-x: auto; /* Ensure long lines are scrollable */
+}
+
+.blog-post code {
+  background-color: #f0f0f0; /* Slightly darker background for inline code */
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+/* Remove left margin for first-level list items */
+.blog-post ul, .blog-post ol {
+  margin-left: 0;
+  padding-left: 20px; /* Add padding for inner list items */
+}
+
+/* Adjust margins and padding for nested lists */
+.blog-post ul ul, .blog-post ol ol,
+.blog-post ul ol, .blog-post ol ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* Optional: Styling for step-by-step instructions */
+.blog-post .step {
+  margin-left: 0; /* Remove margin for step lists */
+  padding-left: 20px; /* Add padding for better readability */
+  list-style-type: decimal; /* Use decimal numbers for steps */
+}
+
+
+
 #blog {
 	padding: 60px 0;
 	animation: fadeIn 1s ease-in;
