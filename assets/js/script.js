@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+  initializeSmoothScrolling();
+});
+
+function initializeSmoothScrolling() {
+  document.body.addEventListener('click', event => {
+    if (event.target.matches('a[href^="#"]')) {
+      event.preventDefault();
+      const targetId = event.target.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    }
+  });
+}
+
+
 document.addEventListener("alpine:init", () => {
     Alpine.data("projectCard", () => ({
         flipped: false,
