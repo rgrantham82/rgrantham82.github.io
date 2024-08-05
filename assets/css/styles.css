@@ -80,6 +80,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
     background-color: #87ceeb; /* Serene sky blue */
     color: white;
@@ -87,23 +88,31 @@ header nav {
     padding: 0 20px;
 }
 
-#hero .hero-content {
+.hero-content {
     max-width: 600px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 #hero h1 {
     font-size: 3rem;
-    margin: 0;
+    margin: 1rem 0 0.5rem;
     font-weight: 700;
 }
 
 #hero p {
     font-size: 1.5rem;
-    margin: 20px 0 40px;
+    margin: 0.5rem 0 2rem;
     font-weight: 400;
 }
 
-#hero .cta-button {
+.cta-button {
     display: inline-block;
     padding: 15px 30px;
     font-size: 1.25rem;
@@ -115,8 +124,37 @@ header nav {
     margin: 10px;
 }
 
-#hero .cta-button:hover {
+.cta-button.secondary {
+    background-color: #555;
+    color: white;
+}
+
+.cta-button:hover {
     background-color: #f0f0f0;
+}
+
+.cta-button.secondary:hover {
+    background-color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer a {
+    color: #87ceeb;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Scroll-to-Top Button */
@@ -267,52 +305,6 @@ header nav {
 #blog h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-}
-
-/* Footer Styles */
-footer {
-    background: #f8f9fa;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-content p {
-    margin: 0;
-    font-size: 14px;
-    color: #6c757d;
-}
-
-.social-icons {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons li {
-    display: inline-block;
-}
-
-.social-icons a {
-    color: #6c757d;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #007bff;
-}
-
-.certification-badge {
-    margin-top: 10px;
-    max-width: 150px;
 }
 
 /* Contact Section */
