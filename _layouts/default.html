@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head> {% include head.html %} </head>
-  <body> {% include header.html %} {% if page.title != "Blog" %} {% include hero.html %} {% endif %} <main role="main" class="container">
+  <body> {% include header.html %} {% if page.title != "Blog" %} {% include hero.html %} {% endif %} <main role="main">
       {{ content }}
-    </main> {% include footer.html %} </body>
+    </main> {% include footer.html %}
+  </body>
 </html>
