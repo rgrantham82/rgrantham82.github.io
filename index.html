@@ -4,8 +4,8 @@ title: Home
 ---
 
 <section id="about" class="container">
-  <div class="about-content">
-    <img src="/assets/images/profile-image.jpg" alt="Robert Grantham" class="profile-photo">
+  <div class="about-container">
+    <img src="/assets/images/profile-image.jpg" alt="Robert Grantham" class="about-image">
     <h2>About Me</h2>
     <p>Hi, I'm Robert Grantham, a dedicated and passionate data analyst with a strong background in AI, predictive analytics, and data visualization. With a Bachelor's degree in History from the University of Southern Mississippi and over six years of experience in loss mitigation and content review, I have honed my analytical skills and developed a keen eye for detail.</p>
     <p>My journey into data analytics began in 2020, and since then, I have worked on various projects involving SQL, machine learning, and data visualization. My goal is to leverage data to drive meaningful insights and help organizations make informed decisions.</p>
@@ -26,6 +26,19 @@ title: Home
       <p>{{ project.subtitle }}</p>
       <p>{{ project.description | markdownify }}</p>
       <a href="{{ project.link }}" class="cta-button">{{ project.link_text }}</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="blog" class="container">
+  <h2>Blog</h2>
+  <div class="blog-list">
+    {% for post in site.posts %}
+    <div class="blog-post">
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url }}" class="cta-button">Read More</a>
     </div>
     {% endfor %}
   </div>
