@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<section id="about">
+<section id="about" class="container">
   <div class="about-content">
     <img src="/assets/images/profile-image.jpg" alt="Robert Grantham" class="profile-photo">
     <h2>About Me</h2>
@@ -13,9 +13,12 @@ title: Home
     <p>Currently residing in Austin, TX, I am actively seeking full-time employment as a data analyst. I am committed to making a positive impact through data and look forward to contributing my expertise to a forward-thinking organization.</p>
   </div>
 </section>
-<section id="projects">
+
+<section id="projects" class="container">
   <h2>Projects</h2>
-  <div class="project-list"> {% for project in site.data.projects.items %} <div class="project-item">
+  <div class="project-list">
+    {% for project in site.data.projects.items %}
+    <div class="project-item">
       <img src="{{ project.image }}" alt="{{ project.title }}" class="{{ project.image_ratio }}">
       <h3>
         <a href="{{ project.link }}">{{ project.title }}</a>
@@ -23,9 +26,12 @@ title: Home
       <p>{{ project.subtitle }}</p>
       <p>{{ project.description | markdownify }}</p>
       <a href="{{ project.link }}" class="cta-button">{{ project.link_text }}</a>
-    </div> {% endfor %} </div>
+    </div>
+    {% endfor %}
+  </div>
 </section>
-<section id="contact">
+
+<section id="contact" class="container">
   <h2>Contact Me</h2>
   <form action="mailto:robertgrantham40@gmail.com" method="post" enctype="text/plain">
     <input type="text" name="name" placeholder="Name">
