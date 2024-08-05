@@ -185,6 +185,21 @@ header nav ul li a {
     }
 }
 
+/* Certifications Section */
+#certifications {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#certifications h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.certification-badge {
+    display: inline-block;
+}
+
 /* Projects Section */
 #projects {
     padding: 2rem 1rem;
@@ -236,32 +251,48 @@ header nav ul li a {
 
 /* Footer Styles */
 footer {
-    background-color: #1a73e8;
-    padding: 1rem;
+    background: #f8f9fa;
+    padding: 20px 0;
     text-align: center;
-    color: #fff;
 }
 
-footer .container {
+.footer-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-footer ul {
-    list-style-type: none;
-    padding: 0;
+.footer-content p {
     margin: 0;
+    font-size: 14px;
+    color: #6c757d;
 }
 
-footer ul li {
-    display: inline;
-    margin: 0 0.5rem;
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    gap: 15px;
 }
 
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    color: #6c757d;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.certification-badge {
+    margin-top: 10px;
+    max-width: 150px;
 }
 
 /* Contact Section */
