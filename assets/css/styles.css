@@ -27,13 +27,6 @@ img {
 }
 
 /* Container Styles */
-.content-wrapper {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
-	text-align: center;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -77,14 +70,12 @@ header nav ul li a {
     text-align: center;
 }
 
-.about-image {
+#hero .profile-photo {
+    border-radius: 50%;
     width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 5px solid var(--primary-color);
-	transition: transform 0.3s, opacity 0.3s;
-	animation: zoomIn 1s ease-in;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 #hero h1 {
@@ -146,6 +137,7 @@ header nav ul li a {
     justify-content: center;
     flex-direction: column;
     padding: 60px 20px;
+    text-align: center;
 }
 
 .about-container .about-image {
