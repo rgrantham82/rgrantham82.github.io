@@ -13,24 +13,21 @@ title: Home
     <p>Currently residing in Austin, TX, I am actively seeking full-time employment as a data analyst. I am committed to making a positive impact through data and look forward to contributing my expertise to a forward-thinking organization.</p>
   </div>
   <div class="certification-badge">
-  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ef5f54a2-e560-47af-a057-4919c2945665" data-share-badge-host="https://www.credly.com"></div>
-  <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-</div>
-<style>
-  .certification-badge {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    max-width: 150px;
-  }
-</style>
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ef5f54a2-e560-47af-a057-4919c2945665" data-share-badge-host="https://www.credly.com"></div>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  </div>
+  <style>
+    .certification-badge {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      max-width: 150px;
+    }
+  </style>
 </section>
-
 <section id="projects" class="container">
   <h2>Projects</h2>
-  <div class="project-list">
-    {% for project in site.data.projects.items %}
-    <div class="project-item">
+  <div class="project-list"> {% for project in site.data.projects.items %} <div class="project-item">
       <img src="{{ project.image }}" alt="{{ project.title }}" class="{{ project.image_ratio }}">
       <h3>
         <a href="{{ project.link }}">{{ project.title }}</a>
@@ -38,24 +35,18 @@ title: Home
       <p>{{ project.subtitle }}</p>
       <p>{{ project.description | markdownify }}</p>
       <a href="{{ project.link }}" class="cta-button">{{ project.link_text }}</a>
-    </div>
-    {% endfor %}
-  </div>
+    </div> {% endfor %} </div>
 </section>
-
 <section id="blog" class="container">
   <h2>Blog</h2>
-  <div class="blog-list">
-    {% for post in site.posts %}
-    <div class="blog-post">
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <div class="blog-list"> {% for post in site.posts %} <div class="blog-post">
+      <h3>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
       <p>{{ post.excerpt }}</p>
       <a href="{{ post.url }}" class="cta-button">Read More</a>
-    </div>
-    {% endfor %}
-  </div>
+    </div> {% endfor %} </div>
 </section>
-
 <section id="contact" class="container">
   <h2>Contact Me</h2>
   <form action="mailto:robertgrantham40@gmail.com" method="post" enctype="text/plain">
