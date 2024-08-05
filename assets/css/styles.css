@@ -21,6 +21,16 @@ img {
 	height: auto;
 }
 
+.about-container .about-image {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 5px solid var(--primary-color);
+	transition: transform 0.3s, opacity 0.3s;
+	animation: zoomIn 1s ease-in;
+}
+
 /* Header Styles */
 header {
 	background-color: #1a73e8;
@@ -238,3 +248,20 @@ footer ul li a:hover {
 		font-size: 1.5rem;
 	}
 }
+
+.content-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+section h2,
+section h3,
+section h4 {
+	margin: 10px 0;
+
