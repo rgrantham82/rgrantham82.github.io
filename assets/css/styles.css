@@ -27,6 +27,13 @@ img {
 }
 
 /* Container Styles */
+.content-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -71,11 +78,13 @@ header nav ul li a {
 }
 
 #hero .profile-photo {
-    border-radius: 50%;
     width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 1rem;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 5px solid var(--primary-color);
+	transition: transform 0.3s, opacity 0.3s;
+	animation: zoomIn 1s ease-in;
 }
 
 #hero h1 {
