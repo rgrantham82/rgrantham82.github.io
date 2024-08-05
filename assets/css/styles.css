@@ -35,80 +35,88 @@ img {
 
 /* Header Styles */
 header {
-    background-color: #1a73e8;
-    padding: 1rem 0;
-    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
 }
 
 header nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header nav ul {
+.nav-left {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-right ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-header nav ul li {
-    margin: 0 1rem;
+.nav-right li {
+    margin-left: 20px;
 }
 
-header nav ul li a {
-    color: #fff;
+.nav-right a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Hero Section Styles */
-#hero {
-    background-color: #e3f2fd;
-    padding: 2rem 0;
-    text-align: center;
+.nav-right a:hover {
+    text-decoration: underline;
 }
 
-#hero .profile-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 1rem;
+/* Hero Section Styles */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #87ceeb; /* Serene sky blue */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#hero .hero-content {
+    max-width: 600px;
 }
 
 #hero h1 {
-    margin: 1rem 0 0.5rem 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
 }
 
 #hero p {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.5rem;
+    margin: 20px 0 40px;
+    font-weight: 400;
 }
 
 #hero .cta-button {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #1a73e8;
-    color: #fff;
-    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    color: #87ceeb;
+    background-color: white;
     border-radius: 5px;
-}
-
-#hero .cta-button.secondary {
-    background-color: #555;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 10px;
 }
 
 #hero .cta-button:hover {
-    background-color: #1558b0;
-}
-
-#hero .cta-button.secondary:hover {
-    background-color: #333;
+    background-color: #f0f0f0;
 }
 
 /* Scroll-to-Top Button */
