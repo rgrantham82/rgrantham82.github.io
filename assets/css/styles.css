@@ -250,6 +250,17 @@ header nav ul li a {
     margin-bottom: 1rem;
 }
 
+/* Blog Section */
+#blog {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#blog h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
 /* Footer Styles */
 footer {
     background: #f8f9fa;
@@ -362,6 +373,7 @@ footer {
 
     #projects h2,
     #about h2,
+    #blog h2,
     #contact h2 {
         font-size: 1.5rem;
     }
