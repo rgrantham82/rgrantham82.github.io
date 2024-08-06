@@ -38,6 +38,11 @@ header {
     background-color: #333;
     color: white;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 header nav {
@@ -83,18 +88,11 @@ header nav {
     color: white;
     text-align: center;
     padding: 0 20px;
+    margin-top: 60px; /* Adjust to avoid content being hidden behind the fixed header */
 }
 
 .hero-content {
     max-width: 600px;
-}
-
-.profile-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 1rem;
 }
 
 #hero h1 {
@@ -227,21 +225,6 @@ footer a:hover {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-/* Certifications Section */
-#certifications {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-#certifications h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.certification-badge {
-    display: inline-block;
 }
 
 /* Projects Section */
