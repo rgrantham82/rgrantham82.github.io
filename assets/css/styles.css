@@ -26,11 +26,43 @@ img {
     height: auto;
 }
 
-/* Container Styles */
+/* General Container Styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+/* Blog Section Styles */
+.blog-section {
+    padding: 2rem 0;
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.author-info {
+    margin-top: 20px;
+}
+
+.author-details {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.comments-section {
+    margin-top: 40px;
 }
 
 /* Header Styles */
