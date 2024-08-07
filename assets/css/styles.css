@@ -86,6 +86,20 @@ header .nav-right a {
     margin-top: 60px; /* Adjust to avoid content being hidden behind fixed header */
 }
 
+/* Hero Section Styles */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #87ceeb; /* Serene sky blue */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 60px; /* Adjust to avoid content being hidden behind fixed header */
+}
+
 .hero-content {
     max-width: 600px;
 }
