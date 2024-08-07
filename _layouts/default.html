@@ -5,7 +5,7 @@
 </head>
 <body>
   {% include header.html %}
-  {% if page.title != "Home" %}
+  {% if page.title == "Home" %}
     {% include hero.html %}
   {% endif %}
   <main role="main">
