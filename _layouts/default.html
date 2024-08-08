@@ -1,37 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% include head.html %}
-</head>
-<body>
-  {% include header.html %}
-  {% if page.title == "Home" %}
-    {% include hero.html %}
-  {% endif %}
-  <main role="main">
-    {{ content }}
-  </main>
-  {% include footer.html %}
-  <!-- Smooth Scrolling Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      initializeSmoothScrolling();
-    });
-
-    function initializeSmoothScrolling() {
-      document.body.addEventListener('click', event => {
-        if (event.target.matches('a[href^="#"]')) {
-          event.preventDefault();
-          const targetId = event.target.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: "smooth"
-            });
-          }
-        }
-      });
-    }
-  </script>
-</body>
-</html>
+  <head> {% include head.html %} </head>
+  <body> {% include header.html %} {% if page.title == "Home" %} {% include hero.html %} {% endif %} <main role="main">
+      {{ content }}
+    </main> {% include footer.html %}
