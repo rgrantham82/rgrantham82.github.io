@@ -42,10 +42,21 @@ img {
 }
 
 .blog-post {
+    max-width: 800px; /* Ensuring the content width is constrained */
+    margin: 2rem auto; /* Adding vertical margin for better spacing */
+    text-align: left;
+    padding: 1rem; /* Adding padding for better readability */
+    background: white; /* Adding background color to separate content */
+    border-radius: 8px; /* Adding rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding subtle shadow for depth */
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
+    padding: 0 15px;
 }
+
 
 .author-info {
     margin-top: 20px;
