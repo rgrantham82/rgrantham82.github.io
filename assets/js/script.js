@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeSmoothScrolling();
     initializeIntersectionObserver();
     initializeScrollToTopButton();
+    initializeLazyLoading();
+    initializeDarkModeToggle();
+    initializeLoadingSpinner();
 });
 
 document.addEventListener("alpine:init", () => {
@@ -101,4 +104,60 @@ function scrollToTop() {
     if (!CSS.supports("scroll-behavior", "smooth")) {
         window.scroll(0, 0);
     }
+}
+
+/**
+ * Initialize lazy loading for images
+ */
+function initializeLazyLoading() {
+    const lazyImages = document.querySelectorAll("img.lazy");
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove("lazy");
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => observer.observe(img));
+}
+
+/**
+ * Initialize dark mode toggle
+ */
+function initializeDarkModeToggle() {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme == "dark") {
+        document.body.classList.toggle("dark-theme");
+    } else if (currentTheme == "light") {
+        document.body.classList.toggle("light-theme");
+    }
+
+    toggleButton.addEventListener("click", () => {
+        let theme;
+        if (prefersDarkScheme.matches) {
+            document.body.classList.toggle("light-theme");
+            theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+        } else {
+            document.body.classList.toggle("dark-theme");
+            theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+        }
+        localStorage.setItem("theme", theme);
+    });
+}
+
+/**
+ * Initialize loading spinner
+ */
+function initializeLoadingSpinner() {
+    document.body.classList.add('loading');
+    window.addEventListener("load", () => {
+        document.body.classList.remove('loading');
+    });
 }
