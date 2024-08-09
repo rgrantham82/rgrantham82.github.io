@@ -20,7 +20,7 @@ canonical_url: https://rgrantham82.github.io/2024/08/08/fatal-police-shootings-a
 
 In this post, we dive into a detailed statistical analysis of fatal police shootings across the United States, focusing on age distribution, gender differences, and the relationship between race and armed status. This analysis is part of an ongoing effort to understand the patterns and trends in these tragic incidents.
 
-![Fig. 1](/assets/images/2024-08-08/__results___11_1.png)
+![Fig. 1](/assets/images/2024-08-08/visualizations.png)
 
 Several key visualizations have been generated to support this analysis:
 
