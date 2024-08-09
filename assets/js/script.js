@@ -42,12 +42,12 @@ function initializeIntersectionObserver() {
         threshold: 0.1
     };
     const observer = new IntersectionObserver(handleIntersection, options);
-    const elements = document.querySelectorAll(".animate-on-scroll");
+    const elements = document.querySelectorAll(".fade-in, .fade-in-up");
     elements.forEach(element => observer.observe(element));
 }
 
 /**
- * Handle intersection events
+ * Handle intersection events for animations
  */
 function handleIntersection(entries, observer) {
     entries.forEach(entry => {
@@ -126,19 +126,21 @@ function initializeLazyLoading() {
 }
 
 /**
- * Initialize dark mode toggle
+ * Initialize dark mode toggle with system preference support
  */
 function initializeDarkModeToggle() {
     const toggleButton = document.getElementById("dark-mode-toggle");
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
+    // Apply saved theme or system preference
     const currentTheme = localStorage.getItem("theme");
-    if (currentTheme == "dark") {
-        document.body.classList.toggle("dark-theme");
-    } else if (currentTheme == "light") {
-        document.body.classList.toggle("light-theme");
+    if (currentTheme) {
+        document.body.classList.add(currentTheme === "dark" ? "dark-theme" : "light-theme");
+    } else if (prefersDarkScheme.matches) {
+        document.body.classList.add("dark-theme");
     }
 
+    // Toggle dark mode on button click
     toggleButton.addEventListener("click", () => {
         let theme;
         if (prefersDarkScheme.matches) {
@@ -153,11 +155,16 @@ function initializeDarkModeToggle() {
 }
 
 /**
- * Initialize loading spinner
+ * Initialize loading spinner with timeout for slower connections
  */
 function initializeLoadingSpinner() {
     document.body.classList.add('loading');
     window.addEventListener("load", () => {
         document.body.classList.remove('loading');
     });
+
+    // Fallback timeout to remove spinner after a set time
+    setTimeout(() => {
+        document.body.classList.remove('loading');
+    }, 5000);
 }
