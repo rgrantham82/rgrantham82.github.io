@@ -1,9 +1,9 @@
 ---
 layout: blog
 title:  "Exploring Patterns in Fatal Police Shootings: An In-Depth Statistical Analysis"
-date:   2024-08-08
+date:   2024-08-09
 description: A comprehensive analysis of age distribution, gender differences, and racial associations in fatal police shootings across the United States.
-image: /assets/images/2024-08-08.png
+image: /assets/images/2024-08-09.png
 tags: data analysis, police shootings, statistical analysis  
 comments: true
 published: true
