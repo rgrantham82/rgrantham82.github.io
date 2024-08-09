@@ -328,6 +328,64 @@ img {
     background-color: #1558b0;
 }
 
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .nav-left {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header .nav-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-right li {
+    margin: 0;
+}
+
+header .nav-right a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header .nav-right a:hover {
+    color: var(--primary-color);
+}
+
+#dark-mode-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    color: var(--primary-color);
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;
