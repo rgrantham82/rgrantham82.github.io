@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head> {% include head.html %} </head>
-  <body> {% include header.html %} {% if page.title == "Home" %} {% include hero.html %} {% endif %} <main role="main">
+  <body>
+    {% include header.html %}
+    {% if page.title == "Home" %}
+      {% include hero.html %}
+    {% endif %}
+    <main role="main">
       {{ content }}
-    </main> {% include footer.html %}
+    </main>
+    {% include footer.html %}
+    
+    <!-- Include the JavaScript for animations and functionality -->
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
