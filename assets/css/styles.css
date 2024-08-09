@@ -37,7 +37,7 @@ img {
     padding: 0 15px;
 }
 
-/* Bounce Animation for Hero Section */
+/* Animation: Bounce-In for Hero Section */
 #hero {
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ img {
     }
 }
 
-/* Fade-In Up for About Section */
+/* Animation: Fade-In Up for About Section */
 .fade-in-up {
     opacity: 0;
     transform: translateY(20px);
@@ -76,7 +76,7 @@ img {
     transform: translateY(0);
 }
 
-/* Scale-Up for Projects */
+/* Animation: Scale-Up for Project Items */
 .scale-up {
     opacity: 0;
     transform: scale(0.9);
@@ -88,7 +88,7 @@ img {
     transform: scale(1);
 }
 
-/* Typewriter Effect for Blog Section */
+/* Animation: Typewriter Effect for Blog Section Title */
 .typewriter h2 {
     overflow: hidden;
     border-right: .15em solid var(--secondary-color);
@@ -108,7 +108,7 @@ img {
     50% { border-color: var(--secondary-color); }
 }
 
-/* Pulse Effect for CTA Buttons */
+/* Animation: Pulse Effect for CTA Buttons */
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
@@ -139,7 +139,7 @@ img {
     }
 }
 
-/* Shake Animation for Contact Form */
+/* Animation: Shake for Contact Form Validation */
 .shake {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
@@ -159,7 +159,7 @@ img {
     }
 }
 
-/* General Styles for About Section */
+/* About Section Styles */
 .about-container {
     display: flex;
     align-items: center;
@@ -190,7 +190,7 @@ img {
     line-height: 1.6;
 }
 
-/* Styles for Projects Section */
+/* Projects Section Styles */
 #projects {
     padding: 2rem 1rem;
     text-align: center;
@@ -240,7 +240,7 @@ img {
     margin-bottom: 10px;
 }
 
-/* Styles for Blog Section */
+/* Blog Section Styles */
 #blog {
     padding: 2rem 1rem;
     text-align: center;
@@ -287,7 +287,7 @@ img {
     margin-top: 10px;
 }
 
-/* Styles for Contact Section */
+/* Contact Section Styles */
 #contact {
     padding: 2rem 1rem;
     background-color: #f1f1f1;
