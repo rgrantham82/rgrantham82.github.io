@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<section id="about" class="container">
+<section id="about" class="container fade-in-up">
   <div class="about-container">
     <img src="/assets/images/profile-image.jpg" alt="Robert Grantham" class="profile-photo">
     <h2>About Me</h2>
@@ -14,11 +14,11 @@ title: Home
   </div>
 </section>
 
-<section id="projects" class="container">
+<section id="projects" class="container fade-in-up">
   <h2>Projects</h2>
   <div class="project-list">
     {% for project in site.data.projects.items %}
-    <div class="project-item">
+    <div class="project-item fade-in">
       <img src="{{ project.image }}" alt="{{ project.title }}" class="{{ project.image_ratio }}">
       <h3>
         <a href="{{ project.link }}">{{ project.title }}</a>
@@ -31,11 +31,11 @@ title: Home
   </div>
 </section>
 
-<section id="blog" class="container">
+<section id="blog" class="container fade-in-up">
   <h2>Blog</h2>
   <div class="blog-list">
     {% for post in site.posts %}
-    <div class="blog-post">
+    <div class="blog-post fade-in">
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       <p>{{ post.excerpt }}</p>
       <a href="{{ post.url }}" class="cta-button">Read More</a>
@@ -44,7 +44,7 @@ title: Home
   </div>
 </section>
 
-<section id="contact" class="container">
+<section id="contact" class="container fade-in-up">
   <h2>Contact Me</h2>
   <form action="mailto:robertgrantham40@gmail.com" method="post" enctype="text/plain">
     <input type="text" name="name" placeholder="Name">
