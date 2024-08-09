@@ -42,21 +42,20 @@ img {
 }
 
 .blog-post {
-    max-width: 800px; /* Ensuring the content width is constrained */
-    margin: 2rem auto; /* Adding vertical margin for better spacing */
+    max-width: 800px;
+    margin: 2rem auto;
     text-align: left;
-    padding: 1rem; /* Adding padding for better readability */
-    background: white; /* Adding background color to separate content */
-    border-radius: 8px; /* Adding rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding subtle shadow for depth */
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-
 
 .author-info {
     margin-top: 20px;
@@ -88,6 +87,12 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+header.visible {
+    opacity: 1;
 }
 
 header nav {
@@ -124,12 +129,18 @@ header .nav-right a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 70vh; /* Reduced height */
+    height: 70vh;
     background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 0 20px;
-    margin-top: 80px; /* Adjusted to compensate for fixed header */
+    margin-top: 80px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#hero.visible {
+    opacity: 1;
 }
 
 .hero-content {
@@ -195,10 +206,16 @@ footer a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     display: none;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .scroll-to-top.visible {
     display: block;
+}
+
+.scroll-to-top:hover {
+    background-color: #1558b0;
+    transform: translateY(-5px);
 }
 
 .about-container {
@@ -210,6 +227,14 @@ footer a:hover {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+.about-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .profile-photo {
@@ -236,6 +261,14 @@ footer a:hover {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+#projects.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #projects h2 {
@@ -256,11 +289,20 @@ footer a:hover {
     padding: 1rem;
     width: calc(50% - 2rem);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+.project-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .project-item h3 {
@@ -284,6 +326,14 @@ footer a:hover {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+#blog.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #blog h2 {
@@ -304,11 +354,20 @@ footer a:hover {
     padding: 1rem;
     width: calc(50% - 2rem);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+.blog-post.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .blog-post:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .blog-post h3 {
@@ -330,6 +389,14 @@ footer a:hover {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+#contact.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #contact h2 {
