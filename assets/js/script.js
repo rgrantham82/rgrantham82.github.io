@@ -42,7 +42,7 @@ function initializeIntersectionObserver() {
         threshold: 0.1
     };
     const observer = new IntersectionObserver(handleIntersection, options);
-    const elements = document.querySelectorAll(".fade-in, .fade-in-up");
+    const elements = document.querySelectorAll(".fade-in-up, .scale-up");
 
     elements.forEach(element => {
         observer.observe(element);
