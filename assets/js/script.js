@@ -43,7 +43,11 @@ function initializeIntersectionObserver() {
     };
     const observer = new IntersectionObserver(handleIntersection, options);
     const elements = document.querySelectorAll(".fade-in, .fade-in-up");
-    elements.forEach(element => observer.observe(element));
+
+    elements.forEach(element => {
+        element.classList.add("visible"); // Ensure elements are initially visible
+        observer.observe(element);
+    });
 }
 
 /**
@@ -54,6 +58,9 @@ function handleIntersection(entries, observer) {
         if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
+        } else {
+            // Keep the element visible even if it's not intersecting
+            entry.target.classList.add("visible");
         }
     });
 }
