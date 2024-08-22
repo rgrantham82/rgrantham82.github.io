@@ -1,0 +1,83 @@
+title: "R. Grantham's Data Analytics Portfolio"
+description: "Showcasing my work in data analysis, visualization, and more."
+baseurl: "" # Leave this blank for GitHub Pages root
+url: "https://rgrantham82.github.io"
+remote_theme: "mmistakes/minimal-mistakes" # Using the remote theme
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site navigation
+nav:
+  - text: "Home"
+    url: "/"
+  - text: "About"
+    url: "/about/"
+  - text: "Portfolio"
+    url: "/portfolio/"
+  - text: "Blog"
+    url: "/blog/"
+  - text: "Contact"
+    url: "/contact/"
+
+# Author details
+author:
+  name: "R. Grantham"
+  avatar: "/assets/images/avatar.jpg" # Replace with your image
+  bio: "Data Analyst with a passion for uncovering insights through data visualization and statistical analysis."
+  location: "Your City, Country"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:your.email@example.com"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/rgrantham82"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/yourprofile"
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      url: "https://twitter.com/yourprofile"
+
+# Portfolio settings
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title/
+
+# Social sharing (optional)
+twitter_username: your_twitter_handle
+github_username: rgrantham82
+
+# Disqus comments (optional)
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "your-disqus-shortname"
+
+# Google Analytics (optional)
+google_analytics: "UA-XXXX-Y"
+
+# SEO and metadata
+seo:
+  name: "Robert Grantham's Data Analytics Portfolio"
+  description: "Portfolio showcasing the data analytics projects of R. Grantham, including data visualizations, analysis, and more."
+  author: "Robert Grantham"
+
+# Customization
+minimal_mistakes_skin: "sunrise" # options: "default", "air", "dark", etc.
+
+# Additional plugins (optional)
+jekyll-include-cache: true
+
+# Markdown processor
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
