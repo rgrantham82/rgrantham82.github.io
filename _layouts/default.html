@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="font-sans antialiased bg-gray-100 text-gray-800">
+  <!-- Header -->
+  {% include header.html %}
+  
+  <!-- Hero Section (Only on Home Page) -->
+  {% if page.title == "Home" %}
+    {% include hero.html %}
+  {% endif %}
+  
+  <!-- Main Content -->
+  <main>
+    {{ content }}
+  </main>
+  
+  <!-- Footer -->
+  {% include footer.html %}
+</body>
+</html>
