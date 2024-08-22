@@ -2,7 +2,7 @@ title: "R. Grantham's Data Analytics Portfolio"
 description: "Showcasing my work in data analysis, visualization, and more."
 baseurl: "" # Leave this blank for GitHub Pages root
 url: "https://rgrantham82.github.io"
-remote_theme: "mmistakes/minimal-mistakes" # Using the remote theme
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"" # Using the remote theme
 
 # Build settings
 markdown: kramdown
