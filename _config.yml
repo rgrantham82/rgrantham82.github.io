@@ -26,23 +26,20 @@ nav:
 
 # Author details
 author:
-  name: "R. Grantham"
+  name: "Robert Grantham"
   avatar: "/assets/images/avatar.jpg" # Replace with your image
   bio: "Data Analyst with a passion for uncovering insights through data visualization and statistical analysis."
   location: "Your City, Country"
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:your.email@example.com"
+      url: "mailto:robertgrantham40@gmail.com"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/rgrantham82"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/yourprofile"
-    - label: "Twitter"
-      icon: "fab fa-twitter"
-      url: "https://twitter.com/yourprofile"
+      url: "https://www.linkedin.com/in/robertgrantham82"
 
 # Portfolio settings
 collections:
