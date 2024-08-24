@@ -55,15 +55,15 @@ linkedin_username: robertgrantham82
 comments:
   provider: "disqus"
   disqus:
-    shortname: "your-disqus-shortname"
+    shortname: "your-disqus-shortname" # Replace with your actual Disqus shortname
 
 # Google Analytics (optional)
-google_analytics: "UA-XXXX-Y"
+google_analytics: "UA-XXXX-Y" # Replace with your actual Google Analytics ID
 
 # SEO and metadata
 seo:
   name: "Robert Grantham's Data Analytics Portfolio"
-  description: "Portfolio showcasing the data analytics projects of R. Grantham, including data visualizations, analysis, and more."
+  description: "Portfolio showcasing the data analytics projects of Robert Grantham, including data visualizations, analysis, and more."
   author: "Robert Grantham"
 
 # Customization
