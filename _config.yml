@@ -1,8 +1,8 @@
-title: "R. Grantham's Data Analytics Portfolio"
+title: "Robert Grantham's Data Analytics Portfolio"
 description: "Showcasing my work in data analysis, visualization, and more."
 baseurl: "" # Leave this blank for GitHub Pages root
 url: "https://rgrantham82.github.io"
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"" # Using the remote theme
+remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Using the remote theme
 
 # Build settings
 markdown: kramdown
@@ -29,7 +29,7 @@ author:
   name: "Robert Grantham"
   avatar: "/assets/images/avatar.jpg" # Replace with your image
   bio: "Data Analyst with a passion for uncovering insights through data visualization and statistical analysis."
-  location: "Your City, Country"
+  location: "Austin, TX"
   links:
     - label: "Email"
       icon: "fas fa-envelope"
@@ -48,8 +48,8 @@ collections:
     permalink: /portfolio/:title/
 
 # Social sharing (optional)
-twitter_username: your_twitter_handle
 github_username: rgrantham82
+linkedin_username: robertgrantham82
 
 # Disqus comments (optional)
 comments:
