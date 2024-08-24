@@ -27,7 +27,7 @@ nav:
 # Author details
 author:
   name: "Robert Grantham"
-  avatar: "/assets/images/avatar.jpg" # Replace with your image
+  avatar: "/assets/images/profile-image.jpg" # Replace with your image
   bio: "Data Analyst with a passion for uncovering insights through data visualization and statistical analysis."
   location: "Austin, TX"
   links:
