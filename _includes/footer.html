@@ -1,19 +1,8 @@
 <footer>
   <div class="footer-content">
     <p>&copy; {{ "now" | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
-
-    <ul class="social-links">
-      {% for item in site.data.navigation.social %}
-        <li>
-          <a href="{{ item.url }}" title="{{ item.title }}" target="_blank">
-            <i class="{{ item.icon }}"></i> <span>{{ item.title }}</span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
   </div>
-
   <div class="footer-meta">
-    <p>Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using the <a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank">Minimal Mistakes</a> theme.</p>
+    <p>Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using the <a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank">Minimal Mistakes</a> theme. </p>
   </div>
 </footer>
