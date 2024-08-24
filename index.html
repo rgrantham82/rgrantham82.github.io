@@ -2,3 +2,30 @@
 layout: home
 author_profile: true
 ---
+
+<section class="intro">
+  <div class="intro-text">
+    <h1>Welcome to My Data Analytics Portfolio</h1>
+    <p>Explore my work in data analysis, visualization, and more. I'm passionate about uncovering insights and telling stories with data.</p>
+    <a href="{{ site.baseurl }}/portfolio/" class="btn btn-primary">View My Work</a>
+  </div>
+</section>
+
+<section class="recent-posts">
+  <h2>Latest Blog Posts</h2>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      <li>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ site.baseurl }}/blog/" class="btn btn-secondary">Read All Posts</a>
+</section>
+
+<section class="contact">
+  <h2>Get in Touch</h2>
+  <p>If you'd like to discuss a project or just want to say hello, feel free to reach out!</p>
+  <a href="{{ site.baseurl }}/contact/" class="btn btn-primary">Contact Me</a>
+</section>
