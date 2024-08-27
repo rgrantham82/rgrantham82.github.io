@@ -1,15 +1,15 @@
+# Site settings
 title: "Robert Grantham's Data Analytics Portfolio"
 description: "Showcasing my work in data analysis, visualization, and more."
-baseurl: "" # Leave this blank for GitHub Pages root
+baseurl: "" # Leave this blank for GitHub Pages
 url: "https://rgrantham82.github.io"
-remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Using the remote theme
+remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Load the Minimal Mistakes theme remotely
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
 
 # Site navigation
 nav:
@@ -27,7 +27,7 @@ nav:
 # Author details
 author:
   name: "Robert Grantham"
-  avatar: "/assets/images/profile-image.jpg" # Replace with your image
+  avatar: "/assets/images/profile-image.jpg" # Replace with your actual image path
   bio: "Data Analyst with a passion for uncovering insights through data visualization and statistical analysis."
   location: "Austin, TX"
   links:
@@ -51,14 +51,14 @@ collections:
 github_username: rgrantham82
 linkedin_username: robertgrantham82
 
-# Disqus comments (optional)
+# Disqus comments
 comments:
   provider: "disqus"
   disqus:
-    shortname: "your-disqus-shortname" # Replace with your actual Disqus shortname
+    shortname: "disqus_wITuNTyMjO" # Your Disqus shortname
 
 # Google Analytics (optional)
-google_analytics: "UA-XXXX-Y" # Replace with your actual Google Analytics ID
+google_analytics: "UA-320030192-1" # Your Google Analytics ID
 
 # SEO and metadata
 seo:
@@ -66,8 +66,8 @@ seo:
   description: "Portfolio showcasing the data analytics projects of Robert Grantham, including data visualizations, analysis, and more."
   author: "Robert Grantham"
 
-# Customization
-minimal_mistakes_skin: "sunrise" # options: "default", "air", "dark", etc.
+# Minimal Mistakes customization
+minimal_mistakes_skin: "sunrise" # Options: "default", "air", "dark", etc.
 
 # Additional plugins (optional)
 jekyll-include-cache: true
