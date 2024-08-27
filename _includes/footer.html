@@ -1,8 +1,10 @@
-<footer>
-  <div class="footer-content">
-    <p>&copy; {{ "now" | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
-  </div>
-  <div class="footer-meta">
-    <p>Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using the <a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank">Minimal Mistakes</a> theme. </p>
+<footer class="bg-gray-800 text-white py-4">
+  <div class="container mx-auto text-center">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    <ul class="mt-4">
+      <li><a href="{{ site.github.url }}" class="text-gray-400 hover:text-white">GitHub</a></li>
+      <li><a href="{{ site.linkedin.url }}" class="text-gray-400 hover:text-white">LinkedIn</a></li>
+      <li><a href="{{ site.baseurl }}/contact/" class="text-gray-400 hover:text-white">Contact</a></li>
+    </ul>
   </div>
 </footer>
