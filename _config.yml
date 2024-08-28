@@ -69,9 +69,6 @@ seo:
 # Minimal Mistakes customization
 minimal_mistakes_skin: "sunrise" # Options: "default", "air", "dark", etc.
 
-# Additional plugins (optional)
-jekyll-include-cache: true
-
 # Markdown processor
 kramdown:
   input: GFM
