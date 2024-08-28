@@ -62,7 +62,7 @@ google_analytics: "UA-320030192-1" # Your Google Analytics ID
 
 # SEO and metadata
 seo:
-  description: "Portfolio showcasing Robert Grantham's data analytics projects, with a focus on content analysis, risk assessment, and financial insights. Skilled in [mention specific skills] and eager to contribute to data-driven decision making."
+  description: "Portfolio showcasing Robert Grantham's data analytics projects, with a focus on content analysis, risk assessment, and financial insights. Skilled in Excel, SQL, Python, and Tableau and eager to contribute to data-driven decision making."
   name: "Robert Grantham's Data Analytics Portfolio"
   author: "Robert Grantham"
 
