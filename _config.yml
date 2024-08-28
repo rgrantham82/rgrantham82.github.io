@@ -1,6 +1,6 @@
 # Site settings
-title: "Robert Grantham's Data Analytics Portfolio"
-description: "Showcasing my work in data analysis, visualization, and more."
+title: "Robert Grantham - Data Analyst & Visualization Specialist"
+description: "Austin-based data analyst with a background in content analysis and risk assessment, passionate about uncovering actionable insights to drive business growth."
 baseurl: "" # Leave this blank for GitHub Pages
 url: "https://rgrantham82.github.io"
 remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Load the Minimal Mistakes theme remotely
@@ -26,10 +26,10 @@ nav:
 
 # Author details
 author:
-  name: "Robert Grantham"
+  bio: "Data Analyst leveraging my background in content analysis and loss mitigation to empower businesses with data-driven insights. Proficient in Excel, SQL, Tableau, and Python and eager to tackle new challenges in real estate, finance and public safety. Let's connect and explore how I can contribute to your success."
+  location: "Austin, TX"
   avatar: "/assets/images/profile-image.jpg" # Replace with your actual image path
   bio: "Data Analyst with a passion for uncovering insights through data visualization and statistical analysis."
-  location: "Austin, TX"
   links:
     - label: "Email"
       icon: "fas fa-envelope"
@@ -62,8 +62,8 @@ google_analytics: "UA-320030192-1" # Your Google Analytics ID
 
 # SEO and metadata
 seo:
+  description: "Portfolio showcasing Robert Grantham's data analytics projects, with a focus on content analysis, risk assessment, and financial insights. Skilled in [mention specific skills] and eager to contribute to data-driven decision making."
   name: "Robert Grantham's Data Analytics Portfolio"
-  description: "Portfolio showcasing the data analytics projects of Robert Grantham, including data visualizations, analysis, and more."
   author: "Robert Grantham"
 
 # Minimal Mistakes customization
