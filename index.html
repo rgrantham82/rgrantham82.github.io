@@ -2,3 +2,87 @@
 layout: home
 author_profile: true
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+      /* Custom Styles for Portfolio */
+      body {
+        font-family: 'Arial', sans-serif;
+      }
+
+      .intro-section {
+        background-color: #343a40;
+        color: white;
+        padding: 50px 0;
+      }
+
+      .project-section,
+      .blog-section {
+        padding: 50px 0;
+      }
+
+      .project-title,
+      .blog-title {
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .project-item,
+      .blog-item {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Intro Section -->
+    <section class="intro-section text-center animate__animated animate__fadeInUp">
+      <div class="container">
+        <h1>Welcome to My Data Analytics Portfolio</h1>
+        <p>{{ site.description }}</p>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="project-section">
+      <div class="container">
+        <h2 class="project-title text-center animate__animated animate__fadeInLeft">Featured Projects</h2>
+        <div class="row">
+          <!-- Example Project -->
+          <div class="col-md-4 project-item animate__animated animate__fadeIn">
+            <h3>Project Title</h3>
+            <p>Short description of the project. Highlight the tools and technologies used.</p>
+            <a href="/portfolio/project-title" class="btn btn-primary">View Project</a>
+          </div>
+          <!-- Add more project items as needed -->
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section -->
+    <section class="blog-section bg-light">
+      <div class="container">
+        <h2 class="blog-title text-center animate__animated animate__fadeInRight">Recent Blog Posts</h2>
+        <div class="row">
+          <!-- Example Blog Post -->
+          <div class="col-md-4 blog-item animate__animated animate__fadeIn">
+            <h3>Blog Post Title</h3>
+            <p>Summary of the blog post. Provide insight into the topic discussed.</p>
+            <a href="/blog/blog-post-title" class="btn btn-secondary">Read More</a>
+          </div>
+          <!-- Add more blog items as needed -->
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
