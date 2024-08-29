@@ -53,9 +53,49 @@ author_profile: true
         .author__urls-link i {
             margin-right: 5px;
         }
+        /* Style for recent blog posts */
+        .recent-posts-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        .recent-posts-list li {
+            margin-bottom: 10px;
+        }
+        .recent-posts-list a {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .blog-item {
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .blog-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .blog-item p {
+            font-size: 1em;
+            color: #6c757d;
+        }
+        .blog-item a.btn {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
+    
+    <!-- Intro Section -->
+    <section class="intro-section text-center animate__animated animate__fadeInUp">
+        <div class="container">
+            <h1>Welcome to My Portfolio!</h1>
+            <p>{{ site.description }}</p>
+        </div>
+    </section>
     
     <!-- Projects Section -->
     <section class="project-section">
@@ -78,13 +118,13 @@ author_profile: true
         <div class="container">
             <h2 class="blog-title text-center animate__animated animate__fadeInRight">Recent Blog Posts</h2>
             <div class="row">
-                <!-- Example Blog Post -->
+                {% for post in site.posts limit:3 %}
                 <div class="col-md-4 blog-item animate__animated animate__fadeIn">
-                    <h3>Blog Post Title</h3>
-                    <p>Summary of the blog post. Provide insight into the topic discussed.</p>
-                    <a href="/blog/blog-post-title" class="btn btn-secondary">Read More</a>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}" class="btn btn-secondary">Read More</a>
                 </div>
-                <!-- Add more blog items as needed -->
+                {% endfor %}
             </div>
         </div>
     </section>
