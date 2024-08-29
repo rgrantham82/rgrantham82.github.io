@@ -14,11 +14,6 @@ author_profile: true
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
-      /* Hide the top banner */
-      .masthead {
-      display: none;
-      }
-      
       /* Custom Styles for Portfolio */
       body {
         font-family: 'Arial', sans-serif;
@@ -45,6 +40,27 @@ author_profile: true
       .blog-item {
         margin-bottom: 20px;
       }
+
+      /* Hide the top banner */
+      .masthead {
+        display: none;
+      }
+
+      /* Style for the author links */
+      .author__urls-wrapper {
+        margin-top: 20px;
+      }
+
+      .author__urls-link {
+        display: block;
+        margin-bottom: 10px;
+        color: #343a40;
+        text-decoration: none;
+      }
+
+      .author__urls-link i {
+        margin-right: 5px;
+      }
     </style>
   </head>
   <body>
@@ -55,19 +71,34 @@ author_profile: true
         <p>{{ site.description }}</p>
       </div>
     </section>
+    <!-- Author Links Section -->
+    <section class="author-links text-center">
+      <div class="container">
+        <img src="{{ site.author.avatar }}" alt="Profile Image" class="rounded-circle" width="150">
+        <p>{{ site.author.bio }}</p>
+        <p>{{ site.author.location }}</p>
+        <div class="author__urls-wrapper">
+          <a href="mailto:robertgrantham40@gmail.com" class="author__urls-link">
+            <i class="fas fa-envelope"></i> Email </a>
+          <a href="https://github.com/rgrantham82" class="author__urls-link">
+            <i class="fab fa-github"></i> GitHub </a>
+          <a href="https://www.linkedin.com/in/robertgrantham82" class="author__urls-link">
+            <i class="fab fa-linkedin"></i> LinkedIn </a>
+          <!-- New Resume Link -->
+          <a href="/assets/files/Robert_Grantham_Resume.pdf" class="author__urls-link" target="_blank">
+            <i class="fas fa-file-pdf"></i> Resume </a>
+        </div>
+      </div>
+    </section>
     <!-- Projects Section -->
     <section class="project-section">
       <div class="container">
         <h2 class="project-title text-center animate__animated animate__fadeInLeft">Featured Projects</h2>
-        <div class="row">
-          <!-- Example Project -->
-          <div class="col-md-4 project-item animate__animated animate__fadeIn">
-            <h3>Project Title</h3>
-            <p>Short description of the project. Highlight the tools and technologies used.</p>
-            <a href="/portfolio/project-title" class="btn btn-primary">View Project</a>
-          </div>
-          <!-- Add more project items as needed -->
-        </div>
+        <div class="row"> {% for project in site.data.projects %} <div class="col-md-4 project-item animate__animated animate__fadeIn">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <a href="{{ project.url }}" class="btn btn-primary" target="_blank">View Project</a>
+          </div> {% endfor %} </div>
       </div>
     </section>
     <!-- Blog Section -->
@@ -85,6 +116,10 @@ author_profile: true
         </div>
       </div>
     </section>
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <p>&copy; 2024 {{ site.author.name }}. Powered by Jekyll & Minimal Mistakes.</p>
+    </footer>
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
