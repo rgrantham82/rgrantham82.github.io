@@ -23,6 +23,9 @@ nav:
     url: "/blog/"
   - text: "Contact"
     url: "/contact/"
+  - text: "Resume"
+    url: "/assets/files/Robert_Grantham_Resume.pdf"  # Link to resume
+
 
 # Author details
 author:
