@@ -26,7 +26,6 @@ nav:
   - text: "Resume"
     url: "/assets/files/Robert_Grantham_Resume.pdf"  # Link to resume
 
-
 # Author details
 author:
   bio: "Data Analyst leveraging my background in content analysis and loss mitigation to empower businesses with data-driven insights. Proficient in Excel, SQL, Tableau, and Python and eager to tackle new challenges in real estate, finance and public safety. Let's connect and explore how I can contribute to your success."
@@ -43,6 +42,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/robertgrantham82"
+    - label: "Resume"
+      icon: "fas fa-file-pdf"
+      url: "/assets/files/Robert_Grantham_Resume.pdf"
 
 # Portfolio settings
 collections:
