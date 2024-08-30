@@ -1,0 +1,190 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Custom Styles */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.projects-section .section-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.project-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.project-item h3 {
+  font-size: 1.5em;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.project-item h4 {
+  font-size: 1.2em;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.project-item p {
+  font-size: 1em;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.project-item .btn {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.project-item .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Image Ratios */
+.is-4by3 {
+  padding-bottom: 75%; /* 4:3 Aspect Ratio */
+}
+
+.is-16by9 {
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-section .project-item {
+    margin-bottom: 20px;
+  }
+
+  .projects-section .section-title {
+    font-size: 2em;
+  }
+
+  .project-item h3 {
+    font-size: 1.3em;
+  }
+
+  .project-item h4 {
+    font-size: 1.1em;
+  }
+
+  .project-item p {
+    font-size: 0.9em;
+  }
+}
+
+/* Footer Customizations */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+/* Blog Posts */
+.recent-blog-posts {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.recent-blog-posts .post-item {
+  width: 32%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.recent-blog-posts .post-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.recent-blog-posts .post-item h3 {
+  font-size: 1.5em;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.recent-blog-posts .post-item p {
+  font-size: 1em;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.recent-blog-posts .post-item .btn {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.recent-blog-posts .post-item .btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .recent-blog-posts {
+    flex-direction: column;
+  }
+
+  .recent-blog-posts .post-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
