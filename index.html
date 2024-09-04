@@ -3,123 +3,120 @@ layout: home
 author_profile: true
 ---
 
+--- layout: home author_profile: true ---
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
-    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
-        /* Custom Styles for Portfolio */
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-        .intro-section {
-            background-color: #343a40;
-            color: white;
-            padding: 50px 0;
-        }
-        .project-section, .blog-section {
-            padding: 50px 0;
-        }
-        .project-title, .blog-title {
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-        .project-item, .blog-item {
-            margin-bottom: 20px;
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease;
-        }
-        .project-item:hover, .blog-item:hover {
-            transform: translateY(-5px);
-        }
-        .project-item h3, .blog-item h3 {
-            font-size: 1.25em;
-            margin-bottom: 15px;
-        }
-        .project-item p, .blog-item p {
-            font-size: 1em;
-            color: #6c757d;
-        }
-        .project-item a.btn, .blog-item a.btn {
-            margin-top: 10px;
-        }
-        /* Flexbox for equal height cards and better layout */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .col-md-4 {
-            display: flex;
-            flex-direction: column;
-        }
-        /* Hide the top banner */
-        .masthead {
-            display: none;
-        }
-        /* Style for the author links */
-        .author__urls-wrapper {
-            margin-top: 20px;
-        }
-        .author__urls-link {
-            display: block;
-            margin-bottom: 10px;
-            color: #343a40;
-            text-decoration: none;
-        }
-        .author__urls-link i {
-            margin-right: 5px;
-        }
+      /* Custom Styles for Portfolio */
+      body {
+        font-family: 'Arial', sans-serif;
+      }
+
+      .intro-section {
+        background-color: #343a40;
+        color: white;
+        padding: 50px 0;
+      }
+
+      .project-section,
+      .blog-section {
+        padding: 50px 0;
+      }
+
+      .project-title,
+      .blog-title {
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .project-item,
+      .blog-item {
+        margin-bottom: 20px;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .project-item:hover,
+      .blog-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-item h3,
+      .blog-item h3 {
+        font-size: 1.25em;
+        margin-bottom: 15px;
+      }
+
+      .project-item p,
+      .blog-item p {
+        font-size: 1em;
+        color: #6c757d;
+      }
+
+      .project-item a.btn,
+      .blog-item a.btn {
+        margin-top: 10px;
+      }
+
+      /* Flexbox for equal height cards and better layout */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .col-md-4 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Hide the top banner */
+      .masthead {
+        display: none;
+      }
+
+      /* Style for the author links */
+      .author__urls-wrapper {
+        margin-top: 20px;
+      }
+
+      .author__urls-link {
+        display: block;
+        margin-bottom: 10px;
+        color: #343a40;
+        text-decoration: none;
+      }
+
+      .author__urls-link i {
+        margin-right: 5px;
+      }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
     <!-- Projects Section -->
     <section class="project-section">
-        <div class="container">
-            <h2 class="project-title text-center animate__animated animate__fadeInLeft">Featured Projects</h2>
-            <div class="row">
-                {% for project in site.data.projects.items %}
-                <div class="col-md-4 project-item animate__animated animate__fadeIn">
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ project.link }}" class="btn btn-primary" target="_blank">{{ project.link_text }}</a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+      <div class="container">
+        <h2 class="project-title text-center animate__animated animate__fadeInLeft">Featured Projects</h2>
+        <div class="row"> {% for project in site.data.projects.items %} <div class="col-md-4 project-item animate__animated animate__fadeIn">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ project.link }}" class="btn btn-primary" target="_blank">{{ project.link_text }}</a>
+          </div> {% endfor %} </div>
+      </div>
     </section>
-    
-    <!-- Blog Section -->
-    <section class="blog-section bg-light">
-        <div class="container">
-            <h2 class="blog-title text-center animate__animated animate__fadeInRight">Recent Blog Posts</h2>
-            <div class="row">
-                {% for post in site.posts limit:3 %}
-                <div class="col-md-4 blog-item animate__animated animate__fadeIn">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ post.url }}" class="btn btn-secondary">Read More</a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-    
     <!-- Bootstrap JS and dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
