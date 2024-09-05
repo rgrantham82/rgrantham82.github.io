@@ -8,52 +8,70 @@ author_profile: true
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Austin-based data analyst showcasing data visualization, predictive analytics, and machine learning projects. Explore insights into business growth through data analysis.">
+    <meta name="keywords" content="Data Analysis, Predictive Analytics, Machine Learning, Data Visualization, Python, SQL, Tableau">
+    <meta name="author" content="Robert Grantham">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Robert Grantham - Data Analyst Portfolio">
+    <meta property="og:description" content="Explore data-driven projects by Robert Grantham, a data analyst focused on visualization and predictive analytics.">
+    <meta property="og:image" content="/assets/images/profile-image.jpg">
+    <meta property="og:url" content="https://rgrantham82.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Robert Grantham - Data Analyst Portfolio">
+    <meta name="twitter:description" content="Explore data-driven projects by Robert Grantham, a data analyst focused on visualization and predictive analytics.">
+    <meta name="twitter:image" content="/assets/images/profile-image.jpg">
+    <meta name="twitter:site" content="@rgrantham82">
+
     <title>{{ site.title }}</title>
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
-        /* Custom Styles for Portfolio */
         body {
             font-family: 'Montserrat', sans-serif;
         }
-        .intro-section {
-            padding: 50px 0;
-        }
-        .project-section, .blog-section {
-            padding: 50px 0;
+        .intro-section, .project-section, .blog-section {
+            padding: 60px 0;
         }
         .project-title, .blog-title {
-            font-weight: bold;
-            margin-bottom: 30px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-size: 2rem;
         }
         .project-item, .blog-item {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project-item:hover, .blog-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         .project-item h3, .blog-item h3 {
-            font-size: 1.25em;
+            font-size: 1.5rem;
             margin-bottom: 15px;
         }
         .project-item p, .blog-item p {
-            font-size: 1em;
+            font-size: 1rem;
+            color: #555;
         }
         .project-item a.btn, .blog-item a.btn {
-            margin-top: 10px;
+            margin-top: 15px;
         }
-        /* Flexbox for equal height cards and better layout */
+        /* Flexbox to make cards uniform in height */
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -61,27 +79,20 @@ author_profile: true
         .col-md-4 {
             display: flex;
             flex-direction: column;
+            margin-bottom: 30px;
         }
-        /* Hide the top banner */
+        /* Prevent card overlap by ensuring proper spacing */
+        .project-item {
+            flex: 1 1 auto;
+        }
+        /* Hide the masthead banner */
         .masthead {
             display: none;
-        }
-        /* Style for the author links */
-        .author__urls-wrapper {
-            margin-top: 20px;
-        }
-        .author__urls-link {
-            display: block;
-            margin-bottom: 10px;
-            text-decoration: none;
-        }
-        .author__urls-link i {
-            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    
+
     <!-- Projects Section -->
     <section class="project-section">
         <div class="container">
@@ -97,10 +108,11 @@ author_profile: true
             </div>
         </div>
     </section>
-    
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
