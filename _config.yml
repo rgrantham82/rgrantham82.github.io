@@ -32,7 +32,7 @@ author:
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/robertgrantham82"
     - label: "Resume"
-      icon: "fas fa-file-pdf"
+      icon: "fa-solid fa-file"
       url: "/assets/files/Robert_Grantham_Resume.pdf"
 
 # Portfolio settings
