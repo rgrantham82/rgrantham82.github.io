@@ -16,7 +16,11 @@ author:
   location: "Austin, TX"
   avatar: "/assets/images/profile-image.jpg" # Replace with your actual image path
   name: Robert Grantham
-  bio: "Data Analyst based in Austin, TX, with a passion for uncovering insights through data visualization, statistical analysis, and machine learning. Experienced in various industries, including finance (mortgage loss mitigation), and public safety, with a focus on predictive analytics and forecasting. Enthusiastic about learning and applying cutting-edge data science techniques, and committed to continuous professional development."
+  bio: "Data Analyst based in Austin, TX, with a passion for uncovering insights through data visualization, statistical analysis, and machine learning. 
+  
+  Experienced in various industries, including finance (mortgage loss mitigation), and public safety, with a focus on predictive analytics and forecasting. 
+  
+  Enthusiastic about learning and applying cutting-edge data science techniques, and committed to continuous professional development."
   links:
     - label: "Email"
       icon: "fas fa-envelope"
