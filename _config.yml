@@ -28,10 +28,11 @@ nav:
 
 # Author details
 author:
-  bio: "Data Analyst leveraging my background in content analysis and loss mitigation to empower businesses with data-driven insights. Proficient in Excel, SQL, Tableau, and Python and eager to tackle new challenges in real estate, finance and public safety. Let's connect and explore how I can contribute to your success."
   location: "Austin, TX"
   avatar: "/assets/images/profile-image.jpg" # Replace with your actual image path
-  bio: "Data Analyst with a passion for uncovering insights through data visualization and statistical analysis."
+  author:
+  name: Robert Grantham
+  bio: "Data Analyst based in Austin, TX, with a passion for uncovering insights through data visualization, statistical analysis, and machine learning. Over 5 years of experience leveraging data to solve complex problems, optimize business processes, and drive informed decision-making. Proficient in SQL, Python, Excel, and Tableau, with a track record of transforming raw data into compelling visual narratives. Experienced in various industries, including finance (mortgage loss mitigation), and public safety, with a focus on predictive analytics and forecasting. Enthusiastic about learning and applying cutting-edge data science techniques, and committed to continuous professional development. Always seeking new opportunities to make data actionable and impactful."
   links:
     - label: "Email"
       icon: "fas fa-envelope"
