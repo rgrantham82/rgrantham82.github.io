@@ -1,6 +1,6 @@
 # Site settings
-title: "Robert Grantham - Data Analyst & Visualization Specialist"
-description: "Austin-based data analyst with a background in content analysis and risk assessment, passionate about uncovering actionable insights to drive business growth."
+title: "Robert Grantham - Data Analyst, Visualization Expert & Predictive Analytics Specialist"
+description: "Austin-based data analyst specializing in data visualization, statistical analysis, and predictive analytics. Unlocking business insights through advanced data-driven techniques in finance, healthcare, and public safety."
 baseurl: "" # Leave this blank for GitHub Pages
 url: "https://rgrantham82.github.io"
 remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Load the Minimal Mistakes theme remotely
@@ -15,7 +15,6 @@ plugins:
 author:
   location: "Austin, TX"
   avatar: "/assets/images/profile-image.jpg" # Replace with your actual image path
-  author:
   name: Robert Grantham
   bio: "Data Analyst based in Austin, TX, with a passion for uncovering insights through data visualization, statistical analysis, and machine learning. Experienced in various industries, including finance (mortgage loss mitigation), and public safety, with a focus on predictive analytics and forecasting. Enthusiastic about learning and applying cutting-edge data science techniques, and committed to continuous professional development."
   links:
@@ -53,9 +52,21 @@ google_analytics: "UA-320030192-1" # Your Google Analytics ID
 
 # SEO and metadata
 seo:
-  description: "Portfolio showcasing Robert Grantham's data analytics projects, with a focus on content analysis, risk assessment, and financial insights. Skilled in Excel, SQL, Python, and Tableau and eager to contribute to data-driven decision making."
-  name: "Robert Grantham's Data Analytics Portfolio"
+  title: "Robert Grantham - Data Analyst & Predictive Analytics Expert"
+  description: "Portfolio of Robert Grantham, an Austin, TX-based Data Analyst with expertise in data visualization, machine learning, and statistical analysis. Skilled in uncovering business insights in finance, healthcare, and public safety."
+  keywords: "data analysis, predictive analytics, machine learning, data visualization, SQL, Python, Tableau, Austin TX, business insights"
+  name: "Robert Grantham - Data Analytics Portfolio"
   author: "Robert Grantham"
+  twitter:
+    username: "rgrantham82"
+    card: "summary"
+    site: "@rgrantham82"
+  og:
+    title: "Robert Grantham - Data Analyst & Machine Learning Expert"
+    description: "Explore Robert Grantham's data analytics projects focused on predictive modeling, statistical analysis, and business insights through data."
+    type: "website"
+    url: "https://rgrantham82.github.io"
+    image: "/assets/images/profile-image.jpg" # Replace with the actual image path
 
 # Minimal Mistakes customization
 minimal_mistakes_skin: "sunrise" # Options: "default", "air", "dark", etc.
