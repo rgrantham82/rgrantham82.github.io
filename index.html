@@ -4,13 +4,13 @@ author_profile: true
 ---
 
 <!-- Projects Section -->
-    <section class="project-section">
-      <div class="container">
-        <h2 class="project-title text-center animate__animated animate__fadeInDown">Featured Projects</h2>
-        <div class="row"> {% for project in site.data.projects.items %} <div class="col-md-4 project-item animate__animated animate__fadeInUp">
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
-            <a href="{{ project.link }}" class="btn btn-primary" target="_blank">{{ project.link_text }}</a>
-          </div> {% endfor %} </div>
-      </div>
-    </section>
+<section class="project-section">
+  <div class="container">
+    <h2 class="project-title text-center animate__animated animate__fadeInDown">Featured Projects</h2>
+    <div class="row"> {% for project in site.data.projects.items %} <div class="col-md-4 project-item animate__animated animate__fadeInUp">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
+        <a href="{{ project.link }}" class="btn btn-primary" target="_blank">{{ project.link_text }}</a>
+      </div> {% endfor %} </div>
+  </div>
+</section>
