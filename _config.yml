@@ -28,12 +28,17 @@ author:
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/rgrantham82"
+    - label: "Kaggle"
+      icon: "fab fa-kaggle"
+      url: "https://www.kaggle.com/robertgrantham"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/robertgrantham82"
     - label: "Resume"
       icon: "fa-solid fa-file"
       url: "/assets/files/Robert_Grantham_Resume.pdf"
+    
+
 
 # Portfolio settings
 collections:
