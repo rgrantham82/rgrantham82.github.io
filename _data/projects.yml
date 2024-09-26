@@ -18,7 +18,7 @@ items:
       Developed a comprehensive fraud detection system using machine learning algorithms to identify and prevent fraudulent activities. The project involved building predictive models that analyze transaction data to detect suspicious patterns, significantly reducing financial losses and enhancing security measures.
     image: /assets/images/fraud-detection-plot.png
     image_ratio: is-4by3
-    link: https://github.com/rgrantham82/fraud-detection
+    link: https://github.com/rgrantham82/fraud-detection.git
     link_text: View Project
     tags: Machine Learning, AI, Fraud Prevention
     github: rgrantham82/fraud-detection
