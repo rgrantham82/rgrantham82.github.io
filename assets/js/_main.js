@@ -2,6 +2,62 @@
    jQuery plugin settings and other scripts
    ========================================================================== */
 
+// Initialize AOS (Animate on Scroll)
+AOS.init({
+  duration: 1000,  // Duration of animation
+  easing: 'ease-in-out',  // Type of easing
+  once: true,  // Whether the animation should happen once
+});
+
+// GSAP Example for Hero Section Animation
+gsap.from(".hero-title", {
+  duration: 2,
+  y: -100,
+  opacity: 0,
+  ease: "power4.out"
+});
+
+gsap.from(".project-card", {
+  duration: 1.5,
+  scale: 0.8,
+  opacity: 0,
+  stagger: 0.3,  // Stagger the animation for each project card
+  ease: "power2.out"
+});
+
+// Loader Animation (Simulating a page preloader)
+window.addEventListener("load", () => {
+  const loader = document.querySelector('.loader');
+  if (loader) {
+    loader.style.display = 'none';  // Hide loader after the page loads
+  }
+});
+
+// Smooth Scroll for Internal Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Scroll-triggered Animation using GSAP (on Scroll)
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".fade-in-element", {
+  scrollTrigger: {
+    trigger: ".fade-in-element",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1
+});
+
+
 if (typeof jQuery !== 'undefined') {
 	$(document).ready(function() {
 		// FitVids init
