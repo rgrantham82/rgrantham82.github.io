@@ -89,7 +89,7 @@ items:
     subtitle: Ensuring Data Accuracy and Efficiency
     description: >
       This project focuses on optimizing large datasets for efficiency while maintaining data integrity. It includes SQL optimizations, indexing strategies, and data validation techniques, demonstrating my expertise in managing and ensuring the reliability of critical data systems.
-    image: /assets/images/data-optimization-integrity.png
+    image: /assets/images/data_integrity_optimization_final.png
     image_ratio: is-4by3
     link: https://github.com/rgrantham82/data-integrity-optimization
     link_text: Explore on GitHub
