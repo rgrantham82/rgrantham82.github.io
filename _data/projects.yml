@@ -43,7 +43,7 @@ items:
       Performed client segmentation using clustering algorithms to identify distinct customer groups based on various attributes for an Austin investment firm. This involved analyzing synthetic client data, visualizing clusters, and developing targeted marketing strategies for each segment.
     image: /assets/images/client_segmentation.png
     image_ratio: is-4by3
-    link: /client-segmentation.html
+    link: https://www.kaggle.com/code/robertgrantham/client-segmentation
     link_text: View Project
     tags: Clustering, Market Analysis
     back_content: >
@@ -84,3 +84,16 @@ items:
     tags: Data Analysis, Statistical Analysis, Visualization
     back_content: >
       <p>Explore the detailed analysis of police shootings data for insights into law enforcement practices.</p>
+
+  - title: Data Optimization & Integrity
+    subtitle: Ensuring Data Accuracy and Efficiency
+    description: >
+      This project focuses on optimizing large datasets for efficiency while maintaining data integrity. It includes SQL optimizations, indexing strategies, and data validation techniques, demonstrating my expertise in managing and ensuring the reliability of critical data systems.
+    image: /assets/images/data-optimization-integrity.png
+    image_ratio: is-4by3
+    link: https://github.com/rgrantham82/data-integrity-optimization
+    link_text: Explore on GitHub
+    tags: Data Integrity, Optimization, SQL
+    github: rgrantham82/data-integrity-optimization
+    back_content: >
+      <p>Visit the GitHub repository to learn about data optimization strategies and integrity checks used to ensure high-quality data management.</p>
