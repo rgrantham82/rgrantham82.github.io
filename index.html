@@ -7,10 +7,17 @@ author_profile: true
 <section class="project-section">
   <div class="container">
     <h2 class="project-title text-center animate__animated animate__fadeInDown">Featured Projects</h2>
-    <div class="row"> {% for project in site.data.projects.items %} <div class="col-md-4 col-sm-6 col-xs-12 project-item animate__animated animate__fadeInUp" role="article" aria-labelledby="project-{{ forloop.index }}">
-        <h3 id="project-{{ forloop.index }}">{{ project.title }}</h3>
-        <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
-        <a href="{{ project.link }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="View project {{ project.title }}">{{ project.link_text }}</a>
-      </div> {% endfor %} </div>
+    <div class="row">
+      {% for project in site.data.projects.items %}
+        <div class="col-md-4 col-sm-6 col-xs-12 project-item animate__animated animate__fadeInUp" role="article" aria-labelledby="project-{{ forloop.index }}">
+          <!-- Image for the project -->
+          <img src="{{ project.image }}" alt="{{ project.title }}" class="img-fluid project-image">
+          
+          <h3 id="project-{{ forloop.index }}">{{ project.title }}</h3>
+          <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
+          <a href="{{ project.link }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="View project {{ project.title }}">{{ project.link_text }}</a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
