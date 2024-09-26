@@ -19,7 +19,7 @@ items:
     image: /assets/images/fraud-detection-plot.png
     image_ratio: is-4by3
     link: https://github.com/rgrantham82/fraud-detection.git
-    link_text: View Project
+    link_text: Explore on GitHub
     tags: Machine Learning, AI, Fraud Prevention
     github: rgrantham82/fraud-detection
     back_content: >
