@@ -75,7 +75,7 @@ seo:
     image: "/assets/images/profile-image.jpg" # Replace with the actual image path
 
 # Minimal Mistakes customization
-minimal_mistakes_skin: "sunrise" # Options: "default", "air", "dark", etc.
+minimal_mistakes_skin: "contrast" # Options: "default", "air", "dark", etc.
 
 # Plugins (previously gems:)
 plugins:
