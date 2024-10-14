@@ -61,18 +61,6 @@ items:
     back_content: >
       <p>View the interactive Tableau dashboard for detailed insights into Austin's crime data.</p>
 
-  - title: Police Shootings Analysis
-    subtitle: In-depth Data Examination
-    description: >
-      Conducted a thorough analysis of police shootings data to uncover trends and insights. This project involves data wrangling, statistical analysis, and visualization to provide a comprehensive overview of police shootings in the United States.
-    image: /assets/images/police-shootings-plot.png
-    image_ratio: is-4by3
-    link: https://www.kaggle.com/robertgrantham/police-shootings-analysis
-    link_text: View Project
-    tags: Data Analysis, Statistical Analysis, Visualization
-    back_content: >
-      <p>Explore the detailed analysis of police shootings data for insights into law enforcement practices.</p>
-
   - title: Data Optimization & Integrity
     subtitle: Ensuring Data Accuracy and Efficiency
     description: >
