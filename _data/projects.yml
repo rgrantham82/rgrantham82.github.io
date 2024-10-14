@@ -25,18 +25,6 @@ items:
     back_content: >
       <p>Visit the GitHub repository to explore the project implementation and results.</p>
 
-  - title: Forecasting Mini-Course Sales
-    subtitle: Sales Prediction Analysis
-    description: >
-      Analyzed sales data from a mini-course using various forecasting techniques to predict future sales trends. This project involved data preprocessing, model building, and evaluation to provide accurate sales forecasts.
-    image: /assets/images/mini-course-sales-forecast.png
-    image_ratio: is-4by3
-    link: https://www.kaggle.com/robertgrantham/forecasting-mini-course-sales
-    link_text: View Project
-    tags: Forecasting, Sales Analysis, Kaggle
-    back_content: >
-      <p>Explore the project on Kaggle to delve deeper into the sales forecasting methodology.</p>
-
   - title: Client Segmentation
     subtitle: Market Analysis and Strategy Development
     description: >
