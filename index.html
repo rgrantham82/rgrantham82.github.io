@@ -3,33 +3,24 @@ layout: home
 author_profile: true
 ---
 
-<!-- Projects Section -->
 <section class="project-section">
   <div class="container">
     <h2 class="project-title text-center animate__animated animate__fadeInDown">Featured Projects</h2>
-    <div class="row">
-      {% for project in site.data.projects.items %}
-      <div class="col-md-4 col-sm-6 col-xs-12 project-item animate__animated animate__fadeInUp" role="article" aria-labelledby="project-{{ forloop.index }}" data-aos="fade-up">
-        <!-- Image for the project -->
-        <img src="{{ project.image }}" alt="{{ project.title }}" class="img-fluid project-image">
-        <h3 id="project-{{ forloop.index }}">{{ project.title }}</h3>
+    <div class="row"> {% for project in site.data.projects.items %} <article class="col-lg-4 col-md-6 project-item animate__animated animate__fadeInUp" role="article" aria-labelledby="project-{{ forloop.index }}" data-aos="fade-right">
+        <header>
+          <h3 id="project-{{ forloop.index }}">{{ project.title }}</h3>
+        </header>
+        <img src="{{ project.image | replace: '.jpg', '.webp' }}" alt="Image for {{ project.title }} project" class="img-fluid project-image">
         <p>{{ project.description | strip_html | truncatewords: 30 }}</p>
-        <a href="{{ project.link }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="View project {{ project.title }}">{{ project.link_text }}</a>
-      </div>
-      {% endfor %}
-    </div>
+        <a href="{{ project.link }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="View project titled {{ project.title }}">{{ project.link_text }}</a>
+      </article> {% endfor %} </div>
   </div>
 </section>
-
-<!-- Include AOS CSS -->
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-<!-- Include GSAP and AOS Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<!-- Initialize AOS -->
+<!-- External Stylesheets and Scripts -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
@@ -37,7 +28,6 @@ author_profile: true
       easing: 'ease-in-out',
       once: true,
     });
-    
     // Smooth Scroll for Internal Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -49,3 +39,9 @@ author_profile: true
     });
   });
 </script>
+<!-- Meta Tags for SEO and Social Sharing -->
+<meta name="description" content="Showcasing projects like {{ project.title }} and more from my data analytics portfolio.">
+<meta property="og:title" content="Featured Projects">
+<meta property="og:image" content="{{ project.image }}">
+<meta property="og:description" content="{{ project.description | strip_html | truncatewords: 30 }}">
+<link rel="icon" href="/assets/images/favicon.png" />
