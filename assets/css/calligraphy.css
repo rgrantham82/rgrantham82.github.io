@@ -103,3 +103,65 @@
     padding: 2rem 1rem;
   }
 }
+
+/* General styling for the calligraphy page */
+.calligraphy-hero {
+  background: #7d7063; /* earthy, cardboard-like background */
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.calligraphy-hero .title {
+  font-family: 'Courier New', Courier, monospace; /* Handwritten or urban typeface */
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.calligraphy-hero .subtitle {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: #d9d3c4;
+  text-transform: uppercase;
+}
+
+.calligraphy-gallery {
+  background: #f5f5f5;
+  padding: 3rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #d3b8a0; /* Mimic cardboard frame */
+}
+
+.calligraphy-process {
+  padding: 2rem;
+  background: #e0dbce;
+}
+
+.calligraphy-process h2 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #5a5146;
+  text-transform: uppercase;
+}
+
+.calligraphy-process p {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin: 1rem auto;
+}
