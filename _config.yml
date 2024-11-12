@@ -38,7 +38,7 @@ author:
 nav:
   - home: /
   - projects: /projects/
-  - calligraphy: /calligraphy/ # New page
+  - calligraphy: /calligraphy/
   - about: /about/
 
 # Portfolio settings
@@ -46,20 +46,6 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:title/
-
-# Collections for organizing calligraphy
-collections:
-  calligraphy:
-    output: true
-    permalink: /calligraphy/:title/
-
-# Calligraphy-related social sharing
-og:
-  title: "Robert Grantham - Calligraphy Services & Data Analytics"
-  description: "Explore Robert Grantham's calligraphy services for custom invitations, event signage, and more, alongside his expertise in data analytics."
-  type: "website"
-  url: "https://rgrantham82.github.io/calligraphy"
-  image: "/assets/images/calligraphy-preview.jpg" # Replace with a relevant calligraphy image
 
 # Social sharing (optional)
 github_username: rgrantham82
