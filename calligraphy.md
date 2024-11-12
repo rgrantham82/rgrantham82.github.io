@@ -3,10 +3,10 @@ layout: home
 title: "Street Calligraphy"
 permalink: /calligraphy/
 head:
-  - <link rel="stylesheet" href="{{ '/assets/css/calligraphy.css' | relative_url }}">
 ---
 
 <!-- Hero Section: Bold Introduction -->
+<link rel="stylesheet" href="{{ '/assets/css/calligraphy.css' | relative_url }}">
 <section class="calligraphy-hero">
   <h1 class="title">Street Calligraphy on Cardboard</h1>
   <p class="subtitle">Art from the Streets, Crafted with Heart</p>
