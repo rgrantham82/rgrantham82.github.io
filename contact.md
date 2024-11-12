@@ -3,6 +3,7 @@ layout: home
 title: "Contact"
 permalink: /contact/
 ---
+<link rel="stylesheet" href="/assets/css/contact.css">
 
 ## Get in Touch
 
