@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: "Street Calligraphy"
 permalink: /calligraphy/
 head:
