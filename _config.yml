@@ -35,7 +35,11 @@ author:
       icon: "fa-solid fa-file"
       url: "/assets/files/Robert_Grantham_Resume.pdf"
     
-
+nav:
+  - home: /
+  - projects: /projects/
+  - calligraphy: /calligraphy/
+  - about: /about/
 
 # Portfolio settings
 collections:
