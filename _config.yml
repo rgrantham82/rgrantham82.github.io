@@ -38,7 +38,7 @@ author:
 nav:
   - home: /
   - projects: /projects/
-  - calligraphy: /calligraphy/
+  - calligraphy: /calligraphy/ # New page
   - about: /about/
 
 # Portfolio settings
