@@ -102,7 +102,7 @@ timezone: "America/Chicago" # Set to your timezone
 analytics:
   provider: "google"
   google:
-    tracking_id: "UA-XXXXXX-X" # Replace with your Google Analytics tracking ID
+    tracking_id: "G-7WZFJ98W4K" # Replace with your Google Analytics tracking ID
 
 # Markdown Processing
 markdown: kramdown
