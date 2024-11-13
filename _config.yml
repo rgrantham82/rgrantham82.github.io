@@ -23,7 +23,7 @@ copyright_url: "https://rgrantham82.github.io"
 comments:
   provider: "disqus"
   disqus:
-    shortname: "your-disqus-shortname" # Replace with your Disqus shortname
+    shortname: "robert-grantham-portfolio" # Replace with your Disqus shortname
 
 # Search Settings
 search: true
