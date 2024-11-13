@@ -1,51 +1,38 @@
 ---
 layout: home
-title: "Street Calligraphy"
+title: Calligraphy
 permalink: /calligraphy/
-head:
 ---
 
-<!-- Hero Section: Bold Introduction -->
-<link rel="stylesheet" href="{{ '/assets/css/calligraphy.css' | relative_url }}">
-<section class="calligraphy-hero">
-  <h1 class="title">Street Calligraphy on Cardboard</h1>
-  <p class="subtitle">Art from the Streets, Crafted with Heart</p>
-</section>
+<div class="calligraphy-page">
 
-<!-- Gallery Section: Display Calligraphy Art -->
-<section class="calligraphy-gallery">
-  <h2 class="section-title">Gallery</h2>
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="/assets/images/calligraphy1.jpg" alt="Street calligraphy on cardboard piece 1">
-    </div>
-    <div class="gallery-item">
-      <img src="/assets/images/calligraphy2.jpg" alt="Street calligraphy on cardboard piece 2">
-    </div>
-    <div class="gallery-item">
-      <img src="/assets/images/calligraphy3.jpg" alt="Street calligraphy on cardboard piece 3">
-    </div>
-    <!-- Add more images as necessary -->
+  <h2>Street Calligraphy: Art on the Move</h2>
+  <p class="intro-text">Welcome to my calligraphy showcase! I am a street artist, turning cardboard into my canvas, creating pieces that embody fluidity, expression, and raw creativity. Here, I display my favorite works, with each piece crafted with the unique texture and character of my primary canvas—cardboard.</p>
+
+  <h3>Why Cardboard?</h3>
+  <p>Cardboard offers a rugged, textured surface that reflects the street origins of my art. It’s also symbolic—transforming something discarded into something beautiful. The process itself is therapeutic, as the brush dances across the surface, making each stroke intentional yet spontaneous.</p>
+
+  <h3>The Calligraphy Collection</h3>
+  
+  <!-- Parallax Image -->
+  <div class="parallax" style="background-image: url('/assets/images/calligraphy1.jpg');"></div>
+
+  <p class="ink-flow">"Art is the journey of a free soul."</p>
+  
+  <div class="image-hover">
+    <img src="/assets/images/calligraphy2.jpg" alt="Street Calligraphy Art">
   </div>
-</section>
+  <p>One of my favorite pieces, this one captures the elegance of motion, where every stroke holds the rhythm of the street. The imperfections in the cardboard only enhance the character of the piece, adding depth and texture.</p>
 
-<!-- Process Section: Explain the Unique Approach -->
-<section class="calligraphy-process">
-  <h2>My Process</h2>
-  <p>
-    My calligraphy is more than just art—it's a statement of resilience and resourcefulness. Working with 
-    cardboard as my canvas, I breathe new life into this often discarded material. Every piece carries the texture of the streets, reflecting the challenges and creativity that come from creating art while navigating life's uncertainties. 
-    Using simple tools, found materials, and a mindset that embraces both chaos and beauty, I turn what’s seen as ordinary into something extraordinary.
-  </p>
-  <p>
-    Cardboard, with its raw texture and natural imperfections, is my primary medium. It absorbs ink in a way that creates depth and unique contrasts. 
-    The materials I use—sharpie markers, acrylic paints, and fountain pens—are chosen for their accessibility and their ability to leave a lasting mark, both figuratively and literally.
-  </p>
-</section>
+  <!-- Another Parallax Image -->
+  <div class="parallax" style="background-image: url('/assets/images/calligraphy3.jpg');"></div>
 
-<!-- Call to Action -->
-<section class="calligraphy-contact">
-  <h2>Let's Collaborate</h2>
-  <p>If you're interested in custom calligraphy pieces or want to learn more about my process, feel free to reach out! I am available for commissions, collaborations, and exhibitions. Together, we can bring street calligraphy to new spaces.</p>
-  <a href="/contact" class="btn btn-primary">Contact Me</a>
-</section>
+  <h3>Process and Tools</h3>
+  <p>I work with a variety of tools—brush pens, spray paint, and ink—to create layered effects on cardboard. My process is fluid, often starting with a rough idea and evolving into something more organic as the ink flows.</p>
+
+  <h3>Interested in Collaborating?</h3>
+  <p>If you're interested in collaborating or commissioning a custom piece, feel free to reach out! I love working with new ideas, and I can bring a unique flair to any project.</p>
+
+  <a href="/contact/" class="button">Get in Touch</a>
+
+</div>
