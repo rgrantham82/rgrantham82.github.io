@@ -1,5 +1,10 @@
 source "https://rubygems.org"
+
+# Theme gem for Minimal Mistakes
 gem "minimal-mistakes-jekyll"
 
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-include-cache", group: :jekyll_plugins
+# Gems required by GitHub Pages
+group :jekyll_plugins do
+  gem "github-pages"
+  gem "jekyll-include-cache"
+end
