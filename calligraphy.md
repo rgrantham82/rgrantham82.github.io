@@ -3,6 +3,7 @@ layout: home
 title: Calligraphy
 permalink: /calligraphy/
 ---
+<link rel="stylesheet" href="/assets/css/calligraphy.css">
 
 <div class="calligraphy-page">
 
