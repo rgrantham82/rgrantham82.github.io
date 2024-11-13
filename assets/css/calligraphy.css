@@ -19,6 +19,13 @@
   animation: fadeInUp 1.2s ease-out; /* Animate headings */
 }
 
+.calligraphy-page h3 {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  animation: fadeInUp 1.5s ease-out; /* Slight delay for subheadings */
+}
+
 /* Paragraph and Subheading Animations */
 .calligraphy-page p, .calligraphy-page h3 {
   font-size: 1.2rem;
@@ -123,6 +130,10 @@ form button[type="submit"]:hover {
   cursor: pointer;
   font-size: 1.2rem;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  width: max-content;
 }
 
 .button:hover {
@@ -180,4 +191,3 @@ form button[type="submit"]:hover {
     font-size: 1rem;
   }
 }
-
