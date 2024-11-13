@@ -1,97 +1,116 @@
-# Site settings
-title: "Robert Grantham - Data Analyst | Visualization & Predictive Analytics Expert"
-description: "Austin-based data analyst unlocking insights in finance, healthcare, and public safety through advanced visualization and predictive analytics. Let's drive business decisions with data!"
-baseurl: "" # Leave this blank for GitHub Pages
+# Theme Settings
+minimal_mistakes_skin: "contrast" # Set to "default," but you can change this to any of the available skins: "air", "aqua", etc.
+
+# Site Settings
+locale: "en-US"
+title: "Robert Grantham - Data Analyst"
+title_separator: "-"
+subtitle: "Data Analytics & Visualization"
+name: "Robert Grantham"
+description: "Data Analyst Portfolio showcasing skills in Python, SQL, Tableau, and more."
 url: "https://rgrantham82.github.io"
-remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Load the Minimal Mistakes theme remotely
+baseurl: "" # Leave this blank for GitHub Pages
+repository: "rgrantham82/rgrantham82.github.io"
+logo: "/assets/images/logo.png" # Update this path if you have a logo
+masthead_title: "Robert Grantham"
+breadcrumbs: true
+words_per_minute: 200
+enable_copy_code_button: true
+copyright: "Robert Grantham"
+copyright_url: "https://rgrantham82.github.io"
 
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-# Author details
-author:
-  location: "Austin, TX"
-  avatar: "/assets/images/profile-image.jpg" # Replace with your actual image path
-  name: Robert Grantham
-  bio: "Howdy! I'm Robert Grantham, a Data Analyst based in Austin, TX, driven by my passion for turning data into meaningful insights. With experience across finance (mortgage loss mitigation) and public safety, I specialize in data visualization, statistical analysis, and machine learning. I'm always eager to learn and apply the latest data science techniques, and am committed to growing professionally and continuously sharpening my skills to make a real impact."
-  
-  links:
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:robertgrantham40@gmail.com"
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/rgrantham82"
-    - label: "Kaggle"
-      icon: "fab fa-kaggle"
-      url: "https://www.kaggle.com/robertgrantham"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/robertgrantham82"
-    - label: "Resume"
-      icon: "fa-solid fa-file"
-      url: "/assets/files/Robert_Grantham_Resume.pdf"
-    
-nav:
-  - home: /
-  - projects: /projects/
-  - calligraphy: /calligraphy/
-  - about: /about/
-
-# Portfolio settings
-collections:
-  portfolio:
-    output: true
-    permalink: /portfolio/:title/
-
-# Social sharing (optional)
-github_username: rgrantham82
-linkedin_username: robertgrantham82
-
-# Disqus comments
+# Comments (for blog posts)
 comments:
   provider: "disqus"
   disqus:
-    shortname: "disqus_wITuNTyMjO" # Your Disqus shortname
+    shortname: "your-disqus-shortname" # Replace with your Disqus shortname
 
-# Google Analytics (optional)
-google_analytics: "UA-320030192-1" # Your Google Analytics ID
+# Search Settings
+search: true
+search_full_content: true
+search_provider: lunr
 
-# SEO and metadata
-seo:
-  title: "Robert Grantham - Data Analyst | Visualization & Predictive Analytics Expert"
-  description: "Portfolio of Robert Grantham, an Austin, TX-based Data Analyst with expertise in data visualization, machine learning, and statistical analysis. Skilled in uncovering business insights in finance, healthcare, and public safety."
-  keywords: "data analysis, predictive analytics, machine learning, data visualization, SQL, Python, Tableau, Austin TX, business insights"
-  name: "Robert Grantham - Data Analytics Portfolio"
-  author: "Robert Grantham"
-  twitter:
-    username: "rgrantham82"
-    card: "summary"
-    site: "@rgrantham82"
-  og:
-    title: "Robert Grantham - Data Analyst & Machine Learning Expert"
-    description: "Explore Robert Grantham's data analytics projects focused on predictive modeling, statistical analysis, and business insights through data."
-    type: "website"
-    url: "https://rgrantham82.github.io"
-    image: "/assets/images/profile-image.jpg" # Replace with the actual image path
+# SEO Related
+google_site_verification: # Add your Google verification code here
 
-# Minimal Mistakes customization
-minimal_mistakes_skin: "contrast" # Options: "default", "air", "dark", etc.
+# Social Sharing
+twitter:
+  username: "rgrantham82"
+facebook:
+  username: "robertgrantham"
+og_image: "/assets/images/og-image.png" # Add a fallback Open Graph image for social sharing
 
-# Plugins (previously gems:)
+# Site Author
+author:
+  name: "Robert Grantham"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "I am a skilled Data Analyst with expertise in Python, SQL, and visualization tools."
+  location: "Austin, TX"
+  email: "robertgrantham40@gmail.com"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:robertgrantham40@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/robertgrantham82"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/rgrantham82"
+    - label: "Portfolio"
+      icon: "fas fa-fw fa-briefcase"
+      url: "https://rgrantham82.github.io"
+
+# Site Footer
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/robertgrantham82"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/rgrantham82"
+    - label: "Portfolio"
+      icon: "fas fa-fw fa-briefcase"
+      url: "https://rgrantham82.github.io"
+
+# Pagination with jekyll-paginate
+paginate: 5
+paginate_path: "/page:num/"
+
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  
-# Markdown processor
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Output Settings
+permalink: /:categories/:title/
+timezone: "America/Chicago" # Set to your timezone
+
+# Analytics
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "UA-XXXXXX-X" # Replace with your Google Analytics tracking ID
+
+# Markdown Processing
+markdown: kramdown
+highlighter: rouge
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Load the Minimal Mistakes theme remotely
