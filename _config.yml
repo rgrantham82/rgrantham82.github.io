@@ -11,7 +11,7 @@ description: "Data Analyst Portfolio showcasing skills in Python, SQL, Tableau, 
 url: "https://rgrantham82.github.io"
 baseurl: "" # Leave this blank for GitHub Pages
 repository: "rgrantham82/rgrantham82.github.io"
-logo: "/assets/images/logo.png" # Update this path if you have a logo
+# logo: "/assets/images/logo.png" # Update this path if you have a logo
 masthead_title: "Robert Grantham"
 breadcrumbs: true
 words_per_minute: 200
@@ -43,14 +43,11 @@ og_image: "/assets/images/og-image.png" # Add a fallback Open Graph image for so
 # Site Author
 author:
   name: "Robert Grantham"
-  avatar: "/assets/images/avatar.jpg"
+  avatar: "assets/images/profile-image.jpg"
   bio: "I am a skilled Data Analyst with expertise in Python, SQL, and visualization tools."
   location: "Austin, TX"
   email: "robertgrantham40@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:robertgrantham40@gmail.com"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/robertgrantham82"
