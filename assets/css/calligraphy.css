@@ -7,40 +7,42 @@
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Dancing Script', cursive; /* Fancy font for calligraphy feel */
+  color: #333; /* Improved text contrast */
+  line-height: 1.8;
 }
 
 /* Heading Styles */
 .calligraphy-page h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: #2c3e50; /* Darker shade for better contrast */
   text-align: center;
   margin-bottom: 1.5rem;
   font-weight: bold;
-  animation: fadeInUp 1.2s ease-out; /* Animate headings */
+  animation: fadeInUp 1.2s ease-out;
 }
 
 .calligraphy-page h3 {
   font-size: 1.8rem;
-  color: #555;
+  color: #4a4a4a;
   margin-bottom: 1.2rem;
-  animation: fadeInUp 1.5s ease-out; /* Slight delay for subheadings */
+  font-weight: 600;
+  animation: fadeInUp 1.5s ease-out;
 }
 
-/* Paragraph and Subheading Animations */
-.calligraphy-page p, .calligraphy-page h3 {
+/* Paragraph Styling */
+.calligraphy-page p {
   font-size: 1.2rem;
-  color: #4a4a4a;
+  color: #555;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   animation: fadeIn 1.5s ease-out;
 }
 
 .calligraphy-page p.ink-flow {
-  font-family: 'Great Vibes', cursive; /* Adding flowy script for a calligraphy effect */
+  font-family: 'Great Vibes', cursive;
   font-size: 1.5rem;
   color: #2c3e50;
-  position: relative;
-  animation: inkFlow 3s ease-in-out; /* Ink flow effect */
+  animation: inkFlow 3s ease-in-out;
 }
 
 /* Form Styling */
@@ -48,8 +50,8 @@ form {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
+  margin: 20px auto;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,7 +60,7 @@ form {
 
 form label {
   font-size: 1rem;
-  color: #1a1a1a;
+  color: #333;
   margin-bottom: 0.5rem;
 }
 
@@ -67,22 +69,22 @@ form input[type="email"],
 form textarea {
   font-size: 1rem;
   padding: 10px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 100%;
   transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 form textarea {
   resize: vertical;
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
+form input:focus,
 form textarea:focus {
   border-color: #007bff;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
 form button[type="submit"] {
@@ -100,16 +102,7 @@ form button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* Image Styling with Parallax Effect */
-.calligraphy-page .parallax {
-  position: relative;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  margin-bottom: 2rem;
-}
-
+/* Image Styling */
 .calligraphy-page .image-hover img {
   width: 100%;
   transition: transform 0.5s ease;
@@ -118,32 +111,29 @@ form button[type="submit"]:hover {
 }
 
 .calligraphy-page .image-hover:hover img {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);
 }
 
 /* Button Styling */
 .button {
   padding: 10px 20px;
-  background-color: #000;
+  background-color: #444;
   color: #fff;
   border: none;
-  cursor: pointer;
   font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-block;
   transition: transform 0.3s ease, background-color 0.3s ease;
   text-align: center;
-  display: block;
   margin: 20px auto;
-  width: max-content;
 }
 
 .button:hover {
   transform: translateY(-3px);
-  background-color: #444;
+  background-color: #222;
 }
 
 /* Animations */
-
-/* Fade In Up Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -155,7 +145,6 @@ form button[type="submit"]:hover {
   }
 }
 
-/* Fade In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -165,7 +154,6 @@ form button[type="submit"]:hover {
   }
 }
 
-/* Ink Flow Animation */
 @keyframes inkFlow {
   0% {
     opacity: 0;
