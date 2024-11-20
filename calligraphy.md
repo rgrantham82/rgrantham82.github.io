@@ -36,7 +36,7 @@ This piece encapsulates the grandeur and emotion I strive to infuse into every s
 ### Featured Works
 
 #### **1. The Elegance of the Curve**  
-![Curved Calligraphy Example](assets/images/calligraphy_curve.png)  
+![Curved Calligraphy Example](assets/images/elegant_calligraphy.png)  
 This piece emphasizes the **grace of curves**, inviting viewers to follow the natural flow of its lines. The soft, sweeping movements evoke calmness and reflection, showcasing how form influences perception.
 
 ---
