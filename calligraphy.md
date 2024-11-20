@@ -48,7 +48,7 @@ Inspired by the dynamic energy of city life, this work fuses the raw, unpolished
 ---
 
 #### **3. Words of Strength**  
-![Strength Calligraphy Example](assets/images/strength_calligraphy.jpng)  
+![Strength Calligraphy Example](assets/images/strength_calligraphy.png)  
 With sharp, angular strokes, this piece symbolizes **resilience and determination**. It speaks to the empowering force of words, reminding viewers of their capacity to inspire and uplift during challenging times.
 
 ---
