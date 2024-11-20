@@ -36,19 +36,19 @@ This piece encapsulates the grandeur and emotion I strive to infuse into every s
 ### Featured Works
 
 #### **1. The Elegance of the Curve**  
-![Curved Calligraphy Example](assets/images/calligraphy_curve.jpg)  
+![Curved Calligraphy Example](assets/images/calligraphy_curve.png)  
 This piece emphasizes the **grace of curves**, inviting viewers to follow the natural flow of its lines. The soft, sweeping movements evoke calmness and reflection, showcasing how form influences perception.
 
 ---
 
 #### **2. Urban Lettering**  
-![Urban Calligraphy Example](assets/images/urban_calligraphy.jpg)  
+![Urban Calligraphy Example](assets/images/urban_calligraphy.png)  
 Inspired by the dynamic energy of city life, this work fuses the raw, unpolished aesthetic of graffiti with the structured discipline of classical calligraphy. The result is a striking visual piece that highlights the contrasts of modern life.
 
 ---
 
 #### **3. Words of Strength**  
-![Strength Calligraphy Example](assets/images/strength_calligraphy.jpg)  
+![Strength Calligraphy Example](assets/images/strength_calligraphy.jpng)  
 With sharp, angular strokes, this piece symbolizes **resilience and determination**. It speaks to the empowering force of words, reminding viewers of their capacity to inspire and uplift during challenging times.
 
 ---
