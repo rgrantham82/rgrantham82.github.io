@@ -1,12 +1,11 @@
 ---
-layout: blog
 title:  "The Future of Data Analytics in an AI-Driven World"
 date:   2024-07-20
 description: Maintaining value as data analysts in the ever changing world of AI.
-tags: data analyst role upskilling relevancy 
-published: true
-comments: true
-canonical_url: https://rgrantham82.github.io/2024/07/20/data-analysts-staying-relevant.html
+tags: 
+- data analyst role
+- upskilling
+- relevancy 
 ---
 
 As artificial intelligence (AI) and automation technologies continue to advance, the landscape of data analytics is undergoing a transformative shift. This rapid evolution is reshaping the role of data analysts, presenting both challenges and opportunities. In this blog post, we will explore the key concerns facing data analysts, identify emerging opportunities, and provide recommendations for retaining relevance in an AI-driven future.
