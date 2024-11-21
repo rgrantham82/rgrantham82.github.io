@@ -1,12 +1,13 @@
 ---
-layout: blog
 title:  "From Historical Insights to Statistical Analysis: Bridging the Past with Data"
 date:   2024-09-09
 description: Exploring how a background in history enhances employability and insights in data analytics.
-tags: data analytics, history, employability, storytelling, pattern recognition  
-comments: true
-published: true
-canonical_url: https://rgrantham82.github.io/2024/09/09/from-history-to-data.html
+tags: 
+- data analytics
+- history
+- employability
+- storytelling
+- pattern recognition  
 ---
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
