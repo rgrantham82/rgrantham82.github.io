@@ -1,13 +1,11 @@
 ---
-layout: blog
 title:  "Leveraging Data Analytics to Support the LGBT Community in Challenging Times"
 date:   2024-07-01
 description: A call to action for data analysts and scientists to leverage their skills in support of the LGBT community during challenging times.
 image: /assets/images/2024-07-01.png
-tags: LGBT community support CTA  
-comments: true
-published: true
-canonical_url: https://rgrantham82.github.io/2024/07/01/cta-lgbt-community-support.html
+tags: 
+- LGBT community support
+- CTA  
 ---
 
 <!-- Google tag (gtag.js) -->
