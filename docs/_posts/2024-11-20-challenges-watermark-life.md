@@ -1,9 +1,11 @@
 ---
-layout: post
 title: "Challenges: The Watermark of Life"
 date: 2024-11-20
 categories: reflections
-tags: [life, growth, challenges]
+tags: 
+- life
+- growth
+- challenges
 ---
 
 # Challenges: The Watermark of Life  
