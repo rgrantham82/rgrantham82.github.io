@@ -1,5 +1,6 @@
 ---
 title:  "From Historical Insights to Statistical Analysis: Bridging the Past with Data"
+author_profile: true
 date:   2024-09-09
 description: Exploring how a background in history enhances employability and insights in data analytics.
 tags: 
