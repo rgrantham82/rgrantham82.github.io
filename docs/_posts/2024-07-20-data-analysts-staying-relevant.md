@@ -1,4 +1,5 @@
 ---
+layout: posts
 title:  "The Future of Data Analytics in an AI-Driven World"
 author_profile: true
 date:   2024-07-20
