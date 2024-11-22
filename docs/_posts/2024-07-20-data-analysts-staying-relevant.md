@@ -1,5 +1,6 @@
 ---
 title:  "The Future of Data Analytics in an AI-Driven World"
+author_profile: true
 date:   2024-07-20
 description: Maintaining value as data analysts in the ever changing world of AI.
 tags: 
