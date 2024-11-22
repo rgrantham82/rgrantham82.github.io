@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: posts
 author_profile: true
 title:  "Automating Monthly Sales Report Generation with Macros and VBA in Excel"
 date:   2024-06-25
