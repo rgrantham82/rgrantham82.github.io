@@ -1,5 +1,6 @@
 ---
 title:  "Understanding the Implications of Grant's Pass v. Johnson on the Unhoused Community"
+author_profile: true
 date:   2024-07-30
 description: The recent SCOTUS decision in Grant's Pass v Johnson, and how data science can benefit the unhoused community.
 tags: 
