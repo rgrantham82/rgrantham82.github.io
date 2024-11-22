@@ -40,7 +40,7 @@ The holidays are the perfect time to add a personalized and artistic touch to yo
 
 ### **Order Details and Deadlines**  
 
-- **Holiday Commission Deadline**: December 10th  
+- **Holiday Commission Deadline**: December 20th  
 - To place an order, reach out via [email](mailto:robertgrantham40@gmail.com) or the [contact page](../contact).  
 
 ---
