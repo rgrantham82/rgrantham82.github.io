@@ -1,5 +1,6 @@
 ---
 title:  "Monsters in the Mirror: A Satirical Look at Society's Greatest Delusion"
+author_profile: true
 date:   2024-08-18
 description: A scathing satire on societal hypocrisy and the misguided perceptions of the unhoused, inspired by the style of Mark Twain.
 tags: 
