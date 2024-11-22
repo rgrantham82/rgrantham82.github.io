@@ -1,4 +1,5 @@
 ---
+layout: posts
 title:  "Monsters in the Mirror: A Satirical Look at Society's Greatest Delusion"
 author_profile: true
 date:   2024-08-18
