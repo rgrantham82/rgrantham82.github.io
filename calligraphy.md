@@ -12,6 +12,7 @@ tags:
 - lettering
 - typography]  
 ---  
+<link rel="stylesheet" href="/assets/css/calligraphy.css">
 
 ## Calligraphy: A Fusion of Tradition and Personal Expression  
 
