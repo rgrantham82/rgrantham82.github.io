@@ -1,4 +1,5 @@
 ---
+layout: posts
 title:  "Leveraging Data Analytics to Support the LGBT Community in Challenging Times"
 author_profile: true
 date:   2024-07-01
