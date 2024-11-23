@@ -27,7 +27,7 @@ The holidays are the perfect time to add a personalized and artistic touch to yo
 ## Featured Client Piece: Holiday Commission
 
 <div class="calligraphy-gallery">
-  <img src="/assets/images/holiday_client_piece.png" 
+  <img src="/assets/images/forever_friends_calligraphy.png" 
        alt="Holiday Calligraphy Client Piece" 
        class="calligraphy-image">
 </div>  
