@@ -14,93 +14,49 @@ tags:
 ---  
 <link rel="stylesheet" href="/assets/css/calligraphy.css">
 
-## Calligraphy: A Fusion of Tradition and Personal Expression  
+# Calligraphy Showcase
 
-Calligraphy, often described as "the art of beautiful handwriting," transcends its functional roots to become a celebration of form, movement, and artistry. Over time, I have developed a unique style that blends classical techniques with modern, street-inspired aesthetics. My work embodies a dialogue between tradition and innovation, utilizing unconventional tools and materials to craft expressive visual stories.  
+Welcome to my calligraphy portfolio! Here, I share my artistic journey and the unique creations crafted for clients. 
 
----
+## Holiday Commissions
 
-## **Holiday Commissions: Celebrate the Season with Calligraphy**  
-
-The holidays are the perfect time to add a personalized and artistic touch to your celebrations! Whether you're looking to impress with custom gift tags, greeting cards, or bespoke art pieces, I can help bring your ideas to life through calligraphy.  
-
-### **Featured Client Piece: Holiday Commission**  
-<div class="calligraphy-gallery">
-  <img src="/assets/images/forever_friends_calligraphy.png" 
-       alt="Holiday Calligraphy Client Piece" 
-       class="calligraphy-image">
-</div>  
+Looking for a unique gift or personal touch for the holiday season? My holiday commissions offer a range of personalized calligraphy pieces designed to capture special moments. Below is an example of a completed commission.
 
 ---
 
-### **Materials and Process**  
+### **"Forever Friends" – A Holiday Gift Commission**
 
-My artistic process revolves around repurposing everyday materials into canvases for creativity. **Cardboard**, a raw and textured medium, serves as my primary canvas, lending each piece a tactile, authentic quality. This choice reflects both practicality and a desire to highlight beauty in unexpected places.  
+#### Client: Lish  
+#### Occasion: Celebrating a lifelong friendship  
+#### Materials Used:
+- Medium: Recycled cardboard panel (11" x 14")
+- Ink: White and gold acrylic ink  
+- Tools: Brause calligraphy nibs, ruling pen  
+- Style: Modern Gothic with flourish accents  
 
-For tools, I combine **traditional calligraphy pens** and markers with bold instruments influenced by street art, such as brushes, thick markers, or found objects. The juxtaposition of fine, controlled lines with spontaneous, rough strokes captures the duality of my work: precise yet organic, structured yet free-flowing.  
+**Description:**  
+This piece was commissioned by Lish, a University of Texas student, as a heartfelt gift for her best friend Zinks. The text, *"Forever friends, from 1st grade to always,"* is surrounded by delicate flourishes and a shimmering gold border. The recycled cardboard background adds a rustic charm, while the combination of white and gold ink exudes elegance.  
 
----
+**Outcome:**  
+Lish was delighted with the final product, stating that it perfectly captured the depth of her friendship.  
 
-### **Style and Inspirations**  
-
-Grounded in the core principles of calligraphy—**balance, rhythm, and harmony**—my work also reflects deeply personal experiences. Each piece tells a story, whether through a classical quote, an original composition, or a word that resonates on an emotional level.  
-
----
-
-### **Featured Works**  
-
-#### **1. The Elegance of the Curve**  
-<div class="calligraphy-gallery">
-  <img src="/assets/images/elegant_calligraphy.png" 
-       alt="Curved Calligraphy Example" 
-       class="calligraphy-image">
-</div>  
-This piece emphasizes the **grace of curves**, inviting viewers to follow the natural flow of its lines. The soft, sweeping movements evoke calmness and reflection, showcasing how form influences perception.  
+![Forever Friends Calligraphy](assets/images/forever_friends_calligraphy.png)  
+*Photo of the commissioned piece.*
 
 ---
 
-#### **2. Urban Lettering**  
-<div class="calligraphy-gallery">
-  <img src="/assets/images/urban_calligraphy.png" 
-       alt="Urban Calligraphy Example" 
-       class="calligraphy-image">
-</div>  
-Inspired by the dynamic energy of city life, this work fuses the raw, unpolished aesthetic of graffiti with the structured discipline of classical calligraphy. The result is a striking visual piece that highlights the contrasts of modern life.  
+## How to Commission a Piece
+
+Interested in commissioning a unique calligraphy piece for the holidays or another special occasion? Please visit my [Contact Page](./contact.md).
+
+### Options Include:
+- **Holiday Cards**: Personalized messages and quotes.  
+- **Decorative Panels**: Inspirational quotes or custom designs.  
+- **Gift Items**: Unique, hand-lettered keepsakes for friends and family.
 
 ---
 
-#### **3. Words of Strength**  
-<div class="calligraphy-gallery">
-  <img src="/assets/images/strength_calligraphy.png" 
-       alt="Strength Calligraphy Example" 
-       class="calligraphy-image">
-</div>  
-Combining sharp and flowing strokes, this piece symbolizes **resilience and determination**. It speaks to the empowering force of words, reminding viewers of their capacity to inspire and uplift during challenging times.  
+## Gallery of Past Works
 
----
+[Explore More Calligraphy Projects](./gallery.md)
 
-### **How I Approach Each Piece**  
-
-Each calligraphy project begins with a single question: **What is the emotional tone I wish to convey?**  
-I then explore various layouts, balancing the flow of text with the interplay of positive and negative space. This iterative process ensures that each piece is not only visually compelling but also emotionally resonant.  
-
-My goal is to create art that speaks to the heart. Whether it’s the fluidity of a script or the boldness of a stroke, every element is crafted with intention, enhancing the connection between the viewer and the work.  
-
----
-
-### **Custom Calligraphy Services**  
-
-Beyond holiday commissions, I offer year-round **custom calligraphy services** tailored to your needs:  
-- Unique artworks for your home  
-- Personalized gifts for special occasions  
-- Custom lettering for events or branding  
-
-Reach out to discuss your vision, and together we can create something extraordinary.  
-
-For inquiries, please contact me via the [contact page](../contact) or email me at [robertgrantham40@gmail.com](mailto:robertgrantham40@gmail.com).  
-
----
-
-### **Get in Touch**  
-
-To explore more of my work or discuss a custom project, feel free to [contact me](../contact) or visit my [portfolio](../portfolio). I am always eager to take on new creative challenges and push the boundaries of this timeless art form.  
