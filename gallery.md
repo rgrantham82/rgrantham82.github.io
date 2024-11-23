@@ -1,6 +1,18 @@
+---  
+layout: home  
+title: "Calligraphy Gallery"  
+excerpt: "Celebrating the art of beautiful handwriting and its fusion with personal expression."  
+comments: true  
+share: true  
+toc: true  
+category: portfolio  
+tags:  
+  - calligraphy  
+  - visual-art  
+  - lettering  
+  - typography  
+---
 <link rel="stylesheet" href="/assets/css/gallery.css">
-
-# Calligraphy Gallery
 
 Welcome to the Calligraphy Gallery, where you can explore a collection of my unique works created for clients, personal projects, and special occasions. Each piece reflects my passion for combining artistry and craftsmanship.
 
