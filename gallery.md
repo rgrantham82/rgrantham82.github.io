@@ -7,7 +7,7 @@ Welcome to the Calligraphy Gallery, where you can explore a collection of my uni
 ## **Holiday Commissions**
 
 ### **"Forever Friends" – Celebrating Lifelong Friendship**  
-![Forever Friends Calligraphy](assets/images/forever-friends-calligraphy.jpg)  
+![Forever Friends Calligraphy](assets/images/forever_friends_calligraphy.png)  
 **Description:** A commissioned holiday gift capturing the deep bond between two best friends. White and gold ink on a recycled cardboard panel.  
 
 ---
