@@ -1,0 +1,115 @@
+/* General Styles for the Gallery Page */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-bottom: 4px solid #e2e2e2;
+}
+
+.gallery-item .description {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.gallery-item h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #444;
+}
+
+.gallery-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Typography for Quotes */
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.quote span {
+    font-weight: bold;
+}
+
+/* Special Occasions Section */
+.special-occasions {
+    margin-top: 40px;
+    padding: 40px 0;
+    background-color: #fafafa;
+}
+
+.special-occasions h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.special-occasions .gallery-item {
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+.special-occasions .gallery-item img {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .container {
+        width: 95%;
+    }
+}
