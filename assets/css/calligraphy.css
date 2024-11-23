@@ -1,3 +1,28 @@
+/* Center the images */
+.calligraphy-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a hover effect */
+.calligraphy-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Add captions below images */
+.image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    font-style: italic;
+}
+
 /* General Styles */
 body {
   font-family: 'Great Vibes', cursive, 'Times New Roman', serif; /* Elegant font for calligraphy */
