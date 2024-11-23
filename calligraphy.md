@@ -29,7 +29,7 @@ The holidays are the perfect time to add a personalized and artistic touch to yo
 #### **"Celebrating Friendship"**  
 Commissioned by a University of Texas student, this piece commemorates a cherished friendship. The artwork blends classical elegance with a modern flair to capture the enduring bond between two lifelong friends.  
 
-<img src="assets/images/holiday_client_piece.png" alt="Holiday Calligraphy Client Piece" class="calligraphy-image">  
+<img src="assets/images/forever_friends_calligraphy.png" alt="Holiday Calligraphy Client Piece" class="calligraphy-image">  
 <div class="image-caption">A heartfelt holiday commission celebrating friendship, blending classical and modern calligraphy styles.</div>
 
 ---
