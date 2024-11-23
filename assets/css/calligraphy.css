@@ -1,31 +1,6 @@
-/* Center the images */
-.calligraphy-image {
-    display: block;
-    margin: 20px auto;
-    max-width: 90%;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Add a hover effect */
-.calligraphy-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Add captions below images */
-.image-caption {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 5px;
-    font-style: italic;
-}
-
-/* General Styles */
+/* General Body Styles */
 body {
-  font-family: 'Great Vibes', cursive, 'Times New Roman', serif; /* Elegant font for calligraphy */
+  font-family: 'Great Vibes', cursive, 'Times New Roman', serif;
   background: linear-gradient(135deg, #f8f1e4, #e6ddc5);
   color: #4a4a4a;
   margin: 0;
@@ -46,16 +21,32 @@ h1, h2, h3 {
   animation: fadeIn 2s ease-in-out;
 }
 
-h1 {
-  font-size: 3rem;
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+
+/* Calligraphy Image */
+.calligraphy-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-h2 {
-  font-size: 2.2rem;
+.calligraphy-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-h3 {
-  font-size: 1.8rem;
+/* Captions for Images */
+.image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 /* Calligraphy Sample Gallery */
@@ -69,10 +60,10 @@ h3 {
 .gallery-item {
   position: relative;
   overflow: hidden;
-  background: #ffffff;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .gallery-item:hover {
@@ -83,14 +74,14 @@ h3 {
 .gallery-item img {
   width: 100%;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s;
 }
 
 .gallery-item:hover img {
   transform: scale(1.1);
 }
 
-/* Overlay Effect for Captions */
+/* Overlay for Captions */
 .overlay {
   position: absolute;
   top: 0;
@@ -98,12 +89,12 @@ h3 {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  color: #ffffff;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s;
   border-radius: 10px;
 }
 
@@ -128,7 +119,7 @@ h3 {
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
-  transition: background 0.4s ease, transform 0.3s ease;
+  transition: background 0.4s, transform 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -187,7 +178,7 @@ h3 {
 .lazy-load {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s, transform 0.6s;
 }
 
 .lazy-load.is-visible {
