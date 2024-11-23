@@ -1,6 +1,5 @@
 ---  
 layout: home  
-title: "Calligraphy Gallery"  
 excerpt: "Celebrating the art of beautiful handwriting and its fusion with personal expression."  
 comments: true  
 share: true  
