@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/assets/css/gallery.css">
+
 # Calligraphy Gallery
 
 Welcome to the Calligraphy Gallery, where you can explore a collection of my unique works created for clients, personal projects, and special occasions. Each piece reflects my passion for combining artistry and craftsmanship.
