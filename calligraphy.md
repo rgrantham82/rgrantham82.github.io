@@ -10,7 +10,7 @@ tags:
 - calligraphy
 - visual-art
 - lettering
-- typography]  
+- typography  
 ---  
 <link rel="stylesheet" href="/assets/css/calligraphy.css">
 
@@ -37,6 +37,14 @@ The holidays are the perfect time to add a personalized and artistic touch to yo
 
 - **Seasonal Decor Pieces**  
   Commission a unique artwork to elevate your holiday ambiance.  
+
+---
+
+### **Finished Client Work**  
+
+#### **"Forever Friends" – A Tribute to Lifelong Bonds**  
+![Forever Friends Calligraphy](assets/images/forever_friends_calligraphy.png)  
+**Description:** Commissioned by a University of Texas student, this piece celebrates the enduring friendship between two best friends, Lish and Zinks, who have known each other since first grade. Crafted on a recycled cardboard panel, the work features white and gold lettering to symbolize purity and timelessness.  
 
 ### **Order Details and Deadlines**  
 
