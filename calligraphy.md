@@ -34,10 +34,7 @@ Looking for a unique gift or personal touch for the holiday season? My holiday c
 - Style: Modern Gothic with flourish accents  
 
 **Description:**  
-This piece was commissioned by Lish, a University of Texas student, as a heartfelt gift for her best friend Zinks. The text, *"Forever friends, from 1st grade to always,"* is surrounded by delicate flourishes and a shimmering gold border. The recycled cardboard background adds a rustic charm, while the combination of white and gold ink exudes elegance.  
-
-**Outcome:**  
-Lish was delighted with the final product, stating that it perfectly captured the depth of her friendship.  
+This piece was commissioned by Lish, a University of Texas student, as a heartfelt gift for her best friend Zinks. 
 
 ![Forever Friends Calligraphy](assets/images/forever_friends_calligraphy.png)  
 *Photo of the commissioned piece.*
