@@ -58,7 +58,7 @@ Using recycled cardboard is more than just a personal style—it's a philosophy.
 Here are a few examples of the types of work I create, from heartfelt personal pieces to striking statements of art:
 
 ### Lish & Zinks
-![Lish & Zinks Forever](assets/images/lish-zinks-calligraphy.png)
+![Lish & Zinks Forever](assets/images/forever_friends_calligraphy.png)
 *A piece celebrating lifelong friendship, created with intricate flourishes and holiday-inspired details.*
 
 ### Urban Calligraphy
