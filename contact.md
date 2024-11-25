@@ -2,6 +2,7 @@
 layout: home
 permalink: /contact/
 ---
+<link rel="stylesheet" href="/assets/css/contact.css">
 
 # Contact Me
 
