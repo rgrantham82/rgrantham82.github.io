@@ -66,7 +66,7 @@ Here are a few examples of the types of work I create, from heartfelt personal p
 *Bold and modern, this piece reflects the vibrancy of urban life with a contemporary calligraphy style.*
 
 ### "Sustainability in Style"
-![Sustainability in Style](assets/images/sustainability-calligraphy.png)
+![Sustainability in Style](assets/images/sustainability_calligraphy.png)
 *Combining vibrant strokes with raw cardboard edges, this work celebrates the fusion of eco-consciousness and creativity.*
 
 ---
