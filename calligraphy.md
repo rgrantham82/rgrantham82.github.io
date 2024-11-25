@@ -68,6 +68,6 @@ Thank you for being a part of this journey.
 
 ---  
 
-**View the Gallery:** [Link to the gallery page]  
+[**View the Gallery:**](/gallery)
 
-If you’d like to learn more about my process or commission a custom calligraphy piece, feel free to [get in touch](#contact).  
+If you’d like to learn more about my process or commission a custom calligraphy piece, feel free to contact me.  
