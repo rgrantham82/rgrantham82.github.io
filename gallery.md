@@ -14,12 +14,6 @@ tags:
 ---
 <link rel="stylesheet" href="/assets/css/gallery.css">
 
----
-layout: default
-title: Calligraphy Gallery
-permalink: /gallery/
----
-
 # Calligraphy Gallery
 
 Welcome to my Calligraphy Gallery! Here, you'll find a collection of my work that reflects not only my passion for the art but also my dedication to giving back to the community and the environment. I use **recycled cardboard as my canvas**, blending sustainability with creativity. Each piece is unique, designed with care, and contributes to keeping materials out of landfills.
