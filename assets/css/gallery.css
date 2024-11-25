@@ -1,3 +1,38 @@
+/* Common image styles for both Calligraphy and Gallery pages */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 90%;
+    border: 2px solid #333; /* Add a border to give emphasis */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    overflow: hidden; /* Ensures smooth corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+.image-container img {
+    display: block;
+    width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures consistent layout */
+}
+
+/* Optional: Caption styling */
+.image-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+}
+
 /* General Gallery Styles */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
