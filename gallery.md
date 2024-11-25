@@ -15,6 +15,11 @@ tags:
 <link rel="stylesheet" href="/assets/css/gallery.css">
 
 ---
+layout: default
+title: Calligraphy Gallery
+permalink: /gallery/
+---
+
 # Calligraphy Gallery
 
 Welcome to my Calligraphy Gallery! Here, you'll find a collection of my work that reflects not only my passion for the art but also my dedication to giving back to the community and the environment. I use **recycled cardboard as my canvas**, blending sustainability with creativity. Each piece is unique, designed with care, and contributes to keeping materials out of landfills.
@@ -59,12 +64,12 @@ Using recycled cardboard is more than just a personal style—it's a philosophy.
 Here are a few examples of the types of work I create, from heartfelt personal pieces to striking statements of art:
 
 ### Lish & Zinks
-![Lish & Zinks Forever](assets/images/forever_friends_calligraphy.png)
+![Lish & Zinks Forever](assets/images/lish-zinks-calligraphy.png)
 *A piece celebrating lifelong friendship, created with intricate flourishes and holiday-inspired details.*
 
-### "Forever Yours"
-![Forever Yours](assets/images/forever-yours-calligraphy.png)
-*Romantic and deeply personal, this piece captures the raw emotion of love.*
+### Urban Calligraphy
+![Urban Calligraphy](assets/images/urban_calligraphy.png)
+*Bold and modern, this piece reflects the vibrancy of urban life with a contemporary calligraphy style.*
 
 ### "Sustainability in Style"
 ![Sustainability in Style](assets/images/sustainability-calligraphy.png)
@@ -77,7 +82,6 @@ Here are a few examples of the types of work I create, from heartfelt personal p
 I believe that calligraphy can be both art and a statement of values. Every piece I create carries meaning, whether it’s a message of love, a celebration of friendship, or a tribute to nature. Explore my work, and if something speaks to you, reach out—I’d love to collaborate.
 
 Thank you for visiting, and I hope my work inspires you as much as the process inspires me.
-
 
 ---
 
