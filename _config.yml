@@ -44,7 +44,7 @@ og_image: "/assets/images/og-image.png" # Add a fallback Open Graph image for so
 author:
   name: "Robert Grantham"
   avatar: "assets/images/profile-image.jpg"
-  bio: "I am a skilled Data Analyst with expertise in Python, SQL, and visualization tools."
+  bio: "I am a skilled Data Analyst with expertise in Python, SQL, and visualization tools. I also do calligraphy! 😁"
   location: "Austin, TX"
   email: "robertgrantham40@gmail.com"
   links:
