@@ -1,6 +1,5 @@
 ---  
 layout: home
-title: "Calligraphy Gallery"
 permalink: /gallery
 author_profile: true
 excerpt: "Celebrating the art of beautiful handwriting and its fusion with personal expression."  
