@@ -2,34 +2,11 @@
 layout: home
 author_profile: true
 ---
-
+<body>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-      section {
-        padding: 80px 0;
-        margin-bottom: 40px;
-      }
-
-      h1,
-      h2 {
-        margin-bottom: 20px;
-      }
-
-      .post-date {
-        font-size: 0.9rem;
-        color: #777;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Your HTML content here -->
-  </body>
-  <section class="project-section">
+  <!-- Your HTML content here -->
+    <section class="project-section">
     <div class="container">
       <h2 class="project-title text-center animate__animated animate__fadeInDown">Featured Projects</h2>
       <div class="row"> {% for project in site.data.projects.items %} <article class="col-lg-4 col-md-6 project-item animate__animated animate__fadeInUp" role="article" aria-labelledby="project-{{ forloop.index }}" data-aos="fade-right">
@@ -72,4 +49,5 @@ author_profile: true
   <meta property="og:image" content="{{ project.image }}">
   <meta property="og:description" content="{{ project.description | strip_html | truncatewords: 30 }}">
   <link rel="icon" href="/assets/images/favicon.png" />
+  </body>
 </html>
