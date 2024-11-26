@@ -60,22 +60,6 @@ Looking for a personalized calligraphy piece? I’d love to collaborate! Whether
 
 ---
 
-## Spotlight: Unique Pieces
-
-### Lish & Zinks
-![Lish & Zinks Forever](assets/images/forever_friends_calligraphy.png)
-*A heartfelt tribute to lifelong friendship, adorned with intricate flourishes.*
-
-### Urban Calligraphy
-![Urban Calligraphy](assets/images/urban_calligraphy.png)
-*A bold and modern style celebrating the vibrancy of city life.*
-
-### "Sustainability in Style"
-![Sustainability in Style](assets/images/sustainability_calligraphy.png)
-*Blending artistic expression with eco-conscious design, this piece is a statement of values.*
-
----
-
 ## Let’s Create Together
 
 Art has the power to inspire and connect. My calligraphy is more than aesthetic—it’s a way to express meaning and values. Explore the gallery, and if something resonates with you, let’s collaborate to bring your vision to life.
