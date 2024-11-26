@@ -73,6 +73,9 @@ footer:
     - label: "Portfolio"
       icon: "fas fa-fw fa-briefcase"
       url: "https://rgrantham82.github.io"
+    - label: "Calligraphy" 
+      icon: "fas fa-fw fa-pen-nib"
+      url: "https://rgrantham82.github.io/calligraphy
 
 # Pagination with jekyll-paginate
 paginate: 5
