@@ -58,7 +58,7 @@ author:
       icon: "fas fa-fw fa-briefcase"
       url: "https://rgrantham82.github.io"
     - label: "Calligraphy" 
-      icon: "fas fa-fw fa-pen-nib"
+      icon: "fa-solid fa-pen-nib"
       url: "https://rgrantham82.github.io/calligraphy
 
 # Site Footer
@@ -74,7 +74,7 @@ footer:
       icon: "fas fa-fw fa-briefcase"
       url: "https://rgrantham82.github.io"
     - label: "Calligraphy" 
-      icon: "fas fa-fw fa-pen-nib"
+      icon: "fa-solid fa-pen-nib"
       url: "https://rgrantham82.github.io/calligraphy
 
 # Pagination with jekyll-paginate
