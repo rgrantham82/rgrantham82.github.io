@@ -5,7 +5,7 @@ minimal_mistakes_skin: "contrast" # Set to "default," but you can change this to
 locale: "en-US"
 title: "Robert Grantham - Data Analyst"
 title_separator: "-"
-subtitle: "Data Analytics & Visualization | Master Calligrapher & Scribe"
+subtitle: "Data Analytics & Visualization | Master [Calligrapher](/calligraphy) & Scribe"
 name: "Robert Grantham"
 description: "Data Analyst Portfolio showcasing skills in Python, SQL, Tableau, and more."
 url: "https://rgrantham82.github.io"
