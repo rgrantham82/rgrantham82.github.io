@@ -10,18 +10,21 @@ Thank you for visiting my portfolio! Whether you're here to explore my calligrap
 
 ---
 
-## **How to Reach Me**
+<h2>Get in Touch</h2>
+<p>I'd love to hear from you! Please fill out the form below to reach out.</p>
 
-Feel free to contact me through any of the following channels:
+<form action="https://formspree.io/f/mqkjawkw" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
 
-- **Email**: [robertgrantham40@gmail.com](mailto:robertgrantham40@gmail.com)  
-  (Best for detailed inquiries, project proposals, or commissions)
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
 
-- **Phone**: (512) 200-3563  
-  (Text preferred; I aim to respond within 24-48 hours)
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
 
-- **LinkedIn**: [linkedin.com/in/robertgrantham82](https://www.linkedin.com/in/robertgrantham82)
-
+  <button type="submit">Send</button>
+</form>
 ---
 
 ## **Calligraphy Commissions**
