@@ -59,7 +59,7 @@ author:
       url: "https://rgrantham82.github.io"
     - label: "Calligraphy" 
       icon: "fa-solid fa-pen-nib"
-      url: "https://rgrantham82.github.io/calligraphy
+      url: "https://rgrantham82.github.io/calligraphy"
 
 # Site Footer
 footer:
@@ -75,7 +75,7 @@ footer:
       url: "https://rgrantham82.github.io"
     - label: "Calligraphy" 
       icon: "fa-solid fa-pen-nib"
-      url: "https://rgrantham82.github.io/calligraphy
+      url: "https://rgrantham82.github.io/calligraphy"
 
 # Pagination with jekyll-paginate
 paginate: 5
