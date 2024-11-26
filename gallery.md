@@ -1,5 +1,5 @@
 ---  
-layout: page
+layout: home
 title: "Calligraphy Gallery"
 permalink: /calligraphy/
 author_profile: true
