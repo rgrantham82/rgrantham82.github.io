@@ -1,5 +1,7 @@
 ---  
-layout: home
+layout: page
+title: "Calligraphy Gallery"
+permalink: /calligraphy/
 author_profile: true
 excerpt: "Celebrating the art of beautiful handwriting and its fusion with personal expression."  
 comments: true  
@@ -8,75 +10,74 @@ toc: true
 category: portfolio  
 tags:  
   - calligraphy  
-  - visual-art  
+  - visual art  
   - lettering  
   - typography  
 ---
+
 <link rel="stylesheet" href="/assets/css/gallery.css">
 
 # Calligraphy Gallery
 
-Welcome to my Calligraphy Gallery! Here, you'll find a collection of my work that reflects not only my passion for the art but also my dedication to giving back to the community and the environment. I use **recycled cardboard as my canvas**, blending sustainability with creativity. Each piece is unique, designed with care, and contributes to keeping materials out of landfills.
+Welcome to my Calligraphy Gallery! Here, you’ll find a curated selection of my artwork that blends **sustainability** with **artistic passion**. Using **recycled cardboard as my canvas**, each piece reflects care for the environment and creative innovation.
 
 ---
 
-<section class="cardboard-container">
+## Featured Works
+
+<div class="artwork-gallery">
   {% for artwork in site.data.artworks %}
-  <div class="cardboard-item">
-    <img src="{{ artwork.image }}" alt="{{ artwork.title }}">
-    <div class="content">
+  <div class="artwork-item">
+    <img src="{{ artwork.image }}" alt="{{ artwork.title }}" class="artwork-image">
+    <div class="artwork-details">
       <h3>{{ artwork.title }}</h3>
       <p>{{ artwork.description }}</p>
-      <div class="sustainability-badge">Eco-Friendly</div>
+      <span class="sustainability-badge">Eco-Friendly</span>
     </div>
   </div>
   {% endfor %}
-</section>
+</div>
 
 ---
 
 ## Why Cardboard?
 
-Using recycled cardboard is more than just a personal style—it's a philosophy. By reimagining discarded materials, I create art that tells a story of transformation and resilience. Each panel is carefully prepared, its natural texture adding depth and character to my calligraphy. This practice allows me to:
+Recycled cardboard isn’t just my canvas; it’s my philosophy. It transforms the ordinary into the extraordinary, proving that even discarded materials can tell powerful stories. This approach:
 
-- Reduce waste and contribute to sustainability.
-- Offer a unique aesthetic that blends raw authenticity with artistic elegance.
-- Honor the community that supports me by giving back in an impactful way.
-
----
-
-<section class="cta">
-  <h2>Commission Your Own Calligraphy Artwork</h2>
-  <p>Interested in having a piece created just for you or someone special? Let's work together to bring your vision to life.</p>
-  <a href="/contact/">Get in Touch</a>
-</section>
+- Promotes sustainability by reducing waste.
+- Adds depth and texture to every piece, enhancing its unique character.
+- Highlights my commitment to art with purpose, grounded in community and environmental values.
 
 ---
 
-## Featured Pieces
+## Commission Your Own Artwork
 
-Here are a few examples of the types of work I create, from heartfelt personal pieces to striking statements of art:
+Looking for a personalized calligraphy piece? I’d love to collaborate! Whether it’s for a gift, a special occasion, or a meaningful message, I can create something just for you.
+
+<div class="cta">
+  <a href="/contact/" class="cta-button">Get in Touch</a>
+</div>
+
+---
+
+## Spotlight: Unique Pieces
 
 ### Lish & Zinks
 ![Lish & Zinks Forever](assets/images/forever_friends_calligraphy.png)
-*A piece celebrating lifelong friendship, created with intricate flourishes and holiday-inspired details.*
+*A heartfelt tribute to lifelong friendship, adorned with intricate flourishes.*
 
 ### Urban Calligraphy
 ![Urban Calligraphy](assets/images/urban_calligraphy.png)
-*Bold and modern, this piece reflects the vibrancy of urban life with a contemporary calligraphy style.*
+*A bold and modern style celebrating the vibrancy of city life.*
 
 ### "Sustainability in Style"
 ![Sustainability in Style](assets/images/sustainability_calligraphy.png)
-*Combining vibrant strokes with raw cardboard edges, this work celebrates the fusion of eco-consciousness and creativity.*
+*Blending artistic expression with eco-conscious design, this piece is a statement of values.*
 
 ---
 
-## Let's Create Together
+## Let’s Create Together
 
-I believe that calligraphy can be both art and a statement of values. Every piece I create carries meaning, whether it’s a message of love, a celebration of friendship, or a tribute to nature. Explore my work, and if something speaks to you, reach out—I’d love to collaborate.
+Art has the power to inspire and connect. My calligraphy is more than aesthetic—it’s a way to express meaning and values. Explore the gallery, and if something resonates with you, let’s collaborate to bring your vision to life.
 
-Thank you for visiting, and I hope my work inspires you as much as the process inspires me.
-
----
-
-Thank you for visiting the gallery. Check back often to see new works!
+Thank you for visiting my gallery! New works are added regularly, so check back often.
