@@ -1,0 +1,77 @@
+# Site settings
+title: "Robert Grantham Calligraphy"
+description: "A calligrapher and street artist blending modern calligraphy with urban influences on cardboard."
+url: "https://rgrantham82.github.io" # Your GitHub Pages site URL
+baseurl: "" # Leave blank for root
+author: 
+  name: "Robert Grantham"
+  email: "robertgrantham40@gmail.com"
+  twitter: "rgrantham82"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-data
+  - jekyll-archives
+
+# Pagination settings
+paginate: 5 # Number of posts per page
+paginate_path: "/blog/page:num/"
+
+# Defaults for Markdown and Permalinks
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/:categories/:year/:month/:day/:title/"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - _drafts/
+
+# Data directory
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+  artworks:
+    output: false
+
+# SEO and sitemap settings
+jekyll-seo-tag:
+  title_separator: "|"
+  author:
+    name: "Robert Grantham"
+  social:
+    twitter: rgrantham82
+
+jekyll-sitemap:
+  changefreq: "weekly"
+  priority: "0.8"
+
+# Social links
+social_links:
+  github: "https://github.com/rgrantham82"
+  linkedin: "https://linkedin.com/in/robertgrantham82"
+  email: "mailto:robertgrantham40@gmail.com"
+
+# Custom variables
+custom:
+  gallery_images_path: "/assets/images/gallery/"
+  posts_directory: "_posts"
