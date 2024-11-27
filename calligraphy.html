@@ -1,82 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Street Calligraphy</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="#hero" class="logo">Street Calligraphy</a>
-      <ul class="nav-links">
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#gallery">Gallery</a>
-        </li>
-        <li>
-          <a href="#blog">Blog</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1>Street Calligraphy</h1>
-        <p class="tagline">Where artistry meets sustainability</p>
-        <div class="hero-buttons">
-          <a href="#gallery" class="btn">Explore Artwork</a>
-          <a href="#contact" class="btn">Get in Touch</a>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poiret+One&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header Section with Hero Banner -->
+    <header>
+        <div class="hero-banner">
+            <img src="/assets/images/hero.png" alt="Hero Banner">
+            <div class="hero-content">
+                <h1>Street Calligraphy by Robert Grantham</h1>
+                <p>Modern Calligraphy with a Street-Style Twist</p>
+            </div>
         </div>
-      </div>
-      <img src="assets/images/hero.png" alt="Hero Banner" class="hero-image">
-    </section>
-    <!-- About Section -->
+    </header>
+
+    <!-- About Me Section -->
     <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>I specialize in street-style calligraphy, blending graffiti aesthetics with modern lettering. My work is crafted on recycled cardboard to keep materials out of landfills and contribute to a sustainable future.</p>
-      <img src="assets/images/about.jpg" alt="Calligrapher at work">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="/assets/images/about-image.jpg" alt="Robert Grantham" class="about-image">
+            <p>I am Robert Grantham, a calligrapher and artist with a passion for blending modern calligraphy with street art influences. I use cardboard not only because it's easily accessible, but also to keep it out of landfills, promoting sustainability. My work is a tribute to friendship, urban life, and eco-consciousness.</p>
+        </div>
     </section>
+
     <!-- Gallery Section -->
     <section id="gallery" class="section">
-      <h2>Gallery</h2>
-      <div class="gallery-grid"> {% for artwork in site.data.artworks %} <div class="gallery-item">
-          <img src="{{ artwork.image }}" alt="{{ artwork.title }}">
-          <p>{{ artwork.title }}</p>
-        </div> {% endfor %} </div>
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            {% for artwork in site.data.artworks %}
+            <div class="gallery-item">
+                <img src="{{ artwork.image }}" alt="{{ artwork.title }}">
+                <h3>{{ artwork.title }}</h3>
+                <p>{{ artwork.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </section>
+
     <!-- Blog Section -->
     <section id="blog" class="section">
-      <h2>Blog</h2>
-      <div class="blog-posts"> {% for post in site.posts %} {% if post.path contains "docs/" %} <div class="blog-post">
-          <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h3>
-          <p>{{ post.excerpt }}</p>
-        </div> {% endif %} {% endfor %} </div>
+        <h2>Blog</h2>
+        <div class="blog-list">
+            {% for post in site.posts %}
+                {% if post.path contains 'docs/' %}
+                <div class="blog-item">
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <p>{{ post.excerpt }}</p>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <p>Interested in my work or looking to commission a piece? Reach out to me using the form below.</p>
-      <form action="https://formspree.io/f/mbjnwpgb" method="POST">
-        <label> Your email: <input type="email" name="email">
-        </label>
-        <label> Your message: <textarea name="message"></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-      </form>
+        <h2>Contact</h2>
+        <p>If you'd like to purchase a piece, commission a custom artwork, or simply chat about street calligraphy, feel free to reach out!</p>
+        
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/mbjnwpgb" method="POST" class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
-    <!-- Footer -->
+
+    <!-- Footer Section -->
     <footer>
-      <p>&copy; 2024 Street Calligraphy. All Rights Reserved.</p>
+        <div class="footer-content">
+            <p>© 2024 Robert Grantham -- Street Calligraphy. All Rights Reserved.</p>
+            <p><a href="https://linkedin.com/in/robertgrantham82" target="_blank">LinkedIn</a></p>
+        </div>
     </footer>
-  </body>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
 </html>
