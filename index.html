@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Modern street calligraphy with a sustainable twist.">
@@ -10,82 +10,83 @@
     <meta property="og:image" content="/assets/images/og-image.jpg">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Robert Grantham | Street Calligraphy</title>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Robert Grantham</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1>Robert Grantham</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="https://www.deviantart.com/wotan587" target="_blank">DeviantArt</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/wotan587/" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
     <section id="hero">
-        <img src="assets/images/hero.jpg" alt="Street Calligraphy">
+      <img src="assets/images/hero.png" alt="Street Calligraphy">
     </section>
-
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <img src="assets/images/about-me.jpg" alt="Robert Grantham">
-        <p>
-            I am Robert Grantham, a calligrapher and artist with a passion for blending modern calligraphy with street art influences. I use cardboard not only because it's easily accessible but also to keep it out of landfills, promoting sustainability. My work is a tribute to friendship, urban life, and eco-consciousness.
-        </p>
+      <h2>About Me</h2>
+      <img src="assets/images/profile-image.jpg" alt="Robert Grantham">
+      <p> I am Robert Grantham, a calligrapher and artist with a passion for blending modern calligraphy with street art influences. I use cardboard not only because it's easily accessible but also to keep it out of landfills, promoting sustainability. My work is a tribute to friendship, urban life, and eco-consciousness. </p>
     </section>
-
     <section id="gallery" class="section">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            {% for artwork in site.data.artworks %}
-            <div class="gallery-item">
-                <img src="{{ artwork.image }}" alt="{{ artwork.title }}">
-                <h3>{{ artwork.title }}</h3>
-                <p>{{ artwork.description }}</p>
-            </div>
-            {% endfor %}
-        </div>
+      <h2>Gallery</h2>
+      <div class="gallery-grid"> {% for artwork in site.data.artworks %} <div class="gallery-item">
+          <img src="{{ artwork.image }}" alt="{{ artwork.title }}">
+          <h3>{{ artwork.title }}</h3>
+          <p>{{ artwork.description }}</p>
+        </div> {% endfor %} </div>
     </section>
-
     <section id="blog" class="section">
-        <h2>Blog</h2>
-        <div class="blog-list">
-            {% for post in site.posts %}
-            {% if post.path contains '_posts/docs' %}
-            <div class="blog-item">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                <a href="{{ post.url }}">Read More</a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
+      <h2>Blog</h2>
+      <div class="blog-list"> {% for post in site.posts %} {% if post.path contains '_posts/docs' %} <div class="blog-item">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <a href="{{ post.url }}">Read More</a>
+        </div> {% endif %} {% endfor %} </div>
     </section>
-
     <section id="contact" class="section">
-        <h2>Contact</h2>
-        <form action="#" method="POST">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+      <h2>Contact</h2>
+      <form action="#" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
-
     <footer>
+      <div class="container">
         <p>&copy; 2024 Robert Grantham. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="https://github.com/rgrantham82">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/robertgrantham82">LinkedIn</a></li>
-            <li><a href="mailto:robertgrantham40@gmail.com">Email</a></li>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.deviantart.com/wotan587" target="_blank">DeviantArt</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/wotan587/" target="_blank">Instagram</a>
+          </li>
         </ul>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
