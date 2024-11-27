@@ -1,8 +1,9 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap');
 
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     font-size: 16px;
     color: #333;
@@ -32,39 +33,37 @@ body {
     text-decoration: none;
 }
 
-.navbar .nav-links {
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 15px;
-}
-
-.navbar .nav-links li {
     margin: 0;
+    padding: 0;
 }
 
-.navbar .nav-links a {
+.navbar a {
     font-family: 'Press Start 2P', cursive;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.navbar .nav-links a:hover {
+.navbar a:hover {
     color: #f4a261;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
-    color: white;
-    padding: 60px 20px;
-    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
 }
 
 .hero h1 {
@@ -84,8 +83,8 @@ body {
     padding: 10px 20px;
     color: #fff;
     background: #f4a261;
-    text-decoration: none;
     border-radius: 5px;
+    text-decoration: none;
     margin: 5px;
     transition: background 0.3s;
 }
@@ -94,7 +93,7 @@ body {
     background: #e76f51;
 }
 
-/* Section General */
+/* Sections */
 .section {
     padding: 60px 20px;
     text-align: center;
@@ -103,13 +102,12 @@ body {
 .section h2 {
     font-family: 'Pacifico', cursive;
     font-size: 36px;
-    margin-bottom: 20px;
     color: #222;
     text-transform: uppercase;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
     border-bottom: 3px solid #f4a261;
     display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
 }
 
 .section p {
@@ -121,36 +119,24 @@ body {
 /* About Section */
 #about img {
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;  /* Rounded corners for the image */
-    margin-top: 20px;     /* Space between the text and the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a polished look */
-    transition: transform 0.3s ease; /* Smooth transition on hover */
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
 #about img:hover {
-    transform: scale(1.05);  /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
 
-/* About Section Text */
 #about .about-content {
     font-family: 'Press Start 2P', cursive;
+    color: #555;
     margin-top: 20px;
     line-height: 1.6;
-    color: #555;
 }
 
-#about h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 36px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    color: #222;
-    border-bottom: 3px solid #f4a261;
-    padding-bottom: 10px;
-}
-
-/* Gallery Section */
+/* Gallery */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -160,8 +146,8 @@ body {
 
 .gallery-item {
     background: #fff;
-    padding: 10px;
     border-radius: 10px;
+    padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -170,10 +156,6 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
-}
-
-.gallery-item p {
-    font-family: 'Press Start 2P', cursive;
 }
 
 .gallery-item:hover {
@@ -194,11 +176,11 @@ body {
 }
 
 .blog-item {
-    background-color: #f9f9f9;
+    background: #f9f9f9;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .blog-item:hover {
@@ -206,27 +188,7 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.blog-item h3 {
-    margin-top: 0;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.blog-item p {
-    font-size: 1em;
-    color: #777;
-}
-
-.blog-item a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-.blog-item a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Section */
+/* Contact Form */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -234,8 +196,7 @@ form {
     flex-direction: column;
 }
 
-form input,
-form textarea {
+form input, form textarea {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -268,9 +229,28 @@ footer {
     margin-top: 30px;
 }
 
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+footer .social-links a {
+    color: #ff5722;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #fff;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar .nav-links {
+    .navbar ul {
         flex-direction: column;
         background: #333;
         display: none;
@@ -279,15 +259,10 @@ footer {
         right: 10px;
         padding: 10px;
         border-radius: 5px;
-        width: 100%;
     }
 
-    .navbar .nav-links.active {
+    .navbar ul.active {
         display: flex;
-    }
-
-    .navbar .logo {
-        font-size: 20px;
     }
 
     .hero h1 {
