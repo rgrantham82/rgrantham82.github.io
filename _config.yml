@@ -74,4 +74,4 @@ social_links:
 # Custom variables
 custom:
   gallery_images_path: "/assets/images/"
-  posts_directory: "_posts"
+  posts_directory: "_posts/docs/"
