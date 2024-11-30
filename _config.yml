@@ -1,80 +1,43 @@
-# Theme Settings
-minimal_mistakes_skin: "contrast" # Set to "default," but you can change this to any of the available skins: "air", "aqua", etc.
-
-# Site Settings
-locale: "en-US"
-title: "Robert Grantham - Data Analyst"
-title_separator: "-"
-subtitle: "Data Analytics & Visualization"
-name: "Robert Grantham"
-description: "Data Analyst Portfolio showcasing skills in Python, SQL, Tableau, and more."
-url: "https://rgrantham82.github.io"
-baseurl: "" # Leave this blank for GitHub Pages
-repository: "rgrantham82/rgrantham82.github.io"
-# logo: "/assets/images/logo.png" # Update this path if you have a logo
-masthead_title: "Robert Grantham"
-breadcrumbs: true
-words_per_minute: 200
-enable_copy_code_button: true
-copyright: "Robert Grantham"
-copyright_url: "https://rgrantham82.github.io"
-
-# Comments (for blog posts)
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "robert-grantham-portfolio" # Replace with your Disqus shortname
-
-# Search Settings
-search: true
-search_full_content: true
-search_provider: lunr
-
-# SEO Related
-google_site_verification: # Add your Google verification code here
-
-# Social Sharing
-twitter:
-  username: "rgrantham82"
-facebook:
-  username: "robertgrantham"
-og_image: "/assets/images/og-image.png" # Add a fallback Open Graph image for social sharing
-
-# Site Author
-author:
+# Site settings
+title: "Robert Grantham Calligraphy"
+description: "A calligrapher and street artist blending modern calligraphy with urban influences on cardboard."
+url: "https://rgrantham82.github.io" # Your GitHub Pages site URL
+baseurl: "" # Leave blank for root
+author: 
   name: "Robert Grantham"
   email: "robertgrantham40@gmail.com"
   twitter: "rgrantham82"
 
 # Build settings
 markdown: kramdown
+
+# Plugins required for the project
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-data
   - jekyll-archives
 
 # Pagination settings
 paginate: 5 # Number of posts per page
 paginate_path: "/blog/page:num/"
 
-# Defaults for Markdown and Permalinks
+# Defaults for Markdown files and Permalink structure
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      permalink: "/:categories/:year/:month/:day/:title/"
+      permalink: "/blog/:year/:month/:day/:title/"
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
 
-# Exclusions
+# Exclusions - files and directories to exclude from the build
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -83,13 +46,13 @@ exclude:
   - README.md
   - _drafts/
 
-# Data directory
+# Collections settings for posts and artworks
 collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
   artworks:
-    output: false
+    output: false # Artworks are used as data, not to generate separate pages
 
 # SEO and sitemap settings
 jekyll-seo-tag:
@@ -103,13 +66,13 @@ jekyll-sitemap:
   changefreq: "weekly"
   priority: "0.8"
 
-# Social links
+# Social links for the footer or other parts of the site
 social_links:
   github: "https://github.com/rgrantham82"
   linkedin: "https://linkedin.com/in/robertgrantham82"
   email: "mailto:robertgrantham40@gmail.com"
 
-# Custom variables
+# Custom variables for use throughout the site
 custom:
-  gallery_images_path: "/assets/images/"
-  posts_directory: "_posts/docs/"
+  gallery_images_path: "_data/artworks/"
+  posts_directory: "_posts/" # Adjusted to a typical path; you can change it if you use a nested docs directory
