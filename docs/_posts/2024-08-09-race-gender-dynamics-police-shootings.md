@@ -1,12 +1,13 @@
 ---
-layout: blog
+layout: posts
 title:  "Exploring Patterns in Fatal Police Shootings: An In-Depth Statistical Analysis"
+author_profile: true
 date:   2024-08-09
 description: A comprehensive analysis of age distribution, gender differences, and racial associations in fatal police shootings across the United States.
-tags: data analysis, police shootings, statistical analysis  
-comments: true
-published: true
-canonical_url: https://rgrantham82.github.io/2024/08/08/fatal-police-shootings-analysis.html
+tags: 
+- data analysis
+- police shootings
+- statistical analysis  
 ---
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>

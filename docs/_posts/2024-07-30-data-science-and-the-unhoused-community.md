@@ -1,12 +1,14 @@
 ---
-layout: blog
+layout: posts
 title:  "Understanding the Implications of Grant's Pass v. Johnson on the Unhoused Community"
+author_profile: true
 date:   2024-07-30
 description: The recent SCOTUS decision in Grant's Pass v Johnson, and how data science can benefit the unhoused community.
-tags: data science unhoused community homelessness Grant's Pass Johnson 
-published: true
-comments: true
-canonical_url: https://rgrantham82.github.io/2024/07/30/data-science-and-the-unhoused-community.html
+tags: 
+- data science
+- unhoused community
+- homelessness
+- Grant's Pass Johnson 
 ---
 #### Introduction
 

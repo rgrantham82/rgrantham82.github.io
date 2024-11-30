@@ -1,12 +1,13 @@
 ---
-layout: blog
+layout: posts
+author_profile: true
 title:  "Automating Monthly Sales Report Generation with Macros and VBA in Excel"
 date:   2024-06-25
 description: Learn how to automate monthly sales report generation using macros and VBA in Excel, enhancing efficiency and accuracy.
-tags: Excel Macros VBA Reports 
-published: true
-comments: true
-canonical_url: https://rgrantham82.github.io/2024/06/25/macros-vba-excel.html
+tags: 
+- Excel Macros
+- VBA
+- Reports 
 ---
 
 <!-- Google tag (gtag.js) -->

@@ -1,12 +1,13 @@
 ---
-layout: blog
+layout: posts
 title:  "Monsters in the Mirror: A Satirical Look at Society's Greatest Delusion"
+author_profile: true
 date:   2024-08-18
 description: A scathing satire on societal hypocrisy and the misguided perceptions of the unhoused, inspired by the style of Mark Twain.
-tags: satire, social commentary, homelessness  
-comments: true
-published: true
-canonical_url: https://rgrantham82.github.io/2024/08/18/monsters-in-the-mirror.html
+tags: 
+- satire
+- social commentary
+-  homelessness  
 ---
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
