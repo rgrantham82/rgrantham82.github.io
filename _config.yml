@@ -1,6 +1,3 @@
-# Theme Settings
-minimal_mistakes_skin: "contrast" # Set to "default," but you can change this to any of the available skins: "air", "aqua", etc.
-
 # Site Settings
 locale: "en-US"
 title: "Robert Grantham - Data Analyst"
@@ -110,4 +107,3 @@ sass:
   sass_dir: _sass
   style: compressed
 
-remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Load the Minimal Mistakes theme remotely
