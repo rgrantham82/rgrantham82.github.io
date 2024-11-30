@@ -1,3 +1,6 @@
+# Theme Settings
+minimal_mistakes_skin: "contrast" # Set to "default," but you can change this to any of the available skins: "air", "aqua", etc.
+
 # Site Settings
 locale: "en-US"
 title: "Robert Grantham - Data Analyst"
@@ -40,40 +43,15 @@ og_image: "/assets/images/og-image.png" # Add a fallback Open Graph image for so
 # Site Author
 author:
   name: "Robert Grantham"
-  avatar: "assets/images/profile-image.jpg"
-  bio: "I am a skilled Data Analyst with expertise in Python, SQL, and visualization tools."
-  location: "Austin, TX"
   email: "robertgrantham40@gmail.com"
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/robertgrantham82"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/rgrantham82"
-    - label: "Portfolio"
-      icon: "fas fa-fw fa-briefcase"
-      url: "https://rgrantham82.github.io"
+  twitter: "rgrantham82"
 
-# Site Footer
-footer:
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/robertgrantham82"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/rgrantham82"
-    - label: "Portfolio"
-      icon: "fas fa-fw fa-briefcase"
-      url: "https://rgrantham82.github.io"
-
-# Pagination with jekyll-paginate
-paginate: 5
-paginate_path: "/page:num/"
-
-# Plugins
+# Build settings
+markdown: kramdown
 plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -107,3 +85,4 @@ sass:
   sass_dir: _sass
   style: compressed
 
+remote_theme: "mmistakes/minimal-mistakes@4.26.2" # Load the Minimal Mistakes theme remotely

@@ -1,47 +1,116 @@
----
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Calligraphy - Robert Grantham</title>
+    
+    <!-- Import Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
-<section class="project-section">
-  <div class="container">
-    <h2 class="project-title text-center animate__animated animate__fadeInDown">Featured Projects</h2>
-    <div class="row"> {% for project in site.data.projects.items %} <article class="col-lg-4 col-md-6 project-item animate__animated animate__fadeInUp" role="article" aria-labelledby="project-{{ forloop.index }}" data-aos="fade-right">
-        <header>
-          <h3 id="project-{{ forloop.index }}">{{ project.title }}</h3>
-        </header>
-        <img src="{{ project.image | replace: '.jpg', '.webp' }}" alt="Image for {{ project.title }} project" class="img-fluid project-image">
-        <p>{{ project.description | strip_html | truncatewords: 30 }}</p>
-        <a href="{{ project.link }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="View project titled {{ project.title }}">{{ project.link_text }}</a>
-      </article> {% endfor %} </div>
-  </div>
-</section>
-<!-- External Stylesheets and Scripts -->
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
-<script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-    });
-    // Smooth Scroll for Internal Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  });
-</script>
-<!-- Meta Tags for SEO and Social Sharing -->
-<meta name="description" content="Showcasing projects like {{ project.title }} and more from my data analytics portfolio.">
-<meta property="og:title" content="Featured Projects">
-<meta property="og:image" content="{{ project.image }}">
-<meta property="og:description" content="{{ project.description | strip_html | truncatewords: 30 }}">
-<link rel="icon" href="/assets/images/favicon.png" />
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Robert Grantham</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://www.deviantart.com/wotan587" target="_blank">DeviantArt</a></li>
+                    <li><a href="https://www.instagram.com/wotan587" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Street Calligraphy</h1>
+            <p class="tagline">Bringing art from the streets to your heart</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-container">
+            <img src="assets/images/profile-image.jpg" alt="Robert Grantham" class="about-img">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I am Robert Grantham, a calligrapher and artist with a passion for blending modern calligraphy with street art influences. I use cardboard not only because it's easily accessible, but also to keep it out of landfills, promoting sustainability. My work is a tribute to friendship, urban life, and eco-consciousness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            {% for artwork in site.data.artworks %}
+            <div class="gallery-item">
+                <img src="{{ artwork.image }}" alt="{{ artwork.title }}" loading="lazy">
+                <h3>{{ artwork.title }}</h3>
+                <p>{{ artwork.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <h2>Blog</h2>
+        <div class="blog-list">
+            {% for post in site.posts %}
+            <div class="blog-item">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                <a href="{{ post.url }}">Read More</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/mbjnwpgb" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Robert Grantham. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.deviantart.com/wotan587" target="_blank">DeviantArt</a></li>
+            <li><a href="https://www.instagram.com/wotan587" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
