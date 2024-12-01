@@ -13,54 +13,66 @@ body {
 }
 
 /* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
-
-.navbar .logo {
-    font-family: 'Pacifico', cursive;
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.nav-links {
+.navbar .nav-links {
     list-style: none;
     display: flex;
     gap: 15px;
 }
 
-.nav-links a {
+.navbar .nav-links a {
     font-family: 'Press Start 2P', cursive;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.navbar .nav-links a i {
+    margin-right: 8px; /* Add space between icon and text */
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.navbar .nav-links a:hover {
     color: #f4a261;
 }
 
-/* Font Awesome Icons */
-.nav-links a i,
-footer .social-links a i {
-    font-size: 1.5rem;
+/* Footer Styles */
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+footer .social-links a {
+    color: #f4a261;
+    font-size: 1.8rem; /* Adjust size of social icons */
     transition: color 0.3s;
 }
 
-.nav-links a i:hover,
-footer .social-links a i:hover {
-    color: #f4a261;
+footer .social-links a:hover {
+    color: #fff;
 }
+
+footer .contact-info {
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #ccc;
+}
+
+footer .contact-info a {
+    color: #f4a261;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .contact-info a:hover {
+    color: #fff;
+}
+
 
 /* Hero Section Styles */
 .hero {
@@ -274,53 +286,6 @@ form button {
 
 form button:hover {
     background: #e76f51;
-}
-
-/* Footer Styles */
-footer {
-    font-family: 'Press Start 2P', cursive;
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 30px;
-}
-
-footer .social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    margin: 20px 0;
-}
-
-footer .social-links a {
-    color: #f4a261;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #fff;
-}
-
-footer .contact-info {
-    margin-top: 15px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #ccc;
-}
-
-footer .contact-info a {
-    color: #f4a261;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer .contact-info a:hover {
-    color: #fff;
 }
 
 /* Responsive Design */
