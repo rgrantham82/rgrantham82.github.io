@@ -18,7 +18,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-archives
-  - jekyll-data  # If needed
 
 # Pagination settings
 paginate: 5 # Number of posts per page
@@ -47,13 +46,12 @@ exclude:
   - README.md
   - _drafts/
 
-# Collections settings for posts and artworks
+# Collections settings for posts
 collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
-  artworks:
-    output: false # Artworks are used as data, not to generate separate pages
+    source: docs/_posts # Add correct path to blog posts directory
 
 # SEO and sitemap settings
 jekyll-seo-tag:
@@ -75,6 +73,4 @@ social_links:
 
 # Custom variables for use throughout the site
 custom:
-  gallery_data_file: "_data/artworks.yml"  # If it’s a data file storing artwork information
-  gallery_images_path: "assets/images/"  # Path to actual images
-  posts_directory: "docs/_posts/" # Changed to a more standard path if "_posts/docs" isn't necessary
+  posts_directory: "docs/_posts/" # Corrected the path to the blog posts directory
