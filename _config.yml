@@ -71,6 +71,3 @@ social_links:
   linkedin: "https://linkedin.com/in/robertgrantham82"
   email: "mailto:robertgrantham40@gmail.com"
 
-# Custom variables for use throughout the site
-custom:
-  posts_directory: "docs/_posts/" # Corrected the path to the blog posts directory
