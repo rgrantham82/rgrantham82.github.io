@@ -1,36 +1,6 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap');
 
-/* Footer Styles */
-footer {
-    font-family: 'Press Start 2P', cursive;
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer .social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    margin: 20px 0;
-}
-
-footer .social-links a {
-    color: #f4a261;
-    text-decoration: none;
-    font-size: 2rem; /* Increased icon size */
-    transition: color 0.3s, transform 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #fff;
-    transform: scale(1.2); /* Slight grow effect */
-}
-
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -80,7 +50,7 @@ body {
     color: #f4a261;
 }
 
-/* Font Awesome Icons */
+/* Font Awesome Icons for Navbar and Footer */
 .nav-links a i,
 footer .social-links a i {
     font-size: 1.5rem;
@@ -114,29 +84,48 @@ footer .social-links a i:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity for contrast */
+    background: rgba(0, 0, 0, 0.5); /* Black overlay for contrast */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Places text above the overlay */
+    z-index: 2; /* Place text above overlay */
 }
 
 .hero h1 {
     font-family: 'Pacifico', cursive;
     font-size: 48px;
     margin-bottom: 10px;
-    color: #f4f4f4; /* Light gray for better readability */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for text contrast */
+    color: #f4f4f4; /* Light gray for readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
 }
 
 .hero .tagline {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
     margin-bottom: 20px;
-    color: #f4f4f4; /* Consistent color for tagline */
+    color: #f4f4f4;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #f4a261;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background: #e76f51;
 }
 
 /* About Section Styles */
@@ -194,6 +183,12 @@ footer .social-links a i:hover {
 .gallery-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 /* Blog List Styles */
@@ -275,14 +270,34 @@ form button:hover {
     background: #e76f51;
 }
 
-/* Font Awesome Animation Overrides */
-.fa-beat,
-.fa-beat-fade,
-.fa-fade,
-.fa-flip,
-.fa-spin {
-    animation: none !important;
-    transform: none !important;
+/* Footer Styles */
+footer {
+    font-family: 'Press Start 2P', cursive;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+footer .social-links a {
+    color: #f4a261;
+    text-decoration: none;
+    font-size: 2rem; /* Increased icon size */
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #fff;
+    transform: scale(1.2);
 }
 
 /* Responsive Design */
