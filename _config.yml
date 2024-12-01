@@ -18,6 +18,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-archives
+  - jekyll-data  # If needed
 
 # Pagination settings
 paginate: 5 # Number of posts per page
@@ -74,5 +75,6 @@ social_links:
 
 # Custom variables for use throughout the site
 custom:
-  gallery_images_path: "_data/artworks/"
-  posts_directory: "_posts/" # Adjusted to a typical path; you can change it if you use a nested docs directory
+  gallery_data_file: "_data/artworks.yml"  # If it’s a data file storing artwork information
+  gallery_images_path: "assets/images/"  # Path to actual images
+  posts_directory: "_posts/" # Changed to a more standard path if "_posts/docs" isn't necessary

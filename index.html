@@ -14,6 +14,9 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -26,15 +29,23 @@
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://www.deviantart.com/wotan587" target="_blank">DeviantArt</a></li>
-                    <li><a href="https://www.instagram.com/wotan587" target="_blank">Instagram</a></li>
+                    <li>
+                        <a href="https://www.deviantart.com/wotan587" target="_blank" title="DeviantArt">
+                            <i class="fab fa-deviantart"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/wotan587" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="background: url('assets/images/hero.png') no-repeat center center/cover;">
         <div class="hero-content">
             <h1>Street Calligraphy</h1>
             <p class="tagline">Bringing art from the streets to your heart</p>
@@ -74,13 +85,23 @@
     <section id="blog" class="section">
         <h2>Blog</h2>
         <div class="blog-list">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
             <div class="blog-item">
-                <h3>{{ post.title }}</h3>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                 <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                <a href="{{ post.url }}">Read More</a>
+                <a href="{{ post.url | relative_url }}">Read More</a>
             </div>
             {% endfor %}
+
+            <!-- Pagination Navigation -->
+            <div class="pagination">
+                {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">Previous</a>
+                {% endif %}
+                {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
+                {% endif %}
+            </div>
         </div>
     </section>
 
@@ -105,8 +126,16 @@
     <footer>
         <p>&copy; 2024 Robert Grantham. All rights reserved.</p>
         <ul class="social-links">
-            <li><a href="https://www.deviantart.com/wotan587" target="_blank">DeviantArt</a></li>
-            <li><a href="https://www.instagram.com/wotan587" target="_blank">Instagram</a></li>
+            <li>
+                <a href="https://www.deviantart.com/wotan587" target="_blank" title="DeviantArt">
+                    <i class="fab fa-deviantart"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/wotan587" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
         </ul>
     </footer>
 
