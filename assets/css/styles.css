@@ -81,13 +81,13 @@ body {
 
 /* Font Awesome Icons */
 .nav-links a i,
-.footer .social-links a i {
+footer .social-links a i {
     font-size: 1.5rem;
     transition: color 0.3s;
 }
 
 .nav-links a i:hover,
-.footer .social-links a i:hover {
+footer .social-links a i:hover {
     color: #f4a261;
 }
 
@@ -277,33 +277,14 @@ form button:hover {
     background: #e76f51;
 }
 
-/* Footer Styles */
-footer {
-    font-family: 'Press Start 2P', cursive;
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer .social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    margin: 20px 0;
-}
-
-footer .social-links a {
-    color: #f4a261;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #fff;
+/* Font Awesome Animation Overrides */
+.fa-beat,
+.fa-beat-fade,
+.fa-fade,
+.fa-flip,
+.fa-spin {
+    animation: none !important;
+    transform: none !important;
 }
 
 /* Responsive Design */
