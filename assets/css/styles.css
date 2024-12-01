@@ -50,6 +50,18 @@ body {
     color: #f4a261;
 }
 
+/* Font Awesome Icons */
+.nav-links a i,
+.footer .social-links a i {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.nav-links a i:hover,
+.footer .social-links a i:hover {
+    color: #f4a261;
+}
+
 /* Hero Section Styles */
 .hero {
     position: relative;
@@ -257,7 +269,7 @@ footer .social-links {
 footer .social-links a {
     color: #f4a261;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     transition: color 0.3s;
 }
 
