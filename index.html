@@ -80,7 +80,7 @@
     <!-- Blog Section -->
     <section id="blog" class="section">
       <h2>Blog</h2>
-      <div class="blog-list"> {% for post in paginator.posts %} <div class="blog-item">
+      <div class="blog-list"> {% if paginator.posts %} {% for post in paginator.posts %} <div class="blog-item">
           <h3>
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h3>
@@ -88,7 +88,7 @@
           <a href="{{ post.url | relative_url }}">Read More</a>
         </div> {% endfor %}
         <!-- Pagination Navigation -->
-        <div class="pagination"> {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">Previous</a> {% endif %} {% if paginator.next_page %} <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a> {% endif %} </div>
+        <div class="pagination"> {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">Previous</a> {% endif %} {% if paginator.next_page %} <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a> {% endif %} </div> {% else %} <p>No blog posts found. Please make sure posts are correctly added in the `_posts` directory.</p> {% endif %}
       </div>
     </section>
     <!-- Contact Section -->
