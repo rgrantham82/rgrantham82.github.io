@@ -71,11 +71,34 @@
     <!-- Gallery Section -->
     <section id="gallery" class="section">
       <h2>Gallery</h2>
-      <div class="gallery-grid"> {% if site.data.artworks %} {% for artwork in site.data.artworks %} <div class="gallery-item">
-          <img src="{{ artwork.image }}" alt="{{ artwork.title }}" loading="lazy">
-          <h3>{{ artwork.title }}</h3>
-          <p>{{ artwork.description }}</p>
-        </div> {% endfor %} {% else %} <p>No artworks found. Please check the artworks.yml file in the _data directory.</p> {% endif %} </div>
+      <div class="gallery-grid">
+        <!-- Hardcoded Gallery Items -->
+        <div class="gallery-item">
+          <img src="assets/images/forever_friends_calligraphy.png" alt="Lish & Zinks Forever" loading="lazy">
+          <h3>Lish & Zinks Forever</h3>
+          <p>A heartfelt tribute to lifelong friendship, featuring intricate flourishes and personal touches.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/urban_calligraphy.png" alt="Urban Calligraphy" loading="lazy">
+          <h3>Urban Calligraphy</h3>
+          <p>A bold, modern calligraphy style capturing the vibrancy of urban life.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/strength_calligraphy.png" alt="Strength in Lines" loading="lazy">
+          <h3>Strength in Lines</h3>
+          <p>An expression of resilience and determination, communicated through strong, sweeping calligraphic strokes.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/sustainability_calligraphy.png" alt="Sustainability in Style" loading="lazy">
+          <h3>Sustainability in Style</h3>
+          <p>An eco-conscious design that merges artistic strokes with raw cardboard textures.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/elegant_calligraphy.png" alt="Elegant Flourishes" loading="lazy">
+          <h3>Elegant Flourishes</h3>
+          <p>A celebration of elegance and grace, emphasizing beautiful, flowing calligraphic forms.</p>
+        </div>
+      </div>
     </section>
     <!-- Blog Section -->
     <section id="blog" class="section">
