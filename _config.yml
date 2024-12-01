@@ -75,4 +75,4 @@ social_links:
 # Custom variables for use throughout the site
 custom:
   gallery_images_path: "_data/artworks/"
-  posts_directory: "_posts/" # Adjusted to a typical path; you can change it if you use a nested docs directory
+  posts_directory: "_posts/docs/" # Adjusted to a typical path; you can change it if you use a nested docs directory
