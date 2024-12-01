@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                // Smoothly scroll to the target section
-                window.scrollTo({
-                    top: targetElement.offsetTop - 60, // Offset for fixed navbar height
-                    behavior: "smooth"
+                // Smoothly scroll to the target section using scrollIntoView
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
                 });
             }
         });
@@ -25,12 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinksContainer = document.querySelector(".nav-links");
     const toggleButton = document.createElement("button");
     toggleButton.classList.add("menu-toggle");
+    toggleButton.setAttribute("aria-label", "Toggle navigation menu");
     toggleButton.innerHTML = "☰"; // Hamburger menu icon
 
     navbar.insertBefore(toggleButton, navLinksContainer);
 
     toggleButton.addEventListener("click", () => {
         navLinksContainer.classList.toggle("active");
+        toggleButton.classList.toggle("open"); // Add 'open' class to change icon if necessary
     });
 
     // Close mobile menu when clicking a link
@@ -38,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener("click", () => {
             if (navLinksContainer.classList.contains("active")) {
                 navLinksContainer.classList.remove("active");
+                toggleButton.classList.remove("open");
             }
         });
     });
@@ -49,10 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.src = img.dataset.src || img.src; // Use data-src if available
+                if (img.dataset.src) {
+                    img.src = img.dataset.src; // Use data-src if available
+                }
                 observer.unobserve(img); // Stop observing once loaded
             }
         });
+    }, {
+        rootMargin: "0px 0px 200px 0px" // Trigger a little before images are in the viewport
     });
 
     images.forEach(img => {
@@ -66,10 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
                 navLinks.forEach(link => link.classList.remove("active"));
-                if (activeLink) activeLink.classList.add("active");
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
             }
         });
-    }, { threshold: 0.6 });
+    }, { 
+        threshold: 0.6 
+    });
 
     sections.forEach(section => {
         navObserver.observe(section);
