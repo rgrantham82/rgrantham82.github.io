@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "From Historical Insights to Statistical Analysis: Bridging the Past with Data"
 author_profile: true
 date:   2024-09-09
