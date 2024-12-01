@@ -77,4 +77,4 @@ social_links:
 custom:
   gallery_data_file: "_data/artworks.yml"  # If it’s a data file storing artwork information
   gallery_images_path: "assets/images/"  # Path to actual images
-  posts_directory: "_posts/" # Changed to a more standard path if "_posts/docs" isn't necessary
+  posts_directory: "docs/_posts/" # Changed to a more standard path if "_posts/docs" isn't necessary
