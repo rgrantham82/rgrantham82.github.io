@@ -50,18 +50,6 @@ body {
     color: #f4a261;
 }
 
-/* Font Awesome Icons for Navbar and Footer */
-.nav-links a i,
-footer .social-links a i {
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-.nav-links a i:hover,
-footer .social-links a i:hover {
-    color: #f4a261;
-}
-
 /* Hero Section Styles */
 .hero {
     position: relative;
@@ -84,7 +72,7 @@ footer .social-links a i:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay for contrast */
+    background: rgba(0, 0, 0, 0.6); /* Black overlay for contrast */
     z-index: 1;
 }
 
@@ -97,15 +85,15 @@ footer .social-links a i:hover {
     font-family: 'Pacifico', cursive;
     font-size: 48px;
     margin-bottom: 10px;
-    color: #f4f4f4; /* Light gray for readability */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+    color: #f9f9f9; /* Lighter color for better contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Text shadow for better visibility */
 }
 
 .hero .tagline {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
     margin-bottom: 20px;
-    color: #f4f4f4;
+    color: #f9f9f9;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -165,9 +153,10 @@ footer .social-links a i:hover {
 
 /* Gallery Styles */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     padding: 60px 20px;
     background: #fff;
 }
@@ -176,8 +165,16 @@ footer .social-links a i:hover {
     background: #fff;
     border-radius: 8px;
     padding: 10px;
+    width: calc(20% - 20px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .gallery-item:hover {
@@ -185,10 +182,11 @@ footer .social-links a i:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.gallery-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+.gallery-item h3 {
+    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+    color: #333;
+    margin-bottom: 5px;
 }
 
 /* Blog List Styles */
@@ -291,7 +289,7 @@ footer .social-links {
 footer .social-links a {
     color: #f4a261;
     text-decoration: none;
-    font-size: 2rem; /* Increased icon size */
+    font-size: 2rem;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -325,6 +323,10 @@ footer .social-links a:hover {
         text-align: center;
     }
 
+    .gallery-item {
+        width: calc(45% - 20px);
+    }
+
     .gallery-grid {
         padding: 20px;
     }
@@ -345,5 +347,9 @@ footer .social-links a:hover {
 
     .about-img {
         max-width: 150px;
+    }
+
+    .gallery-item {
+        width: calc(100% - 20px);
     }
 }
