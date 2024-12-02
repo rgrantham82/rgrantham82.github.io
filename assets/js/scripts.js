@@ -1,160 +1,46 @@
-// Wait for the DOM to fully load
-document.addEventListener("DOMContentLoaded", () => {
+// scripts.js
 
-	// Smooth scrolling for navigation links
-	const navLinks = document.querySelectorAll(".nav-links a");
-
-	navLinks.forEach(link => {
-		link.addEventListener("click", e => {
-			e.preventDefault(); // Prevent default link behavior
-			const targetId = link.getAttribute("href").substring(1); // Get the target section ID
-			const targetElement = document.getElementById(targetId);
-
-			if (targetElement) {
-				// Smoothly scroll to the target section using scrollIntoView
-				targetElement.scrollIntoView({
-					behavior: "smooth",
-					block: "start"
-				});
-			}
-		});
-	});
-
-	// Mobile Navbar Toggle
-	const navbar = document.querySelector(".navbar");
-	const navLinksContainer = document.querySelector(".nav-links");
-	const toggleButton = document.createElement("button");
-	toggleButton.classList.add("menu-toggle");
-	toggleButton.setAttribute("aria-label", "Toggle navigation menu");
-	toggleButton.innerHTML = "☰"; // Hamburger menu icon
-
-	navbar.insertBefore(toggleButton, navLinksContainer);
-
-	toggleButton.addEventListener("click", () => {
-		navLinksContainer.classList.toggle("active");
-		toggleButton.classList.toggle("open"); // Add 'open' class to change icon if necessary
-	});
-
-	// Close mobile menu when clicking a link
-	navLinks.forEach(link => {
-		link.addEventListener("click", () => {
-			if (navLinksContainer.classList.contains("active")) {
-				navLinksContainer.classList.remove("active");
-				toggleButton.classList.remove("open");
-			}
-		});
-	});
-
-	// Lazy loading for images
-	const images = document.querySelectorAll("img[loading='lazy']");
-
-	const imageObserver = new IntersectionObserver((entries, observer) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				const img = entry.target;
-				if (img.dataset.src) {
-					img.src = img.dataset.src; // Use data-src if available
-				}
-				observer.unobserve(img); // Stop observing once loaded
-			}
-		});
-	}, {
-		rootMargin: "0px 0px 200px 0px" // Trigger a little before images are in the viewport
-	});
-
-	images.forEach(img => {
-		imageObserver.observe(img);
-	});
-
-	// Highlight active section in the navbar
-	const sections = document.querySelectorAll("section");
-	const navObserver = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-				navLinks.forEach(link => link.classList.remove("active"));
-				if (activeLink) {
-					activeLink.classList.add("active");
-				}
-			}
-		});
-	}, {
-		threshold: 0.6
-	});
-
-	sections.forEach(section => {
-		navObserver.observe(section);
-	});
+// Smooth Scrolling for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });
 
-/* ==========================================================================  
-   Main Script: Interactive Features and Enhancements  
-   ========================================================================== */
+// Lightbox for Gallery Images
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
+  document.body.appendChild(lightbox);
 
-// ES6 Module Check
-(() => {
-	"use strict";
+  galleryItems.forEach(image => {
+    image.addEventListener('click', () => {
+      lightbox.classList.add('active');
+      const img = document.createElement('img');
+      img.src = image.src;
+      while (lightbox.firstChild) {
+        lightbox.removeChild(lightbox.firstChild);
+      }
+      lightbox.appendChild(img);
+    });
+  });
 
-	// Theme Toggle (Dark/Light Mode)
-	const themeToggle = document.querySelector(".theme-toggle");
-	if (themeToggle) {
-		themeToggle.addEventListener("click", () => {
-			document.body.classList.toggle("dark-mode");
-			localStorage.setItem(
-				"theme",
-				document.body.classList.contains("dark-mode") ? "dark" : "light"
-			);
-		});
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+});
 
-		// Initialize Theme on Load
-		const savedTheme = localStorage.getItem("theme");
-		if (savedTheme && savedTheme === "dark") {
-			document.body.classList.add("dark-mode");
-		}
-	}
+// Dynamic Year in Footer
+document.addEventListener('DOMContentLoaded', () => {
+  const yearSpan = document.createElement('span');
+  const footer = document.querySelector('footer');
+  if (footer) {
+    yearSpan.textContent = new Date().getFullYear();
+    footer.appendChild(yearSpan);
+  }
+});
 
-	// Real-Time Search Filter for Blog or Gallery (If applicable)
-	const searchInput = document.querySelector(".search-input");
-	const searchItems = document.querySelectorAll(".search-item");
-	if (searchInput) {
-		searchInput.addEventListener("input", () => {
-			const query = searchInput.value.toLowerCase();
-			searchItems.forEach((item) => {
-				item.style.display = item.textContent.toLowerCase().includes(query) ?
-					"block" :
-					"none";
-			});
-		});
-	}
-
-	// Copy to Clipboard (for contact info or similar)
-	const copyButtons = document.querySelectorAll(".clipboard-copy-button");
-	if (copyButtons.length) {
-		copyButtons.forEach((button) =>
-			button.addEventListener("click", () => {
-				const codeBlock = button.nextElementSibling?.querySelector("code");
-				if (codeBlock) {
-					navigator.clipboard.writeText(codeBlock.textContent).then(
-						() => {
-							button.classList.add("copied");
-							setTimeout(() => button.classList.remove("copied"), 1500);
-						},
-						(err) => console.error("Failed to copy text:", err)
-					);
-				}
-			})
-		);
-	}
-
-	// Initialize Lightbox for Images (Optional)
-	if (typeof $.fn.magnificPopup !== "undefined") {
-		$(".image-popup").magnificPopup({
-			type: "image",
-			gallery: {
-				enabled: true
-			},
-			removalDelay: 300,
-			mainClass: "mfp-zoom-in",
-		});
-	}
-})();
