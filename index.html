@@ -1,151 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Calligraphy - Robert Grantham</title>
-    
-    <!-- Import Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calligraphy on cardboard by an unhoused artist blending traditional artistry with urban expression.">
+  <meta name="keywords" content="calligraphy, sustainability, unhoused artist, cardboard art, graffiti calligraphy">
+  <meta name="author" content="Your Name">
+  <title>Calligraphy on Cardboard | Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Robert Grantham</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://www.deviantart.com/wotan587" target="_blank"><i class="fab fa-deviantart"></i> DeviantArt</a></li>
-                    <li><a href="https://www.instagram.com/wotan587" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                </ul>
-            </nav>
+  <!-- Header Section -->
+  <header class="hero-section" style="background-image: url('./images/hero.png');">
+    <div class="overlay">
+      <h1>Calligraphy on Cardboard</h1>
+      <p>Where Tradition Meets the Streets</p>
+      <a href="gallery.html" class="btn">View Gallery</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About the Artist</h2>
+      <p>
+        I am an unhoused artist using cardboard as my canvas, blending traditional calligraphy with modern graffiti to tell stories of resilience, creativity, and sustainability. Each piece is a testament to the beauty that can arise from unconventional circumstances.
+      </p>
+      <a href="about.html" class="btn">Read My Story</a>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section id="gallery-preview">
+    <div class="container">
+      <h2>Featured Artworks</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="./images/forever_friends_calligraphy.png" alt="Holiday Card for Best Friends">
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('assets/images/hero.png');">
-        <div class="hero-content">
-            <h1>Street Calligraphy</h1>
-            <p class="tagline">Bringing art from the streets to your heart</p>
-            <div class="hero-buttons">
-                <a href="#gallery" class="btn btn-primary">Explore Gallery</a>
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-            </div>
+        <div class="gallery-item">
+          <img src="./images/strength_calligraphy.png" alt="Strength to Uplift">
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="about-container">
-            <img src="assets/images/profile-image.jpg" alt="Robert Grantham" class="about-img">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>I am Robert Grantham, a calligrapher and artist with a passion for blending modern calligraphy with street art influences. I use cardboard not only because it's easily accessible, but also because it contributes to environmental sustainability by keeping it out of landfills. Currently, I'm experiencing homelessness, and using cardboard as my medium reflects both the challenges and resourcefulness of my journey. My work is a tribute to friendship, urban life, and eco-consciousness, and I hope to inspire others to see beauty in unexpected places and to support sustainable practices.</p>
-            </div>
+        <div class="gallery-item">
+          <img src="./images/urban_calligraphy.png" alt="Calligraphy & Graffiti become One">
         </div>
-    </section>
+      </div>
+      <a href="gallery.html" class="btn">Explore Full Gallery</a>
+    </div>
+  </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/images/forever_friends_calligraphy.png" alt="Forever Friends Calligraphy" loading="lazy">
-                <h3>Forever Friends Calligraphy</h3>
-                <p>A heartfelt tribute to lifelong friendship, featuring intricate flourishes and personal touches.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/urban_calligraphy.png" alt="Urban Calligraphy" loading="lazy">
-                <h3>Urban Calligraphy</h3>
-                <p>A bold, modern calligraphy style capturing the vibrancy of urban life.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/strength_calligraphy.png" alt="Strength Calligraphy" loading="lazy">
-                <h3>Strength Calligraphy</h3>
-                <p>An empowering calligraphy design symbolizing strength and resilience.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/sustainability_calligraphy.png" alt="Sustainability in Style" loading="lazy">
-                <h3>Sustainability in Style</h3>
-                <p>An eco-conscious design that merges artistic strokes with raw cardboard textures.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/elegant_calligraphy.png" alt="Elegant Calligraphy" loading="lazy">
-                <h3>Elegant Calligraphy</h3>
-                <p>A refined and sophisticated style that adds elegance to any message.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Call to Action -->
+  <section id="cta">
+    <div class="container">
+      <h2>Commission Custom Art</h2>
+      <p>
+        Bring your vision to life with personalized calligraphy pieces. Perfect for gifts, events, or unique décor.
+      </p>
+      <a href="shop.html" class="btn">Start a Commission</a>
+    </div>
+  </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-        <h2>Blog</h2>
-        <div class="blog-list">
-            {% for post in paginator.posts %}
-            <div class="blog-item">
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                <a href="{{ post.url | relative_url }}">Read More</a>
-            </div>
-            {% endfor %}
+  <footer>
+  <div class="container">
+    <p>&copy; 2024 Calligraphy on Cardboard. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/cardboardcalligraphy" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://deviantart.com/wotan587" target="_blank" title="DeviantArt">
+        <i class="fab fa-deviantart"></i>
+      </a>
+    </div>
+  </div>
+</footer>
 
-            <!-- Pagination Navigation -->
-            <div class="pagination">
-                {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">Previous</a>
-                {% endif %}
-                {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
-                {% endif %}
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/mbjnwpgb" method="POST">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Robert Grantham. All rights reserved.</p>
-        <ul class="social-links">
-            <li><a href="https://www.deviantart.com/wotan587" target="_blank"><i class="fab fa-deviantart"></i></a></li>
-            <li><a href="https://www.instagram.com/wotan587" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a></p>
-            <p>Location: Austin, TX, USA</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
