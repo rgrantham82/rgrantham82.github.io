@@ -2,16 +2,17 @@
 layout: home
 permalink: /gallery
 author_profile: true
+excerpt: "Explore a unique gallery showcasing calligraphy on recycled cardboard, blending sustainability with artistic passion."
+category: "Portfolio"
+tags: 
+  - "sustainable art"
+  - "calligraphy gallery"
+  - "urban calligraphy"
+  - "recycled materials art"
 excerpt: "Celebrating the art of beautiful handwriting and its fusion with personal expression."  
 comments: true  
 share: true  
 toc: true  
-category: portfolio  
-tags:  
-  - calligraphy  
-  - visual art  
-  - lettering  
-  - typography  
 ---
 
 <link rel="stylesheet" href="/assets/css/gallery.css">
