@@ -1,28 +1,3 @@
-/* Lightbox Styles */
-#lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-#lightbox.active {
-  display: flex;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
 /* General Styles */
 body {
   font-family: 'Roboto', sans-serif;
@@ -33,7 +8,7 @@ body {
   line-height: 1.6;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Pacifico', cursive;
   color: #4a2c2a;
   margin-bottom: 20px;
@@ -41,6 +16,11 @@ h1, h2 {
 
 p {
   margin: 0 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Buttons */
@@ -159,12 +139,59 @@ section {
   margin: 0 auto;
 }
 
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #7a4f37;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #5a3828;
+}
+
 /* Footer */
 footer {
   background-color: #4a2c2a;
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+footer .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 1rem;
 }
 
 footer .social-links {
@@ -176,10 +203,36 @@ footer .social-links a {
   margin: 0 10px;
   font-size: 1.5rem;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
   color: #ffcc00;
+}
+
+/* Lightbox Styles */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive Design */
