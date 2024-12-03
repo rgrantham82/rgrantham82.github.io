@@ -5,7 +5,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   });
 });
@@ -36,11 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Dynamic Year in Footer
 document.addEventListener('DOMContentLoaded', () => {
-  const yearSpan = document.createElement('span');
-  const footer = document.querySelector('footer');
+  const footer = document.querySelector('footer p');
   if (footer) {
-    yearSpan.textContent = new Date().getFullYear();
-    footer.appendChild(yearSpan);
+    const year = new Date().getFullYear();
+    footer.innerHTML = `&copy; ${year} Cardboard Calligraphy by Robert. All Rights Reserved.`;
   }
 });
-
