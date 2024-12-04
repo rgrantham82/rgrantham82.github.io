@@ -14,7 +14,7 @@ h1, h2, h3 {
 }
 
 /* Hero Section */
-.contact-hero {
+.services-hero {
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -26,7 +26,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
-.contact-hero .overlay {
+.services-hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -36,100 +36,106 @@ h1, h2, h3 {
   z-index: 1;
 }
 
-.contact-hero h1 {
+.services-hero h1 {
   z-index: 2;
   font-size: 2.5rem;
 }
 
-.contact-hero p {
+.services-hero p {
   z-index: 2;
   font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-/* Contact Section */
-.contact-section {
+/* Services Section */
+.services-content {
   padding: 60px 20px;
   background-color: #f1ebe5;
 }
 
 .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.contact-section h2 {
+.services-content h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 2rem;
 }
 
-.contact-section p {
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form {
-  margin-bottom: 50px;
+.service-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form label {
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
+.service-item img {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
+  height: auto;
 }
 
-.contact-form button {
-  width: fit-content;
+.service-item h3 {
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+  color: #4a2c2a;
+}
+
+.service-item p {
+  padding: 0 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.service-item .btn {
+  display: inline-block;
+  margin: 20px 0;
   padding: 10px 20px;
   background-color: #7a4f37;
   color: #fff;
-  font-size: 1rem;
-  border: none;
+  text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+.service-item .btn:hover {
   background-color: #5a3828;
 }
 
-/* Contact Info */
-.contact-info {
+/* Footer */
+footer {
+  background-color: #4a2c2a;
+  color: #fff;
   text-align: center;
+  padding: 20px 0;
 }
 
-.contact-info p {
-  margin: 5px 0;
-  font-size: 1rem;
-}
-
-.social-links {
+footer .social-links {
   margin-top: 10px;
 }
 
-.social-links a {
-  color: #4a2c2a;
+footer .social-links a {
+  color: #fff;
   margin: 0 10px;
   font-size: 1.5rem;
   text-decoration: none;
 }
 
-.social-links a:hover {
+footer .social-links a:hover {
   color: #ffcc00;
 }

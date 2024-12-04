@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 author_profile: true
 title: "Challenges: The Watermark of Life"
 date: 2024-11-20

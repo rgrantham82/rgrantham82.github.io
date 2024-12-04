@@ -1,147 +1,73 @@
-// Wait for the DOM to fully load
-document.addEventListener("DOMContentLoaded", () => {
+// scripts.js
 
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll(".nav-links a");
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", e => {
-            e.preventDefault(); // Prevent default link behavior
-            const targetId = link.getAttribute("href").substring(1); // Get the target section ID
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                // Smoothly scroll to the target section
-                window.scrollTo({
-                    top: targetElement.offsetTop - 60, // Offset for fixed navbar height
-                    behavior: "smooth"
-                });
-            }
-        });
+// Smooth Scrolling for Anchor Links (All Pages)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
     });
-
-    // Mobile Navbar Toggle
-    const navbar = document.querySelector(".navbar");
-    const navLinksContainer = document.querySelector(".nav-links");
-    const toggleButton = document.createElement("button");
-    toggleButton.classList.add("menu-toggle");
-    toggleButton.innerHTML = "☰"; // Hamburger menu icon
-
-    navbar.insertBefore(toggleButton, navLinksContainer);
-
-    toggleButton.addEventListener("click", () => {
-        navLinksContainer.classList.toggle("active");
-    });
-
-    // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            if (navLinksContainer.classList.contains("active")) {
-                navLinksContainer.classList.remove("active");
-            }
-        });
-    });
-
-    // Lazy loading for images
-    const images = document.querySelectorAll("img[loading='lazy']");
-
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src || img.src; // Use data-src if available
-                observer.unobserve(img); // Stop observing once loaded
-            }
-        });
-    });
-
-    images.forEach(img => {
-        imageObserver.observe(img);
-    });
-
-    // Highlight active section in the navbar
-    const sections = document.querySelectorAll("section");
-    const navObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-                navLinks.forEach(link => link.classList.remove("active"));
-                if (activeLink) activeLink.classList.add("active");
-            }
-        });
-    }, { threshold: 0.6 });
-
-    sections.forEach(section => {
-        navObserver.observe(section);
-    });
+  });
 });
 
-/* ==========================================================================  
-   Main Script: Interactive Features and Enhancements  
-   ========================================================================== */
+// Dynamic Footer Year Update (All Pages)
+document.addEventListener('DOMContentLoaded', () => {
+  const footer = document.querySelector('footer p');
+  if (footer) {
+    const year = new Date().getFullYear();
+    footer.innerHTML = `&copy; ${year} Cardboard Calligraphy by Robert. All Rights Reserved.`;
+  }
+});
 
-// ES6 Module Check
-(() => {
-    "use strict";
+// Lightbox for Gallery Images (Gallery Page)
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
+  document.body.appendChild(lightbox);
 
-    // Theme Toggle (Dark/Light Mode)
-    const themeToggle = document.querySelector(".theme-toggle");
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem(
-                "theme",
-                document.body.classList.contains("dark-mode") ? "dark" : "light"
-            );
-        });
+  galleryItems.forEach(image => {
+    image.addEventListener('click', () => {
+      lightbox.classList.add('active');
+      const img = document.createElement('img');
+      img.src = image.src;
+      while (lightbox.firstChild) {
+        lightbox.removeChild(lightbox.firstChild);
+      }
+      lightbox.appendChild(img);
+    });
+  });
 
-        // Initialize Theme on Load
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme && savedTheme === "dark") {
-            document.body.classList.add("dark-mode");
-        }
-    }
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+});
 
-    // Real-Time Search Filter for Blog or Gallery (If applicable)
-    const searchInput = document.querySelector(".search-input");
-    const searchItems = document.querySelectorAll(".search-item");
-    if (searchInput) {
-        searchInput.addEventListener("input", () => {
-            const query = searchInput.value.toLowerCase();
-            searchItems.forEach((item) => {
-                item.style.display = item.textContent.toLowerCase().includes(query)
-                    ? "block"
-                    : "none";
-            });
-        });
-    }
+// Hover Effects for Service Items (Services Page)
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceItems = document.querySelectorAll('.service-item');
 
-    // Copy to Clipboard (for contact info or similar)
-    const copyButtons = document.querySelectorAll(".clipboard-copy-button");
-    if (copyButtons.length) {
-        copyButtons.forEach((button) =>
-            button.addEventListener("click", () => {
-                const codeBlock = button.nextElementSibling?.querySelector("code");
-                if (codeBlock) {
-                    navigator.clipboard.writeText(codeBlock.textContent).then(
-                        () => {
-                            button.classList.add("copied");
-                            setTimeout(() => button.classList.remove("copied"), 1500);
-                        },
-                        (err) => console.error("Failed to copy text:", err)
-                    );
-                }
-            })
-        );
-    }
+  serviceItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.transform = 'scale(1.05)';
+      item.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.2)';
+    });
 
-    // Initialize Lightbox for Images (Optional)
-    if (typeof $.fn.magnificPopup !== "undefined") {
-        $(".image-popup").magnificPopup({
-            type: "image",
-            gallery: { enabled: true },
-            removalDelay: 300,
-            mainClass: "mfp-zoom-in",
-        });
-    }
-})();
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'scale(1)';
+      item.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+    });
+  });
+});
+
+// Toggle Mobile Navigation Menu (All Pages)
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (toggleButton && navMenu) {
+    toggleButton.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+});

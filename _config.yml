@@ -1,8 +1,8 @@
 # Site settings
 title: "Robert Grantham Calligraphy"
-description: "A calligrapher and street artist blending modern calligraphy with urban influences on cardboard."
-url: "https://rgrantham82.github.io" # Your GitHub Pages site URL
-baseurl: "" # Leave blank for root
+description: "A calligrapher blending modern calligraphy with urban influences on recycled cardboard. Discover custom commissions, workshops, and more."
+url: "https://rgrantham82.github.io"
+baseurl: "" # Leave blank for root or set to "/project-name" for project pages
 author: 
   name: "Robert Grantham"
   email: "robertgrantham40@gmail.com"
@@ -10,6 +10,11 @@ author:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # Plugins required for the project
 plugins:
@@ -18,10 +23,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-archives
-  - jekyll-data  # If needed
 
 # Pagination settings
-paginate: 5 # Number of posts per page
+paginate: 5
 paginate_path: "/blog/page:num/"
 
 # Defaults for Markdown files and Permalink structure
@@ -47,13 +51,12 @@ exclude:
   - README.md
   - _drafts/
 
-# Collections settings for posts and artworks
+# Collections settings for posts
 collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
-  artworks:
-    output: false # Artworks are used as data, not to generate separate pages
+    source: docs/_posts
 
 # SEO and sitemap settings
 jekyll-seo-tag:
@@ -72,9 +75,5 @@ social_links:
   github: "https://github.com/rgrantham82"
   linkedin: "https://linkedin.com/in/robertgrantham82"
   email: "mailto:robertgrantham40@gmail.com"
-
-# Custom variables for use throughout the site
-custom:
-  gallery_data_file: "_data/artworks.yml"  # If it’s a data file storing artwork information
-  gallery_images_path: "assets/images/"  # Path to actual images
-  posts_directory: "docs/_posts/" # Changed to a more standard path if "_posts/docs" isn't necessary
+  instagram: "https://instagram.com/cardboardcalligraphy"
+  deviantart: "https://deviantart.com/wotan587"

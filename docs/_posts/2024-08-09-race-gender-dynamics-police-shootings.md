@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "Exploring Patterns in Fatal Police Shootings: An In-Depth Statistical Analysis"
 author_profile: true
 date:   2024-08-09

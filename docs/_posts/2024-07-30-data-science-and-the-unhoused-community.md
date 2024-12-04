@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "Understanding the Implications of Grant's Pass v. Johnson on the Unhoused Community"
 author_profile: true
 date:   2024-07-30
