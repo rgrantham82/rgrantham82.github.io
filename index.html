@@ -8,24 +8,30 @@ permalink: /
 <html lang="en">
   <head> {% include head.html %}
     <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
+  </head>
   <body>
     <!-- Hero Section -->
-    <header class="hero-section" style="background-image: url('/assets/images/hero_2.png');">
+    <header id="hero-section" style="background-image: url('/assets/images/hero_2.png');">
       <div class="overlay">
-        <h1>Cardboard Calligraphy by Robert</h1>
-        <p>Where Tradition Meets Sustainability</p>
-        <a href="/gallery.html" class="btn">View Gallery</a>
+        <div class="container">
+          <h1>Cardboard Calligraphy by Robert</h1>
+          <p>Where Tradition Meets Sustainability</p>
+          <a href="/gallery.html" class="btn">View Gallery</a>
+        </div>
       </div>
     </header>
+
     <!-- About Section -->
     <section id="about">
       <div class="container">
         <h2>About the Artist</h2>
-        <p> I am Robert, a calligrapher inspired by the streets and driven by sustainability. Using recycled cardboard as my canvas, I blend traditional calligraphy techniques with urban graffiti to tell powerful stories of resilience, creativity, and environmental care. </p>
+        <p>
+          I am Robert, a calligrapher inspired by the streets and driven by sustainability. Using recycled cardboard as my canvas, I blend traditional calligraphy techniques with urban graffiti to tell powerful stories of resilience, creativity, and environmental care.
+        </p>
         <a href="/about.html" class="btn">Read My Story</a>
       </div>
     </section>
+
     <!-- Gallery Preview -->
     <section id="gallery-preview">
       <div class="container">
@@ -47,14 +53,19 @@ permalink: /
         <a href="/gallery.html" class="btn">Explore Full Gallery</a>
       </div>
     </section>
+
     <!-- Call to Action -->
     <section id="cta">
       <div class="container">
         <h2>Commission Custom Art</h2>
-        <p> Bring your ideas to life with personalized calligraphy pieces on recycled cardboard. Perfect for gifts, events, and décor. </p>
+        <p>
+          Bring your ideas to life with personalized calligraphy pieces on recycled cardboard. Perfect for gifts, events, and décor.
+        </p>
         <a href="/services.html" class="btn">Learn More</a>
       </div>
     </section>
-    <!-- Footer --> {% include footer.html %}
+
+    <!-- Footer -->
+    {% include footer.html %}
   </body>
 </html>
