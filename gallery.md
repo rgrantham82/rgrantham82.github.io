@@ -11,15 +11,17 @@ permalink: /gallery/
 </head>
 <body>
   <!-- Header -->
-  <header class="gallery-hero" style="background-image: url('/assets/images/hero_2.png');">
+  <header id="gallery-hero" style="background-image: url('/assets/images/hero_2.png');">
     <div class="overlay">
-      <h1>Calligraphy Gallery</h1>
-      <p>Discover the artistry of calligraphy on recycled cardboard.</p>
+      <div class="container">
+        <h1>Calligraphy Gallery</h1>
+        <p>Discover the artistry of calligraphy on recycled cardboard.</p>
+      </div>
     </div>
   </header>
 
   <!-- Gallery Section -->
-  <section class="gallery-section">
+  <section id="gallery-section">
     <div class="container">
       <h2>Featured Works</h2>
       <div class="gallery-grid">
@@ -35,25 +37,23 @@ permalink: /gallery/
           <img src="/assets/images/urban_calligraphy.png" alt="Calligraphy & Graffiti Become One">
           <div class="caption">Calligraphy & Graffiti Become One</div>
         </div>
-        <!-- Add more artwork items here -->
+        <!-- Add more artwork items as needed -->
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Call to Action -->
+  <section id="gallery-cta">
     <div class="container">
-      <p>&copy; 2024 Cardboard Calligraphy by Robert. All Rights Reserved.</p>
-      <div class="social-links">
-        <a href="https://instagram.com/cardboardcalligraphy" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://deviantart.com/wotan587" target="_blank" title="DeviantArt">
-          <i class="fab fa-deviantart"></i>
-        </a>
-      </div>
+      <h2>Commission Your Own Artwork</h2>
+      <p>
+        Inspired by what you see? Let’s create a custom piece of calligraphy tailored just for you.
+      </p>
+      <a href="/contact.html" class="btn">Get in Touch</a>
     </div>
-  </footer>
-  <script src="/assets/js/scripts.js"></script>
+  </section>
+
+  <!-- Footer -->
+  {% include footer.html %}
 </body>
 </html>
