@@ -171,6 +171,117 @@ footer .social-links a:hover {
   transform: scale(1.05);
 }
 
+/* Services Page */
+
+/* Hero Section */
+#services-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#services-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#services-hero .container h1 {
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+#services-hero .container p {
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+/* Services Section */
+#services {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+#services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+}
+
+.service-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin: 10px 0 15px;
+}
+
+.service-card .btn {
+  margin-top: 10px;
+}
+
+/* Call to Action Section */
+#services-cta {
+  padding: 40px 20px;
+  background-color: #7a4f37;
+  color: #fff;
+  text-align: center;
+}
+
+#services-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#services-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#services-cta .btn {
+  background-color: #ffcc00;
+  color: #7a4f37;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .gallery-grid {
