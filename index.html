@@ -3,10 +3,52 @@ layout: default
 title: Home
 ---
 
+<!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
         <h1>Welcome to Cardboard Calligraphy by Robert</h1>
         <p>Experience the elegance of handcrafted calligraphy on recycled cardboard.</p>
         <a href="#services" class="scroll-button">Explore Services</a>
     </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="introduction">
+    <h2>About Robert</h2>
+    <p>Hello, I'm Robert, a passionate calligraphy artist based in Austin, TX. I create beautiful calligraphy pieces using recycled cardboard to promote environmental sustainability.</p>
+    <a href="{{ '/about.html' | relative_url }}" class="cta-button">Learn More About Me</a>
+</section>
+
+<!-- Featured Works Section -->
+<section class="featured-works">
+    <h2>Featured Works</h2>
+    <div class="gallery">
+        <a href="{{ '/assets/images/forever_friends_calligraphy.png' | relative_url }}" data-lightbox="featured" data-title="A Tribute to Friendship">
+            <img src="{{ '/assets/images/forever_friends_calligraphy.png' | relative_url }}" alt="A Tribute to Friendship">
+        </a>
+        <a href="{{ '/assets/images/strength_calligraphy.png' | relative_url }}" data-lightbox="featured" data-title="Strength through Artistry">
+            <img src="{{ '/assets/images/strength_calligraphy.png' | relative_url }}" alt="Strength through Artistry">
+        </a>
+        <!-- Add more featured images as needed -->
+    </div>
+    <a href="{{ '/portfolio.html' | relative_url }}" class="cta-button">View Full Portfolio</a>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What People Are Saying</h2>
+    <div class="testimonial">
+        <p>"Robert's calligraphy is truly inspiring. The use of recycled materials adds a unique touch to his art." – Jane Doe</p>
+    </div>
+    <div class="testimonial">
+        <p>"I attended one of Robert's workshops and it was an amazing experience. Highly recommended!" – John Smith</p>
+    </div>
+    <!-- Add more testimonials as desired -->
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h2>Get in Touch</h2>
+    <p>If you're interested in my work or would like to commission a piece, please feel free to reach out.</p>
+    <a href="{{ '/contact.html' | relative_url }}" class="cta-button">Contact Me</a>
 </section>
