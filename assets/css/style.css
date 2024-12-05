@@ -1,3 +1,4 @@
+/* Contact Page Styles */
 .contact-page {
     max-width: 800px;
     margin: 0 auto;
@@ -8,18 +9,90 @@
 .contact-page h1 {
     font-size: 3em;
     font-family: 'Great Vibes', cursive;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .contact-page p {
     font-size: 1.2em;
     line-height: 1.6;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
-.contact-page a {
+.contact-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
     color: #4B3832;
-    text-decoration: underline;
+}
+
+.form-group label span {
+    color: red;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1em;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4B3832;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 0.75em 2em;
+    background-color: #4B3832;
+    color: #FFF7E6;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #3A2E29;
+}
+
+@media (max-width: 480px) {
+    .contact-page h1 {
+        font-size: 2.5em;
+    }
+
+    .contact-page p {
+        font-size: 1.1em;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 0.75em;
+    }
 }
 
 /* General Styles */
