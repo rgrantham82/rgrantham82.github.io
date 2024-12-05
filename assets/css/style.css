@@ -1,3 +1,22 @@
+/* Social Media Icons */
+.social-media a {
+  display: inline-block;
+  margin: 0 0.5em;
+  color: #FFF7E6; /* Adjust color as needed */
+  font-size: 24px; /* Adjust size as needed */
+  transition: opacity 0.3s;
+}
+
+.social-media a:hover {
+  opacity: 0.7;
+}
+
+/* For the social media section on the homepage */
+.social-media-section .social-media a {
+  font-size: 40px; /* Larger icons for emphasis */
+  color: #4B3832;  /* Adjust color as needed */
+}
+
 /* Introduction Section */
 .introduction {
     text-align: center;
