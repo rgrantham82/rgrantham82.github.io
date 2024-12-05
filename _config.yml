@@ -3,4 +3,4 @@ description: "Handcrafted calligraphy on recycled cardboard by Robert, a homeles
 baseurl: "" # Leave empty unless you are hosting under a subpath
 url: "https://rgrantham82.github.io/" # Add your site's URL if available
 markdown: kramdown
-theme: minima
+remote_theme: minima
