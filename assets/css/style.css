@@ -1,3 +1,27 @@
+.contact-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.contact-page h1 {
+    font-size: 3em;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 1em;
+}
+
+.contact-page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.contact-page a {
+    color: #4B3832;
+    text-decoration: underline;
+}
+
 /* General Styles */
 body {
     margin: 0;
