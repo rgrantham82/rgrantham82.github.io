@@ -1,3 +1,47 @@
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 5em 0;
+    color: #FFF7E6;
+}
+
+.hero-content {
+    background: rgba(75, 56, 50, 0.7);
+    display: inline-block;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+/* Scroll Button */
+.scroll-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1.5em;
+    background-color: #4B3832;
+    color: #FFF7E6;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+    background-color: #3A2E29;
+}
+
 /* General Styles */
 body {
     margin: 0;
