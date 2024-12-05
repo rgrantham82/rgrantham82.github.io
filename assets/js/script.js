@@ -1,73 +1,56 @@
-// scripts.js
+// assets/js/script.js
 
-// Smooth Scrolling for Anchor Links (All Pages)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-    });
-  });
-});
-
-// Dynamic Footer Year Update (All Pages)
+// Smooth scrolling for internal anchor links
 document.addEventListener('DOMContentLoaded', () => {
-  const footer = document.querySelector('footer p');
-  if (footer) {
-    const year = new Date().getFullYear();
-    footer.innerHTML = `&copy; ${year} Cardboard Calligraphy by Robert. All Rights Reserved.`;
-  }
+    const scrollLinks = document.querySelectorAll('a[href^="#"]');
+
+    scrollLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Calculate the offset position
+                const headerOffset = 70; // Adjust this value if your header height changes
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
 
-// Lightbox for Gallery Images (Gallery Page)
-document.addEventListener('DOMContentLoaded', () => {
-  const galleryItems = document.querySelectorAll('.gallery-item img');
-  const lightbox = document.createElement('div');
-  lightbox.id = 'lightbox';
-  document.body.appendChild(lightbox);
+// Responsive navigation menu toggle (if applicable)
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-  galleryItems.forEach(image => {
-    image.addEventListener('click', () => {
-      lightbox.classList.add('active');
-      const img = document.createElement('img');
-      img.src = image.src;
-      while (lightbox.firstChild) {
-        lightbox.removeChild(lightbox.firstChild);
-      }
-      lightbox.appendChild(img);
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
-  });
+}
 
-  lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-  });
-});
+// Form validation (optional, if you want to add custom validation)
+// Since Formspree handles form submission, you might not need this unless adding custom behavior
+const contactForm = document.querySelector('.contact-form');
 
-// Hover Effects for Service Items (Services Page)
-document.addEventListener('DOMContentLoaded', () => {
-  const serviceItems = document.querySelectorAll('.service-item');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        // Example validation: Ensure all fields are filled
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('_replyto').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-  serviceItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      item.style.transform = 'scale(1.05)';
-      item.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.2)';
+        if (name === '' || email === '' || message === '') {
+            e.preventDefault();
+            alert('Please fill in all required fields.');
+        }
+
+        // Additional custom validation can be added here
     });
-
-    item.addEventListener('mouseleave', () => {
-      item.style.transform = 'scale(1)';
-      item.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-    });
-  });
-});
-
-// Toggle Mobile Navigation Menu (All Pages)
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-
-  if (toggleButton && navMenu) {
-    toggleButton.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-  }
-});
+}
