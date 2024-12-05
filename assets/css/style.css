@@ -1,3 +1,100 @@
+/* Introduction Section */
+.introduction {
+    text-align: center;
+    background-color: #FFF7E6;
+    padding: 3em 2em;
+}
+
+.introduction h2 {
+    font-size: 2.5em;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 0.5em;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 1.5em;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: #4B3832;
+    color: #FFF7E6;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3A2E29;
+}
+
+/* Featured Works Section */
+.featured-works {
+    padding: 4em 2em;
+}
+
+.featured-works h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 1em;
+}
+
+.featured-works .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.featured-works .gallery a {
+    width: calc(50% - 1em);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #4B3832;
+    transition: transform 0.3s;
+}
+
+.featured-works .gallery img {
+    width: 100%;
+    display: block;
+}
+
+.featured-works .gallery a:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #4B3832;
+    color: #FFF7E6;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 1em;
+}
+
+.testimonial {
+    max-width: 700px;
+    margin: 0 auto 1.5em;
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.testimonial p {
+    margin: 0;
+}
+
 /* Thank You Page Styles */
 .thank-you-page {
     max-width: 800px;
