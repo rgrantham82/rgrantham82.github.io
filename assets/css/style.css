@@ -1,26 +1,33 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: 'Arial, sans-serif';
+    font-family: 'Playfair Display', serif;
     background-color: #D2B48C; /* Tan color resembling cardboard */
     color: #4B3832; /* Dark brown */
 }
 
-/* Header and Footer Styles */
-header, footer {
-    background-color: #4B3832;
-    color: #FFF7E6; /* Light beige */
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-/* Navigation Styles */
+/* Header Styles */
+header {
+    background-color: #4B3832;
+    padding: 1em 0;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 2em;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
+    font-family: 'Playfair Display', serif;
     color: #FFF7E6;
     font-weight: bold;
 }
@@ -46,21 +53,35 @@ nav a:hover {
     border-radius: 10px;
 }
 
+.hero-content h1 {
+    font-size: 4em;
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
 /* Scroll Button */
 .scroll-button {
     display: inline-block;
     margin-top: 1em;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.5em;
     background-color: #4B3832;
     color: #FFF7E6;
     border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
 .scroll-button:hover {
     background-color: #3A2E29;
 }
 
-/* Section Styles */
+/* Sections */
 section {
     padding: 4em 2em;
 }
@@ -73,6 +94,39 @@ section {
 h1 {
     text-align: center;
     margin-bottom: 1em;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* Services List */
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.services li::before {
+    content: '•';
+    color: #4B3832;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
 }
 
 /* Gallery */
@@ -83,23 +137,40 @@ h1 {
     justify-content: center;
 }
 
-.gallery img {
+.gallery a {
     width: calc(33% - 1em);
     border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #4B3832;
     transition: transform 0.3s;
 }
 
-.gallery img:hover {
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+.gallery a:hover {
     transform: scale(1.05);
 }
 
-html {
-    scroll-behavior: smooth;
+/* Footer Styles */
+footer {
+    background-color: #4B3832;
+    color: #FFF7E6;
+    text-align: center;
+    padding: 1em 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .gallery img {
+    .gallery a {
         width: calc(50% - 1em);
     }
 }
@@ -109,7 +180,29 @@ html {
         flex-direction: column;
         gap: 1em;
     }
-    .gallery img {
+
+    .gallery a {
         width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .scroll-button {
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        padding: 3em 1em;
     }
 }
