@@ -174,12 +174,13 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.3.4)
   jekyll-archives (~> 2.2)
-  jekyll-data
+  jekyll-data (~> 1.0)
   jekyll-feed (~> 0.15)
   jekyll-paginate (~> 1.1)
   jekyll-seo-tag (~> 2.7)
   jekyll-sitemap (~> 1.4)
   jekyll-watch (~> 2.2)
+  rouge (~> 4.0)
 
 BUNDLED WITH
    2.5.11
