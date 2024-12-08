@@ -2,8 +2,10 @@
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
-    background-color: #D2B48C; /* Tan color resembling cardboard */
-    color: #4B3832; /* Dark brown */
+    background-color: #D2B48C;
+    /* Tan color resembling cardboard */
+    color: #4B3832;
+    /* Dark brown */
 }
 
 a {
@@ -50,7 +52,7 @@ nav {
 .social-media {
     display: flex;
     align-items: center;
-    gap: 0.5em; 
+    gap: 0.5em;
     margin-left: 1em;
 }
 
@@ -73,7 +75,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background-image: url('{{ '/assets/images/hero_2.png' | relative_url }}');
+    background-image: url('{{ ' /assets/images/hero_2.png' | relative_url }}');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -171,7 +173,8 @@ p {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    text-align: left; /* Ensure post content aligns nicely */
+    text-align: left;
+    /* Ensure post content aligns nicely */
 }
 
 .post {
@@ -184,7 +187,7 @@ p {
 
 .post:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post h2 {
@@ -615,6 +618,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     /* Navigation Menu */
     .nav-links {
         flex-direction: column;
@@ -699,6 +703,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     /* Gallery Adjustments */
     .gallery a {
         width: 100%;
