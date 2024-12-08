@@ -19,6 +19,10 @@
     <!-- Header -->
     <header>
       <nav>
+        <div class="logo">
+          <!-- Optional: You can place a logo or site title here -->
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </div>
         <ul class="nav-links">
           <li>
             <a href="{{ '/' | relative_url }}">Home</a>
@@ -46,6 +50,12 @@
           <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
             <i class="fab fa-deviantart"></i>
           </a>
+        </div>
+        <!-- Mobile Menu Toggle (Hamburger Icon) -->
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </nav>
     </header>
