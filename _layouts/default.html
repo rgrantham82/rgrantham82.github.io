@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Site Title -->
     <title>{{ page.title }} - {{ site.title }}</title>
     <!-- CSS Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-jN2i4S0fCF6EAPw3B4WBlqfIHroAAWHezF0jG2gOmlKXuV6ZG51e1F/5eqGMkikCj3FSoKJ1p9ovgV0j/hqgP8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <!-- Lightbox CSS (if used) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <!-- Font Awesome CSS for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-jN2i4S0fCF6EAPw3B4WBlqfIHroAAWHezF0jG2gOmlKXuV6ZG51e1F/5eqGMkikCj3FSoKJ1p9ovgV0j/hqgP8w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-jN2i4S0fCF6EAPw3B4WBlqfIHroAAWHezF0jG2gOmlKXuV6ZG51e1F/5eqGMkikCj3FSoKJ1p9ovgV0j/hqgP8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-                <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
-                <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
-                <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-            </ul>
-            <div class="social-media">
-                <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
-                    <i class="fab fa-deviantart"></i>
-                </a>
-            </div>
-        </nav>
-    </header>
-    
-    <!-- Hero Section -->
-    {% if page.hero %}
-    <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');">
-        <div class="hero-content">
-            <h1>{{ page.hero.title }}</h1>
-            <p>{{ page.hero.subtitle }}</p>
-            {% if page.hero.button_text and page.hero.button_link %}
-            <a href="{{ page.hero.button_link }}" class="scroll-button">{{ page.hero.button_text }}</a>
-            {% endif %}
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="{{ '/' | relative_url }}">Home</a>
+          </li>
+          <li>
+            <a href="{{ '/about.html' | relative_url }}">About</a>
+          </li>
+          <li>
+            <a href="{{ '/services.html' | relative_url }}">Services</a>
+          </li>
+          <li>
+            <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
+          </li>
+          <li>
+            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+          </li>
+        </ul>
+        <div class="social-media">
+          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
+            <i class="fab fa-deviantart"></i>
+          </a>
         </div>
-    </section>
-    {% endif %}
-    
+      </nav>
+    </header>
+    <!-- Hero Section --> {% if page.hero %} <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');">
+      <div class="hero-content">
+        <h1>{{ page.hero.title }}</h1>
+        <p>{{ page.hero.subtitle }}</p> {% if page.hero.button_text and page.hero.button_link %} <a href="{{ page.hero.button_link }}" class="scroll-button">{{ page.hero.button_text }}</a> {% endif %}
+      </div>
+    </section> {% endif %}
     <!-- Main Content -->
     <main>
-        {{ content }}
+      {{ content }}
     </main>
-    
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
-                    <i class="fab fa-deviantart"></i>
-                </a>
-            </div>
+      <div class="footer-content">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        <div class="social-media">
+          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
+            <i class="fab fa-deviantart"></i>
+          </a>
         </div>
+      </div>
     </footer>
-    
     <!-- JavaScript -->
     <!-- Lightbox JS (if used) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <!-- Custom JS -->
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-</body>
+  </body>
 </html>
