@@ -23,7 +23,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1em;
 }
@@ -79,7 +79,7 @@ nav {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 5em 0;
+    padding: 5em 2em;
     color: #FFF7E6;
 }
 
