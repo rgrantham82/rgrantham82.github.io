@@ -310,6 +310,29 @@ p {
     transform: scale(1.05);
 }
 
+.gallery-item {
+    position: relative; /* Important: allows absolutely positioned elements inside */
+}
+
+.sold-badge {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background-color: #4B3832;
+    color: #FFF7E6;
+    padding: 0.25em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.gallery-item.sold img {
+    opacity: 0.7; /* Optional: dim the image slightly if it's sold */
+}
+
+/* Optional: if you want a more subtle indicator, you could add a 'sold' overlay or a watermark */
+
 /* Testimonials Section */
 .testimonials {
     background-color: #4B3832;
