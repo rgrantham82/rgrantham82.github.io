@@ -468,6 +468,25 @@ p {
     background-color: #3A2E29;
 }
 
+.to-top {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background: #4B3832;
+    color: #FFF7E6;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    z-index: 9999; /* Ensure it stays on top of other elements */
+}
+
+.to-top:hover {
+    opacity: 0.8;
+}
+
 /* Introduction Section */
 .introduction {
     text-align: center;
