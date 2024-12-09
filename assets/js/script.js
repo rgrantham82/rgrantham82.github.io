@@ -1,6 +1,23 @@
 // assets/js/script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    const toTopBtn = document.querySelector('.to-top');
+
+    if (toTopBtn) {
+        // Hide the button initially
+        toTopBtn.style.display = 'none';
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                toTopBtn.style.display = 'block'; // Show button after 300px scroll
+            } else {
+                toTopBtn.style.display = 'none';
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
