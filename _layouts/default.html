@@ -4,45 +4,38 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description }}">
     <!-- Site Title -->
     <title>{{ page.title }} - {{ site.title }}</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
     <!-- CSS Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Lightbox CSS (if used) -->
+    <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-    <!-- Font Awesome CSS for Icons -->
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav>
         <div class="logo">
-          <!-- Optional: You can place a logo or site title here -->
-          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} Logo" style="height: 50px;">
+          </a>
         </div>
+        <!-- Navigation Links -->
         <ul class="nav-links">
-          <li>
-            <a href="{{ '/' | relative_url }}">Home</a>
-          </li>
-          <li>
-            <a href="{{ '/about.html' | relative_url }}">About</a>
-          </li>
-          <li>
-            <a href="{{ '/services.html' | relative_url }}">Services</a>
-          </li>
-          <li>
-            <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
-          </li>
-          <li>
-            <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-          </li>
-          <li>
-            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
-          </li>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+          <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
+          <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
+          <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
         </ul>
+        <!-- Social Media Links -->
         <div class="social-media">
           <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
@@ -51,27 +44,35 @@
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
-        <!-- Mobile Menu Toggle (Hamburger Icon) -->
-        <div class="mobile-menu-toggle">
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </nav>
     </header>
-    <!-- Hero Section --> {% if page.hero %} <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');">
-      <div class="hero-content">
-        <h1>{{ page.hero.title }}</h1>
-        <p>{{ page.hero.subtitle }}</p> {% if page.hero.button_text and page.hero.button_link %} <a href="{{ page.hero.button_link }}" class="scroll-button">{{ page.hero.button_text }}</a> {% endif %}
-      </div>
-    </section> {% endif %}
+
+    <!-- Hero Section -->
+    {% if page.hero %}
+      <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');">
+        <div class="hero-content">
+          <h1>{{ page.hero.title }}</h1>
+          <p>{{ page.hero.subtitle }}</p>
+          {% if page.hero.button_text and page.hero.button_link %}
+            <a href="{{ page.hero.button_link }}" class="scroll-button">{{ page.hero.button_text }}</a>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+
     <!-- Main Content -->
     <main>
-      <a href="#top" class="to-top">Top</a>
-      <body>
       <a id="top"></a>
       {{ content }}
+      <a href="#top" class="to-top">Back to Top</a>
     </main>
+
     <!-- Footer -->
     <footer>
       <div class="footer-content">
@@ -86,10 +87,15 @@
         </div>
       </div>
     </footer>
+
     <!-- JavaScript -->
-    <!-- Lightbox JS (if used) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <!-- Custom JS -->
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    <script>
+      // Mobile Menu Toggle
+      document.getElementById('mobile-menu').addEventListener('click', function () {
+        document.querySelector('.nav-links').classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
