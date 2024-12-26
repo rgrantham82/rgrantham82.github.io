@@ -8,64 +8,66 @@ hero:
   button_text: "Explore Services"
   button_link: "/services.html"
 ---
-<!-- Introduction Section -->
-<section class="introduction">
-    <h2>About Robert</h2>
-    <div class="intro-content">
-        <div class="intro-image">
-            <img src="{{ '/assets/images/profile-image.jpg' | relative_url }}" alt="Photo of Robert, Calligraphy Artist">
-        </div>
-        <div class="intro-text">
-            <p>Hello, I'm Robert, a passionate calligraphy artist based in Austin, TX. I create beautiful calligraphy pieces using recycled cardboard to promote environmental sustainability.</p>
-            <a href="{{ '/about.html' | relative_url }}" class="cta-button">Learn More About Me</a>
-        </div>
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Cardboard Calligraphy by Robert</h1>
+      <p>Experience the elegance of handcrafted calligraphy on recycled cardboard.</p>
+      <a href="/services.html" class="scroll-button">Explore Services</a>
     </div>
-</section>
+  </section>
 
-<!-- Featured Works Section -->
-<section class="featured-works">
-    <h2>Featured Works</h2>
-    <div class="gallery">
-        <a href="{{ '/assets/images/forever_friends_calligraphy.png' | relative_url }}" data-lightbox="featured" data-title="A Tribute to Friendship">
-            <img src="{{ '/assets/images/forever_friends_calligraphy.png' | relative_url }}" alt="A Tribute to Friendship">
-        </a>
-        <a href="{{ '/assets/images/strength_calligraphy.png' | relative_url }}" data-lightbox="featured" data-title="Strength through Artistry">
-            <img src="{{ '/assets/images/strength_calligraphy.png' | relative_url }}" alt="Strength through Artistry">
-        </a>
-        <!-- Add more featured images as needed -->
+  <!-- About Section -->
+  <section class="introduction">
+    <div class="intro-content container">
+      <div class="intro-image">
+        <img src="/assets/images/profile-image.jpg" alt="Photo of Robert">
+      </div>
+      <div class="intro-text">
+        <h2>About Robert</h2>
+        <p>Hello, I'm Robert...</p>
+        <a href="/about.html" class="cta-button">Learn More About Me</a>
+      </div>
     </div>
-    <a href="{{ '/portfolio.html' | relative_url }}" class="cta-button">View Full Portfolio</a>
-</section>
+  </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <h2>What People Are Saying</h2>
-    <div class="testimonial">
-        <p>"Robert's calligraphy is truly inspiring. The use of recycled materials adds a unique touch to his art." – Andrew B.</p>
+  <!-- Featured Works -->
+  <section class="featured-works">
+    <div class="container">
+      <h2>Featured Works</h2>
+      <div class="gallery">
+        <!-- Lightbox images here -->
+      </div>
+      <a href="/portfolio.html" class="cta-button">View Full Portfolio</a>
     </div>
-    <div class="testimonial">
-        <p>"I attended one of Robert's workshops and it was an amazing experience. Highly recommended!" – Addison S.</p>
-    </div>
-    <!-- Add more testimonials as desired -->
-</section>
+  </section>
 
-<!-- Social Media Section -->
-<section class="social-media-section">
-    <h2>Connect with Me</h2>
-    <p>Follow me on social media to see my latest works and updates.</p>
-    <div class="social-media">
-        <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
-            <i class="fab fa-deviantart"></i>
-        </a>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What People Are Saying</h2>
+      <!-- testimonial cards -->
     </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section class="contact">
-    <h2>Get in Touch</h2>
-    <p>If you're interested in my work or would like to commission a piece, please feel free to reach out.</p>
-    <a href="{{ '/contact.html' | relative_url }}" class="cta-button">Contact Me</a>
-</section>
+  <!-- Social Media -->
+  <section class="social-media-section">
+    <div class="container">
+      <h2>Connect with Me</h2>
+      <p>Follow me on social media...</p>
+      <div class="social-media">
+        <!-- icons -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>If you're interested in my work...</p>
+      <a href="/contact.html" class="cta-button">Contact Me</a>
+    </div>
+  </section>
+</main>
