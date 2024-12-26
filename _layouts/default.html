@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Tags -->
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ site.description }}">
-    <!-- Site Title -->
+
+    <!-- Primary Meta Tags -->
     <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ site.author | default: 'Robert G.' }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <!-- Change this to an image that best represents your brand/art -->
+    <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/assets/images/favicon.png' | relative_url }}"
+    >
+
     <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha384-RRZKjnk9r2Y9lQ23F5tGt72NF866DqZryjIpCcm9JAm2pN+p8OFjAAU4Iyd1L7zj"
+      crossorigin="anonymous"
+    >
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    >
+
     <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+      integrity="sha384-EHDS6AosclSAgMGbfuU2cXgybTpOSloORZOR2VhknLRl46DwLjhyJFjdFBdjiSsz"
+      crossorigin="anonymous"
+    >
+
+    <!-- Optional: Structured Data (JSON-LD) for Branding / Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VisualArtsBusiness",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}",
+      "sameAs": [
+        "https://www.instagram.com/cardboardcalligraphy/",
+        "https://www.deviantart.com/wotan587/"
+      ],
+      "logo": "{{ '/assets/images/logo.png' | relative_url }}"
+    }
+    </script>
+
+    <!-- Optional: Google Analytics (replace 'UA-XXXXXX-X' with your ID)
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXX-X');
+    </script>
+    -->
+
   </head>
   <body>
     <!-- Header -->
@@ -23,11 +90,16 @@
       <nav>
         <div class="logo">
           <a href="{{ '/' | relative_url }}">
-            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} Logo" style="height: 50px;">
+            <!-- Use descriptive alt text for accessibility -->
+            <img
+              src="{{ '/assets/images/logo.png' | relative_url }}"
+              alt="{{ site.title }} - Modern Calligraphy Logo"
+              style="height: 50px;"
+            >
           </a>
         </div>
         <!-- Navigation Links -->
-        <ul class="nav-links">
+        <ul class="nav-links" aria-label="Main Navigation">
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
           <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
           <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
@@ -37,10 +109,20 @@
         </ul>
         <!-- Social Media Links -->
         <div class="social-media">
-          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/cardboardcalligraphy/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our Instagram"
+          >
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
+          <a
+            href="https://www.deviantart.com/wotan587/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our DeviantArt"
+          >
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
@@ -53,14 +135,20 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (optional, if page.hero is defined) -->
     {% if page.hero %}
-      <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');">
+      <section
+        class="hero"
+        style="background-image: url('{{ page.hero.image | relative_url }}');"
+        aria-label="Hero Section"
+      >
         <div class="hero-content">
           <h1>{{ page.hero.title }}</h1>
           <p>{{ page.hero.subtitle }}</p>
           {% if page.hero.button_text and page.hero.button_link %}
-            <a href="{{ page.hero.button_link }}" class="scroll-button">{{ page.hero.button_text }}</a>
+            <a href="{{ page.hero.button_link }}" class="scroll-button">
+              {{ page.hero.button_text }}
+            </a>
           {% endif %}
         </div>
       </section>
@@ -68,6 +156,7 @@
 
     <!-- Main Content -->
     <main>
+      <!-- "top" anchor for 'Back to Top' link -->
       <a id="top"></a>
       {{ content }}
       <a href="#top" class="to-top">Back to Top</a>
@@ -76,12 +165,25 @@
     <!-- Footer -->
     <footer>
       <div class="footer-content">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        <p>
+          &copy; {{ site.time | date: '%Y' }} {{ site.title }}.
+          All rights reserved.
+        </p>
         <div class="social-media">
-          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/cardboardcalligraphy/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.deviantart.com/wotan587/" target="_blank" aria-label="DeviantArt">
+          <a
+            href="https://www.deviantart.com/wotan587/"
+            target="_blank"
+            rel="noopener"
+            aria-label="DeviantArt"
+          >
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
@@ -89,7 +191,11 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+      integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3"
+      crossorigin="anonymous"
+    ></script>
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
     <script>
       // Mobile Menu Toggle
