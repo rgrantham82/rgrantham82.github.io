@@ -1,6 +1,62 @@
+# Site settings
 title: "Cardboard Calligraphy by Robert"
 description: "Handcrafted calligraphy on recycled cardboard by Robert, a homeless artist in Austin, TX."
-baseurl: "" # Leave empty unless you are hosting under a subpath
-url: "https://rgrantham82.github.io/" # Add your site's URL if available
+url: "https://rgrantham82.github.io"    # Your deployed GitHub Pages URL or custom domain
+baseurl: ""                            # Keep this empty if using root folder (e.g., https://username.github.io/)
+
+# Author & Social
+author:
+  name: "Robert Grantham"
+  email: "robertgrantham40@gmail.com"
+  location: "Austin, TX"
+  # You can add more fields if desired, e.g., "bio", "twitter", etc.
+
+# Optional Social Handles for SEO & Plugins
+twitter_username: ""         # e.g., "your_twitter_handle"
+github_username: "rgrantham82"
+instagram_username: "cardboardcalligraphy"
+# If you want to reference these in layouts or SEO tags
+
+# Plugins
+plugins:
+  - jekyll-seo-tag           # Automatically generates better SEO meta tags
+  - jekyll-sitemap           # Generates a sitemap.xml for SEO
+  - jekyll-feed              # Generates an Atom/RSS feed at /feed.xml
+  # - jekyll-paginate        # For blog pagination if needed
+  # - jekyll-remote-theme    # If you need advanced remote theme features; optional if using 'remote_theme' key below
+
+# Theme & Markdown
+theme: minima
+# OR if you're using a remote theme:
+# remote_theme: "minima"
 markdown: kramdown
-remote_theme: minima
+
+# SEO image (optional)
+# You can reference an OG (Open Graph) image site-wide, e.g.:
+image: "/assets/images/og-image.jpg"
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .github
+  # Add or remove files/folders you don't want included in the build
+
+# Sitemap settings
+# By default, jekyll-sitemap will generate a sitemap.xml at the root of your site.
+
+# Feed settings
+# By default, jekyll-feed will generate feed.xml at the root of your site.
+
+# Pagination settings (uncomment if you use jekyll-paginate)
+# paginate: 5
+# paginate_path: "/page:num/"
+
+# Deployment or environment variables
+# You can define custom variables or environment-related settings:
+# production_url: "https://rgrantham82.github.io"
+
+# End of File
