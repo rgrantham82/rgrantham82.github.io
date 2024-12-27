@@ -4,13 +4,6 @@ description: "Handcrafted calligraphy on recycled cardboard by Robert, a homeles
 url: "https://rgrantham82.github.io"    # Your deployed GitHub Pages URL or custom domain
 baseurl: ""                            # Keep this empty if using root folder (e.g., https://username.github.io/)
 
-# Author & Social
-author:
-  name: "Robert Grantham"
-  email: "robertgrantham40@gmail.com"
-  location: "Austin, TX"
-  # You can add more fields if desired, e.g., "bio", "twitter", etc.
-
 # Optional Social Handles for SEO & Plugins
 twitter_username: ""         # e.g., "your_twitter_handle"
 github_username: "rgrantham82"
