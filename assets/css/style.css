@@ -314,66 +314,60 @@ SERVICES SECTION
 }
 
 /*------------------------------------------------
-PORTFOLIO / GALLERY
+PORTFOLIO / GALLERY (CLEANED-UP)
 -------------------------------------------------*/
-/* Base .gallery styling */
+
+/* Base gallery styling shared across sections */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
 }
-/* 
-   Commenting out older code that forced images 
-   to appear at 50% width or 100% width:
-   .featured-works .gallery a {
-     width: calc(50% - 1em);
-   }
-*/
 
-/* The new recommended approach: each gallery-item
-   gets a set width, and the <img> takes 100% of that item. */
-
-.featured-works .gallery .gallery-item {
-  width: calc(33.333% - 1em);  /* 3 columns on desktop */
-  box-sizing: border-box;
-  margin-bottom: 1em;          /* spacing between rows */
-}
-
-.featured-works .gallery .gallery-item img {
-  width: 100%;     /* fill its parent .gallery-item */
-  height: auto;    /* maintain aspect ratio */
-  display: block;
-}
-
-/* Tablet (under 768px): 2 columns */
-@media (max-width: 768px) {
-  .featured-works .gallery .gallery-item {
-    width: calc(50% - 1em);
-  }
-}
-
-/* Mobile (under 480px): 1 column */
-@media (max-width: 480px) {
-  .featured-works .gallery .gallery-item {
-    width: 100%;
-  }
-}
-
+/*------------------------------------------------
+Featured Works Section
+-------------------------------------------------*/
 .featured-works {
   padding: 4em 2em;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
+
 .featured-works h2 {
-  text-align: center;
   font-size: 2.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #4B3832; /* if desired */
+}
+
+/* 3-column grid on desktop */
+.featured-works .gallery .gallery-item {
+  width: calc(33.333% - 1em);
+  box-sizing: border-box;
   margin-bottom: 1em;
 }
 
-.gallery-item {
-  position: relative;
+/* Make images fill their container and keep aspect ratio */
+.featured-works .gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2 columns on tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .featured-works .gallery .gallery-item {
+    width: calc(50% - 1em);
+  }
+}
+
+/* 1 column on mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .featured-works .gallery .gallery-item {
+    width: 100%;
+  }
 }
 
 /* Optional "Sold" or other badges */
@@ -390,6 +384,7 @@ PORTFOLIO / GALLERY
   text-transform: uppercase;
 }
 
+/* Optional image caption styling */
 .gallery-caption {
   margin-top: 0.5em;
   font-size: 1em;
@@ -397,6 +392,61 @@ PORTFOLIO / GALLERY
   text-align: center;
   font-style: italic;
 }
+
+.portfolio-section {
+  padding: 4em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #4B3832;
+}
+
+.portfolio-section p {
+  max-width: 800px;
+  margin: 0 auto 2em;
+  color: #4B3832;
+}
+
+/* The same multi-column gallery approach for .portfolio-section */
+.portfolio-section .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+/* 3 columns on desktop */
+.portfolio-section .gallery .gallery-item {
+  width: calc(33.333% - 1em);
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.portfolio-section .gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2 columns on tablets */
+@media (max-width: 768px) {
+  .portfolio-section .gallery .gallery-item {
+    width: calc(50% - 1em);
+  }
+}
+
+/* 1 column on mobile */
+@media (max-width: 480px) {
+  .portfolio-section .gallery .gallery-item {
+    width: 100%;
+  }
+}
+
 
 /*------------------------------------------------
 BLOG SECTION
