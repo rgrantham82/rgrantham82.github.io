@@ -210,7 +210,7 @@ ABOUT SECTION
 }
 
 /*------------------------------------------------
-TESTIMONIALS (UPDATED)
+TESTIMONIALS
 -------------------------------------------------*/
 .testimonials {
   background-color: #4B3832;
@@ -230,7 +230,7 @@ TESTIMONIALS (UPDATED)
   font-size: 1.2em;
   font-style: italic;
   line-height: 1.6;
-  color: #FFF7E6;
+  color: #FFFFFF;  /* Updated to white for better visibility */
 }
 
 .testimonial-author {
@@ -256,6 +256,7 @@ TESTIMONIALS (UPDATED)
   object-fit: cover;
   margin-right: 0.5em;
 }
+
 
 /*------------------------------------------------
 FOOTER
