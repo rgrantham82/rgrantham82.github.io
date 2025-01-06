@@ -47,14 +47,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'G-7WZFJ98W4K');
-    </script> 
+    </script>
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -67,24 +65,12 @@
         </div>
         <!-- Navigation Links -->
         <ul class="nav-links" aria-label="Main Navigation">
-          <li>
-            <a href="{{ '/' | relative_url }}">Home</a>
-          </li>
-          <li>
-            <a href="{{ '/about.html' | relative_url }}">About</a>
-          </li>
-          <li>
-            <a href="{{ '/services.html' | relative_url }}">Services</a>
-          </li>
-          <li>
-            <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
-          </li>
-          <li>
-            <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-          </li>
-          <li>
-            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
-          </li>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+          <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
+          <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
+          <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
         </ul>
         <!-- Social Media Links -->
         <div class="social-media">
@@ -95,7 +81,7 @@
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Menu Toggle (Hamburger) -->
         <div class="mobile-menu-toggle" id="mobile-menu">
           <span></span>
           <span></span>
@@ -103,14 +89,22 @@
         </div>
       </nav>
     </header>
-    <!-- Hero Section (optional, if page.hero is defined) --> {% if page.hero %} <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');" aria-label="Hero Section">
-      <div class="hero-content">
-        <h1>{{ page.hero.title }}</h1>
-        <p>{{ page.hero.subtitle }}</p> {% if page.hero.button_text and page.hero.button_link %} <a href="{{ page.hero.button_link }}" class="scroll-button">
-          {{ page.hero.button_text }}
-        </a> {% endif %}
-      </div>
-    </section> {% endif %}
+
+    <!-- Hero Section (optional, if page.hero is defined) -->
+    {% if page.hero %}
+      <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');" aria-label="Hero Section">
+        <div class="hero-content">
+          <h1>{{ page.hero.title }}</h1>
+          <p>{{ page.hero.subtitle }}</p>
+          {% if page.hero.button_text and page.hero.button_link %}
+            <a href="{{ page.hero.button_link }}" class="scroll-button">
+              {{ page.hero.button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+
     <!-- Main Content -->
     <main>
       <!-- "top" anchor for 'Back to Top' link -->
@@ -118,10 +112,11 @@
       {{ content }}
       <a href="#top" class="to-top">Back to Top</a>
     </main>
+
     <!-- Footer -->
     <footer>
       <div class="footer-content">
-        <p> &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved. </p>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
         <div class="social-media">
           <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
@@ -132,11 +127,13 @@
         </div>
       </div>
     </footer>
+
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
     <script>
       // Mobile Menu Toggle
+      // When the hamburger is clicked, toggle the .active class on .nav-links
       document.getElementById('mobile-menu').addEventListener('click', function() {
         document.querySelector('.nav-links').classList.toggle('active');
       });
