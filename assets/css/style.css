@@ -36,9 +36,13 @@ nav {
   padding: 0 1em;
 }
 
+/* 
+   By default (desktop), .nav-links is displayed as a flex row.
+   On mobile, we override with a media query to hide them until toggled.
+*/
 .nav-links {
   list-style: none;
-  display: flex;
+  display: flex; /* Default: visible for desktops */
   gap: 2em;
   margin: 0;
   padding: 0;
@@ -55,9 +59,9 @@ nav {
   text-decoration: underline;
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle is hidden by default on desktop */
 .mobile-menu-toggle {
-  display: none;
+  display: none; /* We'll show it only on smaller screens */
   flex-direction: column;
   cursor: pointer;
 }
@@ -69,7 +73,10 @@ nav {
   margin: 4px 0;
 }
 
-/* Make nav-links stack in mobile view */
+/* 
+   On small screens, we hide the nav links by default and 
+   display them only when .active is toggled by JavaScript.
+*/
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -79,15 +86,27 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    display: none;
+    display: none; /* Hide by default on mobile */
     background-color: #4B3832;
     padding: 1em 0;
+    z-index: 999; /* Ensure it appears above other elements */
   }
   .nav-links.active {
-    display: flex;
+    display: flex; /* Shown only when toggled */
   }
+  /* Show the hamburger icon on mobile */
   .mobile-menu-toggle {
     display: flex;
+  }
+}
+
+/* 
+   (Optional) Force hiding the hamburger for screens wider than 768px. 
+   This ensures the hamburger won't linger on tablet/desktop. 
+*/
+@media (min-width: 769px) {
+  .mobile-menu-toggle {
+    display: none;
   }
 }
 
