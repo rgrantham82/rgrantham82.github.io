@@ -36,7 +36,7 @@ nav {
   padding: 0 1em;
 }
 
-/* 
+/*
    By default (desktop), .nav-links is displayed as a flex row.
    On mobile, we override with a media query to hide them until toggled.
 */
@@ -73,8 +73,8 @@ nav {
   margin: 4px 0;
 }
 
-/* 
-   On small screens, we hide the nav links by default and 
+/*
+   On small screens, we hide the nav links by default and
    display them only when .active is toggled by JavaScript.
 */
 @media (max-width: 768px) {
@@ -100,9 +100,9 @@ nav {
   }
 }
 
-/* 
-   (Optional) Force hiding the hamburger for screens wider than 768px. 
-   This ensures the hamburger won't linger on tablet/desktop. 
+/*
+   (Optional) Force hiding the hamburger for screens wider than 768px.
+   This ensures the hamburger won't linger on tablet/desktop.
 */
 @media (min-width: 769px) {
   .mobile-menu-toggle {
@@ -316,45 +316,67 @@ SERVICES SECTION
 /*------------------------------------------------
 PORTFOLIO / GALLERY
 -------------------------------------------------*/
+/* Base .gallery styling */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
 }
+/* 
+   Commenting out older code that forced images 
+   to appear at 50% width or 100% width:
+   .featured-works .gallery a {
+     width: calc(50% - 1em);
+   }
+*/
 
-.gallery a {
-  width: calc(33% - 1em);
-  border-radius: 5px;
-  overflow: hidden;
-  border: 2px solid #4B3832;
-  transition: transform 0.3s;
+/* The new recommended approach: each gallery-item
+   gets a set width, and the <img> takes 100% of that item. */
+
+.featured-works .gallery .gallery-item {
+  width: calc(33.333% - 1em);  /* 3 columns on desktop */
+  box-sizing: border-box;
+  margin-bottom: 1em;          /* spacing between rows */
 }
-.gallery a:hover {
-  transform: scale(1.05);
-}
-.gallery img {
-  width: 100%;
+
+.featured-works .gallery .gallery-item img {
+  width: 100%;     /* fill its parent .gallery-item */
+  height: auto;    /* maintain aspect ratio */
   display: block;
+}
+
+/* Tablet (under 768px): 2 columns */
+@media (max-width: 768px) {
+  .featured-works .gallery .gallery-item {
+    width: calc(50% - 1em);
+  }
+}
+
+/* Mobile (under 480px): 1 column */
+@media (max-width: 480px) {
+  .featured-works .gallery .gallery-item {
+    width: 100%;
+  }
 }
 
 .featured-works {
   padding: 4em 2em;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 .featured-works h2 {
   text-align: center;
   font-size: 2.5em;
   margin-bottom: 1em;
 }
-.featured-works .gallery a {
-  width: calc(50% - 1em);
-}
 
 .gallery-item {
   position: relative;
 }
+
+/* Optional "Sold" or other badges */
 .sold-badge {
   position: absolute;
   top: 0.5em;
@@ -456,7 +478,7 @@ TESTIMONIALS
   font-size: 1.2em;
   font-style: italic;
   line-height: 1.6;
-  color: #FFFFFF; /* Changed from #FFF7E6 to #FFFFFF for visibility */
+  color: #FFFFFF; /* White text for contrast on dark background */
 }
 
 /*------------------------------------------------
@@ -706,36 +728,7 @@ RESPONSIVE ADJUSTMENTS
     font-size: 2.5em;
   }
 
-  /* Featured Works Gallery Tweaks */
-
-/* By default, let each gallery item take up roughly 33% width on desktop, 
-   50% on tablets, and 100% on mobile. */
-
-.featured-works .gallery .gallery-item {
-  width: calc(33.333% - 1em);
-  margin-bottom: 1em; /* Spacing between rows */
-}
-
-@media (max-width: 768px) {
-  .featured-works .gallery .gallery-item {
-    width: calc(50% - 1em);
-  }
-}
-
-@media (max-width: 480px) {
-  .featured-works .gallery .gallery-item {
-    width: 100%;
-  }
-}
-
-  /* Gallery Adjustments */
-  .gallery a {
-    width: calc(50% - 1em);
-  }
-  .featured-works .gallery a {
-    width: calc(100% - 1em);
-  }
-
+  /* Adjusted for gallery columns using above rules */
   /* About Page Adjustments */
   .about-content {
     flex-direction: column;
@@ -763,11 +756,7 @@ RESPONSIVE ADJUSTMENTS
     padding: 1em;
   }
 
-  /* Gallery Adjustments */
-  .gallery a {
-    width: 100%;
-  }
-
+  /* Adjusted for gallery columns using above rules */
   /* Introduction Section */
   .intro-content {
     flex-direction: column;
