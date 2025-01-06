@@ -706,6 +706,28 @@ RESPONSIVE ADJUSTMENTS
     font-size: 2.5em;
   }
 
+  /* Featured Works Gallery Tweaks */
+
+/* By default, let each gallery item take up roughly 33% width on desktop, 
+   50% on tablets, and 100% on mobile. */
+
+.featured-works .gallery .gallery-item {
+  width: calc(33.333% - 1em);
+  margin-bottom: 1em; /* Spacing between rows */
+}
+
+@media (max-width: 768px) {
+  .featured-works .gallery .gallery-item {
+    width: calc(50% - 1em);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-works .gallery .gallery-item {
+    width: 100%;
+  }
+}
+
   /* Gallery Adjustments */
   .gallery a {
     width: calc(50% - 1em);
