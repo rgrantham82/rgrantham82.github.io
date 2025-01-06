@@ -316,45 +316,43 @@ SERVICES SECTION
 /*------------------------------------------------
 PORTFOLIO / GALLERY
 -------------------------------------------------*/
+/* UPDATED/ADDED FOR FEATURED WORKS */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
 }
-
-.gallery a {
-  width: calc(33% - 1em);
-  border-radius: 5px;
-  overflow: hidden;
-  border: 2px solid #4B3832;
-  transition: transform 0.3s;
-}
-.gallery a:hover {
-  transform: scale(1.05);
-}
 .gallery img {
   width: 100%;
   display: block;
 }
 
-.featured-works {
-  padding: 4em 2em;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.featured-works h2 {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 1em;
-}
-.featured-works .gallery a {
-  width: calc(50% - 1em);
-}
-
+/* We’re now handling columns via .gallery-item so each item can
+   include the link, the image, and any additional elements (e.g., badges). */
 .gallery-item {
   position: relative;
+  width: calc(33.333% - 1em); /* 3 columns on desktop */
 }
+
+.gallery-item a {
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid #4B3832;
+  transition: transform 0.3s;
+  background-color: #FFF7E6; /* or #ffffff, whichever you prefer */
+}
+
+.gallery-item a:hover {
+  transform: scale(1.05);
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .sold-badge {
   position: absolute;
   top: 0.5em;
@@ -374,6 +372,37 @@ PORTFOLIO / GALLERY
   color: #4B3832;
   text-align: center;
   font-style: italic;
+}
+
+/* FEATURED-WORKS SECTION UPDATED */
+.featured-works {
+  background-color: #FFF7E6; /* Optional, for a subtle backdrop */
+  padding: 4em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.featured-works h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #4B3832;
+}
+
+/* 
+   We override the default .gallery a { width: calc(33% - 1em) } 
+   for bigger or smaller screens as needed below. 
+*/
+@media (max-width: 768px) {
+  .gallery-item {
+    width: calc(50% - 1em); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 100%; /* 1 column on phones */
+  }
 }
 
 /*------------------------------------------------
@@ -707,12 +736,7 @@ RESPONSIVE ADJUSTMENTS
   }
 
   /* Gallery Adjustments */
-  .gallery a {
-    width: calc(50% - 1em);
-  }
-  .featured-works .gallery a {
-    width: calc(100% - 1em);
-  }
+  /* Already handled in .gallery-item above with @media queries */
 
   /* About Page Adjustments */
   .about-content {
@@ -742,9 +766,7 @@ RESPONSIVE ADJUSTMENTS
   }
 
   /* Gallery Adjustments */
-  .gallery a {
-    width: 100%;
-  }
+  /* Already handled in .gallery-item above with @media queries */
 
   /* Introduction Section */
   .intro-content {
