@@ -1,70 +1,99 @@
 // assets/js/script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const toTopBtn = document.querySelector('.to-top');
-
-    if (toTopBtn) {
-        // Hide the button initially
-        toTopBtn.style.display = 'none';
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                toTopBtn.style.display = 'block'; // Show button after 300px scroll
-            } else {
-                toTopBtn.style.display = 'none';
-            }
-        });
-    }
+  initScrollToTopButton();
+  initMobileMenuToggle();
+  initSmoothScrolling();
+  initContactFormValidation();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+/**
+ * Handles the "Back to Top" button functionality.
+ * Shows or hides the button based on scroll position.
+ */
+function initScrollToTopButton() {
+  const toTopBtn = document.querySelector('.to-top');
+  if (!toTopBtn) return;
 
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+  // Hide the button initially
+  toTopBtn.style.display = 'none';
+
+  window.addEventListener('scroll', () => {
+    // Show the button after scrolling beyond 300px
+    if (window.pageYOffset > 300) {
+      toTopBtn.style.display = 'block';
+    } else {
+      toTopBtn.style.display = 'none';
     }
+  });
+}
 
-    // Smooth Scrolling for Internal Anchor Links
-    const scrollLinks = document.querySelectorAll('a[href^="#"]');
+/**
+ * Toggles the mobile navigation menu (hamburger menu).
+ */
+function initMobileMenuToggle() {
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-    scrollLinks.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+  if (!mobileMenuToggle || !navLinks) return;
 
-            if (targetElement) {
-                const headerOffset = 70; // Adjust based on your header's height
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  mobileMenuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
+/**
+ * Enables smooth scrolling for internal anchor links (href="#someId").
+ */
+function initSmoothScrolling() {
+  const scrollLinks = document.querySelectorAll('a[href^="#"]');
+  if (!scrollLinks.length) return;
+
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      // Prevent the default jump to top behavior
+      e.preventDefault();
+
+      // Get the target element by the link's href
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Adjust offset if your header has a fixed height
+        const headerOffset = 70;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        // Use a smooth scroll animation
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
         });
+      }
     });
+  });
+}
 
-    // Form Validation (Optional)
-    const contactForm = document.querySelector('.contact-form');
+/**
+ * Validates the contact form, ensuring required fields are not empty.
+ * Modify or expand this for your custom validation needs.
+ */
+function initContactFormValidation() {
+  const contactForm = document.querySelector('.contact-form');
+  if (!contactForm) return;
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('_replyto').value.trim();
-            const message = document.getElementById('message').value.trim();
+  contactForm.addEventListener('submit', (e) => {
+    const name = document.getElementById('name')?.value.trim() || '';
+    const email = document.getElementById('_replyto')?.value.trim() || '';
+    const message = document.getElementById('message')?.value.trim() || '';
 
-            if (name === '' || email === '' || message === '') {
-                e.preventDefault();
-                alert('Please fill in all required fields.');
-            }
-
-            // Additional custom validation can be added here
-        });
+    // Basic required field check
+    if (name === '' || email === '' || message === '') {
+      e.preventDefault();
+      alert('Please fill in all required fields.');
     }
-});
+
+    // Additional custom validation can be added here
+    // e.g., email format checks, length checks, etc.
+  });
+}
