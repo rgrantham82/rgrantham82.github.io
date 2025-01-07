@@ -511,25 +511,42 @@ BLOG SECTION
 TESTIMONIALS
 -------------------------------------------------*/
 .testimonials {
-  background-color: #4B3832;
+  background-color: #4B3832; /* a dark brown */
   padding: 4em 2em;
   text-align: center;
-  color: #FFFFFF;
 }
 
 .testimonials h2 {
   font-size: 2.5em;
   margin-bottom: 1em;
-  color: #FFFFFF;
+  color: #FFF7E6; /* light, so it's visible */
 }
 
 .testimonial {
   max-width: 700px;
   margin: 0 auto 1.5em;
+  color: #FFFFFF; /* ensures the text is white (readable on dark brown) */
   font-size: 1.2em;
   font-style: italic;
   line-height: 1.6;
-  color: #FFFFFF; /* White text for contrast on dark background */
+}
+
+.testimonial p {
+  color: inherit; /* inherits #FFFFFF from .testimonial */
+}
+
+.testimonial-author {
+  margin-top: 1em;
+  font-size: 1em;
+  color: #FFF7E6; /* or #FFFFFF for more contrast */
+}
+
+.testimonial-author a {
+  color: #FFD700; /* A bright gold, stands out on dark background */
+  text-decoration: underline;
+}
+.testimonial-author a:hover {
+  color: #FFA500; /* or another gold hue on hover */
 }
 
 /*------------------------------------------------
