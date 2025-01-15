@@ -13,6 +13,7 @@
     <meta property="og:description" content="{{ page.description | default: site.description }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <!-- Change this to an image that best represents your brand/art -->
     <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -38,10 +39,7 @@
         "name": "{{ site.title }}",
         "description": "{{ site.description }}",
         "url": "{{ site.url }}",
-        "sameAs": [
-          "https://www.instagram.com/cardboardcalligraphy/",
-          "https://www.deviantart.com/wotan587/"
-        ],
+        "sameAs": ["https://www.instagram.com/cardboardcalligraphy/", "https://www.deviantart.com/wotan587/"],
         "logo": "{{ '/assets/images/logo.png' | relative_url }}"
       }
     </script>
@@ -62,11 +60,7 @@
         <div class="logo">
           <a href="{{ '/' | relative_url }}">
             <!-- Use descriptive alt text for accessibility -->
-            <img
-              src="{{ '/assets/images/logo.png' | relative_url }}"
-              alt="{{ site.title }} - Modern Calligraphy Logo"
-              style="height: 50px;"
-            >
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} - Modern Calligraphy Logo" style="height: 50px;">
           </a>
         </div>
         <!-- Navigation Links -->
@@ -80,20 +74,10 @@
         </ul>
         <!-- Social Media Links -->
         <div class="social-media">
-          <a
-            href="https://www.instagram.com/cardboardcalligraphy/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Visit our Instagram"
-          >
+          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener" aria-label="Visit our Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a
-            href="https://www.deviantart.com/wotan587/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Visit our DeviantArt"
-          >
+          <a href="https://www.deviantart.com/wotan587/" target="_blank" rel="noopener" aria-label="Visit our DeviantArt">
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
@@ -108,24 +92,17 @@
 
     <!-- Hero Section (optional, if page.hero is defined) -->
     {% if page.hero %}
-    <section
-      class="hero"
-      style="
-        background-image: url('{{ page.hero.image | relative_url }}');
-        margin-bottom: 2rem; /* Optional extra spacing below hero */
-      "
-      aria-label="Hero Section"
-    >
-      <div class="hero-content">
-        <h1>{{ page.hero.title }}</h1>
-        <p>{{ page.hero.subtitle }}</p>
-        {% if page.hero.button_text and page.hero.button_link %}
-          <a href="{{ page.hero.button_link }}" class="scroll-button">
-            {{ page.hero.button_text }}
-          </a>
-        {% endif %}
-      </div>
-    </section>
+      <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');" aria-label="Hero Section">
+        <div class="hero-content">
+          <h1>{{ page.hero.title }}</h1>
+          <p>{{ page.hero.subtitle }}</p>
+          {% if page.hero.button_text and page.hero.button_link %}
+            <a href="{{ page.hero.button_link }}" class="scroll-button">
+              {{ page.hero.button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </section>
     {% endif %}
 
     <!-- Main Content -->
@@ -141,20 +118,10 @@
       <div class="footer-content">
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
         <div class="social-media">
-          <a
-            href="https://www.instagram.com/cardboardcalligraphy/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Instagram"
-          >
+          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a
-            href="https://www.deviantart.com/wotan587/"
-            target="_blank"
-            rel="noopener"
-            aria-label="DeviantArt"
-          >
+          <a href="https://www.deviantart.com/wotan587/" target="_blank" rel="noopener" aria-label="DeviantArt">
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
@@ -162,11 +129,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
-      integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
     <script>
       // Mobile Menu Toggle
