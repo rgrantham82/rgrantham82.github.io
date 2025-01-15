@@ -18,8 +18,6 @@ plugins:
   # - jekyll-paginate        # For blog pagination if needed
   # - jekyll-remote-theme    # If you need advanced remote theme features; optional if using 'remote_theme' key below
 
-# Theme & Markdown
-remote_theme: minima
 # OR if you're using a remote theme:
 # remote_theme: "minima"
 markdown: kramdown
