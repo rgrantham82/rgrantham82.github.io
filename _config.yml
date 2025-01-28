@@ -1,30 +1,30 @@
 # Site settings
 title: "Cardboard Calligraphy by Robert"
 description: "Handcrafted calligraphy on recycled cardboard by Robert, a homeless artist in Austin, TX."
-url: "https://rgrantham82.github.io"    # Your deployed GitHub Pages URL or custom domain
-baseurl: ""                            # Keep this empty if using root folder (e.g., https://username.github.io/)
+url: "https://rgrantham82.github.io"  # Replace with custom domain if you set one
+baseurl: ""                          # Keep empty if site is at root (e.g., https://username.github.io/)
+time_zone: "America/Chicago"         # Set your local time zone (helps with post dates, etc.)
+author: "Robert Grantham"           # Used by some Jekyll plugins/themes
 
 # Optional Social Handles for SEO & Plugins
-twitter_username: ""         # e.g., "your_twitter_handle"
+twitter_username: ""                 # e.g., "your_twitter_handle"
 github_username: "rgrantham82"
 instagram_username: "cardboardcalligraphy"
-# If you want to reference these in layouts or SEO tags
+
+# Default Social / SEO Image
+# This will be the fallback image for Open Graph & Twitter when a page/post doesn’t define one
+image: "/assets/images/og-image.jpg"
 
 # Plugins
 plugins:
-  - jekyll-seo-tag           # Automatically generates better SEO meta tags
-  - jekyll-sitemap           # Generates a sitemap.xml for SEO
+  - jekyll-seo-tag           # Generates better SEO meta tags
+  - jekyll-sitemap           # Generates sitemap.xml at the site root
   - jekyll-feed              # Generates an Atom/RSS feed at /feed.xml
-  # - jekyll-paginate        # For blog pagination if needed
-  # - jekyll-remote-theme    # If you need advanced remote theme features; optional if using 'remote_theme' key below
+  # - jekyll-paginate        # Enable if you have a large blog and want pagination
+  # - jekyll-remote-theme    # Uncomment if using a remote theme
+  # - jekyll-last-modified-at  # Adds a “Last Modified” date to your posts/pages
 
-# OR if you're using a remote theme:
-# remote_theme: "minima"
 markdown: kramdown
-
-# SEO image (optional)
-# You can reference an OG (Open Graph) image site-wide, e.g.:
-image: "/assets/images/og-image.jpg"
 
 # Build settings
 exclude:
@@ -34,20 +34,20 @@ exclude:
   - vendor
   - README.md
   - .github
-  # Add or remove files/folders you don't want included in the build
+  # Add or remove files/folders you don't want included in the final build
 
 # Sitemap settings
-# By default, jekyll-sitemap will generate a sitemap.xml at the root of your site.
+# (jekyll-sitemap will automatically generate /sitemap.xml)
 
 # Feed settings
-# By default, jekyll-feed will generate feed.xml at the root of your site.
+# (jekyll-feed will automatically generate /feed.xml)
 
-# Pagination settings (uncomment if you use jekyll-paginate)
+# Pagination settings (uncomment if using jekyll-paginate)
 # paginate: 5
 # paginate_path: "/page:num/"
 
-# Deployment or environment variables
-# You can define custom variables or environment-related settings:
+# Deployment or environment variables (optional)
+# Define custom variables or environment-based overrides
 # production_url: "https://rgrantham82.github.io"
 
 # End of File
