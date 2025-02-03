@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+ </body>
+</html><!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required Meta Tags -->
@@ -30,7 +31,7 @@
       property="og:url"
       content="{{ page.url | absolute_url }}"
     />
-    <!-- Change this to an image that best represents your brand/art -->
+    <!-- Update to an image that best represents your brand/art -->
     <meta
       property="og:image"
       content="{{ '/assets/images/og-image.jpg' | relative_url }}"
@@ -74,6 +75,7 @@
       href="https://fonts.gstatic.com"
       crossorigin
     />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap"
@@ -100,7 +102,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- Optional: Structured Data (JSON-LD) for Branding / Local SEO -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -155,24 +157,18 @@
         </div>
 
         <!-- Navigation Links -->
+        <!-- Note the updated ID to match aria-controls -->
         <ul
+          id="primary-menu"
           class="nav-links"
           aria-label="Main Navigation"
         >
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li>
-            <a href="{{ '/about.html' | relative_url }}">About</a>
-          </li>
-          <li>
-            <a href="{{ '/services.html' | relative_url }}">Services</a>
-          </li>
-          <li>
-            <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
-          </li>
+          <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+          <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
+          <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
           <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-          <li>
-            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
-          </li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
         </ul>
 
         <!-- Social Media Links -->
@@ -196,6 +192,7 @@
         </div>
 
         <!-- Mobile Menu Toggle (Hamburger) -->
+        <!-- Note aria-controls="primary-menu" to match #primary-menu -->
         <button
           class="mobile-menu-toggle"
           id="mobile-menu"
@@ -212,30 +209,32 @@
 
     <!-- Hero Section (optional, if page.hero is defined) -->
     {% if page.hero %}
-      <section
-        class="hero"
-        style="background-image: url('{{ page.hero.image | relative_url }}');"
-        aria-label="Hero Section"
-      >
-        <div class="hero-content">
-          <h1>{{ page.hero.title }}</h1>
-          <p>{{ page.hero.subtitle }}</p>
-          {% if page.hero.button_text and page.hero.button_link %}
-            <a
-              href="{{ page.hero.button_link }}"
-              class="scroll-button"
-              >{{ page.hero.button_text }}</a
-            >
-          {% endif %}
-        </div>
-      </section>
+    <section
+      class="hero"
+      style="background-image: url('{{ page.hero.image | relative_url }}');"
+      aria-label="Hero Section"
+    >
+      <div class="hero-content">
+        <h1>{{ page.hero.title }}</h1>
+        <p>{{ page.hero.subtitle }}</p>
+        {% if page.hero.button_text and page.hero.button_link %}
+        <a
+          href="{{ page.hero.button_link }}"
+          class="scroll-button"
+          >{{ page.hero.button_text }}</a
+        >
+        {% endif %}
+      </div>
+    </section>
     {% endif %}
 
     <!-- Main Content -->
     <main id="main-content" role="main">
       <!-- "top" anchor for 'Back to Top' link -->
       <a id="top"></a>
+
       {{ content }}
+
       <a href="#top" class="to-top">Back to Top</a>
     </main>
 
@@ -243,8 +242,8 @@
     <footer role="contentinfo">
       <div class="footer-content">
         <p>
-          &copy; {{ site.time | date: '%Y' }}
-          {{ site.title }}. All rights reserved.
+          &copy; {{ site.time | date: '%Y' }} {{ site.title }}.
+          All rights reserved.
         </p>
         <div class="social-media">
           <a
@@ -267,29 +266,14 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Lightbox JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
       integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="{{ '/assets/js/script.js' | relative_url }}"
-    ></script>
 
-    <script>
-      // Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById('mobile-menu');
-      const navLinks = document.querySelector('.nav-links');
-
-      mobileMenuBtn.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
-
-        // Toggle aria-expanded
-        const expanded =
-          mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-        mobileMenuBtn.setAttribute('aria-expanded', !expanded);
-      });
-    </script>
+    <!-- Main Site Script -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </body>
-</html>
+  </html>
