@@ -29,16 +29,22 @@ function initScrollToTopButton() {
 }
 
 /**
- * Toggles the mobile navigation menu (hamburger menu).
+ * Toggles the mobile navigation menu (hamburger menu),
+ * and updates aria-expanded for accessibility.
  */
 function initMobileMenuToggle() {
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
-
+  
   if (!mobileMenuToggle || !navLinks) return;
 
   mobileMenuToggle.addEventListener('click', () => {
+    // Show/hide the .nav-links
     navLinks.classList.toggle('active');
+
+    // Toggle aria-expanded (switches true/false each click)
+    const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
+    mobileMenuToggle.setAttribute('aria-expanded', !expanded);
   });
 }
 
