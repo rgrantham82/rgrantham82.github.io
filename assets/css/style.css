@@ -94,6 +94,7 @@ nav {
   .nav-links.active {
     display: flex; /* Shown only when toggled */
   }
+
   /* Show the hamburger icon on mobile */
   .mobile-menu-toggle {
     display: flex;
@@ -102,7 +103,7 @@ nav {
 
 /*
    (Optional) Force hiding the hamburger for screens wider than 768px.
-   This ensures the hamburger won't linger on tablet/desktop.
+   Ensures the hamburger won't linger on tablet/desktop.
 */
 @media (min-width: 769px) {
   .mobile-menu-toggle {
@@ -132,7 +133,7 @@ SOCIAL MEDIA (HEADER & SHARED)
 HERO SECTION
 -------------------------------------------------*/
 .hero {
-  background-image: url('{{ ' /assets/images/hero_2.png' | relative_url }}');
+  background-image: url('{{ '/assets/images/hero_2.png' | relative_url }}');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -339,7 +340,7 @@ Featured Works Section
   font-size: 2.5em;
   margin-bottom: 1em;
   text-align: center;
-  color: #4B3832; /* if desired */
+  color: #4B3832;
 }
 
 /* 3-column grid on desktop */
@@ -446,7 +447,6 @@ Featured Works Section
     width: 100%;
   }
 }
-
 
 /*------------------------------------------------
 BLOG SECTION
@@ -796,7 +796,6 @@ RESPONSIVE ADJUSTMENTS
     font-size: 2.5em;
   }
 
-  /* Adjusted for gallery columns using above rules */
   /* About Page Adjustments */
   .about-content {
     flex-direction: column;
@@ -824,7 +823,6 @@ RESPONSIVE ADJUSTMENTS
     padding: 1em;
   }
 
-  /* Adjusted for gallery columns using above rules */
   /* Introduction Section */
   .intro-content {
     flex-direction: column;
