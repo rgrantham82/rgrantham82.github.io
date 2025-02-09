@@ -666,6 +666,10 @@ SERVICES SECTION
 PORTFOLIO / GALLERY (CLEANED-UP)
 -------------------------------------------------*/
 
+.gallery-item {
+  position: relative;  /* Needed so .sold-badge can appear inside */
+}
+
 /* Base gallery styling shared across sections */
 .gallery {
   display: flex;
