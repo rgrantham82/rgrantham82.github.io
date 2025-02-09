@@ -4,103 +4,36 @@
     <!-- Required Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Primary Meta Tags -->
     <title>{{ page.title }} - {{ site.title }}</title>
-    <meta
-      name="description"
-      content="{{ page.description | default: site.description }}"
-    />
-    <meta
-      name="author"
-      content="{{ site.author | default: 'Robert G.' }}"
-    />
-
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <meta name="author" content="{{ site.author | default: 'Robert G.' }}" />
     <!-- Open Graph / Facebook -->
-    <meta
-      property="og:title"
-      content="{{ page.title }} - {{ site.title }}"
-    />
-    <meta
-      property="og:description"
-      content="{{ page.description | default: site.description }}"
-    />
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
+    <meta property="og:description" content="{{ page.description | default: site.description }}" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="{{ page.url | absolute_url }}"
-    />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <!-- Update to an image that best represents your brand/art -->
-    <meta
-      property="og:image"
-      content="{{ '/assets/images/og-image.jpg' | relative_url }}"
-    />
-
+    <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="{{ page.title }} - {{ site.title }}"
-    />
-    <meta
-      name="twitter:description"
-      content="{{ page.description | default: site.description }}"
-    />
-    <meta
-      name="twitter:image"
-      content="{{ '/assets/images/og-image.jpg' | relative_url }}"
-    />
-
+    <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}" />
+    <meta name="twitter:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}" />
     <!-- Canonical Link -->
-    <link
-      rel="canonical"
-      href="{{ page.url | absolute_url }}"
-    />
-
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="{{ '/assets/images/favicon.png' | relative_url }}"
-    />
-
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}" />
     <!-- Preconnect for Google Fonts (Performance) -->
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
     <!-- CSS Links -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha384-RRZKjnk9r2Y9lQ23F5tGt72NF866DqZryjIpCcm9JAm2pN+p8OFjAAU4Iyd1L7zj"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/style.css' | relative_url }}"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-RRZKjnk9r2Y9lQ23F5tGt72NF866DqZryjIpCcm9JAm2pN+p8OFjAAU4Iyd1L7zj" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     <!-- Lightbox CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
-      integrity="sha384-EHDS6AosclSAgMGbfuU2cXgybTpOSloORZOR2VhknLRl46DwLjhyJFjdFBdjiSsz"
-      crossorigin="anonymous"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha384-EHDS6AosclSAgMGbfuU2cXgybTpOSloORZOR2VhknLRl46DwLjhyJFjdFBdjiSsz" crossorigin="anonymous" />
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
@@ -109,21 +42,15 @@
         "name": "{{ site.title }}",
         "description": "{{ site.description }}",
         "url": "{{ site.url }}",
-        "sameAs": [
-          "https://www.instagram.com/cardboardcalligraphy/",
-          "https://www.deviantart.com/wotan587/"
-        ],
+        "sameAs": ["https://www.instagram.com/cardboardcalligraphy/", "https://www.deviantart.com/wotan587/"],
         "logo": "{{ '/assets/images/logo.png' | relative_url }}"
       }
     </script>
-
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -131,147 +58,87 @@
       gtag('config', 'G-7WZFJ98W4K');
     </script>
   </head>
-
   <body>
     <!-- Skip to Main Content (Accessibility) -->
-    <a
-      class="skip-link"
-      href="#main-content"
-      aria-label="Skip to main content"
-      >Skip to main content</a
-    >
-
+    <a class="skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
     <!-- Header -->
     <header role="banner">
       <nav aria-label="Primary" role="navigation">
         <div class="logo">
           <a href="{{ '/' | relative_url }}">
             <!-- Use descriptive alt text for accessibility -->
-            <img
-              src="{{ '/assets/images/logo.png' | relative_url }}"
-              alt="{{ site.title }} - Modern Calligraphy Logo"
-              style="height: 50px;"
-            />
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} - Modern Calligraphy Logo" style="height: 50px;" />
           </a>
         </div>
-
         <!-- Navigation Links -->
         <!-- Note the updated ID to match aria-controls -->
-        <ul
-          id="primary-menu"
-          class="nav-links"
-          aria-label="Main Navigation"
-        >
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-          <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
-          <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
-          <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+        <ul id="primary-menu" class="nav-links" aria-label="Main Navigation">
+          <li>
+            <a href="{{ '/' | relative_url }}">Home</a>
+          </li>
+          <li>
+            <a href="{{ '/about.html' | relative_url }}">About</a>
+          </li>
+          <li>
+            <a href="{{ '/services.html' | relative_url }}">Services</a>
+          </li>
+          <li>
+            <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
+          </li>
+          <li>
+            <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+          </li>
+          <li>
+            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+          </li>
         </ul>
-
         <!-- Social Media Links -->
         <div class="social-media">
-          <a
-            href="https://www.instagram.com/cardboardcalligraphy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit our Instagram"
-          >
+          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a
-            href="https://www.deviantart.com/wotan587/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit our DeviantArt"
-          >
+          <a href="https://www.deviantart.com/wotan587/" target="_blank" rel="noopener noreferrer" aria-label="Visit our DeviantArt">
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
-
         <!-- Mobile Menu Toggle (Hamburger) -->
         <!-- Note aria-controls="primary-menu" to match #primary-menu -->
-        <button
-          class="mobile-menu-toggle"
-          id="mobile-menu"
-          aria-label="Open mobile menu"
-          aria-expanded="false"
-          aria-controls="primary-menu"
-        >
+        <button class="mobile-menu-toggle" id="mobile-menu" aria-label="Open mobile menu" aria-expanded="false" aria-controls="primary-menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </nav>
     </header>
-
-    <!-- Hero Section (optional, if page.hero is defined) -->
-    {% if page.hero %}
-    <section
-      class="hero"
-      style="background-image: url('{{ page.hero.image | relative_url }}');"
-      aria-label="Hero Section"
-    >
+    <!-- Hero Section (optional, if page.hero is defined) --> {% if page.hero %} <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');" aria-label="Hero Section">
       <div class="hero-content">
         <h1>{{ page.hero.title }}</h1>
-        <p>{{ page.hero.subtitle }}</p>
-        {% if page.hero.button_text and page.hero.button_link %}
-        <a
-          href="{{ page.hero.button_link }}"
-          class="scroll-button"
-          >{{ page.hero.button_text }}</a
-        >
-        {% endif %}
+        <p>{{ page.hero.subtitle }}</p> {% if page.hero.button_text and page.hero.button_link %} <a href="{{ page.hero.button_link }}" class="scroll-button">{{ page.hero.button_text }}</a> {% endif %}
       </div>
-    </section>
-    {% endif %}
-
+    </section> {% endif %}
     <!-- Main Content -->
     <main id="main-content" role="main">
       <!-- "top" anchor for 'Back to Top' link -->
       <a id="top"></a>
-
       {{ content }}
-
       <a href="#top" class="to-top">Back to Top</a>
     </main>
-
     <!-- Footer -->
     <footer role="contentinfo">
       <div class="footer-content">
-        <p>
-          &copy; {{ site.time | date: '%Y' }} {{ site.title }}.
-          All rights reserved.
-        </p>
+        <p> &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved. </p>
         <div class="social-media">
-          <a
-            href="https://www.instagram.com/cardboardcalligraphy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
+          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a
-            href="https://www.deviantart.com/wotan587/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="DeviantArt"
-          >
+          <a href="https://www.deviantart.com/wotan587/" target="_blank" rel="noopener noreferrer" aria-label="DeviantArt">
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
       </div>
     </footer>
-
     <!-- Lightbox JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
-      integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3"
-      crossorigin="anonymous"
-    ></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3" crossorigin="anonymous"></script>
     <!-- Main Site Script -->
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </body>
