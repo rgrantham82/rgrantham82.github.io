@@ -462,6 +462,16 @@ nav {
 /*------------------------------------------------
 SOCIAL MEDIA (HEADER & SHARED)
 -------------------------------------------------*/
+.social-media a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-media a img:hover {
+  transform: scale(1.1);
+}
+
 .social-media {
   display: flex;
   align-items: center;
