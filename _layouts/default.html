@@ -51,7 +51,10 @@
         "name": "{{ site.title }}",
         "description": "{{ site.description }}",
         "url": "{{ site.url }}",
-        "sameAs": ["https://www.instagram.com/InkedOnCardboard/", "https://www.deviantart.com/wotan587/"],
+        "sameAs": [
+          "https://www.instagram.com/InkedOnCardboard/",
+          "https://www.deviantart.com/wotan587/"
+        ],
         "logo": "{{ '/assets/images/logo.png' | relative_url }}"
       }
     </script>
@@ -60,7 +63,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -103,22 +105,12 @@
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" id="mobile-menu" aria-label="Open mobile menu" aria-expanded="false" aria-controls="primary-menu" onclick="toggleMenu()">
+        <!-- Note: The inline onclick and toggleMenu() script have been removed in favor of the external script.js functionality -->
+        <button class="mobile-menu-toggle" id="mobile-menu" aria-label="Open mobile menu" aria-expanded="false" aria-controls="primary-menu">
           <span></span><span></span><span></span>
         </button>
       </nav>
     </header>
-
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById('primary-menu');
-        const toggle = document.getElementById('mobile-menu');
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-
-        menu.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', !expanded);
-      }
-    </script>
 
     <!-- Hero Section -->
     {% if page.hero %}
@@ -134,5 +126,9 @@
     <main id="main-content" role="main">
       {{ content }}
     </main>
+
+    <!-- Scripts -->
+    <!-- Load the external script with all the enhanced functionality -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </body>
 </html>
