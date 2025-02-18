@@ -13,7 +13,6 @@
     <meta property="og:description" content="{{ page.description | default: site.description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <!-- Update to an image that best represents your brand/art -->
     <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -46,7 +45,7 @@
         "logo": "{{ '/assets/images/logo.png' | relative_url }}"
       }
     </script>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -66,12 +65,9 @@
       <nav aria-label="Primary" role="navigation">
         <div class="logo">
           <a href="{{ '/' | relative_url }}">
-            <!-- Use descriptive alt text for accessibility -->
             <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} - Modern Calligraphy Logo" style="height: 50px;" />
           </a>
         </div>
-        <!-- Navigation Links -->
-        <!-- Note the updated ID to match aria-controls -->
         <ul id="primary-menu" class="nav-links" aria-label="Main Navigation">
           <li>
             <a href="{{ '/' | relative_url }}">Home</a>
@@ -92,7 +88,6 @@
             <a href="{{ '/contact.html' | relative_url }}">Contact</a>
           </li>
         </ul>
-        <!-- Social Media Links -->
         <div class="social-media">
           <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
             <i class="fab fa-instagram"></i>
@@ -101,45 +96,13 @@
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
-        <!-- Mobile Menu Toggle (Hamburger) -->
-        <!-- Note aria-controls="primary-menu" to match #primary-menu -->
-        <button class="mobile-menu-toggle" id="mobile-menu" aria-label="Open mobile menu" aria-expanded="false" aria-controls="primary-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </nav>
     </header>
-    <!-- Hero Section (optional, if page.hero is defined) --> {% if page.hero %} <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');" aria-label="Hero Section">
-      <div class="hero-content">
-        <h1>{{ page.hero.title }}</h1>
-        <p>{{ page.hero.subtitle }}</p> {% if page.hero.button_text and page.hero.button_link %} <a href="{{ page.hero.button_link }}" class="scroll-button">{{ page.hero.button_text }}</a> {% endif %}
-      </div>
-    </section> {% endif %}
-    <!-- Main Content -->
     <main id="main-content" role="main">
-      <!-- "top" anchor for 'Back to Top' link -->
-      <a id="top"></a>
       {{ content }}
-      <a href="#top" class="to-top">Back to Top</a>
     </main>
-    <!-- Footer -->
     <footer role="contentinfo">
-      <div class="footer-content">
-        <p> &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved. </p>
-        <div class="social-media">
-          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.deviantart.com/wotan587/" target="_blank" rel="noopener noreferrer" aria-label="DeviantArt">
-            <i class="fab fa-deviantart"></i>
-          </a>
-        </div>
-      </div>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </footer>
-    <!-- Lightbox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha384-E42snJhn8ZvKLLF6ITZYTML2SGnz69gELuu8KkCbjQF+Qz+OXrG/UlyJpnjQ8ax3" crossorigin="anonymous"></script>
-    <!-- Main Site Script -->
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </body>
 </html>
