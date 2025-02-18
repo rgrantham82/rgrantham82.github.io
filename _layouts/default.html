@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
   <head>
     <!-- Required Meta Tags -->
     <meta charset="UTF-8" />
@@ -41,26 +40,23 @@
         "name": "{{ site.title }}",
         "description": "{{ site.description }}",
         "url": "{{ site.url }}",
-        "sameAs": ["https://www.instagram.com/cardboardcalligraphy/", "https://www.deviantart.com/wotan587/"],
+        "sameAs": ["https://www.instagram.com/InkedOnCardboard/", "https://www.deviantart.com/wotan587/"],
         "logo": "{{ '/assets/images/logo.png' | relative_url }}"
       }
     </script>
-    <!-- Google Analytics (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-7WZFJ98W4K');
+</script>
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-7WZFJ98W4K');
-    </script>
   </head>
   <body>
-    <!-- Skip to Main Content (Accessibility) -->
     <a class="skip-link" href="#main-content" aria-label="Skip to main content">Skip to main content</a>
-    <!-- Header -->
     <header role="banner">
       <nav aria-label="Primary" role="navigation">
         <div class="logo">
@@ -69,40 +65,37 @@
           </a>
         </div>
         <ul id="primary-menu" class="nav-links" aria-label="Main Navigation">
-          <li>
-            <a href="{{ '/' | relative_url }}">Home</a>
-          </li>
-          <li>
-            <a href="{{ '/about.html' | relative_url }}">About</a>
-          </li>
-          <li>
-            <a href="{{ '/services.html' | relative_url }}">Services</a>
-          </li>
-          <li>
-            <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
-          </li>
-          <li>
-            <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-          </li>
-          <li>
-            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
-          </li>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+          <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
+          <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
+          <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
         </ul>
         <div class="social-media">
-          <a href="https://www.instagram.com/cardboardcalligraphy/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
+          <a href="https://www.instagram.com/InkedOnCardboard/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
             <i class="fab fa-instagram"></i>
           </a>
           <a href="https://www.deviantart.com/wotan587/" target="_blank" rel="noopener noreferrer" aria-label="Visit our DeviantArt">
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
+        <button class="mobile-menu-toggle" id="mobile-menu" aria-label="Open mobile menu" aria-expanded="false" aria-controls="primary-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
     <main id="main-content" role="main">
+      <a id="top"></a>
       {{ content }}
+      <a href="#top" class="to-top">Back to Top</a>
     </main>
     <footer role="contentinfo">
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <div class="footer-content">
+        <p> &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved. </p>
+      </div>
     </footer>
   </body>
 </html>
