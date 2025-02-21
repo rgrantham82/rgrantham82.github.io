@@ -676,6 +676,26 @@ SERVICES SECTION
 PORTFOLIO / GALLERY (CLEANED-UP)
 -------------------------------------------------*/
 
+/* Watermark overlay for each gallery item */
+.gallery-item {
+  position: relative;  /* Enable positioning for the overlay */
+  display: inline-block; /* or block, depending on your layout needs */
+}
+
+/* Create a pseudo-element that displays the watermark */
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;          /* Adjust vertical placement (bottom corner) */
+  right: 5px;           /* Adjust horizontal placement (right corner) */
+  width: 100px;         /* Adjust the watermark’s displayed width */
+  height: 100px;        /* Adjust the watermark’s displayed height */
+  background: url('/assets/images/watermark.png') no-repeat center center;
+  background-size: contain;  /* Scale the watermark within the defined box */
+  opacity: 0.3;         /* Lower opacity to keep it subtle */
+  pointer-events: none; /* Allow clicks on the underlying image */
+}
+
 .gallery-item {
   position: relative;  /* Needed so .sold-badge can appear inside */
 }
