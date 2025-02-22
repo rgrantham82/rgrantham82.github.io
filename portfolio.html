@@ -7,6 +7,29 @@ hero:
   subtitle: "Explore my collection of calligraphy artworks."
 ---
 
+<style>
+/* Style for AI Generated Badge */
+.ai-generated-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: rgba(255, 165, 0, 0.8); /* Semi-transparent orange */
+  color: #fff;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+/* Ensure gallery items are positioned relatively so the badge overlays correctly */
+.gallery-item {
+  position: relative;
+  display: inline-block;
+}
+</style>
+
 <section class="portfolio-section">
   <div class="container">
     <h2>Portfolio</h2>
@@ -21,30 +44,34 @@ hero:
 
     <div class="gallery">
       <!-- New Calligraphy Piece #4 -->
-      <a href="{{ '/assets/images/calligraphy_piece_9.png' | relative_url }}" data-lightbox="featured" data-title="Swirling Filigree & Gothic Letterforms" class="gallery-item">
-        <img src="{{ '/assets/images/calligraphy_piece_9.png' | relative_url }}" alt="A swirling filigree design with gothic letterforms on cardboard" />
+      <a href="{{ '/assets/images/calligraphy_piece_4.jpg' | relative_url }}" data-lightbox="featured" data-title="Swirling Filigree & Gothic Letterforms" class="gallery-item">
+        <img src="{{ '/assets/images/calligraphy_piece_4.jpg' | relative_url }}" alt="A swirling filigree design with gothic letterforms on cardboard" />
         <div class="gallery-caption">
           A mesmerizing swirl of filigree and gothic letterforms, hand-painted on cardboard. This piece emphasizes bold, flowing lines and vibrant color gradients.
         </div>
       </a>
 
       <!-- New Calligraphy Piece #7 -->
-      <a href="{{ '/assets/images/calligraphy_piece_4.png' | relative_url }}" data-lightbox="featured" data-title="Intricate Celtic Knotwork & Spirals" class="gallery-item">
-        <img src="{{ '/assets/images/calligraphy_piece_4.png' | relative_url }}" alt="Intricate Celtic knotwork and spiral motifs on cardboard" />
+      <a href="{{ '/assets/images/calligraphy_piece_7.jpg' | relative_url }}" data-lightbox="featured" data-title="Intricate Celtic Knotwork & Spirals" class="gallery-item">
+        <img src="{{ '/assets/images/calligraphy_piece_7.jpg' | relative_url }}" alt="Intricate Celtic knotwork and spiral motifs on cardboard" />
         <div class="gallery-caption">
           A Celtic-inspired composition featuring elaborate knotwork and swirling spiral motifs. Rich metallic hues and fine linework celebrate the fusion of tradition and innovation.
         </div>
       </a>
 
+      <!-- DALL·E Image 1 - AI Generated -->
       <a href="{{ '/assets/images/DALL·E 2025-02-09 13.41.09 - A calligraphy collage artwork on a textured cardboard canvas with an urban renewal theme. The background is a layered mix of rusted metal textures, we.png' | relative_url }}" data-lightbox="featured" data-title="Urban Renewal Collage" class="gallery-item">
         <img src="{{ '/assets/images/DALL·E 2025-02-09 13.41.09 - A calligraphy collage artwork on a textured cardboard canvas with an urban renewal theme. The background is a layered mix of rusted metal textures, we.png' | relative_url }}" alt="Urban renewal collage calligraphy artwork" />
+        <div class="ai-generated-badge">AI Generated</div>
         <div class="gallery-caption">
           A calligraphy collage on a textured cardboard canvas, evoking an urban renewal theme with rusted metal textures.
         </div>
       </a>
 
+      <!-- DALL·E Image 2 - AI Generated -->
       <a href="{{ '/assets/images/DALL·E 2025-02-09 13.41.27 - An abstract calligraphy artwork using letters to create an urban skyline and cityscape pattern on a textured cardboard canvas. The letters form the sh.png' | relative_url }}" data-lightbox="featured" data-title="Abstract Cityscape Calligraphy" class="gallery-item">
         <img src="{{ '/assets/images/DALL·E 2025-02-09 13.41.27 - An abstract calligraphy artwork using letters to create an urban skyline and cityscape pattern on a textured cardboard canvas. The letters form the sh.png' | relative_url }}" alt="Abstract calligraphy cityscape on cardboard" />
+        <div class="ai-generated-badge">AI Generated</div>
         <div class="gallery-caption">
           An abstract calligraphy piece forming a skyline on cardboard, blending letterforms to create an urban cityscape pattern.
         </div>
