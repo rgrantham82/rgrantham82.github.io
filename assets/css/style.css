@@ -347,36 +347,6 @@ fieldset {
 }
 
 /*------------------------------------------------
-SCROLLING ANIMATED HEADER
--------------------------------------------------*/
-.scrolling-header {
-  overflow: hidden;
-  white-space: nowrap;
-  background: #222;
-  color: #FFF7E6;
-  padding: 20px 0;
-  position: relative;
-}
-
-.scrolling-text {
-  display: inline-block;
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: scroll 20s linear infinite;
-}
-
-/* Keyframes for the scrolling effect */
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/*------------------------------------------------
 GLOBAL SETTINGS
 -------------------------------------------------*/
 html, body {
@@ -551,37 +521,36 @@ HERO SECTION
 }
 
 /*------------------------------------------------
-MAIN SECTIONS (ABOUT, SERVICES, PORTFOLIO, etc.)
+SCROLLING ANIMATED HEADER
 -------------------------------------------------*/
-section {
-  padding: 4em 2em;
-  max-width: 1200px;
-  margin: 0 auto;
+.scrolling-header {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #222;
+  color: #FFF7E6;
+  padding: 20px 0;
+  position: relative;
 }
 
-/* Headings (shared across sections) */
-h1 {
-  margin-bottom: 1em;
-  text-align: center;
+.scrolling-text {
+  display: inline-block;
   font-family: 'Great Vibes', cursive;
-  font-size: 3em;
-  color: #4B3832;
-}
-h2, h3, h4, h5, h6 {
-  margin-bottom: 0.5em;
-  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: scroll 20s linear infinite;
 }
 
-/* Paragraph Styles */
-p {
-  margin-bottom: 1em;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #4B3832;
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /*------------------------------------------------
-ABOUT SECTION
+ABOUT SECTION & PHOTO STYLING
 -------------------------------------------------*/
 .about-content {
   display: flex;
@@ -596,11 +565,17 @@ ABOUT SECTION
   flex: 1 1 200px;
   max-width: 250px;
 }
+
 .profile-image img {
   width: 100%;
   border-radius: 50%;
   border: 4px solid #4B3832;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
 }
 
 /* Each 'about-section' can alternate background colors */
