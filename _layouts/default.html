@@ -4,45 +4,35 @@
     <!-- Required Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Primary Meta Tags -->
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}" />
     <meta name="author" content="{{ site.author | default: 'Robert G.' }}" />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
     <meta property="og:description" content="{{ page.description | default: site.description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}" />
-
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
     <meta name="twitter:description" content="{{ page.description | default: site.description }}" />
     <meta name="twitter:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}" />
-
     <!-- Canonical Link -->
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}" />
-
     <!-- Preconnect for Google Fonts (Performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-
     <!-- CSS Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-RRZKjnk9r2Y9lQ23F5tGt72NF866DqZryjIpCcm9JAm2pN+p8OFjAAU4Iyd1L7zj" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha384-EHDS6AosclSAgMGbfuU2cXgybTpOSloORZOR2VhknLRl46DwLjhyJFjdFBdjiSsz" crossorigin="anonymous" />
-
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
@@ -51,18 +41,15 @@
         "name": "{{ site.title }}",
         "description": "{{ site.description }}",
         "url": "{{ site.url }}",
-        "sameAs": [
-          "https://www.instagram.com/InkedOnCardboard/",
-          "https://www.deviantart.com/wotan587/"
-        ],
+        "sameAs": ["https://www.instagram.com/InkedOnCardboard/", "https://www.deviantart.com/wotan587/"],
         "logo": "{{ '/assets/images/logo.png' | relative_url }}"
       }
     </script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -70,7 +57,6 @@
       gtag('config', 'G-7WZFJ98W4K');
     </script>
   </head>
-
   <body>
     <header role="banner">
       <nav aria-label="Primary" role="navigation">
@@ -79,17 +65,27 @@
             <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} - Modern Calligraphy Logo" style="height: 50px;" />
           </a>
         </div>
-
         <!-- Navigation Links -->
         <ul id="primary-menu" class="nav-links" aria-label="Main Navigation">
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-          <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
-          <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
-          <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+          <li>
+            <a href="{{ '/' | relative_url }}">Home</a>
+          </li>
+          <li>
+            <a href="{{ '/about.html' | relative_url }}">About</a>
+          </li>
+          <li>
+            <a href="{{ '/services.html' | relative_url }}">Services</a>
+          </li>
+          <li>
+            <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
+          </li>
+          <li>
+            <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+          </li>
+          <li>
+            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+          </li>
         </ul>
-
         <!-- Social Media Links -->
         <div class="social-media">
           <a href="https://www.instagram.com/InkedOnCardboard/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -99,32 +95,29 @@
             <i class="fab fa-deviantart"></i>
           </a>
         </div>
-
         <!-- Mobile Menu Toggle -->
-        <!-- Note: The inline onclick and toggleMenu() script have been removed in favor of the external script.js functionality -->
         <button class="mobile-menu-toggle" id="mobile-menu" aria-label="Open mobile menu" aria-expanded="false" aria-controls="primary-menu">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </nav>
     </header>
-
-    <!-- Hero Section -->
-    {% if page.hero %}
-    <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');" aria-label="Hero Section">
+    <!-- Scrolling Animated Header -->
+    <div class="scrolling-header">
+      <div class="scrolling-text"> &nbsp;&nbsp;Flowing Celtic Runes &mdash; Ancient Norse Myths &mdash; Timeless Symbols &mdash; Flowing Celtic Runes &mdash; Ancient Norse Myths &mdash; Timeless Symbols &mdash; </div>
+    </div>
+    <!-- Hero Section --> {% if page.hero %} <section class="hero" style="background-image: url('{{ page.hero.image | relative_url }}');" aria-label="Hero Section">
       <div class="hero-content">
         <h1>{{ page.hero.title }}</h1>
         <p>{{ page.hero.subtitle }}</p>
       </div>
-    </section>
-    {% endif %}
-
+    </section> {% endif %}
     <!-- Main Content -->
     <main id="main-content" role="main">
       {{ content }}
     </main>
-
     <!-- Scripts -->
-    <!-- Load the external script with all the enhanced functionality -->
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
   </body>
 </html>
