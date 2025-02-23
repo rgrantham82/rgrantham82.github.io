@@ -9,6 +9,8 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}" />
     <meta name="author" content="{{ site.author | default: 'Robert G.' }}" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="modern calligraphy, Celtic runes, Norse myths, art on cardboard, digital calligraphy, creative art" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
@@ -16,15 +18,20 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="{{ site.title }}" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
     <meta name="twitter:description" content="{{ page.description | default: site.description }}" />
     <meta name="twitter:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}" />
+    <meta name="twitter:creator" content="@YourTwitterHandle" />
 
     <!-- Canonical Link -->
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <!-- Sitemap Link (if available) -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | relative_url }}" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}" />
