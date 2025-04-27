@@ -1,12 +1,20 @@
 ---
 layout: default
 title: Blog
+permalink: /blog/
 ---
 
 <section class="blog" role="main">
-  <h1>Blog</h1>
+  <h1>{{ page.title }}</h1>
 
-  {% for post in paginator.posts %}
+  {%- comment -%}
+  Since all of your posts live under docs/_posts, use site.posts 
+  (Jekyll will automatically pick up anything in _posts).
+  Sort by date (newest first) and loop.
+  {%- endcomment -%}
+  {% assign posts_list = site.posts | sort: 'date' | reverse %}
+
+  {% for post in posts_list %}
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
       <header class="post-header">
         {% if post.image %}
@@ -14,7 +22,7 @@ title: Blog
             <img 
               src="{{ post.image | relative_url }}" 
               alt="Featured image for {{ post.title }}" 
-              loading="lazy"
+              loading="lazy" 
               itemprop="image"
             >
           </a>
@@ -62,13 +70,4 @@ title: Blog
       </footer>
     </article>
   {% endfor %}
-
-  <nav class="pagination">
-    {% if paginator.previous_page %}
-      <a class="newer-posts" href="{{ paginator.previous_page_path | relative_url }}">← Newer Posts</a>
-    {% endif %}
-    {% if paginator.next_page %}
-      <a class="older-posts" href="{{ paginator.next_page_path | relative_url }}">Older Posts →</a>
-    {% endif %}
-  </nav>
 </section>
