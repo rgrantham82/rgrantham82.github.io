@@ -8,9 +8,7 @@ permalink: /blog/
   <h1>{{ page.title }}</h1>
 
   {%- comment -%}
-  Since all of your posts live under docs/_posts, use site.posts 
-  (Jekyll will automatically pick up anything in _posts).
-  Sort by date (newest first) and loop.
+  Pull in every post under docs/_posts; Jekyll will auto‐load them into site.posts.
   {%- endcomment -%}
   {% assign posts_list = site.posts | sort: 'date' | reverse %}
 
