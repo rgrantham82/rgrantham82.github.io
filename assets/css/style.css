@@ -184,3 +184,44 @@ button, input, select, textarea {
 
 /* 12. FOCUS STATES */
 :focus-visible { outline: 3px solid var(--color-highlight); outline-offset: 2px; }
+
+.about-content.container {
+  padding-block: var(--s-xl);
+}
+
+.about-section {
+  margin-block: var(--s-xl) 0;
+}
+@media (min-width: var(--bp-md)) {
+  .about-section {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: var(--s-lg);
+    align-items: center;
+  }
+}
+
+.about-figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+}
+@media (min-width: var(--bp-md)) {
+  .about-figure img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.about-text {
+  max-width: 600px;
+  margin-inline: auto;
+  padding-inline: var(--s-md);
+}
+
+.about-section:nth-child(odd) {
+  background: var(--color-bg-alt);
+  padding: var(--s-lg);
+  border-radius: var(--r-sm);
+}
