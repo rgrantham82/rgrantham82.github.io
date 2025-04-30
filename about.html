@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+permalink: /about/
 hero:
   image: '/assets/images/hero_2.png'
   title: "About Robert"
@@ -11,24 +12,157 @@ hero:
   <h1 id="about-heading">{{ page.hero.title }}</h1>
   <p class="lead">{{ page.hero.subtitle }}</p>
 
-  {% assign sections = site.data.about %}
-  {% for s in sections %}
+  <!-- Section 1 -->
   <div class="about-section">
     <figure class="about-figure">
-      <img src="{{ s.image | relative_url }}" alt="{{ s.alt }}" loading="lazy" />
+      <img src="/assets/images/profile-image.jpg"
+           alt="Robert creating calligraphy art"
+           loading="lazy" />
     </figure>
     <div class="about-text">
-      {% if s.heading %}
-        <h2>{{ s.heading }}</h2>
-      {% endif %}
-      {% for paragraph in s.text %}
-        <p>{{ paragraph }}</p>
-      {% endfor %}
+      <p>
+        Hello, I’m Robert, a dedicated calligraphy artist living and creating in
+        Austin, TX. My journey into this art form has been anything but typical,
+        shaped by personal challenges, a deep love for history and the written
+        word, and a commitment to sustainability. Despite my current hardships,
+        I refuse to let circumstances limit my creativity. Instead, they inspire
+        me to transform unconventional materials—most notably, recycled cardboard—
+        into canvases that reveal beauty through elegant, flowing script.
+      </p>
     </div>
   </div>
-  {% endfor %}
+
+  <!-- Section 2 -->
+  <div class="about-section">
+    <figure class="about-figure">
+      <img src="/assets/images/5aec5669d8a6bdef1b8e9f64d6bd2e62.jpg"
+           alt="Cardboard Art - Lion Sculpture"
+           loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2>Rooted in Authenticity</h2>
+      <p>
+        I create my work on reclaimed cardboard, turning this humble medium into
+        a canvas for expression. This choice reflects my commitment to sustainability
+        and resourcefulness, embodying the raw, unpolished beauty found in everyday
+        materials.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="about-section">
+    <figure class="about-figure">
+      <img src="/assets/images/f8318d5ff28b8cc0ef9538c5489f1d49.png"
+           alt="Brief History of Calligraphy"
+           loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2>A Storyteller at Heart</h2>
+      <p>
+        With a background in history and data analysis, I bring a deep appreciation
+        for storytelling into my art. Every piece carries meaning—whether it’s about
+        empowerment, gratitude, or hope—making my work more than just decorative;
+        it’s a way to communicate profound truths and connect with others.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="about-section">
+    <figure class="about-figure">
+      <img src="/assets/images/playful-typography-in-street-art.webp"
+           alt="Modern Expressive Calligraphy"
+           loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2>Modern Expressive Calligraphy</h2>
+      <p>
+        My personal style is defined by a unique fusion of traditional calligraphic
+        techniques and contemporary design. I draw inspiration from classical scripts
+        like Fraktur and Antiqua, yet I push these time-honored forms into a modern
+        realm through fluid, expressive strokes, balanced precision, and an innovative
+        play with negative space.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="about-section">
+    <figure class="about-figure">
+      <img src="/assets/images/8682769b35f240d6580db4a870c3a612.jpg"
+           alt="'Think First' Calligraphy Art"
+           loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2>Empowerment Through Art</h2>
+      <p>
+        Through uplifting messages and intentional designs, I aim to inspire strength
+        and authenticity in others. My work often focuses on themes of inner strength,
+        gratitude, and personal growth, leaving a positive impact on all who encounter it.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="about-section">
+    <figure class="about-figure">
+      <img src="/assets/images/th.jpg"
+           alt="Aikido Inspired Art"
+           loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2>A Diverse Background</h2>
+      <p>
+        I hold a bachelor’s degree in history from the University of Southern Mississippi
+        (2009). Studying narratives, cultures, and literature across time taught me to
+        see language as art, not merely information.
+      </p>
+      <p>
+        As a first-degree black belt in Aikido, the principles of balance, harmony, and
+        focus naturally inform the measured grace of my calligraphy. Speaking German as
+        a second language has broadened my understanding of how words shape thought,
+        culture, and identity.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="about-section">
+    <figure class="about-figure">
+      <img src="/assets/images/th.jpg"
+           alt="Aikido Art - Movement and Flow"
+           loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2>Connection to Aikido</h2>
+      <p>
+        As a practitioner of Aikido, I bring harmony and flow into my creative process.
+        The discipline and balance inherent in martial arts influence the rhythm and
+        energy of my strokes, creating pieces that feel both deliberate and natural.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="about-section">
+    <figure class="about-figure">
+      <img src="/assets/images/24bc65489b417a6d2558e306e671e314.jpg"
+           alt="Cardboard Portrait Art"
+           loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2>Urban Renaissance</h2>
+      <p>
+        I view my art as part of a modern urban renaissance—elevating overlooked materials
+        and turning them into something beautiful and meaningful. This transformation
+        reflects not only my work but also my own journey, celebrating resilience, creativity,
+        and the ever-evolving nature of art.
+      </p>
+    </div>
+  </div>
 
   <div class="text-center" style="margin-top: var(--s-lg);">
-    <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Contact Me</a>
+    <a href="/contact/" class="btn btn-primary">Contact Me</a>
   </div>
 </section>
