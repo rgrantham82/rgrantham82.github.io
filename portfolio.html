@@ -1,192 +1,74 @@
 ---
 layout: default
 title: Portfolio
+permalink: /portfolio/
 hero:
   image: '/assets/images/hero_2.png'
   title: "My Portfolio"
   subtitle: "Explore my collection of calligraphy artworks."
 ---
 
-<style>
-  /* Style for AI Generated Badge */
-  .ai-generated-badge {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background-color: rgba(255, 165, 0, 0.8);
-    /* Semi-transparent orange */
-    color: #fff;
-    padding: 3px 6px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 3px;
-    z-index: 10;
-  }
+<section class="portfolio-section container" aria-labelledby="portfolio-heading">
+  <h1 id="portfolio-heading">My Portfolio</h1>
 
-  /* Style for SOLD Badge */
-  .sold-badge {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: rgba(200, 0, 0, 0.85);
-    color: #fff;
-    padding: 3px 6px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 3px;
-    z-index: 10;
-  }
-
-  /* Ensure gallery items are positioned relatively so badges overlay correctly */
-  .gallery-item {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
-  }
-</style>
-
-<section class="portfolio-section">
-  <div class="container">
-    <!-- Intro Section -->
-    <section class="intro">
-      <h2>Welcome to My Calligraphy Gallery</h2>
-      <p>I'm Robert, a street artist based in Austin, Texas, channeling resilience and personal narrative through expressive calligraphy on unconventional canvases—mostly cardboard. Each piece is a moment, a message, and a mirror reflecting both tradition and rebellion.</p>
-    </section>
-
-    <!-- AI Usage Section -->
-    <section class="ai-usage">
-      <h3>AI as a Creative Companion</h3>
-      <p>At <em>Cardboard Calligraphy by Robert</em>, I use AI primarily as a source of inspiration and assistance throughout the creative process. From conceptualizing initial designs to refining intricate details, AI helps me explore new artistic possibilities while maintaining the authenticity of my handmade work. This technology supports my vision without replacing the human touch—every piece is carefully crafted and uniquely mine. By integrating AI into my workflow, I also protect my original designs, making them more distinctive and challenging to replicate. Each composition is a personal expression, blending traditional calligraphy with modern innovation to deliver authentic and one-of-a-kind artwork.</p>
-    </section>
-
-    <!-- Main Gallery -->
-    <div class="gallery">
-      <!-- Mockup Works (AI Generated) -->
-      <a href="/assets/images/A_wedding_invitation_on_kraft_brown_textured_cards.png" data-lightbox="featured" data-title="Wedding Invitation Mockup" class="gallery-item">
-        <img src="/assets/images/A_wedding_invitation_on_kraft_brown_textured_cards.png" alt="Mockup wedding invitation with black and gold calligraphy on kraft paper" />
-        <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
-        <div class="gallery-caption">A mockup wedding invitation showcasing modern expressive Fraktur-inspired calligraphy on textured kraft paper, with black ink and gold flourishes.</div>
-      </a>
-
-      <a href="/assets/images/A_calligraphy_artwork_on_a_piece_of_natural,_textu.png" data-lightbox="featured" data-title="Home Decor Mockup" class="gallery-item">
-        <img src="/assets/images/A_calligraphy_artwork_on_a_piece_of_natural,_textu.png" alt="Mockup home decor piece reading 'Home is where the soul rests' in calligraphy" />
-        <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
-        <div class="gallery-caption">A mockup home decor piece reading “Home is where the soul rests,” blending Gothic and modern expressive script with gold accents on kraft cardstock.</div>
-      </a>
-
-      <a href="/assets/images/A_calligraphic_artwork_on_textured,_brown_kraft_pa.png" data-lightbox="featured" data-title="Office Piece Mockup" class="gallery-item">
-        <img src="/assets/images/A_calligraphic_artwork_on_textured,_brown_kraft_pa.png" alt="Mockup office piece reading 'Do what you Love' in calligraphy" />
-        <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
-        <div class="gallery-caption">An office piece mockup with the phrase “Do what you Love,” featuring bold black ink and gold flourishes on brown kraft paper.</div>
-      </a>
-
-      <!-- Existing Handmade Originals -->
-      <a href="/assets/images/art_rebellion_visible.jpg" data-lightbox="featured" data-title="Art is Rebellion Made Visible!" class="gallery-item">
-        <img src="/assets/images/art_rebellion_visible.jpg" alt="Two cardboard calligraphy panels reading: 'Art is Rebellion Made Visible!' and stylized 'RG'." />
-        <div class="gallery-caption">A set of two cardboard panels showcasing bold, rebellious calligraphy. The left panel reads “Art is Rebellion Made Visible!” while the right features stylized lettering of the artist’s initials.</div>
-      </a>
-
-      <a href="/assets/images/longhorn_collage.jpg" data-lightbox="featured" data-title="Longhorn-Themed Cardboard Collage" class="gallery-item">
-        <img src="/assets/images/longhorn_collage.jpg" alt="A grid of eight UT-themed calligraphy and line-art designs on cardboard squares." />
-        <div class="gallery-caption">A nine-piece collage featuring UT-inspired designs on cardboard squares. Each piece blends calligraphy, Celtic knotwork, and bold motifs like the UT Tower and Longhorn iconography—celebrating the fusion of tradition and modern artistry.</div>
-      </a>
-
-      <a href="/assets/images/calligraphy_piece_4.jpg" data-lightbox="featured" data-title="Swirling Filigree & Gothic Letterforms" class="gallery-item">
-        <img src="/assets/images/calligraphy_piece_4.jpg" alt="A swirling filigree design with gothic letterforms on cardboard" />
-        <div class="gallery-caption">A mesmerizing swirl of filigree and gothic letterforms, hand-painted on cardboard. This piece emphasizes bold, flowing lines and vibrant color gradients.</div>
-      </a>
-
-      <a href="/assets/images/calligraphy_piece_7.jpg" data-lightbox="featured" data-title="Intricate Celtic Knotwork & Spirals" class="gallery-item">
-        <img src="/assets/images/calligraphy_piece_7.jpg" alt="Intricate Celtic knotwork and spiral motifs on cardboard" />
-        <div class="gallery-caption">A Celtic-inspired composition featuring elaborate knotwork and swirling spiral motifs. Rich metallic hues and fine linework celebrate the fusion of tradition and innovation.</div>
-      </a>
-
-      <!-- AI-Generated Originals -->
-      <a href="/assets/images/DALL·E 2025-02-09 13.41.09 - A calligraphy collage artwork on a textured cardboard canvas with an urban renewal theme. The background is a layered mix of rusted metal textures, we.png" data-lightbox="featured" data-title="Urban Renewal Collage" class="gallery-item">
-        <img src="/assets/images/DALL·E 2025-02-09 13.41.09 - A calligraphy collage artwork on a textured cardboard canvas with an urban renewal theme. The background is a layered mix of rusted metal textures, we.png" alt="Urban renewal collage calligraphy artwork" />
-        <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
-        <div class="gallery-caption">A calligraphy collage on a textured cardboard canvas, evoking an urban renewal theme with rusted metal textures.</div>
-      </a>
-
-      <a href="/assets/images/DALL·E 2025-02-09 13.41.27 - An abstract calligraphy artwork using letters to create an urban skyline and cityscape pattern on a textured cardboard canvas. The letters form the sh.png" data-lightbox="featured" data-title="Abstract Cityscape Calligraphy" class="gallery-item">
-        <img src="/assets/images/DALL·E 2025-02-09 13.41.27 - An abstract calligraphy artwork using letters to create an urban skyline and cityscape pattern on a textured cardboard canvas. The letters form the sh.png" alt="Abstract calligraphy cityscape on cardboard" />
-        <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
-        <div class="gallery-caption">An abstract calligraphy piece forming a skyline on cardboard, blending letterforms to create an urban cityscape pattern.</div>
-      </a>
-
-      <!-- More Originals, Sold and Unsold -->
-      <a href="/assets/images/Xerox Scan_11222024122013-3.png" data-lightbox="featured" data-title="Untitled Calligraphy Piece #2" class="gallery-item">
-        <img src="/assets/images/Xerox Scan_11222024122013-3.png" alt="Untitled Calligraphy Piece #2" />
-        <div class="gallery-caption">A unique interpretation of fluidity and structure in letterforms.</div>
-      </a>
-
-      <a href="/assets/images/Xerox Scan_11222024122013-4.png" data-lightbox="featured" data-title="Untitled Calligraphy Piece #3" class="gallery-item sold">
-        <img src="/assets/images/Xerox Scan_11222024122013-4.png" alt="Untitled Calligraphy Piece #3" />
-        <div class="sold-badge">SOLD</div>
-        <div class="gallery-caption">A dynamic piece emphasizing the balance of bold and intricate strokes.</div>
-      </a>
-
-      <a href="/assets/images/strength_calligraphy_2.png" data-lightbox="featured" data-title="Strength through Artistry, v.2" class="gallery-item sold">
-        <img src="/assets/images/strength_calligraphy_2.png" alt="Strength through Artistry, v.2" />
-        <div class="sold-badge">SOLD</div>
-        <div class="gallery-caption">Celebrating strength and creativity through bold artistic expression.</div>
-      </a>
-
-      <a href="/assets/images/if_you_are_not_practicing.png" data-lightbox="featured" data-title="If You're Not Practicing, You're Languishing!" class="gallery-item">
-        <img src="/assets/images/if_you_are_not_practicing.png" alt="If You're Not Practicing, You're Languishing!" />
-        <div class="gallery-caption">This piece serves as a reminder that practice is essential for growth in any art form. Its imperfections highlight that even in the process of creation, mistakes can occur—teaching us humility and the importance of persistence.</div>
-      </a>
-
-      <a href="/assets/images/strength_to_uplift.png" data-lightbox="featured" data-title="Strength to Uplift" class="gallery-item sold">
-        <img src="/assets/images/strength_to_uplift.png" alt="Strength to Uplift" />
-        <div class="sold-badge">SOLD</div>
-        <div class="gallery-caption">An uplifting piece to inspire and empower viewers. Dedicated to the people of Palestine.</div>
-      </a>
-
-      <a href="/assets/images/your_own_masterpiece.png" data-lightbox="featured" data-title="You are your own masterpiece!" class="gallery-item">
-        <img src="/assets/images/your_own_masterpiece.png" alt="You are your own masterpiece!" />
-        <div class="gallery-caption">A contemplative work encouraging self-reflection and value recognition.</div>
-      </a>
-
-      <a href="/assets/images/your_own_masterpiece_2.png" data-lightbox="featured" data-title="Your are your own masterpiece! v. 2." class="gallery-item sold">
-        <img src="/assets/images/your_own_masterpiece_2.png" alt="You are your own masterpiece! v. 2." />
-        <div class="sold-badge">SOLD</div>
-        <div class="gallery-caption">An additional version of the previous piece.</div>
-      </a>
-
-      <a href="/assets/images/dont_let_anyone.png" data-lightbox="featured" data-title="Personal Interpretation of Fraktur" class="gallery-item">
-        <img src="/assets/images/dont_let_anyone.png" alt="Back of previous piece" />
-        <div class="gallery-caption">Backside of the previous slide that reminds you to always hold to your own value, regardless of what the world may say.</div>
-      </a>
-
-      <a href="/assets/images/keep_driving_like_that.png" data-lightbox="featured" data-title="Keep driving like that!" class="gallery-item sold">
-        <img src="/assets/images/keep_driving_like_that.png" alt="Keep driving like that!" />
-        <div class="sold-badge">SOLD</div>
-        <div class="gallery-caption">A humorous take on motivation and perseverance in everyday life.</div>
-      </a>
-
-      <a href="/assets/images/forever_friends_calligraphy.png" data-lightbox="featured" data-title="A Tribute to Friendship" class="gallery-item sold">
-        <img src="/assets/images/forever_friends_calligraphy.png" alt="A Tribute to Friendship" />
-        <div class="sold-badge">SOLD</div>
-        <div class="gallery-caption">A heartfelt tribute to enduring friendships, celebrating their strength and beauty. This piece exemplifies my attempt at combining Spencerian and Copperplate techniques.</div>
-      </a>
-
-      <a href="/assets/images/fraktur_example.png" data-lightbox="featured" data-title="Personal Interpretation of Fraktur" class="gallery-item">
-        <img src="/assets/images/fraktur_example.png" alt="Personal Interpretation of Fraktur" />
-        <div class="gallery-caption">This is an example of my personal interpretation of Fraktur, blending traditional Gothic letterforms with a modern, freehand aesthetic unique to me.</div>
-      </a>
-
-      <a href="/assets/images/dante_inferno.png" data-lightbox="featured" data-title="An excerpt from the 32nd Canto of Dante's Inferno." class="gallery-item">
-        <img src="/assets/images/dante_inferno.png" alt="An excerpt from the 32nd Canto of Dante's Inferno." />
-        <div class="gallery-caption">An excerpt from the 32nd Canto of Dante's Inferno.</div>
-      </a>
-    </div>
-
-    <!-- CTA for commissions -->
-    <section class="contact-cta">
-      <p>Interested in purchasing or commissioning a custom piece? <a href="/contact">Get in touch</a> and let’s bring your vision to life!</p>
-    </section>
+  <!-- Intro -->
+  <div class="intro container" aria-labelledby="intro-heading">
+    <h2 id="intro-heading">Welcome to My Calligraphy Gallery</h2>
+    <p>
+      I’m Robert, a street artist based in Austin, Texas, channeling resilience
+      and personal narrative through expressive calligraphy on unconventional
+      canvases—mostly cardboard. Each piece is a moment, a message, and a mirror
+      reflecting both tradition and rebellion.
+    </p>
   </div>
+
+  <!-- AI Usage -->
+  <div class="ai-usage container" aria-labelledby="ai-heading">
+    <h2 id="ai-heading">AI as a Creative Companion</h2>
+    <p>
+      At <em>Cardboard Calligraphy by Robert</em>, I use AI primarily as a source
+      of inspiration and assistance throughout the creative process. From
+      conceptualizing initial designs to refining intricate details, AI helps me
+      explore new artistic possibilities while maintaining the authenticity of
+      my handmade work. Every piece is carefully crafted and uniquely mine, with
+      AI augmenting—never replacing—the human touch.
+    </p>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery container" aria-label="Portfolio gallery">
+    {% assign items = site.data.portfolio %}
+    {% for item in items %}
+      <figure class="gallery-item">
+        <a href="{{ item.full | relative_url }}"
+           data-lightbox="portfolio"
+           data-title="{{ item.title }}">
+          <img src="{{ item.thumb | relative_url }}"
+               alt="{{ item.alt }}"
+               loading="lazy" />
+        </a>
+
+        {% if item.badge == "AI" %}
+          <div class="ai-generated-badge" aria-label="AI-generated artwork">
+            AI Generated
+          </div>
+        {% elsif item.badge == "SOLD" %}
+          <div class="sold-badge">
+            SOLD
+          </div>
+        {% endif %}
+
+        <figcaption class="gallery-caption">{{ item.title }}</figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+
+  <!-- Commission CTA -->
+  <section class="contact-cta container">
+    <p>
+      Interested in purchasing or commissioning a custom piece?
+      <a href="{{ '/contact/' | relative_url }}">Get in touch</a> and let’s bring
+      your vision to life!
+    </p>
+  </section>
 </section>
