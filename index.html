@@ -14,16 +14,18 @@ hero:
   <h2 id="about-heading">About Robert</h2>
   <div class="intro-grid">
     <figure class="profile-image">
-      <img src="{{ '/assets/images/profile-image.jpg' | relative_url }}"
-           alt="Portrait of Robert Grantham"
-           loading="lazy" />
+      <img
+        src="{{ '/assets/images/profile-image.jpg' | relative_url }}"
+        alt="Portrait of Robert Grantham"
+        loading="lazy"
+      />
       <figcaption class="sr-only">Robert Grantham</figcaption>
     </figure>
     <div class="intro-text">
       <p>
-        Hello, I’m Robert, an artist specializing in unique, hand-crafted calligraphy on recycled cardboard. 
-        My work blends modern street style with classical calligraphy techniques, giving discarded materials 
-        new life and beauty.
+        Hello, I’m Robert, an artist specializing in unique, hand-crafted calligraphy
+        on recycled cardboard. My work blends modern street style with classical
+        calligraphy techniques, giving discarded materials new life and beauty.
       </p>
       <a href="{{ '/about/' | relative_url }}" class="btn btn-primary">
         Learn More About Me
@@ -35,17 +37,34 @@ hero:
 <section class="featured-works container" aria-labelledby="featured-heading">
   <h2 id="featured-heading">Featured Works</h2>
   <div class="gallery">
-    {% assign works = site.data.featured_works %}
-    {% for work in works %}
-      <figure class="gallery-item">
-        <a href="{{ work.image | relative_url }}" 
-           data-lightbox="featured-works" 
-           data-title="{{ work.title }}">
-          <img src="{{ work.image | relative_url }}"
-               alt="{{ work.alt }}" loading="lazy" />
-        </a>
-        <figcaption>{{ work.title }}</figcaption>
-      </figure>
+    {% for work in site.data.artworks %}
+      {% if work.featured %}
+        <figure class="gallery-item">
+          <a
+            href="{{ work.full | relative_url }}"
+            data-lightbox="featured-works"
+            data-title="{{ work.title }}"
+          >
+            <img
+              src="{{ work.thumb | relative_url }}"
+              alt="{{ work.alt }}"
+              loading="lazy"
+            />
+          </a>
+
+          {% if work.badge == "AI" %}
+            <div class="ai-generated-badge" aria-label="AI-generated artwork">
+              AI Generated
+            </div>
+          {% elsif work.badge == "SOLD" %}
+            <div class="sold-badge" aria-label="Artwork sold">
+              SOLD
+            </div>
+          {% endif %}
+
+          <figcaption>{{ work.title }}</figcaption>
+        </figure>
+      {% endif %}
     {% endfor %}
   </div>
   <a href="{{ '/portfolio/' | relative_url }}" class="btn btn-secondary">
@@ -57,13 +76,18 @@ hero:
   <h2 id="testimonials-heading">What People Are Saying</h2>
   <blockquote class="testimonial">
     <p>
-      “Robert’s calligraphy is more than just beautiful art; it’s an emotional experience. 
-      Each piece I’ve purchased has brought vibrancy to my home and conveyed a depth of meaning 
-      that aligns perfectly with my spiritual journey.”
+      “Robert’s calligraphy is more than just beautiful art; it’s an emotional
+      experience. Each piece I’ve purchased has brought vibrancy to my home and
+      conveyed a depth of meaning that aligns perfectly with my spiritual journey.”
     </p>
     <footer class="testimonial-author">
-      — <cite>Tatiyana, Owner of 
-        <a href="https://www.sacredillumination.com/" target="_blank" rel="noopener noreferrer">
+      — <cite>
+        Tatiyana, Owner of
+        <a
+          href="https://www.sacredillumination.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Sacred Illumination
         </a>
       </cite>
@@ -76,22 +100,24 @@ hero:
   <p>Follow me on social media to see my latest calligraphy works and updates.</p>
   <ul class="social-icons">
     <li>
-      <a href="https://www.instagram.com/inkedoncardboard/" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         aria-label="Follow on Instagram">
+      <a
+        href="https://www.instagram.com/inkedoncardboard/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
         <i class="fab fa-instagram"></i>
       </a>
     </li>
-    <!-- add others -->
+    <!-- add more icons here -->
   </ul>
 </section>
 
 <section class="contact container" aria-labelledby="contact-heading">
   <h2 id="contact-heading">Get in Touch</h2>
   <p>
-    If you’re interested in my work or would like to discuss a custom piece, 
-    I’d love to hear from you. Let’s create something extraordinary together.
+    If you’re interested in my work or would like to discuss a custom piece, I’d
+    love to hear from you. Let’s create something extraordinary together.
   </p>
   <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">
     Contact Me
