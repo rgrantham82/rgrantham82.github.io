@@ -1,11 +1,23 @@
 - title: "Lish & Zinks Forever"
-  image: "/assets/images/forever_friends_calligraphy.png"
+  thumb: "/assets/images/forever_friends_calligraphy.png"
+  full:  "/assets/images/forever_friends_calligraphy.png"
+  alt:    "Friendship-themed calligraphy piece on cardboard reading 'Lish & Zinks Forever'"
   description: "A heartfelt tribute to lifelong friendship, featuring intricate flourishes and personal touches."
+  featured: true
+  badge: ""
 
 - title: "Urban Calligraphy"
-  image: "/assets/images/urban_calligraphy.png"
+  thumb: "/assets/images/urban_calligraphy.png"
+  full:  "/assets/images/urban_calligraphy.png"
+  alt:    "Modern calligraphy on cardboard with bold urban motifs"
   description: "A bold, modern calligraphy style capturing the vibrancy of urban life."
+  featured: true
+  badge: ""
 
 - title: "Sustainability in Style"
-  image: "/assets/images/sustainability_calligraphy.png"
+  thumb: "/assets/images/sustainability_calligraphy.png"
+  full:  "/assets/images/sustainability_calligraphy.png"
+  alt:    "Eco-conscious calligraphy design on recycled cardboard"
   description: "An eco-conscious design that merges artistic strokes with raw cardboard textures."
+  featured: true
+  badge: ""
