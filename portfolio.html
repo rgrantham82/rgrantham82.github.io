@@ -9,66 +9,223 @@ hero:
 ---
 
 <section class="portfolio-section container" aria-labelledby="portfolio-heading">
-  <h1 id="portfolio-heading">My Portfolio</h1>
+  <h1 id="portfolio-heading">{{ page.hero.title }}</h1>
+  <p class="lead">{{ page.hero.subtitle }}</p>
 
-  <!-- Intro -->
-  <div class="intro container" aria-labelledby="intro-heading">
-    <h2 id="intro-heading">Welcome to My Calligraphy Gallery</h2>
-    <p>
-      I’m Robert, a street artist based in Austin, Texas, channeling resilience
-      and personal narrative through expressive calligraphy on unconventional
-      canvases—mostly cardboard. Each piece is a moment, a message, and a mirror
-      reflecting both tradition and rebellion.
-    </p>
+  <div class="gallery" aria-label="Portfolio gallery">
+
+    <!-- Wedding Invitation Mockup (AI) -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/A_wedding_invitation_on_kraft_brown_textured_cards.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Wedding Invitation Mockup">
+        <img src="{{ '/assets/images/A_wedding_invitation_on_kraft_brown_textured_cards.png' | relative_url }}"
+             alt="Wedding invitation black & gold calligraphy on kraft paper"
+             loading="lazy" />
+      </a>
+      <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
+      <figcaption>A wedding invitation mockup with modern expressive Fraktur-inspired calligraphy on textured kraft paper.</figcaption>
+    </figure>
+
+    <!-- Home Decor Mockup (AI) -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/A_calligraphy_artwork_on_a_piece_of_natural,_textu.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Home Decor Mockup">
+        <img src="{{ '/assets/images/A_calligraphy_artwork_on_a_piece_of_natural,_textu.png' | relative_url }}"
+             alt="Home decor piece reading ‘Home is where the soul rests’ in calligraphy"
+             loading="lazy" />
+      </a>
+      <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
+      <figcaption>A home decor mockup: “Home is where the soul rests,” blending Gothic script with gold accents on kraft paper.</figcaption>
+    </figure>
+
+    <!-- Office Piece Mockup (AI) -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/A_calligraphic_artwork_on_textured,_brown_kraft_pa.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Office Piece Mockup">
+        <img src="{{ '/assets/images/A_calligraphic_artwork_on_textured,_brown_kraft_pa.png' | relative_url }}"
+             alt="Office piece reading ‘Do what you Love’ in calligraphy"
+             loading="lazy" />
+      </a>
+      <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
+      <figcaption>An office piece: “Do what you Love,” featuring bold black ink with gold flourishes on brown kraft paper.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Art is Rebellion -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/art_rebellion_visible.jpg' | relative_url }}"
+         data-lightbox="portfolio" data-title="Art is Rebellion Made Visible!">
+        <img src="{{ '/assets/images/art_rebellion_visible.jpg' | relative_url }}"
+             alt="Two cardboard panels: 'Art is Rebellion Made Visible!' and stylized RG"
+             loading="lazy" />
+      </a>
+      <figcaption>A set of two cardboard panels: “Art is Rebellion Made Visible!” and stylized artist initials.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Longhorn Collage -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/longhorn_collage.jpg' | relative_url }}"
+         data-lightbox="portfolio" data-title="Longhorn-Themed Cardboard Collage">
+        <img src="{{ '/assets/images/longhorn_collage.jpg' | relative_url }}"
+             alt="Grid of UT-themed calligraphy and line-art on cardboard"
+             loading="lazy" />
+      </a>
+      <figcaption>A nine-piece UT collage on cardboard, blending calligraphy, knotwork, and bold motifs.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Filigree & Gothic Letterforms -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/calligraphy_piece_4.jpg' | relative_url }}"
+         data-lightbox="portfolio" data-title="Swirling Filigree & Gothic Letterforms">
+        <img src="{{ '/assets/images/calligraphy_piece_4.jpg' | relative_url }}"
+             alt="Swirling filigree design with gothic letterforms"
+             loading="lazy" />
+      </a>
+      <figcaption>A swirl of filigree and gothic letterforms, hand-painted on cardboard.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Celtic Knotwork & Spirals -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/calligraphy_piece_7.jpg' | relative_url }}"
+         data-lightbox="portfolio" data-title="Intricate Celtic Knotwork & Spirals">
+        <img src="{{ '/assets/images/calligraphy_piece_7.jpg' | relative_url }}"
+             alt="Intricate Celtic knotwork and spiral motifs"
+             loading="lazy" />
+      </a>
+      <figcaption>Celtic-inspired knotwork and spirals on cardboard with metallic linework.</figcaption>
+    </figure>
+
+    <!-- AI Original: Urban Renewal Collage -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/DALL·E 2025-02-09 13.41.09 - A calligraphy collage artwork on a textured cardboard canvas with an urban renewal theme. The background is a layered mix of rusted metal textures, we.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Urban Renewal Collage">
+        <img src="{{ '/assets/images/DALL·E 2025-02-09 13.41.09 - A calligraphy collage artwork on a textured cardboard canvas with an urban renewal theme. The background is a layered mix of rusted metal textures, we.png' | relative_url }}"
+             alt="Urban renewal collage calligraphy artwork"
+             loading="lazy" />
+      </a>
+      <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
+      <figcaption>An urban renewal-themed collage on cardboard, layering rusted-metal textures.</figcaption>
+    </figure>
+
+    <!-- AI Original: Abstract Cityscape Calligraphy -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/DALL·E 2025-02-09 13.41.27 - An abstract calligraphy artwork using letters to create an urban skyline and cityscape pattern on a textured cardboard canvas. The letters form the sh.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Abstract Cityscape Calligraphy">
+        <img src="{{ '/assets/images/DALL·E 2025-02-09 13.41.27 - An abstract calligraphy artwork using letters to create an urban skyline and cityscape pattern on a textured cardboard canvas. The letters form the sh.png' | relative_url }}"
+             alt="Abstract calligraphy cityscape on cardboard"
+             loading="lazy" />
+      </a>
+      <div class="ai-generated-badge" aria-label="AI-generated artwork">AI Generated</div>
+      <figcaption>An abstract calligraphic skyline on cardboard, blending letterforms into a cityscape.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Untitled Piece #2 -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/Xerox Scan_11222024122013-3.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Untitled Calligraphy Piece #2">
+        <img src="{{ '/assets/images/Xerox Scan_11222024122013-3.png' | relative_url }}"
+             alt="Untitled Calligraphy Piece #2"
+             loading="lazy" />
+      </a>
+      <figcaption>A unique study in fluid and structured letterforms.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Untitled Piece #3 (SOLD) -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/Xerox Scan_11222024122013-4.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Untitled Calligraphy Piece #3">
+        <img src="{{ '/assets/images/Xerox Scan_11222024122013-4.png' | relative_url }}"
+             alt="Untitled Calligraphy Piece #3"
+             loading="lazy" />
+      </a>
+      <div class="sold-badge" aria-label="Sold artwork">SOLD</div>
+      <figcaption>A dynamic piece emphasizing bold and intricate strokes. (Sold)</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Strength Through Artistry v.2 (SOLD) -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/strength_calligraphy_2.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Strength through Artistry, v.2">
+        <img src="{{ '/assets/images/strength_calligraphy_2.png' | relative_url }}"
+             alt="Strength through Artistry, v.2"
+             loading="lazy" />
+      </a>
+      <div class="sold-badge" aria-label="Sold artwork">SOLD</div>
+      <figcaption>Celebrating strength and creativity through bold expression. (Sold)</figcaption>
+    </figure>
+
+    <!-- Handmade Original: If You're Not Practicing -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/if_you_are_not_practicing.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="If You're Not Practicing, You're Languishing!">
+        <img src="{{ '/assets/images/if_you_are_not_practicing.png' | relative_url }}"
+             alt="If You're Not Practicing, You're Languishing!"
+             loading="lazy" />
+      </a>
+      <figcaption>A reminder that practice—and its imperfections—fosters humility and growth.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Strength to Uplift (SOLD) -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/strength_to_uplift.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Strength to Uplift">
+        <img src="{{ '/assets/images/strength_to_uplift.png' | relative_url }}"
+             alt="Strength to Uplift"
+             loading="lazy" />
+      </a>
+      <div class="sold-badge" aria-label="Sold artwork">SOLD</div>
+      <figcaption>An uplifting piece dedicated to resilience and solidarity. (Sold)</figcaption>
+    </figure>
+
+    <!-- Handmade Original: You Are Your Own Masterpiece -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/your_own_masterpiece.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="You Are Your Own Masterpiece!">
+        <img src="{{ '/assets/images/your_own_masterpiece.png' | relative_url }}"
+             alt="You Are Your Own Masterpiece!"
+             loading="lazy" />
+      </a>
+      <figcaption>A contemplative reminder of self-worth and personal value.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: You Are Your Own Masterpiece v.2 (SOLD) -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/your_own_masterpiece_2.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="You Are Your Own Masterpiece! v.2">
+        <img src="{{ '/assets/images/your_own_masterpiece_2.png' | relative_url }}"
+             alt="You Are Your Own Masterpiece! v.2"
+             loading="lazy" />
+      </a>
+      <div class="sold-badge" aria-label="Sold artwork">SOLD</div>
+      <figcaption>A second iteration exploring identity and art. (Sold)</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Personal Interpretation of Fraktur -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/fraktur_example.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="Personal Interpretation of Fraktur">
+        <img src="{{ '/assets/images/fraktur_example.png' | relative_url }}"
+             alt="Personal Interpretation of Fraktur"
+             loading="lazy" />
+      </a>
+      <figcaption>A modern freehand take on traditional Gothic Fraktur letterforms.</figcaption>
+    </figure>
+
+    <!-- Handmade Original: Dante’s Inferno Excerpt -->
+    <figure class="gallery-item">
+      <a href="{{ '/assets/images/dante_inferno.png' | relative_url }}"
+         data-lightbox="portfolio" data-title="An Excerpt from Dante's Inferno">
+        <img src="{{ '/assets/images/dante_inferno.png' | relative_url }}"
+             alt="Excerpt from the 32nd Canto of Dante's Inferno"
+             loading="lazy" />
+      </a>
+      <figcaption>An illuminated excerpt from Dante’s Inferno, Canto 32.</figcaption>
+    </figure>
+
   </div>
 
-  <!-- AI Usage -->
-  <div class="ai-usage container" aria-labelledby="ai-heading">
-    <h2 id="ai-heading">AI as a Creative Companion</h2>
-    <p>
-      At <em>Cardboard Calligraphy by Robert</em>, I use AI primarily as a source
-      of inspiration and assistance throughout the creative process. From
-      conceptualizing initial designs to refining intricate details, AI helps me
-      explore new artistic possibilities while maintaining the authenticity of
-      my handmade work. Every piece is carefully crafted and uniquely mine, with
-      AI augmenting—never replacing—the human touch.
-    </p>
+  <div class="text-center" style="margin-top: var(--s-lg);">
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">
+      Commission a Custom Piece
+    </a>
   </div>
-
-  <!-- Gallery -->
-  <div class="gallery container" aria-label="Portfolio gallery">
-    {% assign items = site.data.portfolio %}
-    {% for item in items %}
-      <figure class="gallery-item">
-        <a href="{{ item.full | relative_url }}"
-           data-lightbox="portfolio"
-           data-title="{{ item.title }}">
-          <img src="{{ item.thumb | relative_url }}"
-               alt="{{ item.alt }}"
-               loading="lazy" />
-        </a>
-
-        {% if item.badge == "AI" %}
-          <div class="ai-generated-badge" aria-label="AI-generated artwork">
-            AI Generated
-          </div>
-        {% elsif item.badge == "SOLD" %}
-          <div class="sold-badge">
-            SOLD
-          </div>
-        {% endif %}
-
-        <figcaption class="gallery-caption">{{ item.title }}</figcaption>
-      </figure>
-    {% endfor %}
-  </div>
-
-  <!-- Commission CTA -->
-  <section class="contact-cta container">
-    <p>
-      Interested in purchasing or commissioning a custom piece?
-      <a href="{{ '/contact/' | relative_url }}">Get in touch</a> and let’s bring
-      your vision to life!
-    </p>
-  </section>
 </section>
