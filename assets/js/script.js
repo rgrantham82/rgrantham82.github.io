@@ -1,145 +1,102 @@
 // assets/js/script.js
-// ──────────────────────────────────────────────────────────────────────────────
-// Entry point for your site’s interactive behaviors.
-// Written as an ES module so you can compose, test, and bundle.
-// ──────────────────────────────────────────────────────────────────────────────
 'use strict';
 
-/** Configuration constants */
-const SCROLL_THRESHOLD = 300;
 const HEADER_OFFSET = 70;
 
-/** Utility: Safe querySelector */
-const $ = (selector, ctx = document) => ctx.querySelector(selector);
-const $$ = (selector, ctx = document) => Array.from(ctx.querySelectorAll(selector));
+/** shorthand $$ */
+const $  = (sel, ctx = document) => ctx.querySelector(sel);
+const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-/** Initialize everything on DOM ready */
 document.addEventListener('DOMContentLoaded', () => {
-  try {
-    initBackToTop();
-    initMobileMenu();
-    initSmoothScroll();
-    initContactForm();
-  } catch (err) {
-    console.error('Error initializing scripts:', err);
-  }
+  initBackToTop();
+  initMobileMenu();
+  initSmoothScroll();
+  initFormValidation();
 });
 
-/** ─────────────────────────────────────────────────────────────────────────────
- * 1. Back-to-Top Button via IntersectionObserver
- * ───────────────────────────────────────────────────────────────────────────── */
+/** 1. Back-to-Top using IntersectionObserver */
 function initBackToTop() {
   const btn = $('.to-top');
   if (!btn) return;
-
-  // Hide initially
   btn.classList.remove('visible');
-
-  // Create a sentinel element
   const sentinel = document.createElement('div');
   sentinel.style.position = 'absolute';
-  sentinel.style.top = `${SCROLL_THRESHOLD}px`;
+  sentinel.style.top = '300px';
   document.body.prepend(sentinel);
-
-  const io = new IntersectionObserver(
-    ([entry]) => {
-      btn.classList.toggle('visible', !entry.isIntersecting);
-    },
-    { threshold: 0, rootMargin: '0px' }
-  );
-
-  io.observe(sentinel);
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  new IntersectionObserver(
+    ([entry]) => btn.classList.toggle('visible', !entry.isIntersecting),
+    { root: null, threshold: 0 }
+  ).observe(sentinel);
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-/** ─────────────────────────────────────────────────────────────────────────────
- * 2. Mobile Menu Toggle
- * ───────────────────────────────────────────────────────────────────────────── */
+/** 2. Mobile Menu */
 function initMobileMenu() {
-  const toggle = $('.mobile-toggle');
+  const toggle = $('#mobile-toggle');
   const nav    = $('.nav-links');
   if (!toggle || !nav) return;
-
   toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
+    const exp = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!exp));
     nav.classList.toggle('active');
   });
 }
 
-/** ─────────────────────────────────────────────────────────────────────────────
- * 3. Smooth Scrolling for Anchor Links
- * ───────────────────────────────────────────────────────────────────────────── */
+/** 3. Smooth Scrolling */
 function initSmoothScroll() {
-  $$('a[href^="#"]:not([href="#"])').forEach(link => {
+  $$('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
-      const targetId = link.getAttribute('href').slice(1);
-      const target   = document.getElementById(targetId);
-      if (!target) return;
+      const id = link.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (!el) return;
       e.preventDefault();
-
-      const top = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+      const top = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
       window.scrollTo({ top, behavior: 'smooth' });
-
-      target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
+      el.setAttribute('tabindex', '-1');
+      el.focus({ preventScroll: true });
     });
   });
 }
 
-/** ─────────────────────────────────────────────────────────────────────────────
- * 4. Contact Form Validation (Inline Error Messages)
- * ───────────────────────────────────────────────────────────────────────────── */
-function initContactForm() {
+/** 4. Contact Form Validation */
+function initFormValidation() {
   const form = $('.contact-form');
   if (!form) return;
-
-  // Create error container
-  const errorList = document.createElement('ul');
-  errorList.className = 'form-errors';
-  form.prepend(errorList);
+  const errors = document.createElement('ul');
+  errors.className = 'form-errors';
+  form.prepend(errors);
 
   form.addEventListener('submit', e => {
-    errorList.innerHTML = '';  // clear previous errors
+    errors.innerHTML = '';
     let valid = true;
 
     const fields = [
-      { el: $('#name', form),    name: 'Name'    },
-      { el: $('#_replyto', form), name: 'Email'   },
-      { el: $('#message', form), name: 'Message' }
+      { el: $('#name', form),    label: 'Name'    },
+      { el: $('#_replyto', form), label: 'Email'   },
+      { el: $('#message', form), label: 'Message' }
     ];
 
-    fields.forEach(({ el, name }) => {
+    fields.forEach(({el,label}) => {
       if (!el) return;
       if (!el.value.trim()) {
         valid = false;
-        appendError(`${name} is required.`);
+        addError(`${label} is required.`);
       }
-      if (name === 'Email' && el.value && !el.validity.valid) {
+      if (label==='Email' && el.value && !el.checkValidity()) {
         valid = false;
-        appendError('Please enter a valid email address.');
+        addError('Please enter a valid email address.');
       }
     });
 
     if (!valid) {
       e.preventDefault();
-      errorList.scrollIntoView({ behavior: 'smooth' });
+      errors.scrollIntoView({ behavior: 'smooth' });
     }
   });
 
-  function appendError(text) {
+  function addError(msg) {
     const li = document.createElement('li');
-    li.textContent = text;
-    errorList.append(li);
+    li.textContent = msg;
+    errors.append(li);
   }
 }
-
-export {
-  initBackToTop,
-  initMobileMenu,
-  initSmoothScroll,
-  initContactForm
-};
