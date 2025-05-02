@@ -10,116 +10,144 @@ hero:
   button_link: "/services/"
 ---
 
-<section class="introduction container" aria-labelledby="about-heading">
-  <h2 id="about-heading">About Robert</h2>
-  <div class="intro-grid">
-    <figure class="profile-image">
-      <img
-        src="{{ '/assets/images/profile-image.jpg' | relative_url }}"
-        alt="Portrait of Robert Grantham"
-        loading="lazy"
-      />
-      <figcaption class="sr-only">Robert Grantham</figcaption>
-    </figure>
-    <div class="intro-text">
-      <p>
-        Hello, I’m Robert, an artist specializing in unique, hand-crafted calligraphy
-        on recycled cardboard. My work blends modern street style with classical
-        calligraphy techniques, giving discarded materials new life and beauty.
-      </p>
-      <a href="{{ '/about/' | relative_url }}" class="btn btn-primary">
-        Learn More About Me
+<header class="site-header">
+  <nav class="nav container" role="navigation" aria-label="Primary navigation">
+    <div class="logo">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} logo" height="50" />
       </a>
+    </div>
+    <ul class="nav-links" id="nav-links" aria-label="Main menu">
+      {% for item in site.nav %}
+        <li><a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section class="hero">
+  <picture>
+    <!-- responsive sources -->
+    <source media="(max-width: 480px)" srcset="{{ '/assets/images/hero_2-480.jpg' | relative_url }}">
+    <source media="(max-width: 768px)" srcset="{{ '/assets/images/hero_2-768.jpg' | relative_url }}">
+    <img
+      src="{{ '/assets/images/hero_2-1200.jpg' | relative_url }}"
+      alt="Artists painting a large calligraphic mural"
+      class="hero-bg"
+      loading="eager"
+    >
+  </picture>
+
+  <div class="hero-overlay container">
+    <h1>{{ page.hero.title }}</h1>
+    <p>{{ page.hero.subtitle }}</p>
+    <a href="{{ page.hero.button_link | relative_url }}" class="btn btn-primary hero-cta">
+      {{ page.hero.button_text }}
+    </a>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="arrow-down"></span>
     </div>
   </div>
 </section>
 
-<section class="featured-works container" aria-labelledby="featured-heading">
-  <h2 id="featured-heading">Featured Works</h2>
-  <div class="gallery">
-    {% for work in site.data.artworks %}
-      {% if work.featured %}
-        <figure class="gallery-item">
-          <a
-            href="{{ work.full | relative_url }}"
-            data-lightbox="featured-works"
-            data-title="{{ work.title }}"
-          >
-            <img
-              src="{{ work.thumb | relative_url }}"
-              alt="{{ work.alt }}"
-              loading="lazy"
-            />
-          </a>
+<main id="main-content">
 
-          {% if work.badge == "AI" %}
-            <div class="ai-generated-badge" aria-label="AI-generated artwork">
-              AI Generated
-            </div>
-          {% elsif work.badge == "SOLD" %}
-            <div class="sold-badge" aria-label="Artwork sold">
-              SOLD
-            </div>
-          {% endif %}
+  <!-- About -->
+  <section class="introduction container" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Robert</h2>
+    <div class="intro-grid">
+      <figure class="profile-image">
+        <img
+          src="{{ '/assets/images/profile-image.jpg' | relative_url }}"
+          alt="Portrait of Robert Grantham"
+          loading="lazy"
+        />
+      </figure>
+      <div class="intro-text">
+        <p>
+          Hello, I’m Robert, an artist specializing in unique, hand-crafted calligraphy
+          on recycled cardboard. My work blends modern street style with classical techniques,
+          giving discarded materials new life and beauty.
+        </p>
+        <a href="{{ '/about/' | relative_url }}" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
 
-          <figcaption>{{ work.title }}</figcaption>
-        </figure>
-      {% endif %}
-    {% endfor %}
-  </div>
-  <a href="{{ '/portfolio/' | relative_url }}" class="btn btn-secondary">
-    View Full Portfolio
-  </a>
-</section>
+  <!-- Featured Works -->
+  <section class="featured-works container" aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured Works</h2>
+    <div class="gallery">
+      {% for work in site.data.artworks %}
+        {% if work.featured %}
+          <figure class="gallery-item">
+            <a
+              href="{{ work.full | relative_url }}"
+              data-lightbox="featured-works"
+              data-title="{{ work.title }}"
+            >
+              <img
+                src="{{ work.thumb | relative_url }}"
+                alt="{{ work.alt }}"
+                loading="lazy"
+                width="400"
+                height="500"
+                style="aspect-ratio:4/5;object-fit:cover"
+              />
+            </a>
 
-<section class="testimonials container" aria-labelledby="testimonials-heading">
-  <h2 id="testimonials-heading">What People Are Saying</h2>
-  <blockquote class="testimonial">
-    <p>
-      “Robert’s calligraphy is more than just beautiful art; it’s an emotional
-      experience. Each piece I’ve purchased has brought vibrancy to my home and
-      conveyed a depth of meaning that aligns perfectly with my spiritual journey.”
-    </p>
-    <footer class="testimonial-author">
-      — <cite>
-        Tatiyana, Owner of
-        <a
-          href="https://www.sacredillumination.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sacred Illumination
+            {% if work.badge == "AI" %}
+              <div class="ai-generated-badge">AI Generated</div>
+            {% elsif work.badge == "SOLD" %}
+              <div class="sold-badge">SOLD</div>
+            {% endif %}
+
+            <figcaption>{{ work.title }}</figcaption>
+          </figure>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <a href="{{ '/portfolio/' | relative_url }}" class="btn btn-primary">View Full Portfolio</a>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials container" aria-labelledby="testimonials-heading">
+    <h2 id="testimonials-heading">What People Are Saying</h2>
+    <blockquote class="testimonial">
+      <p>
+        “Robert’s calligraphy is more than just beautiful art; it’s an emotional experience.
+        Each piece I’ve purchased has brought vibrancy to my home and conveyed a depth of meaning
+        that aligns perfectly with my spiritual journey.”
+      </p>
+      <footer>
+        — <cite>Tatiyana, Owner of
+          <a href="https://www.sacredillumination.com/" target="_blank" rel="noopener">Sacred Illumination</a>
+        </cite>
+      </footer>
+    </blockquote>
+  </section>
+
+  <!-- Social Media -->
+  <section class="social-media container" aria-labelledby="social-heading">
+    <h2 id="social-heading">Connect with Me</h2>
+    <ul class="social-icons">
+      <li>
+        <a href="https://www.instagram.com/inkedoncardboard/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
         </a>
-      </cite>
-    </footer>
-  </blockquote>
-</section>
+      </li>
+      <!-- add more platforms as needed -->
+    </ul>
+  </section>
 
-<section class="social-media container" aria-labelledby="social-heading">
-  <h2 id="social-heading">Connect with Me</h2>
-  <p>Follow me on social media to see my latest calligraphy works and updates.</p>
-  <ul class="social-icons">
-    <li>
-      <a
-        href="https://www.instagram.com/inkedoncardboard/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-      >
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-    <!-- add more icons here -->
-  </ul>
-</section>
+  <!-- Contact CTA -->
+  <section class="contact-cta container">
+    <h2>Ready to Create?</h2>
+    <p>Have an idea? Let’s collaborate on a custom piece just for you.</p>
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">Contact Me</a>
+  </section>
 
-<section class="contact container" aria-labelledby="contact-heading">
-  <h2 id="contact-heading">Get in Touch</h2>
-  <p>
-    If you’re interested in my work or would like to discuss a custom piece, I’d
-    love to hear from you. Let’s create something extraordinary together.
-  </p>
-  <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">
-    Contact Me
-  </a>
-</section>
+</main>
