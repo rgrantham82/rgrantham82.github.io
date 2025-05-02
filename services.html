@@ -1,32 +1,96 @@
 ---
 layout: default
 title: Services
+permalink: /services/
 hero:
   image: '/assets/images/hero_2.png'
-  title: "My Services"
-  subtitle: "Discover what I can create for you."
+  title: "What I Offer"
+  subtitle: "Custom calligraphy services tailored to your vision"
 ---
-<section id="services" class="services">
-    <div class="services-content">
-        <!-- Service 1: Collaborations -->
-        <div class="service-item">
-            <img src="{{ '/assets/images/collaborations.png' | relative_url }}" alt="Collaborations">
-            <h2>Collaborations</h2>
-            <p>Partner with me to create unique art pieces that combine our creative talents. Let's bring together different mediums and ideas to produce something truly special.</p>
-        </div>
 
-        <!-- Service 2: Commissions -->
-        <div class="service-item">
-            <img src="{{ '/assets/images/commissions.png' | relative_url }}" alt="Commissions">
-            <h2>Commissions</h2>
-            <p>Request personalized calligraphy artworks on recycled cardboard. Perfect for gifts, home decor, or special occasions, each piece is crafted with care and sustainability in mind.</p>
-        </div>
-
-        <!-- Service 3: Workshops -->
-        <div class="service-item">
-            <img src="{{ '/assets/images/workshops.png' | relative_url }}" alt="Workshops">
-            <h2>Workshops</h2>
-            <p>Join me for hands-on workshops where you'll learn calligraphy techniques and sustainable art practices. Suitable for all skill levels, these sessions are both educational and fun.</p>
-        </div>
-    </div>
+<section class="hero">
+  <div class="hero-overlay container">
+    <h1>{{ page.hero.title }}</h1>
+    <p>{{ page.hero.subtitle }}</p>
+  </div>
 </section>
+
+<main class="services-content container" aria-labelledby="services-heading">
+  <h2 id="services-heading" class="section-title">My Services</h2>
+  <p class="lead">
+    From bespoke wedding invitations to large-scale murals, I combine traditional calligraphy techniques
+    with modern design to bring your ideas to life on recycled cardboard and other unique canvases.
+  </p>
+
+  <div class="services-grid">
+    <!-- Service Item 1 -->
+    <article class="service-item" aria-labelledby="svc-weddings">
+      <div class="service-icon" aria-hidden="true">
+        <img src="/assets/images/icon-wedding.png" alt="">
+      </div>
+      <h3 id="svc-weddings">Wedding Invitations</h3>
+      <p>
+        Hand-lettered, one-of-a-kind invitations that set the tone for your special day.
+        Choose from classic scripts or modern flourishes, all rendered on eco-friendly cardstock.
+      </p>
+      <a href="/contact/" class="btn btn-secondary">Book Now</a>
+    </article>
+
+    <!-- Service Item 2 -->
+    <article class="service-item" aria-labelledby="svc-corporate">
+      <div class="service-icon" aria-hidden="true">
+        <img src="/assets/images/icon-corporate.png" alt="">
+      </div>
+      <h3 id="svc-corporate">Corporate & Events</h3>
+      <p>
+        Elevate your brand with custom signage, menus, and branded collateral. Perfect for
+        product launches, gala dinners, and client gifts—all on sustainable materials.
+      </p>
+      <a href="/contact/" class="btn btn-secondary">Inquire</a>
+    </article>
+
+    <!-- Service Item 3 -->
+    <article class="service-item" aria-labelledby="svc-commissions">
+      <div class="service-icon" aria-hidden="true">
+        <img src="/assets/images/icon-commission.png" alt="">
+      </div>
+      <h3 id="svc-commissions">Custom Commissions</h3>
+      <p>
+        From custom quotes and personal mantras to large-format murals, let’s collaborate
+        on a piece that’s uniquely yours—perfect for home, office, or gallery display.
+      </p>
+      <a href="/contact/" class="btn btn-secondary">Get Started</a>
+    </article>
+
+    <!-- Service Item 4 -->
+    <article class="service-item" aria-labelledby="svc-workshops">
+      <div class="service-icon" aria-hidden="true">
+        <img src="/assets/images/icon-workshop.png" alt="">
+      </div>
+      <h3 id="svc-workshops">Workshops & Demos</h3>
+      <p>
+        Interactive group lessons in modern calligraphy, brush lettering, and calligraffiti.
+        Ideal for corporate team-builds, birthday parties, or community events.
+      </p>
+      <a href="/contact/" class="btn btn-secondary">Learn More</a>
+    </article>
+  </div>
+
+  <section class="testimonial container" aria-labelledby="svc-testimonial">
+    <h2 id="svc-testimonial" class="section-title">What Clients Say</h2>
+    <blockquote>
+      <p>
+        “Robert’s workshop was an absolute delight—our team left inspired and
+        empowered to try calligraphy on our own. The custom signage at our event
+        was a showstopper!”
+      </p>
+      <footer>— Alex R., Event Coordinator</footer>
+    </blockquote>
+  </section>
+
+  <div class="text-center" style="margin: var(--s-xl) 0;">
+    <a href="/contact/" class="btn btn-primary btn-lg">
+      Ready to Begin? Contact Me
+    </a>
+  </div>
+</main>
