@@ -10,8 +10,7 @@ hero:
   button_link: "/services/"
 ---
 
-<main id="main-content">
-
+<main id="main-content" role="main">
   <!-- About Section -->
   <section class="introduction container" aria-labelledby="about-heading">
     <h2 id="about-heading">About Robert</h2>
@@ -50,8 +49,6 @@ hero:
                 src="{{ work.thumb | relative_url }}"
                 alt="{{ work.alt }}"
                 loading="lazy"
-                width="400"
-                height="500"
                 style="aspect-ratio:4/5;object-fit:cover"
               />
             </a>
@@ -92,7 +89,12 @@ hero:
     <h2 id="social-heading">Connect with Me</h2>
     <ul class="social-icons">
       <li>
-        <a href="https://www.instagram.com/inkedoncardboard/" target="_blank" aria-label="Instagram">
+        <a
+          href="https://www.instagram.com/inkedoncardboard/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow on Instagram"
+        >
           <i class="fab fa-instagram"></i>
         </a>
       </li>
@@ -101,10 +103,10 @@ hero:
   </section>
 
   <!-- Contact CTA -->
-  <section class="contact-cta container">
-    <h2>Ready to Create?</h2>
+  <section class="contact-cta container" aria-labelledby="contact-cta-heading">
+    <h2 id="contact-cta-heading">Ready to Create?</h2>
     <p>Have an idea? Let’s collaborate on a custom piece just for you.</p>
     <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">Contact Me</a>
   </section>
-
 </main>
+
