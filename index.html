@@ -10,52 +10,9 @@ hero:
   button_link: "/services/"
 ---
 
-<header class="site-header">
-  <nav class="nav container" role="navigation" aria-label="Primary navigation">
-    <div class="logo">
-      <a href="{{ '/' | relative_url }}">
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} logo" height="50" />
-      </a>
-    </div>
-    <ul class="nav-links" id="nav-links" aria-label="Main menu">
-      {% for item in site.nav %}
-        <li><a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</header>
-
-<section class="hero">
-  <picture>
-    <!-- responsive sources -->
-    <source media="(max-width: 480px)" srcset="{{ '/assets/images/hero_2-480.jpg' | relative_url }}">
-    <source media="(max-width: 768px)" srcset="{{ '/assets/images/hero_2-768.jpg' | relative_url }}">
-    <img
-      src="{{ '/assets/images/hero_2-1200.jpg' | relative_url }}"
-      alt="Artists painting a large calligraphic mural"
-      class="hero-bg"
-      loading="eager"
-    >
-  </picture>
-
-  <div class="hero-overlay container">
-    <h1>{{ page.hero.title }}</h1>
-    <p>{{ page.hero.subtitle }}</p>
-    <a href="{{ page.hero.button_link | relative_url }}" class="btn btn-primary hero-cta">
-      {{ page.hero.button_text }}
-    </a>
-    <div class="scroll-indicator" aria-hidden="true">
-      <span class="arrow-down"></span>
-    </div>
-  </div>
-</section>
-
 <main id="main-content">
 
-  <!-- About -->
+  <!-- About Section -->
   <section class="introduction container" aria-labelledby="about-heading">
     <h2 id="about-heading">About Robert</h2>
     <div class="intro-grid">
