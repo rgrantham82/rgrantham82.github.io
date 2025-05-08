@@ -57,13 +57,20 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+
+  <!-- Inline fix: ensure content isn’t hidden under header -->
+  <style>
+    main#main-content {
+      margin-top: var(--s-lg);
+    }
+  </style>
 </head>
 <body>
   <!-- Skip to content -->
   <a class="skip-link sr-only" href="#main-content">Skip to main content</a>
 
   <!-- Site Header -->
-  <header role="banner" class="site-header">
+  <header role="banner" class="site-header" style="z-index:1001; background: rgba(75,56,50,0.95);">
     <nav class="nav container" role="navigation" aria-label="Primary navigation">
       <div class="logo">
         <a href="{{ '/' | relative_url }}">
@@ -90,11 +97,11 @@
     </nav>
   </header>
 
-  <!-- Page Hero (only once, above content) -->
+  <!-- Page Hero -->
   {% if page.hero %}
     <section role="region" aria-labelledby="hero-heading" class="hero"
-             style="background-image: url('{{ page.hero.image | relative_url }}'); z-index:1;">
-      <div class="hero-overlay container" style="z-index:2;">
+             style="background-image: url('{{ page.hero.image | relative_url }}'); z-index:1000;">
+      <div class="hero-overlay container" style="z-index:999;">
         <h1 id="hero-heading">{{ page.hero.title }}</h1>
         <p>{{ page.hero.subtitle }}</p>
         {% if page.hero.button_text and page.hero.button_link %}
