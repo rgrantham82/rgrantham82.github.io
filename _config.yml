@@ -36,6 +36,11 @@ exclude:
   - .github
   # Add or remove files/folders you don't want included in the final build
 
+paginate: 5
+paginate_path: "/blog/page:num/"
+plugins:
+  - jekyll-paginate
+  
 # Sitemap settings
 # (jekyll-sitemap will automatically generate /sitemap.xml)
 
