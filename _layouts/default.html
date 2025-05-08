@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}" />
   <meta name="author" content="{{ site.author.name }}" />
   <meta name="robots" content="index, follow" />
@@ -33,11 +33,11 @@
         href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}" />
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
   <meta property="og:description" content="{{ page.description | default: site.description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
-  <meta property="og:image" content="{{ page.hero.image | default: site.og_image | relative_url }}" />
+  <meta property="og:image" content="{{ page.hero.image | default: site.image | relative_url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -51,7 +51,7 @@
     "logo": "{{ '/assets/images/logo.png' | relative_url }}",
     "sameAs": [
       "{{ site.social.instagram }}",
-      "{{ site.social.deviantart }}"
+      "{{ site.social.github }}"
     ]
   }
   </script>
@@ -72,11 +72,13 @@
                alt="{{ site.title }} logo" height="50" />
         </a>
       </div>
+
       <ul class="nav-links" id="nav-links" aria-label="Main menu">
         <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
         <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
         <li><a href="{{ '/portfolio/' | relative_url }}" {% if page.url == '/portfolio/' %}aria-current="page"{% endif %}>Portfolio</a></li>
         <li><a href="{{ '/services/' | relative_url }}" {% if page.url == '/services/' %}aria-current="page"{% endif %}>Services</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" {% if page.url == '/blog/' %}aria-current="page"{% endif %}>Blog</a></li>
         <li><a href="{{ '/contact/' | relative_url }}" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
       </ul>
 
@@ -106,9 +108,7 @@
   {% endif %}
 
   <!-- Main Content -->
-  <main id="main-content" role="main">
-    {{ content }}
-  </main>
+  {{ content }}
 
   <!-- Back to Top Button -->
   <button class="to-top" aria-label="Back to top">↑</button>
@@ -122,7 +122,7 @@
       </div>
       <div class="footer-social">
         <a href="{{ site.social.instagram }}" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="{{ site.social.deviantart }}" aria-label="DeviantArt"><i class="fab fa-deviantart"></i></a>
+        <a href="{{ site.social.github }}" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
       <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </div>
