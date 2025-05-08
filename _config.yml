@@ -1,58 +1,92 @@
-# Site settings
+# Site Settings
 title: "Cardboard Calligraphy by Robert"
 description: "Handcrafted calligraphy on recycled cardboard by Robert, a homeless artist in Austin, TX."
-url: "https://rgrantham82.github.io"  # Replace with custom domain if you set one
-baseurl: ""                          # Keep empty if site is at root (e.g., https://username.github.io/)
-time_zone: "America/Chicago"         # Set your local time zone (helps with post dates, etc.)
-author: "Robert Grantham"           # Used by some Jekyll plugins/themes
+url: "https://rgrantham82.github.io"  
+baseurl: ""  
+time_zone: "America/Chicago"
 
-# Optional Social Handles for SEO & Plugins
-twitter_username: ""                 # e.g., "your_twitter_handle"
-github_username: "rgrantham82"
-instagram_username: "cardboardcalligraphy"
+# Author & Social (used by layouts, structured data, SEO)
+author:
+  name: "Robert Grantham"
+social:
+  instagram: "https://www.instagram.com/inkedoncardboard/"
+  github:    "https://github.com/rgrantham82"
+  # Add other profiles as needed
 
-# Default Social / SEO Image
-# This will be the fallback image for Open Graph & Twitter when a page/post doesn’t define one
+# Default SEO Image
 image: "/assets/images/og-image.jpg"
+
+# Navigation menu (used in _layouts/default.html)
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Portfolio"
+    url: "/portfolio/"
+  - title: "Services"
+    url: "/services/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Contact"
+    url: "/contact/"
 
 # Plugins
 plugins:
-  - jekyll-seo-tag           # Generates better SEO meta tags
-  - jekyll-sitemap           # Generates sitemap.xml at the site root
-  - jekyll-feed              # Generates an Atom/RSS feed at /feed.xml
-  # - jekyll-paginate        # Enable if you have a large blog and want pagination
-  # - jekyll-remote-theme    # Uncomment if using a remote theme
-  # - jekyll-last-modified-at  # Adds a “Last Modified” date to your posts/pages
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  # - jekyll-last-modified-at
 
+# Markdown & Rendering
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 1..3
 
-# Build settings
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - README.md
-  - .github
-  # Add or remove files/folders you don't want included in the final build
-
+# Permalinks & Pagination
+permalink: /:categories/:title/
 paginate: 5
 paginate_path: "/blog/page:num/"
-plugins:
-  - jekyll-paginate
-  
-# Sitemap settings
-# (jekyll-sitemap will automatically generate /sitemap.xml)
 
-# Feed settings
-# (jekyll-feed will automatically generate /feed.xml)
+# Collections (for data‐driven sections)
+collections:
+  artworks:
+    output: false
+  services:
+    output: false
 
-# Pagination settings (uncomment if using jekyll-paginate)
-# paginate: 5
-# paginate_path: "/page:num/"
+# Defaults for new posts/pages
+defaults:
+  # Use excerpt separator for your own structured excerpts
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      excerpt_separator: "<!--more-->"
+  # Ensure posts support pagination front‐matter
+  -
+    scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "blog"
 
-# Deployment or environment variables (optional)
-# Define custom variables or environment-based overrides
-# production_url: "https://rgrantham82.github.io"
+# Exclude from build
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .github
 
-# End of File
+# Build settings
+safe: true
+future: true
+lsi: false
