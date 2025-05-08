@@ -1,12 +1,8 @@
-;
-  margin-block-bottom: var(--s-md);
-}/*========================================
-=            style.css (Revised)         =
-========================================*/
+/*========================================
+=            style.css (Final)           =
+=========================================*/
 
-/*------------------------------------------------
-  1. DESIGN TOKENS
-------------------------------------------------*/
+/* 1. DESIGN TOKENS */
 :root {
   /* Colors */
   --color-bg: #D2B48C;
@@ -40,9 +36,7 @@
   --bp-lg: 1200px;
 }
 
-/*------------------------------------------------
-  2. RESET & BASE
-------------------------------------------------*/
+/* 2. RESET & BASE */
 *,
 *::before,
 *::after {
@@ -84,9 +78,7 @@ textarea {
   color: inherit;
 }
 
-/*------------------------------------------------
-  3. UTILITIES
-------------------------------------------------*/
+/* 3. UTILITIES */
 .u-flex { display: flex; }
 .u-grid { display: grid; }
 .u-gap-sm { gap: var(--s-sm); }
@@ -104,23 +96,19 @@ textarea {
   outline-offset: 2px;
 }
 
-/*------------------------------------------------
-  4. LAYOUT & CONTAINERS
-------------------------------------------------*/
+/* 4. LAYOUT & CONTAINERS */
 .container {
   width: 90%;
   max-width: 1200px;
   margin-inline: auto;
 }
 
-/*------------------------------------------------
-  5. SITE HEADER & NAVIGATION
-------------------------------------------------*/
+/* 5. HEADER & NAV */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  background: var(--color-primary);
+  z-index: 1001;
+  background: rgba(75,56,50,0.95);
 }
 .nav {
   display: flex;
@@ -137,6 +125,7 @@ textarea {
   font-family: var(--font-display);
   font-weight: bold;
   color: #FFF7E6;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 .mobile-toggle {
   display: none;
@@ -166,9 +155,7 @@ textarea {
   .mobile-toggle { display: flex; flex-direction: column; }
 }
 
-/*------------------------------------------------
-  6. HERO
-------------------------------------------------*/
+/* 6. HERO */
 .hero {
   position: relative;
   background-size: cover;
@@ -176,19 +163,19 @@ textarea {
   padding-block: var(--s-xl) var(--s-lg);
   text-align: center;
   color: #FFF7E6;
-  z-index: 1;
+  z-index: 1000;
 }
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
 }
 .hero-overlay {
   position: relative;
   max-width: 80%;
   margin-inline: auto;
-  z-index: 2;
+  z-index: 999;
 }
 .hero-overlay h1 {
   font-family: var(--font-headline);
@@ -204,9 +191,7 @@ textarea {
   margin-top: var(--s-md);
 }
 
-/*------------------------------------------------
-  7. INTRO SECTION
-------------------------------------------------*/
+/* 7. INTRO */
 .intro-grid {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -229,9 +214,7 @@ textarea {
   object-fit: cover;
 }
 
-/*------------------------------------------------
-  8. GALLERY / FEATURED WORKS
-------------------------------------------------*/
+/* 8. GALLERY */
 .gallery {
   display: grid;
   gap: var(--s-sm);
@@ -250,8 +233,7 @@ textarea {
 }
 .gallery-item img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4/5;
   object-fit: cover;
 }
 .badge {
@@ -267,16 +249,13 @@ textarea {
 .badge-ai { background: var(--color-highlight); }
 .badge-sold { background: var(--color-primary); }
 
-/*------------------------------------------------
-  9. BUTTONS / CTAS
-------------------------------------------------*/
+/* 9. BUTTONS */
 .btn {
   display: inline-block;
   font-family: var(--font-display);
   padding: var(--s-sm) var(--s-lg);
   border-radius: var(--r-full);
   transition: background 0.2s;
-  text-decoration: none;
 }
 .btn-primary {
   background: var(--color-primary-light);
@@ -291,9 +270,7 @@ textarea {
   background: var(--color-primary);
 }
 
-/*------------------------------------------------
- 10. TESTIMONIALS
-------------------------------------------------*/
+/* 10. TESTIMONIALS */
 .testimonials {
   background: var(--color-primary);
   color: #FFF7E6;
@@ -312,9 +289,7 @@ textarea {
   color: var(--color-muted);
 }
 
-/*------------------------------------------------
- 11. SOCIAL MEDIA
-------------------------------------------------*/
+/* 11. SOCIAL */
 .social-icons {
   list-style: none;
   display: flex;
@@ -331,17 +306,13 @@ textarea {
   color: var(--color-highlight);
 }
 
-/*------------------------------------------------
- 12. CONTACT CTA
-------------------------------------------------*/
+/* 12. CONTACT CTA */
 .contact-cta {
   text-align: center;
   padding-block: var(--s-xl) var(--s-lg);
 }
 
-/*------------------------------------------------
- 13. BACK TO TOP BUTTON
-------------------------------------------------*/
+/* 13. BACK TO TOP */
 .to-top {
   position: fixed;
   bottom: var(--s-lg);
@@ -363,9 +334,7 @@ textarea {
   opacity: 1;
 }
 
-/*------------------------------------------------
- 14. BLOG LISTING
-------------------------------------------------*/
+/* 14. BLOG LIST */
 .blog {
   padding-block: var(--s-xl) var(--s-lg);
 }
@@ -397,9 +366,7 @@ textarea {
   line-height: 1.5;
 }
 
-/*------------------------------------------------
- 15. CONTACT FORM
-------------------------------------------------*/
+/* 15. FORM */
 .fs-form {
   display: grid;
   gap: var(--s-lg);
@@ -418,4 +385,4 @@ textarea {
   list-style: disc inside;
   color: red;
   margin-block-bottom: var(--s-md);
-  }
+}
