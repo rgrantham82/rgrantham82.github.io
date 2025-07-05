@@ -1,6 +1,6 @@
 /*========================================
 =            style.css (Final)           =
-=========================================*/
+========================================*/
 
 /* 1. DESIGN TOKENS */
 :root {
@@ -34,6 +34,9 @@
   --bp-sm: 480px;
   --bp-md: 768px;
   --bp-lg: 1200px;
+
+  /* Header height (for fixed positioning) */
+  --header-height: 4rem;
 }
 
 /* 2. RESET & BASE */
@@ -44,12 +47,19 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   font-family: var(--font-body);
   line-height: 1.6;
   background: var(--color-bg);
   color: var(--color-text);
 }
+
+body {
+  /* Push all content below the fixed header */
+  padding-top: var(--header-height);
+}
+
 img,
 picture,
 video,
@@ -59,15 +69,18 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
 a {
   color: inherit;
   text-decoration: none;
   transition: opacity 0.3s;
 }
+
 a:hover,
 a:focus {
   opacity: 0.7;
 }
+
 button,
 input,
 select,
@@ -84,13 +97,17 @@ textarea {
 .u-gap-sm { gap: var(--s-sm); }
 .u-gap-md { gap: var(--s-md); }
 .u-center { margin-inline: auto; }
+
 .sr-only {
   position: absolute !important;
   width: 1px; height: 1px;
   padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0);
-  white-space: nowrap; border: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
+
 :focus-visible {
   outline: 3px solid var(--color-highlight);
   outline-offset: 2px;
@@ -105,34 +122,42 @@ textarea {
 
 /* 5. HEADER & NAV */
 .site-header {
-  position: sticky;
+  position: fixed;               /* lock to top */
   top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
   z-index: 1001;
   background: rgba(75,56,50,0.95);
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: var(--s-sm);
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: var(--s-lg);
 }
+
 .nav-links a {
   font-family: var(--font-display);
   font-weight: bold;
   color: #FFF7E6;
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
+
 .mobile-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
 }
+
 .mobile-toggle span {
   display: block;
   width: 25px;
@@ -140,6 +165,7 @@ textarea {
   background: #FFF7E6;
   margin-block: 4px;
 }
+
 @media (max-width: var(--bp-md)) {
   .nav-links {
     display: none;
@@ -151,8 +177,15 @@ textarea {
     background: var(--color-primary);
     padding-block: var(--s-md);
   }
-  .nav-links.active { display: flex; }
-  .mobile-toggle { display: flex; flex-direction: column; }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* 6. HERO */
@@ -165,28 +198,33 @@ textarea {
   color: #FFF7E6;
   z-index: 1000;
 }
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.6);
 }
+
 .hero-overlay {
   position: relative;
   max-width: 80%;
   margin-inline: auto;
   z-index: 999;
 }
+
 .hero-overlay h1 {
   font-family: var(--font-headline);
   font-size: 2.5rem;
   line-height: 1.2;
   margin-block-end: var(--s-md);
 }
+
 .hero-overlay p {
   font-size: 1rem;
   margin-block-end: var(--s-lg);
 }
+
 .hero-overlay .btn {
   margin-top: var(--s-md);
 }
@@ -199,6 +237,7 @@ textarea {
   align-items: center;
   padding-block: var(--s-xl) var(--s-lg);
 }
+
 @media (max-width: var(--bp-md)) {
   .intro-grid {
     grid-template-columns: 1fr;
@@ -206,6 +245,7 @@ textarea {
     padding-block: var(--s-lg);
   }
 }
+
 .profile-image img {
   width: 150px;
   height: 150px;
@@ -217,25 +257,23 @@ textarea {
 /* 8. GALLERY */
 .gallery {
   display: grid;
-  gap: var(--s-sm);
-  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-lg);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-block: var(--s-lg) 0;
 }
-@media (min-width: var(--bp-md)) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
+
 .gallery-item {
   position: relative;
   overflow: hidden;
   border-radius: var(--r-sm);
 }
+
 .gallery-item img {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
 }
+
 .badge {
   position: absolute;
   top: var(--s-sm);
@@ -246,6 +284,7 @@ textarea {
   color: #fff;
   border-radius: var(--r-sm);
 }
+
 .badge-ai { background: var(--color-highlight); }
 .badge-sold { background: var(--color-primary); }
 
@@ -257,14 +296,17 @@ textarea {
   border-radius: var(--r-full);
   transition: background 0.2s;
 }
+
 .btn-primary {
   background: var(--color-primary-light);
   color: #fff;
 }
+
 .btn-secondary {
   background: var(--color-primary);
   color: #fff;
 }
+
 .btn-primary:hover,
 .btn-secondary:hover {
   background: var(--color-primary);
@@ -277,12 +319,14 @@ textarea {
   padding-block: var(--s-xl) var(--s-lg);
   text-align: center;
 }
+
 .testimonial {
   max-width: 700px;
   margin-inline: auto;
   font-style: italic;
   line-height: 1.5;
 }
+
 .testimonial footer {
   margin-top: var(--s-sm);
   font-style: normal;
@@ -298,10 +342,12 @@ textarea {
   margin-block: var(--s-lg);
   padding-left: 0;
 }
+
 .social-icons a {
   font-size: 1.5rem;
   color: var(--color-primary);
 }
+
 .social-icons a:hover {
   color: var(--color-highlight);
 }
@@ -326,10 +372,12 @@ textarea {
   z-index: 1000;
   transition: opacity 0.3s;
 }
+
 .to-top.visible {
   display: block;
   opacity: 0.8;
 }
+
 .to-top:hover {
   opacity: 1;
 }
@@ -338,30 +386,36 @@ textarea {
 .blog {
   padding-block: var(--s-xl) var(--s-lg);
 }
+
 .post-list {
   display: grid;
   gap: var(--s-lg);
 }
+
 @media (min-width: var(--bp-md)) {
   .post-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 .post {
   background: #FFF7E6;
   border: 2px solid var(--color-primary);
   border-radius: var(--r-sm);
   padding: var(--s-lg);
 }
+
 .post h2 {
   margin-block-end: var(--s-sm);
 }
+
 .post-date {
   display: block;
   font-size: 0.9rem;
   color: var(--color-muted);
   margin-block-end: var(--s-sm);
 }
+
 .excerpt {
   line-height: 1.5;
 }
@@ -372,15 +426,18 @@ textarea {
   gap: var(--s-lg);
   padding-block: var(--s-lg);
 }
+
 .fs-field {
   display: flex;
   flex-direction: column;
   gap: var(--s-sm);
 }
+
 .fs-label {
   font-family: var(--font-display);
   font-weight: 600;
 }
+
 .form-errors {
   list-style: disc inside;
   color: red;
