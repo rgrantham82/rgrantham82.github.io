@@ -1,92 +1,45 @@
-# Site Settings
-title: "Cardboard Calligraphy by Robert"
-description: "Handcrafted calligraphy on recycled cardboard by Robert, a homeless artist in Austin, TX."
-url: "https://rgrantham82.github.io"  
-baseurl: ""  
-time_zone: "America/Chicago"
+# _config.yml — Cardboard Calligraphy by Robert
 
-# Author & Social (used by layouts, structured data, SEO)
-author:
-  name: "Robert Grantham"
-social:
-  instagram: "https://www.instagram.com/inkedoncardboard/"
-  github:    "https://github.com/rgrantham82"
-  # Add other profiles as needed
+title: "Cardboard Calligraphy"
+tagline: "Hope, reclaimed — Robert Grantham"
+author: "Robert Grantham"
+description: "Hand-lettered art on reclaimed cardboard. Commissions, murals, prints. Based in Austin, TX."
+url: "https://rgrantham82.github.io"
+baseurl: ""   # leave empty if serving from root of GitHub Pages
 
-# Default SEO Image
-image: "/assets/images/og-image.jpg"
+# Social links
+instagram_url: "https://instagram.com/InkedOnCardboard"
+linkedin_url: "https://linkedin.com/in/robertgrantham82"
+email: "robertgrantham40@gmail.com"
+github_username: "rgrantham82"
+repository: "rgrantham82.github.io"
 
-# Navigation menu (used in _layouts/default.html)
-nav:
-  - title: "Home"
-    url: "/"
-  - title: "About"
-    url: "/about/"
-  - title: "Portfolio"
-    url: "/portfolio/"
-  - title: "Services"
-    url: "/services/"
-  - title: "Blog"
-    url: "/blog/"
-  - title: "Contact"
-    url: "/contact/"
+# Favicon (place your file at /assets/favicon.ico)
+favicon: "/assets/favicon.ico"
 
-# Plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
-  # - jekyll-last-modified-at
-
-# Markdown & Rendering
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  toc_levels: 1..3
-
-# Permalinks & Pagination
-permalink: /:categories/:title/
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-# Collections (for data‐driven sections)
-collections:
-  artworks:
-    output: false
-  services:
-    output: false
-
-# Defaults for new posts/pages
+# Defaults so you don’t need to specify layout on every page
 defaults:
-  # Use excerpt separator for your own structured excerpts
   -
     scope:
-      path: ""
-      type: "posts"
+      path: ""       # all files
+      type: "pages"
     values:
-      layout: "post"
-      excerpt_separator: "<!--more-->"
-  # Ensure posts support pagination front‐matter
-  -
-    scope:
-      path: ""
-      type: "blog"
-    values:
-      layout: "blog"
+      layout: "default"
 
-# Exclude from build
+# Files and directories to exclude from build
 exclude:
+  - README.md
   - node_modules
-  - vendor
+  - .gitignore
   - Gemfile
   - Gemfile.lock
-  - README.md
-  - .github
 
-# Build settings
-safe: true
-future: true
-lsi: false
+# Markdown & theme (optional — comment out if you’re not using a theme)
+markdown: kramdown
+theme: minima
+
+# Plugins (uncomment/add if you want extras)
+# plugins:
+#   - jekyll-seo-tag
+#   - jekyll-sitemap
+#   - jekyll-feed
