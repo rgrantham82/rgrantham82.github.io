@@ -1,28 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cardboard Calligraphy — Robert Grantham</title>
-  <meta name="description" content="Cardboard Calligraphy — hand-lettered artwork on reclaimed cardboard. Commissions, murals, prints. Based in Austin, TX.">
-  <meta name="author" content="Robert Grantham">
+  <meta name="description" content="Cardboard Calligraphy — hand-lettered artwork on reclaimed cardboard. Commissions, murals, prints. Based in Austin, TX." />
+  <meta name="author" content="Robert Grantham" />
+  <link rel="icon" href="/assets/favicon.ico" />
 
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="icon" href="/assets/favicon.ico">
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cardboard Calligraphy — Robert Grantham">
-  <meta property="og:description" content="Hand-lettered art on reclaimed cardboard — commissions open.">
-  <meta property="og:image" content="/assets/hero.jpg">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cardboard Calligraphy — Robert Grantham" />
+  <meta property="og:description" content="Hand-lettered art on reclaimed cardboard — commissions open." />
+  <meta property="og:image" content="/assets/hero.jpg" />
+  <meta property="og:type" content="website" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <a href="/" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px">
-            <div class="logo">RG</div>
+    <div class="container" role="banner">
+      <nav aria-label="Main navigation" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div class="brand" style="display:flex;align-items:center;gap:12px">
+          <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit" aria-label="Cardboard Calligraphy home">
+            <div class="logo" aria-hidden="true">RG</div>
             <div>
               <div class="site-title">Cardboard Calligraphy</div>
               <div class="site-tag">Hope, reclaimed — Robert Grantham</div>
@@ -30,16 +31,18 @@
           </a>
         </div>
 
-        <div class="nav-links" role="navigation" aria-label="Primary">
-          <a href="/">Home</a>
-          <a href="/portfolio">Portfolio</a>
-          <a href="/commissions.html">Commissions</a>
-          <a href="/about">About</a>
-          <a href="/contact.html" class="no-wrap">Contact</a>
-        </div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <div class="nav-links" role="navigation" aria-label="Primary links">
+            <a href="/">Home</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/commissions.html">Commissions</a>
+            <a href="/about">About</a>
+            <a href="/contact.html" class="no-wrap">Contact</a>
+          </div>
 
-        <div class="social-links">
-          <a href="https://instagram.com/inkedoncardboard" target="_blank">@InkedOnCardboard</a>
+          <div class="social-links" aria-hidden="false" style="margin-left:12px">
+            <a href="https://instagram.com/inkedoncardboard" target="_blank" rel="noopener noreferrer">@InkedOnCardboard</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -47,55 +50,55 @@
 
   <main class="container" role="main">
     <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title" style="margin-top:20px">
       <div>
         <h1 id="hero-title">Hand-lettered art on reclaimed cardboard — commissions open</h1>
         <p class="muted">Small-format originals, murals, and practical data gigs. Affordable hand-lettered pieces made from reclaimed materials. Based in Austin, TX.</p>
 
-        <div class="cta">
+        <div class="cta" aria-hidden="false" style="margin-top:12px">
           <a class="btn" href="/commissions.html">Commission Menu</a>
           <a class="btn secondary" href="/portfolio">See Portfolio</a>
         </div>
       </div>
 
       <div style="max-width:420px">
-        <img src="/assets/hero.jpg" alt="Sample cardboard calligraphy by Robert" style="width:100%;border-radius:10px;object-fit:cover">
+        <img src="/assets/hero.jpg" alt="Close-up of hand-lettered calligraphy on reclaimed cardboard by Robert Grantham" style="width:100%;border-radius:10px;object-fit:cover" />
       </div>
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" style="margin-top:28px">
+    <section id="portfolio" style="margin-top:36px">
       <h2>Selected work</h2>
-      <p class="muted">A rotating selection — swap the thumbnails in /assets when you have higher-resolution photos.</p>
+      <p class="muted">A rotating selection — swap the thumbnails in <code>/assets</code> when you have higher-resolution photos.</p>
 
       <div class="grid" style="margin-top:12px">
-        <div class="card">
-          <img src="/assets/thumb1.jpg" alt="Cardboard piece: Hope" style="width:100%;height:160px;object-fit:cover;border-radius:6px">
-          <div style="margin-top:10px;font-weight:700">Hope (8×10)</div>
+        <article class="card" aria-labelledby="work-1">
+          <img src="/assets/thumb1.jpg" alt="Cardboard piece titled 'Hope' — hand-lettered on reclaimed cardboard" style="width:100%;height:160px;object-fit:cover;border-radius:6px" />
+          <div id="work-1" style="margin-top:10px;font-weight:700">Hope (8×10)</div>
           <div class="muted">Ink on reclaimed cardboard</div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="/assets/thumb2.jpg" alt="Calligraffiti piece" style="width:100%;height:160px;object-fit:cover;border-radius:6px">
-          <div style="margin-top:10px;font-weight:700">Fraktur Study (11×14)</div>
+        <article class="card" aria-labelledby="work-2">
+          <img src="/assets/thumb2.jpg" alt="Calligraffiti study — hand-lettered Fraktur-inspired piece" style="width:100%;height:160px;object-fit:cover;border-radius:6px" />
+          <div id="work-2" style="margin-top:10px;font-weight:700">Fraktur Study (11×14)</div>
           <div class="muted">Gessoed panel, Posca highlights</div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="/assets/thumb3.jpg" alt="UT themed piece" style="width:100%;height:160px;object-fit:cover;border-radius:6px">
-          <div style="margin-top:10px;font-weight:700">UT Hope (Series)</div>
+        <article class="card" aria-labelledby="work-3">
+          <img src="/assets/thumb3.jpg" alt="UT-themed cardboard calligraphy piece" style="width:100%;height:160px;object-fit:cover;border-radius:6px" />
+          <div id="work-3" style="margin-top:10px;font-weight:700">UT Hope (Series)</div>
           <div class="muted">Limited run — campus themes</div>
-        </div>
+        </article>
       </div>
     </section>
 
     <!-- COMMISSIONS TEASER -->
-    <section id="commissions" style="margin-top:28px">
+    <section id="commissions" style="margin-top:36px">
       <h2>Commissions</h2>
       <p class="muted">Short, honest pricing so you can buy art instead of wait for a quote. Turnaround begins when deposit and mockup approval are received.</p>
 
       <div class="grid" style="margin-top:12px">
-        <div class="card">
+        <div class="card" role="region" aria-label="Pocket Praise package">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div><strong>Pocket Praise</strong><div class="muted">Small impulse piece</div></div>
             <div class="price">$45</div>
@@ -103,20 +106,20 @@
           <p class="small-print">5×7–6×8 reclaimed cardboard • up to 10 words • ready 3–7 days • full payment up front</p>
         </div>
 
-        <div class="card">
+        <div class="card" role="region" aria-label="Cornerstone package">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div><strong>Cornerstone</strong><div class="muted">8×10 studio piece</div></div>
             <div class="price">$150</div>
           </div>
-          <p class="small-print">8×10 panel or cardboard • up to 20 words • 7–14 days • 50% deposit • frame +$40</p>
+          <p class="small-print">8×10 panel or stabilized cardboard • up to 20 words • 7–14 days • 50% deposit • optional frame +$40</p>
         </div>
 
-        <div class="card">
+        <div class="card" role="region" aria-label="Statement package">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div><strong>Statement</strong><div class="muted">Large collector piece</div></div>
             <div class="price">$400</div>
           </div>
-          <p class="small-print">11×14 or 16×20 • multi-layer lettering • 2–4 weeks • 50% deposit • rush +30%</p>
+          <p class="small-print">11×14 or 16×20 • multi-layer lettering & accents • 2–4 weeks • 50% deposit • rush +30%</p>
         </div>
       </div>
 
@@ -124,19 +127,19 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" style="margin-top:28px">
+    <section id="about" style="margin-top:36px">
       <h2>About</h2>
       <p class="muted">Robert Grantham — artist, data analyst, and calligrapher. I make hand-lettered work from reclaimed materials and also offer small-data gigs for local businesses (cleanups, visualizations). Interested in collaborations, murals, or local shows? Let’s talk.</p>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" style="margin-top:24px">
+    <section id="contact" style="margin-top:28px">
       <h2>Contact</h2>
       <p class="muted">Best ways to reach me:</p>
       <ul class="muted">
         <li>Email: <a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a></li>
         <li>Phone / text: <a href="tel:+15122003563">(512) 200-3563</a></li>
-        <li>Instagram: <a href="https://instagram.com/inkedoncardboard" target="_blank">@InkedOnCardboard</a></li>
+        <li>Instagram: <a href="https://instagram.com/inkedoncardboard" target="_blank" rel="noopener noreferrer">@InkedOnCardboard</a></li>
       </ul>
       <p class="small-print">Local pickup in Austin. Shipping at cost + $10 handling. For commissions, 50% deposit required on Medium+ projects.</p>
     </section>
@@ -145,7 +148,7 @@
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
       <div class="muted">© <span id="yr"></span> Robert Grantham — Cardboard Calligraphy</div>
-      <div class="muted">Built with ♡ • <a href="https://github.com/rgrantham82/rgrantham82.github.io" target="_blank">Source</a></div>
+      <div class="muted">Built with ♡ • <a href="https://github.com/rgrantham82/rgrantham82.github.io" target="_blank" rel="noopener noreferrer">Source</a></div>
     </div>
   </footer>
 
