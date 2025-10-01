@@ -1,122 +1,85 @@
 <!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title | default: "Cardboard Calligraphy" }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | default: 'Hand-lettered art and commissions by Robert Grantham.' }}">
-  <meta name="author" content="{{ site.author | default: 'Robert Grantham' }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  <title>
+    {% if page.title %}{{ page.title }} — {{ site.title | default: "Robert Grantham" }}{% else %}{{ site.title | default: "Robert Grantham" }}{% endif %}
+  </title><meta name="description" content="{% if page.description %}{{ page.description | strip }}{% else %}{{ site.description | default: "Austin-based artist blending calligraffiti, classical calligraphy, and gestural abstraction — letters becoming rooms you can stand in." }}{% endif %}" /> <meta name="author" content="{{ site.author | default: "Robert Grantham" }}" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ page.og_title | default: page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.og_description | default: site.description }}">
-  <meta property="og:image" content="{{ page.og_image | default: site.og_image | default: '/assets/hero.jpg' }}">
-  <meta property="og:type" content="website">
+{%- assign base = site.baseurl | default: "" -%} {%- assign origin = site.url | default: "" -%} {%- assign canonical_path = page.url | replace: 'index.html','' -%}
 
-  {% if site.favicon %}
-    <link rel="icon" href="{{ site.favicon | relative_url }}">
-  {% endif %}
+  <link rel="canonical" href="{{ origin }}{{ base }}{{ canonical_path }}" />  <!-- Open Graph --><meta property="og:title" content="{% if page.og_title %}{{ page.og_title | strip }}{% elsif page.title %}{{ page.title }} — {{ site.title | default: "Robert Grantham" }}{% else %}{{ site.title | default: "Robert Grantham" }}{% endif %}" /> <meta property="og:description" content="{% if page.og_description %}{{ page.og_description | strip }}{% elsif page.description %}{{ page.description | strip }}{% else %}{{ site.description | default: "Calligraffiti • Calligraphy • Gestural Abstraction." }}{% endif %}" /> <meta property="og:type" content="website" /> <meta property="og:url" content="{{ origin }}{{ base }}{{ canonical_path }}" /> {% if page.image or site.image %} <meta property="og:image" content="{{ page.image | default: site.image }}" /> {% endif %}
 
-  <!-- Inline styles (keeps file drop-in ready; move to assets/css/style.css if preferred) -->
-  <style>
+  <!-- Twitter -->  <meta name="twitter:card" content="{% if page.image or site.image %}summary_large_image{% else %}summary{% endif %}" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {{ site.title | default: "Robert Grantham" }}{% else %}{{ site.title | default: "Robert Grantham" }}{% endif %}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip }}{% else %}{{ site.description | default: "Calligraphy that broke curfew. Copperplate + Blackletter + street-born abstraction." }}{% endif %}" />  <!-- Styles: site-wide tokens + essentials (kept minimal so pages can add their own blocks) -->  <style>
     :root{
-      --accent:#111827;
-      --muted:#6b7280;
-      --bg:#ffffff;
-      --card-bg:#ffffff;
-      --border:#eee;
-      --radius:10px;
-      --container:1000px;
+      --bg:#0f0f10; --ink:#eaeaea; --muted:#9aa0a6; --accent:#ff7a00; --card:#17181a; --border:#2a2b2e;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      color:var(--accent);
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{ max-width:1200px; margin:0 auto; padding:1rem; }
+    .skip{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip:focus{ position:static; width:auto; height:auto; background:var(--card); border:1px solid var(--border); padding:.4rem .6rem; border-radius:.5rem; }
+
+    header.site{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.5rem 0 1rem; }
+    .brand{ display:flex; align-items:center; gap:.6rem; }
+    .logo{ width:36px; height:36px; border-radius:.6rem; border:1px solid var(--border); background:linear-gradient(135deg,#1b1c1f,#101114); display:grid; place-items:center; font-weight:800; }
+    .logo span{ letter-spacing:.02em; }
+    .tag{ display:inline-block; padding:.15rem .55rem; border:1px solid var(--border); border-radius:999px; color:var(--muted); }
+    nav a{ margin-left:1rem; }
+
+    footer.site{ color:var(--muted); border-top:1px solid var(--border); padding:1rem 0; margin-top:1.25rem; font-size:.95rem; }
+
+    /* generic helpers */
+    .btn{ display:inline-block; padding:.65rem .9rem; border-radius:.8rem; border:1px solid var(--border); background:var(--card); color:var(--ink); font-weight:700; }
+    .btn:hover{ border-color:var(--accent); }
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:1rem; }
+  </style>  <!-- Per-page extra head (e.g., page-specific CSS/JS) -->{% if page.extra_head %}{{ page.extra_head }}{% endif %}
+
+  <!-- Structured Data: WebSite with search to portfolio -->  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"{{ site.title | default: "Robert Grantham" }}",
+    "url":"{{ origin }}{{ base }}/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"{{ origin }}{{ base }}/portfolio.html?q={search_term_string}",
+      "query-input":"required name=search_term_string"
     }
-    a{color:inherit}
-    .container{max-width:var(--container);margin:0 auto;padding:28px}
-    header{background:#fafafa;border-bottom:1px solid var(--border)}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{
-      width:56px;height:56px;border-radius:8px;background:#111;color:#fff;
-      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;
-      flex-shrink:0;
-    }
-    .site-title{font-weight:700}
-    .site-tag{color:var(--muted);font-size:0.95rem}
-    .nav-links{display:flex;gap:14px;align-items:center}
-    .nav-links a{color:var(--accent);text-decoration:none;padding:8px 10px;border-radius:8px}
-    .nav-links a:hover{background:#f3f4f6}
-    main{padding:28px 0}
-    footer{padding:26px;border-top:1px solid var(--border);background:#fafafa}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:16px}
-    .card{background:var(--card-bg);border:1px solid var(--border);padding:12px;border-radius:8px}
-    .hero{display:flex;flex-direction:column;gap:18px;padding:26px 0}
-    .hero h1{margin:0;font-size:clamp(1.4rem,2.6vw,2.4rem)}
-    .hero p{margin:0;color:var(--muted)}
-    .cta{display:flex;gap:12px;margin-top:12px}
-    .btn{padding:10px 16px;border-radius:10px;border:1px solid #111;background:#111;color:#fff;text-decoration:none;display:inline-block}
-    .btn.secondary{background:transparent;color:var(--accent);border-color:#ddd}
-    .price{font-weight:700}
-    .small-print{font-size:0.95rem;color:var(--muted)}
-    @media(min-width:860px){ .hero{flex-direction:row;align-items:center;justify-content:space-between} .nav-links a{padding:10px 12px} }
-    @media(max-width:600px){ .nav-links{display:none} .mobile-nav{display:block} }
-    .social-links{display:flex;gap:10px;align-items:center}
-    .social-links a{color:var(--muted);text-decoration:none}
-    .no-wrap{white-space:nowrap}
-  </style>
-</head>
+  }
+  </script></head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <a href="{{ '/' | relative_url }}" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px">
-            <div class="logo">{{ site.logo_text | default: "RG" }}</div>
-            <div>
-              <div class="site-title">{{ site.title | default: "Cardboard Calligraphy" }}</div>
-              <div class="site-tag">{{ site.tagline | default: "Hope, reclaimed — Robert Grantham" }}</div>
-            </div>
-          </a>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site" role="banner">
+      <div class="brand">
+        <a class="logo" href="{{ base }}/" aria-label="Home"><span>RG</span></a>
+        <div>
+          <strong>{{ site.title | default: "Robert Grantham" }}</strong><br />
+          <span class="tag">Austin, Texas</span>
         </div>
-
-        <div class="nav-links" role="navigation" aria-label="Primary">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/portfolio' | relative_url }}">Portfolio</a>
-          <a href="{{ '/commissions.html' | relative_url }}">Commissions</a>
-          <a href="{{ '/about' | relative_url }}">About</a>
-          <a href="{{ '/contact.html' | relative_url }}" class="no-wrap">Contact</a>
-        </div>
-
-        <div class="social-links">
-          {% if site.instagram_url %}<a href="{{ site.instagram_url }}" target="_blank" title="Instagram">@InkedOnCardboard</a>{% else %}<a href="https://instagram.com/inkedoncardboard" target="_blank">@InkedOnCardboard</a>{% endif %}
-        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="{{ base }}/portfolio.html">Portfolio</a>
+        <a href="{{ base }}/about.html">About</a>
+        <a href="mailto:robertgrantham40@gmail.com?subject=Commission%20Inquiry">Commissions</a>
+        <a href="{{ base }}/data-analytics-portfolio">Data</a>
       </nav>
-    </div>
-  </header>
+    </header><main id="main" role="main">
+  {{ content }}
+</main>
 
-  <main class="container" role="main">
-    {{ content }}
-  </main>
+<footer class="site" role="contentinfo">
+  <p>© <span id="yr"></span> {{ site.author | default: "Robert Grantham" }} • Austin, Texas • <a href="mailto:robertgrantham40@gmail.com">Email</a> • <a href="{{ base }}/portfolio.html">Portfolio</a> • <a href="{{ base }}/about.html">About</a></p>
+</footer>
 
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div class="muted">© {{ 'now' | date: '%Y' }} {{ site.author | default: 'Robert Grantham' }} • Cardboard Calligraphy</div>
-      <div class="muted">Built with ♡ • <a href="https://github.com/{{ site.github_username | default: 'rgrantham82' }}/{{ site.repository | default: 'rgrantham82.github.io' }}" target="_blank">Source</a></div>
-    </div>
-  </footer>
+  </div>  <!-- Per-page scripts -->{% if page.scripts %}{{ page.scripts }}{% endif %}
 
-  <!-- Optional analytics snippet -->
-  {% if site.analytics_script %}
-    {{ site.analytics_script | raw }}
-  {% endif %}
-</body>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script></body>
 </html>
