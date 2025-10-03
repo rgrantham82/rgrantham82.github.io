@@ -1,76 +1,15 @@
 ---
 layout: default
 title: Contact
-permalink: /contact/
-hero:
-  image: '/assets/images/banner.png'
-  title: "Get in Touch"
-  subtitle: "I'd love to hear from you!"
 ---
-
-<section class="contact-page container" aria-labelledby="contact-heading">
-  <h2 id="contact-heading">{{ page.hero.title }}</h2>
-  <p class="lead">{{ page.hero.subtitle }}</p>
-
-  <p>
-    Whether you're interested in my artwork, want to commission a piece, or have any questions,
-    please reach out using the form below.
-  </p>
-
-  <form action="https://formspree.io/f/mbjnwpgb"
-        method="POST"
-        class="fs-form"
-        target="_top"
-        novalidate
-        aria-describedby="form-response">
-    <!-- Honeypot for spam prevention -->
-    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-    <fieldset>
-      <legend class="sr-only">Contact Form</legend>
-
-      <div class="fs-field">
-        <label class="fs-label" for="name">Your Name</label>
-        <input class="fs-input"
-               id="name"
-               name="name"
-               type="text"
-               required
-               aria-required="true"
-               placeholder="e.g. Jane Doe" />
-      </div>
-
-      <div class="fs-field">
-        <label class="fs-label" for="email">Email</label>
-        <input class="fs-input"
-               id="email"
-               name="email"
-               type="email"
-               required
-               aria-required="true"
-               placeholder="you@example.com" />
-        <p class="fs-description">
-          This will help me respond to your query via email.
-        </p>
-      </div>
-
-      <div class="fs-field">
-        <label class="fs-label" for="message">Message</label>
-        <textarea class="fs-textarea"
-                  id="message"
-                  name="message"
-                  rows="6"
-                  required
-                  aria-required="true"
-                  placeholder="What would you like to discuss?"></textarea>
-      </div>
-
-      <div class="fs-button-group">
-        <button class="fs-button btn btn-primary" type="submit">Submit</button>
-      </div>
-    </fieldset>
-
-    <!-- Success/Error feedback -->
-    <div id="form-response" class="form-response" aria-live="polite"></div>
-  </form>
-</section>
+<article class="prose">
+  <h1>Contact</h1>
+  <p>For inquiries, commissions, or to purchase available works, reach out directly.</p>
+  <table class="table">
+    <tr><th>Email</th><td><a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a></td></tr>
+    <tr><th>Phone</th><td>512‑200‑3563</td></tr>
+    <tr><th>LinkedIn</th><td><a href="https://linkedin.com/in/robertgrantham82" target="_blank" rel="noopener">linkedin.com/in/robertgrantham82</a></td></tr>
+    <tr><th>Cash App</th><td><a href="https://cash.app/$bobby198237" target="_blank" rel="noopener">$bobby198237</a></td></tr>
+    <tr><th>Venmo</th><td><a href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">@robert‑grantham‑6</a></td></tr>
+  </table>
+</article>
