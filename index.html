@@ -1,169 +1,95 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Robert Grantham — Calligraffiti, Calligraphy, Gestural Abstraction</title>
-  <meta name="description" content="Austin-based artist Robert Grantham merges Copperplate & Blackletter with street-born gestural abstraction. Letters becoming rooms you can stand in." />
-  <link rel="canonical" href="https://rgrantham82.github.io/" />
-  <link rel="preload" href="/images/portfolio/resilience-magnolia-01.jpg" as="image" />
-  <link rel="prefetch" href="/portfolio.html" />  <!-- Open Graph -->  <meta property="og:title" content="Robert Grantham — Calligraffiti & Calligraphy" />
-  <meta property="og:description" content="Letters that broke curfew: Copperplate + Blackletter + street-bred abstraction. Austin, Texas." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://rgrantham82.github.io/" />  <style>
-    :root{ --bg:#0f0f10; --ink:#eaeaea; --muted:#9aa0a6; --accent:#ff7a00; --card:#17181a; --border:#2a2b2e; }
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-    a{ color:var(--accent); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    /* Layout */
-    .wrap{ max-width:1200px; margin:0 auto; padding:1rem; }
-    header.site{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.5rem 0 1rem; }
-    .brand{ display:flex; align-items:center; gap:.6rem; }
-    .logo{ width:36px; height:36px; border-radius:.6rem; border:1px solid var(--border); background:linear-gradient(135deg,#1b1c1f,#101114); display:grid; place-items:center; font-weight:800; }
-    .logo span{ letter-spacing:.02em; }
-    nav a{ margin-left:1rem; }
-
-    .hero{ display:grid; grid-template-columns:1.2fr; gap:1rem; padding:1.25rem 0 1.5rem; }
-    .tag{ display:inline-block; padding:.15rem .55rem; border:1px solid var(--border); border-radius:999px; color:var(--muted); }
-    h1{ font-size: clamp(2.2rem, 5vw, 3.5rem); line-height:1.08; margin:.35rem 0 .25rem; }
-    .subtitle{ color:var(--muted); margin:0; font-size:1.1rem; }
-    .cta{ display:flex; flex-wrap:wrap; gap:.75rem; margin-top:.85rem; }
-    .btn{ display:inline-block; padding:.7rem 1rem; border-radius:.8rem; border:1px solid var(--border); background:var(--card); color:var(--ink); font-weight:700; }
-    .btn:hover{ border-color:var(--accent); }
-
-    .section{ margin:1.25rem 0 1.75rem; }
-    .section h2{ font-size:1.35rem; margin:.25rem 0 .75rem; }
-    .cards{ display:grid; gap:1rem; grid-template-columns:repeat(1,minmax(0,1fr)); }
-    @media(min-width:700px){ .cards{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media(min-width:1024px){ .cards{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
-
-    .card{ position:relative; background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
-    .thumb{ aspect-ratio:4/3; background:#101113; overflow:hidden; }
-    .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
-    .status{ position:absolute; top:.75rem; left:.75rem; padding:.25rem .5rem; border-radius:.5rem; font-size:.8rem; font-weight:700; border:1px solid var(--border); background:#131417; color:var(--muted); }
-    .meta{ padding:.85rem .9rem; border-top:1px solid var(--border); }
-    .title{ font-weight:800; margin:0 0 .25rem; font-size:1.05rem; }
-    .sub{ color:var(--muted); font-size:.95rem; margin:0 0 .35rem; }
-    .price{ font-weight:700; }
-    .actions{ display:flex; gap:.5rem; padding: .5rem .9rem 1rem; }
-
-    .note{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:1rem; }
-    .note h3{ margin:.25rem 0 .5rem; font-size:1.1rem; }
-
-    footer{ color:var(--muted); border-top:1px solid var(--border); padding:1rem 0; margin-top:1.25rem; font-size:.95rem; }
-    .pay{ display:flex; gap:.5rem; flex-wrap:wrap; }
-    .kbd{ border:1px solid var(--border); padding:.15rem .35rem; border-radius:.35rem; background:#121315; }
-
-    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-  </style>  <!-- Structured Data: WebSite -->  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Robert Grantham — Portfolio",
-    "url": "https://rgrantham82.github.io/",
-    "potentialAction": {
-      "@type":"SearchAction",
-      "target":"https://rgrantham82.github.io/portfolio.html?q={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
-  }
-  </script></head>
-<body>
-  <div class="wrap">
-    <header class="site" role="banner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"><span>RG</span></div>
-        <div>
-          <strong>Robert Grantham</strong><br />
-          <span class="tag">Austin, Texas</span>
-        </div>
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <div>
+    <span class="tag">Expressive Calligraphy • Painting • Research</span>
+    <h1>Hope, written by hand. Resilience, painted in layers.</h1>
+    <p>
+      I’m Robert Grantham—an Austin‑based modern calligrapher and painter blending
+      Copperplate & Blackletter with contemporary abstraction. I also build data‑driven
+      tools and write about art, history, and community.
+    </p>
+    <div class="cta">
+      <a class="button" href="/portfolio.html">View Portfolio</a>
+      <a class="button ghost" href="/about.html">Read About the Work</a>
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <img src="/assets/images/edge-of-night-01.jpg" alt="Edge of Night artwork" />
+      <div class="pad">
+        <div class="meta">Recent work • 12×16 acrylic on canvas</div>
+        <h3>Edge of Night</h3>
+        <div class="mt-1"><span class="badge">Series</span> Edge of Night</div>
       </div>
-      <nav aria-label="Primary">
-        <a href="/portfolio.html">Portfolio</a>
-        <a href="/about.html">About</a>
-        <a href="mailto:robertgrantham40@gmail.com?subject=Commission%20Inquiry">Commissions</a>
-        <a href="/data-analytics-portfolio">Data</a>
-      </nav>
-    </header><section class="hero" aria-labelledby="h1">
-  <h1 id="h1">Calligraffiti • Calligraphy • Gestural Abstraction</h1>
-  <p class="subtitle">Letters becoming rooms you can stand in. Copperplate and Blackletter meet the street; grids meet drips; hope shows up anyway.</p>
-  <div class="cta" role="group" aria-label="Primary actions">
-    <a class="btn" href="/portfolio.html">View portfolio</a>
-    <a class="btn" href="/about.html">About the work</a>
-    <a class="btn" href="mailto:robertgrantham40@gmail.com?subject=Commission%20Inquiry">Commission a piece</a>
+    </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="feat">
-  <h2 id="feat">Featured Works</h2>
-  <div id="cards" class="cards" aria-live="polite"></div>
-  <p style="margin-top:.75rem"><a href="/portfolio.html">See full portfolio →</a></p>
-</section>
+<div class="section-title">
+  <h2>Available Works</h2>
+  <a class="button ghost" href="/portfolio.html">See all</a>
+</div>
 
-<section class="section" aria-labelledby="news">
-  <h2 id="news">Next Show</h2>
-  <div class="note">
-    <h3>Pancakes & Booze Art Show — Far Out Lounge</h3>
-    <p><time datetime="2025-10-11">Saturday, Oct 11, 2025</time> • Austin, TX. Come by to see new works from <em>Resilience Magnolia</em>, <em>In Love</em>, and <em>Edge of Night</em>. Say hi, bring a friend, and test the theory that art tastes better with pancakes.</p>
-    <p class="pay">For purchases at the show: <span>CashApp <span class="kbd">$bobby198237</span></span> · <span>Venmo <span class="kbd">@robert-grantham-6</span></span></p>
-  </div>
-</section>
+<div class="grid auto-3" id="available-grid"></div>
 
-<section class="section" aria-labelledby="contact">
-  <h2 id="contact">Contact & Commissions</h2>
-  <div class="note">
-    <p>Email <a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a> with size, budget, deadline, and any words/phrases you want woven into the piece. I’ll reply with a short proposal and timeline.</p>
-    <p class="pay">Quick pay: <a href="https://cash.app/$bobby198237">CashApp $bobby198237</a> · <a href="https://venmo.com/u/robert-grantham-6">Venmo @robert-grantham-6</a></p>
-  </div>
-</section>
+<script>
+const WORKS = [
+  {
+    id: "eon-001",
+    title: "Edge of Night",
+    series: "Edge of Night",
+    year: 2025,
+    size: "12×16 in",
+    medium: "Acrylic on canvas (SoHo Urban Artist)",
+    price: 335,
+    student_price: 300,
+    status: "available",
+    src: "/assets/images/edge-of-night-01.jpg",
+    alt: "High-contrast ground with copperplate fragments dissolving into night."
+  },
+  {
+    id: "love-008",
+    title: "In Love",
+    series: "In Love",
+    year: 2025,
+    size: "8×10 in",
+    medium: "Posca markers on Canson oil & acrylic paper",
+    price: 140,
+    student_price: 120,
+    status: "available",
+    src: "/assets/images/in-love-01.jpg",
+    alt: "Gestural calligraphy forming the words ‘in love’."
+  },
+  {
+    id: "res-010",
+    title: "Resilience",
+    series: "Resilience Magnolia",
+    year: 2025,
+    size: "8×10 in",
+    medium: "Posca on canvas",
+    price: 140,
+    student_price: 120,
+    status: "available",
+    src: "/assets/images/resilience-01.jpg",
+    alt: "Magnolia‑inspired calligraphy over layered ground."
+  }
+];
 
-<footer role="contentinfo">
-  <p>© <span id="yr"></span> Robert Grantham • Austin, Texas • <a href="mailto:robertgrantham40@gmail.com">Email</a> • <a href="/portfolio.html">Portfolio</a> • <a href="/about.html">About</a></p>
-</footer>
+function card(w){
+  return `
+    <article class="card">
+      <img loading="lazy" src="${w.src}" alt="${w.alt}"/>
+      <div class="pad">
+        <div class="meta">${w.year} • ${w.size} • ${w.medium}</div>
+        <h3>${w.title}</h3>
+        <div class="mt-1"><span class="badge">${w.series}</span></div>
+        <div class="price">$${w.price} <span class="meta">(UT: $${w.student_price})</span></div>
+      </div>
+    </article>`;
+}
 
-  </div>  <script>
-    // Featured works (swap thumbs with your actual images)
-    const WORKS = [
-      { id:"rm-001", title:"Resilience Magnolia I", series:"Resilience Magnolia", year:2025, size:"12×16 in", medium:"Acrylic & calligraphy on canvas", price:335, status:"available", src:"/images/portfolio/resilience-magnolia-01.jpg", alt:"Abstract magnolia with layered calligraphy in burnt orange and Prussian blue." },
-      { id:"il-001", title:"In Love (Hidden Script)", series:"In Love", year:2025, size:"9×12 in", medium:"Acrylic & marker on paper", price:285, status:"available", src:"/images/portfolio/in-love-01.jpg", alt:"Gestural abstraction with hidden 'in love' letterforms." },
-      { id:"eon-001", title:"Edge of Night (Verdaccio)", series:"Edge of Night", year:2025, size:"12×16 in", medium:"Acrylic on canvas", price:335, status:"hold", src:"/images/portfolio/edge-of-night-01.jpg", alt:"High-contrast ground with copperplate fragments dissolving into night." },
-      { id:"rs-001", title:"Resurgam (Stand Up)", series:"Resurgam", year:2024, size:"8×10 in", medium:"Acrylic & calligraffiti on gessobord", price:245, status:"sold", src:"/images/portfolio/resurgam-01.jpg", alt:"Liturgical echoes with calligraffiti overlays in black and iridescent white." },
-      { id:"il-002", title:"In Love — Vermilion", series:"In Love", year:2025, size:"8×10 in", medium:"Acrylic & marker on paper", price:245, status:"available", src:"/images/portfolio/in-love-02.jpg", alt:"Warm vermilion letterforms within a gestural field." },
-      { id:"rm-002", title:"Resilience Magnolia II", series:"Resilience Magnolia", year:2025, size:"12×16 in", medium:"Acrylic & calligraphy on canvas", price:335, status:"available", src:"/images/portfolio/resilience-magnolia-02.jpg", alt:"Layered magnolia forms with expressive calligraphic strokes." }
-    ];
-
-    const $cards = document.getElementById('cards');
-    function money(n){ return `$${Number(n).toLocaleString()}`; }
-    function ph(title){
-      return `data:image/svg+xml;utf8,`+encodeURIComponent(`
-      <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'>
-        <rect width='100%' height='100%' fill='#121315'/>
-        <text x='50%' y='50%' fill='#666' font-family='system-ui,Segoe UI' font-size='36' text-anchor='middle'>${title||'Artwork'}</text>
-      </svg>`);
-    }
-    function card(w){
-      const el = document.createElement('article');
-      el.className = 'card';
-      const fig = document.createElement('div'); fig.className='thumb';
-      const img = document.createElement('img'); img.loading='lazy'; img.alt=w.alt||w.title; img.src=w.src||ph(w.title); img.onerror=()=>img.src=ph(w.title);
-      fig.appendChild(img);
-      const status = document.createElement('span'); status.className='status'; status.textContent = w.status==='sold'?'Sold':(w.status==='hold'?'On Hold':'Available');
-      const meta = document.createElement('div'); meta.className='meta';
-      const t = document.createElement('div'); t.className='title'; t.textContent=w.title; meta.appendChild(t);
-      const s = document.createElement('div'); s.className='sub'; s.textContent=`${w.series} • ${w.medium} • ${w.size} • ${w.year}`; meta.appendChild(s);
-      const p = document.createElement('div'); p.className='price'; p.textContent = w.status==='sold'?'Sold':money(w.price); meta.appendChild(p);
-      const actions = document.createElement('div'); actions.className='actions';
-      const aView = document.createElement('a'); aView.className='btn'; aView.href='/portfolio.html'; aView.textContent='See details';
-      const aInq = document.createElement('a'); aInq.className='btn'; aInq.href = `mailto:robertgrantham40@gmail.com?subject=${encodeURIComponent('Inquiry: '+w.title)}&body=${encodeURIComponent('Hi Robert,%0D%0A%0D%0AI am interested in '+w.title+'.')}`; aInq.textContent='Inquire';
-      actions.appendChild(aView); actions.appendChild(aInq);
-      el.appendChild(fig); el.appendChild(status); el.appendChild(meta); el.appendChild(actions);
-      return el;
-    }
-    WORKS.forEach(w => $cards.appendChild(card(w)));
-
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script></body>
-</html>
+document.getElementById('available-grid').innerHTML = WORKS.map(card).join('');
+</script>
