@@ -1,127 +1,380 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio — Robert Grantham</title>
-  <meta name="description" content="Portfolio of Robert Grantham — calligraffiti, calligraphy, and gestural abstraction. Letters becoming rooms you can stand in." />
-  <link rel="canonical" href="https://rgrantham82.github.io/portfolio.html" />  <!-- Open Graph -->  <meta property="og:title" content="Portfolio — Robert Grantham" />
-  <meta property="og:description" content="Calligraffiti • Calligraphy • Gestural Abstraction. Austin, Texas." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://rgrantham82.github.io/portfolio.html" />  <style>
-    :root {
-      --bg: #0f0f10; --ink: #eaeaea; --muted:#9aa0a6; --accent:#ff7a00; --card:#17181a; --border:#2a2b2e; --good:#1db954; --warn:#ffcc00; --sold:#d9534f;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Robert Grantham</title>
+    <meta name="description" content="Portfolio of Robert Grantham — calligraffiti, calligraphy, and gestural abstraction. Letters becoming rooms you can stand in." />
+    <link rel="canonical" href="https://rgrantham82.github.io/portfolio.html" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfolio — Robert Grantham" />
+    <meta property="og:description" content="Calligraffiti • Calligraphy • Gestural Abstraction. Austin, Texas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rgrantham82.github.io/portfolio.html" />
+    <style>
+      :root {
+        --bg: #0f0f10;
+        --ink: #eaeaea;
+        --muted: #9aa0a6;
+        --accent: #ff7a00;
+        --card: #17181a;
+        --border: #2a2b2e;
+        --good: #1db954;
+        --warn: #ffcc00;
+        --sold: #d9534f;
+      }
 
-    header.hero { display:grid; gap:.75rem; }
-    header.hero .tag { display:inline-block; padding:.15rem .5rem; border:1px solid var(--border); border-radius:999px; color:var(--muted); }
-    h1 { font-size: clamp(2rem, 4vw, 3rem); line-height:1.1; margin:.15rem 0 .35rem 0; }
-    p.subtitle { color: var(--muted); margin:.25rem 0 0 0; }
+      * {
+        box-sizing: border-box;
+      }
 
-    /* Controls */
-    .controls { display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; margin: 1rem 0 1.25rem; }
-    .chip { padding:.45rem .75rem; border:1px solid var(--border); border-radius:999px; background:var(--card); color:var(--ink); cursor:pointer; user-select:none; }
-    .chip[aria-pressed="true"] { border-color: var(--accent); }
-    .search { flex: 1 1 220px; min-width: 200px; }
-    .search input { width:100%; padding:.7rem .9rem; border-radius:.75rem; border:1px solid var(--border); background:var(--card); color:var(--ink); }
-    .sort { min-width: 200px; }
-    .sort select { width:100%; padding:.7rem .9rem; border-radius:.75rem; border:1px solid var(--border); background:var(--card); color:var(--ink); }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
 
-    /* Gallery */
-    .grid { display:grid; gap:1rem; grid-template-columns: repeat(1, minmax(0, 1fr)); }
-    @media (min-width: 600px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (min-width: 980px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
 
-    .card { position:relative; background: var(--card); border:1px solid var(--border); border-radius: 16px; overflow:hidden; display:flex; flex-direction:column; }
-    .thumb { aspect-ratio: 4 / 3; background:#101113; display:block; overflow:hidden; }
-    .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
-    .status { position:absolute; top:.75rem; left:.75rem; padding:.25rem .5rem; border-radius:.5rem; font-size:.8rem; font-weight:700; }
-    .status.available { background: #15381f; color:#b8ffd0; border:1px solid #235f31; }
-    .status.hold { background:#2a240f; color:#ffeaa6; border:1px solid #6b5e27; }
-    .status.sold { background:#2a1110; color:#ffb1ae; border:1px solid #6e2623; }
+      a:hover {
+        text-decoration: underline;
+      }
 
-    .meta { padding: .85rem .9rem; border-top:1px solid var(--border); }
-    .title { font-weight:700; margin:0 0 .25rem 0; font-size:1.05rem; }
-    .sub { color: var(--muted); font-size:.95rem; margin:0 0 .35rem 0; }
-    .price { font-weight:700; }
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
 
-    .actions { display:flex; gap:.5rem; padding: .5rem .9rem 1rem; }
-    .btn { display:inline-block; padding:.6rem .8rem; border-radius:.65rem; border:1px solid var(--border); background:#131417; color:var(--ink); font-weight:600; cursor:pointer; text-align:center; }
-    .btn:hover { border-color: var(--accent); }
+      header.hero {
+        display: grid;
+        gap: .75rem;
+      }
 
-    /* Modal */
-    dialog { width:min(980px, 95vw); border:1px solid var(--border); border-radius: 16px; background: var(--card); color: var(--ink); padding:0; }
-    dialog::backdrop { background: rgba(0,0,0,.6); }
-    .modal-body { display:grid; grid-template-columns: 1fr; gap:0; }
-    @media (min-width:900px) { .modal-body { grid-template-columns: 3fr 2fr; } }
-    .modal-media { background:#0e0f11; padding:.5rem; }
-    .modal-media img { width:100%; height:auto; display:block; }
-    .modal-meta { padding:1rem; border-left:1px solid var(--border); }
-    .modal-meta h2 { margin-top:.25rem; margin-bottom:.25rem; }
-    .modal-meta .kv { margin:.35rem 0; color:var(--muted); }
+      header.hero .tag {
+        display: inline-block;
+        padding: .15rem .5rem;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--muted);
+      }
 
-    footer { color:var(--muted); margin-top:2rem; border-top:1px solid var(--border); padding-top:1rem; font-size:.9rem; }
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-  </style></head>
-<body>
-  <div class="wrap">
-    <header class="hero" aria-labelledby="page-title">
-      <span class="tag">Austin, Texas</span>
-      <h1 id="page-title">Portfolio</h1>
-      <p class="subtitle">Calligraffiti • Calligraphy • Gestural Abstraction — <em>letters becoming rooms you can stand in</em>.</p><nav class="controls" aria-label="Filters and search">
-    <div class="search"><label class="sr-only" for="q">Search</label><input id="q" placeholder="Search title, series, medium, keywords…" /></div>
-    <div class="sort"><label class="sr-only" for="sort">Sort</label><select id="sort">
-      <option value="new">Newest</option>
-      <option value="plh">Price (High → Low)</option>
-      <option value="phl">Price (Low → High)</option>
-      <option value="az">Title (A → Z)</option>
-    </select></div>
-    <div class="chips" role="group" aria-label="Series filters">
-      <button class="chip" data-series="all" aria-pressed="true">All</button>
-      <button class="chip" data-series="Resilience Magnolia">Resilience Magnolia</button>
-      <button class="chip" data-series="In Love">In Love</button>
-      <button class="chip" data-series="Edge of Night">Edge of Night</button>
-      <button class="chip" data-series="Misericordia">Misericordia</button>
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+        margin: .15rem 0 .35rem 0;
+      }
+
+      p.subtitle {
+        color: var(--muted);
+        margin: .25rem 0 0 0;
+      }
+
+      /* Controls */
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .75rem;
+        align-items: center;
+        margin: 1rem 0 1.25rem;
+      }
+
+      .chip {
+        padding: .45rem .75rem;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--card);
+        color: var(--ink);
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .chip[aria-pressed="true"] {
+        border-color: var(--accent);
+      }
+
+      .search {
+        flex: 1 1 220px;
+        min-width: 200px;
+      }
+
+      .search input {
+        width: 100%;
+        padding: .7rem .9rem;
+        border-radius: .75rem;
+        border: 1px solid var(--border);
+        background: var(--card);
+        color: var(--ink);
+      }
+
+      .sort {
+        min-width: 200px;
+      }
+
+      .sort select {
+        width: 100%;
+        padding: .7rem .9rem;
+        border-radius: .75rem;
+        border: 1px solid var(--border);
+        background: var(--card);
+        color: var(--ink);
+      }
+
+      /* Gallery */
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      @media (min-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 980px) {
+        .grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .card {
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .thumb {
+        aspect-ratio: 4 / 3;
+        background: #101113;
+        display: block;
+        overflow: hidden;
+      }
+
+      .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .status {
+        position: absolute;
+        top: .75rem;
+        left: .75rem;
+        padding: .25rem .5rem;
+        border-radius: .5rem;
+        font-size: .8rem;
+        font-weight: 700;
+      }
+
+      .status.available {
+        background: #15381f;
+        color: #b8ffd0;
+        border: 1px solid #235f31;
+      }
+
+      .status.hold {
+        background: #2a240f;
+        color: #ffeaa6;
+        border: 1px solid #6b5e27;
+      }
+
+      .status.sold {
+        background: #2a1110;
+        color: #ffb1ae;
+        border: 1px solid #6e2623;
+      }
+
+      .meta {
+        padding: .85rem .9rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .title {
+        font-weight: 700;
+        margin: 0 0 .25rem 0;
+        font-size: 1.05rem;
+      }
+
+      .sub {
+        color: var(--muted);
+        font-size: .95rem;
+        margin: 0 0 .35rem 0;
+      }
+
+      .price {
+        font-weight: 700;
+      }
+
+      .actions {
+        display: flex;
+        gap: .5rem;
+        padding: .5rem .9rem 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: .6rem .8rem;
+        border-radius: .65rem;
+        border: 1px solid var(--border);
+        background: #131417;
+        color: var(--ink);
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .btn:hover {
+        border-color: var(--accent);
+      }
+
+      /* Modal */
+      dialog {
+        width: min(980px, 95vw);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--card);
+        color: var(--ink);
+        padding: 0;
+      }
+
+      dialog::backdrop {
+        background: rgba(0, 0, 0, .6);
+      }
+
+      .modal-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      @media (min-width:900px) {
+        .modal-body {
+          grid-template-columns: 3fr 2fr;
+        }
+      }
+
+      .modal-media {
+        background: #0e0f11;
+        padding: .5rem;
+      }
+
+      .modal-media img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .modal-meta {
+        padding: 1rem;
+        border-left: 1px solid var(--border);
+      }
+
+      .modal-meta h2 {
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+      }
+
+      .modal-meta .kv {
+        margin: .35rem 0;
+        color: var(--muted);
+      }
+
+      footer {
+        color: var(--muted);
+        margin-top: 2rem;
+        border-top: 1px solid var(--border);
+        padding-top: 1rem;
+        font-size: .9rem;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>undefined
+  </head>undefined<body>
+    <div class="wrap">
+      <header class="hero" aria-labelledby="page-title">
+        <span class="tag">Austin, Texas</span>
+        <h1 id="page-title">Portfolio</h1>
+        <p class="subtitle">Calligraffiti • Calligraphy • Gestural Abstraction — <em>letters becoming rooms you can stand in</em>. </p>
+        <nav class="controls" aria-label="Filters and search">
+          <div class="search">
+            <label class="sr-only" for="q">Search</label>
+            <input id="q" placeholder="Search title, series, medium, keywords…" />
+          </div>
+          <div class="sort">
+            <label class="sr-only" for="sort">Sort</label>
+            <select id="sort">
+              <option value="new">Newest</option>
+              <option value="plh">Price (High → Low)</option>
+              <option value="phl">Price (Low → High)</option>
+              <option value="az">Title (A → Z)</option>
+            </select>
+          </div>
+          <div class="chips" role="group" aria-label="Series filters">
+            <button class="chip" data-series="all" aria-pressed="true">All</button>
+            <button class="chip" data-series="Resilience Magnolia">Resilience Magnolia</button>
+            <button class="chip" data-series="In Love">In Love</button>
+            <button class="chip" data-series="Edge of Night">Edge of Night</button>
+            <button class="chip" data-series="Misericordia">Misericordia</button>
+          </div>
+        </nav>
+      </header>
+      <section id="gallery" class="grid" aria-live="polite"></section>
+      <footer>
+        <p>For inquiries and commissions: <a href="mailto:robertgrantham40@gmail.com?subject=Portfolio%20Inquiry">robertgrantham40@gmail.com</a> · Pay via CashApp <a href="https://cash.app/$bobby198237">$bobby198237</a> or Venmo <a href="https://venmo.com/u/robert-grantham-6">@robert-grantham-6</a>. </p>
+      </footer>
     </div>
-  </nav>
-</header>
-
-<section id="gallery" class="grid" aria-live="polite"></section>
-
-<footer>
-  <p>For inquiries and commissions: <a href="mailto:robertgrantham40@gmail.com?subject=Portfolio%20Inquiry">robertgrantham40@gmail.com</a> · Pay via CashApp <a href="https://cash.app/$bobby198237">$bobby198237</a> or Venmo <a href="https://venmo.com/u/robert-grantham-6">@robert-grantham-6</a>.</p>
-</footer>
-
-  </div>  <!-- Detail Modal -->  <dialog id="detail">
-    <div class="modal-body">
-      <div class="modal-media"><img id="m-img" alt="" loading="eager" /></div>
-      <div class="modal-meta">
-        <button id="close" class="btn" style="float:right;">Close</button>
-        <h2 id="m-title">Title</h2>
-        <div class="kv" id="m-series"></div>
-        <div class="kv" id="m-medium"></div>
-        <div class="kv" id="m-size"></div>
-        <div class="kv" id="m-year"></div>
-        <div class="kv" id="m-status"></div>
-        <div class="kv" id="m-price"></div>
-        <p id="m-desc" style="margin-top:.75rem;"></p>
-        <div class="actions">
-          <a id="m-inquire" class="btn" href="#">Inquire</a>
-          <a id="m-download" class="btn" href="#" download>Download image</a>
+    <!-- Detail Modal -->
+    <dialog id="detail">
+      <div class="modal-body">
+        <div class="modal-media">
+          <img id="m-img" alt="" loading="eager" />
+        </div>
+        <div class="modal-meta">
+          <button id="close" class="btn" style="float:right;">Close</button>
+          <h2 id="m-title">Title</h2>
+          <div class="kv" id="m-series"></div>
+          <div class="kv" id="m-medium"></div>
+          <div class="kv" id="m-size"></div>
+          <div class="kv" id="m-year"></div>
+          <div class="kv" id="m-status"></div>
+          <div class="kv" id="m-price"></div>
+          <p id="m-desc" style="margin-top:.75rem;"></p>
+          <div class="actions">
+            <a id="m-inquire" class="btn" href="#">Inquire</a>
+            <a id="m-download" class="btn" href="#" download>Download image</a>
+          </div>
         </div>
       </div>
-    </div>
-  </dialog>  <script>
-    // --- Edit your works here. Replace placeholders with real images/metadata. ---
-    // Tip: keep filenames web-friendly; add a .webp and .jpg fallback per image name if you have both.
-    const WORKS = [
-      {
+    </dialog>
+    <script>
+      // --- Edit your works here. Replace placeholders with real images/metadata. ---
+      // Tip: keep filenames web-friendly; add a .webp and .jpg fallback per image name if you have both.
+      const WORKS = [{
         id: "rm-001",
         title: "Resilience Magnolia I",
         year: 2025,
@@ -133,8 +386,7 @@
         srcWebp: "/assets/images/resilientia-final.webp",
         alt: "Abstract magnolia with layered calligraphy in burnt orange and Prussian blue.",
         desc: "Magnolia forms and calligraphic fields as a study in Southern memory and forward motion."
-      },
-      {
+      }, {
         id: "il-001",
         title: "In Love (Hidden Script)",
         year: 2025,
@@ -146,8 +398,7 @@
         srcWebp: "/assets/images/in-love-01.webp",
         alt: "Gestural abstraction with hidden 'in love' letterforms.",
         desc: "Hidden and revealed lettering woven into abstract weather—affection as architecture."
-      },
-      {
+      }, {
         id: "eon-001",
         title: "Edge of Night",
         year: 2025,
@@ -159,140 +410,179 @@
         srcWebp: "/assets/images/edge-of-night-01.webp",
         alt: "High-contrast ground with copperplate fragments dissolving into night.",
         desc: "The moment before dawn where resolve is made; copperplate fragments meet field color."
-      },
-      {
-  id: "mis-001",
-  title: "Misericordia",
-  year: 2025,
-  size: "12×16 in",
-  medium: "Acrylic on canvas (SoHo Urban Artist)",
-  price: 335,
-  status: "available",
-  src: "/assets/images/misericordia-01.jpg",
-  srcWebp: "/assets/images/misericordia-01.webp",
-  alt: "Gilded S initial on a vermilion ground encircling a black medallion tiled with MISERICORDIA; mottoes along the arc.",
-  desc: "A contemporary illuminated initial: a gilt S sweeps a vermilion field, circling a mercy-filled black medallion—‘Dux in tenebris’ to ‘Durch Nacht zum Licht.’"
-},
+      }, {
+        id: "mis-001",
+        title: "Misericordia",
+        year: 2025,
+        size: "12×16 in",
+        medium: "Acrylic on canvas (SoHo Urban Artist)",
+        price: 335,
+        status: "available",
+        src: "/assets/images/misericordia-01.jpg",
+        srcWebp: "/assets/images/misericordia-01.webp",
+        alt: "Gilded S initial on a vermilion ground encircling a black medallion tiled with MISERICORDIA; mottoes along the arc.",
+        desc: "A contemporary illuminated initial: a gilt S sweeps a vermilion field, circling a mercy-filled black medallion—‘Dux in tenebris’ to ‘Durch Nacht zum Licht.’"
+      }, ];
+      // --- Rendering logic ---
+      const $gallery = document.getElementById('gallery');
+      const $sort = document.getElementById('sort');
+      const $q = document.getElementById('q');
+      const $chips = document.querySelectorAll('.chip');
+      const $dialog = document.getElementById('detail');
+      const $close = document.getElementById('close');
+      let state = {
+        q: '',
+        series: 'all',
+        sort: 'new'
+      };
 
-      
-    ];
-
-    // --- Rendering logic ---
-    const $gallery = document.getElementById('gallery');
-    const $sort = document.getElementById('sort');
-    const $q = document.getElementById('q');
-    const $chips = document.querySelectorAll('.chip');
-    const $dialog = document.getElementById('detail');
-    const $close = document.getElementById('close');
-
-    let state = { q: '', series: 'all', sort: 'new' };
-
-    function matches(w){
-      const hay = (w.title + ' ' + w.series + ' ' + w.medium + ' ' + (w.desc||'')).toLowerCase();
-      const okQ = !state.q || hay.includes(state.q);
-      const okS = state.series === 'all' || w.series === state.series;
-      return okQ && okS;
-    }
-
-    function sortFn(a,b){
-      switch(state.sort){
-        case 'plh': return (b.price||0) - (a.price||0);
-        case 'phl': return (a.price||0) - (b.price||0);
-        case 'az': return a.title.localeCompare(b.title);
-        case 'new': default: return (b.year||0) - (a.year||0);
+      function matches(w) {
+        const hay = (w.title + ' ' + w.series + ' ' + w.medium + ' ' + (w.desc || '')).toLowerCase();
+        const okQ = !state.q || hay.includes(state.q);
+        const okS = state.series === 'all' || w.series === state.series;
+        return okQ && okS;
       }
-    }
 
-    function money(n){ return typeof n === 'number' ? `$${n.toLocaleString()}` : ''; }
-
-    function placeholderSvg(title){
-      return `data:image/svg+xml;utf8,` + encodeURIComponent(`
-        <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'>
-          <rect width='100%' height='100%' fill='#121315'/>
-          <text x='50%' y='50%' fill='#666' font-family='system-ui,Segoe UI' font-size='36' text-anchor='middle'>${title||'Artwork'}</text>
-        </svg>`);
-    }
-
-    function card(w){
-      const statusClass = w.status === 'sold' ? 'sold' : w.status === 'hold' ? 'hold' : 'available';
-      const priceTxt = w.status === 'sold' ? 'Sold' : money(w.price);
-      const srcset = w.srcWebp ? `${w.srcWebp} 1x` : '';
-      const img = document.createElement('img');
-      img.loading = 'lazy';
-      img.alt = w.alt || w.title;
-      img.src = w.src || placeholderSvg(w.title);
-      img.onerror = () => { img.src = placeholderSvg(w.title); };
-
-      const fig = document.createElement('div');
-      fig.className = 'thumb';
-      fig.appendChild(img);
-
-      const status = document.createElement('span');
-      status.className = `status ${statusClass}`;
-      status.textContent = w.status === 'hold' ? 'On Hold' : w.status === 'sold' ? 'Sold' : 'Available';
-
-      const meta = document.createElement('div'); meta.className = 'meta';
-      const t = document.createElement('div'); t.className = 'title'; t.textContent = w.title; meta.appendChild(t);
-      const s = document.createElement('div'); s.className = 'sub'; s.textContent = `${w.series} • ${w.medium} • ${w.size} • ${w.year}`; meta.appendChild(s);
-      const p = document.createElement('div'); p.className = 'price'; p.textContent = priceTxt; meta.appendChild(p);
-
-      const actions = document.createElement('div'); actions.className = 'actions';
-      const aView = document.createElement('a'); aView.className='btn'; aView.href = '#'; aView.textContent = 'View details';
-      aView.addEventListener('click', (ev)=>{ ev.preventDefault(); openModal(w); });
-      const aInq = document.createElement('a'); aInq.className='btn'; aInq.href = mailtoHref(w); aInq.textContent='Inquire';
-      actions.appendChild(aView); actions.appendChild(aInq);
-
-      const card = document.createElement('article'); card.className='card'; card.setAttribute('data-id', w.id);
-      card.appendChild(fig); card.appendChild(status); card.appendChild(meta); card.appendChild(actions);
-      return card;
-    }
-
-    function mailtoHref(w){
-      const subject = encodeURIComponent(`Inquiry: ${w.title} (${w.series})`);
-      const body = encodeURIComponent(`Hi Robert,%0D%0A%0D%0AI'm interested in this work:%0D%0A• Title: ${w.title}%0D%0A• Series: ${w.series}%0D%0A• Size: ${w.size}%0D%0A• Medium: ${w.medium}%0D%0A• Year: ${w.year}%0D%0A• Status: ${w.status.toUpperCase()}%0D%0A%0D%0AThanks!`);
-      return `mailto:robertgrantham40@gmail.com?subject=${subject}&body=${body}`;
-    }
-
-    function render(){
-      $gallery.innerHTML = '';
-      WORKS.filter(matches).sort(sortFn).forEach(w => $gallery.appendChild(card(w)));
-      if(!$gallery.children.length){
-        const p = document.createElement('p'); p.style.color='var(--muted)'; p.textContent = 'No works match your filters yet.'; $gallery.appendChild(p);
+      function sortFn(a, b) {
+        switch (state.sort) {
+          case 'plh':
+            return (b.price || 0) - (a.price || 0);
+          case 'phl':
+            return (a.price || 0) - (b.price || 0);
+          case 'az':
+            return a.title.localeCompare(b.title);
+          case 'new':
+          default:
+            return (b.year || 0) - (a.year || 0);
+        }
       }
-    }
 
-    // filters
-    $chips.forEach(ch => ch.addEventListener('click', () => {
-      $chips.forEach(c => c.setAttribute('aria-pressed','false'));
-      ch.setAttribute('aria-pressed','true');
-      state.series = ch.dataset.series;
+      function money(n) {
+        return typeof n === 'number' ? `$${n.toLocaleString()}` : '';
+      }
+
+      function placeholderSvg(title) {
+        return `data:image/svg+xml;utf8,` + encodeURIComponent(`
+        
+	<svg
+		xmlns='http://www.w3.org/2000/svg' width='1200' height='900'>
+		<rect width='100%' height='100%' fill='#121315'/>
+		<text x='50%' y='50%' fill='#666' font-family='system-ui,Segoe UI' font-size='36' text-anchor='middle'>${title||'Artwork'}</text>
+	</svg>`);
+      }
+
+      function card(w) {
+        const statusClass = w.status === 'sold' ? 'sold' : w.status === 'hold' ? 'hold' : 'available';
+        const priceTxt = w.status === 'sold' ? 'Sold' : money(w.price);
+        const srcset = w.srcWebp ? `${w.srcWebp} 1x` : '';
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.alt = w.alt || w.title;
+        img.src = w.src || placeholderSvg(w.title);
+        img.onerror = () => {
+          img.src = placeholderSvg(w.title);
+        };
+        const fig = document.createElement('div');
+        fig.className = 'thumb';
+        fig.appendChild(img);
+        const status = document.createElement('span');
+        status.className = `status ${statusClass}`;
+        status.textContent = w.status === 'hold' ? 'On Hold' : w.status === 'sold' ? 'Sold' : 'Available';
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        const t = document.createElement('div');
+        t.className = 'title';
+        t.textContent = w.title;
+        meta.appendChild(t);
+        const s = document.createElement('div');
+        s.className = 'sub';
+        s.textContent = `${w.series} • ${w.medium} • ${w.size} • ${w.year}`;
+        meta.appendChild(s);
+        const p = document.createElement('div');
+        p.className = 'price';
+        p.textContent = priceTxt;
+        meta.appendChild(p);
+        const actions = document.createElement('div');
+        actions.className = 'actions';
+        const aView = document.createElement('a');
+        aView.className = 'btn';
+        aView.href = '#';
+        aView.textContent = 'View details';
+        aView.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          openModal(w);
+        });
+        const aInq = document.createElement('a');
+        aInq.className = 'btn';
+        aInq.href = mailtoHref(w);
+        aInq.textContent = 'Inquire';
+        actions.appendChild(aView);
+        actions.appendChild(aInq);
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.setAttribute('data-id', w.id);
+        card.appendChild(fig);
+        card.appendChild(status);
+        card.appendChild(meta);
+        card.appendChild(actions);
+        return card;
+      }
+
+      function mailtoHref(w) {
+        const subject = encodeURIComponent(`Inquiry: ${w.title} (${w.series})`);
+        const body = encodeURIComponent(`Hi Robert,%0D%0A%0D%0AI'm interested in this work:%0D%0A• Title: ${w.title}%0D%0A• Series: ${w.series}%0D%0A• Size: ${w.size}%0D%0A• Medium: ${w.medium}%0D%0A• Year: ${w.year}%0D%0A• Status: ${w.status.toUpperCase()}%0D%0A%0D%0AThanks!`);
+        return `mailto:robertgrantham40@gmail.com?subject=${subject}&body=${body}`;
+      }
+
+      function render() {
+        $gallery.innerHTML = '';
+        WORKS.filter(matches).sort(sortFn).forEach(w => $gallery.appendChild(card(w)));
+        if (!$gallery.children.length) {
+          const p = document.createElement('p');
+          p.style.color = 'var(--muted)';
+          p.textContent = 'No works match your filters yet.';
+          $gallery.appendChild(p);
+        }
+      }
+      // filters
+      $chips.forEach(ch => ch.addEventListener('click', () => {
+        $chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+        ch.setAttribute('aria-pressed', 'true');
+        state.series = ch.dataset.series;
+        render();
+      }));
+      $q.addEventListener('input', () => {
+        state.q = $q.value.trim().toLowerCase();
+        render();
+      });
+      $sort.addEventListener('change', () => {
+        state.sort = $sort.value;
+        render();
+      });
+      // modal
+      function openModal(w) {
+        document.getElementById('m-title').textContent = w.title;
+        document.getElementById('m-series').textContent = `Series: ${w.series}`;
+        document.getElementById('m-medium').textContent = `Medium: ${w.medium}`;
+        document.getElementById('m-size').textContent = `Size: ${w.size}`;
+        document.getElementById('m-year').textContent = `Year: ${w.year}`;
+        document.getElementById('m-status').textContent = `Status: ${w.status.toUpperCase()}`;
+        document.getElementById('m-price').textContent = w.status === 'sold' ? 'Price: SOLD' : (w.price ? `Price: ${money(w.price)}` : '');
+        document.getElementById('m-desc').textContent = w.desc || '';
+        const mimg = document.getElementById('m-img');
+        mimg.src = w.src || placeholderSvg(w.title);
+        mimg.alt = w.alt || w.title;
+        const dl = document.getElementById('m-download');
+        dl.href = w.src || '#';
+        const inq = document.getElementById('m-inquire');
+        inq.href = mailtoHref(w);
+        document.getElementById('detail').showModal();
+      }
+      $close.addEventListener('click', () => $dialog.close());
+      $dialog.addEventListener('click', (e) => {
+        if (e.target === $dialog) $dialog.close();
+      });
       render();
-    }));
-    $q.addEventListener('input', () => { state.q = $q.value.trim().toLowerCase(); render(); });
-    $sort.addEventListener('change', () => { state.sort = $sort.value; render(); });
-
-    // modal
-    function openModal(w){
-      document.getElementById('m-title').textContent = w.title;
-      document.getElementById('m-series').textContent = `Series: ${w.series}`;
-      document.getElementById('m-medium').textContent = `Medium: ${w.medium}`;
-      document.getElementById('m-size').textContent = `Size: ${w.size}`;
-      document.getElementById('m-year').textContent = `Year: ${w.year}`;
-      document.getElementById('m-status').textContent = `Status: ${w.status.toUpperCase()}`;
-      document.getElementById('m-price').textContent = w.status === 'sold' ? 'Price: SOLD' : (w.price? `Price: ${money(w.price)}` : '');
-      document.getElementById('m-desc').textContent = w.desc || '';
-      const mimg = document.getElementById('m-img');
-      mimg.src = w.src || placeholderSvg(w.title);
-      mimg.alt = w.alt || w.title;
-      const dl = document.getElementById('m-download');
-      dl.href = w.src || '#';
-      const inq = document.getElementById('m-inquire');
-      inq.href = mailtoHref(w);
-      document.getElementById('detail').showModal();
-    }
-    $close.addEventListener('click', ()=> $dialog.close());
-    $dialog.addEventListener('click', (e)=>{ if(e.target === $dialog) $dialog.close(); });
-
-    render();
-  </script></body>
+    </script>undefined
+  </body>undefined
 </html>
