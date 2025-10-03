@@ -1,11 +1,11 @@
-# _config.yml — Cardboard Calligraphy by Robert
+# _config.yml — Robert Grantham Portfolio
 
-title: "Cardboard Calligraphy"
-tagline: "Hope, reclaimed — Robert Grantham"
+title: "Robert Grantham"
+tagline: "Hope, resilience, and calligraphy in layers"
 author: "Robert Grantham"
-description: "Hand-lettered art on reclaimed cardboard. Commissions, murals, prints. Based in Austin, TX."
+description: "Austin-based modern expressive calligrapher, painter, and historian. Fusing Copperplate & Blackletter with abstraction. Available works, commissions, essays."
 url: "https://rgrantham82.github.io"
-baseurl: ""   # leave empty if serving from root of GitHub Pages
+baseurl: ""   # leave blank for GitHub Pages root
 
 # Social links
 instagram_url: "https://instagram.com/InkedOnCardboard"
@@ -14,10 +14,14 @@ email: "robertgrantham40@gmail.com"
 github_username: "rgrantham82"
 repository: "rgrantham82.github.io"
 
-# Favicon (place your file at /assets/favicon.ico)
+# Payments
+cashapp_url: "https://cash.app/$bobby198237"
+venmo_url: "https://venmo.com/u/robert-grantham-6"
+
+# Favicon
 favicon: "/assets/favicon.ico"
 
-# Defaults so you don’t need to specify layout on every page
+# Defaults
 defaults:
   -
     scope:
@@ -26,7 +30,7 @@ defaults:
     values:
       layout: "default"
 
-# Files and directories to exclude from build
+# Exclude junk
 exclude:
   - README.md
   - node_modules
@@ -34,12 +38,17 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Markdown & theme (optional — comment out if you’re not using a theme)
+# Markdown engine
 markdown: kramdown
+
+# Theme (minima is optional; safe to leave)
 theme: minima
 
-# Plugins (uncomment/add if you want extras)
-# plugins:
-#   - jekyll-seo-tag
-#   - jekyll-sitemap
-#   - jekyll-feed
+# Plugins for SEO & sitemap
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Build settings
+permalink: pretty
