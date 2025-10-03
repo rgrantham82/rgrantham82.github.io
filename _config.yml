@@ -8,7 +8,7 @@ url: "https://rgrantham82.github.io"
 baseurl: ""   # leave blank for GitHub Pages root
 
 # Social links
-instagram_url: "https://instagram.com/InkedOnCardboard"
+instagram_url: "https://instagram.com/robertgranthamart"
 linkedin_url: "https://linkedin.com/in/robertgrantham82"
 email: "robertgrantham40@gmail.com"
 github_username: "rgrantham82"
@@ -19,7 +19,7 @@ cashapp_url: "https://cash.app/$bobby198237"
 venmo_url: "https://venmo.com/u/robert-grantham-6"
 
 # Favicon
-favicon: "/assets/favicon.ico"
+favicon: "/assets/images/favicon.ico"
 
 # Defaults
 defaults:
