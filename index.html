@@ -1,7 +1,11 @@
+
 ---
-layout: default
+
+layout: default 
 title: Home
+
 ---
+
 <section class="hero">
   <div>
     <span class="tag">Expressive Calligraphy • Painting • Research</span>
@@ -18,25 +22,33 @@ title: Home
   </div>
   <div>
     <div class="card">
-      <img src="/assets/images/edge-of-night-01.jpg" alt="Edge of Night artwork" />
+      <img src="/assets/images/furcht-frisst-gerechtigkeit-01.jpg" alt="Furcht frisst Gerechtigkeit artwork" />
       <div class="pad">
-        <div class="meta">Recent work • 12×16 acrylic on canvas</div>
-        <h3>Edge of Night</h3>
-        <div class="mt-1"><span class="badge">Series</span> Edge of Night</div>
+        <div class="meta">Recent work • 12×16 acrylic on Ampersand Gessobord (7/8")</div>
+        <h3>Furcht frisst Gerechtigkeit</h3>
+        <div class="mt-1"><span class="badge">Würzburg Justice</span></div>
       </div>
     </div>
   </div>
-</section>
-
-<div class="section-title">
+</section><div class="section-title">
   <h2>Available Works</h2>
   <a class="button ghost" href="/portfolio.html">See all</a>
-</div>
-
-<div class="grid auto-3" id="available-grid"></div>
-
-<script>
+</div><div class="grid auto-3" id="available-grid"></div><script>
 const WORKS = [
+  {
+    id: "ffg-001",
+    title: "Furcht frisst Gerechtigkeit",
+    series: "Würzburg Justice",
+    year: 2025,
+    size: "12×16 in",
+    medium: "Acrylic on Ampersand Gessobord (7/8 in)",
+    price: 335,
+    student_price: 300,
+    status: "available",
+    is_new: true,
+    src: "/assets/images/furcht-frisst-gerechtigkeit-01.jpg",
+    alt: "German blackletter phrase ‘Furcht frisst Gerechtigkeit’ with tally marks and faint ‘Würzburg’ underlayers."
+  },
   {
     id: "eon-001",
     title: "Edge of Night",
@@ -69,27 +81,39 @@ const WORKS = [
     series: "Resilience Magnolia",
     year: 2025,
     size: "8×10 in",
-    medium: "Posca on canvas",
+    medium: "Acrylic on canvas",
     price: 140,
     student_price: 120,
     status: "available",
+    is_new: true,
     src: "/assets/images/resilience-01.jpg",
     alt: "Magnolia‑inspired calligraphy over layered ground."
   }
 ];
 
+function usd(n){
+  try { return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }); }
+  catch(e){ return `$${n}`; }
+}
+
 function card(w){
   return `
-    <article class="card">
+    <article class="card ${w.is_new ? 'is-new' : ''}">
       <img loading="lazy" src="${w.src}" alt="${w.alt}"/>
       <div class="pad">
         <div class="meta">${w.year} • ${w.size} • ${w.medium}</div>
         <h3>${w.title}</h3>
-        <div class="mt-1"><span class="badge">${w.series}</span></div>
-        <div class="price">$${w.price} <span class="meta">(UT: $${w.student_price})</span></div>
+        <div class="mt-1">
+          <span class="badge">${w.series}</span>
+          ${w.is_new ? '<span class="badge success">New</span>' : ''}
+        </div>
+        <div class="price">${usd(w.price)} <span class="meta">(UT: ${usd(w.student_price)})</span></div>
       </div>
     </article>`;
 }
 
-document.getElementById('available-grid').innerHTML = WORKS.map(card).join('');
+document.getElementById('available-grid').innerHTML = WORKS
+  .filter(w => w.status === 'available')
+  .map(card)
+  .join('');
 </script>
