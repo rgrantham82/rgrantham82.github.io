@@ -1,49 +1,200 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{% if page.title %}{{ page.title }} • Robert Grantham{% else %}Robert Grantham{% endif %}</title>
-  <meta name="description" content="Modern expressive calligrapher, painter, and data-analytics-minded historian in Austin, TX. Portfolio, essays, and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=2025-10-03">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-  <meta name="theme-color" content="#111827" />
-</head>
-<body class="min-h-full bg-stone-50 text-stone-900">
-  <header class="site-header">
-    <div class="container flex items-center justify-between">
-      <a class="brand" href="/">RG</a>
-      <nav class="nav">
-        <a href="/portfolio.html">Portfolio</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<!doctype html>
 
-  <main id="content" class="container py-10">
-    {{ content }}
-  </main>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">{%- comment -%}
+Title & description
+{%- endcomment -%}
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: "Robert Grantham Art" }}</title>
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | default: "Hope, written by hand. Resilience, painted in layers." }}{% endif %}">
 
-  <footer class="site-footer">
-    <div class="container grid">
-      <div>
-        <h4>Robert Grantham</h4>
-        <p>Austin, TX • Modern expressive calligraphy & painting • Data‑minded historian</p>
-      </div>
-      <div class="links">
-        <a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a>
-        <a href="https://linkedin.com/in/robertgrantham82" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://rgrantham82.github.io/data-analytics-portfolio" target="_blank" rel="noopener">Data Portfolio</a>
-        <a href="https://rgrantham82.github.io/" target="_blank" rel="noopener">Calligraphy Site</a>
-        <a href="https://cash.app/$bobby198237" target="_blank" rel="noopener">Cash App</a>
-        <a href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">Venmo</a>
-      </div>
+{%- comment -%}
+Canonical URL
+{%- endcomment -%}
+{% if site.url %}
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+{% endif %}
+
+{%- comment -%}
+Open Graph / Twitter Card
+{%- endcomment -%}
+{% assign social_title = page.social_title | default: page.title | default: site.title %}
+{% assign social_desc  = page.social_description | default: page.excerpt | default: site.description %}
+{% assign og_img       = page.og_image | default: page.image | default: site.og_image | default: '/assets/images/og-default.jpg' %}
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title | default: 'Robert Grantham Art' }}">
+<meta property="og:title" content="{{ social_title }}">
+<meta property="og:description" content="{{ social_desc | strip_html | strip_newlines }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ og_img | absolute_url }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ social_title }}">
+<meta name="twitter:description" content="{{ social_desc | strip_html | strip_newlines }}">
+{% if site.twitter_username %}<meta name="twitter:site" content="@{{ site.twitter_username }}">{% endif %}
+
+{%- comment -%}
+Assets
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+{%- if site.font_href %}
+  <link href="{{ site.font_href }}" rel="stylesheet">
+{%- endif %}
+
+{%- comment -%}
+Main stylesheet (adjust the path to your actual CSS)
+{%- endcomment -%}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{%- if page.css %}<link rel="stylesheet" href="{{ page.css | relative_url }}">{%- endif %}
+
+{%- comment -%}
+Favicon set (add files to /assets/favicons)
+{%- endcomment -%}
+<link rel="icon" href="{{ '/assets/favicons/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/favicons/apple-touch-icon.png' | relative_url }}">
+
+{%- comment -%}
+Optional: jekyll-seo-tag if installed
+{%- endcomment -%}
+{% if site.plugins and site.plugins contains 'jekyll-seo-tag' %}
+  {% seo %}
+{% endif %}
+
+{%- comment -%}
+JSON-LD Organization/Person
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name | default: 'Robert Grantham' }}",
+  "url": "{{ site.url | default: site.github.url }}",
+  "image": "{{ site.logo | default: '/assets/images/og-default.jpg' | absolute_url }}",
+  "sameAs": [{% if site.instagram_username %}"https://instagram.com/{{ site.instagram_username }}"{% endif %}{% if site.social and site.social.size > 0 %}{% for s in site.social %}{% if forloop.first and site.instagram_username %},{% endif %}"{{ s }}"{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}]
+}
+</script>
+
+<script>
+  // Remove no-js if JS is available
+  document.documentElement.classList.remove('no-js');
+</script>
+
+  </head>  <body>
+    <a class="skip-link" href="#content">Skip to content</a><header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      {% if site.logo %}
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title | default: 'Robert Grantham Art' }} logo" width="40" height="40" loading="lazy" decoding="async">
+      {% endif %}
+      <span class="brand-title">{{ site.title | default: 'Robert Grantham Art' }}</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <ul id="nav-list">
+        {%- comment -%}
+        Prefer _data/nav.yml if present; otherwise fall back to common pages
+        {%- endcomment -%}
+        {% if site.data.nav and site.data.nav.links %}
+          {% for item in site.data.nav.links %}
+            <li><a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+        {% else %}
+          <li><a href="{{ '/portfolio.html' | relative_url }}" {% if page.url == '/portfolio.html' %}aria-current="page"{% endif %}>Portfolio</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}" {% if page.url == '/about.html' %}aria-current="page"{% endif %}>About</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}" {% if page.url == '/contact.html' %}aria-current="page"{% endif %}>Contact</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="site-content" role="main">
+  {{ content }}
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <strong>{{ site.title | default: 'Robert Grantham Art' }}</strong>
+      <div class="muted">© {{ site.time | date: '%Y' }} {{ site.author.name | default: 'Robert Grantham' }}</div>
     </div>
-    <p class="tiny">© {{ "now" | date: "%Y" }} Robert Grantham. All rights reserved.</p>
-  </footer>
-</body>
+    <ul class="social">
+      {% if site.instagram_username %}<li><a href="https://instagram.com/{{ site.instagram_username }}" rel="me">Instagram</a></li>{% endif %}
+      {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" rel="me">Twitter/X</a></li>{% endif %}
+      {% if site.github_username or site.github.owner_name %}<li><a href="https://github.com/{{ site.github_username | default: site.github.owner_name }}">GitHub</a></li>{% endif %}
+      {% if site.email %}<li><a href="mailto:{{ site.email }}">Email</a></li>{% endif %}
+    </ul>
+  </div>
+</footer>
+
+{%- comment -%}
+Minimal CSS for layout structure (remove if you already include site CSS)
+{%- endcomment -%}
+<style>
+  :root { --container: 1120px; }
+  body { margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color: #111; background: #fff; }
+  @media (prefers-color-scheme: dark) { body{ color:#eee; background:#111; } }
+  .container { max-width: var(--container); margin-inline:auto; padding: 1rem; }
+  .site-header { position: sticky; top: 0; backdrop-filter: blur(6px); background: color-mix(in oklab, Canvas 92%, transparent); border-bottom: 1px solid color-mix(in oklab, CanvasText 12%, transparent); }
+  @media (prefers-color-scheme: dark){ .site-header{ background: color-mix(in oklab, Canvas 80%, transparent); border-bottom-color: color-mix(in oklab, CanvasText 25%, transparent);} }
+  .header-inner { display:flex; align-items:center; gap:1rem; }
+  .brand { display:flex; align-items:center; gap:.6rem; text-decoration:none; color: inherit; }
+  .brand-title { font-weight: 700; letter-spacing: .2px; }
+  .site-nav { margin-left:auto; }
+  .site-nav button.nav-toggle { display:none; }
+  .site-nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
+  .site-nav a { text-decoration:none; padding:.5rem .6rem; border-radius:.5rem; }
+  .site-nav a[aria-current="page"]{ outline:2px solid currentColor; }
+  .site-content { min-block-size: 60vh; }
+  .site-footer { border-top:1px solid color-mix(in oklab, CanvasText 12%, transparent); margin-top:4rem; }
+  .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+  .footer-inner .muted { opacity:.7; font-size:.95rem; }
+  .social { list-style:none; display:flex; gap:.8rem; margin:0; padding:0; }
+  .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+  .skip-link:focus{ left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem; background:#ffd; color:#111; border-radius:.5rem; z-index: 999; }
+  @media (max-width: 780px){
+    .site-nav button.nav-toggle{ display:inline-flex; align-items:center; gap:.4rem; border:1px solid color-mix(in oklab, CanvasText 15%, transparent); background:none; padding:.4rem .6rem; border-radius:.5rem; }
+    .site-nav ul{ display:none; position:absolute; right:1rem; top:3.25rem; background: Canvas; border:1px solid color-mix(in oklab, CanvasText 15%, transparent); border-radius:.75rem; padding:.5rem; flex-direction:column; min-width: 12rem; }
+    .site-nav ul.open{ display:flex; }
+  }
+</style>
+
+<script>
+  // simple mobile nav toggle (no framework)
+  const btn = document.querySelector('.nav-toggle');
+  const list = document.getElementById('nav-list');
+  if (btn && list) {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+      btn.setAttribute('aria-expanded', !expanded);
+      list.classList.toggle('open');
+    });
+  }
+</script>
+
+{%- comment -%}
+Optional analytics hooks
+{%- endcomment -%}
+{% if site.plausible_domain %}
+  <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/plausible.js"></script>
+{% endif %}
+{% if site.google_analytics %}
+  <!-- Google Analytics (Universal/GA4 via gtag) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+{% endif %}
+
+  </body>
 </html>
