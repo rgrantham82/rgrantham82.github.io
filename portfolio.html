@@ -1,71 +1,199 @@
----
-layout: default
-title: Portfolio
----
-<div class="section-title">
-  <h1>Portfolio</h1>
-  <div class="meta">Selected works, 2024–2025</div>
-</div>
 
-<div class="grid auto-3" id="portfolio-grid"></div>
+---
+layout: default 
+title: Portfolio 
+description: "Original artworks by Robert Grantham—expressive calligraphy and contemporary painting."
+---
 
-<script>
-// Edit/add works here; they’ll auto‑render.
-const WORKS = [
-  {
-    id: "eon-001",
-    title: "Edge of Night",
-    series: "Edge of Night",
-    year: 2025,
-    size: "12×16 in",
-    medium: "Acrylic on canvas (SoHo Urban Artist)",
-    price: 335,
-    student_price: 300,
-    status: "available",
-    src: "/assets/images/edge-of-night-01.jpg",
-    alt: "High-contrast ground with copperplate fragments dissolving into night.",
-    detail: "/assets/images/edge-of-night-01-detail.jpg"
-  },
-  {
-    id: "love-008",
-    title: "In Love",
-    series: "In Love",
-    year: 2025,
-    size: "8×10 in",
-    medium: "Posca markers on Canson oil & acrylic paper",
-    price: 140,
-    student_price: 120,
-    status: "available",
-    src: "/assets/images/in-love-01.jpg",
-    alt: "Gestural calligraphy forming the words ‘in love’."
-  },
-  {
-    id: "res-010",
-    title: "Resilience",
-    series: "Resilience Magnolia",
-    year: 2025,
-    size: "8×10 in",
-    medium: "Posca on canvas",
-    price: 140,
-    student_price: 120,
-    status: "available",
-    src: "/assets/images/resilience-01.jpg",
-    alt: "Magnolia‑inspired calligraphy over layered ground."
+<section class="hero">
+  <div>
+    <span class="tag">Originals • Works on Panel & Canvas • Calligraphy</span>
+    <h1>Portfolio</h1>
+    <p>
+      A selection of recent and signature works. For questions, commissions, or studio visits,
+      please <a href="/about.html">get in touch</a> or DM
+      <a href="https://instagram.com/robertgranthamart" target="_blank" rel="noopener">@robertgranthamart</a>.
+    </p>
+    <p class="meta">Student discount with valid UT ID. COA included with all originals.</p>
+  </div>
+</section><style>
+  /* Lightweight page‑local styles to ensure a clean grid even if site CSS changes */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
   }
-];
+  .work.card { overflow: hidden; }
+  .work .pad { display: grid; gap: .5rem; }
+  .work .meta { font-size: .9rem; opacity: .75; }
+  .badges { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .badge { font-size: .75rem; padding: .15rem .5rem; border: 1px solid currentColor; border-radius: 999px; }
+  .sold { opacity: .6; }
+  .tags { display: flex; gap: .5rem; flex-wrap: wrap; margin: .5rem 0 0; }
+  .tags .tag { font-size: .7rem; opacity: .8; }
+  .cta { display: flex; gap: .5rem; flex-wrap: wrap; }
+  .button[aria-disabled="true"] { pointer-events: none; opacity: .5; }
+  figure { margin: 0; }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption { display: none; }
+</style><section>
+  <div class="gallery-grid"><!-- WORK 1: Edge of Night -->
+<article class="card work" data-tags="acrylic canvas 12x16 available recent">
+  <figure>
+    <!-- Known path from homepage; replace if you change the filename -->
+    <img src="/assets/images/edge-of-night-01.jpg" alt="Edge of Night — layered acrylic painting with expressive gestures" loading="lazy" />
+  </figure>
+  <div class="pad">
+    <h3>Edge of Night</h3>
+    <div class="meta">2025 • Acrylic on canvas • 12×16 in</div>
+    <p class="blurb">A nocturne of pressure and release—ink‑dark fields parted by a seam of light.</p>
+    <div class="badges">
+      <span class="badge">Original</span>
+      <span class="badge">Available</span>
+    </div>
+    <div class="cta">
+      <a class="button" href="https://instagram.com/robertgranthamart" target="_blank" rel="noopener">Inquire</a>
+      <a class="button ghost" href="https://cash.app/$bobby198237" target="_blank" rel="noopener">Reserve (Cash App)</a>
+      <a class="button ghost" href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">Reserve (Venmo)</a>
+    </div>
+    <div class="tags">
+      <span class="tag">Abstract</span><span class="tag">Nocturne</span>
+    </div>
+  </div>
+</article>
 
-function card(w){
-  return `
-    <article class="card">
-      <img loading="lazy" src="${w.src}" alt="${w.alt}"/>
-      <div class="pad">
-        <div class="meta">${w.year} • ${w.size} • ${w.medium}</div>
-        <h3>${w.title}</h3>
-        <div class="mt-1"><span class="badge">${w.series}</span> #${w.id}</div>
-        ${w.price?`<div class="price">$${w.price} <span class="meta">(UT: $${w.student_price})</span></div>`:""}
-      </div>
-    </article>`;
-}
+<!-- WORK 2: Furcht frisst Gerechtigkeit -->
+<article class="card work" data-tags="acrylic panel 12x16 calligraphy available">
+  <figure>
+    <!-- TODO: Replace src with actual path, e.g., /assets/images/furcht-frisst-gerechtigkeit-01.jpg -->
+    <img src="/assets/images/placeholder-furcht.jpg" alt="Furcht frisst Gerechtigkeit — blackletter calligraphy over layered acrylic" loading="lazy" />
+  </figure>
+  <div class="pad">
+    <h3>Furcht frisst Gerechtigkeit</h3>
+    <div class="meta">2025 • Acrylic on Ampersand Gessobord • 12×16×7/8 in</div>
+    <p class="blurb">Blackletter over palimpsest layers; a statement on fear eroding justice.</p>
+    <div class="badges">
+      <span class="badge">Original</span>
+      <span class="badge">Available</span>
+    </div>
+    <div class="cta">
+      <a class="button" href="https://instagram.com/robertgranthamart" target="_blank" rel="noopener">Inquire</a>
+      <a class="button ghost" href="https://cash.app/$bobby198237" target="_blank" rel="noopener">Reserve (Cash App)</a>
+      <a class="button ghost" href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">Reserve (Venmo)</a>
+    </div>
+    <div class="tags">
+      <span class="tag">Calligraffiti</span><span class="tag">Blackletter</span>
+    </div>
+  </div>
+</article>
 
-document.getElementById('portfolio-grid').innerHTML = WORKS.map(card).join('');
-</script>
+<!-- WORK 3: Resilience -->
+<article class="card work" data-tags="acrylic canvas 8x10 calligraphy available">
+  <figure>
+    <!-- TODO: Replace with actual file path -->
+    <img src="/assets/images/placeholder-resilience.jpg" alt="Resilience — layered calligraphy on 8×10 canvas" loading="lazy" />
+  </figure>
+  <div class="pad">
+    <h3>Resilience</h3>
+    <div class="meta">2025 • Acrylic on canvas • 8×10×5/8 in</div>
+    <p class="blurb">Hope written by hand—rhythmic strokes built over warm underpainting.</p>
+    <div class="badges">
+      <span class="badge">Original</span>
+      <span class="badge">Available</span>
+    </div>
+    <div class="cta">
+      <a class="button" href="https://instagram.com/robertgranthamart" target="_blank" rel="noopener">Inquire</a>
+      <a class="button ghost" href="https://cash.app/$bobby198237" target="_blank" rel="noopener">Reserve (Cash App)</a>
+      <a class="button ghost" href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">Reserve (Venmo)</a>
+    </div>
+    <div class="tags">
+      <span class="tag">Copperplate</span><span class="tag">Layered</span>
+    </div>
+  </div>
+</article>
+
+<!-- WORK 4: Lux ex Tenebris (Collected) -->
+<article class="card work sold" data-tags="acrylic panel 12x16 calligraphy collected">
+  <figure>
+    <!-- TODO: Replace with actual file path -->
+    <img src="/assets/images/placeholder-lux-ex-tenebris.jpg" alt="Lux ex Tenebris — light from darkness" loading="lazy" />
+  </figure>
+  <div class="pad">
+    <h3>Lux ex Tenebris</h3>
+    <div class="meta">2024–2025 • Acrylic on Ampersand Gessobord • 12×16 in</div>
+    <p class="blurb">A meditation on emergence—light cutting through layered obscurity.</p>
+    <div class="badges">
+      <span class="badge">Collected</span>
+      <span class="badge">Austin</span>
+    </div>
+    <div class="cta">
+      <a class="button ghost" aria-disabled="true" tabindex="-1">Not available</a>
+    </div>
+    <div class="tags">
+      <span class="tag">Calligraphy</span><span class="tag">Abstract</span>
+    </div>
+  </div>
+</article>
+
+<!-- WORK 5: Magnolia Resilientia -->
+<article class="card work" data-tags="acrylic panel 12x16 calligraphy available">
+  <figure>
+    <!-- TODO: Replace with actual file path -->
+    <img src="/assets/images/placeholder-magnolia-resilientia.jpg" alt="Magnolia Resilientia — calligraphic abstraction with magnolia symbolism" loading="lazy" />
+  </figure>
+  <div class="pad">
+    <h3>Magnolia Resilientia</h3>
+    <div class="meta">2025 • Acrylic on panel • 12×16 in</div>
+    <p class="blurb">Magnolia as symbol—steadfastness rendered in layered script and glaze.</p>
+    <div class="badges">
+      <span class="badge">Original</span>
+      <span class="badge">Available</span>
+    </div>
+    <div class="cta">
+      <a class="button" href="https://instagram.com/robertgranthamart" target="_blank" rel="noopener">Inquire</a>
+      <a class="button ghost" href="https://cash.app/$bobby198237" target="_blank" rel="noopener">Reserve (Cash App)</a>
+      <a class="button ghost" href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">Reserve (Venmo)</a>
+    </div>
+    <div class="tags">
+      <span class="tag">Symbolic</span><span class="tag">Palimpsest</span>
+    </div>
+  </div>
+</article>
+
+<!-- WORK 6: Misericordia -->
+<article class="card work" data-tags="acrylic canvas 12x16 calligraphy available">
+  <figure>
+    <!-- TODO: Replace with actual file path -->
+    <img src="/assets/images/placeholder-misericordia.jpg" alt="Misericordia — layered calligraphy piece" loading="lazy" />
+  </figure>
+  <div class="pad">
+    <h3>Misericordia</h3>
+    <div class="meta">2025 • Acrylic on canvas • 12×16 in</div>
+    <p class="blurb">Mercy as texture—quiet script woven through weathered grounds.</p>
+    <div class="badges">
+      <span class="badge">Original</span>
+      <span class="badge">Available</span>
+    </div>
+    <div class="cta">
+      <a class="button" href="https://instagram.com/robertgranthamart" target="_blank" rel="noopener">Inquire</a>
+      <a class="button ghost" href="https://cash.app/$bobby198237" target="_blank" rel="noopener">Reserve (Cash App)</a>
+      <a class="button ghost" href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">Reserve (Venmo)</a>
+    </div>
+    <div class="tags">
+      <span class="tag">Copperplate</span><span class="tag">Textural</span>
+    </div>
+  </div>
+</article>
+
+  </div>
+</section><section class="card" style="margin-top:2rem;">
+  <div class="pad">
+    <h3>Edit notes</h3>
+    <ul>
+      <li>Replace any <code>placeholder-*.jpg</code> with your real image paths in <code>/assets/images/</code>.</li>
+      <li>Update sizes/years if needed. All originals include a Certificate of Authenticity.</li>
+      <li>If you add more works, duplicate a <code>&lt;article class="card work"&gt;</code> block and adjust fields.</li>
+    </ul>
+  </div>
+</section>
