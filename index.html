@@ -1,6 +1,5 @@
-
 ---
-layout: default 
+layout: default
 title: Home
 ---
 
@@ -9,8 +8,8 @@ title: Home
     <span class="tag">Expressive Calligraphy • Painting • Research</span>
     <h1>Hope, written by hand. Resilience, painted in layers.</h1>
     <p>
-      I’m Robert Grantham—an Austin‑based modern calligrapher and painter blending
-      Copperplate & Blackletter with contemporary abstraction. I also build data‑driven
+      I’m Robert Grantham—an Austin-based modern calligrapher and painter blending
+      Copperplate & Blackletter with contemporary abstraction. I also build data-driven
       tools and write about art, history, and community.
     </p>
     <div class="cta">
@@ -19,99 +18,58 @@ title: Home
     </div>
   </div>
   <div>
-    <div class="card">
-      <img src="/assets/images/furcht-frisst-gerechtigkeit-01.jpg" alt="Furcht frisst Gerechtigkeit artwork" />
-      <div class="pad">
-        <div class="meta">Recent work • 12×16 acrylic on Ampersand Gessobord (7/8")</div>
+    <figure class="card">
+      <img loading="lazy" src="/assets/images/edge-of-night-01.jpg" alt="Edge of Night artwork" />
+      <figcaption class="pad">
+        <div class="meta">Recent work • 12×16 acrylic on canvas</div>
+        <h3>Edge of Night</h3>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="featured">
+  <h2>Featured Works</h2>
+  <div class="grid">
+    <a class="art-card" href="/portfolio.html#furcht-frisst-gerechtigkeit" aria-label="Furcht frisst Gerechtigkeit">
+      <img loading="lazy" src="/assets/images/furcht-frisst-gerechtigkeit-01.jpg" alt="Furcht frisst Gerechtigkeit on Ampersand gessobord" />
+      <div class="art-info">
         <h3>Furcht frisst Gerechtigkeit</h3>
-        <div class="mt-1"><span class="badge">Würzburg Justice</span></div>
+        <p>12×16×7/8 Ampersand Gessobord • Acrylic</p>
       </div>
+    </a>
+
+    <a class="art-card" href="/portfolio.html#resilience" aria-label="Resilience">
+      <img loading="lazy" src="/assets/images/resilience-01.jpg" alt="Resilience, acrylic on canvas" />
+      <div class="art-info">
+        <h3>Resilience</h3>
+        <p>8×10×5/8 Canvas • Acrylic</p>
+      </div>
+    </a>
+
+    <a class="art-card" href="/portfolio.html#lux-ex-tenebris" aria-label="Lux ex Tenebris">
+      <img loading="lazy" src="/assets/images/lux-ex-tenebris-01.jpg" alt="Lux ex Tenebris, calligraphy with gilded accents" />
+      <div class="art-info">
+        <h3>Lux ex Tenebris</h3>
+        <p>12×16×5/8 Canvas • Acrylic</p>
+      </div>
+    </a>
+  </div>
+  <div class="center">
+    <a class="button" href="/portfolio.html">See all works</a>
+  </div>
+</section>
+
+<section class="about-teaser">
+  <div class="about-inner">
+    <div>
+      <h2>Why I write on walls, panels, and cardboard</h2>
+      <p>
+        My practice blends classical scripts with contemporary gestures to hold tension between
+        fragility and strength. Materials matter: from reclaimed cardboard to Ampersand panels,
+        every surface carries memory—and gets a second life.
+      </p>
+      <a class="button ghost" href="/about.html">Learn more</a>
     </div>
   </div>
-</section><div class="section-title">
-  <h2>Available Works</h2>
-  <a class="button ghost" href="/portfolio.html">See all</a>
-</div><div class="grid auto-3" id="available-grid"></div><script>
-const WORKS = [
-  {
-    id: "ffg-001",
-    title: "Furcht frisst Gerechtigkeit",
-    series: "Würzburg Justice",
-    year: 2025,
-    size: "12×16 in",
-    medium: "Acrylic on Ampersand Gessobord (7/8 in)",
-    price: 335,
-    student_price: 300,
-    status: "available",
-    is_new: true,
-    src: "/assets/images/furcht-frisst-gerechtigkeit-01.jpg",
-    alt: "German blackletter phrase ‘Furcht frisst Gerechtigkeit’ with tally marks and faint ‘Würzburg’ underlayers."
-  },
-  {
-    id: "eon-001",
-    title: "Edge of Night",
-    series: "Edge of Night",
-    year: 2025,
-    size: "12×16 in",
-    medium: "Acrylic on canvas (SoHo Urban Artist)",
-    price: 335,
-    student_price: 300,
-    status: "available",
-    src: "/assets/images/edge-of-night-01.jpg",
-    alt: "High-contrast ground with copperplate fragments dissolving into night."
-  },
-  {
-    id: "love-008",
-    title: "In Love",
-    series: "In Love",
-    year: 2025,
-    size: "8×10 in",
-    medium: "Posca markers on Canson oil & acrylic paper",
-    price: 140,
-    student_price: 120,
-    status: "available",
-    src: "/assets/images/in-love-01.jpg",
-    alt: "Gestural calligraphy forming the words ‘in love’."
-  },
-  {
-    id: "res-010",
-    title: "Resilience",
-    series: "Resilience Magnolia",
-    year: 2025,
-    size: "8×10 in",
-    medium: "Acrylic on canvas",
-    price: 140,
-    student_price: 120,
-    status: "available",
-    is_new: true,
-    src: "/assets/images/resilience-01.jpg",
-    alt: "Magnolia‑inspired calligraphy over layered ground."
-  }
-];
-
-function usd(n){
-  try { return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }); }
-  catch(e){ return `$${n}`; }
-}
-
-function card(w){
-  return `
-    <article class="card ${w.is_new ? 'is-new' : ''}">
-      <img loading="lazy" src="${w.src}" alt="${w.alt}"/>
-      <div class="pad">
-        <div class="meta">${w.year} • ${w.size} • ${w.medium}</div>
-        <h3>${w.title}</h3>
-        <div class="mt-1">
-          <span class="badge">${w.series}</span>
-          ${w.is_new ? '<span class="badge success">New</span>' : ''}
-        </div>
-        <div class="price">${usd(w.price)} <span class="meta">(UT: ${usd(w.student_price)})</span></div>
-      </div>
-    </article>`;
-}
-
-document.getElementById('available-grid').innerHTML = WORKS
-  .filter(w => w.status === 'available')
-  .map(card)
-  .join('');
-</script>
+</section>
