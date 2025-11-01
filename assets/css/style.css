@@ -2,6 +2,92 @@
 
 /* ------------------------------ Design Tokens --------------------------------/ :root { / Color palette / --bg: #0f0f12;           / near-black charcoal / --bg-soft: #15171b;      / panels / --text: #ececec;         / primary text / --muted: #b9bcc4;        / secondary text / --link: #8db5ff;         / link / --accent: #ff9d2e;       / warm accent / --accent-2: #ffd57a;     / soft highlight / --line: #262a31;         / borders */
 
+/* --- Layout containment & type --- */
+.hero, .featured, .about-teaser { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 2rem 1rem; 
+}
+
+/* Prevent huge image overflow and weird link underlines over images */
+img { 
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  border: 0; 
+}
+a img { text-decoration: none; border: 0; }
+
+/* Kill underlines on image-links and make focus visible but clean */
+.art-card, .card, .cta .button, .button.ghost { 
+  text-decoration: none; 
+}
+.art-card:focus-visible, .cta .button:focus-visible, .button.ghost:focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+
+/* Hero layout */
+.hero { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1.1fr 1fr; }
+}
+
+/* Card */
+.card { 
+  background: var(--card-bg, #fff); 
+  border-radius: 16px; 
+  overflow: hidden; 
+  box-shadow: 0 10px 30px rgba(0,0,0,.08); 
+}
+.card .pad { padding: 1rem; }
+.card .meta { font-size: .85rem; opacity: .7; margin-bottom: .25rem; }
+
+/* Featured grid */
+.featured h2 { margin-bottom: 1rem; }
+.featured .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) { .featured .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .featured .grid { grid-template-columns: repeat(3, 1fr); } }
+
+.art-card {
+  display: flex; 
+  flex-direction: column; 
+  background: #fff; 
+  border-radius: 16px; 
+  overflow: hidden; 
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.art-card:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 12px 30px rgba(0,0,0,.08); 
+}
+.art-card img { aspect-ratio: 4 / 3; object-fit: cover; }
+.art-card .art-info { padding: .9rem 1rem 1.1rem; }
+.art-card h3 { margin: 0 0 .25rem; font-size: 1rem; }
+.art-card p { margin: 0; font-size: .9rem; opacity: .75; }
+
+.center { text-align: center; margin-top: 1rem; }
+
+/* Buttons */
+.button, .button.ghost {
+  display: inline-block;
+  padding: .75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+.button { background: currentColor; color: #fff; }
+.button.ghost { background: transparent; }
+
+/* About teaser (simple, flexible) */
+.about-teaser { background: #f8f8f8; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.about-inner { max-width: 850px; margin: 0 auto; }
+
+/* Utility */
+.tag { font-size: .85rem; letter-spacing: .04em; text-transform: uppercase; opacity: .7; }
 /* Elevation */ --shadow-sm: 0 1px 2px rgba(0,0,0,0.25); --shadow-md: 0 6px 18px rgba(0,0,0,0.35); --shadow-lg: 0 18px 36px rgba(0,0,0,0.45);
 
 /* Radius & spacing scale */ --radius: 16px; --radius-lg: 22px; --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px; --space-6: 24px; --space-7: 28px; --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px;
