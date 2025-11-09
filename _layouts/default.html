@@ -6,89 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">{%- comment -%}
-Title & description
-{%- endcomment -%}
+    {%- assign theme_dark  = page.theme_color_dark  | default: site.theme_color_dark  | default: '#0b0c0f' -%}
+    {%- assign theme_light = page.theme_color_light | default: site.theme_color_light | default: '#ffffff' -%}
+    <meta name="theme-color" content="{{ theme_dark }}" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="{{ theme_light }}" media="(prefers-color-scheme: light)">{%- comment -%} Title & description {%- endcomment -%}
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: "Robert Grantham Art" }}</title>
-<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | default: "Hope, written by hand. Resilience, painted in layers." }}{% endif %}">
+<meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | default: 'Hope, written by hand. Resilience, painted in layers.' | strip_html | strip_newlines | truncate: 160 }}">
 
-{%- comment -%}
-Canonical URL
-{%- endcomment -%}
+{%- comment -%} Canonical URL {%- endcomment -%}
 {% if site.url %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 {% endif %}
 
-{%- comment -%}
-Open Graph / Twitter Card
-{%- endcomment -%}
+{%- comment -%} Open Graph / Twitter Card {%- endcomment -%}
 {% assign social_title = page.social_title | default: page.title | default: site.title %}
-{% assign social_desc  = page.social_description | default: page.excerpt | default: site.description %}
+{% assign social_desc  = page.social_description | default: page.description | default: site.description %}
 {% assign og_img       = page.og_image | default: page.image | default: site.og_image | default: '/assets/images/og-default.jpg' %}
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.title | default: 'Robert Grantham Art' }}">
-<meta property="og:title" content="{{ social_title }}">
-<meta property="og:description" content="{{ social_desc | strip_html | strip_newlines }}">
+<meta property="og:title" content="{{ social_title | escape }}">
+<meta property="og:description" content="{{ social_desc | strip_html | strip_newlines | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{{ og_img | absolute_url }}">
+<meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ social_title }}">
-<meta name="twitter:description" content="{{ social_desc | strip_html | strip_newlines }}">
+<meta name="twitter:title" content="{{ social_title | escape }}">
+<meta name="twitter:description" content="{{ social_desc | strip_html | strip_newlines | escape }}">
 {% if site.twitter_username %}<meta name="twitter:site" content="@{{ site.twitter_username }}">{% endif %}
 
-{%- comment -%}
-Assets
-{%- endcomment -%}
+{%- comment -%} Assets {%- endcomment -%}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 {%- if site.font_href %}
   <link href="{{ site.font_href }}" rel="stylesheet">
 {%- endif %}
 
-{%- comment -%}
-Main stylesheet (adjust the path to your actual CSS)
-{%- endcomment -%}
+{%- comment -%} Main stylesheet {%- endcomment -%}
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 {%- if page.css %}<link rel="stylesheet" href="{{ page.css | relative_url }}">{%- endif %}
 
-{%- comment -%}
-Favicon set (add files to /assets/favicons)
-{%- endcomment -%}
+{%- comment -%} Favicons {%- endcomment -%}
 <link rel="icon" href="{{ '/assets/favicons/favicon.ico' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/favicons/apple-touch-icon.png' | relative_url }}">
 
-{%- comment -%}
-Optional: jekyll-seo-tag if installed
-{%- endcomment -%}
+{%- comment -%} Optional: jekyll-seo-tag if installed {%- endcomment -%}
 {% if site.plugins and site.plugins contains 'jekyll-seo-tag' %}
   {% seo %}
 {% endif %}
 
-{%- comment -%}
-JSON-LD Organization/Person
-{%- endcomment -%}
+{%- comment -%} JSON-LD: WebSite (pages may add Person/Artwork JSON-LD themselves) {%- endcomment -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ site.author.name | default: 'Robert Grantham' }}",
-  "url": "{{ site.url | default: site.github.url }}",
-  "image": "{{ site.logo | default: '/assets/images/og-default.jpg' | absolute_url }}",
-  "sameAs": [{% if site.instagram_username %}"https://instagram.com/{{ site.instagram_username }}"{% endif %}{% if site.social and site.social.size > 0 %}{% for s in site.social %}{% if forloop.first and site.instagram_username %},{% endif %}"{{ s }}"{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}]
+  "@type": "WebSite",
+  "name": "{{ site.title | default: 'Robert Grantham Art' }}",
+  "url": "{{ site.url | default: site.github.url }}"
 }
 </script>
 
-<script>
-  // Remove no-js if JS is available
-  document.documentElement.classList.remove('no-js');
-</script>
+<script>document.documentElement.classList.remove('no-js');</script>
 
   </head>  <body>
     <a class="skip-link" href="#content">Skip to content</a><header class="site-header" role="banner">
-  <div class="container header-inner">
+  <div class="wrapper navbar">
     <a class="brand" href="{{ '/' | relative_url }}">
       {% if site.logo %}
         <img src="{{ site.logo | relative_url }}" alt="{{ site.title | default: 'Robert Grantham Art' }} logo" width="40" height="40" loading="lazy" decoding="async">
@@ -96,12 +78,9 @@ JSON-LD Organization/Person
       <span class="brand-title">{{ site.title | default: 'Robert Grantham Art' }}</span>
     </a>
 
-    <nav class="site-nav" aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">Menu</button>
       <ul id="nav-list">
-        {%- comment -%}
-        Prefer _data/nav.yml if present; otherwise fall back to common pages
-        {%- endcomment -%}
         {% if site.data.nav and site.data.nav.links %}
           {% for item in site.data.nav.links %}
             <li><a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
@@ -121,12 +100,12 @@ JSON-LD Organization/Person
 </main>
 
 <footer class="site-footer" role="contentinfo">
-  <div class="container footer-inner">
+  <div class="wrapper footer-inner" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
     <div class="footer-brand">
       <strong>{{ site.title | default: 'Robert Grantham Art' }}</strong>
       <div class="muted">© {{ site.time | date: '%Y' }} {{ site.author.name | default: 'Robert Grantham' }}</div>
     </div>
-    <ul class="social">
+    <ul class="social" style="list-style:none; display:flex; gap:.8rem; margin:0; padding:0;">
       {% if site.instagram_username %}<li><a href="https://instagram.com/{{ site.instagram_username }}" rel="me">Instagram</a></li>{% endif %}
       {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" rel="me">Twitter/X</a></li>{% endif %}
       {% if site.github_username or site.github.owner_name %}<li><a href="https://github.com/{{ site.github_username | default: site.github.owner_name }}">GitHub</a></li>{% endif %}
@@ -135,40 +114,18 @@ JSON-LD Organization/Person
   </div>
 </footer>
 
-{%- comment -%}
-Minimal CSS for layout structure (remove if you already include site CSS)
-{%- endcomment -%}
 <style>
-  :root { --container: 1120px; }
-  body { margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color: #111; background: #fff; }
-  @media (prefers-color-scheme: dark) { body{ color:#eee; background:#111; } }
-  .container { max-width: var(--container); margin-inline:auto; padding: 1rem; }
-  .site-header { position: sticky; top: 0; backdrop-filter: blur(6px); background: color-mix(in oklab, Canvas 92%, transparent); border-bottom: 1px solid color-mix(in oklab, CanvasText 12%, transparent); }
-  @media (prefers-color-scheme: dark){ .site-header{ background: color-mix(in oklab, Canvas 80%, transparent); border-bottom-color: color-mix(in oklab, CanvasText 25%, transparent);} }
-  .header-inner { display:flex; align-items:center; gap:1rem; }
-  .brand { display:flex; align-items:center; gap:.6rem; text-decoration:none; color: inherit; }
-  .brand-title { font-weight: 700; letter-spacing: .2px; }
-  .site-nav { margin-left:auto; }
-  .site-nav button.nav-toggle { display:none; }
-  .site-nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
-  .site-nav a { text-decoration:none; padding:.5rem .6rem; border-radius:.5rem; }
-  .site-nav a[aria-current="page"]{ outline:2px solid currentColor; }
-  .site-content { min-block-size: 60vh; }
-  .site-footer { border-top:1px solid color-mix(in oklab, CanvasText 12%, transparent); margin-top:4rem; }
-  .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
-  .footer-inner .muted { opacity:.7; font-size:.95rem; }
-  .social { list-style:none; display:flex; gap:.8rem; margin:0; padding:0; }
-  .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
-  .skip-link:focus{ left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem; background:#ffd; color:#111; border-radius:.5rem; z-index: 999; }
+  /* Minimal nav toggle CSS to complement /assets/css/style.css */
+  .nav-toggle { display: none; }
   @media (max-width: 780px){
-    .site-nav button.nav-toggle{ display:inline-flex; align-items:center; gap:.4rem; border:1px solid color-mix(in oklab, CanvasText 15%, transparent); background:none; padding:.4rem .6rem; border-radius:.5rem; }
-    .site-nav ul{ display:none; position:absolute; right:1rem; top:3.25rem; background: Canvas; border:1px solid color-mix(in oklab, CanvasText 15%, transparent); border-radius:.75rem; padding:.5rem; flex-direction:column; min-width: 12rem; }
-    .site-nav ul.open{ display:flex; }
+    .nav-toggle{ display:inline-flex; align-items:center; gap:.4rem; border:1px solid rgba(255,255,255,.15); background:none; padding:.4rem .6rem; border-radius:.5rem; color:inherit; }
+    .nav ul{ display:none; position:absolute; right:1rem; top:3.25rem; background: Canvas; border:1px solid rgba(0,0,0,.15); border-radius:.75rem; padding:.5rem; flex-direction:column; min-width: 12rem; }
+    .nav ul.open{ display:flex; }
   }
 </style>
 
 <script>
-  // simple mobile nav toggle (no framework)
+  // Mobile nav toggle
   const btn = document.querySelector('.nav-toggle');
   const list = document.getElementById('nav-list');
   if (btn && list) {
@@ -180,14 +137,11 @@ Minimal CSS for layout structure (remove if you already include site CSS)
   }
 </script>
 
-{%- comment -%}
-Optional analytics hooks
-{%- endcomment -%}
+{%- comment -%} Optional analytics hooks {%- endcomment -%}
 {% if site.plausible_domain %}
   <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/plausible.js"></script>
 {% endif %}
 {% if site.google_analytics %}
-  <!-- Google Analytics (Universal/GA4 via gtag) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
