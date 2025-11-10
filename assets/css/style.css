@@ -36,6 +36,21 @@
   --content-max: 1200px;
 }
 
+/* add to /assets/css/style.css */
+
+.prose { max-width: 72ch; }
+.prose p { color: var(--muted); margin: var(--space-4) 0; }
+.prose h2 { margin-top: var(--space-10); line-height: 1.2; }
+.prose em { font-style: italic; }
+.prose strong { color: var(--text); }
+
+.callout {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  padding: var(--space-6);
+  border-radius: var(--radius);
+}
+
 /* Optional light theme (add .theme-light to <html> or <body>) */
 .theme-light {
   --bg: #f9fafb; --bg-soft: #ffffff; --paper: #ffffff; --text: #0f1115; --muted: #4b5563;
