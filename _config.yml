@@ -1,54 +1,77 @@
 # _config.yml — Robert Grantham Portfolio
 
-title: "Robert Grantham"
-tagline: "Hope, resilience, and calligraphy in layers"
-author: "Robert Grantham"
-description: "Austin-based modern expressive calligrapher, painter, and historian. Fusing Copperplate & Blackletter with abstraction. Available works, commissions, essays."
+title: "Robert Grantham Art"
+tagline: "Hope, written by hand. Resilience, painted in layers."
+description: "Austin-based modern calligrapher and painter blending Copperplate & Blackletter with contemporary abstraction. Originals, commissions, essays."
+
+# Primary site URLs
 url: "https://rgrantham82.github.io"
 baseurl: ""   # leave blank for GitHub Pages root
 
-# Social links
-instagram_url: "https://instagram.com/robertgranthamart"
-linkedin_url: "https://linkedin.com/in/robertgrantham82"
+# Author & contact
+author:
+  name: "Robert Grantham"
+  email: "robertgrantham40@gmail.com"
+
 email: "robertgrantham40@gmail.com"
+
+# Social (match layout expectations)
+instagram_username: "robertgranthamart"
+# twitter_username: ""   # optional
 github_username: "rgrantham82"
-repository: "rgrantham82.github.io"
+linkedin_url: "https://linkedin.com/in/robertgrantham82"
+
+# Optional direct URLs (used in About/elsewhere)
+instagram_url: "https://instagram.com/robertgranthamart"
 
 # Payments
 cashapp_url: "https://cash.app/$bobby198237"
 venmo_url: "https://venmo.com/u/robert-grantham-6"
 
-# Favicon
-favicon: "/assets/images/favicon.ico"
+# Branding assets
+# logo: "/assets/images/logo.svg"         # optional; layout only renders if present
+og_image: "/assets/images/og-default.jpg" # social share fallback
+favicon: "/assets/favicons/favicon.ico"   # used by layout as default
+apple_touch_icon: "/assets/favicons/apple-touch-icon.png"
+
+# Theming & fonts (consumed by layout <meta name="theme-color">)
+theme_color_dark:  "#0b0c0f"
+theme_color_light: "#ffffff"
+# font_href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+
+# Repository metadata (helps GitHub Pages)
+repository: "rgrantham82/rgrantham82.github.io"
 
 # Defaults
 defaults:
-  -
-    scope:
-      path: ""       # all files
+  - scope:
+      path: ""       # all pages
       type: "pages"
     values:
       layout: "default"
+      # You can set page-wide image/og defaults per directory if you like
 
-# Exclude junk
-exclude:
-  - README.md
-  - node_modules
-  - .gitignore
-  - Gemfile
-  - Gemfile.lock
-
-# Markdown engine
+# Markdown & permalinks
 markdown: kramdown
+permalink: pretty
 
-# Theme (minima is optional; safe to leave)
-theme: minima
+# Theme (optional — not needed if you use your own layout/assets)
+# theme: minima
 
-# Plugins for SEO & sitemap
+# Plugins for SEO & sitemap (supported on GitHub Pages)
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
 
-# Build settings
-permalink: pretty
+# Exclude junk from builds
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor
