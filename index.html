@@ -8,6 +8,25 @@
     name="description"
     content="Austin-based expressive calligrapher and painter Robert Grantham. Hope, resilience, and calligraphy in layered acrylics and reclaimed materials."
   />
+  <meta name="theme-color" content="#f6f4f0" />
+  <link rel="canonical" href="https://rgrantham82.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Robert Grantham Art | Studio" />
+  <meta
+    property="og:description"
+    content="Austin-based expressive calligrapher and painter Robert Grantham. Hope, resilience, and calligraphy in layered acrylics and reclaimed materials."
+  />
+  <meta property="og:url" content="https://rgrantham82.github.io/" />
+  <meta property="og:image" content="https://rgrantham82.github.io/assets/images/hero-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Robert Grantham Art | Studio" />
+  <meta
+    name="twitter:description"
+    content="Austin-based expressive calligrapher and painter Robert Grantham. Hope, resilience, and calligraphy in layered acrylics and reclaimed materials."
+  />
+  <meta name="twitter:image" content="https://rgrantham82.github.io/assets/images/hero-image.jpg" />
 
   <!-- Google Font (optional, but looks better) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,6 +39,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="site-header__inner">
@@ -42,7 +62,7 @@
   </header>
 
   <!-- Hero Section -->
-  <main>
+  <main id="main-content">
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="hero__inner">
         <div class="hero__content">
@@ -68,6 +88,8 @@
             <img
               src="assets/images/hero-image.jpg"
               alt="Calligraphic abstract painting by Robert Grantham"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
           <p class="hero__image-caption">
@@ -92,7 +114,12 @@
           <!-- Piece 1 -->
           <article class="work-card">
             <div class="work-card__image">
-              <img src="assets/images/resilientia-final.jpg" alt="Magnolia-themed calligraphic abstract painting" />
+              <img
+                src="assets/images/resilientia-final.jpg"
+                alt="Magnolia-themed calligraphic abstract painting"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="work-card__body">
               <h3 class="work-card__title">Magnolia Palimpsest: Sursum Corda</h3>
@@ -110,7 +137,12 @@
           <!-- Piece 2 -->
           <article class="work-card">
             <div class="work-card__image">
-              <img src="assets/images/resilience-01.jpg" alt="Cardboard calligraphy artwork" />
+              <img
+                src="assets/images/resilience-01.jpg"
+                alt="Cardboard calligraphy artwork"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="work-card__body">
               <h3 class="work-card__title">Cardboard Calligraphy: Resilience</h3>
@@ -127,7 +159,12 @@
           <!-- Piece 3 -->
           <article class="work-card">
             <div class="work-card__image">
-              <img src="assets/images/Robert_Grantham_Over_the_Icebergs_12x16_acrylic_canvas_1 (1).jpg" alt="Abstract aerial iceberg painting" />
+              <img
+                src="assets/images/Robert_Grantham_Over_the_Icebergs_12x16_acrylic_canvas_1 (1).jpg"
+                alt="Abstract aerial iceberg painting"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="work-card__body">
               <h3 class="work-card__title">Over the Icebergs</h3>
@@ -145,7 +182,12 @@
           <!-- Piece 4 -->
           <article class="work-card">
             <div class="work-card__image">
-              <img src="assets/images/Furcht_frisst_Gerechtigkeit.jpg" alt="Expressive red and gold abstract calligraphy" />
+              <img
+                src="assets/images/Furcht_frisst_Gerechtigkeit.jpg"
+                alt="Expressive red and gold abstract calligraphy"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="work-card__body">
               <h3 class="work-card__title">Furcht frisst Gerechtigkeit</h3>
@@ -201,6 +243,8 @@
             <img
               src="assets/images/studio-detail.jpg"
               alt="Studio workspace with brushes, paints, and calligraphy sketches"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <p class="media-caption">
