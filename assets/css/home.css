@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Home Page Add-on Styles — extends global style.css
+   ========================================================================== */
+
+body.home .hero {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.hero-copy {
+  max-width: 640px;
+}
+
+.kicker {
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.highlight {
+  color: var(--text);
+  background: linear-gradient(120deg, rgba(255,215,0,.35), rgba(59,130,246,.3));
+  padding: 0 .2em;
+  border-radius: .3em;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 12px 0 18px;
+}
+
+.quick-facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+.quick-facts strong { color: var(--text); }
+
+.hero-card {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.hero-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.hero-card figcaption {
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: .8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,215,0,.14);
+  border: 1px solid rgba(255,215,0,.25);
+}
+
+.split-section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.grid.two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.panel h2 { margin-top: 0; }
+
+.stack {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.available {
+  text-align: center;
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--footer-bg);
+}
+
+.contact-cta {
+  text-align: center;
+  padding: 70px 0;
+}
+
+.contact-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.contact-cta p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-card { order: -1; }
+}
