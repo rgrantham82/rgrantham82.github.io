@@ -1,11 +1,103 @@
----
-layout: default
-title: Contact
----
+/* ==========================================================================
+   Contact Page Styles — extends global style.css
+   ========================================================================== */
 
-<section class="contact-page">
-    <h1>Contact Me</h1>
-    <p>I'd love to hear from you! Whether you're interested in my artwork, want to commission a piece, or have any questions, please reach out.</p>
-    <!-- You can add a contact form here or provide an email address -->
-    <p>Email: <a href="mailto:robertgrantham40@gmail.com">Robert</a></p>
-</section>
+body.contact .hero {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-text {
+  max-width: 640px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  margin-bottom: .5rem;
+}
+
+.hero-text p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.hero-image img {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.contact-info {
+  padding: 60px 0;
+}
+
+.contact-info h2 {
+  font-size: 1.6rem;
+  margin-bottom: .75rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.contact-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  transition: transform .2s ease, box-shadow .3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.contact-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: var(--link);
+  word-break: break-word;
+}
+
+.contact-cta {
+  text-align: center;
+  padding: 70px 0;
+  border-top: 1px solid var(--border);
+  background: var(--footer-bg);
+}
+
+.contact-cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+}
+
+.contact-cta p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-image {
+    order: -1;
+  }
+}
