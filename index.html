@@ -1,176 +1,96 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Robert Grantham — Art (painting & calligraphy) and Data Analytics. Commissions, murals, and projects." />
-  <meta name="theme-color" content="#0b0c10" />
-  <title>Robert Grantham — Art & Data</title>
+---
+layout: default
+title: Robert Grantham Art
+description: "Contemporary painting & calligraphy. Originals, commissions, murals, and data analytics projects."
+body_class: home
+css: /assets/css/home.css
+---
 
-  <!-- Home-only styles so we don't accidentally break existing pages -->
-  <link rel="stylesheet" href="/assets/home.css" />
+<section class="hero">
+  <div class="wrapper hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">Austin, TX • Available for commissions & collaborations</p>
 
-  <!-- Open Graph (optional image later: /assets/og.jpg) -->
-  <meta property="og:title" content="Robert Grantham — Art & Data" />
-  <meta property="og:description" content="Painting & calligraphy + data analytics projects. Commissions, murals, and portfolio." />
-  <meta property="og:type" content="website" />
-</head>
+      <h1>
+        I make work that <span class="highlight">holds attention</span> — 
+        in paint, in lettering, and in data.
+      </h1>
 
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+      <p class="lead">
+        I’m an artist and analyst creating acrylic paintings, calligraphy, and
+        data visualizations that merge structure and emotion. Each piece — whether
+        a canvas or a dashboard — aims for one thing: **clarity that lingers.**
+      </p>
 
-  <header class="top">
-    <div class="wrap top-inner">
-      <a class="brand" href="/" aria-label="Home">
-        <span class="mark" aria-hidden="true">RG</span>
-        <span class="brand-text">
-          <strong>Robert Grantham</strong>
-          <span class="sub">Art • Calligraphy • Data Analytics</span>
-        </span>
-      </a>
+      <div class="cta-row">
+        <a class="btn" href="/portfolio.html">See Art</a>
+        <a class="btn ghost" href="https://rgrantham82.github.io/data-analytics-portfolio" target="_blank" rel="noopener">See Data Portfolio</a>
+      </div>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="/portfolio.html">Art portfolio</a>
-        <a href="/commissions.html">Commissions</a>
-        <a href="/services.html">Services</a>
-        <a href="/about.html">About</a>
-        <a class="btn ghost" href="/contact.html">Contact</a>
-      </nav>
+      <ul class="quick-facts" role="list">
+        <li><strong>Medium:</strong> Acrylic • Ink • Calligraphy</li>
+        <li><strong>Focus:</strong> Commissions • Murals • Data Visualization</li>
+        <li><strong>Contact:</strong> <a href="/contact.html">robertgrantham40@gmail.com</a></li>
+      </ul>
     </div>
-  </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="kicker">Austin, TX • Available for commissions & opportunities</p>
+    <figure class="hero-card">
+      <img src="/assets/images/featured.jpg" 
+           alt="Featured artwork by Robert Grantham" 
+           loading="eager" width="800" height="500">
+      <figcaption>
+        <span class="tag">Featured Work</span>
+        <span class="muted small">“Aurum Rising” — Acrylic on canvas, 24×30</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
 
-          <h1>
-            I make work that <span class="glow">holds attention</span>—
-            in paint, in letters, and in data.
-          </h1>
-
-          <p class="lead">
-            Contemporary acrylic paintings and calligraphy (Copperplate, Blackletter, calligraffiti),
-            plus data analytics projects built in Python/SQL.
-            Pick the door you came here for—either way, you’ll leave with something useful.
-          </p>
-
-          <div class="cta">
-            <a class="btn" href="/portfolio.html">See art</a>
-            <a class="btn ghost" href="https://rgrantham82.github.io/data-analytics-portfolio" target="_blank" rel="noopener">
-              See data portfolio
-            </a>
-          </div>
-
-          <ul class="facts" role="list">
-            <li><strong>Art:</strong> originals, murals, commissions</li>
-            <li><strong>Data:</strong> Python • SQL • Excel • visualization</li>
-            <li><strong>Fast contact:</strong> <a href="/contact.html">contact page</a></li>
-          </ul>
-        </div>
-
-        <!-- Optional image slot: add /assets/featured.jpg when ready -->
-        <figure class="hero-card">
-          <div class="img-slot" role="img" aria-label="Featured image placeholder"></div>
-          <figcaption>
-            <span class="tag">Magnolia Canticle, No. 2</span>
-            <span class="muted">Add <code>/assets/images/featured.jpg</code> later for instant credibility.</span>
-          </figcaption>
-        </figure>
+<section class="split-section">
+  <div class="wrapper grid two">
+    <article class="panel">
+      <h2>Art & Calligraphy</h2>
+      <p class="muted">
+        Contemporary paintings and lettering designed to turn a wall into a story —
+        vivid, structured, and alive.
+      </p>
+      <div class="stack">
+        <a class="btn" href="/portfolio.html">View Portfolio</a>
+        <a class="btn ghost" href="/commissions.html">Commissions</a>
       </div>
-    </section>
+    </article>
 
-    <!-- TWO-LANE ROUTING -->
-    <section class="section">
-      <div class="wrap">
-        <div class="grid two">
-          <article class="panel">
-            <h2>For art buyers & venues</h2>
-            <p class="muted">
-              If you’re here for originals, commissions, murals, or you run a space that needs a statement wall:
-              this lane is for you.
-            </p>
-            <div class="stack">
-              <a class="btn" href="/portfolio.html">View art portfolio</a>
-              <a class="btn ghost" href="/commissions.html">Commission options</a>
-              <a class="btn ghost" href="/services.html">Murals / services</a>
-            </div>
-          </article>
-
-          <article class="panel">
-            <h2>For hiring & analytics</h2>
-            <p class="muted">
-              If you’re here to judge whether I can clean data, find patterns, and communicate results clearly:
-              follow the evidence.
-            </p>
-            <div class="stack">
-              <a class="btn" href="https://rgrantham82.github.io/data-analytics-portfolio" target="_blank" rel="noopener">
-                Data analytics portfolio
-              </a>
-              <a class="btn ghost" href="/blog.html">Writing / blog</a>
-              <a class="btn ghost" href="/contact.html">Contact</a>
-            </div>
-          </article>
-        </div>
+    <article class="panel">
+      <h2>Data & Analytics</h2>
+      <p class="muted">
+        Transforming messy data into clear, visual stories using Python, SQL,
+        and storytelling instincts honed through art.
+      </p>
+      <div class="stack">
+        <a class="btn" href="https://rgrantham82.github.io/data-analytics-portfolio" target="_blank" rel="noopener">Data Portfolio</a>
+        <a class="btn ghost" href="/about.html">About Me</a>
       </div>
-    </section>
+    </article>
+  </div>
+</section>
 
-    <!-- QUICK LINKS -->
-    <section class="section alt">
-      <div class="wrap">
-        <div class="head">
-          <h2>Quick links</h2>
-          <p class="muted">Because nobody wakes up hoping to solve a website maze.</p>
-        </div>
+<section class="available">
+  <div class="wrapper">
+    <h2>Available Works</h2>
+    <p class="muted">
+      Select paintings and calligraphy pieces available for immediate purchase or exhibition.
+    </p>
+    <a href="/portfolio.html" class="btn">Browse Portfolio</a>
+  </div>
+</section>
 
-        <div class="grid links">
-          <a class="card" href="/portfolio.html">
-            <strong>Art portfolio</strong>
-            <span class="muted">Featured work & series</span>
-          </a>
-          <a class="card" href="/commissions.html">
-            <strong>Commissions</strong>
-            <span class="muted">Custom pieces & lettering</span>
-          </a>
-          <a class="card" href="/services.html">
-            <strong>Services</strong>
-            <span class="muted">Murals / public art</span>
-          </a>
-          <a class="card" href="/about.html">
-            <strong>About</strong>
-            <span class="muted">Bio & artist statement</span>
-          </a>
-          <a class="card" href="/contact.html">
-            <strong>Contact</strong>
-            <span class="muted">Email / phone / socials</span>
-          </a>
-          <a class="card" href="/blog.html">
-            <strong>Blog</strong>
-            <span class="muted">Thoughts, process, updates</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="wrap footer-inner">
-        <p class="muted small">
-          © <span id="y"></span> Robert Grantham. Built on GitHub Pages.
-        </p>
-        <p class="muted small">
-          <a href="/contact.html">Contact</a>
-          <span aria-hidden="true"> • </span>
-          <a href="/about.html">About</a>
-        </p>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+<section class="contact-cta">
+  <div class="wrapper">
+    <h2>Let’s make something remarkable.</h2>
+    <p class="muted">
+      Whether it’s a mural, a private commission, or a data-driven collaboration,
+      I’d love to hear what you’re envisioning.
+    </p>
+    <a class="btn" href="/contact.html">Contact Me</a>
+  </div>
+</section>
