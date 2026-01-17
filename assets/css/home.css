@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Home Page Add-on Styles — extends global style.css
+   Home Page Styles — Extends global style.css
    ========================================================================== */
 
 body.home .hero {
@@ -14,19 +14,15 @@ body.home .hero {
   align-items: start;
 }
 
-.hero-copy {
-  max-width: 640px;
-}
-
 .kicker {
   color: var(--muted);
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
   font-size: clamp(2rem, 3vw, 2.6rem);
   line-height: 1.2;
-  margin: 0 0 12px;
+  margin-bottom: 12px;
 }
 
 .highlight {
@@ -58,7 +54,6 @@ h1 {
   font-size: .95rem;
   color: var(--muted);
 }
-
 .quick-facts strong { color: var(--text); }
 
 .hero-card {
