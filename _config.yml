@@ -1,77 +1,130 @@
-# _config.yml — Robert Grantham Portfolio
+# ==============================================================
+# Site Metadata
+# ==============================================================
 
 title: "Robert Grantham Art"
 tagline: "Hope, written by hand. Resilience, painted in layers."
-description: "Austin-based modern calligrapher and painter blending Copperplate & Blackletter with contemporary abstraction. Originals, commissions, essays."
+description: "Contemporary acrylic painting, calligraphy, and data analytics by Robert Grantham — Austin, TX. Originals, commissions, murals, and writing."
 
-# Primary site URLs
-url: "https://rgrantham82.github.io"
-baseurl: ""   # leave blank for GitHub Pages root
-
-# Author & contact
 author:
   name: "Robert Grantham"
   email: "robertgrantham40@gmail.com"
+  location: "Austin, TX"
 
-email: "robertgrantham40@gmail.com"
+url: "https://rgrantham82.github.io"
+baseurl: ""   # Do not use a trailing slash unless your site lives in a subdirectory.
 
-# Social (match layout expectations)
-instagram_username: "robertgranthamart"
-# twitter_username: ""   # optional
-github_username: "rgrantham82"
-linkedin_url: "https://linkedin.com/in/robertgrantham82"
+# ==============================================================
+# Theme & Appearance
+# ==============================================================
 
-# Optional direct URLs (used in About/elsewhere)
-instagram_url: "https://instagram.com/robertgranthamart"
+theme_color_light: "#ffffff"
+theme_color_dark: "#0b0c0f"
 
-# Payments
-cashapp_url: "https://cash.app/$bobby198237"
-venmo_url: "https://venmo.com/u/robert-grantham-6"
+# Font (optional)
+font_href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
 
-# Branding assets
-# logo: "/assets/images/logo.svg"         # optional; layout only renders if present
-og_image: "/assets/images/og-default.jpg" # social share fallback
-favicon: "/assets/favicons/favicon.ico"   # used by layout as default
+# Logo and favicon paths (optional)
+logo: "/assets/images/logo.png"
+favicon: "/assets/favicons/favicon.ico"
 apple_touch_icon: "/assets/favicons/apple-touch-icon.png"
 
-# Theming & fonts (consumed by layout <meta name="theme-color">)
-theme_color_dark:  "#0b0c0f"
-theme_color_light: "#ffffff"
-# font_href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+# ==============================================================
+# Social Links
+# ==============================================================
 
-# Repository metadata (helps GitHub Pages)
-repository: "rgrantham82/rgrantham82.github.io"
+github_username: rgrantham82
+instagram_username: robertgranthamart
+twitter_username: ""   # You can add later if needed
+linkedin_username: robertgrantham82
+email: robertgrantham40@gmail.com
 
-# Defaults
+# ==============================================================
+# Analytics (optional)
+# ==============================================================
+
+# plausible_domain: rgrantham82.github.io
+# google_analytics: "G-XXXXXXXXXX"
+
+# ==============================================================
+# Collections, Permalinks, Defaults
+# ==============================================================
+
+markdown: kramdown
+highlighter: rouge
+
+permalink: /:title.html
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title.html
+
 defaults:
   - scope:
-      path: ""       # all pages
-      type: "pages"
+      path: ""
+      type: "posts"
     values:
-      layout: "default"
-      # You can set page-wide image/og defaults per directory if you like
+      layout: post
+      author: "Robert Grantham"
 
-# Markdown & permalinks
-markdown: kramdown
-permalink: pretty
+# ==============================================================
+# Include / Exclude
+# ==============================================================
 
-# Theme (optional — not needed if you use your own layout/assets)
-# theme: minima
+include:
+  - _pages
+  - _data
+  - assets
 
-# Plugins for SEO & sitemap (supported on GitHub Pages)
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-
-# Exclude junk from builds
 exclude:
-  - README.md
   - node_modules
-  - package.json
-  - package-lock.json
-  - yarn.lock
-  - .gitignore
   - Gemfile
   - Gemfile.lock
+  - README.md
   - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - _site
+
+# ==============================================================
+# Navigation (for _layouts/default.html)
+# ==============================================================
+
+data_dir: _data
+
+# Optional: you can use _data/nav.yml to override these links.
+# But this fallback matches your current default.html.
+nav:
+  links:
+    - title: "Portfolio"
+      url: "/portfolio.html"
+    - title: "Commissions"
+      url: "/commissions.html"
+    - title: "Services"
+      url: "/services.html"
+    - title: "About"
+      url: "/about.html"
+    - title: "Contact"
+      url: "/contact.html"
+
+# ==============================================================
+# Plugins (GitHub Pages-supported only)
+# ==============================================================
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# ==============================================================
+# Build settings
+# ==============================================================
+
+timezone: America/Chicago
+encoding: utf-8
+future: true
+lsi: false
+safe: true
+paginate: 6
+paginate_path: "/page:num"
