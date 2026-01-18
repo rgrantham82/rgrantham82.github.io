@@ -1,146 +1,152 @@
 ---
-title: "Commissions"
 layout: default
-description: "Commission policy, pricing, FAQ, and downloadable commission menu (print-ready) for Cardboard Calligraphy by Robert Grantham."
+title: Commissions
+description: "Commission a custom painting or calligraphy piece by Robert Grantham — Austin, TX. Clear tiers, timelines, and process."
 permalink: /commissions.html
+body_class: commissions
+css: /assets/css/commissions.css
 ---
 
-<article class="container">
-  <header style="margin-bottom:18px">
-    <h1>Commission Policy & FAQ</h1>
-    <p class="muted">Cardboard Calligraphy — {{ site.author | default: "Robert Grantham" }}. Below: how to order, turnaround, payments, and a printable/downloadable commission menu.</p>
-  </header>
+<main id="commissions" aria-label="Commissions">
 
-  <section class="card" id="how-to-order">
-    <h2>How to order (short)</h2>
-    <ol>
-      <li>Choose a package from the Commission Menu below (Pocket Praise, Cornerstone, Statement, Bespoke).</li>
-      <li>Contact: DM on Instagram <strong><a href="{{ site.instagram_url | default: 'https://instagram.com/inkedoncardboard' }}" target="_blank">@InkedOnCardboard</a></strong>, email <a href="mailto:{{ site.email | default: 'robertgrantham40@gmail.com' }}">{{ site.email | default: 'robertgrantham40@gmail.com' }}</a>, or call/text <a href="tel:+15122003563">(512) 200-3563</a>.</li>
-      <li>Pay the indicated deposit (if required) → approve mockup → I work → pickup or shipping arranged.</li>
-    </ol>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrapper hero-grid">
+      <div class="hero-text">
+        <span class="tag">Commissions</span>
+        <h1>Custom Work, Built With Intention</h1>
+        <p class="lead">
+          A commission isn’t “make me something.” It’s “translate this meaning into a piece that can live on a wall.”
+          If you bring the word, story, or concept — I’ll bring the design discipline, materials plan, and finish.
+        </p>
+        <p class="muted">
+          Best for: collectors, gifts, offices/clinics, venues, and anyone who wants a piece that says something without shouting.
+        </p>
 
-    <h3 style="margin-top:12px">Turnaround & delivery</h3>
-    <ul>
-      <li><strong>Small (Pocket Praise):</strong> 3–7 days (full payment up front).</li>
-      <li><strong>Medium (Cornerstone):</strong> 7–14 days (50% deposit required).</li>
-      <li><strong>Large (Statement):</strong> 2–4 weeks (50% deposit required).</li>
-      <li><strong>Bespoke & Series:</strong> 3–8+ weeks depending on scope.</li>
-    </ul>
+        <div class="cta-row">
+          <a class="btn" href="#start">Start a Commission</a>
+          <a class="btn ghost" href="/portfolio.html">See Examples</a>
+        </div>
+      </div>
+
+      <figure class="hero-image card">
+        <img src="/assets/images/featured.jpg"
+             alt="Featured artwork by Robert Grantham"
+             loading="lazy" decoding="async">
+        <figcaption class="muted small">Featured work shown for style reference.</figcaption>
+      </figure>
+    </div>
   </section>
 
-  <section class="card" id="packages" style="margin-top:18px">
-    <h2>Commission Menu</h2>
-    <div class="grid" style="margin-top:12px">
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div><strong>Pocket Praise</strong><div class="muted">Small impulse piece</div></div>
-          <div class="price">$45</div>
-        </div>
-        <p class="small-print">5×7–6×8 reclaimed cardboard • up to 10 words • ready 3–7 days • full payment up front</p>
-      </div>
+  <!-- TIERS -->
+  <section class="section">
+    <div class="wrapper">
+      <h2 id="tiers">Commission Tiers</h2>
+      <p class="muted">Pick a lane. We can always adjust once we talk details.</p>
 
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div><strong>Cornerstone</strong><div class="muted">8×10 studio piece</div></div>
-          <div class="price">$150</div>
-        </div>
-        <p class="small-print">8×10 panel or stabilized cardboard • up to 20 words • 7–14 days • 50% deposit • optional frame +$40</p>
-      </div>
+      <div class="grid tiers">
+        <article class="tier card">
+          <h3>Study</h3>
+          <p class="muted">Small, focused pieces — quick turnaround, strong value.</p>
+          <ul>
+            <li><strong>Sizes:</strong> 8×10, 9×12, 11×14</li>
+            <li><strong>Best for:</strong> gifts, first-time collectors</li>
+            <li><strong>Typical range:</strong> ~$140–$250</li>
+          </ul>
+          <p class="muted small">Price depends on complexity, metallics, and surface choice.</p>
+        </article>
 
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div><strong>Statement</strong><div class="muted">Large collector piece</div></div>
-          <div class="price">$400</div>
-        </div>
-        <p class="small-print">11×14 or 16×20 • multi-layer lettering & accents • 2–4 weeks • 50% deposit • rush +30%</p>
-      </div>
+        <article class="tier card">
+          <h3>Statement</h3>
+          <p class="muted">Mid-size pieces with layered text, texture, and finish.</p>
+          <ul>
+            <li><strong>Sizes:</strong> 12×16, 16×20, 18×24</li>
+            <li><strong>Best for:</strong> offices, home focal walls</li>
+            <li><strong>Typical range:</strong> ~$335–$900</li>
+          </ul>
+          <p class="muted small">Great fit for mottos, names, memorial pieces, and “hope/resilience” themes.</p>
+        </article>
 
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div><strong>Bespoke & Series</strong><div class="muted">Themed runs, commercial, murals</div></div>
-          <div class="price">From $650</div>
-        </div>
-        <p class="small-print">Concept consult, mockups, iterative revisions • timeline 3–8+ weeks • deposit & milestone payments</p>
+        <article class="tier card">
+          <h3>Anchor</h3>
+          <p class="muted">Large works designed to own the room. Slow-burn, high impact.</p>
+          <ul>
+            <li><strong>Sizes:</strong> 24×30, 30×40, 36×36 (and up)</li>
+            <li><strong>Best for:</strong> venues, collectors, statement walls</li>
+            <li><strong>Typical range:</strong> quoted</li>
+          </ul>
+          <p class="muted small">Includes expanded design packet + finish plan.</p>
+        </article>
       </div>
     </div>
-
-    <p class="muted" style="margin-top:12px">Need bulk for an event or shop? Ask about bulk pricing and vendor consignment — typical discounts 10–20% depending on quantity.</p>
   </section>
 
-  <section class="card" id="policies" style="margin-top:18px">
-    <h2>Policies</h2>
+  <!-- PROCESS -->
+  <section class="section alt">
+    <div class="wrapper grid-two">
+      <div class="prose">
+        <h2 id="process">Process</h2>
+        <ol class="steps">
+          <li><strong>Conversation:</strong> word(s), vibe, palette, size, and where it will live.</li>
+          <li><strong>Design packet:</strong> thumbnails + lettering studies + palette direction.</li>
+          <li><strong>Production:</strong> layered ground → inscription → glazes/scumbles → finish.</li>
+          <li><strong>Delivery:</strong> ready-to-hang, plus COA (Certificate of Authenticity).</li>
+        </ol>
 
-    <h3>Payment & refunds</h3>
-    <ul>
-      <li>Payment methods: Cash, PayPal, Venmo, Cash App. Invoices by arrangement for commercial work.</li>
-      <li><strong>Deposits:</strong> 50% deposit required for Medium+ projects; Small pieces paid in full up front. Deposits reserve time and materials and are non-refundable.</li>
-      <li><strong>Cancellations:</strong> If you cancel prior to work start, deposit is retained. If I cancel (rare), full deposit refunded.</li>
-    </ul>
+        <h2 id="timeline">Timeline</h2>
+        <p class="muted">
+          Typical turnaround is <strong>2–4 weeks</strong> for studies and statements, longer for large anchors.
+          If you have a hard deadline, say so early — we’ll either make it work or I’ll tell you plainly.
+        </p>
 
-    <h3>Revisions</h3>
-    <ul>
-      <li>Medium+ projects include up to 2 mockup revisions. Extra revisions are billed at $25 each.</li>
-      <li>I send a single photo proof after completion; minor touch-ups are included. Major rework is treated as a revision and charged accordingly.</li>
-    </ul>
+        <h2 id="policies">Deposit & Policies</h2>
+        <ul>
+          <li><strong>Deposit:</strong> typically 30–50% to reserve the slot and materials.</li>
+          <li><strong>Revisions:</strong> design packet revisions are included; final artwork revisions are limited.</li>
+          <li><strong>Shipping:</strong> available; cost depends on size and packing.</li>
+        </ul>
 
-    <h3>Copyright & reproduction</h3>
-    <ul>
-      <li>Buyers own the physical original. Digital images for personal or promotional use are included.</li>
-      <li>Commercial reproduction / exclusive licensing is negotiated separately (quote based on scope and print run).</li>
-    </ul>
+        <p class="muted small">
+          Student/community discounts when possible — ask. If I can, I will.
+        </p>
+      </div>
 
-    <h3>Shipping & pickup</h3>
-    <ul>
-      <li>Local pickup in Austin preferred — I can deliver to pickup partners by arrangement (e.g., Medici Coffee).</li>
-      <li>Shipping is charged at cost + $10 handling. International shipping quoted separately.</li>
-    </ul>
+      <aside class="side">
+        <div class="card pad">
+          <h3>Good prompts to send me</h3>
+          <ul class="muted">
+            <li>A word/motto (or 3–5 words)</li>
+            <li>2–3 colors you love (and 1 you hate)</li>
+            <li>Where the work will hang (home/office/clinic/venue)</li>
+            <li>Size range + budget range</li>
+            <li>Any symbolism (magnolia, names, dates, language)</li>
+          </ul>
+        </div>
 
-    <h3>Materials & care</h3>
-    <ul>
-      <li>Most works are on reclaimed cardboard or gessoed panels and sealed with matte varnish. They are not museum-grade unless specially treated.</li>
-      <li>Framing is recommended for long-term preservation; framing service available as an add-on.</li>
-    </ul>
-  </section>
-
-  <section class="card" id="faq" style="margin-top:18px">
-    <h2>FAQ</h2>
-    <dl>
-      <dt><strong>Can you letter long quotes or prose?</strong></dt>
-      <dd class="muted">Yes — longer text usually requires larger size or multi-panel work. Ask for a Bespoke quote with the full text and preferred size.</dd>
-
-      <dt><strong>Do you accept returns?</strong></dt>
-      <dd class="muted">No returns on commissioned originals. If the final piece materially differs from the approved mockup, I will offer a remedy (repair, partial refund, or replacement where feasible).</dd>
-
-      <dt><strong>Do you accept trades or barter?</strong></dt>
-      <dd class="muted">Occasionally, for local businesses or community projects. Standard pricing applies; barter considered in addition to partial payment for supplies or studio needs.</dd>
-
-      <dt><strong>Can I request color matching or special materials?</strong></dt>
-      <dd class="muted">Yes — specialty inks, gold Posca, and other materials may add to cost. These are included in the quote.</dd>
-
-      <dt><strong>How many revisions are included?</strong></dt>
-      <dd class="muted">Two mockup revisions included for Medium+ projects. Additional revisions: $25 each.</dd>
-    </dl>
-  </section>
-
-  <section class="card" id="downloads" style="margin-top:18px">
-    <h2>Downloads & printable</h2>
-    <p class="muted">Click to download a print-ready A4 commission menu (PDF) or open a print-friendly page version.</p>
-
-    <div class="cta" style="margin-top:10px">
-      <a class="btn" href="/assets/commissions_menu.pdf" download>Download PDF (A4)</a>
-      <a class="btn secondary" href="/assets/commissions_printable.html" target="_blank">Open printable page</a>
-      <a class="btn secondary" href="#" onclick="window.print();return false;">Print this page</a>
+        <div class="card pad">
+          <h3>Payments</h3>
+          <p class="muted">
+            Venmo <code>@robert-grantham-6</code><br>
+            CashApp <code>$bobby198237</code>
+          </p>
+          <p class="muted small">You’ll get a simple invoice for commissions.</p>
+        </div>
+      </aside>
     </div>
-
-    <p class="muted" style="margin-top:10px">Tip: pin the PDF at coffee shops for quick sales — small text and clear prices convert faster than polite uncertainty.</p>
   </section>
 
-  <section class="card" id="still-questions" style="margin-top:18px">
-    <h2>Still have questions?</h2>
-    <p class="muted">Email <a href="mailto:{{ site.email | default: 'robertgrantham40@gmail.com' }}">{{ site.email | default: 'robertgrantham40@gmail.com' }}</a> or DM <a href="{{ site.instagram_url | default: 'https://instagram.com/inkedoncardboard' }}" target="_blank">@InkedOnCardboard</a>. For larger projects, include location, size, budget range, and desired turnaround in your message.</p>
+  <!-- START -->
+  <section id="start" class="section contact-cta">
+    <div class="wrapper">
+      <h2>Start a Commission</h2>
+      <p class="muted">
+        Email is best. Include size range, budget range, and your word/concept. If you’re not sure yet, say that — we’ll narrow it down fast.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:robertgrantham40@gmail.com?subject=Commission%20Inquiry">Email: Commission Inquiry</a>
+        <a class="btn ghost" href="/contact.html">All Contact Options</a>
+      </div>
+    </div>
   </section>
 
-  <footer style="margin-top:20px" class="muted">
-    <p>© {{ 'now' | date: '%Y' }} {{ site.author | default: 'Robert Grantham' }} • Cardboard Calligraphy</p>
-  </footer>
-</article>
+</main>
