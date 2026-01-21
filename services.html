@@ -1,39 +1,157 @@
 ---
-layout: default 
-title: Services 
-permalink: /services/ 
-hero: 
-  image: '/assets/images/banner.png' 
-  title: "What I Offer" 
-  subtitle: "Custom calligraphy services tailored to your vision"
+layout: default
+title: Services
+description: "Services by Robert Grantham — murals, public art, lettering, installation support, and data visualization."
+permalink: /services.html
+body_class: services
+css: /assets/css/services.css
 ---
 
-<section class="hero">
-  <div class="hero-overlay container">
-    <h1>{{ page.hero.title }}</h1>
-    <p>{{ page.hero.subtitle }}</p>
-  </div>
-</section><main class="services-content container" aria-labelledby="services-heading">
-  <h2 id="services-heading" class="section-title">My Services</h2>
-  <p class="lead">From bespoke wedding invitations to large-scale murals, I combine traditional calligraphy techniques with modern design to bring your ideas to life on recycled cardboard and other unique canvases.</p>  <div class="services-grid">
-    {% assign services = site.data.services %}
-    {% for svc in services %}
-    <article class="service-item" aria-labelledby="svc-{{ svc.id }}">
-      <div class="service-icon">
-        <img src="{{ svc.icon | relative_url }}" alt="{{ svc.icon_alt }}" loading="lazy" />
+<main id="services" aria-label="Services">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrapper hero-grid">
+      <div class="hero-text">
+        <span class="tag">Services</span>
+        <h1>Murals, Lettering, and Visual Clarity</h1>
+        <p class="lead">
+          I don’t do “decor.” I do work that communicates: walls that tell a story,
+          signage that feels intentional, and visuals that make information easy to understand.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="#request">Request a Quote</a>
+          <a class="btn ghost" href="/portfolio.html">See Work</a>
+        </div>
       </div>
-      <h3 id="svc-{{ svc.id }}">{{ svc.title }}</h3>
-      <p>{{ svc.description }}</p>
-      <a href="/contact/" class="btn btn-secondary" aria-label="Contact for {{ svc.title }}">{{ svc.cta_text }}</a>
-    </article>
-    {% endfor %}
-  </div>  <section class="testimonial container" aria-labelledby="svc-testimonial">
-    <h2 id="svc-testimonial" class="section-title">What Clients Say</h2>
-    <blockquote class="testimonial">
-      <p>“Robert’s workshop was an absolute delight—our team left inspired and empowered to try calligraphy on our own. The custom signage at our event was a showstopper!”</p>
-      <footer>— Alex R., Event Coordinator</footer>
-    </blockquote>
-  </section>  <div class="cta-section text-center">
-    <a href="/contact/" class="btn btn-primary btn-lg">Ready to Begin? Contact Me</a>
-  </div>
+
+      <figure class="hero-image card">
+        <img src="/assets/images/featured.jpg"
+             alt="Featured artwork by Robert Grantham"
+             loading="lazy" decoding="async">
+        <figcaption class="muted small">Featured work shown for style reference.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SERVICES LIST -->
+  <section class="section">
+    <div class="wrapper">
+      <h2>What I Offer</h2>
+      <p class="muted">Pick what you need. If your project doesn’t fit neatly, we’ll define it.</p>
+
+      <div class="grid offerings">
+        <article class="card pad">
+          <h3>Murals & Public Art</h3>
+          <p class="muted">Interior/exterior murals, feature walls, and public-facing installations.</p>
+          <ul>
+            <li>Concept + mockup</li>
+            <li>Surface prep + paint plan</li>
+            <li>Protective finish recommendations</li>
+          </ul>
+        </article>
+
+        <article class="card pad">
+          <h3>Custom Lettering</h3>
+          <p class="muted">Hand-lettered pieces, signage, quotes, mottos, and logo-style marks.</p>
+          <ul>
+            <li>Copperplate / Blackletter / modern scripts</li>
+            <li>Digital deliverables when needed</li>
+            <li>Great for brands and venues</li>
+          </ul>
+        </article>
+
+        <article class="card pad">
+          <h3>Art for Offices & Clinics</h3>
+          <p class="muted">Work designed for calm, focus, and emotional tone.</p>
+          <ul>
+            <li>Curated selections for your space</li>
+            <li>Series sets for cohesive walls</li>
+            <li>Commissioned “anchor piece” options</li>
+          </ul>
+        </article>
+
+        <article class="card pad">
+          <h3>Workshops / Demonstrations</h3>
+          <p class="muted">Intro calligraphy, lettering sessions, and live demos for events.</p>
+          <ul>
+            <li>Beginner-friendly</li>
+            <li>Materials list provided</li>
+            <li>Small groups or pop-up style</li>
+          </ul>
+        </article>
+
+        <article class="card pad">
+          <h3>Data Visualization</h3>
+          <p class="muted">Dashboards, reports, and visual explanations that reduce confusion.</p>
+          <ul>
+            <li>Python / SQL / Excel</li>
+            <li>Clean charts + narrative</li>
+            <li>Portfolio-ready deliverables</li>
+          </ul>
+        </article>
+
+        <article class="card pad">
+          <h3>Design Consultation</h3>
+          <p class="muted">Color, layout, wall planning, and content direction for a space.</p>
+          <ul>
+            <li>What to hang and where</li>
+            <li>Budget-minded recommendations</li>
+            <li>Fast, practical guidance</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW QUOTES WORK -->
+  <section class="section alt">
+    <div class="wrapper grid-two">
+      <div class="prose">
+        <h2>How Quotes Work</h2>
+        <ol>
+          <li><strong>Scope:</strong> what, where, dimensions, surface, deadline.</li>
+          <li><strong>Mockup:</strong> concept sketch or digital comp when needed.</li>
+          <li><strong>Estimate:</strong> materials + labor + travel + finish.</li>
+          <li><strong>Schedule:</strong> deposit reserves dates; remainder due on completion.</li>
+        </ol>
+        <p class="muted">
+          If your budget is tight, tell me early. I can often adjust scope, materials, or scale.
+          What I won’t do is pretend it’s cheap and then ambush you later.
+        </p>
+      </div>
+
+      <aside class="side">
+        <div class="card pad">
+          <h3>Best info to send</h3>
+          <ul class="muted">
+            <li>Location + indoor/outdoor</li>
+            <li>Wall dimensions + photos</li>
+            <li>Desired style (link examples if you have them)</li>
+            <li>Deadline window</li>
+            <li>Budget range</li>
+          </ul>
+        </div>
+        <div class="card pad">
+          <h3>Service Area</h3>
+          <p class="muted">Austin, TX (travel considered case-by-case).</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- REQUEST -->
+  <section id="request" class="section contact-cta">
+    <div class="wrapper">
+      <h2>Request a Quote</h2>
+      <p class="muted">
+        Email is best. If you include dimensions + a photo, you’ll get a faster answer.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:robertgrantham40@gmail.com?subject=Services%20Quote%20Request">Email: Quote Request</a>
+        <a class="btn ghost" href="/contact.html">All Contact Options</a>
+      </div>
+    </div>
+  </section>
+
 </main>

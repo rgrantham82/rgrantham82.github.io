@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
+
     {%- assign theme_dark  = page.theme_color_dark  | default: site.theme_color_dark  | default: '#0b0c0f' -%}
     {%- assign theme_light = page.theme_color_light | default: site.theme_color_light | default: '#ffffff' -%}
     <meta name="theme-color" content="{{ theme_dark }}" media="(prefers-color-scheme: dark)">
@@ -22,13 +23,13 @@
     {%- comment -%} Open Graph / Twitter Card {%- endcomment -%}
     {% assign social_title = page.social_title | default: page.title | default: site.title %}
     {% assign social_desc  = page.social_description | default: page.description | default: site.description %}
-    {% assign og_img       = page.og_image | default: page.image | default: site.og_image | default: '/assets/images/og-default.jpg' %}
+    {% assign og_img = page.og_image | default: page.image | default: site.og_image | default: site.logo | default: '/assets/favicons/apple-touch-icon.png' %}
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.title | default: 'Robert Grantham Art' }}">
     <meta property="og:title" content="{{ social_title | escape }}">
     <meta property="og:description" content="{{ social_desc | strip_html | strip_newlines | escape }}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
     <meta property="og:image" content="{{ og_img | absolute_url }}">
     <meta property="og:locale" content="en_US">
 
@@ -70,24 +71,44 @@
     <script>document.documentElement.classList.remove('no-js');</script>
   </head>
 
-  <body>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
     <a class="skip-link" href="#content">Skip to content</a>
 
     <header class="site-header" role="banner">
       <div class="wrapper navbar">
         <a class="brand" href="{{ '/' | relative_url }}">
           {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="{{ site.title | default: 'Robert Grantham Art' }} logo" width="40" height="40" loading="lazy" decoding="async">
+            <img src="{{ site.logo | relative_url }}"
+                 alt="{{ site.title | default: 'Robert Grantham Art' }} logo"
+                 width="40" height="40"
+                 loading="lazy" decoding="async">
           {% endif %}
-          <span class="brand-title">{{ site.title | default: 'Robert Grantham Art' }}</span>
+
+          <span class="brand-text">
+            <span class="brand-title">{{ site.title | default: 'Robert Grantham Art' }}</span>
+            {% if site.tagline %}
+              <span class="brand-tagline">{{ site.tagline }}</span>
+            {% endif %}
+          </span>
         </a>
 
         <nav class="nav" aria-label="Primary">
-          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">Menu</button>
+          <button class="nav-toggle"
+                  aria-expanded="false"
+                  aria-controls="nav-list"
+                  aria-label="Toggle navigation">
+            Menu
+          </button>
+
           <ul id="nav-list">
             {% if site.data.nav and site.data.nav.links %}
               {% for item in site.data.nav.links %}
-                <li><a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+                <li>
+                  <a href="{{ item.url | relative_url }}"
+                     {% if page.url == item.url %}aria-current="page"{% endif %}>
+                    {{ item.title }}
+                  </a>
+                </li>
               {% endfor %}
             {% else %}
               <li><a href="{{ '/portfolio.html' | relative_url }}" {% if page.url == '/portfolio.html' %}aria-current="page"{% endif %}>Portfolio</a></li>
@@ -104,12 +125,13 @@
     </main>
 
     <footer class="site-footer" role="contentinfo">
-      <div class="wrapper footer-inner" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+      <div class="wrapper footer-inner">
         <div class="footer-brand">
           <strong>{{ site.title | default: 'Robert Grantham Art' }}</strong>
           <div class="muted">© {{ site.time | date: '%Y' }} {{ site.author.name | default: 'Robert Grantham' }}</div>
         </div>
-        <ul class="social" style="list-style:none; display:flex; gap:.8rem; margin:0; padding:0;">
+
+        <ul class="social">
           {% if site.instagram_username %}<li><a href="https://instagram.com/{{ site.instagram_username }}" rel="me">Instagram</a></li>{% endif %}
           {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" rel="me">Twitter/X</a></li>{% endif %}
           {% if site.github_username or site.github.owner_name %}<li><a href="https://github.com/{{ site.github_username | default: site.github.owner_name }}">GitHub</a></li>{% endif %}
@@ -118,25 +140,33 @@
       </div>
     </footer>
 
-    <style>
-      /* Minimal nav toggle CSS to complement /assets/css/style.css */
-      .nav-toggle { display: none; }
-      @media (max-width: 780px){
-        .nav-toggle{ display:inline-flex; align-items:center; gap:.4rem; border:1px solid rgba(255,255,255,.15); background:none; padding:.4rem .6rem; border-radius:.5rem; color:inherit; }
-        .nav ul{ display:none; position:absolute; right:1rem; top:3.25rem; background: Canvas; border:1px solid rgba(0,0,0,.15); border-radius:.75rem; padding:.5rem; flex-direction:column; min-width: 12rem; }
-        .nav ul.open{ display:flex; }
-      }
-    </style>
-
     <script>
-      // Mobile nav toggle
+      // Mobile nav toggle (with outside click + Escape close)
       const btn = document.querySelector('.nav-toggle');
       const list = document.getElementById('nav-list');
+
+      function closeMenu() {
+        if (!btn || !list) return;
+        btn.setAttribute('aria-expanded', 'false');
+        list.classList.remove('open');
+      }
+
       if (btn && list) {
-        btn.addEventListener('click', () => {
-          const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
-          btn.setAttribute('aria-expanded', !expanded);
+        btn.addEventListener('click', (e) => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
           list.classList.toggle('open');
+          e.stopPropagation();
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!list.classList.contains('open')) return;
+          if (e.target === btn || list.contains(e.target)) return;
+          closeMenu();
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeMenu();
         });
       }
     </script>
@@ -155,3 +185,4 @@
     {% endif %}
   </body>
 </html>
+```0

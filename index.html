@@ -322,121 +322,79 @@
           </p>
         </div>
 
-        <aside class="about-aside">
-          <h3>Quick facts</h3>
-          <ul class="key-list">
-            <li><span class="key-list__label">Location:</span><span>Austin, Texas</span></li>
-            <li><span class="key-list__label">Mediums:</span><span>Acrylic, ink, mixed media</span></li>
-            <li><span class="key-list__label">Focus:</span><span>Calligraphy, calligraffiti, abstraction</span></li>
-            <li><span class="key-list__label">Surfaces:</span><span>Canvas, panels, heavy paper, reclaimed cardboard</span></li>
-            <li><span class="key-list__label">Available:</span><span>Originals, commissions, select prints</span></li>
-          </ul>
-        </aside>
+      <div class="cta-row">
+        <a class="btn" href="/portfolio.html">See Art</a>
+        <a class="btn ghost" href="https://rgrantham82.github.io/data-analytics-portfolio" target="_blank" rel="noopener">See Data Portfolio</a>
       </div>
-    </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section section--accent" aria-labelledby="contact-title">
-      <div class="section__inner section__inner--two-col">
-        <div class="section__content">
-          <h2 id="contact-title">Contact &amp; sales</h2>
-          <p>
-            To inquire about available work, request a price list, or start a commission, reach out using one of the
-            options below.
-          </p>
-
-          <div class="contact-grid">
-            <div class="contact-card">
-              <h3>Email</h3>
-              <p>
-                <a href="mailto:robertgrantham40@gmail.com">robertgrantham40@gmail.com</a>
-              </p>
-            </div>
-
-            <div class="contact-card">
-              <h3>Phone</h3>
-              <p>
-                <a href="tel:+15122003563">+1 (512) 200-3563</a>
-              </p>
-            </div>
-
-            <div class="contact-card">
-              <h3>Instagram</h3>
-              <p>
-                <a href="https://instagram.com/robertgranthamart" target="_blank" rel="noopener">
-                  @robertgranthamart
-                </a>
-              </p>
-            </div>
-
-            <div class="contact-card">
-              <h3>Payments</h3>
-              <p>
-                Cash App: <a href="https://cash.app/$bobby198237" target="_blank" rel="noopener">$bobby198237</a><br />
-                Venmo:
-                <a href="https://venmo.com/u/robert-grantham-6" target="_blank" rel="noopener">
-                  @robert-grantham-6
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <p class="section__note">
-            Payment plans are available on originals and commissions. A modest down payment can reserve a piece while we
-            work out the rest.
-          </p>
-        </div>
-
-        <div class="section__media">
-          <form class="contact-form" action="mailto:robertgrantham40@gmail.com" method="post" enctype="text/plain">
-            <h3>Quick inquiry</h3>
-            <p class="contact-form__hint">
-              This form opens your email client with the details below.  
-              If it doesn’t work, just email directly.
-            </p>
-
-            <label class="form-field">
-              <span>Name</span>
-              <input type="text" name="Name" required />
-            </label>
-
-            <label class="form-field">
-              <span>Email</span>
-              <input type="email" name="Email" required />
-            </label>
-
-            <label class="form-field">
-              <span>Message</span>
-              <textarea name="Message" rows="4" placeholder="Tell me what you’re looking for."></textarea>
-            </label>
-
-            <button type="submit" class="btn btn--primary btn--full">
-              Open in my email app
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>&copy; <span id="year"></span> Robert Grantham Art. All rights reserved.</p>
-      <p>
-        Expressive Calligraphy &bull; Painting &bull; Research
-      </p>
+      <ul class="quick-facts" role="list">
+        <li><strong>Art:</strong> Originals • Murals • Commissions</li>
+        <li><strong>Data:</strong> Python • SQL • Excel • Visualization</li>
+        <li><strong>Contact:</strong> <a href="/contact.html">robertgrantham40@gmail.com</a></li>
+      </ul>
     </div>
-  </footer>
 
-  <script>
-    // Set current year in footer
-    (function () {
-      var yearSpan = document.getElementById("year");
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-    })();
-  </script>
-</body>
-</html>
+    <!-- FEATURED IMAGE -->
+    <figure class="hero-card">
+      <img src="/assets/images/featured.jpg"
+           alt="Featured artwork: Magnolia Canticle No. 2 by Robert Grantham"
+           loading="eager"
+           width="800" height="500">
+      <figcaption>
+        <span class="tag">Featured Work</span>
+        <span class="muted small">“Magnolia Canticle No. 2” — Acrylic on canvas</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="split-section">
+  <div class="wrapper grid two">
+    <article class="panel">
+      <h2>For Art Buyers & Venues</h2>
+      <p class="muted">
+        Originals, commissions, and murals designed to command space and hold attention.
+      </p>
+      <div class="stack">
+        <a class="btn" href="/portfolio.html">View Portfolio</a>
+        <a class="btn ghost" href="/commissions.html">Commission Options</a>
+        <a class="btn ghost" href="/services.html">Murals & Services</a>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h2>For Hiring & Analytics</h2>
+      <p class="muted">
+        Data storytelling through analysis, visualization, and practical insight.
+      </p>
+      <div class="stack">
+        <a class="btn" href="https://rgrantham82.github.io/data-analytics-portfolio" target="_blank" rel="noopener">
+          Data Analytics Portfolio
+        </a>
+        <a class="btn ghost" href="/about.html">About Me</a>
+        <a class="btn ghost" href="/contact.html">Contact</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="available">
+  <div class="wrapper">
+    <h2>Available Works</h2>
+    <p class="muted">
+      Select paintings and calligraphy pieces are available for immediate purchase or exhibition.
+    </p>
+    <a href="/portfolio.html" class="btn">Browse Portfolio</a>
+  </div>
+</section>
+
+<section class="contact-cta">
+  <div class="wrapper">
+    <h2>Let’s make something remarkable.</h2>
+    <p class="muted">
+      Whether it’s a mural, a private commission, or a collaborative data project,
+      I’d love to hear what you’re envisioning.
+    </p>
+    <a class="btn" href="/contact.html">Contact Me</a>
+  </div>
+</section>
