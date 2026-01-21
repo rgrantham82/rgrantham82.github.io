@@ -1,26 +1,326 @@
----
-layout: default
-title: Robert Grantham — Art & Data
-description: "Contemporary painting, calligraphy, and data analytics. Commissions, murals, and projects from Austin, TX."
-body_class: home
-css: /assets/css/home.css
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Robert Grantham Art | Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Austin-based expressive calligrapher and painter Robert Grantham. Hope, resilience, and calligraphy in layered acrylics and reclaimed materials."
+  />
+  <meta name="theme-color" content="#f6f4f0" />
+  <link rel="canonical" href="https://rgrantham82.github.io/" />
 
-<section class="hero">
-  <div class="wrapper hero-grid">
-    <div class="hero-copy">
-      <p class="kicker">Austin, TX • Available for commissions & opportunities</p>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Robert Grantham Art | Studio" />
+  <meta
+    property="og:description"
+    content="Austin-based expressive calligrapher and painter Robert Grantham. Hope, resilience, and calligraphy in layered acrylics and reclaimed materials."
+  />
+  <meta property="og:url" content="https://rgrantham82.github.io/" />
+  <meta property="og:image" content="https://rgrantham82.github.io/assets/images/hero-image.jpg" />
 
-      <h1>
-        I make work that <span class="highlight">holds attention</span> —
-        in paint, in letters, and in data.
-      </h1>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Robert Grantham Art | Studio" />
+  <meta
+    name="twitter:description"
+    content="Austin-based expressive calligrapher and painter Robert Grantham. Hope, resilience, and calligraphy in layered acrylics and reclaimed materials."
+  />
+  <meta name="twitter:image" content="https://rgrantham82.github.io/assets/images/hero-image.jpg" />
 
-      <p class="lead">
-        Contemporary acrylic paintings and calligraphy (Copperplate, Blackletter, calligraffiti),
-        plus data analytics projects built in Python/SQL.  
-        Pick the lane you came for—either way, you’ll leave with something useful.
-      </p>
+  <!-- Google Font (optional, but looks better) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="#hero" class="logo">
+        <div class="logo__mark">RG</div>
+        <div class="logo__text">
+          <span class="logo__name">Robert Grantham Art</span>
+          <span class="logo__tagline">Hope, resilience, and calligraphy in layers</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#commissions">Commissions</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="main-content">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 id="hero-title">Calligraphy, abstraction, and the work of resilience.</h1>
+          <p class="hero__subtitle">
+            Studio of Austin-based artist <strong>Robert Grantham</strong>, fusing Copperplate &amp; Blackletter
+            calligraphy with layered acrylic painting on canvas, cardboard, and reclaimed materials.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--primary">View available work</a>
+            <a href="#commissions" class="btn btn--ghost">Commission a piece</a>
+          </div>
+
+          <div class="hero__meta">
+            <span>Expressive calligraphy · Acrylic painting · Mixed media</span>
+            <span>Austin, Texas</span>
+          </div>
+        </div>
+
+        <div class="hero__image">
+          <div class="hero__image-frame">
+            <img
+              src="assets/images/hero-image.jpg"
+              alt="Calligraphic abstract painting by Robert Grantham"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <p class="hero__image-caption">
+            Detail from a layered calligraphic abstract piece. Gold, ultramarine, and vermilion pulling their weight.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Portfolio -->
+    <section id="work" class="section section--light" aria-labelledby="work-title">
+      <div class="section__inner">
+        <header class="section__header">
+          <h2 id="work-title">Available work</h2>
+          <p>
+            A selection of original paintings, calligraphic abstractions, and cardboard calligraphy pieces.  
+            For full inventory and pricing, get in touch below.
+          </p>
+        </header>
+
+        <div class="work-grid">
+          <!-- Piece 1 -->
+          <article class="work-card">
+            <div class="work-card__image">
+              <img
+                src="assets/images/resilientia-final.jpg"
+                alt="Magnolia-themed calligraphic abstract painting"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">Magnolia Palimpsest: Sursum Corda</h3>
+              <p class="work-card__meta">
+                Acrylic &amp; calligraphy on canvas · 12&quot; × 16&quot;
+              </p>
+              <p class="work-card__desc">
+                Layered gestural script, veils of ultramarine and vermilion, and magnolia forms emerging from beneath—
+                a reflection on memory, Southern Gothic landscapes, and getting back up again.
+              </p>
+              <p class="work-card__status">Original available · Prints on request</p>
+            </div>
+          </article>
+
+          <!-- Piece 2 -->
+          <article class="work-card">
+            <div class="work-card__image">
+              <img
+                src="assets/images/resilience-01.jpg"
+                alt="Cardboard calligraphy artwork"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">Cardboard Calligraphy: Resilience</h3>
+              <p class="work-card__meta">
+                Acrylic, ink &amp; gold on reclaimed cardboard · approx. 8&quot; × 10&quot;
+              </p>
+              <p class="work-card__desc">
+                Street-level calligraphy on found material—elevating what’s thrown away into something worth framing.
+              </p>
+              <p class="work-card__status">Original available · Student pricing available</p>
+            </div>
+          </article>
+
+          <!-- Piece 3 -->
+          <article class="work-card">
+            <div class="work-card__image">
+              <img
+                src="assets/images/Robert_Grantham_Over_the_Icebergs_12x16_acrylic_canvas_1 (1).jpg"
+                alt="Abstract aerial iceberg painting"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">Over the Icebergs</h3>
+              <p class="work-card__meta">
+                Acrylic on gallery-wrapped canvas · 12&quot; × 16&quot;
+              </p>
+              <p class="work-card__desc">
+                Aerial abstraction suggestive of drifting ice and quiet fracture lines—painted as a meditation on
+                distance, danger, and the possibility of new currents.
+              </p>
+              <p class="work-card__status">Original available</p>
+            </div>
+          </article>
+
+          <!-- Piece 4 -->
+          <article class="work-card">
+            <div class="work-card__image">
+              <img
+                src="assets/images/Furcht_frisst_Gerechtigkeit.jpg"
+                alt="Expressive red and gold abstract calligraphy"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">Furcht frisst Gerechtigkeit</h3>
+              <p class="work-card__meta">
+                Acrylic, iridescent red &amp; gold on gessobord · 12&quot; × 16&quot;
+              </p>
+              <p class="work-card__desc">
+                “Fear devours justice.” A piece 
+        dedicated to the victims of the Bamberg and Würzburg witch trials—
+                flames, script, and fragments of memory in layered red and gold.
+              </p>
+              <p class="work-card__status">Original available · Museum-series concept</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section__footer">
+          <p>
+            Looking for something specific—size, palette, or theme?  
+            <a href="#contact">Get in touch</a> for a current inventory list and pricing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commissions -->
+    <section id="commissions" class="section section--accent" aria-labelledby="commissions-title">
+      <div class="section__inner section__inner--two-col">
+        <div class="section__content">
+          <h2 id="commissions-title">Commissions &amp; collaborations</h2>
+          <p>
+            Commission a custom piece—anything from intimate cardboard calligraphy panels to large-scale canvases for
+            homes, offices, or public spaces.
+          </p>
+
+          <ul class="bullet-list">
+            <li><strong>Custom text:</strong> names, phrases, quotations, or original wording.</li>
+            <li><strong>Surface:</strong> canvas, panel, heavy paper, or reclaimed cardboard.</li>
+            <li><strong>Palette:</strong> tailored combinations of ultramarine, vermilion, gold, black, and neutrals.</li>
+            <li><strong>Size range:</strong> from 8&quot; × 10&quot; to 24&quot; × 36&quot; and beyond.</li>
+            <li><strong>Budget-conscious options:</strong> student &amp; emerging collector pricing available.</li>
+          </ul>
+
+          <p class="section__note">
+            Payment plans are always on the table. A modest down payment can hold a piece or reserve a commission slot.
+          </p>
+
+          <a href="#contact" class="btn btn--primary">Start a commission request</a>
+        </div>
+
+        <div class="section__media">
+          <div class="media-frame">
+            <img
+              src="assets/images/studio-detail.jpg"
+              alt="Studio workspace with brushes, paints, and calligraphy sketches"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <p class="media-caption">
+            Sketches, color tests, and underpaintings—where the structure of each commission begins.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section section--dark" aria-labelledby="process-title">
+      <div class="section__inner">
+        <header class="section__header section__header--center">
+          <h2 id="process-title">Process: from ground to final line</h2>
+          <p>
+            Every piece moves through distinct stages—ground layers, blocking, glazing, and final calligraphic work.
+            Nothing is accidental; even the chaos is designed.
+          </p>
+        </header>
+
+        <div class="process-grid">
+          <article class="process-step">
+            <h3>1. Ground &amp; atmosphere</h3>
+            <p>
+              Transparent and semi-opaque layers establish the base mood—often ultramarine, vermilion, or earth tones
+              broken with titanium white. This is where the “weather” of the piece is set.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <h3>2. Blocking &amp; structure</h3>
+            <p>
+              Major shapes and value masses are mapped in. Sometimes it reads like an aerial map; sometimes like a
+              fractured page of script. This is the skeleton underneath the surface.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <h3>3. Glazing &amp; texture</h3>
+            <p>
+              Thin veils of color, scumbling, and selective opacity build depth. Edges soften or sharpen. Areas of rest
+              are carved out next to areas of intense activity.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <h3>4. Calligraphy &amp; final marks</h3>
+            <p>
+              Copperplate, Blackletter, and improvised scripts are laid into the painting—sometimes legible, sometimes
+              almost lost. Gold and high-contrast accents are reserved for the final decisions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--light" aria-labelledby="about-title">
+      <div class="section__inner section__inner--two-col">
+        <div class="section__content">
+          <h2 id="about-title">About the artist</h2>
+          <p>
+            <strong>Robert Grantham</strong> is an Austin-based expressive calligrapher, painter, and historian. His work
+            braids together formal scripts, street-level materials, and layered color to explore themes of memory,
+            survival, and the quiet anger of people written out of the official story.
+          </p>
+          <p>
+            With a background in history and years spent studying both traditional calligraphy and contemporary
+            abstraction, Robert’s studio practice treats each painting as both an artwork and an archival document—an
+            artifact of a specific person, moment, or place.
+          </p>
+          <p>
+            Pieces range from intimate, hand-lettered cardboard panels to larger canvases suitable for homes, galleries,
+            offices, and public settings.
+          </p>
+        </div>
 
       <div class="cta-row">
         <a class="btn" href="/portfolio.html">See Art</a>
