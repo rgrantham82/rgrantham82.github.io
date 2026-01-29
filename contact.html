@@ -17,7 +17,7 @@ css: /assets/css/contact.css
         <h1>Get in Touch</h1>
         <p>
           Whether you're interested in commissioning a painting, exhibiting my work, or discussing
-          data and creative analysis — I’d love to connect. 
+          data and creative analysis — I’d love to connect.
         </p>
         <p class="muted">Direct email is always best. Response time: usually within 24–48 hours.</p>
         <div class="cta-row">
@@ -76,6 +76,96 @@ css: /assets/css/contact.css
           <p><a href="https://cash.app/$bobby198237" target="_blank" rel="noopener">$bobby198237</a></p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- COMMISSION / PURCHASE FORM -->
+  <section class="section contact-form-section">
+    <div class="wrapper">
+      <h2>Commission / Purchase Inquiry</h2>
+      <p class="muted">
+        If you share a few details, I can reply with availability, pricing, and next steps.
+        (Or email me directly any time.)
+      </p>
+
+      <form
+        class="contact-form"
+        method="POST"
+        action="https://formspree.io/f/mbjnwpgb"
+      >
+        <!-- Formspree helpers -->
+        <input type="hidden" name="_subject" value="New inquiry from rgrantham82.github.io" />
+        <input type="hidden" name="_next" value="https://rgrantham82.github.io/thank-you.html" />
+
+        <!-- Honeypot (spam trap) -->
+        <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="inquiry">Inquiry type</label>
+            <select id="inquiry" name="inquiry_type" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Commission a new piece</option>
+              <option>Purchase available work</option>
+              <option>Mural / large-scale</option>
+              <option>Exhibition / venue</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="timeline">Timeline (optional)</label>
+            <input id="timeline" name="timeline" type="text" placeholder="e.g., by March / flexible" />
+          </div>
+
+          <div class="field">
+            <label for="size">Preferred size (optional)</label>
+            <input id="size" name="preferred_size" type="text" placeholder='e.g., 12&quot;×16&quot;, 24&quot;×36&quot;' />
+          </div>
+
+          <div class="field">
+            <label for="budget">Budget range (optional)</label>
+            <select id="budget" name="budget_range">
+              <option value="" selected>No preference</option>
+              <option>Under $250</option>
+              <option>$250–$500</option>
+              <option>$500–$1,000</option>
+              <option>$1,000–$2,500</option>
+              <option>$2,500+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="details">Details</label>
+          <textarea
+            id="details"
+            name="message"
+            rows="6"
+            required
+            placeholder="Tell me what you’re envisioning: text/phrase (if any), palette, where it will live, and any reference pieces from my portfolio."
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Send Inquiry</button>
+          <a class="btn ghost" href="mailto:robertgrantham40@gmail.com">Email Instead</a>
+        </div>
+
+        <p class="muted small form-note">
+          Prefer text or phone? Include your number in the message and I’ll follow up.
+        </p>
+      </form>
     </div>
   </section>
 
