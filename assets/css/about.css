@@ -1,6 +1,8 @@
-/* ==========================================================================
-   About Page Styles — Extends global style.css
-   ========================================================================== */
+/*
+  ==========================================================
+  About Page Styles — Extends global style.css
+  ==========================================================
+*/
 
 body.about .hero {
   padding: 60px 0;
@@ -29,6 +31,10 @@ body.about .hero {
   margin-bottom: 1rem;
 }
 
+.hero-note {
+  margin-top: .75rem;
+}
+
 .hero-image img {
   border-radius: var(--radius-lg);
   object-fit: cover;
@@ -37,8 +43,49 @@ body.about .hero {
   border: 1px solid var(--border);
 }
 
+/* Pills */
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 14px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: .85rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+
+/* Highlights */
+.about-highlights {
+  padding-top: 34px;
+  padding-bottom: 10px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.highlight h2 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.highlight p {
+  margin: 0;
+}
+
+/* Content layout */
 .about-content {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .grid-two {
@@ -68,6 +115,22 @@ body.about .hero {
   height: auto;
 }
 
+.about-links h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.list-plain {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-plain li {
+  margin-bottom: 8px;
+}
+
+/* Contact / form split */
 .contact-cta ul {
   list-style: none;
   margin: 0 0 1rem;
@@ -78,6 +141,44 @@ body.about .hero {
   margin-bottom: .4rem;
 }
 
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.about-form h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.field span {
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Hide honeypot */
+.hp-field {
+  display: none !important;
+}
+
 @media (max-width: 900px) {
   .grid-two { grid-template-columns: 1fr; }
+  .highlights-grid { grid-template-columns: 1fr; }
+  .contact-split { grid-template-columns: 1fr; }
 }
