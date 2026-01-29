@@ -1,15 +1,17 @@
-/* ==========================================================================
+/*
+   ==========================================================
    Portfolio Page Styles — Robert Grantham Art
-   ========================================================================== */
+   ==========================================================
+*/
 
 .page-header{
-  padding: 40px 0 20px;
+  padding: 40px 0 24px;
   border-bottom: 1px solid var(--border);
   background: var(--footer-bg);
 }
 
 .page-header h1{
-  margin: 0 0 8px;
+  margin: 8px 0 8px;
   font-size: clamp(2rem, 3vw, 2.5rem);
 }
 
@@ -18,8 +20,63 @@
   max-width: 720px;
 }
 
+.portfolio-toolbar{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.btn.ghost{
+  background: transparent;
+}
+
+/* Buy panel */
+.portfolio-buy{
+  padding: 26px 0 8px;
+}
+
+.buy-panel{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+}
+
+.buy-panel h2{
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+}
+
+.buy-list{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.buy-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* Section headings */
+.section-heading{
+  margin-bottom: 14px;
+}
+
+.section-heading h2{
+  margin-bottom: 6px;
+}
+
+/* Grid */
 .art-grid{
-  padding: 40px 0;
+  padding: 34px 0;
+}
+
+.art-grid--alt{
+  border-top: 1px solid var(--border);
+  background: var(--footer-bg);
 }
 
 .grid{
@@ -79,6 +136,91 @@
   font-size: .9rem;
 }
 
+/* Status badges */
+.status-badge{
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,.03);
+}
+
+.status-badge--available{
+  background: rgba(11, 87, 208, .10);
+  border-color: rgba(11, 87, 208, .25);
+}
+
+.status-badge--sold{
+  background: rgba(0,0,0,.05);
+}
+
+.status-badge--exhibit{
+  background: rgba(255, 215, 0, .14);
+  border-color: rgba(255, 215, 0, .35);
+}
+
+/* Commission section */
+.portfolio-commission{
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+}
+
+.commission-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.commission-copy h2{
+  margin-top: 0;
+}
+
+.commission-notes{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.commission-form{
+  padding: 16px;
+}
+
+.field{
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.field span{
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.form-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.small{
+  font-size: .9rem;
+}
+
+/* Hide honeypot */
+.hp-field{
+  display: none !important;
+}
+
+/* CTA */
 .portfolio-cta{
   text-align: center;
   padding: 60px 0;
@@ -98,4 +240,11 @@
 
 .portfolio-cta .btn{
   margin-top: .4rem;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .commission-grid{
+    grid-template-columns: 1fr;
+  }
 }
