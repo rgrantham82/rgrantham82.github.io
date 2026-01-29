@@ -1,6 +1,6 @@
-/* ==========================================================================
+/* ==========================================================
    Contact Page Styles — extends global style.css
-   ========================================================================== */
+   ========================================================== */
 
 body.contact .hero {
   padding: 60px 0 40px;
@@ -100,4 +100,63 @@ body.contact .hero {
   .hero-image {
     order: -1;
   }
+}
+
+/* === Contact form === */
+.contact-form-section {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.contact-form {
+  margin-top: 18px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.form-note {
+  margin-top: 10px;
+}
+
+/* Hide honeypot */
+.hp-field {
+  display: none !important;
 }
