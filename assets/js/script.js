@@ -67,7 +67,11 @@ function initMobileMenu() {
 function initSmoothScroll() {
   $$('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
-      const id = link.getAttribute('href').slice(1);
+      const href = link.getAttribute('href');
+      // Ignore if href includes '/' or other page
+      if (href.includes('/') && href !== '#') return;
+
+      const id = href.slice(1);
       const el = document.getElementById(id);
       if (!el) return;
       e.preventDefault();
@@ -78,6 +82,7 @@ function initSmoothScroll() {
     });
   });
 }
+
 
 /** 4. Contact Form Validation **/
 function initFormValidation() {
