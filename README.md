@@ -7,4 +7,3 @@ It’s where I publish selected works (calligraphy, calligraffiti, and abstract 
 - **Portfolio / Gallery** pages for finished works  
 - **Series + themes** (Southern Gothic, resilience, memory, luminous fields, letterform-as-structure)  
 - **Commission-ready presence**: clear contact info and a straightforward way to reach me  
-- A simple, maintainable site structure meant to load fast and stay readable on mobile
