@@ -1,0 +1,24 @@
+---
+layout: default
+title: Gallery
+description: "A curated selection of originals and calligraphy by Robert Grantham — contemporary work rooted in resilience, history, and hand-written light."
+permalink: /portfolio/
+css: /assets/css/curated-portfolio.css
+---
+
+<section class="gallery-hero">
+  <div class="wrapper">
+    <span class="tag">Curated Gallery</span>
+    <h1>Selected works</h1>
+    <p class="lede muted">
+      This is not a “dump everything I’ve ever made” page. It’s the front room—pieces that speak clearly, hold up under scrutiny,
+      and represent the studio right now: Southern Gothic abstraction, liturgical gold, and the stubborn insistence that handwriting still matters.
+    </p>
+    <div class="gallery-actions">
+      <a class="btn" href="mailto:{{ site.email }}?subject=Commission%20inquiry">Commission inquiry</a>
+      <a class="btn ghost" href="{{ '/contact.html' | relative_url }}">Contact</a>
+    </div>
+  </div>
+</section>
+
+{% include portfolio-gallery.html %}
