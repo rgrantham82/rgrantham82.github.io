@@ -1,0 +1,31 @@
+<article class="work-card">
+  <a class="work-card__link" href="{{ work.url | relative_url }}">
+    <div class="work-card__media">
+      {%- if work.image -%}
+        <img src="{{ work.image | relative_url }}"
+             alt="{{ work.alt | default: work.title }}"
+             loading="lazy" decoding="async">
+      {%- endif -%}
+      {%- if work.status -%}
+        <span class="badge badge--status badge--{{ work.status | downcase | replace: ' ', '-' }}">{{ work.status }}</span>
+      {%- endif -%}
+      {%- if work.featured -%}
+        <span class="badge badge--featured">Featured</span>
+      {%- endif -%}
+    </div>
+
+    <div class="work-card__body">
+      <h3 class="work-card__title">{{ work.title }}</h3>
+      {%- if work.size or work.medium -%}
+        <p class="work-card__meta">
+          {%- if work.size -%}{{ work.size }}{%- endif -%}
+          {%- if work.size and work.medium -%} • {%- endif -%}
+          {%- if work.medium -%}{{ work.medium }}{%- endif -%}
+        </p>
+      {%- endif -%}
+      {%- if work.subtitle -%}
+        <p class="work-card__desc">{{ work.subtitle }}</p>
+      {%- endif -%}
+    </div>
+  </a>
+</article>
