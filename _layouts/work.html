@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<article class="work-page" itemscope itemtype="http://schema.org/VisualArtwork">
+  <header class="work-hero">
+    <div class="wrapper">
+      <p class="work-kicker">
+        {%- if page.series -%}
+          <span class="tag">{{ page.series }}</span>
+        {%- else -%}
+          <span class="tag">Artwork</span>
+        {%- endif -%}
+        {%- if page.status -%}
+          <span class="status-pill status-{{ page.status | downcase | replace: ' ', '-' }}">{{ page.status }}</span>
+        {%- endif -%}
+      </p>
+
+      <h1 class="work-title" itemprop="name">{{ page.title }}</h1>
+      {%- if page.subtitle -%}
+        <p class="work-subtitle">{{ page.subtitle }}</p>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <section class="work-body">
+    <div class="wrapper work-grid">
+      <figure class="work-media">
+        {%- assign img = page.image -%}
+        {%- if img -%}
+          <img src="{{ img | relative_url }}"
+               alt="{{ page.alt | default: page.title }}"
+               loading="eager" decoding="async"
+               itemprop="image">
+        {%- endif -%}
+      </figure>
+
+      <aside class="work-panel" aria-label="Artwork details">
+        <div class="work-details">
+          <h2 class="sr-only">Details</h2>
+          <dl>
+            {%- if page.year -%}<div><dt>Year</dt><dd itemprop="dateCreated">{{ page.year }}</dd></div>{%- endif -%}
+            {%- if page.size -%}<div><dt>Size</dt><dd>{{ page.size }}</dd></div>{%- endif -%}
+            {%- if page.medium -%}<div><dt>Medium</dt><dd itemprop="artMedium">{{ page.medium }}</dd></div>{%- endif -%}
+            {%- if page.finish -%}<div><dt>Finish</dt><dd>{{ page.finish }}</dd></div>{%- endif -%}
+            {%- if page.inventory_id -%}<div><dt>Inventory ID</dt><dd>{{ page.inventory_id }}</dd></div>{%- endif -%}
+            {%- if page.price -%}<div><dt>Price</dt><dd>{{ page.price }}</dd></div>{%- endif -%}
+            {%- if page.note -%}<div><dt>Notes</dt><dd>{{ page.note }}</dd></div>{%- endif -%}
+          </dl>
+        </div>
+
+        <div class="work-actions">
+          {%- assign subject = page.title | uri_escape -%}
+          <a class="btn" href="mailto:{{ site.email | default: site.author.email }}?subject=Inquiry:%20{{ subject }}">
+            Inquire about this piece
+          </a>
+          <a class="btn ghost" href="{{ '/portfolio/' | relative_url }}">Back to Gallery</a>
+        </div>
+
+        <p class="work-small muted">
+          COA included for originals when applicable. Pickup in Austin preferred; shipping available.
+        </p>
+      </aside>
+    </div>
+
+    <div class="wrapper work-text">
+      <div class="prose" itemprop="description">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+</article>
