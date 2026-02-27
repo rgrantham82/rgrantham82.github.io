@@ -1,0 +1,83 @@
+title: Robert Grantham Art
+tagline: Hope, written by hand. Resilience, painted in layers.
+description: Contemporary acrylic painting, calligraphy, and data analytics by Robert
+  Grantham — Austin, TX. Originals, commissions, murals, and writing.
+author:
+  name: Robert Grantham
+  email: robertgrantham40@gmail.com
+  location: Austin, TX
+url: https://rgrantham82.github.io
+baseurl: ''
+theme_color_light: '#ffffff'
+theme_color_dark: '#0b0c0f'
+font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap
+logo: /assets/images/logo.png
+favicon: /assets/images/favicon.png
+apple_touch_icon: /assets/images/favicon.png
+github_username: rgrantham82
+instagram_username: robertgranthamart
+twitter_username: ''
+linkedin_username: robertgrantham82
+email: robertgrantham40@gmail.com
+markdown: kramdown
+highlighter: rouge
+permalink: /:title.html
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title.html
+  works:
+    output: true
+    permalink: /portfolio/:name/
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    author: Robert Grantham
+- scope:
+    path: ''
+    type: works
+  values:
+    layout: work
+    css: /assets/css/work.css
+include:
+- _pages
+- _data
+- assets
+exclude:
+- node_modules
+- Gemfile
+- Gemfile.lock
+- README.md
+- vendor
+- .sass-cache
+- .jekyll-cache
+- _site
+data_dir: _data
+nav:
+  links:
+  - title: Portfolio
+    url: /portfolio/
+  - title: Blog
+    url: /blog/
+  - title: Commissions
+    url: /commissions.html
+  - title: Services
+    url: /services.html
+  - title: About
+    url: /about.html
+  - title: Contact
+    url: /contact.html
+plugins:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag
+timezone: America/Chicago
+encoding: utf-8
+future: true
+lsi: false
+safe: true
+paginate: 6
+paginate_path: /page:num
