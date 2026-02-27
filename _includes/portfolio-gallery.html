@@ -1,0 +1,43 @@
+{%- comment -%}
+Curated Gallery renderer.
+Uses site.works with front matter keys:
+featured (bool), section (string), order (int)
+{%- endcomment -%}
+
+{%- assign works_sorted = site.works | sort: 'order' -%}
+{%- assign featured = works_sorted | where: 'featured', true -%}
+
+<section class="gallery-block">
+  <div class="wrapper">
+    <div class="gallery-head">
+      <h2>Featured</h2>
+      <p class="muted">A small front-window selection—pieces that best represent the current arc of the studio.</p>
+    </div>
+    <div class="work-grid">
+      {%- for work in featured -%}
+        {%- include work-card.html work=work -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{%- assign sections = works_sorted | map: 'section' | uniq -%}
+{%- for s in sections -%}
+  {%- if s and s != '' -%}
+    {%- assign section_works = works_sorted | where: 'section', s | where_exp: 'w', 'w.featured != true' -%}
+    {%- if section_works and section_works.size > 0 -%}
+      <section class="gallery-block">
+        <div class="wrapper">
+          <div class="gallery-head">
+            <h2>{{ s }}</h2>
+          </div>
+          <div class="work-grid">
+            {%- for work in section_works -%}
+              {%- include work-card.html work=work -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </section>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
