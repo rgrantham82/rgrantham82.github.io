@@ -1,0 +1,22 @@
+/* Work page */
+.work-hero{padding:3.5rem 0 1.25rem}
+.work-kicker{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 .75rem}
+.status-pill{display:inline-block;font-size:.75rem;padding:.25rem .5rem;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04)}
+.work-title{margin:.1rem 0 .75rem}
+.work-subtitle{max-width:70ch;margin:0;opacity:.9}
+
+.work-body{padding:1.5rem 0 3rem}
+.work-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:1.5rem;align-items:start}
+@media (max-width:900px){.work-grid{grid-template-columns:1fr}}
+.work-media{margin:0;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.12)}
+.work-media img{width:100%;height:auto;display:block}
+
+.work-panel{border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem;background:rgba(255,255,255,.02)}
+.work-details dl{display:grid;gap:.6rem;margin:0}
+.work-details div{display:grid;grid-template-columns:110px 1fr;gap:.75rem}
+.work-details dt{opacity:.75}
+.work-details dd{margin:0}
+.work-actions{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
+.work-small{margin-top:1rem}
+.work-text{margin-top:1.75rem}
+.prose{max-width:75ch}
