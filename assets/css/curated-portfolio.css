@@ -1,0 +1,25 @@
+/* Curated Gallery */
+.page-header .lead{max-width:60ch}
+.gallery-hero{padding:3.5rem 0 1.5rem}
+.gallery-hero .tag{display:inline-block;margin-bottom:.75rem}
+.gallery-hero h1{margin:.25rem 0 1rem}
+.gallery-hero .lede{max-width:70ch}
+.gallery-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem}
+
+.gallery-block{padding:2.5rem 0}
+.gallery-head{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.25rem}
+.gallery-head h2{margin:0}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+
+.work-card{border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.02)}
+.work-card__link{text-decoration:none;display:block;color:inherit}
+.work-card__media{position:relative;aspect-ratio:4/5;overflow:hidden;background:rgba(0,0,0,.15)}
+.work-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+.work-card__body{padding:1rem}
+.work-card__title{margin:0 0 .4rem;font-size:1.05rem}
+.work-card__meta{margin:0 0 .45rem;font-size:.95rem;opacity:.8}
+.work-card__desc{margin:0;font-size:.95rem;opacity:.9}
+
+.badge{position:absolute;left:.75rem;top:.75rem;font-size:.75rem;padding:.25rem .5rem;border-radius:999px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12)}
+.badge--featured{top:auto;bottom:.75rem}
+.badge--status{left:auto;right:.75rem}
