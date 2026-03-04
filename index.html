@@ -1,0 +1,99 @@
+---
+layout: default
+title: Home
+description: "Contemporary painting and calligraphy by Robert Grantham — originals, commissions, murals, and writing."
+css: /assets/css/home.css
+permalink: /
+---
+
+<section class="hero">
+  <div class="wrapper hero-inner">
+    <div>
+      <span class="tag">Robert Grantham Art</span>
+      <h1>Hope, written by hand. Resilience, painted in layers.</h1>
+      <p class="lede muted">
+        I make contemporary acrylic paintings and calligraphic works rooted in history, survival, and the stubborn belief that
+        handmade marks still matter. If you like your art with a pulse and a backbone, you’re in the right place.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="{{ '/portfolio/' | relative_url }}">View the gallery</a>
+        <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commission a piece</a>
+        <a class="btn ghost" href="mailto:{{ site.email }}?subject=Artwork%20inquiry">Email</a>
+      </div>
+    </div>
+
+    <aside class="card hero-card">
+      <h3>Quick info</h3>
+      <p class="muted">Austin, TX · Originals · Calligraphy · Murals · Custom lettering</p>
+      <div class="grid">
+        <div class="card">
+          <div class="badge">Availability</div>
+          <p class="muted" style="margin-top:10px;">Most works ship or can be hand-delivered locally. Every original includes a COA.</p>
+        </div>
+        <div class="card">
+          <div class="badge">Commission lead time</div>
+          <p class="muted" style="margin-top:10px;">Varies by size and complexity. Small lettering pieces can be fast; murals take planning.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <h2>Featured works</h2>
+    <p class="muted">A small curated set — not “everything I’ve ever made,” because we’re running a gallery, not a storage unit.</p>
+
+    {% assign featured = site.works | where: "featured", true | sort: "order" %}
+    {% if featured and featured.size > 0 %}
+      <div class="grid three" style="margin-top:14px;">
+        {% for w in featured limit: 6 %}
+          <article class="card work-card">
+            <a href="{{ w.url | relative_url }}" style="text-decoration:none;">
+              <div class="work-thumb">
+                {% if w.image %}
+                  <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
+                {% else %}
+                  <div style="padding:16px;" class="muted">Image coming soon.</div>
+                {% endif %}
+              </div>
+              <div class="work-meta">
+                <h3 style="margin-bottom:6px;">{{ w.title }}</h3>
+                <div class="muted">
+                  {% if w.size %}{{ w.size }}{% endif %}
+                  {% if w.medium %}{% if w.size %} · {% endif %}{{ w.medium }}{% endif %}
+                  {% if w.status %} · <span class="badge">{{ w.status }}</span>{% endif %}
+                </div>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="card" style="margin-top:14px;">
+        <p class="muted">No featured works are marked yet. Add <code>featured: true</code> to a few files in <code>_works/</code>.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="kv">
+      <div class="card">
+        <h3>Commission work</h3>
+        <p class="muted">
+          Want something made for your space, your story, your budget, and your timeline? I do custom paintings, calligraphy, and lettering pieces.
+        </p>
+        <a class="btn" href="{{ '/commissions.html' | relative_url }}">How commissions work</a>
+      </div>
+      <div class="card">
+        <h3>Collectors & serious buyers</h3>
+        <p class="muted">
+          I keep the gallery curated and the documentation clean: titles, sizes, materials, finish, and COA. No mystery meat.
+        </p>
+        <a class="btn ghost" href="{{ '/contact.html' | relative_url }}">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
