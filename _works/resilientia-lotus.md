@@ -2,7 +2,7 @@
 title: Resilientia Lotus (Sursum Corda)
 year: 2025
 series: Resilientia Lotus
-status: Selected
+status: Sold
 size: 12×16 in
 medium: Acrylic & metallics on canvas
 image: /assets/images/resilientia-final.jpg
