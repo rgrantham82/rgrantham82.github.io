@@ -1,33 +1,26 @@
 ---
 layout: work
 title: "Magnolia Canticle, No. 3"
-subtitle: "A continuation in the Magnolia Canticle series—handwritten light, layered resilience."
+subtitle: "Handwritten light, layered resilience—continued."
 year: 2026
 
-# How it gets grouped in the gallery:
 section: "Magnolia Canticle"
 order: 30
-featured: true   # set to false if you don’t want it in the Featured row
+featured: true
 
-# Series + metadata:
 series: "Magnolia Canticle"
-status: "Available"          # Available | Collected | Selected | Commissionable
+status: "Available"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
-size: "16×20 in (gallery depth)"   # change to your actual size/depth
-inventory_id: "RGA-MC3-2026-01"     # replace with your real ID if different
-price: ""                           # optional; leave blank if you don’t show prices
+size: "16×20×1.5 in"
+inventory_id: "RGA-MC3-2026-01"
+price: ""
 
-# Image (you must add the file below):
-image: "/assets/images/work-magnolia-canticle-no-3.jpg"
-alt: "Abstract acrylic painting in the Magnolia Canticle series, featuring calligraphic elements and layered color fields."
-
-# URL for the page:
+image: "/assets/images/magnolia-canticle-no-3.jpg"
+alt: "Magnolia Canticle, No. 3 — abstract acrylic painting with calligraphic structure and layered fields of color."
 permalink: /portfolio/magnolia-canticle-no-3/
 
-# Optional SEO helpers:
-description: "Magnolia Canticle, No. 3 — original acrylic painting by Robert Grantham. Layered abstraction with calligraphic structure, rooted in resilience and hand-written light."
+description: "Magnolia Canticle, No. 3 — 16×20×1.5 acrylic on canvas by Robert Grantham. A layered, calligraphic abstraction rooted in resilience and hand-written presence."
 og_image: "/assets/images/work-magnolia-canticle-no-3.jpg"
 ---
-This piece continues the Magnolia Canticle arc: a hymn written in marks, a record of motion and recovery. The composition is built the way memory is built—layer on layer—until the final structure feels inevitable.
-
+Magnolia Canticle, No. 3 continues the series’ central idea: handwriting as structure rather than ornament. The composition is built through revision—layer on layer—until the final form reads like a resolved sentence.
