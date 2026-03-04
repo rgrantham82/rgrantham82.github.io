@@ -58,6 +58,8 @@ exclude:
 data_dir: _data
 nav:
   links:
+  - title: Magnolia Canticle
+    url: /series/magnolia-canticle/
   - title: Portfolio
     url: /portfolio/
   - title: Blog
