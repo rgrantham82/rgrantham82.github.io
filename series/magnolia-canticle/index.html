@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Magnolia Canticle"
+description: "A curated selection from the Magnolia Canticle series—paintings that treat handwriting as structure and resilience as subject."
+permalink: /series/magnolia-canticle/
+css: /assets/css/curated-portfolio.css
+---
+
+<section class="gallery-hero">
+  <div class="wrapper">
+    <span class="tag">Series</span>
+    <h1>Magnolia Canticle</h1>
+    <p class="lede muted">
+      This series treats handwriting like architecture: not decoration, but structure.
+      Each work is a small liturgy of survival—layered, revised, and finally sealed into permanence.
+    </p>
+  </div>
+</section>
+
+<section class="wrapper" style="margin-top: 20px;">
+  <div class="gallery-grid">
+    {% assign works = site.works | where_exp: "w", "w.series contains 'Magnolia Canticle'" | sort: "order" %}
+    {% for w in works %}
+      <article class="work-card">
+        <a class="work-link" href="{{ w.url | relative_url }}">
+          <div class="work-media">
+            {% if w.image %}
+              <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
+            {% endif %}
+          </div>
+          <div class="work-meta">
+            <h3 class="work-title">{{ w.title }}</h3>
+            {% if w.subtitle %}<p class="muted">{{ w.subtitle }}</p>{% endif %}
+            <div class="work-facts muted">
+              {% if w.year %}<span>{{ w.year }}</span>{% endif %}
+              {% if w.medium %}<span>· {{ w.medium }}</span>{% endif %}
+              {% if w.size %}<span>· {{ w.size }}</span>{% endif %}
+            </div>
+            {% if w.status %}
+              <div class="work-badge">{{ w.status }}</div>
+            {% endif %}
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
