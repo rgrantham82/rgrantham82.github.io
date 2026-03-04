@@ -2,7 +2,7 @@
 title: Neon Cetacean
 year: 2026
 series: Neon Cetacean
-status: Selected
+status: Sold
 size: (series study)
 medium: Acrylic on canvas
 finish: Matte varnish
