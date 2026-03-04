@@ -2,7 +2,7 @@
 layout: work
 title: "Magnolia Canticle, No. 2"
 subtitle: "A completed chapter in the Magnolia Canticle series."
-year: 2026
+year: 2025
 
 section: "Magnolia Canticle"
 order: 20
@@ -13,7 +13,7 @@ status: "Sold"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
 size: "16×20×1.5 in"
-inventory_id: "RGA-MC2-2026-01"
+inventory_id: "RGA-MC2-2025-01"
 
 image: "/assets/images/work-magnolia-canticle-no-2.jpg"
 alt: "Magnolia Canticle, No. 2 — abstract acrylic painting with layered mark-making and calligraphic structure."
