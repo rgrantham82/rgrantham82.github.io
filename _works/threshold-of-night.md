@@ -6,6 +6,7 @@ status: Available
 size: 12×12 in (5/8 in depth)
 medium: Acrylic on canvas
 finish: Matte varnish
+inventory_id: RGA-TN-2026-01
 image: /assets/images/work-threshold-of-night.jpg
 alt: Threshold of Night — abstract acrylic painting in blue and dark tones with layered calligraphic and structural forms
 subtitle: A blue-toned meditation on depth, atmosphere, and the architecture of darkness.
