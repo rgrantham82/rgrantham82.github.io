@@ -3,7 +3,7 @@ title: Magnolia Canticle No. 1
 year: 2026
 series: Magnolia Canticle
 status: Available
-size: 16×20 in (gallery depth)
+size: 16×20x1.5 in 
 medium: Acrylic on canvas
 finish: Matte varnish
 image: /assets/images/work-magnolia1.jpg
