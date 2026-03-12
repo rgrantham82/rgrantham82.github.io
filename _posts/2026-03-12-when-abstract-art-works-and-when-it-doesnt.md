@@ -13,6 +13,7 @@ tags:
 - mark making
 - art criticism
 ---
+![Abstract composition with gestural chaos on the left and geometric order on the right](/assets/images/posts/2026-03-12-abstract-hero.png)
 
 Abstract art suffers from a peculiar curse: everybody thinks they can spot fraud, but not everybody knows how to spot quality. One person looks at an abstract painting and says, “That’s brilliant.” Another says, “My nephew could do that with a mop and a head injury.” As usual, both may be wrong.
 
