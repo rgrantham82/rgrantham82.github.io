@@ -1,7 +1,6 @@
 ---
 title: Aurum Rising
 year: 2026
-series: Aurum Rising
 status: Available
 size: 24×30x1.5 in
 medium: Acrylic on canvas
