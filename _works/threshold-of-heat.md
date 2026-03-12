@@ -6,6 +6,7 @@ status: Available
 size: 12×12 in (5/8 in depth)
 medium: Acrylic on canvas
 finish: Matte varnish
+inventory_id: RGA-TH-2026-01
 image: /assets/images/work-threshold-of-heat.jpg
 alt: Threshold of Heat — abstract acrylic painting with red, orange, black, and calligraphic structural forms
 subtitle: A charged red field where pressure, structure, and heat push against one another.
