@@ -3,7 +3,7 @@ title: Aurum Rising
 year: 2026
 series: Aurum Rising
 status: Available
-size: 24×30 in (gallery depth)
+size: 24×30x1.5 in
 medium: Acrylic on canvas
 finish: Matte varnish
 inventory_id: RGA-AR-2026-01
