@@ -11,7 +11,7 @@ alt: Threshold of Night — abstract acrylic painting in blue and dark tones wit
 subtitle: A blue-toned meditation on depth, atmosphere, and the architecture of darkness.
 section: Threshold
 order: 2
-featured: true
+featured: false 
 note: COA included.
 permalink: /portfolio/threshold-of-night/
 ---
