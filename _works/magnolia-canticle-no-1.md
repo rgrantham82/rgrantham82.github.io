@@ -12,7 +12,7 @@ alt: Magnolia Canticle No. 1 — abstract acrylic painting with floral and calli
 subtitle: A Southern Gothic bloom with handwriting in the underbrush.
 section: Magnolia Canticle
 order: 2
-featured: true
+featured: false
 note: COA included.
 permalink: /portfolio/magnolia-canticle-no-1/
 ---
