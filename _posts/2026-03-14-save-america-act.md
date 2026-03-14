@@ -23,7 +23,7 @@ tags:
   gtag('config', 'G-7WZFJ98W4K');
 </script>
 
-![SAVE America Act voter restriction illustration](/assets/posts/images/2026-03-14-save-america-act.png)
+![SAVE America Act voter restriction illustration](/assets/images/posts/2026-03-14-save-america-act.png)
 As of this writing, the SAVE America Act is being pushed as a defense of election integrity. That is the sales pitch. The reality is far less noble. This bill is not really about solving a widespread crisis. It is about using the language of citizenship and security to justify new barriers for lawful voters and to reshape the electorate in a way that benefits a particular political agenda.
 
 Let us begin with the obvious point that supporters of this bill love to trumpet as though they just discovered fire: only U.S. citizens should vote in U.S. elections. Yes. Correct. Marvelous. That is already the law. Noncitizens are already prohibited from voting in federal elections. So the real question is not whether citizenship matters. It does. The real question is whether this bill is a proportionate and honest response to an actual problem.
