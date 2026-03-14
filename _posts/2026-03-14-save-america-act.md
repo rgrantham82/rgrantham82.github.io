@@ -4,7 +4,7 @@ title:  "The SAVE America Act Is About Shaping the Electorate, Not Protecting El
 author_profile: true
 date:   2026-03-14
 description: A call to action urging citizens to oppose the SAVE America Act, a proposal that would burden eligible voters, disrupt registration, and reshape the electorate under the guise of election security.
-image: /assets/images/2026-03-14-save-america-act.png
+image: /assets/images/posts/2026-03-14-save-america-act.png
 tags: 
 - voting rights
 - democracy
