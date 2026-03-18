@@ -1,0 +1,183 @@
+---
+layout: default
+title: "Magnolia Canticle"
+description: "A dedicated series page for Magnolia Canticle—paintings where bloom, handwriting, memory, and resilience converge."
+permalink: /series/magnolia-canticle/
+css: /assets/css/magnolia-canticle.css
+---
+
+{% assign works = site.works | where_exp: "w", "w.series contains 'Magnolia Canticle'" | sort: "order" %}
+{% assign featured_candidates = works | where: "featured", true %}
+{% assign hero_work = featured_candidates | first %}
+{% unless hero_work %}{% assign hero_work = works | first %}{% endunless %}
+{% assign available_works = works | where: "status", "Available" %}
+{% assign sold_works = works | where: "status", "Sold" %}
+
+<section class="mc-hero">
+  <div class="wrapper mc-hero__grid">
+    <div class="mc-hero__copy">
+      <span class="tag">Series</span>
+      <h1>Magnolia Canticle</h1>
+      <p class="lede muted">
+        <em>Magnolia Canticle</em> treats the magnolia as emblem, witness, and weather report: a Southern form carrying memory,
+        handwriting, endurance, and the pressure of lived history.
+      </p>
+      <p class="muted">
+        These paintings are not botanical illustrations dressed up for church. They are meditations on resilience—built through layered acrylic,
+        calligraphic structure, revision, and atmosphere until bloom, scar, record, and relic begin sharing the same body.
+      </p>
+
+      <div class="mc-actions">
+        <a class="btn" href="{{ '/portfolio/' | relative_url }}">View full portfolio</a>
+        <a class="btn ghost" href="{{ '/contact.html' | relative_url }}">Inquire</a>
+      </div>
+
+      <div class="mc-stats" aria-label="Magnolia Canticle overview">
+        <div class="mc-stat">
+          <strong>{{ works.size }}</strong>
+          <span>Works on site</span>
+        </div>
+        <div class="mc-stat">
+          <strong>{{ available_works.size }}</strong>
+          <span>Available</span>
+        </div>
+        <div class="mc-stat">
+          <strong>{{ sold_works.size }}</strong>
+          <span>Sold</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mc-hero__visual">
+      {% if hero_work and hero_work.image %}
+        <a class="mc-feature" href="{{ hero_work.url | relative_url }}">
+          <div class="mc-feature__media">
+            <img src="{{ hero_work.image | relative_url }}" alt="{{ hero_work.alt | escape }}" loading="eager" decoding="async">
+          </div>
+          <div class="mc-feature__meta">
+            <span class="badge">Featured work</span>
+            <h2>{{ hero_work.title }}</h2>
+            {% if hero_work.subtitle %}<p class="muted">{{ hero_work.subtitle }}</p>{% endif %}
+            <p class="muted mc-feature__facts">
+              {% if hero_work.year %}{{ hero_work.year }}{% endif %}
+              {% if hero_work.medium %} · {{ hero_work.medium }}{% endif %}
+              {% if hero_work.size %} · {{ hero_work.size }}{% endif %}
+            </p>
+          </div>
+        </a>
+      {% else %}
+        <div class="mc-feature mc-feature--empty">
+          <div class="mc-feature__meta">
+            <span class="badge">Series page ready</span>
+            <h2>Magnolia Canticle</h2>
+            <p class="muted">Add works tagged with <code>series: Magnolia Canticle</code> and they will appear here automatically.</p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="mc-section">
+  <div class="wrapper mc-grid-two">
+    <article class="card mc-note">
+      <span class="tag">Series intent</span>
+      <h2>What the magnolia is doing here</h2>
+      <p class="muted">
+        In this series, the magnolia is never just a flower. It becomes a carrier of Southern memory, a devotional form, a witness mark,
+        and sometimes a stand-in for the body under pressure. The bloom offers beauty, yes—but beauty that has survived weather.
+      </p>
+      <p class="muted">
+        That is why the paintings move between lyricism and abrasion. They want grace without sentimentality and structure without stiffness.
+      </p>
+    </article>
+
+    <article class="card mc-note">
+      <span class="tag">Formal language</span>
+      <h2>Recurring qualities</h2>
+      <ul class="mc-list muted">
+        <li>Calligraphic marks treated as structure rather than embellishment</li>
+        <li>Floral suggestion without settling into literal illustration</li>
+        <li>Layered acrylic surfaces built through revision and restraint</li>
+        <li>Atmosphere that reads as memory, humidity, hymn, or witness</li>
+        <li>A Southern Gothic undertow held inside disciplined abstraction</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="mc-section">
+  <div class="wrapper">
+    <div class="card mc-quote">
+      <p>
+        “I’m interested in the moment abstraction turns into something personal: not a literal picture,
+        but a recognizable atmosphere—like humidity, like hymn-sound, like a story you’ve lived.”
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="mc-section mc-section--gallery">
+  <div class="wrapper">
+    <div class="mc-head">
+      <div>
+        <span class="tag">Works</span>
+        <h2>Series works</h2>
+      </div>
+      <p class="muted mc-head__text">
+        This page updates itself from the <code>works</code> collection, so future entries in the series will appear automatically
+        as long as they use <code>series: Magnolia Canticle</code>.
+      </p>
+    </div>
+
+    {% if works.size > 0 %}
+      <div class="mc-gallery">
+        {% for w in works %}
+          <article class="mc-card">
+            <a class="mc-card__link" href="{{ w.url | relative_url }}">
+              <div class="mc-card__media">
+                {% if w.image %}
+                  <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
+                {% endif %}
+                {% if w.status %}<span class="mc-card__badge">{{ w.status }}</span>{% endif %}
+              </div>
+              <div class="mc-card__body">
+                <h3>{{ w.title }}</h3>
+                {% if w.subtitle %}<p class="muted mc-card__subtitle">{{ w.subtitle }}</p>{% endif %}
+                <p class="muted mc-card__facts">
+                  {% if w.year %}{{ w.year }}{% endif %}
+                  {% if w.medium %} · {{ w.medium }}{% endif %}
+                  {% if w.size %} · {{ w.size }}{% endif %}
+                </p>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="card">
+        <p class="muted" style="margin:0;">
+          No Magnolia Canticle works are currently published in <code>_works</code>. Once they are, this page will populate itself.
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="mc-section">
+  <div class="wrapper">
+    <div class="card mc-cta">
+      <div>
+        <span class="tag">Collect</span>
+        <h2>Interested in Magnolia Canticle?</h2>
+        <p class="muted">
+          For availability, commissions adjacent to this visual language, or questions about a specific piece, reach out directly.
+        </p>
+      </div>
+      <div class="mc-cta__actions">
+        <a class="btn" href="{{ '/contact.html' | relative_url }}">Contact Robert</a>
+        <a class="btn ghost" href="mailto:{{ site.email }}">Email inquiry</a>
+      </div>
+    </div>
+  </div>
+</section>
