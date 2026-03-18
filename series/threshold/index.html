@@ -1,0 +1,170 @@
+---
+layout: default
+title: "Threshold"
+description: "A dedicated page for the Threshold series—small square abstractions built around passage, pressure, and luminous structure."
+permalink: /series/threshold/
+css: /assets/css/threshold-series.css
+---
+
+{% assign works = site.works | where_exp: "w", "w.series contains 'Threshold'" | sort: "order" %}
+{% assign featured_candidates = works | where: "featured", true %}
+{% assign hero_work = featured_candidates | first %}
+{% unless hero_work %}{% assign hero_work = works | first %}{% endunless %}
+{% assign available_works = works | where: "status", "Available" %}
+
+<section class="threshold-hero">
+  <div class="wrapper threshold-hero__grid">
+    <div class="threshold-hero__copy">
+      <span class="tag">Series</span>
+      <h1>Threshold</h1>
+      <p class="lede muted">
+        <em>Threshold</em> is a small-square series about passage: the point where atmosphere becomes structure,
+        where color becomes pressure, and where abstraction begins to feel like a lived interior state rather than decoration.
+      </p>
+      <p class="muted">
+        These paintings are built as compact, deliberate fields of tension. They move through heat, darkness, reflection,
+        and luminous fracture without becoming literal scenes. Each work treats the surface like an event horizon—something held,
+        crossed, resisted, or entered.
+      </p>
+
+      <div class="threshold-actions">
+        <a class="btn" href="{{ '/portfolio/' | relative_url }}">View full portfolio</a>
+        <a class="btn ghost" href="{{ '/contact.html' | relative_url }}">Inquire</a>
+      </div>
+
+      <div class="threshold-stats" aria-label="Threshold series overview">
+        <div class="threshold-stat">
+          <strong>{{ works.size }}</strong>
+          <span>Works currently on site</span>
+        </div>
+        <div class="threshold-stat">
+          <strong>{{ available_works.size }}</strong>
+          <span>Marked available</span>
+        </div>
+        <div class="threshold-stat">
+          <strong>{{ hero_work.size | default: '12×12 in' }}</strong>
+          <span>Format</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="threshold-hero__visual">
+      {% if hero_work and hero_work.image %}
+        <a class="threshold-feature" href="{{ hero_work.url | relative_url }}">
+          <div class="threshold-feature__media">
+            <img src="{{ hero_work.image | relative_url }}" alt="{{ hero_work.alt | escape }}" loading="eager" decoding="async">
+          </div>
+          <div class="threshold-feature__meta">
+            <span class="badge">Featured work</span>
+            <h2>{{ hero_work.title }}</h2>
+            {% if hero_work.subtitle %}<p class="muted">{{ hero_work.subtitle }}</p>{% endif %}
+          </div>
+        </a>
+      {% else %}
+        <div class="threshold-feature threshold-feature--empty">
+          <div class="threshold-feature__meta">
+            <span class="badge">Series page ready</span>
+            <h2>Threshold</h2>
+            <p class="muted">
+              Add works tagged with <code>series: Threshold</code> in your <code>_works</code> collection and they will appear here automatically.
+            </p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="threshold-section">
+  <div class="wrapper threshold-grid-two">
+    <article class="card threshold-note">
+      <span class="tag">Series intent</span>
+      <h2>What holds the work together</h2>
+      <p class="muted">
+        The series is unified less by repeated imagery than by repeated condition: compression, seam, barrier, aperture, and release.
+        Geometry appears, but it never settles into cold design. Gesture appears, but it is disciplined by structure.
+      </p>
+      <p class="muted">
+        That push and pull is the point. The paintings want to feel architectural, but still human; controlled, but not sterile;
+        abstract, but charged with psychic weather.
+      </p>
+    </article>
+
+    <article class="card threshold-note">
+      <span class="tag">Series language</span>
+      <h2>Recurring formal qualities</h2>
+      <ul class="threshold-list muted">
+        <li>Square format for focus, compression, and frontal presence</li>
+        <li>Vertical seams, masses, and chambers that suggest passage</li>
+        <li>Layered acrylic handling that balances opacity and translucency</li>
+        <li>Calligraphic or structural marks that keep the surface alive</li>
+        <li>Atmosphere treated as weight, not merely mood</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="threshold-section threshold-section--gallery">
+  <div class="wrapper">
+    <div class="threshold-head">
+      <div>
+        <span class="tag">Works</span>
+        <h2>Threshold series works</h2>
+      </div>
+      <p class="muted threshold-head__text">
+        This grid is pulled directly from your <code>works</code> collection, so future Threshold pieces will appear here automatically
+        as long as they carry <code>series: Threshold</code>.
+      </p>
+    </div>
+
+    {% if works.size > 0 %}
+      <div class="threshold-gallery">
+        {% for w in works %}
+          <article class="threshold-card">
+            <a class="threshold-card__link" href="{{ w.url | relative_url }}">
+              <div class="threshold-card__media">
+                {% if w.image %}
+                  <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
+                {% endif %}
+                {% if w.status %}<span class="threshold-card__badge">{{ w.status }}</span>{% endif %}
+              </div>
+              <div class="threshold-card__body">
+                <h3>{{ w.title }}</h3>
+                {% if w.subtitle %}<p class="muted threshold-card__subtitle">{{ w.subtitle }}</p>{% endif %}
+                <p class="muted threshold-card__facts">
+                  {% if w.year %}{{ w.year }}{% endif %}
+                  {% if w.medium %} · {{ w.medium }}{% endif %}
+                  {% if w.size %} · {{ w.size }}{% endif %}
+                </p>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="card">
+        <p class="muted" style="margin:0;">
+          No Threshold works are currently published in <code>_works</code>. Once they are, this page will populate itself.
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="threshold-section">
+  <div class="wrapper">
+    <div class="card threshold-cta">
+      <div>
+        <span class="tag">Collect</span>
+        <h2>Interested in the series?</h2>
+        <p class="muted">
+          For availability, commissions related to this visual language, or questions about a specific work, get in touch directly.
+        </p>
+      </div>
+      <div class="threshold-cta__actions">
+        <a class="btn" href="{{ '/contact.html' | relative_url }}">Contact Robert</a>
+        <a class="btn ghost" href="mailto:{{ site.email }}">Email inquiry</a>
+      </div>
+    </div>
+  </div>
+                                      </section>
