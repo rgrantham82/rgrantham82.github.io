@@ -1,0 +1,276 @@
+/* assets/css/threshold-series.css */
+.threshold-hero{
+  padding: 1.25rem 0 1rem;
+}
+
+.threshold-hero__grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.threshold-hero__copy,
+.threshold-feature,
+.threshold-note,
+.threshold-cta{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--card) 82%, transparent), color-mix(in srgb, var(--card) 96%, transparent));
+  box-shadow: var(--shadow);
+}
+
+.threshold-hero__copy{
+  padding: 1.35rem;
+}
+
+.threshold-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: 1.25rem 0 1.1rem;
+}
+
+.threshold-stats{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .8rem;
+}
+
+.threshold-stat{
+  padding: .9rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--bg) 35%, transparent);
+}
+
+.threshold-stat strong{
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: .25rem;
+}
+
+.threshold-stat span{
+  display: block;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.threshold-feature{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  min-height: 100%;
+}
+
+.threshold-feature:hover{
+  text-decoration: none;
+}
+
+.threshold-feature__media{
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--fg) 10%, transparent);
+}
+
+.threshold-feature__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.threshold-feature__meta{
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.threshold-feature__meta h2{
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  margin-top: .75rem;
+  margin-bottom: .5rem;
+}
+
+.threshold-feature--empty{
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.threshold-feature--empty .threshold-feature__meta{
+  max-width: 34rem;
+}
+
+.threshold-section{
+  padding-top: 1.2rem;
+}
+
+.threshold-grid-two{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1rem;
+}
+
+.threshold-note{
+  padding: 1.15rem;
+}
+
+.threshold-list{
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.threshold-list li + li{
+  margin-top: .45rem;
+}
+
+.threshold-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.threshold-head h2{
+  margin-top: .7rem;
+  margin-bottom: 0;
+}
+
+.threshold-head__text{
+  max-width: 34rem;
+  margin: 0;
+}
+
+.threshold-gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.threshold-card{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.threshold-card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+
+.threshold-card__link{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.threshold-card__link:hover{
+  text-decoration: none;
+}
+
+.threshold-card__media{
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--fg) 10%, transparent);
+}
+
+.threshold-card__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.threshold-card__badge{
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  display: inline-flex;
+  align-items: center;
+  padding: .35rem .55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 650;
+  backdrop-filter: blur(6px);
+}
+
+.threshold-card__body{
+  padding: 1rem;
+}
+
+.threshold-card__body h3{
+  margin-bottom: .45rem;
+}
+
+.threshold-card__subtitle,
+.threshold-card__facts{
+  margin-bottom: .55rem;
+}
+
+.threshold-card__facts{
+  font-size: .94rem;
+}
+
+.threshold-cta{
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.threshold-cta__actions{
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .92em;
+  padding: .1em .35em;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 980px){
+  .threshold-hero__grid,
+  .threshold-grid-two,
+  .threshold-cta{
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .threshold-head{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 680px){
+  .threshold-stats{
+    grid-template-columns: 1fr;
+  }
+
+  .threshold-actions,
+  .threshold-cta__actions{
+    flex-direction: column;
+  }
+
+  .threshold-actions .btn,
+  .threshold-cta__actions .btn{
+    width: 100%;
+  }
+}
