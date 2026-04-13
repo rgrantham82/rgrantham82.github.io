@@ -1,0 +1,63 @@
+@import url('/assets/css/page.css');
+
+.portrait-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.portrait-copy .lede {
+  max-width: 62ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.portrait-figure {
+  margin: 0;
+}
+
+.portrait-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+}
+
+.portrait-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.96rem;
+}
+
+.portrait-figure.image-missing {
+  display: none;
+}
+
+.portrait-panels,
+.portrait-requirements {
+  display: grid;
+  gap: 16px;
+}
+
+.portrait-requirements {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 6px;
+}
+
+.portrait-list li + li {
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .portrait-grid,
+  .portrait-requirements {
+    grid-template-columns: 1fr;
+  }
+}
