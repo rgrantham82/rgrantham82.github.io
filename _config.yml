@@ -68,12 +68,17 @@ nav:
     url: /blog/
   - title: Commissions
     url: /commissions.html
+  - title: Portraiture
+    url: /portraiture.html
   - title: Services
     url: /services.html
   - title: About
     url: /about.html
   - title: Contact
     url: /contact.html
+  cta:
+    title: Portrait Inquiry
+    url: /portraiture.html
 plugins:
 - jekyll-feed
 - jekyll-sitemap
