@@ -1,5 +1,35 @@
 /* === Blog Layout Fix === */
 
+/* Constrain the entire post */
+.post-container {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Improve readability */
+.post-content {
+  line-height: 1.7;
+}
+
+/* Title rhythm */
+.post-title {
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+/* Lede (intro paragraph) */
+.post-lede {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Space sections cleanly */
+.post-content p {
+  margin-bottom: 1.2em;
+}
+
 /* Keep the whole blog centered and sane */
 .wrapper {
   max-width: 1100px;
