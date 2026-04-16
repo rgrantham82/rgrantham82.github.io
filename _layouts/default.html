@@ -30,8 +30,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> {% if page.css %}
     <link rel="stylesheet" href="{{ page.css | relative_url }}"> {% endif %}
     <link rel="icon" href="{{ site.favicon | default: '/assets/favicons/favicon.png' | relative_url }}">
-    <link rel="apple-touch-icon" href="{{ site.apple_touch_icon | default: '/assets/favicons/apple-touch-icon.png' | relative_url }}">
-    <style>
+    <link rel="apple-touch-icon" href="{{ site.apple_touch_icon | default: '/assets/favicons/apple-touch-icon.png' | relative_url }}"> {% if page.css %}
+    <link rel="stylesheet" href="{{ page.css | relative_url }}"> {% endif %} <style>
       .nav-cta {
         margin-left: 12px;
         white-space: nowrap;
@@ -58,25 +58,16 @@
         <nav class="nav" aria-label="Primary">
           <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation"> Menu </button>
           <ul id="nav-list">
-            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
-            {%- if site.nav and site.nav.links -%}
-              {%- for item in site.nav.links -%}
-                <li>
-                  <a href="{{ item.url | relative_url }}"
-                     {%- if page.url == item.url or page.url == item.url | append: 'index.html' -%} aria-current="page"{%- endif -%}>
-                    {{ item.title }}
-                  </a>
-                </li>
-              {%- endfor -%}
-            {%- endif -%}
-          </ul>
-          {%- if site.nav and site.nav.cta -%}
-            <a class="btn nav-cta"
-               href="{{ site.nav.cta.url | relative_url }}"
-               {%- if page.url == site.nav.cta.url or page.url == site.nav.cta.url | append: 'index.html' -%} aria-current="page"{%- endif -%}>
-              {{ site.nav.cta.title }}
-            </a>
-          {%- endif -%}
+            <li>
+              <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page" {% endif %}>Home</a>
+            </li> {%- if site.nav and site.nav.links -%} {%- for item in site.nav.links -%} <li>
+              <a href="{{ item.url | relative_url }}" {%- if page.url == item.url or page.url == item.url | append: 'index.html' -%} aria-current="page" {%- endif -%}>
+                {{ item.title }}
+              </a>
+            </li> {%- endfor -%} {%- endif -%}
+          </ul> {%- if site.nav and site.nav.cta -%} <a class="btn nav-cta" href="{{ site.nav.cta.url | relative_url }}" {%- if page.url == site.nav.cta.url or page.url == site.nav.cta.url | append: 'index.html' -%} aria-current="page" {%- endif -%}>
+            {{ site.nav.cta.title }}
+          </a> {%- endif -%}
         </nav>
       </div>
     </header>
