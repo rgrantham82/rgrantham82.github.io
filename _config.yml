@@ -1,15 +1,14 @@
 title: Robert Grantham Art
 tagline: Hope, written by hand. Resilience, painted in layers.
-description: Contemporary acrylic painting, calligraphy, and data analytics by Robert
-  Grantham - Austin, TX. Originals, commissions, murals, and writing.
+description: Contemporary abstract expressionism, calligraphy, and calligraffiti by Robert Grantham - Austin, TX. Originals, commissions, and murals.
 author:
   name: Robert Grantham
   email: robertgrantham40@gmail.com
   location: Austin, TX
 url: https://rgrantham82.github.io
 baseurl: ''
-theme_color_light: '#ffffff'
-theme_color_dark: '#0b0c0f'
+theme_color_light: '#faf9f6' # A warm, subtle off-white
+theme_color_dark: '#0b0c0f'  # Your current dark is excellent; deep and void-like
 font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.png
