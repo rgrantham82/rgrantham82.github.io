@@ -6,43 +6,243 @@ css: /assets/css/page.css
 permalink: /contact.html
 ---
 
-<section class="page-hero">
-  <div class="wrapper">
-    <span class="tag">Contact</span>
-    <h1>Let’s talk</h1>
-    <p class="lede muted">
-      The fastest way to reach me is email. If you’re in Austin and it’s time-sensitive, phone works too.
-      Either way, include the basics so I can answer like a professional instead of playing twenty questions.
-    </p>
-  </div>
+<style>
+  .contact-hero {
+    padding: 6rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4rem;
+  }
+  .contact-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  .contact-split {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 6rem;
+  }
+  @media (min-width: 860px) {
+    .contact-split {
+      flex-direction: row;
+    }
+    .contact-sidebar {
+      flex: 1;
+      position: sticky;
+      top: 2rem;
+    }
+    .contact-main {
+      flex: 1.5;
+    }
+  }
+  
+  .direct-info {
+    padding: 2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+  .direct-info p {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+  }
+  .direct-info p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Form Architecture */
+  .inquiry-form {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .form-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--fg);
+  }
+  .form-input, 
+  .form-select, 
+  .form-textarea {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--fg);
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 0; /* Brutalist edge */
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+  }
+  .form-input:focus, 
+  .form-select:focus, 
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--fg);
+    box-shadow: 0 0 0 1px var(--fg);
+  }
+  .btn-submit {
+    width: 100%;
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--fg);
+    color: var(--bg);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 1rem;
+  }
+  .btn-submit:hover {
+    transform: translateY(-2px);
+  }
+  .btn-submit:active {
+    transform: translateY(0);
+  }
+  
+  /* Fallback link styling */
+  .fallback-email {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+  }
+</style>
+
+<section class="contact-hero wrapper">
+  <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Studio Contact</span>
+  <h1 class="contact-title">Let’s Discuss the Work.</h1>
+  <p class="lede muted" style="font-size: 1.25rem; max-width: 650px;">
+    Whether you are acquiring an available piece or commissioning a site-specific installation, the process begins here. Fill out the details below so we can converse like professionals.
+  </p>
 </section>
 
-<section>
-  <div class="wrapper kv" style="margin-top:14px;">
-    <div class="card">
-      <h2>Direct</h2>
-      <p class="muted"><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      <p class="muted"><strong>Phone:</strong> <a href="tel:+15122003563">512‑200‑3563</a></p>
-      <p class="muted"><strong>Instagram:</strong> <a href="https://instagram.com/{{ site.instagram_username }}" rel="me">@{{ site.instagram_username }}</a></p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-        <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry">Inquiry about a piece</a>
-        <a class="btn ghost" href="mailto:{{ site.email }}?subject=Commission%20inquiry&body=Size%3A%0ALocation%3A%0ADeadline%3A%0ABudget%20range%3A%0AColors%2Fnotes%3A%0A">Commission inquiry</a>
+<section class="wrapper contact-split">
+  
+  <aside class="contact-sidebar">
+    <div class="direct-info">
+      <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">Direct Line</h2>
+      <p><strong>Email:</strong> <br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><strong>Phone:</strong> <br><a href="tel:+15122003563">512‑200‑3563</a> <span class="muted" style="font-size:0.85rem; display:block;">(Time-sensitive Austin inquiries)</span></p>
+      <p><strong>Instagram:</strong> <br><a href="https://instagram.com/{{ site.instagram_username }}" rel="me">@{{ site.instagram_username }}</a></p>
+    </div>
+
+    <div style="padding-right: 1rem;">
+      <h3 style="font-size: 1.25rem;">The Rules of Engagement</h3>
+      <p class="muted" style="margin-bottom: 1rem;">If you send “how much?” with no context, you’ll receive a very polite version of “it depends.”</p>
+      <p class="muted">If you provide dimensions, timelines, and a rough budget using the form provided, you will receive an actual, actionable quote. Transparency saves us both from pretending miracles are a scheduling strategy.</p>
+    </div>
+  </aside>
+
+  <main class="contact-main">
+    <form id="inquiryEngine" class="inquiry-form">
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="clientName">Name / Organization</label>
+          <input class="form-input" type="text" id="clientName" required placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inquiryType">Primary Interest</label>
+          <select class="form-select" id="inquiryType">
+            <option value="Artwork Inquiry">Acquiring an Available Piece</option>
+            <option value="Commission Inquiry">Custom Commission</option>
+            <option value="Portrait Commission">Portraiture</option>
+            <option value="Mural / Lettering Services">Murals / Large-Scale Lettering</option>
+            <option value="Trade / Gallery Inquiry">Trade & Designer Inquiry</option>
+            <option value="General Inquiry">Other</option>
+          </select>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <h2>What to include</h2>
-      <ul class="muted list-tight">
-        <li><strong>Subject:</strong> “Commission” or “Artwork inquiry”</li>
-        <li><strong>Size:</strong> exact dimensions or wall photo + measurements</li>
-        <li><strong>Budget range:</strong> a range is fine</li>
-        <li><strong>Deadline:</strong> if there’s a hard date</li>
-        <li><strong>Notes:</strong> colors, mood, where it will live</li>
-      </ul>
-      <p class="muted callout" style="margin-top:12px;">
-        If you send “how much?” with no context, you’ll get a very polite version of “it depends.”
-        If you send details, you’ll get an actual quote.
-      </p>
-    </div>
-  </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="budget">Budget Range (Optional)</label>
+          <input class="form-input" type="text" id="budget" placeholder="e.g. $1k - $3k">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="timeline">Deadline / Timeline</label>
+          <input class="form-input" type="text" id="timeline" placeholder="e.g. Flexible, or specific date">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="locationSize">Location & Dimensions (If applicable)</label>
+        <input class="form-input" type="text" id="locationSize" placeholder="e.g. Austin TX, roughly 48x60 wall space">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="message">Details & Context</label>
+        <textarea class="form-textarea" id="message" rows="6" required placeholder="Tell me which specific piece you're eyeing, or describe the space, mood, and colors for a custom work..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Draft Inquiry</button>
+      
+      <div style="text-align: center;">
+        <a href="mailto:{{ site.email }}" class="fallback-email muted">Or click here to open a blank email.</a>
+      </div>
+    </form>
+  </main>
+
 </section>
+
+<script>
+  document.getElementById('inquiryEngine').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Gather the harvest
+    const name = document.getElementById('clientName').value;
+    const type = document.getElementById('inquiryType').value;
+    const budget = document.getElementById('budget').value || 'Not specified';
+    const timeline = document.getElementById('timeline').value || 'Not specified';
+    const locSize = document.getElementById('locationSize').value || 'N/A';
+    const message = document.getElementById('message').value;
+    
+    // Format the email body beautifully
+    const bodyText = `Name: ${name}\n`
+                   + `Inquiry Type: ${type}\n`
+                   + `Budget Range: ${budget}\n`
+                   + `Timeline: ${timeline}\n`
+                   + `Location/Size: ${locSize}\n\n`
+                   + `Details:\n${message}\n\n`
+                   + `-------------------------\n`
+                   + `(Sent via Robert Grantham Art Inquiry Engine)`;
+                   
+    // Encode for the URL
+    const encodedSubject = encodeURIComponent(`Studio Inquiry: ${type} - ${name}`);
+    const encodedBody = encodeURIComponent(bodyText);
+    
+    // Fire the cannon
+    window.location.href = `mailto:{{ site.email }}?subject=${encodedSubject}&body=${encodedBody}`;
+  });
+</script>
