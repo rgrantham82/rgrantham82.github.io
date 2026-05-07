@@ -1,20 +1,233 @@
 ---
 layout: default
-title: Portfolio
-permalink: /portfolio.html
+title: Gallery
+description: "Curated portfolio of original acrylic paintings, calligraphy, and commissions by Robert Grantham."
+permalink: /portfolio/
 ---
 
-<section class="page-header">
-  <div class="wrapper">
-    <span class="tag">Portfolio</span>
-    <h1>Gallery</h1>
-    <p class="muted lead">
-      The portfolio now lives at <a href="{{ '/portfolio/' | relative_url }}">/portfolio/</a>.
-    </p>
-    <p class="muted">
-      If you’re not redirected automatically, use the link above.
-    </p>
-  </div>
+<style>
+  .gallery-hero {
+    padding: 6rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+  }
+  .gallery-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  /* Filter System */
+  .gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+  .filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover {
+    color: var(--fg);
+    border-color: var(--fg);
+  }
+  .filter-btn.active {
+    background: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
+  }
+
+  /* Sleek Masonry-esque Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 3rem 2rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .art-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .art-card.is-hidden {
+    display: none;
+  }
+  .art-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .art-image-wrapper {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: var(--card);
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+  }
+  .art-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .art-card:hover .art-image-wrapper img {
+    transform: scale(1.05);
+  }
+  
+  .art-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .art-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+  }
+  .art-details {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .art-status {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    padding-top: 0.25rem;
+  }
+  .status-available { color: #2e7d32; }
+  .status-sold { color: var(--muted); }
+  
+  /* For dark mode adjustments if needed */
+  @media (prefers-color-scheme: dark) {
+    .status-available { color: #4caf50; }
+  }
+</style>
+
+<section class="gallery-hero wrapper">
+  <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Archive</span>
+  <h1 class="gallery-title">Selected Works</h1>
+  <p class="lede muted" style="font-size: 1.25rem; max-width: 650px;">
+    An index of available original works, distinct series, and collected pieces. Click any piece to view its scale, provenance, and acquisition details.
+  </p>
 </section>
 
-<meta http-equiv="refresh" content="0; url={{ '/portfolio/' | relative_url }}">
+<section class="wrapper" style="margin-bottom: 6rem;">
+  
+  <!-- Dynamic Filters -->
+  <div class="gallery-filters" id="gallery-filters">
+    <button class="filter-btn active" data-filter="all">All Works</button>
+    <button class="filter-btn" data-filter="status-available">Available</button>
+    <button class="filter-btn" data-filter="status-sold">Collected</button>
+    
+    <!-- Automatically generate buttons for your series -->
+    {% assign all_series = site.works | map: "series" | compact | uniq %}
+    {% for series in all_series %}
+      <button class="filter-btn" data-filter="series-{{ series | slugify }}">{{ series }}</button>
+    {% endfor %}
+  </div>
+
+  <!-- The Grid -->
+  <div class="gallery-grid" id="gallery-grid">
+    {% assign sorted_works = site.works | sort: "order" %}
+    {% for w in sorted_works %}
+      
+      <!-- Setting up data attributes for the JavaScript filter -->
+      {% assign status_class = w.status | downcase %}
+      {% assign series_class = w.series | slugify %}
+      
+      <a href="{{ w.url | relative_url }}" 
+         class="art-card" 
+         data-status="status-{{ status_class }}" 
+         data-series="series-{{ series_class }}">
+        
+        <div class="art-image-wrapper">
+          {% if w.image %}
+            <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
+          {% else %}
+            <div style="padding:16px; height:100%; display:flex; align-items:center; justify-content:center;" class="muted">Image pending</div>
+          {% endif %}
+        </div>
+        
+        <div class="art-meta">
+          <div>
+            <h3 class="art-title">{{ w.title }}</h3>
+            <div class="art-details">
+              {% if w.size %}{{ w.size }}{% endif %}
+              {% if w.medium %}{% if w.size %} · {% endif %}{{ w.medium }}{% endif %}
+            </div>
+          </div>
+          <div style="text-align: right;">
+            {% if w.status %}
+              <div class="art-status {% if w.status == 'Available' %}status-available{% else %}status-sold{% endif %}">
+                {{ w.status }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  
+  <!-- Fallback if a filter yields no results -->
+  <div id="no-results" style="display: none; padding: 4rem; text-align: center; border: 1px dashed var(--border); margin-top: 2rem;">
+    <p class="muted" style="font-size: 1.1rem;">No works currently match this selection.</p>
+    <button class="btn ghost" onclick="document.querySelector('[data-filter=\'all\']').click()" style="margin-top: 1rem;">View All Works</button>
+  </div>
+
+</section>
+
+<!-- The Filter Engine -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const artCards = document.querySelectorAll('.art-card');
+    const noResults = document.getElementById('no-results');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons, add to clicked
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        const filterValue = this.getAttribute('data-filter');
+        let visibleCount = 0;
+
+        artCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.classList.remove('is-hidden');
+            visibleCount++;
+          } else {
+            // Check if the card matches the specific status or series
+            if (card.getAttribute('data-status') === filterValue || card.getAttribute('data-series') === filterValue) {
+              card.classList.remove('is-hidden');
+              visibleCount++;
+            } else {
+              card.classList.add('is-hidden');
+            }
+          }
+        });
+
+        // Show/hide the "no results" message
+        if (visibleCount === 0) {
+          noResults.style.display = 'block';
+        } else {
+          noResults.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
