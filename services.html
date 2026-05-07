@@ -6,51 +6,145 @@ css: /assets/css/page.css
 permalink: /services.html
 ---
 
-<section class="page-hero">
-  <div class="wrapper">
-    <span class="tag">Services</span>
-    <h1>More than paintings on walls</h1>
-    <p class="lede muted">
-      Sometimes you don’t need a single object; you need a space to speak. These services cover murals, lettering, and practical help getting art and signage
-      to look intentional instead of improvised.
-    </p>
-  </div>
+<style>
+  .services-hero {
+    padding: 6rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4rem;
+  }
+  .services-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 6rem;
+  }
+  .service-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+  @media (min-width: 768px) {
+    .service-row {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .service-name { flex: 1; position: sticky; top: 2rem; }
+    .service-details { flex: 2; }
+  }
+  .service-name h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+  }
+  .service-tag {
+    font-family: serif;
+    color: var(--muted);
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    display: block;
+  }
+  .service-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+  }
+  .service-best-for {
+    display: inline-block;
+    background: var(--card);
+    padding: 0.5rem 1rem;
+    border-left: 3px solid var(--fg);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .services-cta {
+    background: var(--card);
+    padding: 4rem 2rem;
+    text-align: center;
+    border: 1px solid var(--border);
+    margin-bottom: 4rem;
+  }
+</style>
+
+<section class="services-hero wrapper">
+  <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Studio Capabilities</span>
+  <h1 class="services-title">More than paintings on walls.</h1>
+  <p class="lede muted" style="font-size: 1.25rem; max-width: 700px; line-height: 1.6;">
+    Sometimes a space demands more than a framed object. It requires an intervention. These services cover murals, site-specific lettering, and practical consulting to ensure the work commands the room exactly as intended.
+  </p>
 </section>
 
-<section>
-  <div class="wrapper grid two" style="margin-top:14px;">
-    <div class="card">
-      <h2>Murals & large-scale lettering</h2>
-      <p class="muted">For businesses, community spaces, offices, and interiors. Includes planning, mockups, materials, and on-site execution.</p>
-      <p class="muted"><strong>Best for:</strong> feature walls, entry statements, brand-forward interiors.</p>
-    </div>
-    <div class="card">
-      <h2>Custom calligraphy</h2>
-      <p class="muted">Hand-lettered pieces for gifts, memorials, events, and installations. Paper, panel, or mixed-media formats.</p>
-      <p class="muted"><strong>Best for:</strong> meaningful text that deserves more than a printer.</p>
-    </div>
-    <div class="card">
-      <h2>Commission consulting</h2>
-      <p class="muted">If you’re unsure what to commission (size, palette, placement), I can help you decide so the final work fits naturally.</p>
-      <p class="muted"><strong>Best for:</strong> new collectors and first-time commissioners.</p>
-    </div>
-    <div class="card">
-      <h2>Workshops / demos</h2>
-      <p class="muted">Small-group sessions on calligraphy basics, composition, and layering techniques with acrylic and matte mediums.</p>
-      <p class="muted"><strong>Best for:</strong> community programs, student groups, creative teams.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrapper" style="margin-top:18px;">
-    <div class="card">
-      <h2>Get a quote</h2>
-      <p class="muted">Email the project type, location (if relevant), rough size, and your timeline. If you have photos of the space, include them.</p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-        <a class="btn" href="mailto:{{ site.email }}?subject=Services%20quote%20request&body=Service%20type%3A%0ALocation%3A%0ASize%3A%0ATimeline%3A%0ABudget%20range%3A%0A">Request a quote</a>
-        <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commission page</a>
+<section class="wrapper">
+  <div class="service-list">
+    
+    <article class="service-row">
+      <div class="service-name">
+        <h2>Murals & Scale</h2>
+        <span class="service-tag">Architectural interventions</span>
       </div>
+      <div class="service-details">
+        <p>For businesses, community spaces, offices, and ambitious interiors. I don't paint cartoon mascots. I deliver sweeping, calligraphic, and abstract statements that redefine the architecture of a room. This includes comprehensive planning, digital mockups, premium materials, and professional on-site execution.</p>
+        <div class="service-best-for">Best for: Feature walls & brand-forward interiors</div>
+      </div>
+    </article>
+
+    <article class="service-row">
+      <div class="service-name">
+        <h2>Custom Calligraphy</h2>
+        <span class="service-tag">The written word as structure</span>
+      </div>
+      <div class="service-details">
+        <p>Hand-lettered pieces for gifts, memorials, events, and installations. Rendered on museum-quality paper, panel, or mixed-media formats. When a text holds weight—a vow, a poem, a founding document—it deserves to be rendered with the gravity of history, not spit out by a laser printer.</p>
+        <div class="service-best-for">Best for: Meaningful text & permanent records</div>
+      </div>
+    </article>
+
+    <article class="service-row">
+      <div class="service-name">
+        <h2>Commission Consulting</h2>
+        <span class="service-tag">Strategic placement & curation</span>
+      </div>
+      <div class="service-details">
+        <p>Buying art should not feel like guessing the weight of a carnival pig. If you are an interior designer or a new collector unsure of what scale, palette, or placement will actually serve your space, I provide direct consulting to ensure the final piece anchors the room rather than getting lost in it.</p>
+        <div class="service-best-for">Best for: New collectors & design professionals</div>
+      </div>
+    </article>
+
+    <article class="service-row" style="border-bottom: none;">
+      <div class="service-name">
+        <h2>Workshops & Demos</h2>
+        <span class="service-tag">Passing the fire along</span>
+      </div>
+      <div class="service-details">
+        <p>Small-group sessions on the mechanics of contemporary calligraphy, structural composition, and the unforgiving reality of layering acrylics. We strip away the mystical nonsense and focus on the practical discipline of making a mark that matters.</p>
+        <div class="service-best-for">Best for: Creative teams & community programs</div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="wrapper">
+  <div class="services-cta">
+    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to scope a project?</h2>
+    <p class="muted" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem auto;">
+      The process begins with a conversation. Let me know what you're building, the rough dimensions, and the timeline, and I will give you a straight, no-nonsense answer on what it takes to execute it.
+    </p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a class="btn" href="{{ '/contact.html' | relative_url }}" style="padding: 1.25rem 2.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 1rem;">Start the Inquiry</a>
+      <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}" style="padding: 1.25rem 2.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 1rem;">View Standard Commissions</a>
     </div>
   </div>
 </section>
