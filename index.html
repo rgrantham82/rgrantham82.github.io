@@ -6,63 +6,135 @@ css: /assets/css/home.css
 permalink: /
 ---
 
-<section class="hero">
-  <div class="wrapper hero-inner">
-    <div>
-      <span class="tag">Robert Grantham Art</span>
-      <h1>Hope, written by hand. Resilience, painted in layers.</h1>
-      <p class="lede muted">
-        I make contemporary acrylic paintings and calligraphic works rooted in history, survival, and the stubborn belief that
-        handmade marks still matter. If you like your art with a pulse and a backbone, you’re in the right place.
-      </p>
-      <div class="hero-actions">
-        <a class="btn" href="{{ '/portfolio/' | relative_url }}">View the gallery</a>
-        <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commission a piece</a>
-        <a class="btn ghost" href="mailto:{{ site.email }}?subject=Artwork%20inquiry">Email</a>
-      </div>
-    </div>
+<style>
+  /* A touch of modern engine oil for your carriage. 
+     You can move these into your home.css later, but they guarantee the slick look immediately. */
+  .hero-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 6rem 0 4rem;
+    border-bottom: 1px solid var(--theme_color_dark, #eaeaea);
+  }
+  @media (min-width: 768px) {
+    .hero-modern {
+      flex-direction: row;
+      align-items: center;
+      padding: 8rem 0 6rem;
+    }
+    .hero-modern .hero-text { flex: 1; padding-right: 3rem; }
+    .hero-modern .hero-visual { flex: 1; }
+  }
+  .headline-massive {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  .sleek-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .art-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    background: transparent;
+  }
+  .art-card:hover {
+    transform: translateY(-5px);
+  }
+  .art-image-wrapper {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: #f4f4f4;
+    margin-bottom: 1rem;
+  }
+  .art-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  .art-card:hover .art-image-wrapper img {
+    transform: scale(1.05);
+  }
+  .cta-block {
+    background: #0b0c0f;
+    color: #faf9f6;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+  }
+  .cta-block .btn {
+    background: #faf9f6;
+    color: #0b0c0f;
+    border: none;
+  }
+  .cta-block .btn.ghost {
+    background: transparent;
+    color: #faf9f6;
+    border: 1px solid #faf9f6;
+  }
+</style>
 
-    <aside class="card hero-card">
-      <h3>Quick info</h3>
-      <p class="muted">Austin, TX · Originals · Calligraphy · Murals · Custom lettering</p>
-      <div class="grid">
-        <div class="card">
-          <div class="badge">Availability</div>
-          <p class="muted" style="margin-top:10px;">Most works ship or can be hand-delivered locally. Every original includes a COA.</p>
-        </div>
-        <div class="card">
-          <div class="badge">Commission lead time</div>
-          <p class="muted" style="margin-top:10px;">Varies by size and complexity. Small lettering pieces can be fast; murals take planning.</p>
-        </div>
-      </div>
-    </aside>
+<section class="hero-modern wrapper">
+  <div class="hero-text">
+    <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Robert Grantham Art</span>
+    <h1 class="headline-massive">Hope, written by hand.<br>Resilience, painted in layers.</h1>
+    <p class="lede muted" style="font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">
+      I make contemporary acrylic paintings and calligraphic works rooted in history, survival, and the stubborn belief that handmade marks still matter. If you like your art with a pulse and a backbone, you’re in the right place.
+    </p>
+    <div class="hero-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a class="btn" href="{{ '/portfolio/' | relative_url }}" style="padding: 1rem 2rem; text-transform: uppercase; letter-spacing: 0.05em;">View Available Work</a>
+      <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}" style="padding: 1rem 2rem; text-transform: uppercase; letter-spacing: 0.05em;">Commission Process</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <!-- Replace with a stark, striking image of your work or studio -->
+    <div style="background: #e5e5e5; width: 100%; aspect-ratio: 4/3; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+       <img src="{{ '/assets/images/hero-feature.jpg' | relative_url }}" alt="Robert Grantham Studio Work" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'">
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrapper">
-    <h2>Featured works</h2>
-    <p class="muted">A small curated set — not “everything I’ve ever made,” because we’re running a gallery, not a storage unit.</p>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #111; padding-bottom: 1rem; margin-bottom: 2rem;">
+      <div>
+        <h2 style="font-size: 2.5rem; margin: 0;">Selected Works</h2>
+        <p class="muted" style="margin: 0.5rem 0 0 0; max-width: 600px;">A curated selection of available pieces and past successes. Because we're running a gallery, not a storage unit.</p>
+      </div>
+      <a href="{{ '/portfolio/' | relative_url }}" class="muted" style="text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem;">View Full Archive &rarr;</a>
+    </div>
 
     {% assign featured = site.works | where: "featured", true | sort: "order" %}
     {% if featured and featured.size > 0 %}
-      <div class="grid three" style="margin-top:14px;">
+      <div class="sleek-grid">
         {% for w in featured limit: 6 %}
-          <article class="card work-card">
-            <a href="{{ w.url | relative_url }}" style="text-decoration:none;">
-              <div class="work-thumb">
+          <article class="art-card">
+            <a href="{{ w.url | relative_url }}" style="text-decoration:none; color: inherit;">
+              <div class="art-image-wrapper">
                 {% if w.image %}
                   <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
                 {% else %}
-                  <div style="padding:16px;" class="muted">Image coming soon.</div>
+                  <div style="padding:16px; height:100%; display:flex; align-items:center; justify-content:center;" class="muted">Image pending</div>
                 {% endif %}
               </div>
-              <div class="work-meta">
-                <h3 style="margin-bottom:6px;">{{ w.title }}</h3>
-                <div class="muted">
-                  {% if w.size %}{{ w.size }}{% endif %}
-                  {% if w.medium %}{% if w.size %} · {% endif %}{{ w.medium }}{% endif %}
-                  {% if w.status %} · <span class="badge">{{ w.status }}</span>{% endif %}
+              <div class="work-meta" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                  <h3 style="margin: 0 0 4px 0; font-size: 1.1rem;">{{ w.title }}</h3>
+                  <div class="muted" style="font-size: 0.9rem;">
+                    {% if w.size %}{{ w.size }}{% endif %}
+                    {% if w.medium %}{% if w.size %} · {% endif %}{{ w.medium }}{% endif %}
+                  </div>
+                </div>
+                <div style="text-align: right;">
+                  {% if w.status %}
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: {% if w.status == 'Available' %}#2e7d32{% else %}#757575{% endif %};">{{ w.status }}</span>
+                  {% endif %}
                 </div>
               </div>
             </a>
@@ -70,30 +142,22 @@ permalink: /
         {% endfor %}
       </div>
     {% else %}
-      <div class="card" style="margin-top:14px;">
-        <p class="muted">No featured works are marked yet. Add <code>featured: true</code> to a few files in <code>_works/</code>.</p>
+      <div style="padding: 4rem; text-align: center; background: #f9f9f9; border: 1px dashed #ccc;">
+        <p class="muted">The gallery window is currently being arranged. Add <code>featured: true</code> to a few files in <code>_works/</code> to display them here.</p>
       </div>
     {% endif %}
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper">
-    <div class="kv">
-      <div class="card">
-        <h3>Commission work</h3>
-        <p class="muted">
-          Want something made for your space, your story, your budget, and your timeline? I do custom paintings, calligraphy, and lettering pieces.
-        </p>
-        <a class="btn" href="{{ '/commissions.html' | relative_url }}">How commissions work</a>
-      </div>
-      <div class="card">
-        <h3>Collectors & serious buyers</h3>
-        <p class="muted">
-          I keep the gallery curated and the documentation clean: titles, sizes, materials, finish, and COA. No mystery meat.
-        </p>
-        <a class="btn ghost" href="{{ '/contact.html' | relative_url }}">Contact</a>
-      </div>
+<section class="cta-block">
+  <div class="wrapper" style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 3rem; margin-bottom: 1rem; color: #faf9f6;">Command The Room</h2>
+    <p style="font-size: 1.2rem; color: #a0a0a0; margin-bottom: 2.5rem; line-height: 1.6;">
+      Want something made specifically for your space, your story, and your timeline? I keep the documentation clean and the process transparent. No mystery meat.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a class="btn" href="{{ '/commissions.html' | relative_url }}" style="padding: 1rem 2rem;">How Commissions Work</a>
+      <a class="btn ghost" href="{{ '/contact.html' | relative_url }}" style="padding: 1rem 2rem;">Contact the Studio</a>
     </div>
   </div>
 </section>
