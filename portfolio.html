@@ -39,11 +39,16 @@ permalink: /portfolio/
     cursor: pointer;
     transition: all 0.2s ease;
   }
+  .filter-btn:focus-visible {
+    outline: 2px solid var(--fg);
+    outline-offset: 2px;
+  }
   .filter-btn:hover {
     color: var(--fg);
     border-color: var(--fg);
   }
-  .filter-btn.active {
+  .filter-btn.active, 
+  .filter-btn[aria-pressed="true"] {
     background: var(--fg);
     color: var(--bg);
     border-color: var(--fg);
@@ -54,20 +59,36 @@ permalink: /portfolio/
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 3rem 2rem;
-    transition: opacity 0.3s ease;
   }
   
+  /* The Animation Fix: Keyframes instead of transitions on display:none elements */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .art-card {
     display: block;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    /* Apply animation when the card is rendered */
+    animation: fadeSlideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
+  
   .art-card.is-hidden {
     display: none;
+    /* Reset animation so it replays when display block is restored */
+    animation: none; 
   }
-  .art-card:hover {
-    transform: translateY(-8px);
+  
+  .art-card:hover .art-image-wrapper img {
+    transform: scale(1.05);
   }
   
   .art-image-wrapper {
@@ -76,6 +97,7 @@ permalink: /portfolio/
     background: var(--card);
     margin-bottom: 1.25rem;
     border: 1px solid var(--border);
+    position: relative; /* Added for absolute positioning of quick view */
   }
   .art-image-wrapper img {
     width: 100%;
@@ -83,8 +105,95 @@ permalink: /portfolio/
     object-fit: cover;
     transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  .art-card:hover .art-image-wrapper img {
-    transform: scale(1.05);
+  
+  /* Quick View Button */
+  .quick-view-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    background: rgba(11, 12, 15, 0.9);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  .art-image-wrapper:hover .quick-view-btn {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .quick-view-btn:hover {
+    background: #000;
+    transform: translateX(-50%) translateY(-2px) scale(1.05);
+  }
+
+  /* Modal Styles */
+  .gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(11, 12, 15, 0.95);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .gallery-modal.is-open {
+    display: flex;
+    opacity: 1;
+  }
+  .modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+  .modal-caption {
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .modal-close {
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .modal-close:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: 768px) {
+    .modal-close { right: 0; top: -2.5rem; }
+  }
+  .art-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
   .art-meta {
@@ -111,7 +220,7 @@ permalink: /portfolio/
   .status-available { color: #2e7d32; }
   .status-sold { color: var(--muted); }
   
-  /* For dark mode adjustments if needed */
+  /* For dark mode adjustments */
   @media (prefers-color-scheme: dark) {
     .status-available { color: #4caf50; }
   }
@@ -128,20 +237,20 @@ permalink: /portfolio/
 <section class="wrapper" style="margin-bottom: 6rem;">
   
   <!-- Dynamic Filters -->
-  <div class="gallery-filters" id="gallery-filters">
-    <button class="filter-btn active" data-filter="all">All Works</button>
-    <button class="filter-btn" data-filter="status-available">Available</button>
-    <button class="filter-btn" data-filter="status-sold">Collected</button>
+  <div class="gallery-filters" id="gallery-filters" role="group" aria-label="Gallery Filters">
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All Works</button>
+    <button class="filter-btn" data-filter="status-available" aria-pressed="false">Available</button>
+    <button class="filter-btn" data-filter="status-sold" aria-pressed="false">Collected</button>
     
     <!-- Automatically generate buttons for your series -->
     {% assign all_series = site.works | map: "series" | compact | uniq %}
     {% for series in all_series %}
-      <button class="filter-btn" data-filter="series-{{ series | slugify }}">{{ series }}</button>
+      <button class="filter-btn" data-filter="series-{{ series | slugify }}" aria-pressed="false">{{ series }}</button>
     {% endfor %}
   </div>
 
   <!-- The Grid -->
-  <div class="gallery-grid" id="gallery-grid">
+  <div class="gallery-grid" id="gallery-grid" aria-live="polite">
     {% assign sorted_works = site.works | sort: "order" %}
     {% for w in sorted_works %}
       
@@ -157,6 +266,7 @@ permalink: /portfolio/
         <div class="art-image-wrapper">
           {% if w.image %}
             <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
+            <button class="quick-view-btn" data-img="{{ w.image | relative_url }}" data-title="{{ w.title | escape }}" aria-label="Quick view {{ w.title | escape }}">Quick View</button>
           {% else %}
             <div style="padding:16px; height:100%; display:flex; align-items:center; justify-content:center;" class="muted">Image pending</div>
           {% endif %}
@@ -190,44 +300,116 @@ permalink: /portfolio/
 
 </section>
 
-<!-- The Filter Engine -->
+<!-- The Modal -->
+<div id="gallery-modal" class="gallery-modal" aria-modal="true" role="dialog">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Close modal">&times;</button>
+    <img id="modal-image" src="" alt="Artwork enlarged view">
+    <div class="modal-caption" id="modal-caption"></div>
+  </div>
+</div>
+
+<!-- The Filter Engine - Supercharged -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const artCards = document.querySelectorAll('.art-card');
     const noResults = document.getElementById('no-results');
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        // Remove active class from all buttons, add to clicked
-        filterBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
+    // The logic that does the actual heavy lifting
+    function executeFilter(filterValue) {
+      let visibleCount = 0;
 
-        const filterValue = this.getAttribute('data-filter');
-        let visibleCount = 0;
-
-        artCards.forEach(card => {
-          if (filterValue === 'all') {
+      artCards.forEach(card => {
+        if (filterValue === 'all') {
+          card.classList.remove('is-hidden');
+          visibleCount++;
+        } else {
+          if (card.getAttribute('data-status') === filterValue || card.getAttribute('data-series') === filterValue) {
             card.classList.remove('is-hidden');
             visibleCount++;
           } else {
-            // Check if the card matches the specific status or series
-            if (card.getAttribute('data-status') === filterValue || card.getAttribute('data-series') === filterValue) {
-              card.classList.remove('is-hidden');
-              visibleCount++;
-            } else {
-              card.classList.add('is-hidden');
-            }
+            card.classList.add('is-hidden');
           }
-        });
-
-        // Show/hide the "no results" message
-        if (visibleCount === 0) {
-          noResults.style.display = 'block';
-        } else {
-          noResults.style.display = 'none';
         }
       });
+
+      noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+    }
+
+    // Handle clicks like a gentleman
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        // Strip active classes and aria states
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        
+        // Crown the new king
+        this.classList.add('active');
+        this.setAttribute('aria-pressed', 'true');
+
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Update the URL without reloading the page, like magic.
+        if(history.pushState) {
+            history.pushState(null, null, filterValue === 'all' ? window.location.pathname : '#' + filterValue);
+        } else {
+            window.location.hash = filterValue === 'all' ? '' : filterValue;
+        }
+
+        executeFilter(filterValue);
+      });
     });
+
+    // On page load, read the telegram (URL hash) and act accordingly
+    function checkHashOnLoad() {
+      const hash = window.location.hash.substring(1); // remove the '#'
+      if (hash) {
+        const targetBtn = document.querySelector(`[data-filter="${hash}"]`);
+        if (targetBtn) {
+          targetBtn.click(); // Programmatically click the button to trigger all our logic
+          return;
+        }
+      }
+      // Default to showing everything if no hash or invalid hash
+      executeFilter('all');
+    }
+
+    checkHashOnLoad();
+
+    // --- Quick View Modal Logic ---
+    const modal = document.getElementById('gallery-modal');
+    const modalImg = document.getElementById('modal-image');
+    const modalCaption = document.getElementById('modal-caption');
+    const closeBtn = document.querySelector('.modal-close');
+    const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+
+    quickViewBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault(); // Stop the link from redirecting
+        e.stopPropagation(); // Stop the card click
+        modalImg.src = this.getAttribute('data-img');
+        modalCaption.textContent = this.getAttribute('data-title');
+        modal.classList.add('is-open');
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      setTimeout(() => { modalImg.src = ''; }, 300); // clear after fade
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal(); // Close if clicking background
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
   });
 </script>
