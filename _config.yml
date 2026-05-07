@@ -1,26 +1,44 @@
 title: Robert Grantham Art
 tagline: Hope, written by hand. Resilience, painted in layers.
 description: Contemporary abstract expressionism, calligraphy, and calligraffiti by Robert Grantham - Austin, TX. Originals, commissions, and murals.
+
 author:
   name: Robert Grantham
   email: robertgrantham40@gmail.com
   location: Austin, TX
+
 url: https://rgrantham82.github.io
 baseurl: ''
+
+# Aesthetics
 theme_color_light: '#faf9f6' # A warm, subtle off-white
-theme_color_dark: '#0b0c0f'  # Your current dark is excellent; deep and void-like
+theme_color_dark: '#0b0c0f'  # Deep and void-like. Excellent choice.
 font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.png
 apple_touch_icon: /assets/images/favicon.png
+
+# Social integration
 github_username: rgrantham82
 instagram_username: robertgranthamart
 twitter_username: ''
 linkedin_username: robertgrantham82
 email: robertgrantham40@gmail.com
+
+# Jekyll Engine Settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title.html
+timezone: America/Chicago
+encoding: utf-8
+future: true
+lsi: false
+safe: true
+paginate: 6
+paginate_path: /page:num
+data_dir: _data
+
+# Architecture
 collections:
   posts:
     output: true
@@ -28,6 +46,7 @@ collections:
   works:
     output: true
     permalink: /portfolio/:name/
+
 defaults:
 - scope:
     path: ''
@@ -41,10 +60,12 @@ defaults:
   values:
     layout: work
     css: /assets/css/work.css
+
 include:
 - _pages
 - _data
 - assets
+
 exclude:
 - node_modules
 - Gemfile
@@ -54,35 +75,30 @@ exclude:
 - .sass-cache
 - .jekyll-cache
 - _site
-data_dir: _data
+
+# ---------------------------------------------------------
+# The Navigation: Lean, mean, and intentional.
+# We've removed the individual series links because your new 
+# dynamic Portfolio handles them gracefully. 
+# ---------------------------------------------------------
 nav:
   links:
-  - title: Magnolia Canticle
-    url: /series/magnolia-canticle/
-  - title: Threshold
-    url: /series/threshold/
   - title: Portfolio
     url: /portfolio/
-  - title: Blog
-    url: /blog/
   - title: Commissions
     url: /commissions.html
-  - title: Portraiture
-    url: /portraiture.html
   - title: Services
     url: /services.html
   - title: About
     url: /about.html
-  - title: Contact
+  - title: Blog
+    url: /blog/
+  # The CTA creates a distinct button in your header for the most important action.
+  cta:
+    title: Inquire
     url: /contact.html
+
 plugins:
 - jekyll-feed
 - jekyll-sitemap
 - jekyll-seo-tag
-timezone: America/Chicago
-encoding: utf-8
-future: true
-lsi: false
-safe: true
-paginate: 6
-paginate_path: /page:num
