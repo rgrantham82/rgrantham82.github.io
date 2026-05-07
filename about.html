@@ -6,72 +6,123 @@ css: /assets/css/page.css
 permalink: /about.html
 ---
 
-<section class="page-hero">
-  <div class="wrapper about-intro">
-    <div class="about-photo">
-      <img src="{{ '/assets/images/robert-grantham.jpg' | relative_url }}" alt="Portrait of Robert Grantham" width="220" height="220" loading="lazy" decoding="async">
+<style>
+  /* Enhancing the myth-making aspect of the About page */
+  .about-split {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem 0;
+  }
+  @media (min-width: 768px) {
+    .about-split {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .about-split-image { position: sticky; top: 2rem; flex: 1; }
+    .about-split-content { flex: 1.5; padding-left: 2rem; }
+  }
+  .portrait-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: #0b0c0f;
+  }
+  .portrait-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2);
+    opacity: 0.9;
+  }
+  .content-block {
+    margin-bottom: 3rem;
+  }
+  .content-block h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .lead-statement {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #111;
+  }
+  .philosophical-callout {
+    border-left: 4px solid #0b0c0f;
+    padding-left: 1.5rem;
+    font-style: italic;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    color: #444;
+  }
+</style>
+
+<section class="wrapper about-split">
+  
+  <div class="about-split-image">
+    <div class="portrait-container">
+      <img src="{{ '/assets/images/robert-grantham.jpg' | relative_url }}" alt="Portrait of Robert Grantham" loading="lazy" decoding="async">
     </div>
-    <div class="about-text">
-      <span class="tag">About</span>
-      <h1>Robert Grantham</h1>
-      <p class="lede muted"> I’m an Austin-based artist creating work that sits between calligraphy, street art, and emotional abstraction. My practice is spiritual graffiti with classical discipline—carrying the tension between beauty and hardship, and turning struggle into something dignified, human, and unforgettable. </p>
-      <ul class="muted list-tight">
-        <li>
-          <strong>Major Works:</strong> Large-scale original acrylics on canvas or panel that serve as visual anchors.
+    <div style="margin-top: 1.5rem;">
+      <h3 style="margin:0 0 0.5rem 0;">Robert Grantham</h3>
+      <p class="muted" style="margin:0;">Austin, Texas</p>
+    </div>
+  </div>
+
+  <div class="about-split-content">
+    <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">The Artist</span>
+    
+    <div class="content-block" style="margin-top: 1rem;">
+      <p class="lead-statement">
+        I’m an Austin-based artist creating work that sits between calligraphy, street art, and emotional abstraction. My practice is spiritual graffiti with classical discipline—carrying the tension between beauty and hardship, and turning struggle into something dignified, human, and unforgettable.
+      </p>
+    </div>
+
+    <div class="content-block">
+      <h2>The Output</h2>
+      <ul class="list-tight" style="line-height: 1.8; font-size: 1.1rem; color: #333;">
+        <li style="margin-bottom: 1rem;">
+          <strong style="color: #000;">Major Works:</strong> Large-scale original acrylics on canvas or panel that serve as visual anchors for ambitious spaces.
         </li>
-        <li>
-          <strong>Studies & Works on Paper:</strong> Raw, immediate calligraphic works and mixed-media experiments.
+        <li style="margin-bottom: 1rem;">
+          <strong style="color: #000;">Studies & Works on Paper:</strong> Raw, immediate calligraphic works and mixed-media experiments.
         </li>
-        <li>
-          <strong>Limited Editions:</strong> Archival, museum-quality prints of select works.
-        </li>
-        <li>
-          <strong>Site-Specific & Trade Commissions:</strong> Collaborations with conscious collectors, architects, and designers to build work around a specific space and story.
+        <li style="margin-bottom: 1rem;">
+          <strong style="color: #000;">Site-Specific & Trade Commissions:</strong> Collaborations with conscious collectors, architects, and designers to build work around a specific architectural story.
         </li>
       </ul>
     </div>
-  </div>
-</section>
-<section>
-  <div class="wrapper kv" style="margin-top:14px;">
-    <div class="card">
-      <h2>What I make</h2>
-      <ul class="muted list-tight">
-        <li>Original acrylic paintings on canvas or panel</li>
-        <li>Calligraphy and hand-lettering works (paper, panel, and street materials)</li>
-        <li>Murals and site-specific lettering</li>
-        <li>Commissioned pieces built around a collector’s space and story</li>
-      </ul>
+
+    <div class="content-block">
+      <h2>The Philosophy</h2>
+      <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+        My paintings fuse lyrical abstraction, neo-expressionist force, and calligraphic structure with a strong symbolic and sacred-image undercurrent. I’m interested in the point where abstraction stops being merely decorative and starts carrying memory, pressure, witness, and presence.
+      </p>
+      
+      <div class="philosophical-callout">
+        Craft matters. History matters. And so does the lived reality behind the work. I’m not interested in “content.” I’m interested in objects that hold up under time and scrutiny.
+      </div>
+      
+      <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+        A lot of the work operates between painting and inscription. Forms may suggest bloom, threshold, relic, scar, weather, or icon without settling into straightforward representation. I want the image to feel deliberate but alive—structured, but still carrying some heat. Ultimately, I am making work that feels human, layered, and lived-in. I make art that doesn’t just decorate a room. It gives the room a backbone.
+      </p>
     </div>
-    <div class="card">
-      <h2>What I care about</h2>
-      <p class="muted callout"> Craft matters. History matters. And so does the lived reality behind the work. I’m not interested in “content.” I’m interested in objects that hold up under time and scrutiny. </p>
-      <p class="muted"> If you want a neat little inspirational poster, there are factories for that. If you want something handmade that feels like it has weathered a life, we’ll get along. </p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrapper" style="margin-top:18px;">
-    <div class="card">
-      <h2>My approach</h2>
-      <p class="muted"> My paintings fuse lyrical abstraction, neo-expressionist force, and calligraphic structure with a strong symbolic and sacred-image undercurrent. I’m interested in the point where abstraction stops being merely decorative and starts carrying memory, pressure, witness, and presence. </p>
-      <p class="muted"> A lot of the work operates between painting and inscription. Forms may suggest bloom, threshold, relic, scar, weather, or icon without settling into straightforward representation. I want the image to feel deliberate but alive—structured, but still carrying some heat. </p>
-      <p class="muted"> Influences range from medieval and early Renaissance painting to post-graffiti energy and contemporary abstraction. What ties it together is a belief that handmade marks still matter: that a surface can hold history, revision, and emotional weight without losing its formal discipline. </p>
-      <p class="muted"> Ultimately, I am making work that feels human, layered, and lived-in. I make art that doesn’t just decorate a room. It gives the room a backbone. </p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrapper" style="margin-top:18px;">
-    <div class="card">
-      <h2>Where to start</h2>
-      <p class="muted"> For originals, browse the curated gallery. For custom work, start with the commissions page and send an email with what you’re imagining. If you’d like a fuller view of my exhibition history, background, and practice, you can also view my artist CV. </p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-        <a class="btn" href="{{ '/portfolio/' | relative_url }}">Gallery</a>
-        <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commissions & Trade</a>
-        <a class="btn ghost" href="{{ '/contact.html' | relative_url }}">Contact</a>
-        <a class="btn ghost" href="{{ '/assets/docs/robert-grantham-artist-cv.pdf' | relative_url }}" target="_blank" rel="noopener">Artist CV</a>
+
+    <div class="content-block" style="background: #f9f9f9; padding: 2rem; border: 1px solid #eee;">
+      <h2 style="border: none; margin-bottom: 1rem;">Acquisition & Inquiry</h2>
+      <p class="muted" style="margin-bottom: 1.5rem;">
+        For originals, browse the curated gallery window. For custom work, review the commissions process and forward an email with your spatial requirements.
+      </p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a class="btn" href="{{ '/portfolio/' | relative_url }}" style="padding: 0.75rem 1.5rem;">View Gallery</a>
+        <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}" style="padding: 0.75rem 1.5rem; background: transparent; border: 1px solid #111; color: #111;">Commissions</a>
+        <a class="btn ghost" href="{{ '/assets/docs/robert-grantham-artist-cv.pdf' | relative_url }}" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: transparent; border: 1px solid #ccc; color: #555;">View CV (PDF)</a>
       </div>
     </div>
+
   </div>
 </section>
