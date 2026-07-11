@@ -1,20 +1,20 @@
 ---
 layout: default
 permalink: /blog/
-title: Blog
-description: "Writing from the studio—process notes, series updates, exhibitions, and reflections on calligraphy and painting."
+title: "Journal & Essays"
+description: "Essays by Robert Grantham on art, history, data, public life, and the conditions in which people make and survive."
 body_class: blog
 css: /assets/css/blog.css
 ---
 
 <section class="blog-header">
   <div class="wrapper">
-    <span class="tag">Blog</span>
-    <h1 id="blog-heading">Writing from the studio</h1>
-    <p class="muted lead"> Process notes, series updates, and reflections on painting, calligraphy, and making work that lasts. </p>
+    <span class="tag">Journal & Essays</span>
+    <h1 id="blog-heading">Art, history, data, and public life</h1>
+    <p class="muted lead">Studio notes sit beside essays on history, data, democracy, homelessness, and culture. The subjects differ; the common concern is how evidence, memory, power, and lived experience shape what people see.</p>
     <div class="blog-cta">
       <a class="btn" href="{{ '/portfolio/' | relative_url }}">Shop available work</a>
-      <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Trade & Commissions</a>
+      <a class="btn ghost" href="{{ '/about.html' | relative_url }}">About the author</a>
     </div>
   </div>
 </section>
@@ -61,7 +61,7 @@ css: /assets/css/blog.css
           </p>
           <div class="post-actions">
             <a href="{{ post.url | relative_url }}" class="btn btn-small">Read more →</a>
-            <a href="{{ '/commissions.html' | relative_url }}" class="btn ghost btn-small">Inquire for Collection</a>
+            
           </div> {% if post.tags and post.tags.size > 0 %} <div class="post-tags"> {% for tag in post.tags %} <a class="tag-chip" href="/blog/?tag={{ tag | slugify }}" data-chip-tag="{{ tag | slugify }}"> #{{ tag }}
             </a> {% endfor %} </div> {% endif %}
         </div>
