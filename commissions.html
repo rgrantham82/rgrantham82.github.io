@@ -1,172 +1,107 @@
 ---
 layout: default
 title: Commissions
-description: "Commission original contemporary art, murals, and site-specific lettering by Robert Grantham."
+description: "Commission an original abstract acrylic painting from Austin artist Robert Grantham. Review the process, timeline, deposit, and delivery information."
 css: /assets/css/page.css
 permalink: /commissions.html
 ---
 
 <style>
-  .commissions-hero {
-    padding: 6rem 0 4rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .commissions-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-  }
-  .commissions-split {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    padding: 4rem 0;
-  }
-  @media (min-width: 768px) {
-    .commissions-split {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-    .commissions-intro { flex: 1; position: sticky; top: 2rem; }
-    .commissions-steps { flex: 1.5; }
-  }
-  .process-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  @media (min-width: 640px) {
-    .process-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  .step-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 2.5rem;
-    border-radius: 4px; /* Slightly sharper corners for a more structural feel */
-    transition: transform 0.3s ease;
-  }
-  .step-card:hover {
-    transform: translateY(-5px);
-  }
-  .step-number {
-    font-family: serif;
-    font-size: 4rem;
-    color: var(--border);
-    line-height: 1;
-    margin-bottom: 1rem;
-    font-weight: 300;
-  }
-  .step-title {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .faq-section {
-    background: var(--card);
-    padding: 4rem 0;
-    margin-top: 4rem;
-    border-top: 1px solid var(--border);
-  }
-  .faq-item {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .faq-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+  .commissions-hero{padding:clamp(3rem,7vw,6rem) 0 clamp(2.5rem,6vw,4.5rem);border-bottom:1px solid var(--border)}
+  .commissions-title{max-width:14ch;font-size:clamp(2.8rem,6vw,5rem);line-height:1.03;letter-spacing:-.04em;margin:1rem 0 1.5rem}
+  .commissions-hero .lede{max-width:72ch;font-size:1.18rem;line-height:1.7}
+  .commissions-split{display:grid;grid-template-columns:minmax(240px,.75fr) minmax(0,1.5fr);gap:clamp(2.5rem,7vw,6rem);padding:clamp(3rem,7vw,6rem) 0}
+  .commissions-intro{position:sticky;top:7rem;align-self:start}
+  .commissions-intro p{font-size:1.05rem;line-height:1.7}
+  .process-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+  .step-card{background:var(--card);border:1px solid var(--border);padding:2rem;border-radius:var(--radius)}
+  .step-number{font-size:2.6rem;color:var(--muted);line-height:1;margin-bottom:1rem;font-weight:700}
+  .step-title{font-size:1.2rem;margin-bottom:.75rem}
+  .step-card p{margin:0;line-height:1.65}
+  .faq-section{background:var(--card);padding:clamp(3rem,7vw,6rem) 0;border-top:1px solid var(--border)}
+  .faq-wrap{max-width:820px}
+  .faq-wrap>h2{text-align:center;margin-bottom:2.5rem}
+  .faq-item{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+  .faq-item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+  .commission-cta{padding:clamp(3.5rem,8vw,7rem) 0;text-align:center}
+  .commission-cta p{max-width:620px;margin:0 auto 2rem;font-size:1.08rem}
+  @media(max-width:800px){.commissions-split{grid-template-columns:1fr}.commissions-intro{position:static}.process-grid{grid-template-columns:1fr}}
 </style>
 
 <section class="commissions-hero wrapper">
-  <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Custom Work</span>
-  <h1 class="commissions-title">The Commission Process</h1>
-  <p class="lede muted" style="font-size: 1.25rem; max-width: 700px; line-height: 1.6;">
-    Clients are often intimidated by the idea of commissioning art. They assume it's a mystical process with unpredictable outcomes and hidden costs. Let us disabuse you of that notion. Here is exactly how we go from your vision to a finished piece on your wall.
+  <span class="tag">Custom paintings</span>
+  <h1 class="commissions-title">A clear process for work made specifically for your space.</h1>
+  <p class="lede muted">
+    Commissioning a painting should not require faith in smoke, velvet curtains, or mysterious invoices. We establish the size, direction, budget, and boundaries before the work begins, while leaving enough room for an original painting to remain alive.
   </p>
 </section>
 
 <section class="wrapper commissions-split">
-  
   <div class="commissions-intro">
-    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">How We Work</h2>
-    <p class="muted" style="margin-bottom: 2rem; line-height: 1.7; font-size: 1.1rem;">
-      Whether you are an interior designer looking for a specific visual anchor for a client, or a collector wanting a piece tailored to your personal space, the studio operates on total transparency. No mystery meat, no surprise invoices.
+    <h2>How the collaboration works</h2>
+    <p class="muted">
+      Commissions are developed from the visual language of my existing work rather than copied from another artist or manufactured to match a sofa cushion with military obedience. The goal is a work that belongs in your space and still belongs to my practice.
     </p>
-    <a class="btn" href="{{ '/contact.html' | relative_url }}" style="padding: 1rem 2rem; width: 100%; justify-content: center; text-transform: uppercase; letter-spacing: 0.05em;">Start the Conversation</a>
+    <a class="btn" href="{{ '/contact.html' | relative_url }}">Start an inquiry</a>
   </div>
 
-  <div class="commissions-steps">
-    <div class="process-grid">
-      
-      <div class="step-card">
-        <div class="step-number">01</div>
-        <h3 class="step-title">The Consultation</h3>
-        <p class="muted" style="font-size: 0.95rem; line-height: 1.6;">
-          We discuss your space, preferred colors, dimensions, and which of my previous works you are drawn to. You provide photos of the wall. I provide a concrete quote and timeline.
-        </p>
-      </div>
+  <div class="process-grid">
+    <article class="step-card">
+      <div class="step-number">01</div>
+      <h3 class="step-title">Scope</h3>
+      <p class="muted">Send the intended dimensions, wall or room photographs, preferred palette, timeline, working budget, and examples of my existing paintings that interest you.</p>
+    </article>
 
-      <div class="step-card">
-        <div class="step-number">02</div>
-        <h3 class="step-title">Proposal & Deposit</h3>
-        <p class="muted" style="font-size: 0.95rem; line-height: 1.6;">
-          I present a digital mock-up, sketch, or color palette study. Upon your approval, a 50% non-refundable deposit secures your spot in my studio schedule and covers initial materials.
-        </p>
-      </div>
+    <article class="step-card">
+      <div class="step-number">02</div>
+      <h3 class="step-title">Proposal</h3>
+      <p class="muted">I provide a written quote, estimated schedule, surface and finish information, and—when useful—a palette study, sketch, or simple placement mockup.</p>
+    </article>
 
-      <div class="step-card">
-        <div class="step-number">03</div>
-        <h3 class="step-title">The Execution</h3>
-        <p class="muted" style="font-size: 0.95rem; line-height: 1.6;">
-          I return to the studio. You will receive one mid-point progress update to ensure we are aligned visually. Minor adjustments can be made at this stage without issue.
-        </p>
-      </div>
+    <article class="step-card">
+      <div class="step-number">03</div>
+      <h3 class="step-title">Deposit and making</h3>
+      <p class="muted">A 50% non-refundable deposit secures the project and covers initial materials. One planned progress update is included so major concerns can be addressed before final finishing.</p>
+    </article>
 
-      <div class="step-card">
-        <div class="step-number">04</div>
-        <h3 class="step-title">Delivery & Install</h3>
-        <p class="muted" style="font-size: 0.95rem; line-height: 1.6;">
-          Upon final studio approval and receipt of the remaining balance, the artwork is varnished, securely crated, and shipped (or locally installed in the Austin area).
-        </p>
-      </div>
-
-    </div>
+    <article class="step-card">
+      <div class="step-number">04</div>
+      <h3 class="step-title">Approval and delivery</h3>
+      <p class="muted">After final photographs and approval, the remaining balance is due. The work is finished, documented, and prepared for Austin pickup, arranged local delivery, or shipping quoted for the specific piece.</p>
+    </article>
   </div>
-
 </section>
 
 <section class="faq-section">
-  <div class="wrapper" style="max-width: 800px;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">Details & Logistics</h2>
-    
+  <div class="wrapper faq-wrap">
+    <h2>Details and logistics</h2>
+
     <div class="faq-item">
-      <h3 style="font-size: 1.25rem;">What is the typical timeline?</h3>
-      <p class="muted">Depending on the scale of the piece and my current studio schedule, a standard commission takes between 4 to 8 weeks from the date the deposit is received. Murals and large-scale site-specific installations require custom timelines.</p>
+      <h3>What is the typical timeline?</h3>
+      <p class="muted">Most small- and medium-format paintings require roughly four to eight weeks after the deposit, depending on surface preparation, drying and curing time, varnish, revision, and the current studio schedule. The written proposal controls when a particular project differs.</p>
     </div>
 
     <div class="faq-item">
-      <h3 style="font-size: 1.25rem;">Do you work with interior designers?</h3>
-      <p class="muted">Absolutely. I regularly collaborate with the trade to provide custom visual anchors for residential and commercial spaces. Trade pricing is available upon request with a valid Resale Certificate or proof of business.</p>
+      <h3>Can I request an exact copy of an existing painting?</h3>
+      <p class="muted">No exact replicas. A commission may draw from the palette, scale, rhythm, or formal language of an existing work, but the finished painting will be its own object.</p>
     </div>
 
     <div class="faq-item">
-      <h3 style="font-size: 1.25rem;">How is shipping handled?</h3>
-      <p class="muted">Local delivery and installation within the Austin, TX area can be arranged. For national and international collectors, large works are professionally crated and shipped via freight. Shipping costs are calculated and included in your initial quote so there are no surprises.</p>
+      <h3>Do you work with designers or commercial spaces?</h3>
+      <p class="muted">Yes. Inquiries from interior designers, offices, hospitality spaces, and other professional clients are welcome. I can provide dimensions, palette information, mockups, documentation, and a project-specific quote. Any trade terms are established in writing rather than advertised as a blanket promise.</p>
     </div>
 
+    <div class="faq-item">
+      <h3>How is delivery or shipping handled?</h3>
+      <p class="muted">Austin pickup is preferred. Local delivery may be arranged depending on size and location. Shipping is evaluated case by case after the finished dimensions, weight, destination, and packing requirements are known.</p>
+    </div>
   </div>
 </section>
 
-<section style="padding: 6rem 0; text-align: center;">
+<section class="commission-cta">
   <div class="wrapper">
-    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Ready to build something?</h2>
-    <p class="muted" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2.5rem auto;">Send an email with the dimensions of your wall space and any initial thoughts. We will take it from there.</p>
-    <a class="btn" href="{{ '/contact.html' | relative_url }}" style="padding: 1.25rem 2.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em;">Contact the Studio</a>
+    <h2>Start with the wall, the scale, and the honest budget.</h2>
+    <p class="muted">Those details let me give you a useful answer instead of performing interpretive dance around the word “depends.”</p>
+    <a class="btn" href="{{ '/contact.html' | relative_url }}">Contact the studio</a>
   </div>
 </section>
