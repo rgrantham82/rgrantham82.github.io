@@ -1,0 +1,47 @@
+{% assign works_sorted = site.works | sort: 'order' %}
+{% assign available_works = works_sorted | where: 'status', 'Available' %}
+{% assign collected_works = works_sorted | where_exp: 'work', "work.status != 'Available'" %}
+
+<section id="available" class="gallery-block">
+  <div class="wrapper">
+    <div class="gallery-head">
+      <div>
+        <span class="tag">Collect</span>
+        <h2>Available originals</h2>
+      </div>
+      <p class="muted">Prices are shown when established. For an unpriced work, use the inquiry link on its detail page.</p>
+    </div>
+
+    {% if available_works.size > 0 %}
+      <div class="work-grid">
+        {% for work in available_works %}
+          {% include work-card.html work=work %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-gallery card">
+        <p>No works are currently marked available. Commission inquiries remain open.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if collected_works.size > 0 %}
+<section class="gallery-block gallery-block--collected">
+  <div class="wrapper">
+    <div class="gallery-head">
+      <div>
+        <span class="tag">Archive</span>
+        <h2>Collected and selected works</h2>
+      </div>
+      <p class="muted">A record of sold works and studies that help show the range and continuity of the practice.</p>
+    </div>
+
+    <div class="work-grid">
+      {% for work in collected_works %}
+        {% include work-card.html work=work %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
