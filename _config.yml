@@ -1,6 +1,6 @@
 title: Robert Grantham Art
-tagline: Hope, written by hand. Resilience, painted in layers.
-description: Contemporary abstract expressionism, calligraphy, and calligraffiti by Robert Grantham - Austin, TX. Originals, commissions, and murals.
+tagline: Contemporary paintings rooted in memory, pressure, and resilience.
+description: Contemporary abstract acrylic paintings by Robert Grantham in Austin, Texas. View original works, current series, and commission information.
 
 author:
   name: Robert Grantham
@@ -11,17 +11,17 @@ url: https://rgrantham82.github.io
 baseurl: ''
 
 # Aesthetics
-theme_color_light: '#faf9f6' # A warm, subtle off-white
-theme_color_dark: '#0b0c0f'  # Deep and void-like. Excellent choice.
-font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap
+theme_color_light: '#faf9f6'
+theme_color_dark: '#0b0c0f'
+font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
 logo: /assets/images/logo.png
-favicon: /assets/images/favicon.png
-apple_touch_icon: /assets/images/favicon.png
+favicon: /assets/images/favicon-32.png
+apple_touch_icon: /assets/images/apple-touch-icon.png
+og_image: /assets/images/work-aurum-rising.jpg
 
 # Social integration
 github_username: rgrantham82
 instagram_username: robertgranthamart
-twitter_username: ''
 linkedin_username: robertgrantham82
 email: robertgrantham40@gmail.com
 
@@ -71,34 +71,26 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - README.md
+- IMPROVEMENTS.md
 - vendor
 - .sass-cache
 - .jekyll-cache
 - _site
 
-# ---------------------------------------------------------
-# The Navigation: Lean, mean, and intentional.
-# We've removed the individual series links because your new 
-# dynamic Portfolio handles them gracefully. 
-# ---------------------------------------------------------
 nav:
   links:
-  - title: Portfolio
+  - title: Available Work
     url: /portfolio/
   - title: Commissions
     url: /commissions.html
-  - title: Services
-    url: /services.html
   - title: About
     url: /about.html
-  - title: Blog
+  - title: Journal
     url: /blog/
-  # The CTA creates a distinct button in your header for the most important action.
   cta:
-    title: Inquire
+    title: Contact
     url: /contact.html
 
 plugins:
 - jekyll-feed
 - jekyll-sitemap
-- jekyll-seo-tag
