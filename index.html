@@ -1,163 +1,88 @@
 ---
 layout: default
 title: Home
-description: "Contemporary painting and calligraphy by Robert Grantham — originals, commissions, murals, and writing."
+description: "Contemporary abstract acrylic paintings by Austin artist Robert Grantham. View available originals, current series, and commission information."
 css: /assets/css/home.css
 permalink: /
 ---
 
-<style>
-  /* A touch of modern engine oil for your carriage. 
-     You can move these into your home.css later, but they guarantee the slick look immediately. */
-  .hero-modern {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 6rem 0 4rem;
-    border-bottom: 1px solid var(--theme_color_dark, #eaeaea);
-  }
-  @media (min-width: 768px) {
-    .hero-modern {
-      flex-direction: row;
-      align-items: center;
-      padding: 8rem 0 6rem;
-    }
-    .hero-modern .hero-text { flex: 1; padding-right: 3rem; }
-    .hero-modern .hero-visual { flex: 1; }
-  }
-  .headline-massive {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-  }
-  .sleek-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  .art-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    background: transparent;
-  }
-  .art-card:hover {
-    transform: translateY(-5px);
-  }
-  .art-image-wrapper {
-    aspect-ratio: 4/5;
-    overflow: hidden;
-    background: #f4f4f4;
-    margin-bottom: 1rem;
-  }
-  .art-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.7s ease;
-  }
-  .art-card:hover .art-image-wrapper img {
-    transform: scale(1.05);
-  }
-  .cta-block {
-    background: #0b0c0f;
-    color: #faf9f6;
-    padding: 4rem 2rem;
-    text-align: center;
-    margin: 4rem 0;
-  }
-  .cta-block .btn {
-    background: #faf9f6;
-    color: #0b0c0f;
-    border: none;
-  }
-  .cta-block .btn.ghost {
-    background: transparent;
-    color: #faf9f6;
-    border: 1px solid #faf9f6;
-  }
-</style>
-
-<section class="hero-modern wrapper">
-  <div class="hero-text">
-    <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Robert Grantham Art</span>
-    <h1 class="headline-massive">Hope, written by hand.<br>Resilience, painted in layers.</h1>
-    <p class="lede muted" style="font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; line-height: 1.6;">
-      I make contemporary acrylic paintings and calligraphic works rooted in history, survival, and the stubborn belief that handmade marks still matter. If you like your art with a pulse and a backbone, you’re in the right place.
+<section class="home-hero wrapper">
+  <div class="home-hero__copy">
+    <span class="tag">Robert Grantham Art · Austin, Texas</span>
+    <h1>Contemporary paintings built from color, pressure, memory, and place.</h1>
+    <p class="lede">
+      I make original acrylic paintings that explore resilience, symbolic form, and the emotional architecture of color. The work is direct, layered, and made to hold a room without merely behaving in it.
     </p>
-    <div class="hero-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-      <a class="btn" href="{{ '/portfolio/' | relative_url }}" style="padding: 1rem 2rem; text-transform: uppercase; letter-spacing: 0.05em;">View Available Work</a>
-      <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}" style="padding: 1rem 2rem; text-transform: uppercase; letter-spacing: 0.05em;">Commission Process</a>
+    <div class="home-actions">
+      <a class="btn" href="{{ '/portfolio/' | relative_url }}">View available work</a>
+      <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commission a painting</a>
     </div>
   </div>
-  <div class="hero-visual">
-    <!-- Replace with a stark, striking image of your work or studio -->
-    <div style="background: #e5e5e5; width: 100%; aspect-ratio: 4/3; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-       <img src="{{ '/assets/images/hero-feature.png' | relative_url }}" alt="Robert Grantham Studio Work" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'">
-    </div>
-  </div>
+
+  <figure class="home-hero__visual">
+    <a href="{{ '/portfolio/aurum-rising/' | relative_url }}">
+      <img src="{{ '/assets/images/work-aurum-rising.jpg' | relative_url }}" alt="Aurum Rising, an abstract acrylic painting by Robert Grantham" width="1600" height="1600" decoding="async" fetchpriority="high">
+    </a>
+    <figcaption><em>Aurum Rising</em>, 2026 · Acrylic on canvas · 24×30×1.5 in</figcaption>
+  </figure>
 </section>
 
-<section class="section">
+<section class="home-section">
   <div class="wrapper">
-    <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #111; padding-bottom: 1rem; margin-bottom: 2rem;">
+    <div class="section-heading">
       <div>
-        <h2 style="font-size: 2.5rem; margin: 0;">Selected Works</h2>
-        <p class="muted" style="margin: 0.5rem 0 0 0; max-width: 600px;">A curated selection of available pieces and past successes. Because we're running a gallery, not a storage unit.</p>
+        <span class="tag">Selected work</span>
+        <h2>Original paintings</h2>
+        <p class="muted">A focused selection of current and collected work, each documented with materials, dimensions, finish, and status.</p>
       </div>
-      <a href="{{ '/portfolio/' | relative_url }}" class="muted" style="text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem;">View Full Archive &rarr;</a>
+      <a class="text-link" href="{{ '/portfolio/' | relative_url }}">View the full portfolio →</a>
     </div>
 
-    {% assign featured = site.works | where: "featured", true | sort: "order" %}
-    {% if featured and featured.size > 0 %}
-      <div class="sleek-grid">
-        {% for w in featured limit: 6 %}
-          <article class="art-card">
-            <a href="{{ w.url | relative_url }}" style="text-decoration:none; color: inherit;">
-              <div class="art-image-wrapper">
-                {% if w.image %}
-                  <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
-                {% else %}
-                  <div style="padding:16px; height:100%; display:flex; align-items:center; justify-content:center;" class="muted">Image pending</div>
-                {% endif %}
-              </div>
-              <div class="work-meta" style="display: flex; justify-content: space-between; align-items: flex-start;">
-                <div>
-                  <h3 style="margin: 0 0 4px 0; font-size: 1.1rem;">{{ w.title }}</h3>
-                  <div class="muted" style="font-size: 0.9rem;">
-                    {% if w.size %}{{ w.size }}{% endif %}
-                    {% if w.medium %}{% if w.size %} · {% endif %}{{ w.medium }}{% endif %}
-                  </div>
-                </div>
-                <div style="text-align: right;">
-                  {% if w.status %}
-                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; color: {% if w.status == 'Available' %}#2e7d32{% else %}#757575{% endif %};">{{ w.status }}</span>
-                  {% endif %}
-                </div>
-              </div>
-            </a>
-          </article>
-        {% endfor %}
-      </div>
-    {% else %}
-      <div style="padding: 4rem; text-align: center; background: #f9f9f9; border: 1px dashed #ccc;">
-        <p class="muted">The gallery window is currently being arranged. Add <code>featured: true</code> to a few files in <code>_works/</code> to display them here.</p>
-      </div>
-    {% endif %}
+    {% assign featured = site.works | where: 'featured', true | sort: 'order' %}
+    <div class="home-work-grid">
+      {% for work in featured limit: 6 %}
+        {% include work-card.html work=work %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
-<section class="cta-block">
-  <div class="wrapper" style="max-width: 800px; margin: 0 auto;">
-    <h2 style="font-size: 3rem; margin-bottom: 1rem; color: #faf9f6;">Command The Room</h2>
-    <p style="font-size: 1.2rem; color: #a0a0a0; margin-bottom: 2.5rem; line-height: 1.6;">
-      Want something made specifically for your space, your story, and your timeline? I keep the documentation clean and the process transparent. No mystery meat.
-    </p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a class="btn" href="{{ '/commissions.html' | relative_url }}" style="padding: 1rem 2rem;">How Commissions Work</a>
-      <a class="btn ghost" href="{{ '/contact.html' | relative_url }}" style="padding: 1rem 2rem;">Contact the Studio</a>
+<section class="home-section home-section--tinted">
+  <div class="wrapper home-series-grid">
+    <div class="home-series-intro">
+      <span class="tag">Current language</span>
+      <h2>Series rather than isolated tricks</h2>
+      <p class="muted">
+        The studio develops ideas across bodies of work: the orbiting forms and divided fields of <em>Conjunction</em>, the Southern memory and symbolic bloom of <em>Magnolia Canticle</em>, and the compressed architectural tensions of <em>Threshold</em>.
+      </p>
+      <a class="text-link" href="{{ '/about.html' | relative_url }}">Read about the practice →</a>
+    </div>
+
+    <div class="series-links">
+      <a class="series-link" href="{{ '/series/magnolia-canticle/' | relative_url }}">
+        <span>Series</span>
+        <strong>Magnolia Canticle</strong>
+        <small>Memory, bloom, scar, and endurance</small>
+      </a>
+      <a class="series-link" href="{{ '/series/threshold/' | relative_url }}">
+        <span>Series</span>
+        <strong>Threshold</strong>
+        <small>Passage, structure, pressure, and release</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="wrapper home-cta__inner">
+    <div>
+      <span class="tag tag--dark">Commission work</span>
+      <h2>A painting should do more than fill a wall.</h2>
+      <p>Commissioned work begins with dimensions, the character of the space, a working budget, and an honest conversation about what the painting needs to accomplish.</p>
+    </div>
+    <div class="home-actions">
+      <a class="btn btn--light" href="{{ '/commissions.html' | relative_url }}">See the process</a>
+      <a class="btn btn--light-ghost" href="{{ '/contact.html' | relative_url }}">Contact the studio</a>
     </div>
   </div>
 </section>
