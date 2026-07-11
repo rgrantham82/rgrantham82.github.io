@@ -283,3 +283,40 @@ p{ margin: 0 0 16px; color: var(--muted); }
   font-weight: 650;
   color: var(--fg);
 }
+
+/* Navigation CTA and motion preferences */
+.nav-cta {
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .nav-cta {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .navbar {
+    gap: 8px;
+  }
+
+  .nav-cta {
+    padding-inline: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
