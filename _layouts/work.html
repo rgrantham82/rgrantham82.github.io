@@ -1,71 +1,62 @@
 ---
 layout: default
 ---
-<article class="work-page" itemscope itemtype="http://schema.org/VisualArtwork">
+{% assign status_label = page.status %}
+{% if page.status == 'Sold' %}{% assign status_label = 'Collected' %}{% endif %}
+<article class="work-page" itemscope itemtype="https://schema.org/VisualArtwork">
   <header class="work-hero">
     <div class="wrapper">
       <p class="work-kicker">
-        {%- if page.series -%}
-          <span class="tag">{{ page.series }}</span>
-        {%- else -%}
-          <span class="tag">Artwork</span>
-        {%- endif -%}
-        {%- if page.status -%}
-          <span class="status-pill status-{{ page.status | downcase | replace: ' ', '-' }}">{{ page.status }}</span>
-        {%- endif -%}
+        {% if page.series %}<span class="tag">{{ page.series }}</span>{% else %}<span class="tag">Artwork</span>{% endif %}
+        {% if page.status %}<span class="status-pill status-{{ page.status | downcase | replace: ' ', '-' }}">{{ status_label }}</span>{% endif %}
       </p>
 
       <h1 class="work-title" itemprop="name">{{ page.title }}</h1>
-      {%- if page.subtitle -%}
-        <p class="work-subtitle">{{ page.subtitle }}</p>
-      {%- endif -%}
+      {% if page.subtitle %}<p class="work-subtitle">{{ page.subtitle }}</p>{% endif %}
     </div>
   </header>
 
   <section class="work-body">
     <div class="wrapper work-grid">
       <figure class="work-media">
-        {%- assign img = page.image -%}
-        {%- if img -%}
-          <img src="{{ img | relative_url }}"
-               alt="{{ page.alt | default: page.title }}"
-               loading="eager" decoding="async"
-               itemprop="image">
-        {%- endif -%}
+        {% if page.image %}
+          <img src="{{ page.image | relative_url }}" alt="{{ page.alt | default: page.title | escape }}" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
+        {% endif %}
       </figure>
 
       <aside class="work-panel" aria-label="Artwork details">
         <div class="work-details">
-          <h2 class="sr-only">Details</h2>
+          <h2 class="sr-only">Artwork details</h2>
           <dl>
-            {%- if page.year -%}<div><dt>Year</dt><dd itemprop="dateCreated">{{ page.year }}</dd></div>{%- endif -%}
-            {%- if page.size -%}<div><dt>Size</dt><dd>{{ page.size }}</dd></div>{%- endif -%}
-            {%- if page.medium -%}<div><dt>Medium</dt><dd itemprop="artMedium">{{ page.medium }}</dd></div>{%- endif -%}
-            {%- if page.finish -%}<div><dt>Finish</dt><dd>{{ page.finish }}</dd></div>{%- endif -%}
-            {%- if page.inventory_id -%}<div><dt>Inventory ID</dt><dd>{{ page.inventory_id }}</dd></div>{%- endif -%}
-            {%- if page.price -%}<div><dt>Price</dt><dd>{{ page.price }}</dd></div>{%- endif -%}
-            {%- if page.note -%}<div><dt>Notes</dt><dd>{{ page.note }}</dd></div>{%- endif -%}
+            {% if page.year %}<div><dt>Year</dt><dd itemprop="dateCreated">{{ page.year }}</dd></div>{% endif %}
+            {% if page.series %}<div><dt>Series</dt><dd>{{ page.series }}</dd></div>{% endif %}
+            {% if page.size %}<div><dt>Dimensions</dt><dd>{{ page.size }}</dd></div>{% endif %}
+            {% if page.medium %}<div><dt>Medium</dt><dd itemprop="artMedium">{{ page.medium }}</dd></div>{% endif %}
+            {% if page.finish %}<div><dt>Finish</dt><dd>{{ page.finish }}</dd></div>{% endif %}
+            {% if page.inventory_id %}<div><dt>Inventory ID</dt><dd>{{ page.inventory_id }}</dd></div>{% endif %}
+            {% if page.price and page.price != blank %}<div><dt>Price</dt><dd>{{ page.price }}</dd></div>{% endif %}
+            {% if page.note %}<div><dt>Notes</dt><dd>{{ page.note }}</dd></div>{% endif %}
           </dl>
         </div>
 
         <div class="work-actions">
-          {%- assign subject = page.title | uri_escape -%}
-          <a class="btn" href="mailto:{{ site.email | default: site.author.email }}?subject=Inquiry:%20{{ subject }}">
-            Inquire about this piece
-          </a>
-          <a class="btn ghost" href="{{ '/portfolio/' | relative_url }}">Back to Gallery</a>
+          {% assign subject = page.title | uri_escape %}
+          {% if page.status == 'Available' %}
+            <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry:%20{{ subject }}">Inquire about this work</a>
+          {% else %}
+            <a class="btn" href="mailto:{{ site.email }}?subject=Commission%20inspired%20by:%20{{ subject }}">Ask about related work</a>
+          {% endif %}
+          <a class="btn ghost" href="{{ '/portfolio/' | relative_url }}">Back to portfolio</a>
         </div>
 
         <p class="work-small muted">
-          COA included for originals when applicable. Pickup in Austin preferred; shipping available.
+          Original works include a certificate of authenticity when applicable. Austin pickup is preferred; delivery or shipping is quoted case by case.
         </p>
       </aside>
     </div>
 
     <div class="wrapper work-text">
-      <div class="prose" itemprop="description">
-        {{ content }}
-      </div>
+      <div class="prose" itemprop="description">{{ content }}</div>
     </div>
   </section>
 </article>
