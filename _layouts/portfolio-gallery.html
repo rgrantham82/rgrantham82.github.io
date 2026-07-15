@@ -1,47 +1,96 @@
-{% assign works_sorted = site.works | sort: 'order' %}
-{% assign available_works = works_sorted | where: 'status', 'Available' %}
-{% assign collected_works = works_sorted | where_exp: 'work', "work.status != 'Available'" %}
+---
+layout: default
+---
+{% assign available_works = site.works | where: 'status', 'Available' %}
+{% assign sold_works = site.works | where: 'status', 'Sold' %}
 
-<section id="available" class="gallery-block">
-  <div class="wrapper">
-    <div class="gallery-head">
-      <div>
-        <span class="tag">Collect</span>
-        <h2>Available originals</h2>
+<section class="gallery-hero">
+  <div class="wrapper gallery-hero__inner">
+    <div class="gallery-hero__copy">
+      <span class="tag">{{ page.kicker | default: 'Curated portfolio' }}</span>
+      <h1>{{ page.heading | default: page.title }}</h1>
+      {% if page.intro %}
+        <p class="lede muted">{{ page.intro }}</p>
+      {% endif %}
+      <div class="gallery-actions">
+        <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry">Artwork inquiry</a>
+        <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commission a work</a>
       </div>
-      <p class="muted">Prices are shown when established. For an unpriced work, use the inquiry link on its detail page.</p>
     </div>
 
-    {% if available_works.size > 0 %}
-      <div class="work-grid">
-        {% for work in available_works %}
-          {% include work-card.html work=work %}
-        {% endfor %}
+    <dl class="gallery-summary" aria-label="Portfolio summary">
+      <div>
+        <dt>Available</dt>
+        <dd>{{ available_works.size }}</dd>
       </div>
-    {% else %}
-      <div class="empty-gallery card">
-        <p>No works are currently marked available. Commission inquiries remain open.</p>
+      <div>
+        <dt>Sold</dt>
+        <dd>{{ sold_works.size }}</dd>
       </div>
-    {% endif %}
+      <div>
+        <dt>Works shown</dt>
+        <dd>{{ site.works.size }}</dd>
+      </div>
+    </dl>
   </div>
 </section>
 
-{% if collected_works.size > 0 %}
-<section class="gallery-block gallery-block--collected">
-  <div class="wrapper">
-    <div class="gallery-head">
-      <div>
-        <span class="tag">Archive</span>
-        <h2>Collected and selected works</h2>
-      </div>
-      <p class="muted">A record of sold works and studies that help show the range and continuity of the practice.</p>
-    </div>
-
-    <div class="work-grid">
-      {% for work in collected_works %}
-        {% include work-card.html work=work %}
-      {% endfor %}
-    </div>
+{% if content and content != blank %}
+  <div class="wrapper gallery-introduction">
+    {{ content }}
   </div>
-</section>
 {% endif %}
+
+{% include portfolio-gallery.html %}
+
+<script>
+  (() => {
+    const gallery = document.querySelector('[data-portfolio-gallery]');
+    if (!gallery) return;
+
+    const buttons = Array.from(gallery.querySelectorAll('[data-gallery-filter]'));
+    const cards = Array.from(gallery.querySelectorAll('[data-gallery-card]'));
+    const count = gallery.querySelector('[data-gallery-count]');
+    const empty = gallery.querySelector('[data-gallery-empty]');
+
+    const matches = (card, filter) => {
+      if (filter === 'all') return true;
+      return card.dataset.status === filter || card.dataset.series === filter;
+    };
+
+    const applyFilter = (filter, updateHash = true) => {
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const show = matches(card, filter);
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+
+      buttons.forEach((button) => {
+        const active = button.dataset.galleryFilter === filter;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+
+      if (count) {
+        count.textContent = `${visible} ${visible === 1 ? 'work' : 'works'} shown`;
+      }
+      if (empty) empty.hidden = visible !== 0;
+
+      if (updateHash && window.history && window.history.replaceState) {
+        const url = new URL(window.location.href);
+        url.hash = filter === 'all' ? '' : filter;
+        window.history.replaceState(null, '', url);
+      }
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => applyFilter(button.dataset.galleryFilter));
+    });
+
+    const requested = window.location.hash.replace('#', '');
+    const valid = buttons.some((button) => button.dataset.galleryFilter === requested);
+    applyFilter(valid ? requested : 'all', false);
+  })();
+</script>
