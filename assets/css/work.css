@@ -1,22 +1,181 @@
-/* Work page */
-.work-hero{padding:3.5rem 0 1.25rem}
-.work-kicker{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 .75rem}
-.status-pill{display:inline-block;font-size:.75rem;padding:.25rem .5rem;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04)}
-.work-title{margin:.1rem 0 .75rem}
-.work-subtitle{max-width:70ch;margin:0;opacity:.9}
+.work-hero {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 1.5rem;
+}
 
-.work-body{padding:1.5rem 0 3rem}
-.work-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:1.5rem;align-items:start}
-@media (max-width:900px){.work-grid{grid-template-columns:1fr}}
-.work-media{margin:0;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.12)}
-.work-media img{width:100%;height:auto;display:block}
+.work-kicker {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 .9rem;
+}
 
-.work-panel{border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem;background:rgba(255,255,255,.02)}
-.work-details dl{display:grid;gap:.6rem;margin:0}
-.work-details div{display:grid;grid-template-columns:110px 1fr;gap:.75rem}
-.work-details dt{opacity:.75}
-.work-details dd{margin:0}
-.work-actions{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
-.work-small{margin-top:1rem}
-.work-text{margin-top:1.75rem}
-.prose{max-width:75ch}
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: .35rem .65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--fg);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.status-available {
+  border-color: color-mix(in srgb, #2d7d46 45%, var(--border));
+  background: color-mix(in srgb, #2d7d46 12%, var(--card));
+}
+
+.status-sold {
+  color: var(--muted);
+}
+
+.work-title {
+  max-width: 18ch;
+  margin: .1rem 0 .75rem;
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  line-height: .98;
+}
+
+.work-subtitle {
+  max-width: 68ch;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.work-body {
+  padding: 1.5rem 0 4rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr);
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  align-items: start;
+}
+
+.work-media {
+  display: grid;
+  min-height: 420px;
+  place-items: center;
+  margin: 0;
+  overflow: hidden;
+  padding: clamp(.75rem, 2vw, 1.25rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.work-media img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+}
+
+.work-media__placeholder {
+  display: grid;
+  width: 100%;
+  min-height: 390px;
+  place-items: center;
+  border: 1px dashed var(--border);
+  border-radius: calc(var(--radius) - 5px);
+  color: var(--muted);
+  text-align: center;
+}
+
+.work-media__placeholder span {
+  max-width: 18ch;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.work-panel {
+  position: sticky;
+  top: 6.5rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.work-details dl {
+  display: grid;
+  gap: .7rem;
+  margin: 0;
+}
+
+.work-details div {
+  display: grid;
+  grid-template-columns: minmax(90px, 110px) 1fr;
+  gap: .75rem;
+  padding-bottom: .7rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.work-details div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.work-details dt {
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 700;
+}
+
+.work-details dd {
+  margin: 0;
+}
+
+.work-actions {
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  margin-top: 1.25rem;
+}
+
+.work-small {
+  margin: 1rem 0 0;
+  font-size: .86rem;
+}
+
+.work-text {
+  margin-top: clamp(2rem, 5vw, 4rem);
+}
+
+.prose {
+  max-width: 75ch;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .work-media,
+  .work-media__placeholder {
+    min-height: 300px;
+  }
+
+  .work-details div {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+  }
+}
