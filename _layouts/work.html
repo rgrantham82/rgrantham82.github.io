@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-{% assign status_label = page.status %}
-{% if page.status == 'Sold' %}{% assign status_label = 'Collected' %}{% endif %}
 <article class="work-page" itemscope itemtype="https://schema.org/VisualArtwork">
   <header class="work-hero">
     <div class="wrapper">
       <p class="work-kicker">
         {% if page.series %}<span class="tag">{{ page.series }}</span>{% else %}<span class="tag">Artwork</span>{% endif %}
-        {% if page.status %}<span class="status-pill status-{{ page.status | downcase | replace: ' ', '-' }}">{{ status_label }}</span>{% endif %}
+        {% if page.status %}<span class="status-pill status-{{ page.status | slugify }}">{{ page.status }}</span>{% endif %}
       </p>
 
       <h1 class="work-title" itemprop="name">{{ page.title }}</h1>
@@ -21,6 +19,10 @@ layout: default
       <figure class="work-media">
         {% if page.image %}
           <img src="{{ page.image | relative_url }}" alt="{{ page.alt | default: page.title | escape }}" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
+        {% else %}
+          <div class="work-media__placeholder" role="img" aria-label="Photograph pending for {{ page.title | escape }}">
+            <span>Artwork photograph pending</span>
+          </div>
         {% endif %}
       </figure>
 
@@ -30,6 +32,7 @@ layout: default
           <dl>
             {% if page.year %}<div><dt>Year</dt><dd itemprop="dateCreated">{{ page.year }}</dd></div>{% endif %}
             {% if page.series %}<div><dt>Series</dt><dd>{{ page.series }}</dd></div>{% endif %}
+            {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
             {% if page.size %}<div><dt>Dimensions</dt><dd>{{ page.size }}</dd></div>{% endif %}
             {% if page.medium %}<div><dt>Medium</dt><dd itemprop="artMedium">{{ page.medium }}</dd></div>{% endif %}
             {% if page.finish %}<div><dt>Finish</dt><dd>{{ page.finish }}</dd></div>{% endif %}
@@ -55,8 +58,10 @@ layout: default
       </aside>
     </div>
 
-    <div class="wrapper work-text">
-      <div class="prose" itemprop="description">{{ content }}</div>
-    </div>
+    {% if content and content != blank %}
+      <div class="wrapper work-text">
+        <div class="prose" itemprop="description">{{ content }}</div>
+      </div>
+    {% endif %}
   </section>
 </article>
