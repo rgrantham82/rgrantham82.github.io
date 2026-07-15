@@ -15,8 +15,8 @@ theme_color_light: '#faf9f6'
 theme_color_dark: '#0b0c0f'
 font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
 logo: /assets/images/logo.png
-favicon: /assets/images/favicon-32.png
-apple_touch_icon: /assets/images/apple-touch-icon.png
+favicon: /assets/images/favicon.png
+apple_touch_icon: /assets/images/favicon.png
 og_image: /assets/images/work-aurum-rising.jpg
 
 # Social integration
