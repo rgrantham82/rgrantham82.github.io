@@ -1,35 +1,207 @@
-/* assets/css/home.css */
-.hero{
-  padding: 26px 0 10px;
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  padding: clamp(2rem, 6vw, 5rem) var(--pad) clamp(4rem, 8vw, 7rem);
 }
-.hero-inner{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 18px;
-  align-items: start;
+
+.home-hero__copy h1 {
+  max-width: 13ch;
+  margin: 1rem 0 1.25rem;
+  font-size: clamp(2.8rem, 6vw, 5.3rem);
+  line-height: .98;
 }
-@media (max-width: 900px){
-  .hero-inner{ grid-template-columns: 1fr; }
+
+.home-hero__copy .lede {
+  max-width: 60ch;
+  font-size: 1.12rem;
+  line-height: 1.75;
 }
-.hero-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
-.hero-card{ padding: 18px; }
-.hero-card h3{ margin-bottom: 6px; }
-.section{ margin-top: 28px; }
-.work-card{
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.5rem;
 }
-.work-thumb{
-  border-radius: 14px;
-  overflow:hidden;
+
+.home-hero__visual {
+  margin: 0;
+}
+
+.home-hero__visual a {
+  display: block;
+  overflow: hidden;
+  padding: .8rem;
   border: 1px solid var(--border);
+  border-radius: var(--radius);
   background: var(--card);
 }
-.work-thumb img{
+
+.home-hero__visual img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  max-height: 650px;
+  object-fit: contain;
 }
-.work-meta{ margin-top: 10px; }
-.work-meta .muted{ font-size: 13px; }
+
+.home-hero__visual figcaption {
+  padding-top: .75rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.home-section {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  border-top: 1px solid var(--border);
+}
+
+.home-section--tinted {
+  background: var(--card);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 1.75rem;
+}
+
+.section-heading > div {
+  max-width: 48rem;
+}
+
+.section-heading h2,
+.home-series-intro h2 {
+  margin-top: .75rem;
+}
+
+.text-link {
+  color: var(--fg);
+  font-weight: 700;
+}
+
+.home-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.home-series-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.series-links {
+  display: grid;
+  gap: 1rem;
+}
+
+.series-link {
+  display: grid;
+  gap: .35rem;
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.series-link:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.series-link span {
+  color: var(--muted);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.series-link strong {
+  font-size: 1.25rem;
+}
+
+.series-link small {
+  color: var(--muted);
+}
+
+.home-cta {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.home-cta__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+
+.home-cta__inner > div:first-child {
+  max-width: 46rem;
+}
+
+.home-cta h2 {
+  margin-top: .8rem;
+  color: var(--bg);
+}
+
+.home-cta p {
+  color: color-mix(in srgb, var(--bg) 75%, transparent);
+}
+
+.tag--dark {
+  border-color: color-mix(in srgb, var(--bg) 25%, transparent);
+  background: color-mix(in srgb, var(--bg) 10%, transparent);
+  color: var(--bg);
+}
+
+.btn--light {
+  border-color: var(--bg);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.btn--light-ghost {
+  border-color: color-mix(in srgb, var(--bg) 35%, transparent);
+  background: transparent;
+  color: var(--bg);
+}
+
+@media (max-width: 900px) {
+  .home-hero,
+  .home-series-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-cta__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .home-work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-actions .btn {
+    width: 100%;
+  }
+}
