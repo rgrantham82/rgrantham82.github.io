@@ -125,6 +125,8 @@ css: /assets/css/threshold-series.css
               <div class="threshold-card__media">
                 {% if w.image %}
                   <img src="{{ w.image | relative_url }}" alt="{{ w.alt | escape }}" loading="lazy" decoding="async">
+                {% else %}
+                  <div class="series-image-placeholder">Artwork photograph pending</div>
                 {% endif %}
                 {% if w.status %}<span class="threshold-card__badge">{{ w.status }}</span>{% endif %}
               </div>
