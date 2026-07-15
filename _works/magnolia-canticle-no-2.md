@@ -5,7 +5,7 @@ subtitle: "A completed chapter in the Magnolia Canticle series."
 year: 2025
 
 section: "Magnolia Canticle"
-order: 20
+order: 21
 featured: false
 
 series: "Magnolia Canticle"

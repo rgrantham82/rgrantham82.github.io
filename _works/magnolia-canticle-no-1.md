@@ -1,17 +1,17 @@
 ---
-title: Magnolia Canticle No. 1
+title: "Magnolia Canticle, No. 1"
 year: 2026
 series: Magnolia Canticle
-status: Available
-size: 16×20x1.5 in 
+status: Sold
+size: 16×20×1.5 in
 medium: Acrylic on canvas
 finish: Matte varnish
 image: /assets/images/work-magnolia1.jpg
-alt: Magnolia Canticle No. 1 — abstract acrylic painting with floral and calligraphic
+alt: Magnolia Canticle, No. 1 — abstract acrylic painting with floral and calligraphic
   gestures
 subtitle: A Southern Gothic bloom with handwriting in the underbrush.
 section: Magnolia Canticle
-order: 2
+order: 20
 featured: false
 note: COA included.
 permalink: /portfolio/magnolia-canticle-no-1/

@@ -5,7 +5,7 @@ subtitle: "Handwritten light, layered resilience—continued."
 year: 2026
 
 section: "Magnolia Canticle"
-order: 30
+order: 6
 featured: true
 
 series: "Magnolia Canticle"
