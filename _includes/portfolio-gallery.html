@@ -1,43 +1,59 @@
 {%- comment -%}
-Curated Gallery renderer.
-Uses site.works with front matter keys:
-featured (bool), section (string), order (int)
+Canonical portfolio renderer. Artwork records live in _works/.
+Cards are sorted with available works first, followed by sold works.
 {%- endcomment -%}
 
 {%- assign works_sorted = site.works | sort: 'order' -%}
-{%- assign featured = works_sorted | where: 'featured', true -%}
+{%- assign available_works = works_sorted | where: 'status', 'Available' -%}
+{%- assign sold_works = works_sorted | where: 'status', 'Sold' -%}
+{%- assign other_works = works_sorted | where_exp: 'work', "work.status != 'Available' and work.status != 'Sold'" -%}
+{%- assign gallery_works = available_works | concat: sold_works | concat: other_works -%}
+{%- assign series = works_sorted | map: 'series' | compact | uniq | sort -%}
 
-<section class="gallery-block">
+<section class="gallery-block" data-portfolio-gallery>
   <div class="wrapper">
-    <div class="gallery-head">
-      <h2>Featured</h2>
-      <p class="muted">A small front-window selection—pieces that best represent the current arc of the studio.</p>
+    <div class="gallery-toolbar">
+      <div class="gallery-filters" role="group" aria-label="Filter portfolio works">
+        <button class="gallery-filter is-active" type="button" data-gallery-filter="all" aria-pressed="true">
+          All <span>{{ gallery_works.size }}</span>
+        </button>
+        <button class="gallery-filter" type="button" data-gallery-filter="available" aria-pressed="false">
+          Available <span>{{ available_works.size }}</span>
+        </button>
+        <button class="gallery-filter" type="button" data-gallery-filter="sold" aria-pressed="false">
+          Sold <span>{{ sold_works.size }}</span>
+        </button>
+        {%- for name in series -%}
+          {%- if name and name != blank -%}
+            {%- assign series_count = works_sorted | where: 'series', name | size -%}
+            <button class="gallery-filter" type="button" data-gallery-filter="{{ name | slugify }}" aria-pressed="false">
+              {{ name }} <span>{{ series_count }}</span>
+            </button>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <p class="gallery-count muted" data-gallery-count aria-live="polite">{{ gallery_works.size }} works shown</p>
     </div>
-    <div class="work-grid">
-      {%- for work in featured -%}
-        {%- include work-card.html work=work -%}
-      {%- endfor -%}
-    </div>
+
+    {% if gallery_works.size > 0 %}
+      <div class="work-grid">
+        {% for work in gallery_works %}
+          {% include work-card.html work=work %}
+        {% endfor %}
+      </div>
+      <div class="empty-gallery card" data-gallery-empty hidden>
+        <h2>No matching works</h2>
+        <p>That filter currently has nothing to display. The gallery has not vanished into the ether; choose another filter.</p>
+      </div>
+    {% else %}
+      <div class="empty-gallery card">
+        <h2>Portfolio update in progress</h2>
+        <p>No artwork records are published yet. Commission inquiries remain open.</p>
+      </div>
+    {% endif %}
+
+    <noscript>
+      <p class="gallery-noscript muted">Filtering requires JavaScript. All works remain visible without it.</p>
+    </noscript>
   </div>
 </section>
-
-{%- assign sections = works_sorted | map: 'section' | uniq -%}
-{%- for s in sections -%}
-  {%- if s and s != '' -%}
-    {%- assign section_works = works_sorted | where: 'section', s | where_exp: 'w', 'w.featured != true' -%}
-    {%- if section_works and section_works.size > 0 -%}
-      <section class="gallery-block">
-        <div class="wrapper">
-          <div class="gallery-head">
-            <h2>{{ s }}</h2>
-          </div>
-          <div class="work-grid">
-            {%- for work in section_works -%}
-              {%- include work-card.html work=work -%}
-            {%- endfor -%}
-          </div>
-        </div>
-      </section>
-    {%- endif -%}
-  {%- endif -%}
-{%- endfor -%}
