@@ -1,13 +1,30 @@
-<article class="work-card">
-  <a class="work-card__link" href="{{ work.url | relative_url }}">
+{%- assign work = include.work -%}
+{%- assign status_slug = work.status | default: 'archive' | slugify -%}
+{%- assign series_name = work.series | default: work.section | default: 'Other work' -%}
+{%- assign series_slug = series_name | slugify -%}
+
+<article class="work-card"
+         data-gallery-card
+         data-status="{{ status_slug }}"
+         data-series="{{ series_slug }}"
+         itemscope
+         itemtype="https://schema.org/VisualArtwork">
+  <a class="work-card__link" href="{{ work.url | relative_url }}" aria-label="View {{ work.title | escape }}">
     <div class="work-card__media">
       {%- if work.image -%}
         <img src="{{ work.image | relative_url }}"
-             alt="{{ work.alt | default: work.title }}"
-             loading="lazy" decoding="async">
+             alt="{{ work.alt | default: work.title | escape }}"
+             loading="lazy"
+             decoding="async"
+             itemprop="image">
+      {%- else -%}
+        <div class="work-card__placeholder" role="img" aria-label="Photograph pending for {{ work.title | escape }}">
+          <span>Artwork photograph pending</span>
+        </div>
       {%- endif -%}
+
       {%- if work.status -%}
-        <span class="badge badge--status badge--{{ work.status | downcase | replace: ' ', '-' }}">{{ work.status }}</span>
+        <span class="badge badge--status badge--{{ status_slug }}">{{ work.status }}</span>
       {%- endif -%}
       {%- if work.featured -%}
         <span class="badge badge--featured">Featured</span>
@@ -15,17 +32,17 @@
     </div>
 
     <div class="work-card__body">
-      <h3 class="work-card__title">{{ work.title }}</h3>
+      <p class="work-card__series">{{ series_name }}</p>
+      <h3 class="work-card__title" itemprop="name">{{ work.title }}</h3>
       {%- if work.size or work.medium -%}
         <p class="work-card__meta">
           {%- if work.size -%}{{ work.size }}{%- endif -%}
-          {%- if work.size and work.medium -%} • {%- endif -%}
+          {%- if work.size and work.medium -%} · {%- endif -%}
           {%- if work.medium -%}{{ work.medium }}{%- endif -%}
         </p>
       {%- endif -%}
-      {%- if work.subtitle -%}
-        <p class="work-card__desc">{{ work.subtitle }}</p>
-      {%- endif -%}
+      {%- if work.price and work.price != blank -%}<p class="work-card__price">{{ work.price }}</p>{%- endif -%}
+      {%- if work.subtitle -%}<p class="work-card__desc">{{ work.subtitle }}</p>{%- endif -%}
     </div>
   </a>
 </article>
