@@ -1,12 +1,14 @@
 {%- comment -%}
 Canonical portfolio renderer. Artwork records live in _works/.
-Cards are sorted with available works first, followed by sold works.
+Cards are sorted with available works first, followed by sold and archival works.
+The chained where_exp filters are intentionally compatible with GitHub Pages' Jekyll 3.x build.
 {%- endcomment -%}
 
 {%- assign works_sorted = site.works | sort: 'order' -%}
 {%- assign available_works = works_sorted | where: 'status', 'Available' -%}
 {%- assign sold_works = works_sorted | where: 'status', 'Sold' -%}
-{%- assign other_works = works_sorted | where_exp: 'work', "work.status != 'Available' and work.status != 'Sold'" -%}
+{%- assign non_available_works = works_sorted | where_exp: 'work', "work.status != 'Available'" -%}
+{%- assign other_works = non_available_works | where_exp: 'work', "work.status != 'Sold'" -%}
 {%- assign gallery_works = available_works | concat: sold_works | concat: other_works -%}
 {%- assign series = works_sorted | map: 'series' | compact | uniq | sort -%}
 
