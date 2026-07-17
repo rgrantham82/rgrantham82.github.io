@@ -1,44 +1,63 @@
 ---
 layout: default
 title: Contact
-description: "Contact Robert Grantham Art — inquiries about originals, commissions, and services."
+description: "Contact Robert Grantham Art — inquiries about available works, commissions, portraiture, exhibitions, and studio services."
 css: /assets/css/page.css
 permalink: /contact.html
 ---
 
 <style>
   .contact-hero {
-    padding: 6rem 0 3rem;
+    padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3rem);
     border-bottom: 1px solid var(--border);
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2.5rem, 7vw, 4rem);
   }
+
+  .contact-kicker {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
   .contact-title {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
     font-weight: 700;
   }
+
+  .contact-intro {
+    font-size: 1.2rem;
+    max-width: 680px;
+  }
+
   .contact-split {
     display: flex;
     flex-direction: column;
     gap: 4rem;
     margin-bottom: 6rem;
   }
+
   @media (min-width: 860px) {
     .contact-split {
       flex-direction: row;
+      align-items: flex-start;
     }
+
     .contact-sidebar {
       flex: 1;
       position: sticky;
       top: 2rem;
     }
+
     .contact-main {
       flex: 1.5;
     }
   }
-  
+
   .direct-info {
     padding: 2rem;
     background: var(--card);
@@ -46,34 +65,62 @@ permalink: /contact.html
     margin-bottom: 2rem;
     border-radius: 4px;
   }
+
+  .direct-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
   .direct-info p {
     margin-bottom: 1.25rem;
     font-size: 1.1rem;
   }
+
   .direct-info p:last-child {
     margin-bottom: 0;
   }
-  
-  /* Form Architecture */
+
+  .contact-note {
+    padding-right: 1rem;
+  }
+
+  .contact-note h3 {
+    font-size: 1.25rem;
+  }
+
+  .contact-note p {
+    margin-bottom: 1rem;
+  }
+
   .inquiry-form {
     display: grid;
     gap: 1.5rem;
   }
+
+  .form-intro {
+    margin: 0;
+  }
+
   .form-row {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   @media (min-width: 600px) {
     .form-row {
       grid-template-columns: 1fr 1fr;
     }
   }
+
   .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
+
   .form-label {
     font-weight: 600;
     font-size: 0.85rem;
@@ -81,8 +128,13 @@ permalink: /contact.html
     letter-spacing: 0.05em;
     color: var(--fg);
   }
-  .form-input, 
-  .form-select, 
+
+  .required-marker {
+    text-decoration: none;
+  }
+
+  .form-input,
+  .form-select,
   .form-textarea {
     width: 100%;
     padding: 1rem;
@@ -91,27 +143,32 @@ permalink: /contact.html
     color: var(--fg);
     font-family: inherit;
     font-size: 1rem;
-    border-radius: 0; /* Brutalist edge */
+    border-radius: 0;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
+
   .form-select {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1em;
+    appearance: auto;
   }
-  .form-input:focus, 
-  .form-select:focus, 
-  .form-textarea:focus {
-    outline: none;
-    border-color: var(--fg);
-    box-shadow: 0 0 0 1px var(--fg);
+
+  .form-input:focus-visible,
+  .form-select:focus-visible,
+  .form-textarea:focus-visible,
+  .btn-submit:focus-visible,
+  .fallback-email:focus-visible {
+    outline: 3px solid var(--fg);
+    outline-offset: 3px;
   }
+
+  .form-help,
+  .form-disclosure {
+    font-size: 0.9rem;
+  }
+
   .btn-submit {
     width: 100%;
     padding: 1.25rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     background: var(--fg);
@@ -120,66 +177,109 @@ permalink: /contact.html
     font-weight: 700;
     cursor: pointer;
     transition: transform 0.2s ease;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
+
   .btn-submit:hover {
     transform: translateY(-2px);
   }
+
   .btn-submit:active {
     transform: translateY(0);
   }
-  
-  /* Fallback link styling */
+
+  .fallback-wrap {
+    text-align: center;
+  }
+
   .fallback-email {
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 0.9rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 2px;
   }
+
+  .noscript-note {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .btn-submit {
+      transition: none;
+    }
+
+    .btn-submit:hover {
+      transform: none;
+    }
+  }
 </style>
 
 <section class="contact-hero wrapper">
-  <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Studio Contact</span>
+  <span class="contact-kicker">Studio Contact</span>
   <h1 class="contact-title">Let’s Discuss the Work.</h1>
-  <p class="lede muted" style="font-size: 1.25rem; max-width: 650px;">
-    Whether you are acquiring an available piece or commissioning a site-specific installation, the process begins here. Fill out the details below so we can converse like professionals.
+  <p class="lede muted contact-intro">
+    Whether you are considering an available work, commissioning a portrait, or planning something site-specific, the process begins here. Share what you know so far, and I will help clarify the rest.
   </p>
 </section>
 
 <section class="wrapper contact-split">
-  
   <aside class="contact-sidebar">
     <div class="direct-info">
-      <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">Direct Line</h2>
-      <p><strong>Email:</strong> <br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      <p><strong>Phone:</strong> <br><a href="tel:+15122003563">512‑200‑3563</a> <span class="muted" style="font-size:0.85rem; display:block;">(Time-sensitive Austin inquiries)</span></p>
-      <p><strong>Instagram:</strong> <br><a href="https://instagram.com/{{ site.instagram_username }}" rel="me">@{{ site.instagram_username }}</a></p>
+      <h2>Direct Contact</h2>
+      <p><strong>Email:</strong><br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>
+        <strong>Phone:</strong><br>
+        <a href="tel:+15122003563">512-200-3563</a>
+        <span class="muted" style="font-size: 0.85rem; display: block;">Time-sensitive Austin inquiries</span>
+      </p>
+      <p><strong>Instagram:</strong><br><a href="https://instagram.com/{{ site.instagram_username }}" rel="me">@{{ site.instagram_username }}</a></p>
     </div>
 
-    <div style="padding-right: 1rem;">
-      <h3 style="font-size: 1.25rem;">The Rules of Engagement</h3>
-      <p class="muted" style="margin-bottom: 1rem;">If you send “how much?” with no context, you’ll receive a very polite version of “it depends.”</p>
-      <p class="muted">If you provide dimensions, timelines, and a rough budget using the form provided, you will receive an actual, actionable quote. Transparency saves us both from pretending miracles are a scheduling strategy.</p>
+    <div class="contact-note">
+      <h3>Helpful Details</h3>
+      <p class="muted">The title of the work, desired dimensions, location, timeline, and an approximate budget help me provide a useful answer rather than a cloud of maybes.</p>
+      <p class="muted">You do not need every detail settled before contacting me. A rough idea is enough to begin; clearer information simply produces a clearer quote. Miracles, regrettably, remain outside the production schedule.</p>
     </div>
   </aside>
 
-  <main class="contact-main">
+  <div class="contact-main">
     <form id="inquiryEngine" class="inquiry-form">
-      
+      <p class="form-intro muted">Fields marked <span aria-hidden="true">*</span> are required.</p>
+
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label" for="clientName">Name / Organization</label>
-          <input class="form-input" type="text" id="clientName" required placeholder="Jane Doe">
+          <label class="form-label" for="clientName">Name <span class="required-marker" aria-hidden="true">*</span></label>
+          <input class="form-input" type="text" id="clientName" name="name" autocomplete="name" required placeholder="Jane Doe">
         </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clientEmail">Email <span class="required-marker" aria-hidden="true">*</span></label>
+          <input class="form-input" type="email" id="clientEmail" name="email" autocomplete="email" inputmode="email" required placeholder="name@example.com">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="organization">Organization <span class="muted">(Optional)</span></label>
+          <input class="form-input" type="text" id="organization" name="organization" autocomplete="organization" placeholder="Gallery, company, church, or independent">
+        </div>
+
         <div class="form-group">
           <label class="form-label" for="inquiryType">Primary Interest</label>
-          <select class="form-select" id="inquiryType">
+          <select class="form-select" id="inquiryType" name="inquiry_type">
             <option value="Artwork Inquiry">Acquiring an Available Piece</option>
             <option value="Commission Inquiry">Custom Commission</option>
             <option value="Portrait Commission">Portraiture</option>
             <option value="Mural / Lettering Services">Murals / Large-Scale Lettering</option>
-            <option value="Trade / Gallery Inquiry">Trade & Designer Inquiry</option>
+            <option value="Exhibition / Curatorial Inquiry">Exhibition / Curatorial Inquiry</option>
+            <option value="Trade / Designer Inquiry">Trade & Designer Inquiry</option>
             <option value="General Inquiry">Other</option>
           </select>
         </div>
@@ -187,62 +287,78 @@ permalink: /contact.html
 
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label" for="budget">Budget Range (Optional)</label>
-          <input class="form-input" type="text" id="budget" placeholder="e.g. $1k - $3k">
+          <label class="form-label" for="budget">Budget Range <span class="muted">(Optional)</span></label>
+          <input class="form-input" type="text" id="budget" name="budget" placeholder="e.g. $300-$600, $1,000-$3,000, flexible, or unsure">
         </div>
+
         <div class="form-group">
-          <label class="form-label" for="timeline">Deadline / Timeline</label>
-          <input class="form-input" type="text" id="timeline" placeholder="e.g. Flexible, or specific date">
+          <label class="form-label" for="timeline">Deadline / Timeline <span class="muted">(Optional)</span></label>
+          <input class="form-input" type="text" id="timeline" name="timeline" placeholder="e.g. Flexible, or a specific date">
         </div>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="locationSize">Location & Dimensions (If applicable)</label>
-        <input class="form-input" type="text" id="locationSize" placeholder="e.g. Austin TX, roughly 48x60 wall space">
+        <label class="form-label" for="locationSize">Location & Dimensions <span class="muted">(If applicable)</span></label>
+        <input class="form-input" type="text" id="locationSize" name="location_dimensions" autocomplete="street-address" placeholder="e.g. Austin, TX; roughly 48 x 60 in. wall space">
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="message">Details & Context</label>
-        <textarea class="form-textarea" id="message" rows="6" required placeholder="Tell me which specific piece you're eyeing, or describe the space, mood, and colors for a custom work..."></textarea>
+        <label class="form-label" for="message">Details & Context <span class="required-marker" aria-hidden="true">*</span></label>
+        <textarea class="form-textarea" id="message" name="message" rows="7" required placeholder="Tell me which work you are considering, or describe the subject, space, mood, colors, and practical needs for a commission."></textarea>
       </div>
 
-      <button type="submit" class="btn-submit">Draft Inquiry</button>
-      
-      <div style="text-align: center;">
-        <a href="mailto:{{ site.email }}" class="fallback-email muted">Or click here to open a blank email.</a>
+      <button type="submit" class="btn-submit">Open Email Draft</button>
+      <p class="form-disclosure muted">Your email application will open with the inquiry filled in. Nothing is sent automatically.</p>
+
+      <div class="fallback-wrap">
+        <a href="mailto:{{ site.email }}" class="fallback-email muted">Open a blank email instead</a>
       </div>
+
+      <noscript>
+        <p class="noscript-note">JavaScript is required to prepare the filled email draft. You can still contact me directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+      </noscript>
     </form>
-  </main>
-
+  </div>
 </section>
 
 <script>
-  document.getElementById('inquiryEngine').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Gather the harvest
-    const name = document.getElementById('clientName').value;
-    const type = document.getElementById('inquiryType').value;
-    const budget = document.getElementById('budget').value || 'Not specified';
-    const timeline = document.getElementById('timeline').value || 'Not specified';
-    const locSize = document.getElementById('locationSize').value || 'N/A';
-    const message = document.getElementById('message').value;
-    
-    // Format the email body beautifully
-    const bodyText = `Name: ${name}\n`
-                   + `Inquiry Type: ${type}\n`
-                   + `Budget Range: ${budget}\n`
-                   + `Timeline: ${timeline}\n`
-                   + `Location/Size: ${locSize}\n\n`
-                   + `Details:\n${message}\n\n`
-                   + `-------------------------\n`
-                   + `(Sent via Robert Grantham Art Inquiry Engine)`;
-                   
-    // Encode for the URL
-    const encodedSubject = encodeURIComponent(`Studio Inquiry: ${type} - ${name}`);
-    const encodedBody = encodeURIComponent(bodyText);
-    
-    // Fire the cannon
-    window.location.href = `mailto:{{ site.email }}?subject=${encodedSubject}&body=${encodedBody}`;
-  });
+  const inquiryForm = document.getElementById('inquiryEngine');
+
+  if (inquiryForm) {
+    inquiryForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!inquiryForm.reportValidity()) return;
+
+      const name = document.getElementById('clientName').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const organization = document.getElementById('organization').value.trim() || 'Not specified';
+      const type = document.getElementById('inquiryType').value;
+      const budget = document.getElementById('budget').value.trim() || 'Not specified';
+      const timeline = document.getElementById('timeline').value.trim() || 'Not specified';
+      const locationSize = document.getElementById('locationSize').value.trim() || 'Not applicable';
+      const message = document.getElementById('message').value.trim();
+
+      const bodyText = [
+        `Name: ${name}`,
+        `Reply Email: ${email}`,
+        `Organization: ${organization}`,
+        `Inquiry Type: ${type}`,
+        `Budget Range: ${budget}`,
+        `Timeline: ${timeline}`,
+        `Location / Dimensions: ${locationSize}`,
+        '',
+        'Details:',
+        message,
+        '',
+        '-------------------------',
+        'Prepared through the Robert Grantham Art website.'
+      ].join('\n');
+
+      const subject = encodeURIComponent(`Studio Inquiry: ${type} - ${name}`);
+      const body = encodeURIComponent(bodyText);
+
+      window.location.href = `mailto:{{ site.email }}?subject=${subject}&body=${body}`;
+    });
+  }
 </script>
