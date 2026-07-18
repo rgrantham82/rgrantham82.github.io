@@ -2,7 +2,7 @@
 title: Threshold of Night
 year: 2026
 series: Threshold
-status: Available
+status: Sold
 size: 12×12 in (5/8 in depth)
 medium: Acrylic on canvas
 finish: Matte varnish
@@ -12,8 +12,8 @@ alt: Threshold of Night — abstract acrylic painting in blue and dark tones wit
 subtitle: A blue-toned meditation on depth, atmosphere, and the architecture of darkness.
 section: Threshold
 order: 2
-featured: false 
-note: COA included.
+featured: false
+note: Sold. COA included.
 permalink: /portfolio/threshold-of-night/
 ---
 

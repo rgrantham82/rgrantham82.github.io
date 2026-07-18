@@ -13,7 +13,8 @@ layout: default
         <p class="lede muted">{{ page.intro }}</p>
       {% endif %}
       <div class="gallery-actions">
-        <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry">Artwork inquiry</a>
+        <a class="btn" href="#available-work">View available work</a>
+        <a class="btn ghost" href="{{ '/buying.html' | relative_url }}">How to buy original art</a>
         <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commission a work</a>
       </div>
     </div>
@@ -35,13 +36,32 @@ layout: default
   </div>
 </section>
 
+<section class="collector-assurances" aria-label="Collector information">
+  <div class="wrapper collector-assurances__grid">
+    <div>
+      <strong>Documented originals</strong>
+      <span>Signed works include an inventory record and certificate of authenticity unless noted.</span>
+    </div>
+    <div>
+      <strong>See the true scale</strong>
+      <span>Dimensions and depth are listed, and room-view mockups can be prepared for serious inquiries.</span>
+    </div>
+    <div>
+      <strong>Clear fulfillment</strong>
+      <span>Austin pickup is available. Delivery and insured shipping are quoted before payment.</span>
+    </div>
+  </div>
+</section>
+
 {% if content and content != blank %}
   <div class="wrapper gallery-introduction">
     {{ content }}
   </div>
 {% endif %}
 
-{% include portfolio-gallery.html %}
+<div id="available-work">
+  {% include portfolio-gallery.html %}
+</div>
 
 <script>
   (() => {

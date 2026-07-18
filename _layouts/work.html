@@ -16,17 +16,38 @@ layout: default
 
   <section class="work-body">
     <div class="wrapper work-grid">
-      <figure class="work-media">
-        {% if page.image %}
-          <img src="{{ page.image | relative_url }}" alt="{{ page.alt | default: page.title | escape }}" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
+      <div class="work-gallery" aria-label="Artwork views">
+        {% if page.gallery and page.gallery.size > 0 %}
+          {% for view in page.gallery %}
+            <figure class="work-media{% if forloop.first %} work-media--primary{% endif %}">
+              <img src="{{ view.image | relative_url }}"
+                   alt="{{ view.alt | default: page.alt | default: page.title | escape }}"
+                   loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                   decoding="async"
+                   {% if forloop.first %}fetchpriority="high" itemprop="image"{% endif %}>
+              {% if view.label %}<figcaption>{{ view.label }}</figcaption>{% endif %}
+            </figure>
+          {% endfor %}
+        {% elsif page.image %}
+          <figure class="work-media work-media--primary">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.alt | default: page.title | escape }}" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
+          </figure>
         {% else %}
-          <div class="work-media__placeholder" role="img" aria-label="Photograph pending for {{ page.title | escape }}">
-            <span>Artwork photograph pending</span>
+          <div class="work-media work-media--primary">
+            <div class="work-media__placeholder" role="img" aria-label="Photograph pending for {{ page.title | escape }}">
+              <span>Artwork photograph pending</span>
+            </div>
           </div>
         {% endif %}
-      </figure>
 
-      <aside class="work-panel" aria-label="Artwork details">
+        {% if page.room_preview_note %}
+          <p class="work-gallery__note muted">{{ page.room_preview_note }}</p>
+        {% elsif page.status == 'Available' %}
+          <p class="work-gallery__note muted">Need help judging scale? Request a room-view mockup using a photograph of your wall.</p>
+        {% endif %}
+      </div>
+
+      <aside class="work-panel" aria-label="Artwork and purchasing details">
         <div class="work-details">
           <h2 class="sr-only">Artwork details</h2>
           <dl>
@@ -35,26 +56,46 @@ layout: default
             {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
             {% if page.size %}<div><dt>Dimensions</dt><dd>{{ page.size }}</dd></div>{% endif %}
             {% if page.medium %}<div><dt>Medium</dt><dd itemprop="artMedium">{{ page.medium }}</dd></div>{% endif %}
+            {% if page.surface %}<div><dt>Surface</dt><dd>{{ page.surface }}</dd></div>{% endif %}
             {% if page.finish %}<div><dt>Finish</dt><dd>{{ page.finish }}</dd></div>{% endif %}
+            {% if page.framing %}<div><dt>Framing</dt><dd>{{ page.framing }}</dd></div>{% endif %}
+            {% if page.hanging %}<div><dt>Hanging</dt><dd>{{ page.hanging }}</dd></div>{% endif %}
             {% if page.inventory_id %}<div><dt>Inventory ID</dt><dd>{{ page.inventory_id }}</dd></div>{% endif %}
-            {% if page.price and page.price != blank %}<div><dt>Price</dt><dd>{{ page.price }}</dd></div>{% endif %}
+            {% if page.status == 'Available' %}
+              <div class="work-price-row">
+                <dt>Price</dt>
+                <dd class="work-price">
+                  {% if page.price and page.price != blank %}{{ page.price }}{% else %}Price on request{% endif %}
+                </dd>
+              </div>
+            {% elsif page.price and page.price != blank %}
+              <div><dt>Price</dt><dd>{{ page.price }}</dd></div>
+            {% endif %}
             {% if page.note %}<div><dt>Notes</dt><dd>{{ page.note }}</dd></div>{% endif %}
           </dl>
         </div>
 
         <div class="work-actions">
           {% assign subject = page.title | uri_escape %}
+          {% assign inventory = page.inventory_id | default: 'Not listed' | uri_escape %}
           {% if page.status == 'Available' %}
-            <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry:%20{{ subject }}">Inquire about this work</a>
+            <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry:%20{{ subject }}&amp;body=Hello%20Robert,%0A%0AI%20am%20interested%20in%20{{ subject }}%20({{ inventory }}).%20Please%20send%20current%20availability,%20purchase,%20pickup,%20and%20shipping%20details.%0A%0AThank%20you.">Inquire about this work</a>
           {% else %}
-            <a class="btn" href="mailto:{{ site.email }}?subject=Commission%20inspired%20by:%20{{ subject }}">Ask about related work</a>
+            <a class="btn" href="mailto:{{ site.email }}?subject=Related%20work:%20{{ subject }}&amp;body=Hello%20Robert,%0A%0AI%20am%20interested%20in%20work%20related%20to%20{{ subject }}.%20Please%20let%20me%20know%20about%20available%20pieces%20or%20commission%20options.%0A%0AThank%20you.">Ask about related work</a>
           {% endif %}
+          <a class="btn ghost" href="{{ '/buying.html' | relative_url }}">How purchasing works</a>
           <a class="btn ghost" href="{{ '/portfolio/' | relative_url }}">Back to portfolio</a>
         </div>
 
-        <p class="work-small muted">
-          Original works include a certificate of authenticity when applicable. Austin pickup is preferred; delivery or shipping is quoted case by case.
-        </p>
+        <div class="work-assurances" aria-label="Purchase assurances">
+          <h2>Included with original works</h2>
+          <ul>
+            <li>Signed artwork and documented inventory record</li>
+            <li>Certificate of authenticity unless specifically noted</li>
+            <li>Condition and hanging details confirmed before payment</li>
+            <li>Austin pickup available; delivery or shipping quoted separately</li>
+          </ul>
+        </div>
       </aside>
     </div>
 
