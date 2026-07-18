@@ -64,14 +64,8 @@ layout: default
             {% if page.status == 'Available' %}
               <div class="work-price-row">
                 <dt>Price</dt>
-                <dd class="work-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                  {% if page.price and page.price != blank %}
-                    <span itemprop="price">{{ page.price }}</span>
-                    <meta itemprop="priceCurrency" content="USD">
-                  {% else %}
-                    Price on request
-                  {% endif %}
-                  <link itemprop="availability" href="https://schema.org/InStock">
+                <dd class="work-price">
+                  {% if page.price and page.price != blank %}{{ page.price }}{% else %}Price on request{% endif %}
                 </dd>
               </div>
             {% elsif page.price and page.price != blank %}
@@ -85,9 +79,9 @@ layout: default
           {% assign subject = page.title | uri_escape %}
           {% assign inventory = page.inventory_id | default: 'Not listed' | uri_escape %}
           {% if page.status == 'Available' %}
-            <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry:%20{{ subject }}&body=Hello%20Robert,%0A%0AI%20am%20interested%20in%20{{ subject }}%20({{ inventory }}).%20Please%20send%20current%20availability,%20purchase,%20pickup,%20and%20shipping%20details.%0A%0AThank%20you.">Inquire about this work</a>
+            <a class="btn" href="mailto:{{ site.email }}?subject=Artwork%20inquiry:%20{{ subject }}&amp;body=Hello%20Robert,%0A%0AI%20am%20interested%20in%20{{ subject }}%20({{ inventory }}).%20Please%20send%20current%20availability,%20purchase,%20pickup,%20and%20shipping%20details.%0A%0AThank%20you.">Inquire about this work</a>
           {% else %}
-            <a class="btn" href="mailto:{{ site.email }}?subject=Related%20work:%20{{ subject }}&body=Hello%20Robert,%0A%0AI%20am%20interested%20in%20work%20related%20to%20{{ subject }}.%20Please%20let%20me%20know%20about%20available%20pieces%20or%20commission%20options.%0A%0AThank%20you.">Ask about related work</a>
+            <a class="btn" href="mailto:{{ site.email }}?subject=Related%20work:%20{{ subject }}&amp;body=Hello%20Robert,%0A%0AI%20am%20interested%20in%20work%20related%20to%20{{ subject }}.%20Please%20let%20me%20know%20about%20available%20pieces%20or%20commission%20options.%0A%0AThank%20you.">Ask about related work</a>
           {% endif %}
           <a class="btn ghost" href="{{ '/buying.html' | relative_url }}">How purchasing works</a>
           <a class="btn ghost" href="{{ '/portfolio/' | relative_url }}">Back to portfolio</a>
