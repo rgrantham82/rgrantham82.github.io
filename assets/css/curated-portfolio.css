@@ -59,12 +59,44 @@
   line-height: 1;
 }
 
+.collector-assurances {
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+}
+
+.collector-assurances__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: var(--border);
+}
+
+.collector-assurances__grid > div {
+  display: grid;
+  gap: .35rem;
+  padding: 1.25rem;
+  background: var(--bg);
+}
+
+.collector-assurances strong {
+  color: var(--fg);
+}
+
+.collector-assurances span {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
 .gallery-introduction {
   padding-top: 2rem;
 }
 
 .gallery-block {
   padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem);
+  scroll-margin-top: 6rem;
 }
 
 .gallery-toolbar {
@@ -143,6 +175,26 @@
   display: none;
 }
 
+.work-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--fg);
+  font-size: .86rem;
+  font-weight: 750;
+}
+
+.work-card:hover .work-card__cta span,
+.work-card:focus-within .work-card__cta span {
+  transform: translateX(3px);
+}
+
+.work-card__cta span {
+  transition: transform .18s ease;
+}
+
 .empty-gallery {
   margin-top: 2rem;
   text-align: center;
@@ -164,6 +216,10 @@
 
   .gallery-summary {
     max-width: 42rem;
+  }
+
+  .collector-assurances__grid {
+    grid-template-columns: 1fr;
   }
 
   .work-grid {
@@ -197,7 +253,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .gallery-filter {
+  .gallery-filter,
+  .work-card__cta span {
     transition: none;
   }
 }
