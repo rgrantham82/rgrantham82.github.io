@@ -2,7 +2,7 @@
 title: Threshold of Heat
 year: 2026
 series: Threshold
-status: Available
+status: Sold
 size: 12×12 in (5/8 in depth)
 medium: Acrylic on canvas
 finish: Matte varnish
@@ -13,7 +13,7 @@ subtitle: A charged red field where pressure, structure, and heat push against o
 section: Threshold
 order: 1
 featured: true
-note: COA included.
+note: Sold. COA included.
 permalink: /portfolio/threshold-of-heat/
 ---
 
