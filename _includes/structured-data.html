@@ -1,0 +1,120 @@
+{%- comment -%}
+Structured data (schema.org JSON-LD).
+
+Why this exists: the microdata already scattered through the templates marks up
+names and images, but never says who made the work or whether it can be bought.
+Google's rich-result parsers read JSON-LD most reliably, so the machine-readable
+truth lives here, in one place, instead of being smeared across four layouts.
+
+Emits:
+  * Person + WebSite on every page
+  * VisualArtwork (+ Offer) on /portfolio/<slug>/ pages
+  * BlogPosting on journal posts
+  * BreadcrumbList on anything below the root
+{%- endcomment -%}
+
+{%- assign artist_url = '/about.html' | absolute_url -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ artist_url | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "jobTitle": "Visual artist",
+      "email": {{ site.email | prepend: 'mailto:' | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "image": {{ '/assets/images/robert-grantham.jpg' | absolute_url | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Austin",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      {%- comment -%}
+      Built by capture-and-split rather than an inline comma list: dropping any
+      one handle later can't strand a comma and invalidate the whole document.
+      Uses only Liquid available in the Jekyll 3.x that GitHub Pages runs.
+      {%- endcomment -%}
+      {%- capture social_raw -%}
+        {%- if site.instagram_username %}https://instagram.com/{{ site.instagram_username }}|{% endif -%}
+        {%- if site.linkedin_username %}https://www.linkedin.com/in/{{ site.linkedin_username }}|{% endif -%}
+        {%- if site.github_username %}https://github.com/{{ site.github_username }}|{% endif -%}
+      {%- endcapture -%}
+      {%- assign social = social_raw | strip | split: '|' -%}
+      "sameAs": {{ social | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ '/#website' | absolute_url | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "en-US",
+      "publisher": { "@id": {{ artist_url | jsonify }} }
+    }
+
+    {%- if page.collection == 'works' -%},
+    {
+      "@type": "VisualArtwork",
+      "@id": {{ page.url | absolute_url | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "creator": { "@id": {{ artist_url | jsonify }} },
+      "artform": "Painting",
+      {%- if page.medium %}"artMedium": {{ page.medium | jsonify }},{% endif -%}
+      {%- if page.series %}"isPartOf": {{ page.series | jsonify }},{% endif -%}
+      {%- if page.year %}"dateCreated": {{ page.year | jsonify }},{% endif -%}
+      {%- if page.image %}"image": {{ page.image | absolute_url | jsonify }},{% endif -%}
+      {%- if page.subtitle %}"description": {{ page.subtitle | jsonify }},{% endif -%}
+      {%- if page.inventory_id %}"identifier": {{ page.inventory_id | jsonify }},{% endif -%}
+      {%- if page.size %}"size": {{ page.size | jsonify }},{% endif -%}
+      "offers": {
+        "@type": "Offer",
+        "url": {{ page.url | absolute_url | jsonify }},
+        "priceCurrency": "USD",
+        {%- if page.price and page.price != blank -%}
+        "price": {{ page.price | remove: '$' | remove: ',' | jsonify }},
+        {%- endif -%}
+        "availability": {% if page.status == 'Available' %}"https://schema.org/InStock"{% else %}"https://schema.org/SoldOut"{% endif %},
+        "seller": { "@id": {{ artist_url | jsonify }} }
+      }
+    }
+    {%- endif -%}
+
+    {%- if page.layout == 'post' -%},
+    {
+      "@type": "BlogPosting",
+      "@id": {{ page.url | absolute_url | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "author": { "@id": {{ artist_url | jsonify }} },
+      "publisher": { "@id": {{ artist_url | jsonify }} },
+      "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+      {%- if page.image %}"image": {{ page.image | absolute_url | jsonify }},{% endif -%}
+      "description": {{ page.description | default: site.description | strip_html | strip_newlines | jsonify }}
+    }
+    {%- endif -%}
+
+    {%- if page.url != '/' -%},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ '/' | absolute_url | jsonify }} }
+        {%- if page.collection == 'works' -%}
+        ,{ "@type": "ListItem", "position": 2, "name": "Portfolio", "item": {{ '/portfolio/' | absolute_url | jsonify }} }
+        ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+        {%- elsif page.layout == 'post' -%}
+        ,{ "@type": "ListItem", "position": 2, "name": "Journal", "item": {{ '/blog/' | absolute_url | jsonify }} }
+        ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+        {%- else -%}
+        ,{ "@type": "ListItem", "position": 2, "name": {{ page.title | default: site.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+        {%- endif -%}
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>
