@@ -30,7 +30,10 @@ layout: default
           {% endfor %}
         {% elsif page.image %}
           <figure class="work-media work-media--primary">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.alt | default: page.title | escape }}" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
+            <img src="{{ page.image | relative_url }}"
+                 {%- if page.thumb %} srcset="{{ page.thumb | relative_url }} 800w, {{ page.image | relative_url }} 1600w" sizes="(max-width: 900px) 94vw, 720px"{%- endif %}
+                 alt="{{ page.alt | default: page.title | escape }}"{% if page.image_w %} width="{{ page.image_w }}" height="{{ page.image_h }}"{% endif %}
+                 loading="eager" decoding="async" fetchpriority="high" itemprop="image">
           </figure>
         {% else %}
           <div class="work-media work-media--primary">
