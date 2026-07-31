@@ -16,8 +16,8 @@ theme_color_dark: '#0b0c0f'
 font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.png
-apple_touch_icon: /assets/images/favicon.png
-og_image: /assets/images/work-aurum-rising.jpg
+apple_touch_icon: /assets/images/apple-touch-icon.png
+og_image: /assets/images/og-default.jpg   # 1200x630, 68 KB — under X's 5 MB card limit
 
 # Social integration
 github_username: rgrantham82
@@ -34,9 +34,10 @@ encoding: utf-8
 future: true
 lsi: false
 safe: true
-paginate: 6
-paginate_path: /page:num
 data_dir: _data
+# NOTE: `paginate` was removed. jekyll-paginate was never listed under `plugins`,
+# so it never loaded; the blog already falls back to `site.posts` and filters
+# client-side. Re-add both the plugin and the keys together, or not at all.
 
 # Architecture
 collections:
@@ -62,7 +63,6 @@ defaults:
     css: /assets/css/work.css
 
 include:
-- _pages
 - _data
 - assets
 
