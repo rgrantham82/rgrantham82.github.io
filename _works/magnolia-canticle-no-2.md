@@ -15,7 +15,10 @@ finish: "Matte varnish"
 size: "16×20×1.5 in"
 inventory_id: "RGA-MC2-2025-01"
 
-image: "/assets/images/work-magnolia-canticle-no-2.jpg"
+image: /assets/images/work-magnolia-canticle-no-2.jpg
+thumb: /assets/images/work-magnolia-canticle-no-2-800.jpg
+image_w: 1600
+image_h: 1280
 alt: "Magnolia Canticle, No. 2 — abstract acrylic painting with layered mark-making and calligraphic structure."
 permalink: /portfolio/magnolia-canticle-no-2/
 

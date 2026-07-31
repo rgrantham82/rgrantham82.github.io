@@ -7,7 +7,10 @@ size: 20×24×1.5 in
 medium: Acrylic on canvas
 finish: Gamblin Gamvar Matte varnish
 inventory_id: RGA-CWBS-2026-01
-image: assets/images/robert_grantham_conjunction_with_the_black_sun_1.jpg
+image: /assets/images/robert_grantham_conjunction_with_the_black_sun_1.jpg
+thumb: /assets/images/robert_grantham_conjunction_with_the_black_sun_1-800.jpg
+image_w: 1600
+image_h: 1600
 alt: Conjunction with the Black Sun — abstract acrylic painting with a blue-rimmed black orb, luminous blue body, orange-red forms, and gold passages
 subtitle: A dark cosmological field held in tension by blue coronas, heated bodies, and gold-lit pressure.
 section: Conjunctions

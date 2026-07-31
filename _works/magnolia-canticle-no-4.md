@@ -7,7 +7,10 @@ size: 16×20×1.5 in
 medium: Acrylic on acrylic-primed jute canvas
 finish: Gamblin Gamvar Matte varnish
 inventory_id: RGA-MC4-2026-01
-image: assets/images/magnolia_canticle_4.png  
+image: /assets/images/magnolia_canticle_4.jpg
+thumb: /assets/images/magnolia_canticle_4-800.jpg
+image_w: 592
+image_h: 774
 alt: Magnolia Canticle, No. 4 — abstract acrylic painting on jute with gold calligraphic inscription and decorative scrollwork
 subtitle: "After the storm, the root sings: a magnolia canticle carried by jute, gold lettering, and weathered layers."
 section: Magnolia Canticle

@@ -7,6 +7,9 @@ size: (series study)
 medium: Acrylic on canvas
 finish: Matte varnish
 image: /assets/images/work-neon.jpg
+thumb: /assets/images/work-neon-800.jpg
+image_w: 1600
+image_h: 1318
 alt: Neon Cetacean — abstract painting with neon-like arcs suggesting a whale form
 subtitle: A creature made of light, surfacing in pigment.
 section: Selected Works

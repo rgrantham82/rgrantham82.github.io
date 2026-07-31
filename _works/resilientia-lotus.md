@@ -6,6 +6,9 @@ status: Sold
 size: 12×16 in
 medium: Acrylic & metallics on canvas
 image: /assets/images/resilientia-final.jpg
+thumb: /assets/images/resilientia-final-800.jpg
+image_w: 717
+image_h: 1024
 alt: Blue lotus on a gold ground with Copperplate and Blackletter calligraphy
 subtitle: A blue lotus on gold—resilience as liturgy.
 section: Selected Works

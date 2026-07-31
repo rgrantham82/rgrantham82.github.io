@@ -7,6 +7,9 @@ size: 16×20×1.5 in
 medium: Acrylic on canvas
 finish: Matte varnish
 image: /assets/images/work-magnolia1.jpg
+thumb: /assets/images/work-magnolia1-800.jpg
+image_w: 1600
+image_h: 1600
 alt: Magnolia Canticle, No. 1 — abstract acrylic painting with floral and calligraphic
   gestures
 subtitle: A Southern Gothic bloom with handwriting in the underbrush.

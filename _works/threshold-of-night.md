@@ -8,6 +8,9 @@ medium: Acrylic on canvas
 finish: Matte varnish
 inventory_id: RGA-TN-2026-01
 image: /assets/images/work-threshold-of-night.jpg
+thumb: /assets/images/work-threshold-of-night-800.jpg
+image_w: 1600
+image_h: 1600
 alt: Threshold of Night — abstract acrylic painting in blue and dark tones with layered calligraphic and structural forms
 subtitle: A blue-toned meditation on depth, atmosphere, and the architecture of darkness.
 section: Threshold

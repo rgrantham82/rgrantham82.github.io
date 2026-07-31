@@ -8,6 +8,9 @@ medium: Acrylic on canvas
 finish: Matte varnish
 inventory_id: RGA-TH-2026-01
 image: /assets/images/work-threshold-of-heat.jpg
+thumb: /assets/images/work-threshold-of-heat-800.jpg
+image_w: 1600
+image_h: 1600
 alt: Threshold of Heat — abstract acrylic painting with red, orange, black, and calligraphic structural forms
 subtitle: A charged red field where pressure, structure, and heat push against one another.
 section: Threshold

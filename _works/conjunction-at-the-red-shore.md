@@ -7,7 +7,10 @@ size: 20×24×1.5 in
 medium: Acrylic on canvas
 finish: Gamblin Gamvar Matte varnish
 inventory_id: RGA-CRS-2026-01
-image: assets/images/robert_grantham_conjunction_red_shore_1.jpg
+image: /assets/images/robert_grantham_conjunction_red_shore_1.jpg
+thumb: /assets/images/robert_grantham_conjunction_red_shore_1-800.jpg
+image_w: 1600
+image_h: 1600
 alt: Conjunction at the Red Shore — abstract acrylic painting with circular bodies crossing warm red and yellow fields above a deep blue shore
 subtitle: Orb-like bodies cross a heated field above a blue boundary that reads as shore, fracture, and threshold.
 section: Conjunctions
