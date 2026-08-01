@@ -4,28 +4,28 @@ title: "Magnolia Canticle, No. 2"
 subtitle: "A completed chapter in the Magnolia Canticle series."
 year: 2025
 
+series: "Magnolia Canticle"
 section: "Magnolia Canticle"
 order: 21
 featured: false
 
-series: "Magnolia Canticle"
 status: "Sold"
+price: "Sold"
+size: "16×20×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
-size: "16×20×1.5 in"
 inventory_id: "RGA-MC2-2025-01"
 
 image: /assets/images/work-magnolia-canticle-no-2.jpg
 thumb: /assets/images/work-magnolia-canticle-no-2-800.jpg
+og_image: "/assets/images/work-magnolia-canticle-no-2.jpg"
 image_w: 1600
 image_h: 1280
 alt: "Magnolia Canticle, No. 2 — abstract acrylic painting with layered mark-making and calligraphic structure."
-permalink: /portfolio/magnolia-canticle-no-2/
 
+note: "Sold. Commissions in a related scale and palette are available."
+permalink: /portfolio/magnolia-canticle-no-2/
 description: "Magnolia Canticle, No. 2 — 16×20×1.5 acrylic on canvas by Robert Grantham. Sold."
-og_image: "/assets/images/work-magnolia-canticle-no-2.jpg"
 ---
 
 Magnolia Canticle, No. 2 is a resolved entry in the series—built through layering and revision until the composition reads as deliberate, not accidental.
-
-**Status:** Sold.
