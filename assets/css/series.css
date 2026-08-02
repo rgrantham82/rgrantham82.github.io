@@ -1,0 +1,548 @@
+/* assets/css/series.css
+   ------------------------------------------------------------------
+   Shared stylesheet for series pages. Every rule is prefixed .series-
+   and every colour resolves through three custom properties that a
+   page sets on .series-page:
+
+       --series-field   the deep / cool colour
+       --series-current the connective / warm colour
+       --series-mass    the hot accent
+
+   Threshold and Magnolia Canticle currently ship near-identical
+   300-line stylesheets of their own; both can migrate onto this file
+   by setting their own three tokens, which would delete roughly 600
+   lines of duplicated CSS. Nothing here assumes Conjunctions.
+   ------------------------------------------------------------------ */
+
+.series-page {
+  /* Neutral fallbacks; each page overrides these. */
+  --series-field: #24406f;
+  --series-current: var(--accent);
+  --series-mass: #9e1f0f;
+
+  --series-rule: color-mix(in srgb, var(--series-current) 45%, transparent);
+  --series-tint: color-mix(in srgb, var(--series-field) 7%, transparent);
+}
+
+/* Conjunctions: tokens sampled from the paintings themselves — the deep field
+   blue, the gold current that runs through all three, the fired red mass. */
+.series-page--conjunctions {
+  --series-field: #24406f;
+  --series-current: #d29d49;
+  --series-mass: #9e1f0f;
+}
+
+/* ---------- shared shell ---------- */
+
+.series-band {
+  padding: clamp(2rem, 5vw, 3.25rem) 0;
+}
+
+.series-band + .series-band {
+  border-top: 1px solid var(--border);
+}
+
+.series-band--tinted {
+  background: var(--series-tint);
+}
+
+.series-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  align-items: center;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.series-eyebrow li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.series-eyebrow li + li::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--series-rule);
+}
+
+/* ---------- masthead ---------- */
+
+.series-masthead h1 {
+  margin: 0;
+  font-size: clamp(2.9rem, 11vw, 6.2rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+
+.series-masthead h1 .series-title-mark {
+  color: var(--series-current);
+}
+
+.series-lede {
+  max-width: 60ch;
+  margin: 1.25rem 0 0;
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.series-masthead-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+}
+
+/* ---------- signature: the alignment ---------- */
+
+.series-alignment {
+  margin-top: clamp(2.25rem, 6vw, 3.5rem);
+}
+
+.series-alignment__caption {
+  margin: 0 0 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.series-axis {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* The axis line itself: the thing the bodies are aligned on. */
+.series-axis::before {
+  content: "";
+  position: absolute;
+  top: clamp(36px, 7.5vw, 52px);
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--series-current) 12%,
+    var(--series-current) 88%,
+    transparent
+  );
+  transform-origin: left center;
+}
+
+.series-body {
+  position: relative;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.series-body__disc {
+  position: relative;
+  display: block;
+  width: clamp(72px, 15vw, 104px);
+  height: clamp(72px, 15vw, 104px);
+  margin: 0 auto 0.9rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: 0 0 0 1px var(--border), 0 0 0 6px var(--bg);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.series-body__disc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.series-body:hover .series-body__disc,
+.series-body:focus-visible .series-body__disc {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px var(--series-current), 0 0 0 6px var(--bg),
+    0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.series-body__relation {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--series-current);
+}
+
+.series-body__name {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.series-body__note {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ---------- prose blocks ---------- */
+
+.series-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.series-note h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.22rem;
+  letter-spacing: -0.01em;
+}
+
+.series-note p {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.series-note p:last-child {
+  margin-bottom: 0;
+}
+
+.series-definition {
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--series-rule);
+  font-style: normal;
+}
+
+.series-definition b {
+  color: var(--fg);
+}
+
+/* ---------- work list ---------- */
+
+.series-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.series-head h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.series-head p {
+  max-width: 46ch;
+  margin: 0;
+}
+
+.series-group + .series-group {
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.series-group__label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.series-group__label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.series-works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.series-work {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.series-work:hover,
+.series-work:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--series-current);
+  box-shadow: var(--shadow);
+}
+
+.series-work__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  padding: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.series-work__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.series-work__status {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.series-work__status[data-status="sold"] {
+  background: var(--muted);
+}
+
+.series-work__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.05rem 1.15rem;
+}
+
+.series-work__title {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.series-work__sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.series-work__facts {
+  margin: auto 0 0;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- materials ---------- */
+
+.series-materials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+}
+
+.series-materials div {
+  padding: 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg);
+}
+
+.series-materials dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--series-current);
+}
+
+.series-materials dd {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* ---------- closing call to action ---------- */
+
+.series-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--series-tint);
+}
+
+.series-cta h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  letter-spacing: -0.02em;
+}
+
+.series-cta p {
+  max-width: 48ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.series-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.series-empty {
+  padding: 1.5rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--muted);
+}
+
+/* ---------- narrow screens ---------- */
+
+@media (max-width: 640px) {
+  .series-axis {
+    grid-auto-flow: row;
+    gap: 1.6rem;
+    text-align: left;
+  }
+
+  /* On one column the horizontal axis is a lie, so it becomes vertical. */
+  .series-axis::before {
+    top: 12px;
+    bottom: 12px;
+    left: 36px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--series-current) 12%,
+      var(--series-current) 88%,
+      transparent
+    );
+  }
+
+  .series-body {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 1rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .series-body__disc {
+    width: 72px;
+    height: 72px;
+    margin: 0;
+  }
+}
+
+/* ---------- motion: one orchestrated moment, opt-out respected ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .series-axis::before {
+    animation: series-axis-draw 0.9s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  .series-body {
+    animation: series-body-settle 0.5s ease both;
+    animation-delay: calc(0.55s + var(--i, 0) * 0.12s);
+  }
+
+  @keyframes series-axis-draw {
+    from {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes series-body-settle {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) and (max-width: 640px) {
+  .series-axis::before {
+    animation-name: series-axis-draw-vertical;
+    transform-origin: center top;
+  }
+
+  @keyframes series-axis-draw-vertical {
+    from {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+}
