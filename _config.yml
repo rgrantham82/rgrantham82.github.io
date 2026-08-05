@@ -19,6 +19,9 @@ favicon: /assets/images/favicon.png
 apple_touch_icon: /assets/images/apple-touch-icon.png
 og_image: /assets/images/og-default.jpg   # 1200x630, 68 KB — under X's 5 MB card limit
 
+
+google_analytics: "G-7WZFJ98W4K"
+
 # Social integration
 github_username: rgrantham82
 instagram_username: robertgranthamart
