@@ -1,0 +1,171 @@
+/* Trade & Corporate Collections — /trade.html
+   Scoped to .trade; type and color inherit from the site theme. */
+
+/* Scoped to .trade so nothing here reaches the rest of the site.
+   Type, color, and links are inherited from the site theme on purpose. */
+.trade {
+  margin: 0 auto 4rem;
+  max-width: 46rem;
+  --trade-ink: #1a1a1a;
+  --trade-bg: #faf9f6;
+}
+@media (prefers-color-scheme: dark) {
+  .trade { --trade-ink: #ededed; --trade-bg: #121212; }
+}
+.trade-hero { margin-bottom: 3rem; }
+
+.trade-eyebrow {
+  margin: 0 0 .5rem;
+  font-size: .75rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .65;
+}
+
+.trade-h1 { margin: 0 0 1rem; line-height: 1.15; }
+.trade-h2 { margin: 0 0 .75rem; }
+.trade-h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
+.trade-lede { font-size: 1.1rem; line-height: 1.6; margin: 0 0 1.5rem; }
+.trade-note { font-size: .9rem; opacity: .75; line-height: 1.55; }
+
+.trade-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: 1.25rem 0 0;
+}
+
+.trade-btn {
+  display: inline-block;
+  padding: .7rem 1.15rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-size: .95rem;
+  text-decoration: none;
+  transition: opacity .15s ease;
+}
+.trade-btn:hover { opacity: .7; }
+.trade-btn-primary {
+  background: var(--trade-ink);
+  border-color: var(--trade-ink);
+  color: var(--trade-bg);
+}
+
+/* Spec sheet */
+.trade-spec { margin: 1.25rem 0 0; }
+.trade-spec-row {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1rem;
+  padding: .85rem 0;
+  border-top: 1px solid;
+  border-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+.trade-spec-row:last-child {
+  border-bottom: 1px solid;
+  border-bottom-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+.trade-spec dt {
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .65;
+  padding-top: .15rem;
+}
+.trade-spec dd { margin: 0; line-height: 1.55; }
+
+/* Price table */
+.trade-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: .95rem;
+}
+.trade-table th,
+.trade-table td {
+  text-align: left;
+  padding: .7rem .6rem .7rem 0;
+  border-bottom: 1px solid;
+  border-color: color-mix(in srgb, currentColor 15%, transparent);
+  vertical-align: top;
+}
+.trade-table thead th {
+  font-size: .74rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .65;
+  font-weight: 600;
+}
+.trade-table td:last-child { white-space: nowrap; }
+
+.trade-list { line-height: 1.7; padding-left: 1.1rem; }
+.trade-list li { margin-bottom: .35rem; }
+
+/* Sector cards */
+.trade-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.trade-card {
+  padding: 1.25rem;
+  border: 1px solid;
+  border-color: color-mix(in srgb, currentColor 16%, transparent);
+  border-radius: 3px;
+}
+.trade-card p:last-child { margin-bottom: 0; line-height: 1.6; }
+
+/* Process */
+.trade-steps {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  counter-reset: trade-step;
+}
+.trade-steps > li {
+  padding: 1.1rem 0;
+  border-top: 1px solid;
+  border-color: color-mix(in srgb, currentColor 16%, transparent);
+}
+.trade-steps > li p:last-child { margin-bottom: 0; line-height: 1.6; }
+
+.trade-close {
+  padding-top: 1.5rem;
+  border-top: 2px solid;
+  border-top-color: color-mix(in srgb, currentColor 30%, transparent);
+}
+.trade-contact { margin-top: 2rem; font-size: .95rem; }
+.trade-contact p { margin: 0 0 .5rem; }
+.trade-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.25rem;
+}
+
+.trade-visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.trade a:focus-visible,
+.trade-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+@media (min-width: 40rem) {
+  .trade-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 34rem) {
+  .trade-spec-row { grid-template-columns: 1fr; gap: .3rem; }
+  .trade-table { font-size: .88rem; }
+}
