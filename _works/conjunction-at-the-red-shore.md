@@ -17,9 +17,9 @@ medium: "Acrylic on canvas"
 finish: "Gamblin Gamvar Matte varnish"
 inventory_id: "RGA-CRS-2026-01"
 
-image: /assets/images/robert_grantham_conjunction_red_shore_1.jpg
-thumb: /assets/images/robert_grantham_conjunction_red_shore_1-800.jpg
-og_image: "/assets/images/robert_grantham_conjunction_red_shore_1.jpg"
+image: /assets/images/Lumii_20260716_022855243(2)(1)(1)_copy_7200x6000 (1).jpg
+thumb: /assets/images/Lumii_20260716_022855243(2)(1)(1)_copy_7200x6000 (1).jpg
+og_image: "/assets/images/Lumii_20260716_022855243(2)(1)(1)_copy_7200x6000 (1).jpg"
 image_w: 1600
 image_h: 1600
 alt: "Conjunction at the Red Shore — abstract acrylic painting with circular bodies crossing warm red and yellow fields above a deep blue shore"
