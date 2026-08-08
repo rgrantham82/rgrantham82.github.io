@@ -28,6 +28,21 @@ instagram_username: robertgranthamart
 linkedin_username: robertgrantham82
 email: robertgrantham40@gmail.com
 
+# Trade & corporate sales
+# Single source of truth for the terms published on /trade.html. Change them
+# here rather than in the page body, so the page and any generated tearsheet
+# can never quietly disagree with each other.
+trade:
+  discount: 20              # percent off published retail, qualified professionals
+  volume_discount: 25       # percent off retail, placements of 5+ works
+  volume_threshold: 5
+  hold_days: 10             # business days, no charge, during client approval
+  approval_days: 14         # on-approval trial, Austin metro
+  deposit: 50               # percent deposit on commissions
+  terms: 'Net 30 against a signed purchase order for established firms'
+  resale_form: 'Texas Sales and Use Tax Resale Certificate (Form 01-339)'
+  contact_phone: '512-200-3563'
+
 # Jekyll Engine Settings
 markdown: kramdown
 highlighter: rouge
@@ -65,8 +80,11 @@ defaults:
     layout: work
     css: /assets/css/work.css
 
+# NOTE: `_data` was removed from `include`. Jekyll already reads it via
+# `data_dir`; forcing it into `include` also copied the raw YAML into _site,
+# publishing the source data alongside the rendered pages. `assets` does not
+# begin with `_` or `.`, so it is included by default and needs no entry here.
 include:
-- _data
 - assets
 
 exclude:
@@ -95,6 +113,16 @@ nav:
   cta:
     title: Contact
     url: /contact.html
+  # Secondary pages. These serve specific audiences rather than general
+  # visitors, and render in the footer — the same position Portraiture and
+  # Studio services already occupied when they were hardcoded in the layout.
+  secondary:
+  - title: Trade & Corporate
+    url: /trade.html
+  - title: Portraiture
+    url: /portraiture.html
+  - title: Studio services
+    url: /services.html
 
 plugins:
 - jekyll-feed
