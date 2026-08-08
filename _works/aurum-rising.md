@@ -18,7 +18,7 @@ inventory_id: "RGA-AR-2026-01"
 
 image: /assets/images/work-aurum-rising-900.jpg
 thumb: /assets/images/work-aurum-rising-900.jpg
-og_image: "/assets/images/work-aurum-rising.jpg"
+og_image: "/assets/images/work-aurum-rising-900.jpg"
 image_w: 1600
 image_h: 1600
 alt: "Aurum Rising — acrylic on canvas with a luminous gold seam against dark fields"
