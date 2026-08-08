@@ -16,8 +16,8 @@ medium: "Acrylic on canvas"
 finish: "Matte varnish"
 inventory_id: "RGA-AR-2026-01"
 
-image: /assets/images/work-aurum-rising.jpg
-thumb: /assets/images/work-aurum-rising-800.jpg
+image: /assets/images/work-aurum-rising-900.jpg
+thumb: /assets/images/work-aurum-rising-900.jpg
 og_image: "/assets/images/work-aurum-rising.jpg"
 image_w: 1600
 image_h: 1600
