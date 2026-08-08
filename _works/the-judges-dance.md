@@ -17,9 +17,9 @@ medium: "Acrylic on canvas"
 finish: "Liquitex matte varnish"
 inventory_id: "RGA-TJD-2026-01"
 
-image: /assets/images/work-the-judges-dance.jpg
-thumb: /assets/images/work-the-judges-dance-800.jpg
-og_image: "/assets/images/work-the-judges-dance.jpg"
+image: /assets/images/work-judges-dance.jpg
+thumb: /assets/images/work-judges-dance.jpg
+og_image: "/assets/images/work-judges-dance.jpg"
 image_w: 1600
 image_h: 1600
 alt: "The Judge's Dance — square abstract acrylic painting with concentric orange and gold rings on red and blue, a pale central orb, seven dark orbiting bodies including one split half-black and half-white, and a row of black silhouetted dancing figures along a dark arc at the base"
