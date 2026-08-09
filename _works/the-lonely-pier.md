@@ -8,9 +8,9 @@ section: "Selected Works"
 order: 45
 featured: true
 
-status: "Available"
-price: "$350"
-price_usd: 350
+status: "Sold"
+price: "$360"
+price_usd: 360
 size: "12×12×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Gamblin Gamvar Matte varnish"
