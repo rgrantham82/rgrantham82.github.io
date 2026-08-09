@@ -9,8 +9,8 @@ order: 1
 featured: true
 
 status: "Available"
-price: "$1,150"
-price_usd: 1150
+price: "$1,125"
+price_usd: 1125
 size: "24×30×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
