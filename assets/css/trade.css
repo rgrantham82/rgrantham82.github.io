@@ -4,8 +4,12 @@
 /* Scoped to .trade so nothing here reaches the rest of the site.
    Type, color, and links are inherited from the site theme on purpose. */
 .trade {
+  box-sizing: border-box;
   margin: 0 auto 4rem;
-  max-width: 46rem;
+  /* 46rem of readable measure + up to 2rem of gutter on each side */
+  max-width: 50rem;
+  padding-left: clamp(1.25rem, 5vw, 2rem);
+  padding-right: clamp(1.25rem, 5vw, 2rem);
   --trade-ink: #1a1a1a;
   --trade-bg: #faf9f6;
 }
