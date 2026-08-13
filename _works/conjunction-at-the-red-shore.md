@@ -7,8 +7,7 @@ year: 2026
 series: "Conjunctions"
 section: "Conjunctions"
 order: 3
-featured: false
-
+featured: true
 status: "Available"
 price: "$835"
 price_usd: 835
