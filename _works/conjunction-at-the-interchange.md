@@ -4,7 +4,7 @@ year: 2026
 series: Conjunctions
 status: Available
 featured: true
-dimensions: "12×12×1.5 in"
+size: "12×12×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
 inventory_id: RGA-CINTCHG-2026-01
