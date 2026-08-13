@@ -12,7 +12,7 @@ featured: true
 status: "Available"
 price: "$360"
 price_usd: 360
-size: "12×12 in"
+size: "12×12x1.5 in"
 medium: "Acrylic on canvas"
 finish: "Liquitex matte varnish"
 inventory_id: "RGA-TJD-2026-01"
@@ -26,7 +26,7 @@ alt: "The Judge's Dance — square abstract acrylic painting with concentric ora
 
 note: "Unique original. COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately."
 permalink: /portfolio/the-judges-dance/
-description: "The Judge's Dance — a 12×12 inch original acrylic painting from Robert Grantham's Conjunctions series, an abstract response to Cormac McCarthy's Blood Meridian. $350. Available."
+description: "The Judge's Dance — a 12×12 inch original acrylic painting from Robert Grantham's Conjunctions series, an abstract response to Cormac McCarthy's Blood Meridian. $360. Available."
 ---
 
 *The Judge's Dance* is an abstract response to the closing pages of Cormac McCarthy's *Blood Meridian*—not an illustration of them. There is no figure of the Judge here, only the gravity he exerts. The pale orb at the center holds the composition the way he holds a room: everything else is in orbit whether it consented or not.
