@@ -26,7 +26,7 @@ alt: "Magnolia Canticle, No. 3 — abstract acrylic painting with calligraphic s
 
 note: "Unique original. COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately."
 permalink: /portfolio/magnolia-canticle-no-3/
-description: "Magnolia Canticle, No. 3 — 16×20×1.5 acrylic on canvas by Robert Grantham. A layered, calligraphic abstraction rooted in resilience and hand-written presence. $625. Available."
+description: "Magnolia Canticle, No. 3 — 16×20×1.5 acrylic on canvas by Robert Grantham. A layered, calligraphic abstraction rooted in resilience and hand-written presence. $555. Available."
 ---
 
 Magnolia Canticle, No. 3 continues the series’ central idea: handwriting as structure rather than ornament. The composition is built through revision—layer on layer—until the final form reads like a resolved sentence.
