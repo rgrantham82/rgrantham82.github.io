@@ -10,8 +10,8 @@ order: 1
 featured: true
 
 status: "Available"
-price: "$290"
-price_usd: 290
+price: "$360"
+price_usd: 360
 size: "12×12 in"
 medium: "Acrylic on canvas"
 finish: "Liquitex matte varnish"
