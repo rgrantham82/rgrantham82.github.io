@@ -26,7 +26,7 @@ alt: "Conjunction with the Black Sun — abstract acrylic painting with a blue-r
 
 note: "Unique original. Revised studio state documented July 2026. COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately."
 permalink: /portfolio/conjunction-with-the-black-sun/
-description: "Conjunction with the Black Sun — a 20×24×1.5 inch original acrylic painting from Robert Grantham's Conjunctions series. $850. Available."
+description: "Conjunction with the Black Sun — a 20×24×1.5 inch original acrylic painting from Robert Grantham's Conjunctions series. $835. Available."
 ---
 
 *Conjunction with the Black Sun* organizes a dark field around two commanding circular bodies: a deep black-blue orb edged in cyan and a luminous blue body that acts as its visual counterweight. Orange-red forms, metallic points, and gold passages create a sense of orbit, heat, and pressure rather than a literal astronomical scene.
