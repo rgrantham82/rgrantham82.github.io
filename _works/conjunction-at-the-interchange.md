@@ -8,7 +8,7 @@ dimensions: "12×12×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
 inventory_id: RGA-CINTCHG-2026-01
-price: "$290"
+price: "$360"
 image: /assets/images/20260812_225004 (1) (1).jpg
 image_alt: "Conjunction at the Interchange — square abstract acrylic painting divided into four fields of black, red, oxblood, and blue, joined by a gold cross-shaped form resembling a highway interchange, with a large white-rimmed black orb on the red field, two red orbs burning inside gold coronas, and smaller dark bodies drifting through the other quadrants"
 tagline: "A stack interchange, seen from high enough up that the traffic becomes astronomy."
