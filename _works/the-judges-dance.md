@@ -9,7 +9,7 @@ section: "Conjunctions"
 order: 1
 featured: true
 
-status: "Available"
+status: "Sold"
 price: "$300"
 price_usd: 300
 size: "12×12x1.5 in"
