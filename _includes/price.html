@@ -1,0 +1,8 @@
+{%- assign work = include.work | default: page -%}
+{%- assign rung = site.data.pricing.ladder | where: "size", work.size | first -%}
+{%- assign p = work.price_override | default: rung.price -%}
+{%- if p -%}
+  {%- assign thousands = p | divided_by: 1000 -%}
+  {%- assign rest = p | modulo: 1000 | prepend: "00" | slice: -3, 3 -%}
+  ${% if thousands > 0 %}{{ thousands }},{{ rest }}{% else %}{{ p }}{% endif %}
+{%- else -%}Price on request{%- endif -%}
