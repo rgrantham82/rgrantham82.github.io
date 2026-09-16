@@ -1,0 +1,129 @@
+# _data/pricing.yml
+# Robert Grantham Art: the price ladder
+#
+# One artwork price per work, everywhere: this website, Saatchi Art,
+# exhibitions, and direct sales. Saatchi displays all-in prices: the artwork
+# price below plus the shipping Saatchi calculates for the size. Prices never go down. Raise them after about five sales
+# at a price point, or about 10% a year, whichever comes first.
+#
+# Contact: robertgrantham40@gmail.com, 512-200-3563,
+#          rgrantham82.github.io, Instagram @robertgranthamart
+
+effective: 2026-09-16
+previous_ladder:
+  name: base tier
+  retired: 2026-09-16
+  note: >-
+    The exhibition tier was scheduled for 2026-12-01 and took effect early
+    when Saatchi listings moved to it on 2026-09-16.
+
+currency: USD
+depth_in: 1.5          # every rung assumes 1.5 in cradled or stretched depth
+includes: >-
+  Certificate of authenticity, Austin delivery and hanging. Shipping quoted
+  separately. Three-payment plan available on works over $500.
+sales_tax:
+  austin_combined_rate: 0.0825   # 6.25% state, 1% city, 1% Capital Metro; checked 2026-09-16
+  note: Tax is added to the listed price, not included in it.
+
+ladder:
+  - size: "8×10"
+    width_in: 8
+    height_in: 10
+    sq_in: 80
+    price: 250
+    rate_per_sq_in: 3.125
+  - size: "12×12"
+    width_in: 12
+    height_in: 12
+    sq_in: 144
+    price: 385
+    rate_per_sq_in: 2.674
+  - size: "16×20"
+    width_in: 16
+    height_in: 20
+    sq_in: 320
+    price: 700
+    rate_per_sq_in: 2.188
+  - size: "20×24"
+    width_in: 20
+    height_in: 24
+    sq_in: 480
+    price: 1000
+    rate_per_sq_in: 2.083
+    note: >-
+      Raised from $950 on 2026-09-16 because both 20×24s were already
+      published at $1,000.
+  - size: "24×30"
+    width_in: 24
+    height_in: 30
+    sq_in: 720
+    price: 1275
+    rate_per_sq_in: 1.771
+  - size: "30×40"
+    width_in: 30
+    height_in: 40
+    sq_in: 1200
+    price: 1700
+    rate_per_sq_in: 1.417
+    derived_by: new_size_rule
+    math: >-
+      24×30 rate 1275 / 720 = 1.771. 1200 - 720 = 480 extra sq in, which is
+      two full 200 sq in steps, so 20% off: 1.417 × 1200 = 1700.00.
+
+new_size_rule: >-
+  For a size not on the ladder, multiply its square inches by the rate of the
+  nearest listed size, take 10% off that rate for every full 200 square inches
+  of difference, then round up: to the nearest $10 below $500, to the nearest
+  $25 at $500 and above.
+
+exceptions: []   # Red Shore's former $1,400 Saatchi figure included shipping; its artwork price is $1,000.
+
+venues:
+  saatchi_art:
+    commission: 0.40          # of the artwork price, excluding shipping
+    pricing: all-in           # listed price = artwork price + Saatchi-calculated shipping
+    packaging_paid_by: artist
+    listed_2026_09_16:        # as shown on saatchiart.com/robertgrantham
+      - {size: "12×12", artwork_price: 385,  listed: 425,  shipping: 40}
+      - {size: "16×20", artwork_price: 700,  listed: 865,  shipping: 165}
+      - {size: "20×24", artwork_price: 1000, listed: 1205, shipping: 205}
+      - {size: "24×30", artwork_price: null, listed: 1820, shipping: null, note: "Aurum Rising; ladder price is 1275, which would mean 545 shipping; confirm the artwork price entered"}
+    note: >-
+      Promotional discounts come off the listed price before Saatchi's split,
+      so a promotion lowers the artist's net as well as the buyer's price.
+  nwhumc:
+    name: Northwest Hills United Methodist Church
+    commission: 0.20
+    applies_to: pre-tax price
+    get_in_writing: true
+
+exhibitions:
+  nwhumc_2026:
+    title: Northwest Hills UMC group exhibition
+    month: 2026-12
+    wall_ft: "13 to 15"
+    works:
+      - {order: 1,  title: "30×40, title to come",            inventory_id: "",                    size: "30×40", price: 1700}
+      - {order: 2,  title: "Conjunction at the Interchange",   inventory_id: RGA-CINTCHG-2026-01,   size: "12×12", price: 385}
+      - {order: 3,  title: "24×30, title to come",             inventory_id: "",                    size: "24×30", price: 1275}
+      - {order: 4,  title: "Aurum Rising",                     inventory_id: RGA-AR-2026-01,        size: "24×30", price: 1275}
+      - {order: 5,  title: "Conjunction with the Black Sun",   inventory_id: RGA-CWBS-2026-01,      size: "20×24", price: 1000}
+      - {order: 6,  title: "Conjunction at the Red Shore",     inventory_id: RGA-CRS-2026-01,       size: "20×24", price: 1000}
+      - {order: 7,  title: "Magnolia Canticle, No. 3",         inventory_id: RGA-MC3-2026-01,       size: "16×20", price: 700}
+      - {order: 8,  title: "Magnolia Canticle, No. 4",         inventory_id: RGA-MC4-2026-01,       size: "16×20", price: 700}
+      - {order: 9,  title: "Conjunction at the Golden Passage", inventory_id: RGA-CAGP-2026-01,     size: "16×20", price: 700}
+      - {order: 10, title: "Untitled Conjunctions, No. 2",     inventory_id: RGA-UC2-2026,          size: "8×10",  price: 250}
+      - {order: 11, title: "8×10, title to come",              inventory_id: "",                    size: "8×10",  price: 250}
+      - {order: 12, title: "8×10, title to come",              inventory_id: "",                    size: "8×10",  price: 250}
+    if_all_sell:
+      gross: 9485
+      venue_commission: 1897
+      artist_net: 7588
+    alternates_if_wall_is_15_ft:
+      - {title: "Blue Conjunction under Stress", size: "12×12", price: 385}
+      - {title: "Red Conjunction under Stress",  size: "12×12", price: 385}
+    with_alternates:
+      gross: 10255
+      venue_commission: 2051
+      artist_net: 8204
