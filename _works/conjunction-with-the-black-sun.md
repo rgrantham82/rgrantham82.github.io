@@ -10,8 +10,8 @@ order: 2
 featured: false
 
 status: "Available"
-price: "$1,000"
-price_usd: 1000
+price: "$1,200"
+price_usd: 1200
 size: "20×24×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Gamblin Gamvar Matte varnish"
