@@ -50,6 +50,27 @@ a:hover { text-decoration: underline; }
   }
 }
 
+@media (max-width: 480px) {
+  .brand-tagline { display: none; }
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.site-tagline {
+  font-size: 1.05rem;
+  font-style: italic;
+  opacity: 0.85;
+  margin: 0.25rem 0 0;
+}
 .wrapper{
   max-width: var(--max);
   margin: 0 auto;
