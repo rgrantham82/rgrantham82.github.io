@@ -10,8 +10,8 @@ order: 6
 featured: true
 
 status: "Available"
-price: "$800"
-price_usd: 800
+price: "$600"
+price_usd: 600
 size: "16×20×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
