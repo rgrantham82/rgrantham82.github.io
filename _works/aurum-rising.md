@@ -8,8 +8,8 @@ section: "Featured Originals"
 order: 1
 featured: false 
 status: "Available"
-price: "$1,275"
-price_usd: 1275
+price: "$1,000"
+price_usd: 1000
 size: "24×30×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
