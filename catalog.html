@@ -1,0 +1,117 @@
+---
+layout: default
+title: Catalog
+description: "Selected Works 2025–2026, the Robert Grantham Art catalog: eighteen plates with dimensions, medium, inventory numbers, and current availability. Free PDF."
+permalink: /catalog.html
+css: /assets/css/catalog.css
+og_image: /assets/images/catalog-cover.jpg
+og_image_alt: "Cover of the Robert Grantham Art catalog, Selected Works 2025–2026"
+---
+{%- assign cat = site.data.catalog -%}
+
+<section class="wrapper catalog-hero">
+  <div class="catalog-hero__copy">
+    <span class="tag">Studio catalog · {{ cat.edition }}</span>
+    <h1>Selected Works, 2025–2026</h1>
+    <p class="lede">
+      {{ cat.plates }} paintings, photographed and documented: dimensions, medium, finish,
+      inventory number, and whether the work is still available. This is the record the studio
+      works from, not a promotional sampler.
+    </p>
+
+    <div class="catalog-actions">
+      <a class="btn" href="{{ cat.pdf | relative_url }}" download>Download the catalog · PDF, {{ cat.pdf_size }}</a>
+      <a class="btn ghost" href="{{ '/portfolio/#available-work' | relative_url }}">View available work</a>
+    </div>
+
+    <p class="catalog-meta">
+      {{ cat.pages }} pages · {{ cat.plates }} plates · compiled {{ cat.edition }}.
+      Paintings sell between editions, so the portfolio pages stay the live record of what is
+      still on the wall.
+    </p>
+  </div>
+
+  <figure class="catalog-cover">
+    <a href="{{ cat.pdf | relative_url }}" download aria-label="Download the catalog as a PDF">
+      <img src="{{ cat.cover | relative_url }}"
+           alt="Catalog cover: Robert Grantham Art, Selected Works 2025–2026"
+           width="695" height="900" decoding="async">
+    </a>
+    <figcaption>{{ cat.pdf_label }}</figcaption>
+  </figure>
+</section>
+
+<section class="wrapper catalog-section">
+  <h2>What the catalog contains</h2>
+  <div class="grid three">
+    <article class="card">
+      <h3>Every plate documented</h3>
+      <p>Title, year, medium, finish, dimensions in inches and centimeters, orientation, inventory number, and availability, consistent from the plate to the closing checklist.</p>
+    </article>
+    <article class="card">
+      <h3>Four sections</h3>
+      <p>The work grouped as it is made: two ongoing series, the paintings that sit outside them, and the lettering the practice grew from.</p>
+    </article>
+    <article class="card">
+      <h3>Collecting terms</h3>
+      <p>One price per size, the same at every venue, plus commissions, trade and corporate inquiries, and how the paintings are finished and cared for.</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrapper catalog-section">
+  <div class="section-heading">
+    <div>
+      <h2>Contents</h2>
+      <p class="muted">Plate numbers follow the printed catalog. Titles link to a full artwork record where one exists.</p>
+    </div>
+    <a class="text-link" href="{{ cat.pdf | relative_url }}" download>Download the PDF →</a>
+  </div>
+
+  {% for section in cat.sections %}
+    <section class="catalog-group" aria-labelledby="section-{{ section.name | slugify }}">
+      <header class="catalog-group__head">
+        <h3 id="section-{{ section.name | slugify }}">{{ section.name }}</h3>
+        <p class="catalog-group__blurb">{{ section.blurb }}</p>
+        <p class="catalog-group__range">Plates {{ section.plates }}</p>
+      </header>
+
+      <ul class="plates">
+        {% for work in section.works %}
+          <li class="plate">
+            <span class="plate__no" aria-hidden="true">{{ work.plate }}</span>
+            <div class="plate__body">
+              <p class="plate__title">
+                <span class="sr-only">Plate {{ work.plate }}:</span>
+                {% if work.url %}<a href="{{ work.url | relative_url }}">{{ work.title }}</a>{% else %}{{ work.title }}{% endif %}{% if work.year %}, {{ work.year }}{% endif %}
+              </p>
+              <p class="plate__meta">
+                {%- if work.medium %}{{ work.medium }}{% endif -%}
+                {%- if work.medium and work.size %} · {% endif -%}
+                {%- if work.size %}{{ work.size }}{% if work.orientation %}, {{ work.orientation }}{% endif %}{% endif -%}
+                {%- if work.inventory_id %} · {{ work.inventory_id }}{% endif -%}
+              </p>
+            </div>
+            <span class="plate__status plate__status--{{ work.status | slugify }}">{{ work.status }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</section>
+
+<section class="wrapper catalog-section">
+  <div class="grid two">
+    <article class="card">
+      <h2>Ask for a printed copy</h2>
+      <p>A small run is printed for exhibitions. If you would rather hold the catalog than scroll it, ask and one will be set aside for you at the next show, or mailed.</p>
+      <a class="btn" href="mailto:{{ site.email }}?subject=Printed%20catalog%20request&amp;body=Hello%20Robert,%0A%0APlease%20set%20aside%20a%20printed%20catalog%20for%20me.%0A%0AName:%0AMailing%20address%20(optional):%0A">Request a printed copy</a>
+    </article>
+
+    <article class="card">
+      <h2>Ask about a specific work</h2>
+      <p>Quote the plate number or the inventory code and the answer comes back faster. Detail photographs, side views, and scaled room mockups are available for any work still held by the studio.</p>
+      <a class="btn ghost" href="mailto:{{ site.email }}?subject=Catalog%20inquiry">Email an inquiry</a>
+    </article>
+  </div>
+</section>
