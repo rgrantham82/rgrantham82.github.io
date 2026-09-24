@@ -1,0 +1,168 @@
+# _data/catalog.yml
+# Source of truth for /catalog.html. The PDF in assets/docs is generated from
+# the same record; update both together when a work sells or a new plate is added.
+edition: "September 2026"
+pdf: /assets/docs/Robert_Grantham_Art_Catalog_2025-2026.pdf
+pdf_size: "3 MB"
+pdf_label: "Robert_Grantham_Art_Catalog_2025-2026.pdf"
+cover: /assets/images/catalog-cover.jpg
+plates: 18
+pages: 15
+sections:
+  - name: "Conjunctions"
+    blurb: "Acrylic and mixed-media abstractions organized around orbs, haloes, and alignments."
+    plates: "1–7"
+    works:
+      - plate: 1
+        title: "Aurum Rising"
+        year: 2026
+        size: "24 × 30 × 1.5 in"
+        orientation: "portrait"
+        medium: "Acrylic on canvas"
+        inventory_id: "RGA-AR-2026-01"
+        status: "Available"
+        url: /portfolio/aurum-rising/
+      - plate: 2
+        title: "Conjunction at the Red Shore"
+        year: 2026
+        size: "20 × 24 × 1.5 in"
+        orientation: "landscape"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-CRS-2026-01"
+        status: "Available"
+        url: /portfolio/conjunction-at-the-red-shore/
+      - plate: 3
+        title: "Conjunction of the Black Sun"
+        year: 2026
+        size: "20 × 24 × 1.5 in"
+        orientation: "landscape"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-CBS-2026-01"
+        status: "Available"
+        url: /portfolio/conjunction-with-the-black-sun/
+      - plate: 4
+        title: "The Judge's Dance"
+        year: 2026
+        size: "12 × 12 in"
+        medium: "Acrylic on canvas, Liquitex matte varnish"
+        inventory_id: "RGA-TJD-2026-01"
+        status: "Private collection"
+        url: /portfolio/the-judges-dance/
+      - plate: 5
+        title: "Conjunction at the Interchange"
+        year: 2026
+        size: "12 × 12 × 1.5 in"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-CINTCHG-2026-01"
+        status: "Available"
+        url: /portfolio/conjunction-at-the-interchange/
+      - plate: 6
+        title: "Blue Conjunction under Stress"
+        year: 2026
+        size: "12 × 12 × 1.5 in"
+        medium: "Acrylic on canvas"
+        status: "Private collection"
+      - plate: 7
+        title: "Red Conjunction under Stress"
+        year: 2026
+        size: "12 × 12 × 1.5 in"
+        medium: "Acrylic on canvas"
+        status: "Available"
+
+  - name: "Magnolia Canticle"
+    blurb: "Hand-lettered calligraphy paired with painted magnolia and landscape imagery."
+    plates: "8–10"
+    works:
+      - plate: 8
+        title: "Magnolia Canticle, No. 3"
+        year: 2026
+        size: "16 × 20 × 1.5 in"
+        orientation: "portrait"
+        medium: "Acrylic on canvas, Gamblin Gamvar matte varnish"
+        inventory_id: "RGA-MC3-2026-01"
+        status: "Available"
+        url: /portfolio/magnolia-canticle-no-3/
+      - plate: 9
+        title: "Magnolia Canticle, No. 4"
+        year: 2026
+        size: "16 × 20 × 1.5 in"
+        orientation: "portrait"
+        medium: "Acrylic on jute canvas, matte varnish"
+        inventory_id: "RGA-MC4-2026-01"
+        status: "Available"
+        url: /portfolio/magnolia-canticle-no-4/
+      - plate: 10
+        title: "Magnolia Canticle, No. 5"
+        year: 2026
+        size: "8 × 10 × 0.625 in"
+        orientation: "landscape"
+        medium: "Acrylic on canvas, Gamblin Gamvar matte varnish"
+        inventory_id: "RGA-MC5-2026-01"
+        status: "Private collection"
+
+  - name: "Independent Works"
+    blurb: "Work outside the named series: an icon, a whale, and square horizon paintings."
+    plates: "11–16"
+    works:
+      - plate: 11
+        title: "Virgin Mary"
+        year: 2026
+        size: "12 × 12 × 1.5 in"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-VM-2026-01"
+        status: "Private collection"
+      - plate: 12
+        title: "Neon Cetacean"
+        year: 2026
+        size: "16 × 20 × 0.625 in"
+        orientation: "landscape"
+        medium: "Acrylic on canvas, Liquitex matte varnish"
+        inventory_id: "RGA-NC-2026-01"
+        status: "Private collection"
+        url: /portfolio/neon-cetacean/
+      - plate: 13
+        title: "The Lonely Pier"
+        year: 2026
+        size: "12 × 12 × 1.5 in"
+        medium: "Acrylic on canvas, Gamblin Gamvar matte varnish"
+        inventory_id: "RGA-TLP-2026-01"
+        status: "Private collection"
+        url: /portfolio/the-lonely-pier/
+      - plate: 14
+        title: "Land ho!"
+        year: 2026
+        size: "12 × 12 × 1.5 in"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-LH-2026-01"
+        status: "Private collection"
+      - plate: 15
+        title: "Heat at Dusk"
+        year: 2026
+        size: "12 × 12 × 0.625 in"
+        medium: "Acrylic on canvas, Liquitex matte varnish"
+        inventory_id: "RGA-HAD-2026-01"
+        status: "Private collection"
+      - plate: 16
+        title: "Enjoying a Good Read"
+        year: 2026
+        size: "8 × 10 × 0.625 in"
+        orientation: "portrait"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-EAGR-2026-01"
+        status: "Private collection"
+
+  - name: "Lettering & Works on Paper"
+    blurb: "Where the practice began: blackletter, wildstyle, and calligraffiti on paper."
+    plates: "17–18"
+    works:
+      - plate: 17
+        title: "In Love"
+        year: 2025
+        size: "9 × 12 in"
+        medium: "Acrylic marker on paper"
+        status: "Private collection"
+      - plate: 18
+        title: "Have Hope"
+        year: 2025
+        status: "Private collection"
+
