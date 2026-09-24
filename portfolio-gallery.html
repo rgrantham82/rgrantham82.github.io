@@ -1,0 +1,117 @@
+---
+layout: default
+---
+{% assign available_works = site.works | where: 'status', 'Available' %}
+{% assign sold_works = site.works | where: 'status', 'Sold' %}
+
+<section class="gallery-hero">
+  <div class="wrapper gallery-hero__inner">
+    <div class="gallery-hero__copy">
+      <span class="tag">{{ page.kicker | default: 'Curated portfolio' }}</span>
+      <h1>{{ page.heading | default: page.title }}</h1>
+      {% if page.intro %}
+        <p class="lede muted">{{ page.intro }}</p>
+      {% endif %}
+      <div class="gallery-actions">
+        <a class="btn" href="#available-work">View available work</a>
+        <a class="btn ghost" href="{{ '/catalog.html' | relative_url }}">Read the catalog</a>
+        <a class="btn ghost" href="{{ '/buying.html' | relative_url }}">How to buy original art</a>
+        <a class="btn ghost" href="{{ '/commissions.html' | relative_url }}">Commission a work</a>
+      </div>
+    </div>
+
+    <dl class="gallery-summary" aria-label="Portfolio summary">
+      <div>
+        <dt>Available</dt>
+        <dd>{{ available_works.size }}</dd>
+      </div>
+      <div>
+        <dt>Sold</dt>
+        <dd>{{ sold_works.size }}</dd>
+      </div>
+      <div>
+        <dt>Works shown</dt>
+        <dd>{{ site.works.size }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="collector-assurances" aria-label="Collector information">
+  <div class="wrapper collector-assurances__grid">
+    <div>
+      <strong>Documented originals</strong>
+      <span>Signed works include an inventory record and certificate of authenticity unless noted.</span>
+    </div>
+    <div>
+      <strong>See the true scale</strong>
+      <span>Dimensions and depth are listed, and room-view mockups can be prepared for serious inquiries.</span>
+    </div>
+    <div>
+      <strong>Clear fulfillment</strong>
+      <span>Austin pickup is available. Delivery and insured shipping are quoted before payment.</span>
+    </div>
+  </div>
+</section>
+
+{% if content and content != blank %}
+  <div class="wrapper gallery-introduction">
+    {{ content }}
+  </div>
+{% endif %}
+
+<div id="available-work">
+  {% include portfolio-gallery.html %}
+</div>
+
+<script>
+  (() => {
+    const gallery = document.querySelector('[data-portfolio-gallery]');
+    if (!gallery) return;
+
+    const buttons = Array.from(gallery.querySelectorAll('[data-gallery-filter]'));
+    const cards = Array.from(gallery.querySelectorAll('[data-gallery-card]'));
+    const count = gallery.querySelector('[data-gallery-count]');
+    const empty = gallery.querySelector('[data-gallery-empty]');
+
+    const matches = (card, filter) => {
+      if (filter === 'all') return true;
+      return card.dataset.status === filter || card.dataset.series === filter;
+    };
+
+    const applyFilter = (filter, updateHash = true) => {
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const show = matches(card, filter);
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+
+      buttons.forEach((button) => {
+        const active = button.dataset.galleryFilter === filter;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+
+      if (count) {
+        count.textContent = `${visible} ${visible === 1 ? 'work' : 'works'} shown`;
+      }
+      if (empty) empty.hidden = visible !== 0;
+
+      if (updateHash && window.history && window.history.replaceState) {
+        const url = new URL(window.location.href);
+        url.hash = filter === 'all' ? '' : filter;
+        window.history.replaceState(null, '', url);
+      }
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => applyFilter(button.dataset.galleryFilter));
+    });
+
+    const requested = window.location.hash.replace('#', '');
+    const valid = buttons.some((button) => button.dataset.galleryFilter === requested);
+    applyFilter(valid ? requested : 'all', false);
+  })();
+</script>

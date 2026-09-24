@@ -1,0 +1,218 @@
+/* assets/css/catalog.css
+   Page styles for /catalog.html. Components shared with the rest of the site
+   (.wrapper, .tag, .btn, .card, .grid, .badge) live in style.css; only the
+   catalog-specific pieces are defined here.
+
+   .section-heading and .text-link are duplicated from home.css on purpose:
+   home.css is not loaded on this page, and copying twelve lines is cheaper
+   than pulling a whole page stylesheet in for two selectors.
+*/
+
+.catalog-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+.catalog-hero h1 {
+  max-width: 14ch;
+  margin-top: 1rem;
+  line-height: 1.02;
+}
+
+.catalog-hero .lede {
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
+.catalog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+
+.catalog-meta {
+  max-width: 62ch;
+  margin-top: 1.1rem;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.catalog-cover {
+  margin: 0;
+}
+
+.catalog-cover img {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
+.catalog-cover figcaption {
+  margin-top: .7rem;
+  font-size: 12px;
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.catalog-section {
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.catalog-section > h2 {
+  margin-bottom: 1rem;
+}
+
+.catalog-section .card h3 {
+  margin-top: 0;
+}
+
+.catalog-section .card p:last-child {
+  margin-bottom: 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin: 0 0 .35rem;
+}
+
+.section-heading p {
+  margin: 0;
+  max-width: 58ch;
+}
+
+.text-link {
+  font-weight: 650;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+/* One section of the catalog: Conjunctions, Magnolia Canticle, and so on. */
+.catalog-group + .catalog-group {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.catalog-group__head {
+  display: grid;
+  gap: .3rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.catalog-group__head h3 {
+  margin: 0;
+  font-size: clamp(20px, 2.2vw, 26px);
+}
+
+.catalog-group__blurb {
+  margin: 0;
+  max-width: 68ch;
+}
+
+.catalog-group__range {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--muted);
+}
+
+.plates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plate {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: .75rem 1rem;
+  padding: .95rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.plate__no {
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  color: var(--muted);
+}
+
+.plate__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 650;
+  color: var(--fg);
+}
+
+.plate__title a {
+  border-bottom: 1px solid var(--border);
+}
+
+.plate__meta {
+  margin: .25rem 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.plate__status {
+  justify-self: end;
+  padding: 5px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.plate__status--available {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--fg);
+}
+
+.plate__status--private-collection {
+  background: var(--card);
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .catalog-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-cover {
+    max-width: 22rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .plate {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .plate__status {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .catalog-actions .btn,
+  .catalog-section .card .btn {
+    width: 100%;
+  }
+}
