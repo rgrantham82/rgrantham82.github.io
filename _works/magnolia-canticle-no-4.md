@@ -10,8 +10,8 @@ order: 5
 featured: false
 
 status: "Available"
-price: "$450"
-price_usd: 450
+price: "$550"
+price_usd: 550
 size: "16×20×1.5 in"
 medium: "Acrylic on acrylic-primed jute canvas"
 finish: "Gamblin Gamvar Matte varnish"
