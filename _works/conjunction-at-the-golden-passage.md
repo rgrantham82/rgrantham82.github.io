@@ -10,8 +10,8 @@ order: 4
 featured: false
 
 status: "Available"
-price: "$550"
-price_usd: 550
+price: "$800"
+price_usd: 800
 size: "16×20×1.5 in"
 medium: "Acrylic on MiMiK recycled-PET canvas"
 finish: "Gamblin Gamvar Matte varnish"
