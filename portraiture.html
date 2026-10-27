@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Portraiture
-description: "Portrait commissions by Robert Grantham — acrylic portraits, including memorial work, with likeness, structure, and painterly presence."
+description: "Portrait commissions by Robert Grantham — acrylic portraits, including memorial work, built dark to light in the Byzantine manner."
 css: /assets/css/portraiture.css
 permalink: /portraiture.html
 image: /assets/images/self-portrait-commission-demo.webp
@@ -109,6 +109,33 @@ og_image: /assets/images/self-portrait-commission-demo.webp
   }
   .commission-placard dd {
     margin: 0;
+    color: var(--fg);
+  }
+
+  /* Byzantine method: four stages of one portrait, in sequence */
+  .stage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0 2.5rem;
+  }
+  .stage-figure {
+    margin: 0;
+  }
+  .stage-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+  }
+  .stage-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .stage-figure figcaption strong {
+    display: block;
     color: var(--fg);
   }
 
@@ -227,6 +254,65 @@ og_image: /assets/images/self-portrait-commission-demo.webp
           </dl>
         </figcaption>
       </figure>
+    </div>
+
+    <div class="content-block">
+      <h2>The Byzantine Method</h2>
+      <p>
+        My current practice is to paint portraits in the Byzantine manner, the way icon painters have built a face for centuries: from dark to light, in thin layers, with the form emerging through light rather than being carved out of shadow. The face begins as a deliberately dark underpainting. Lighter flesh tones are laid over it in successive layers, each lighter than the one before, and the final highlights go on last. The four stages below follow one portrait from underpainting to finish.
+      </p>
+
+      <div class="stage-grid">
+        <figure class="stage-figure">
+          <img src="{{ '/assets/images/byzantine-stage-1-underpainting.webp' | relative_url }}"
+               alt="Stage 1: profile portrait of a woman holding a pocket watch, with the face and hair laid in as a flat, dark olive-brown underpainting on a tooled gold ground."
+               loading="lazy" decoding="async"
+               onerror="this.parentElement.style.display='none';">
+          <figcaption>
+            <strong>1. Dark underpainting</strong>
+            The face and hair are laid in as a flat, shadowed base, with the drawing already set.
+          </figcaption>
+        </figure>
+
+        <figure class="stage-figure">
+          <img src="{{ '/assets/images/byzantine-stage-2-first-flesh-tones.webp' | relative_url }}"
+               alt="Stage 2: the same portrait with warmer, lighter flesh tones brought up over the dark base, and the structure of the face beginning to show."
+               loading="lazy" decoding="async"
+               onerror="this.parentElement.style.display='none';">
+          <figcaption>
+            <strong>2. First flesh tones</strong>
+            Warmer, lighter color comes up over the dark base, and the structure begins to show.
+          </figcaption>
+        </figure>
+
+        <figure class="stage-figure">
+          <img src="{{ '/assets/images/byzantine-stage-3-lighter-layers.webp' | relative_url }}"
+               alt="Stage 3: the same portrait with lighter, rosier layers modeling the cheek, brow, lips, and hand, and soft brown lights in the hair."
+               loading="lazy" decoding="async"
+               onerror="this.parentElement.style.display='none';">
+          <figcaption>
+            <strong>3. Lighter layers</strong>
+            Rosier tones and softer transitions model the cheek, brow, lips, and hand.
+          </figcaption>
+        </figure>
+
+        <figure class="stage-figure">
+          <img src="{{ '/assets/images/byzantine-stage-4-final-highlights.webp' | relative_url }}"
+               alt="Stage 4: the finished portrait, with detailed curls, a gold hoop earring, gold line work on the red robe, and a pocket watch with a legible face."
+               loading="lazy" decoding="async"
+               onerror="this.parentElement.style.display='none';">
+          <figcaption>
+            <strong>4. Final highlights and details</strong>
+            The hair, earring, robe trim, and watch are finished with fine highlights and gold line work.
+          </figcaption>
+        </figure>
+      </div>
+      <p>
+        The tradition worked in egg tempera on gessoed panel. I work in acrylic, and I will not pretend the two are the same. What carries over is the logic: translucent layers, a face that seems lit from within rather than from the side, and no fussing over detail until the structure underneath is sound.
+      </p>
+      <p>
+        For a client, that means two practical things. A portrait built in layers cannot be rushed, which is why I ask for the real deadline up front. And the layering is where the depth comes from: the dark underpainting gives the face its weight, and the lights placed over it give it life.
+      </p>
     </div>
 
     <div class="content-block">
