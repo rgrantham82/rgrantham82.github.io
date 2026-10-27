@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Portraiture
-description: "Portrait commissions by Robert Grantham — acrylic portraits with likeness, structure, and painterly presence."
+description: "Portrait commissions by Robert Grantham — acrylic portraits, including memorial work, with likeness, structure, and painterly presence."
 css: /assets/css/portraiture.css
 permalink: /portraiture.html
 image: /assets/images/self-portrait-commission-demo.webp
@@ -73,7 +73,7 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     margin-bottom: 1.25rem;
     color: var(--muted);
   }
-  
+
   .philosophical-callout {
     border-left: 4px solid var(--fg);
     padding-left: 1.5rem;
@@ -83,6 +83,33 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     color: var(--fg);
     font-weight: 500;
     line-height: 1.5;
+  }
+
+  /* Commissioned work: image sits on top of a catalogue placard */
+  .commission-figure {
+    margin: 2rem 0 0;
+  }
+  .commission-figure .portrait-image-wrapper {
+    margin-bottom: 0;
+  }
+  .commission-placard {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.4rem 1.5rem;
+    margin: 0;
+    padding: 1.25rem 1.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .commission-placard dt {
+    color: var(--muted);
+  }
+  .commission-placard dd {
+    margin: 0;
+    color: var(--fg);
   }
 
   .requirements-grid {
@@ -131,7 +158,7 @@ og_image: /assets/images/self-portrait-commission-demo.webp
 </section>
 
 <section class="wrapper portrait-split">
-  
+
   <aside class="portrait-sidebar">
     <div class="portrait-image-wrapper">
       <img src="{{ '/assets/images/self-portrait-commission-demo.webp' | relative_url }}"
@@ -146,11 +173,11 @@ og_image: /assets/images/self-portrait-commission-demo.webp
   </aside>
 
   <main class="portrait-main">
-    
+
     <div class="content-block">
       <h2>What Clients Can Expect</h2>
       <p>
-        I care about the bone structure, the asymmetries, the value relationships, and the small, deliberate decisions that make a human face read as a particular person rather than a generic template. 
+        I care about the bone structure, the asymmetries, the value relationships, and the small, deliberate decisions that make a human face read as a particular person rather than a generic template.
       </p>
       <p>
         In plain English: the eyes need to hold, the head needs to feel built rather than pasted together, and the painting needs to look alive from ten feet across the room and from ten inches away.
@@ -159,16 +186,53 @@ og_image: /assets/images/self-portrait-commission-demo.webp
       <div class="philosophical-callout">
         A good portrait should not just say, "Yes, that looks like them." It should say, "There they are."
       </div>
-      
+
       <p>
         Whether you are commissioning a self-portrait, a memorial piece, or a visual anchor for a professional space, I deliver work that feels personal without ever collapsing into cheap sentimentality.
       </p>
     </div>
 
     <div class="content-block">
+      <h2>First Commission</h2>
+      <p>
+        My first commissioned portrait is a memorial: a woman in a red suit and gold hoop earrings, painted against a vermilion ground with a soft golden light gathering behind her head. The color carries the occasion, warm and steady and a little ceremonial, so the face can stay a face rather than becoming a monument.
+      </p>
+      <p>
+        It is acrylic on canvas, sealed with Liquitex matte varnish, which protects the paint and removes the glare. The portrait reads the same from the doorway as it does from the chair beneath it.
+      </p>
+
+      <figure class="commission-figure">
+        <div class="portrait-image-wrapper">
+          <img src="{{ '/assets/images/in-loving-memory-velma-howard.webp' | relative_url }}"
+               alt="Acrylic portrait of a smiling woman with short dark hair, gold hoop earrings, and a red jacket trimmed in gold, set against a warm vermilion ground with a soft golden glow behind her."
+               loading="lazy" decoding="async"
+               onerror="this.parentElement.style.display='none';">
+        </div>
+        <figcaption>
+          <dl class="commission-placard">
+            <dt>Title</dt>
+            <dd><em>In Loving Memory of Velma Howard</em></dd>
+            <dt>Catalogue no.</dt>
+            <dd>RGA-ILMVH-2026-01</dd>
+            <dt>Medium</dt>
+            <dd>Acrylic on canvas</dd>
+            <dt>Finish</dt>
+            <dd>Liquitex matte varnish</dd>
+            <dt>Year</dt>
+            <dd>2026</dd>
+            <!-- Add dimensions when ready, e.g.:
+            <dt>Dimensions</dt>
+            <dd>16 × 20 in</dd>
+            -->
+          </dl>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="content-block">
       <h2>The Rules of Engagement</h2>
       <p>To ensure the final piece lives up to both of our expectations, I require a few things straight out of the gate.</p>
-      
+
       <div class="requirements-grid mt-6">
         <div class="req-card">
           <h3>Reference Photos</h3>
