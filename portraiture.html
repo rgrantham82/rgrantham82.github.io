@@ -14,6 +14,7 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     border-bottom: 1px solid var(--border);
     margin-bottom: 4rem;
   }
+
   .portrait-title {
     font-size: clamp(3rem, 6vw, 4.5rem);
     line-height: 1.1;
@@ -21,19 +22,29 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     margin-bottom: 1.5rem;
     font-weight: 700;
   }
+
   .portrait-split {
     display: flex;
     flex-direction: column;
     gap: 4rem;
     margin-bottom: 6rem;
   }
+
   @media (min-width: 860px) {
     .portrait-split {
       flex-direction: row;
       align-items: flex-start;
     }
-    .portrait-sidebar { flex: 1; position: sticky; top: 2rem; }
-    .portrait-main { flex: 1.5; }
+
+    .portrait-sidebar {
+      flex: 1;
+      position: sticky;
+      top: 2rem;
+    }
+
+    .portrait-main {
+      flex: 1.5;
+    }
   }
 
   .portrait-image-wrapper {
@@ -42,12 +53,14 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     padding: 1rem;
     margin-bottom: 1.5rem;
   }
+
   .portrait-image-wrapper img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
   }
+
   .portrait-caption {
     font-size: 0.95rem;
     color: var(--muted);
@@ -60,6 +73,7 @@ og_image: /assets/images/self-portrait-commission-demo.webp
   .content-block {
     margin-bottom: 4rem;
   }
+
   .content-block h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -67,6 +81,7 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.5rem;
   }
+
   .content-block p {
     font-size: 1.1rem;
     line-height: 1.7;
@@ -89,9 +104,11 @@ og_image: /assets/images/self-portrait-commission-demo.webp
   .commission-figure {
     margin: 2rem 0 0;
   }
+
   .commission-figure .portrait-image-wrapper {
     margin-bottom: 0;
   }
+
   .commission-placard {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -104,9 +121,11 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     font-size: 0.95rem;
     line-height: 1.5;
   }
+
   .commission-placard dt {
     color: var(--muted);
   }
+
   .commission-placard dd {
     margin: 0;
     color: var(--fg);
@@ -119,21 +138,25 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     gap: 1.5rem;
     margin: 2rem 0 2.5rem;
   }
+
   .stage-figure {
     margin: 0;
   }
+
   .stage-figure img {
     width: 100%;
     height: auto;
     display: block;
     border: 1px solid var(--border);
   }
+
   .stage-figure figcaption {
     margin-top: 0.6rem;
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--muted);
   }
+
   .stage-figure figcaption strong {
     display: block;
     color: var(--fg);
@@ -144,14 +167,19 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   @media (min-width: 640px) {
-    .requirements-grid { grid-template-columns: 1fr 1fr; }
+    .requirements-grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
+
   .req-card {
     background: var(--card);
     padding: 2rem;
     border: 1px solid var(--border);
   }
+
   .req-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
@@ -160,6 +188,7 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
+
   .req-card p {
     font-size: 0.95rem;
     margin: 0;
@@ -175,113 +204,64 @@ og_image: /assets/images/self-portrait-commission-demo.webp
     margin-top: 2rem;
   }
 </style>
-
 <section class="portrait-hero wrapper">
   <span class="tag" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; font-weight: 600;">Commissions</span>
   <h1 class="portrait-title">Likeness, Gravity, and a Pulse.</h1>
-  <p class="lede muted" style="font-size: 1.25rem; max-width: 700px; line-height: 1.6;">
-    I accept a limited number of portrait commissions in acrylic. The aim is a work with believable structure, clear presence, disciplined color, and enough painterly life to keep the result from feeling embalmed.
-  </p>
+  <p class="lede muted" style="font-size: 1.25rem; max-width: 700px; line-height: 1.6;"> I accept a limited number of portrait commissions in acrylic. The aim is a work with believable structure, clear presence, disciplined color, and enough painterly life to keep the result from feeling embalmed. </p>
 </section>
-
 <section class="wrapper portrait-split">
-
   <aside class="portrait-sidebar">
     <div class="portrait-image-wrapper">
-      <img src="{{ '/assets/images/self-portrait-commission-demo.webp' | relative_url }}"
-           alt="Recent self-portrait by Robert Grantham in acrylic on canvas."
-           loading="lazy" decoding="async"
-           onerror="this.parentElement.style.display='none';">
+      <img src="{{ '/assets/images/self-portrait-commission-demo.webp' | relative_url }}" alt="Recent self-portrait by Robert Grantham in acrylic on canvas." loading="lazy" decoding="async" onerror="this.parentElement.style.display='none';">
     </div>
     <div class="portrait-caption">
-      <strong>Standard of Execution</strong><br>
-      A recent self-portrait in acrylic. This demonstrates the level of finish, structural integrity, and directness clients can expect from a commissioned work.
+      <strong>Standard of Execution</strong>
+      <br> A recent self-portrait in acrylic. This demonstrates the level of finish, structural integrity, and directness clients can expect from a commissioned work.
     </div>
   </aside>
-
   <main class="portrait-main">
-
     <div class="content-block">
       <h2>What Clients Can Expect</h2>
-      <p>
-        I care about the bone structure, the asymmetries, the value relationships, and the small, deliberate decisions that make a human face read as a particular person rather than a generic template.
-      </p>
-      <p>
-        In plain English: the eyes need to hold, the head needs to feel built rather than pasted together, and the painting needs to look alive from ten feet across the room and from ten inches away.
-      </p>
-
-      <div class="philosophical-callout">
-        A good portrait should not just say, "Yes, that looks like them." It should say, "There they are."
-      </div>
-
-      <p>
-        Whether you are commissioning a self-portrait, a memorial piece, or a visual anchor for a professional space, I deliver work that feels personal without ever collapsing into cheap sentimentality.
-      </p>
+      <p> I care about the bone structure, the asymmetries, the value relationships, and the small, deliberate decisions that make a human face read as a particular person rather than a generic template. </p>
+      <p> In plain English: the eyes need to hold, the head needs to feel built rather than pasted together, and the painting needs to look alive from ten feet across the room and from ten inches away. </p>
+      <div class="philosophical-callout"> A good portrait should not just say, "Yes, that looks like them." It should say, "There they are." </div>
+      <p> Whether you are commissioning a self-portrait, a memorial piece, or a visual anchor for a professional space, I deliver work that feels personal without ever collapsing into cheap sentimentality. </p>
     </div>
-
     <div class="content-block">
       <h2>The Byzantine Method</h2>
-      <p>
-        My current practice is to paint portraits in the Byzantine manner, the way icon painters have built a face for centuries: from dark to light, in thin layers, with the form emerging through light rather than being carved out of shadow. The face begins as a deliberately dark underpainting. Lighter flesh tones are laid over it in successive layers, each lighter than the one before, and the final highlights go on last. The four stages below follow one portrait from underpainting to finish.
-      </p>
-
+      <p> My current practice is to paint portraits in the Byzantine manner, the way icon painters have built a face for centuries: from dark to light, in thin layers, with the form emerging through light rather than being carved out of shadow. The face begins as a deliberately dark underpainting. Lighter flesh tones are laid over it in successive layers, each lighter than the one before, and the final highlights go on last. The four stages below follow one portrait from underpainting to finish. </p>
       <div class="stage-grid">
         <figure class="stage-figure">
-          <img src="{{ '/assets/images/byzantine-stage-1-underpainting.webp' | relative_url }}"
-               alt="Stage 1: profile portrait of a woman holding a pocket watch, with the face and hair laid in as a flat, dark olive-brown underpainting on a tooled gold ground."
-               loading="lazy" decoding="async"
-               onerror="this.parentElement.style.display='none';">
+          <img src="{{ '/assets/images/byzantine-stage-1-underpainting.webp' | relative_url }}" alt="Stage 1: profile portrait of a woman holding a pocket watch, with the face and hair laid in as a flat, dark olive-brown underpainting on a tooled gold ground." loading="lazy" decoding="async" onerror="this.parentElement.style.display='none';">
           <figcaption>
-            <strong>1. Dark underpainting</strong>
-            The face and hair are laid in as a flat, shadowed base, with the drawing already set.
+            <strong>1. Dark underpainting</strong> The face and hair are laid in as a flat, shadowed base, with the drawing already set.
           </figcaption>
         </figure>
-
         <figure class="stage-figure">
-          <img src="{{ '/assets/images/byzantine-stage-2-first-flesh-tones.webp' | relative_url }}"
-               alt="Stage 2: the same portrait with warmer, lighter flesh tones brought up over the dark base, and the structure of the face beginning to show."
-               loading="lazy" decoding="async"
-               onerror="this.parentElement.style.display='none';">
+          <img src="{{ '/assets/images/byzantine-stage-2-first-flesh-tones.webp' | relative_url }}" alt="Stage 2: the same portrait with warmer, lighter flesh tones brought up over the dark base, and the structure of the face beginning to show." loading="lazy" decoding="async" onerror="this.parentElement.style.display='none';">
           <figcaption>
-            <strong>2. First flesh tones</strong>
-            Warmer, lighter color comes up over the dark base, and the structure begins to show.
+            <strong>2. First flesh tones</strong> Warmer, lighter color comes up over the dark base, and the structure begins to show.
           </figcaption>
         </figure>
-
         <figure class="stage-figure">
-          <img src="{{ '/assets/images/byzantine-stage-3-lighter-layers.webp' | relative_url }}"
-               alt="Stage 3: the same portrait with lighter, rosier layers modeling the cheek, brow, lips, and hand, and soft brown lights in the hair."
-               loading="lazy" decoding="async"
-               onerror="this.parentElement.style.display='none';">
+          <img src="{{ '/assets/images/byzantine-stage-3-lighter-layers.webp' | relative_url }}" alt="Stage 3: the same portrait with lighter, rosier layers modeling the cheek, brow, lips, and hand, and soft brown lights in the hair." loading="lazy" decoding="async" onerror="this.parentElement.style.display='none';">
           <figcaption>
-            <strong>3. Lighter layers</strong>
-            Rosier tones and softer transitions model the cheek, brow, lips, and hand.
+            <strong>3. Lighter layers</strong> Rosier tones and softer transitions model the cheek, brow, lips, and hand.
           </figcaption>
         </figure>
-
         <figure class="stage-figure">
-          <img src="{{ '/assets/images/byzantine-stage-4-final-highlights.webp' | relative_url }}"
-               alt="Stage 4: the finished portrait, with detailed curls, a gold hoop earring, gold line work on the red robe, and a pocket watch with a legible face."
-               loading="lazy" decoding="async"
-               onerror="this.parentElement.style.display='none';">
+          <img src="{{ '/assets/images/byzantine-stage-4-final-highlights.webp' | relative_url }}" alt="Stage 4: the finished portrait, with detailed curls, a gold hoop earring, gold line work on the red robe, and a pocket watch with a legible face." loading="lazy" decoding="async" onerror="this.parentElement.style.display='none';">
           <figcaption>
-            <strong>4. Final highlights and details</strong>
-            The hair, earring, robe trim, and watch are finished with fine highlights and gold line work.
+            <strong>4. Final highlights and details</strong> The hair, earring, robe trim, and watch are finished with fine highlights and gold line work.
           </figcaption>
         </figure>
       </div>
-      <p>
-        The tradition worked in egg tempera on gessoed panel. I work in acrylic, and I will not pretend the two are the same. What carries over is the logic: translucent layers, a face that seems lit from within rather than from the side, and no fussing over detail until the structure underneath is sound.
-      </p>
-      <p>
-        For a client, that means two practical things. A portrait built in layers cannot be rushed, which is why I ask for the real deadline up front. And the layering is where the depth comes from: the dark underpainting gives the face its weight, and the lights placed over it give it life.
-      </p>
+      <p> The tradition worked in egg tempera on gessoed panel. I work in acrylic, and I will not pretend the two are the same. What carries over is the logic: translucent layers, a face that seems lit from within rather than from the side, and no fussing over detail until the structure underneath is sound. </p>
+      <p> For a client, that means two practical things. A portrait built in layers cannot be rushed, which is why I ask for the real deadline up front. And the layering is where the depth comes from: the dark underpainting gives the face its weight, and the lights placed over it give it life. </p>
     </div>
-
     <div class="content-block">
       <h2>The Rules of Engagement</h2>
       <p>To ensure the final piece lives up to both of our expectations, I require a few things straight out of the gate.</p>
-
       <div class="requirements-grid mt-6">
         <div class="req-card">
           <h3>Reference Photos</h3>
@@ -301,20 +281,11 @@ og_image: /assets/images/self-portrait-commission-demo.webp
         </div>
       </div>
     </div>
-
     <div class="portrait-cta-box">
       <h2 style="font-size: 2rem; margin-bottom: 1rem;">Begin the Commission</h2>
-      <p class="muted" style="margin-bottom: 2rem;">
-        Common formats include 11×14, 12×16, and 16×20 on cradled panel or canvas. If you have your reference photos and details ready, let us begin the conversation.
-      </p>
-      <a class="btn" href="{{ '/contact.html' | relative_url }}" style="padding: 1.25rem 2.5rem; text-transform: uppercase; letter-spacing: 0.05em; width: 100%; justify-content: center;">
-        Open the Inquiry Engine
-      </a>
-      <p class="muted" style="font-size: 0.85rem; margin-top: 1rem;">
-        *Select "Portraiture" from the dropdown menu on the contact form.
-      </p>
+      <p class="muted" style="margin-bottom: 2rem;"> Common formats include 11×14, 12×16, and 16×20 on cradled panel or canvas. If you have your reference photos and details ready, let us begin the conversation. </p>
+      <a class="btn" href="{{ '/contact.html' | relative_url }}" style="padding: 1.25rem 2.5rem; text-transform: uppercase; letter-spacing: 0.05em; width: 100%; justify-content: center;"> Open the Inquiry Engine </a>
+      <p class="muted" style="font-size: 0.85rem; margin-top: 1rem;"> *Select "Portraiture" from the dropdown menu on the contact form. </p>
     </div>
-
   </main>
-
 </section>
