@@ -1,13 +1,15 @@
 # _data/catalog.yml
 # Source of truth for /catalog.html. The PDF in assets/docs is generated from
 # the same record; update both together when a work sells or a new plate is added.
-edition: "September 2026"
+# NOTE: every work needs a `size` value. Liquid's `.size` on a hash returns the
+# number of keys when the field is missing, which is how a stray "4" appeared.
+edition: "October 2026"
 pdf: /assets/docs/Robert_Grantham_Art_Catalog_2025-2026.pdf
-pdf_size: "3 MB"
+pdf_size: "3 MB" # TODO: confirm against the regenerated 21-plate PDF
 pdf_label: "Robert_Grantham_Art_Catalog_2025-2026.pdf"
 cover: /assets/images/catalog-cover.jpg
-plates: 18
-pages: 15
+plates: 21
+pages: 15 # TODO: set to the real page count of the regenerated PDF
 sections:
   - name: "Conjunctions"
     blurb: "Acrylic and mixed-media abstractions organized around orbs, haloes, and alignments."
@@ -61,19 +63,35 @@ sections:
         year: 2026
         size: "12 × 12 × 1.5 in"
         medium: "Acrylic on canvas"
+        inventory_id: "RGA-BCUS-2026-01"
         status: "Private collection"
       - plate: 7
         title: "Red Conjunction under Stress"
         year: 2026
         size: "12 × 12 × 1.5 in"
         medium: "Acrylic on canvas"
+        inventory_id: "RGA-RCUS-2026-01"
         status: "Available"
 
   - name: "Magnolia Canticle"
     blurb: "Hand-lettered calligraphy paired with painted magnolia and landscape imagery."
-    plates: "8–10"
+    plates: "8–12"
     works:
       - plate: 8
+        title: "Magnolia Canticle, No. 1"
+        year: 2025
+        size: "16 × 20 × 1.5 in"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-MC1-2025-01"
+        status: "Private collection"
+      - plate: 9
+        title: "Magnolia Canticle, No. 2"
+        year: 2026
+        size: "16 × 20 × 1.5 in"
+        medium: "Acrylic on canvas, matte varnish"
+        inventory_id: "RGA-MC2-2026-01"
+        status: "Private collection"
+      - plate: 10
         title: "Magnolia Canticle, No. 3"
         year: 2026
         size: "16 × 20 × 1.5 in"
@@ -82,7 +100,7 @@ sections:
         inventory_id: "RGA-MC3-2026-01"
         status: "Available"
         url: /portfolio/magnolia-canticle-no-3/
-      - plate: 9
+      - plate: 11
         title: "Magnolia Canticle, No. 4"
         year: 2026
         size: "16 × 20 × 1.5 in"
@@ -91,7 +109,7 @@ sections:
         inventory_id: "RGA-MC4-2026-01"
         status: "Available"
         url: /portfolio/magnolia-canticle-no-4/
-      - plate: 10
+      - plate: 12
         title: "Magnolia Canticle, No. 5"
         year: 2026
         size: "8 × 10 × 0.625 in"
@@ -101,17 +119,17 @@ sections:
         status: "Private collection"
 
   - name: "Independent Works"
-    blurb: "Work outside the named series: an icon, a whale, and square horizon paintings."
-    plates: "11–16"
+    blurb: "Work outside the named series: icons, a whale, and square horizon paintings."
+    plates: "13–19"
     works:
-      - plate: 11
+      - plate: 13
         title: "Virgin Mary"
         year: 2026
         size: "12 × 12 × 1.5 in"
         medium: "Acrylic on canvas, matte varnish"
         inventory_id: "RGA-VM-2026-01"
         status: "Private collection"
-      - plate: 12
+      - plate: 14
         title: "Neon Cetacean"
         year: 2026
         size: "16 × 20 × 0.625 in"
@@ -120,7 +138,7 @@ sections:
         inventory_id: "RGA-NC-2026-01"
         status: "Private collection"
         url: /portfolio/neon-cetacean/
-      - plate: 13
+      - plate: 15
         title: "The Lonely Pier"
         year: 2026
         size: "12 × 12 × 1.5 in"
@@ -128,21 +146,21 @@ sections:
         inventory_id: "RGA-TLP-2026-01"
         status: "Private collection"
         url: /portfolio/the-lonely-pier/
-      - plate: 14
+      - plate: 16
         title: "Land ho!"
         year: 2026
         size: "12 × 12 × 1.5 in"
         medium: "Acrylic on canvas, matte varnish"
         inventory_id: "RGA-LH-2026-01"
         status: "Private collection"
-      - plate: 15
+      - plate: 17
         title: "Heat at Dusk"
         year: 2026
         size: "12 × 12 × 0.625 in"
         medium: "Acrylic on canvas, Liquitex matte varnish"
         inventory_id: "RGA-HAD-2026-01"
         status: "Private collection"
-      - plate: 16
+      - plate: 18
         title: "Enjoying a Good Read"
         year: 2026
         size: "8 × 10 × 0.625 in"
@@ -150,19 +168,27 @@ sections:
         medium: "Acrylic on canvas, matte varnish"
         inventory_id: "RGA-EAGR-2026-01"
         status: "Private collection"
+      - plate: 19
+        title: "Our Lady of Perpetual Deadlines"
+        year: 2026
+        size: "6 × 6 × 0.78 in"
+        medium: "Acrylic on Da Vinci panel, Liquitex matte varnish"
+        inventory_id: "RGA-OLPD-2026-01"
+        status: "Private collection"
 
   - name: "Lettering & Works on Paper"
     blurb: "Where the practice began: blackletter, wildstyle, and calligraffiti on paper."
-    plates: "17–18"
+    plates: "20–21"
     works:
-      - plate: 17
+      - plate: 20
         title: "In Love"
         year: 2025
-        size: "9 × 12 in"
-        medium: "Acrylic marker on paper"
+        size: "8 × 11 in"
+        medium: "Acrylic and ink on paper"
         status: "Private collection"
-      - plate: 18
+      - plate: 21
         title: "Have Hope"
         year: 2025
+        size: "8 × 11 in"
+        medium: "Acrylic and ink on paper"
         status: "Private collection"
-
