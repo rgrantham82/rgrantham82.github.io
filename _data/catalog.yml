@@ -5,11 +5,11 @@
 # number of keys when the field is missing, which is how a stray "4" appeared.
 edition: "October 2026"
 pdf: /assets/docs/Robert_Grantham_Art_Catalog_2025-2026.pdf
-pdf_size: "3 MB" # TODO: confirm against the regenerated 21-plate PDF
+pdf_size: "4 MB"
 pdf_label: "Robert_Grantham_Art_Catalog_2025-2026.pdf"
 cover: /assets/images/catalog-cover.jpg
 plates: 21
-pages: 15 # TODO: set to the real page count of the regenerated PDF
+pages: 17
 sections:
   - name: "Conjunctions"
     blurb: "Acrylic and mixed-media abstractions organized around orbs, haloes, and alignments."
@@ -81,6 +81,7 @@ sections:
         title: "Magnolia Canticle, No. 1"
         year: 2025
         size: "16 × 20 × 1.5 in"
+        orientation: "portrait"
         medium: "Acrylic on canvas, matte varnish"
         inventory_id: "RGA-MC1-2025-01"
         status: "Private collection"
@@ -88,6 +89,7 @@ sections:
         title: "Magnolia Canticle, No. 2"
         year: 2026
         size: "16 × 20 × 1.5 in"
+        orientation: "landscape"
         medium: "Acrylic on canvas, matte varnish"
         inventory_id: "RGA-MC2-2026-01"
         status: "Private collection"
