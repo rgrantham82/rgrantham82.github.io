@@ -9,7 +9,16 @@
 # Contact: robertgrantham40@gmail.com, 512-200-3563,
 #          rgrantham82.github.io, Instagram @robertgranthamart
 
-effective: 2026-09-16
+# NOTE (2026-11-12): the ladder below was aligned to the October 2026 catalog
+# price schedule — the site was publishing three different prices for the same
+# sizes (the September ladder here, the _works front matter, and the catalog),
+# and the trade page's bands were a fifth. The catalog is the newest published
+# schedule and the one the December show checklist uses, so it wins. The
+# September ladder is preserved in git history, not here.
+# The catalog schedule is nearly flat per square inch (~$2.57–2.58), which is
+# why the old per-size discount curve in the 30x40 derivation no longer applies.
+
+effective: 2026-10-01
 previous_ladder:
   name: base tier
   retired: 2026-09-16
@@ -31,45 +40,46 @@ ladder:
     width_in: 8
     height_in: 10
     sq_in: 80
-    price: 250
-    rate_per_sq_in: 3.125
+    price: 205
+    rate_per_sq_in: 2.563
   - size: "12×12"
     width_in: 12
     height_in: 12
     sq_in: 144
-    price: 385
-    rate_per_sq_in: 2.674
+    price: 370
+    rate_per_sq_in: 2.569
   - size: "16×20"
     width_in: 16
     height_in: 20
     sq_in: 320
-    price: 700
-    rate_per_sq_in: 2.188
+    price: 825
+    rate_per_sq_in: 2.578
   - size: "20×24"
     width_in: 20
     height_in: 24
     sq_in: 480
-    price: 1000
-    rate_per_sq_in: 2.083
+    price: 1235
+    rate_per_sq_in: 2.573
     note: >-
       Raised from $950 on 2026-09-16 because both 20×24s were already
-      published at $1,000.
+      published at $1,000; raised again to the October 2026 catalog figure
+      on 2026-11-12.
   - size: "24×30"
     width_in: 24
     height_in: 30
     sq_in: 720
-    price: 1275
-    rate_per_sq_in: 1.771
+    price: 1855
+    rate_per_sq_in: 2.576
   - size: "30×40"
     width_in: 30
     height_in: 40
     sq_in: 1200
-    price: 1700
-    rate_per_sq_in: 1.417
-    derived_by: new_size_rule
-    math: >-
-      24×30 rate 1275 / 720 = 1.771. 1200 - 720 = 480 extra sq in, which is
-      two full 200 sq in steps, so 20% off: 1.417 × 1200 = 1700.00.
+    price: 3100
+    rate_per_sq_in: 2.583
+    note: >-
+      Now a published catalog rung (October 2026); the old derivation from
+      the 24×30 rate no longer applies — the schedule runs nearly flat at
+      about $2.58 per square inch.
 
 new_size_rule: >-
   For a size not on the ladder, multiply its square inches by the rate of the
@@ -103,27 +113,31 @@ exhibitions:
     title: Northwest Hills UMC group exhibition
     month: 2026-12
     wall_ft: "13 to 15"
+    # NOTE (2026-11-12): this work list predates the current arrangement
+    # (7 of Bobby's + 5 of Tatiana's, per the December show checklist).
+    # Prices below were updated to the October 2026 catalog schedule; the
+    # list itself still needs Tatiana's five works once confirmed.
     works:
-      - {order: 1,  title: "30×40, title to come",            inventory_id: "",                    size: "30×40", price: 1700}
-      - {order: 2,  title: "Conjunction at the Interchange",   inventory_id: RGA-CINTCHG-2026-01,   size: "12×12", price: 385}
-      - {order: 3,  title: "24×30, title to come",             inventory_id: "",                    size: "24×30", price: 1275}
-      - {order: 4,  title: "Aurum Rising",                     inventory_id: RGA-AR-2026-01,        size: "24×30", price: 1275}
-      - {order: 5,  title: "Conjunction with the Black Sun",   inventory_id: RGA-CWBS-2026-01,      size: "20×24", price: 1000}
-      - {order: 6,  title: "Conjunction at the Red Shore",     inventory_id: RGA-CRS-2026-01,       size: "20×24", price: 1000}
-      - {order: 7,  title: "Magnolia Canticle, No. 3",         inventory_id: RGA-MC3-2026-01,       size: "16×20", price: 700}
-      - {order: 8,  title: "Magnolia Canticle, No. 4",         inventory_id: RGA-MC4-2026-01,       size: "16×20", price: 700}
-      - {order: 9,  title: "Conjunction at the Golden Passage", inventory_id: RGA-CAGP-2026-01,     size: "16×20", price: 700}
-      - {order: 10, title: "Untitled Conjunctions, No. 2",     inventory_id: RGA-UC2-2026,          size: "8×10",  price: 250}
-      - {order: 11, title: "8×10, title to come",              inventory_id: "",                    size: "8×10",  price: 250}
-      - {order: 12, title: "8×10, title to come",              inventory_id: "",                    size: "8×10",  price: 250}
+      - {order: 1,  title: "30×40, title to come",            inventory_id: "",                    size: "30×40", price: 3100}
+      - {order: 2,  title: "Conjunction at the Interchange",   inventory_id: RGA-CINTCHG-2026-01,   size: "12×12", price: 370}
+      - {order: 3,  title: "24×30, title to come",             inventory_id: "",                    size: "24×30", price: 1855}
+      - {order: 4,  title: "Aurum Rising",                     inventory_id: RGA-AR-2026-01,        size: "24×30", price: 1855}
+      - {order: 5,  title: "Conjunction of the Black Sun",     inventory_id: RGA-CBS-2026-01,       size: "20×24", price: 1235}
+      - {order: 6,  title: "Conjunction at the Red Shore",     inventory_id: RGA-CRS-2026-01,       size: "20×24", price: 1235}
+      - {order: 7,  title: "Magnolia Canticle, No. 3",         inventory_id: RGA-MC3-2026-01,       size: "16×20", price: 825}
+      - {order: 8,  title: "Magnolia Canticle, No. 4",         inventory_id: RGA-MC4-2026-01,       size: "16×20", price: 825}
+      - {order: 9,  title: "Conjunction at the Golden Passage", inventory_id: RGA-CAGP-2026-01,     size: "16×20", price: 825}
+      - {order: 10, title: "Untitled Conjunctions, No. 2",     inventory_id: RGA-UC2-2026,          size: "8×10",  price: 205}
+      - {order: 11, title: "8×10, title to come",              inventory_id: "",                    size: "8×10",  price: 205}
+      - {order: 12, title: "8×10, title to come",              inventory_id: "",                    size: "8×10",  price: 205}
     if_all_sell:
-      gross: 9485
-      venue_commission: 1897
-      artist_net: 7588
+      gross: 12740
+      venue_commission: 2548
+      artist_net: 10192
     alternates_if_wall_is_15_ft:
-      - {title: "Blue Conjunction under Stress", size: "12×12", price: 385}
-      - {title: "Red Conjunction under Stress",  size: "12×12", price: 385}
+      - {title: "Blue Conjunction under Stress", size: "12×12", price: 370}
+      - {title: "Red Conjunction under Stress",  size: "12×12", price: 370}
     with_alternates:
-      gross: 10255
-      venue_commission: 2051
-      artist_net: 8204
+      gross: 13480
+      venue_commission: 2696
+      artist_net: 10784
