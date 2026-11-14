@@ -4,7 +4,9 @@ title:  "Leveraging Data Analytics to Support the LGBT Community in Challenging 
 author_profile: true
 date:   2024-07-01
 description: A call to action for data analysts and scientists to leverage their skills in support of the LGBT community during challenging times.
-image: /assets/images/2024-07-01.png
+# image: /assets/images/2024-07-01.png  — TODO (2026-11-12): file missing from
+# the repo; restore the featured image or delete this line. Commented out so
+# the post no longer references a broken image.
 tags: 
 - LGBT community support
 - CTA  

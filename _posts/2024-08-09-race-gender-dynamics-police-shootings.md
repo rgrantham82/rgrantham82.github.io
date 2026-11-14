@@ -21,7 +21,9 @@ tags:
 
 In this post, we dive into a detailed statistical analysis of fatal police shootings across the United States, focusing on age distribution, gender differences, and the relationship between race and armed status. This analysis is part of an ongoing effort to understand the patterns and trends in these tragic incidents.
 
-![Fig. 1](/assets/images/2024-08-08/visualizations.png)
+<!-- TODO (2026-11-12): Fig. 1 was /assets/images/2024-08-08/visualizations.png,
+     which is missing from the repo. Restore the file to show the figure; the
+     distributions it showed are described below. -->
 
 Several key visualizations have been generated to support this analysis:
 
@@ -29,7 +31,7 @@ Several key visualizations have been generated to support this analysis:
 - **Racial Distribution**: A bar chart showing the distribution of races in the dataset.
 - **Total Shootings Per Agency**: A histogram illustrating the distribution of total shootings across different police agencies, using a logarithmic scale to capture the wide range of frequencies.
 
-The visualizations can be found [here](/assets/images/2024-08-08).
+The visualizations described below were generated for this analysis; the image files are not currently in the site repository.
 
 ### Age Distribution: Insights and Outliers
 
