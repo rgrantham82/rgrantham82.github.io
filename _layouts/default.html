@@ -1,44 +1,57 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <meta name="description" content="{{ page.description | default: site.description }}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}"><meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
 
-    {% assign theme_dark = page.theme_color_dark | default: site.theme_color_dark | default: '#0b0c0f' %}
+    {% assign head_title = page.seo_title | default: page.social_title %}
+    {% if head_title != blank %}
+    <title>{{ head_title | escape }}</title>
+    {% elsif page.title %}
+    <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
+    {% else %}
+    <title>{{ site.title | escape }}</title>
+    {% endif %}
+
+    {% assign meta_desc = page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 | escape %}
+    <meta name="description" content="{{ meta_desc }}">
+    <meta name="color-scheme" content="light">
+
     {% assign theme_light = page.theme_color_light | default: site.theme_color_light | default: '#faf9f6' %}
-    <meta name="theme-color" content="{{ theme_dark }}" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="{{ theme_light }}" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="{{ theme_light }}">
 
-    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: 'Robert Grantham Art' }}</title>
-    <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 | escape }}">
     <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
 
-    {% assign social_title = page.social_title | default: page.title | default: site.title %}
-    {% assign social_desc = page.social_description | default: page.description | default: site.description %}
-    {% assign social_img = page.og_image | default: page.image | default: site.og_image | default: site.logo %}
-    {%- comment -%}
-      Alt text defaulted to "… — painting by Robert Grantham", which is true of an
-      artwork page and false of a services or trade page. Let a page override it.
-    {%- endcomment -%}
+    {% assign social_title = page.social_title | default: page.seo_title | default: page.title | default: site.title %}
+    {% assign social_desc = page.social_description | default: page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 | escape %}
+    {% if page.layout == 'post' %}
+      {% assign social_img = page.og_image | default: page.image | default: site.og_image %}
+    {% else %}
+      {% assign social_img = page.og_image | default: site.og_image %}
+    {% endif %}
+
+    {% assign is_artwork = false %}
+    {% if page.layout == 'artwork' or page.layout == 'portfolio' or page.url contains '/portfolio/' %}
+      {% assign is_artwork = true %}
+    {% endif %}
     {% if page.og_image_alt %}
       {% assign social_img_alt = page.og_image_alt %}
+    {% elsif is_artwork %}
+      {% assign social_img_alt = social_title | append: ' - painting by Robert Grantham' %}
     {% else %}
-      {% assign social_img_alt = social_title | append: ' — painting by Robert Grantham' %}
+      {% assign social_img_alt = social_title %}
     {% endif %}
+
     <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{{ social_title | escape }}">
-    <meta property="og:description" content="{{ social_desc | strip_html | strip_newlines | escape }}">
+    <meta property="og:description" content="{{ social_desc }}">
     <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
     <meta property="og:image" content="{{ social_img | absolute_url }}">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ social_title | escape }}">
-    <meta name="twitter:description" content="{{ social_desc | strip_html | strip_newlines | escape }}">
-    {%- comment -%}Only assert dimensions for images we know are 1200x630.{%- endcomment -%}
+    <meta name="twitter:description" content="{{ social_desc }}">
     {% if social_img == site.og_image or social_img contains '/og-' %}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -56,17 +69,13 @@
     {% feed_meta %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     {% if page.css %}<link rel="stylesheet" href="{{ page.css | relative_url }}">{% endif %}
+    {% if page.styles %}{% for css_file in page.styles %}<link rel="stylesheet" href="{{ css_file | relative_url }}">{% endfor %}{% endif %}
 
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.favicon | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.apple_touch_icon | relative_url }}">
 
     {% include structured-data.html %}
 
-    {%- comment -%}
-      `google_analytics` has been sitting in _config.yml with no tag to fire it.
-      Gated on the production environment so local `jekyll serve` runs stay out
-      of the numbers. GitHub Pages builds as production by default.
-    {%- endcomment -%}
     {% if jekyll.environment == 'production' and site.google_analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
@@ -99,14 +108,35 @@
           <ul id="nav-list">
             <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
             {% for item in site.nav.links %}
-              {% assign item_index = item.url | append: 'index.html' %}
+              {% if item.url contains 'http' %}
+                {% assign item_href = item.url %}
+              {% else %}
+                {% assign item_href = item.url | relative_url %}
+              {% endif %}
+              {% assign is_current = false %}
+              {% if page.url == item.url %}
+                {% assign is_current = true %}
+              {% elsif item.url != '/' and page.url contains item.url %}
+                {% assign is_current = true %}
+              {% endif %}
               <li>
-                <a href="{{ item.url | relative_url }}"{% if page.url == item.url or page.url == item_index %} aria-current="page"{% endif %}>{{ item.title }}</a>
+                <a href="{{ item_href }}"{% if is_current %} aria-current="page"{% endif %}>{{ item.title }}</a>
               </li>
             {% endfor %}
           </ul>
           {% if site.nav.cta %}
-            <a class="btn nav-cta" href="{{ site.nav.cta.url | relative_url }}"{% if page.url == site.nav.cta.url %} aria-current="page"{% endif %}>{{ site.nav.cta.title }}</a>
+            {% if site.nav.cta.url contains 'http' %}
+              {% assign cta_href = site.nav.cta.url %}
+            {% else %}
+              {% assign cta_href = site.nav.cta.url | relative_url %}
+            {% endif %}
+            {% assign cta_current = false %}
+            {% if page.url == site.nav.cta.url %}
+              {% assign cta_current = true %}
+            {% elsif site.nav.cta.url != '/' and page.url contains site.nav.cta.url %}
+              {% assign cta_current = true %}
+            {% endif %}
+            <a class="btn nav-cta" href="{{ cta_href }}"{% if cta_current %} aria-current="page"{% endif %}>{{ site.nav.cta.title }}</a>
           {% endif %}
         </nav>
       </div>
@@ -125,15 +155,24 @@
         <ul class="social">
           {% if site.instagram_username %}<li><a href="https://instagram.com/{{ site.instagram_username }}" rel="me">Instagram</a></li>{% endif %}
           {% if site.linkedin_username %}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" rel="me">LinkedIn</a></li>{% endif %}
-          {% if site.email %}<li><a href="mailto:{{ site.email }}">Email</a></li>{% endif %}
-          {%- comment -%}
-            Portraiture and Studio services were hardcoded here. They now come
-            from site.nav.secondary in _config.yml, alongside Trade & Corporate.
-          {%- endcomment -%}
-          {% for item in site.nav.secondary %}
-            <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-          {% endfor %}
           <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+        </ul>
+        <ul class="footer-links">
+          {% for item in site.nav.secondary %}
+            {% if item.url contains 'http' %}
+              {% assign secondary_href = item.url %}
+            {% else %}
+              {% assign secondary_href = item.url | relative_url %}
+            {% endif %}
+            {% assign secondary_current = false %}
+            {% if page.url == item.url %}
+              {% assign secondary_current = true %}
+            {% elsif item.url != '/' and page.url contains item.url %}
+              {% assign secondary_current = true %}
+            {% endif %}
+            <li><a href="{{ secondary_href }}"{% if secondary_current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
         </ul>
       </div>
     </footer>
@@ -154,6 +193,10 @@
           navButton.setAttribute('aria-expanded', String(!expanded));
           navList.classList.toggle('open');
           event.stopPropagation();
+        });
+
+        navList.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
         });
 
         document.addEventListener('click', (event) => {
