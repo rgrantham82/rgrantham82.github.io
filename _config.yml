@@ -63,64 +63,64 @@ collections:
     permalink: /portfolio/:name/
 
 defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    author: Robert Grantham
-- scope:
-    path: ''
-    type: works
-  values:
-    layout: work
-    css: /assets/css/work.css
-    featured: false
-    order: 999
+    - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      author: Robert Grantham
+    - scope:
+      path: ''
+      type: works
+    values:
+      layout: work
+      css: /assets/css/work.css
+      featured: false
+      order: 999
 
 # NOTE: No `include` block. Jekyll already reads `_data` via `data_dir`;
 # forcing it into `include` also copied the raw YAML into _site,
 # publishing the source data alongside the rendered pages. `assets` does not
 # begin with `_` or `.`, so it is included by default and needs no entry here.
 exclude:
-- node_modules
-- Gemfile
-- Gemfile.lock
-- README.md
-- IMPROVEMENTS.md
-- vendor
-- .sass-cache
-- .jekyll-cache
-- _site
+    - node_modules
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - IMPROVEMENTS.md
+    - vendor
+    - .sass-cache
+    - .jekyll-cache
+    - _site
 
 nav:
   links:
-    - title: Available Work
-    url: /portfolio/
-    - title: Full Archive
-    url: /catalog.html
-    - title: How to Buy
-    url: /buying.html
-    - title: Commissions
-    url: /commissions.html
-    - title: About
-    url: /about.html
-    - title: Journal
-    url: /blog/
+        - title: Available Work
+      url: /portfolio/
+        - title: Full Archive
+      url: /catalog.html
+        - title: How to Buy
+      url: /buying.html
+        - title: Commissions
+      url: /commissions.html
+        - title: About
+      url: /about.html
+        - title: Journal
+      url: /blog/
   cta:
     title: Contact
     url: /contact.html
   # Secondary pages. These serve specific audiences rather than general
-  # visitors, and render in the footer — the same position Portraiture and
+  # visitors, and render in the footer, the same position Portraiture and
   # Studio services already occupied when they were hardcoded in the layout.
   secondary:
-    - title: Trade & Corporate
-    url: /trade.html
-    - title: Portraiture
-    url: /portraiture.html
-    - title: Studio services
-    url: /services.html
+        - title: Trade & Corporate
+      url: /trade.html
+        - title: Portraiture
+      url: /portraiture.html
+        - title: Studio services
+      url: /services.html
 
 plugins:
-- jekyll-feed
-- jekyll-sitemap
+    - jekyll-feed
+    - jekyll-sitemap
