@@ -4,7 +4,6 @@ description: "Original acrylic and mixed-media work by Robert Grantham, Austin, 
 
 author:
   name: Robert Grantham
-  email: robertgrantham40@gmail.com
   location: Austin, TX
 
 url: https://rgrantham82.github.io
@@ -12,13 +11,11 @@ baseurl: ''
 
 # Aesthetics
 theme_color_light: '#faf9f6'
-theme_color_dark: '#0b0c0f'
 font_href: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.png
 apple_touch_icon: /assets/images/apple-touch-icon.png
-og_image: /assets/images/og-default.jpg   # 1200x630, 68 KB — under X's 5 MB card limit
-
+og_image: /assets/images/og-aurum-rising.jpg   # 1200x630, Aurum Rising crop, under X's 5 MB card limit
 
 google_analytics: "G-7WZFJ98W4K"
 
@@ -26,7 +23,6 @@ google_analytics: "G-7WZFJ98W4K"
 github_username: rgrantham82
 instagram_username: robertgranthamart
 linkedin_username: robertgrantham82
-email: robertgrantham40@gmail.com
 
 # Trade & corporate sales
 # Single source of truth for the terms published on /trade.html. Change them
@@ -49,7 +45,7 @@ highlighter: rouge
 permalink: /:title.html
 timezone: America/Chicago
 encoding: utf-8
-future: true
+future: false
 lsi: false
 safe: true
 data_dir: _data
@@ -79,14 +75,13 @@ defaults:
   values:
     layout: work
     css: /assets/css/work.css
+    featured: false
+    order: 999
 
-# NOTE: `_data` was removed from `include`. Jekyll already reads it via
-# `data_dir`; forcing it into `include` also copied the raw YAML into _site,
+# NOTE: No `include` block. Jekyll already reads `_data` via `data_dir`;
+# forcing it into `include` also copied the raw YAML into _site,
 # publishing the source data alongside the rendered pages. `assets` does not
 # begin with `_` or `.`, so it is included by default and needs no entry here.
-include:
-- assets
-
 exclude:
 - node_modules
 - Gemfile
@@ -100,17 +95,17 @@ exclude:
 
 nav:
   links:
-  - title: Available Work
+    - title: Available Work
     url: /portfolio/
-  - title: Catalog
+    - title: Full Archive
     url: /catalog.html
-  - title: Buying Art
+    - title: How to Buy
     url: /buying.html
-  - title: Commissions
+    - title: Commissions
     url: /commissions.html
-  - title: About
+    - title: About
     url: /about.html
-  - title: Journal
+    - title: Journal
     url: /blog/
   cta:
     title: Contact
@@ -119,11 +114,11 @@ nav:
   # visitors, and render in the footer — the same position Portraiture and
   # Studio services already occupied when they were hardcoded in the layout.
   secondary:
-  - title: Trade & Corporate
+    - title: Trade & Corporate
     url: /trade.html
-  - title: Portraiture
+    - title: Portraiture
     url: /portraiture.html
-  - title: Studio services
+    - title: Studio services
     url: /services.html
 
 plugins:
