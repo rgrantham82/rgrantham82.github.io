@@ -206,5 +206,80 @@ ones to eyeball.
 
 ---
 
+---
+
+## Revision — November 12, 2026
+
+A second pass over the November 7 snapshot found the July fixes had only
+partly landed, and that prices had drifted into open disagreement with each
+other. Fixed in this revision:
+
+**Images — finished.** The five files the July pass never reached are now
+1600 px progressive JPEGs at q82 with real 800 px thumbs, and the four
+records whose `thumb` pointed at the master itself now point at a real
+thumbnail: Aurum Rising (19 MB → 271 KB), Black Sun (10 MB → 216 KB),
+Red Shore (850 KB → 164 KB), Judge's Dance (5.4 MB → 364 KB), Interchange
+(3.1 MB → 427 KB, and it finally has a thumb). Seven unreferenced files
+(~35 MB: three phone-photo masters, the hero PNG, the portraiture PNG
+source, two post PNGs now served as JPGs, one orphan thumb) were removed
+from the site. The originals are NOT lost — they are in the accompanying
+masters backup. Repository: 85 MB → 16 MB. The two 2026 post heroes now
+use their existing JPGs instead of the 4 MB / 3.1 MB PNGs.
+
+**Root `work-card.html` — finally deleted.** It was still in the November
+snapshot, still publishing raw Liquid.
+
+**Prices — one schedule everywhere.** The site was publishing four
+different prices for the same sizes: the September ladder in
+`_data/pricing.yml`, the `_works` front matter, the trade page's bands
+(a fifth set, as ranges), and the October 2026 catalog — plus stale
+figures in the artwork `description` meta fields ($1,250 for Aurum, $835
+for the 20×24s, $625/$555) that search engines were showing. Everything
+now follows the October 2026 catalog, the newest published schedule and
+the one the December show checklist uses: 8×10 $205, 12×12 $370, 16×20
+$825, 20×24 $1,235, 24×30 $1,855, 30×40 $3,100. The ladder, the
+`_works` prices, the meta descriptions, the trade table, and the
+December-show math in `pricing.yml` were all brought into line. The
+December show's `if_all_sell` is now $12,740 gross / $2,548 church /
+$10,192 artist on the old 12-work list — that list itself predates the
+current 7+5 arrangement and still needs Tatiana's five.
+
+**Records corrected against the catalog.** Black Sun is "Conjunction
+*of* the Black Sun", inventory RGA-CBS-2026-01 (the site said "with",
+RGA-CWBS-2026-01). Magnolia Canticle No. 1 and No. 2 had their years
+and inventory numbers swapped relative to the catalog — now MC1 is
+2025 / RGA-MC1-2025-01 and MC2 is 2026 / RGA-MC2-2026-01. Aurum Rising
+finally has its `series: Conjunctions` key, so it gets a series chip
+and kicker instead of "Featured Originals" / "Artwork". The Judge's
+Dance had a blank price and available-work copy on a sold painting —
+now marked Sold. The Lonely Pier's description said "$350. Available."
+on a sold work — now says Sold. Structured data no longer emits
+`"price": "Sold"` for sold works; the price is only emitted for
+available ones.
+
+**Sales tax, stated plainly.** The trade page now has a sales-tax row
+(8.25% in Austin added for own-use purchases; resale with a valid
+Form 01-339 on file is tax-free) and the buying page says the same in
+one sentence. The trade page also stopped claiming the December show
+is "currently exhibiting" in November — it now says opening December 8.
+A short December show notice was added to the home page.
+
+**Two broken post images — contained, not conjured.** The 2024-07-01
+featured image and the 2024-08-09 Fig. 1 are still missing from the
+repo, so the references are now commented out with TODOs saying exactly
+what to restore, instead of rendering broken frames. The work-card
+`width`/`height` now come from each record's true image dimensions
+instead of a hardcoded 800×800, and the home hero's dimensions now
+match the resized Aurum file (1280×1600). A `Gemfile` pinning
+`github-pages` was added.
+
+**Still yours to decide.** The contact form is still mailto-only (a real
+endpoint needs a Formspree/Netlify account under your email). Magnolia
+Canticle No. 4 (592×774) and Resilientia Lotus (717×1024) are still
+low-resolution next to their neighbors — re-shoot or re-export. And if
+the October catalog prices were *not* meant to supersede the September
+ladder, say so: the price alignment is the one change here that moves
+real money, and it is trivially reversible.
+
 *Robert Grantham · robertgrantham40@gmail.com · 512-200-3563*
 *rgrantham82.github.io · Instagram [@robertgranthamart](https://instagram.com/robertgranthamart)*
