@@ -74,7 +74,7 @@ Emits:
         "@type": "Offer",
         "url": {{ page.url | absolute_url | jsonify }},
         "priceCurrency": "USD",
-        {%- if page.price and page.price != blank -%}
+        {%- if page.status == 'Available' and page.price and page.price != blank -%}
         "price": {{ page.price | remove: '$' | remove: ',' | jsonify }},
         {%- endif -%}
         "availability": {% if page.status == 'Available' %}"https://schema.org/InStock"{% else %}"https://schema.org/SoldOut"{% endif %},
