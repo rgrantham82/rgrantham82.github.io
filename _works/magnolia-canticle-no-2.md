@@ -2,7 +2,7 @@
 layout: work
 title: "Magnolia Canticle, No. 2"
 subtitle: "A completed chapter in the Magnolia Canticle series."
-year: 2025
+year: 2026
 
 series: "Magnolia Canticle"
 section: "Magnolia Canticle"
@@ -14,7 +14,7 @@ price: "Sold"
 size: "16×20×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
-inventory_id: "RGA-MC2-2025-01"
+inventory_id: "RGA-MC2-2026-01"
 
 image: /assets/images/work-magnolia-canticle-no-2.jpg
 thumb: /assets/images/work-magnolia-canticle-no-2-800.jpg

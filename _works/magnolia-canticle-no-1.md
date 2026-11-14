@@ -2,7 +2,7 @@
 layout: work
 title: "Magnolia Canticle, No. 1"
 subtitle: "A Southern Gothic bloom with handwriting in the underbrush."
-year: 2026
+year: 2025
 
 series: "Magnolia Canticle"
 section: "Magnolia Canticle"
@@ -14,7 +14,7 @@ price: "Sold"
 size: "16×20×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
-inventory_id: "RGA-MC1-2026-01"
+inventory_id: "RGA-MC1-2025-01"
 
 image: /assets/images/work-magnolia1.jpg
 thumb: /assets/images/work-magnolia1-800.jpg

@@ -22,7 +22,7 @@ alt: "The Lonely Pier — square acrylic seascape in deep blues, a dark pier on 
 
 note: "Unique original. COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately. Exhibited: Northwest Hills UMC group exhibition, December 2026."
 permalink: /portfolio/the-lonely-pier/
-description: "The Lonely Pier — a 12×12×1.5 inch original acrylic seascape on canvas by Austin artist Robert Grantham. $350. Available."
+description: "The Lonely Pier — a 12×12×1.5 inch original acrylic seascape on canvas by Austin artist Robert Grantham. Sold."
 ---
 
 Almost everything in *The Lonely Pier* is blue, which is a way of saying almost everything is distance. The pier enters from the left on cross-braced legs and stops before it gets anywhere—structures like this are always promising to deliver you somewhere and never quite doing it.

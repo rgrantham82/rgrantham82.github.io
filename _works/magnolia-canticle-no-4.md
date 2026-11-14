@@ -10,8 +10,8 @@ order: 5
 featured: false
 
 status: "Available"
-price: "$800"
-price_usd: 800
+price: "$825"
+price_usd: 825
 size: "16×20×1.5 in"
 medium: "Acrylic on acrylic-primed jute canvas"
 finish: "Gamblin Gamvar Matte varnish"
@@ -26,7 +26,7 @@ alt: "Magnolia Canticle, No. 4 — abstract acrylic painting on jute with gold c
 
 note: "Unique original. Inscribed: POST TEMPESTATEM RADIX CANIT — ‘After the storm, the root sings.’ COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately."
 permalink: /portfolio/magnolia-canticle-no-4/
-description: "Magnolia Canticle, No. 4 — a 16×20×1.5 inch original acrylic painting on acrylic-primed jute canvas by Robert Grantham. $555. Available."
+description: "Magnolia Canticle, No. 4 — a 16×20×1.5 inch original acrylic painting on acrylic-primed jute canvas by Robert Grantham. $825. Available."
 ---
 
 *Magnolia Canticle, No. 4* joins painted atmosphere, the coarse physical presence of jute, and hand-lettered gold text. Its Latin inscription, *Post tempestatem radix canit*, translates as “After the storm, the root sings.”

@@ -8,11 +8,15 @@ size: "12×12×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Matte varnish"
 inventory_id: RGA-CINTCHG-2026-01
-price: "$350"
+price: "$370"
+price_usd: 370
 image: /assets/images/20260812_225004 (1) (1).jpg
+thumb: /assets/images/conjunction-at-the-interchange-800.jpg
+image_w: 1600
+image_h: 1600
 image_alt: "Conjunction at the Interchange — square abstract acrylic painting divided into four fields of black, red, oxblood, and blue, joined by a gold cross-shaped form resembling a highway interchange, with a large white-rimmed black orb on the red field, two red orbs burning inside gold coronas, and smaller dark bodies drifting through the other quadrants"
 tagline: "A stack interchange, seen from high enough up that the traffic becomes astronomy."
-description: "Conjunction at the Interchange — a 12×12 in original acrylic painting from Robert Grantham's Conjunctions series, where four color fields meet at a gold interchange. $360. Available."
+description: "Conjunction at the Interchange — a 12×12 in original acrylic painting from Robert Grantham's Conjunctions series, where four color fields meet at a gold interchange. $370. Available."
 notes: "Unique original. COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately."
 ---
 

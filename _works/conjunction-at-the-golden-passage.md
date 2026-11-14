@@ -10,8 +10,8 @@ order: 4
 featured: false
 
 status: "Available"
-price: "$800"
-price_usd: 800
+price: "$825"
+price_usd: 825
 size: "16×20×1.5 in"
 medium: "Acrylic on MiMiK recycled-PET canvas"
 finish: "Gamblin Gamvar Matte varnish"
@@ -26,7 +26,7 @@ alt: "Conjunction at the Golden Passage — vertical abstract acrylic painting w
 
 note: "Unique original. COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately."
 permalink: /portfolio/conjunction-at-the-golden-passage/
-description: "Conjunction at the Golden Passage — a 16×20×1.5 inch original acrylic painting on recycled-PET canvas from Robert Grantham's Conjunctions series. $625. Available."
+description: "Conjunction at the Golden Passage — a 16×20×1.5 inch original acrylic painting on recycled-PET canvas from Robert Grantham's Conjunctions series. $825. Available."
 ---
 
 A broad golden passage sweeps through blue spatial fields beneath a red atmospheric mass while a vertical procession of dark orb-like bodies crosses the composition. White boundary marks suggest surf, energetic contact, or the bright edge of a threshold.

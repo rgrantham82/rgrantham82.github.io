@@ -10,21 +10,20 @@ order: 1
 featured: true
 
 status: "Sold"
-price: 
-price_usd: 
-size: "12×12x1.5 in"
+price: "Sold"
+size: "12×12×1.5 in"
 medium: "Acrylic on canvas"
 finish: "Liquitex matte varnish"
 inventory_id: "RGA-TJD-2026-01"
 
 image: /assets/images/work-judges-dance.jpg
-thumb: /assets/images/work-judges-dance.jpg
+thumb: /assets/images/work-judges-dance-800.jpg
 og_image: "/assets/images/work-judges-dance.jpg"
 image_w: 1600
 image_h: 1600
 alt: "The Judge's Dance — square abstract acrylic painting with concentric orange and gold rings on red and blue, a pale central orb, seven dark orbiting bodies including one split half-black and half-white, and a row of black silhouetted dancing figures along a dark arc at the base"
 
-note: "Unique original. COA included. Price includes Austin delivery and hanging. Three-payment plan available. Shipping quoted separately."
+note: "Sold. COA included. Commissions in a related scale and palette are available."
 permalink: /portfolio/the-judges-dance/
 description: "The Judge's Dance — a 12×12 inch original acrylic painting from Robert Grantham's Conjunctions series, an abstract response to Cormac McCarthy's Blood Meridian."
 ---
