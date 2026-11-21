@@ -12,17 +12,6 @@ tags:
 - civic engagement
 - SAVE America Act
 ---
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WZFJ98W4K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7WZFJ98W4K');
-</script>
-
 ![SAVE America Act voter restriction illustration](/assets/images/posts/2026-03-14-save-america-act.jpg)
 As of this writing, the SAVE America Act is being pushed as a defense of election integrity. That is the sales pitch. The reality is far less noble. This bill is not really about solving a widespread crisis. It is about using the language of citizenship and security to justify new barriers for lawful voters and to reshape the electorate in a way that benefits a particular political agenda.
 
