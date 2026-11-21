@@ -34,15 +34,27 @@ Composition makes the difference most visible. In a strong piece, the eye moves 
 
 In weak abstraction, that structure is missing. Everything is equally loud, which is another way of saying nothing matters. Or everything is equally timid, which is visual beige in a more expensive outfit. There is no rhythm, no hierarchy, no sense that one area needs another. The painting can look busy without being rich. Activity is not depth. A traffic jam is active. That does not make it a symphony.
 
+[Diptych comparing strong and weak abstract composition, left panel with a dominant dark form and clear hierarchy, right panel cluttered and equally loud](/assets/images/posts/2026-03-12-abstract-composition.webp)
+
+*Left: strong composition gives the eye hierarchy and movement. Right: weak composition stays busy without becoming rich.*
+
 ### Color
 
 Color is another clear tell. In strong abstract art, color is not merely chosen. It is organized. Hue, value, saturation, temperature, and contrast work together to create pressure and meaning. A red beside black behaves differently than a red interrupted by chalky grey or cooled by a blue green field. These are not cosmetic decisions. They shape the emotional and structural force of the work.
 
 In poor abstraction, color often feels impulsive or decorative. It is picked because it looks dramatic, fashionable, or pleasing on its own, not because it belongs to the larger logic of the painting. A metallic accent or high contrast scheme may grab attention quickly, but if the color relationships have no deeper structure, the effect wears off fast. The painting seduces at ten feet and collapses at two.
 
+[Diptych comparing strong and weak abstract color, left panel with organized ultramarine, ochre and red relationships, right panel with disconnected neon and metallic splashes](/assets/images/posts/2026-03-12-abstract-color.webp)
+
+*Left: organized color creates pressure and depth. Right: impulsive color seduces at ten feet and collapses at two.*
+
 ### Mark-Making
 
 Mark-making matters just as much. Good marks carry consequence. They show pressure, speed, hesitation, force, revision, or restraint. They feel necessary to the painting. Weak marks often feel borrowed, gestures performed because they look expressive, not because they are needed. There is a world of difference between a mark that reveals thought and a mark that merely advertises "artist at work."
+
+[Diptych comparing strong and weak abstract mark-making, left panel with varied pressure, dragging and revision, right panel with repetitive generic scribbles and splatter](/assets/images/posts/2026-03-12-abstract-mark-making.webp)
+
+*Left: good marks reveal thought. Right: borrowed marks only advertise effort.*
 
 ### Surface
 
@@ -51,6 +63,10 @@ Surface is equally important. Abstract painting lives and dies on material intel
 ### Editing
 
 Then there is editing, where many paintings either mature or perish. Strong abstract work is edited. That does not always mean simplified. It means the artist has decided what deserves to stay, what should be buried, what must be sharpened, and what needs to be sacrificed. Weak work often preserves too much. Every gesture remains because the artist is afraid to lose evidence of effort. But effort is not the same as resolution. A painting improves when unnecessary moves are removed, not when every impulse is embalmed for public viewing.
+
+[Diptych comparing strong and weak abstract surface and editing, left panel with thick impasto, thin veils and exposed ground, right panel muddy, uniform and overworked](/assets/images/posts/2026-03-12-abstract-surface-editing.webp)
+
+*Left: strong work is edited and materially specific. Right: weak work preserves too much and resolves too little.*
 
 ### Spontaneity and Discernment
 
