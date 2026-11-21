@@ -1,26 +1,162 @@
-{% assign status_label = work.status %}
-{% if work.status == 'Sold' %}{% assign status_label = 'Collected' %}{% endif %}
-<article class="work-card">
-  <a class="work-card__link" href="{{ work.url | relative_url }}">
+{%- assign work = include.work -%}
+{%- assign status_slug = work.status | default: 'archive' | slugify -%}
+{%- assign series_name = work.series | default: work.section | default: 'Other work' -%}
+{%- assign series_slug = series_name | slugify -%}
+
+{%- comment -%}
+  PRICE: Front matter should store a plain number, e.g. price: 1545
+  Not price: "$1,545". This lets us format it for display AND
+  pass a clean number to Offer schema.
+{%- endcomment -%}
+{%- assign price_number = work.price | remove: '$' | remove: ',' | strip -%}
+{%- assign is_available = false -%}
+{%- if work.status == 'Available' -%}{%- assign is_available = true -%}{%- endif -%}
+{%- assign has_price = false -%}
+{%- if price_number != blank and price_number != '0' -%}{%- assign has_price = true -%}{%- endif -%}
+
+{%- comment -%}
+  DIMENSIONS: Prefer structured fields, fall back to a single string.
+  Front matter ideal:
+    width: 24
+    height: 30
+    depth: 1.5
+  Fallback:
+    size: "24 × 30 × 1.5 in"
+    dimensions: "24 × 30 × 1.5 in"
+  Never parse "24x30x1.5" in Liquid — it is too fragile.
+{%- endcomment -%}
+{%- capture dimensions_display -%}
+  {%- if work.width and work.height -%}
+    {{ work.width }} × {{ work.height }}{%- if work.depth %} × {{ work.depth }}{%- endif %} in
+  {%- elsif work.dimensions -%}
+    {{ work.dimensions }}
+  {%- elsif work.size -%}
+    {{ work.size }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- assign dimensions_display = dimensions_display | strip -%}
+
+{%- comment -%}
+  ALT: Descriptive, not just the title. Front matter alt wins when
+  it exists. Otherwise build: Title — medium, dimensions.
+  Example: "Aurum Rising — acrylic on canvas, 24 × 30 × 1.5 in"
+{%- endcomment -%}
+{%- capture alt_fallback -%}
+  {{ work.title }}{%- if work.medium or dimensions_display != blank %} — {%- endif -%}
+  {%- if work.medium %}{{ work.medium }}{%- endif -%}
+  {%- if work.medium and dimensions_display != blank %}, {% endif -%}
+  {{- dimensions_display -}}
+{%- endcapture -%}
+{%- assign alt_text = work.alt | default: alt_fallback | strip -%}
+
+{%- comment -%}
+  AVAILABILITY for schema. Only Available = InStock.
+  Everything else is NOT offered for sale in the card.
+{%- endcomment -%}
+{%- assign availability_url = 'https://schema.org/OutOfStock' -%}
+{%- if is_available -%}{%- assign availability_url = 'https://schema.org/InStock' -%}
+{%- elsif status_slug contains 'sold' -%}{%- assign availability_url = 'https://schema.org/SoldOut' -%}{%- endif -%}
+
+<article class="work-card"
+         data-gallery-card
+         data-status="{{ status_slug }}"
+         data-series="{{ series_slug }}"
+         itemscope
+         itemtype="https://schema.org/VisualArtwork">
+  <a class="work-card__link" href="{{ work.url | relative_url }}" aria-label="View details for {{ work.title | escape }}">
     <div class="work-card__media">
-      {% if work.image %}
-        <img src="{{ work.image | relative_url }}" alt="{{ work.alt | default: work.title | escape }}" loading="lazy" decoding="async">
-      {% else %}
-        <div class="work-card__placeholder">Image pending</div>
-      {% endif %}
-      {% if work.status %}<span class="badge badge--status badge--{{ work.status | downcase | replace: ' ', '-' }}">{{ status_label }}</span>{% endif %}
+      {%- if work.image -%}
+        <img src="{{ work.thumb | default: work.image | relative_url }}"
+             {%- if work.thumb %}
+             srcset="{{ work.thumb | relative_url }} 800w, {{ work.image | relative_url }} 1600w"
+             sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 380px"
+             {%- endif %}
+             alt="{{ alt_text | escape }}"
+             {%- if work.image_w and work.image_h %}
+             width="{{ work.image_w }}" height="{{ work.image_h }}"
+             {%- endif %}
+             loading="lazy"
+             decoding="async"
+             itemprop="image">
+      {%- else -%}
+        <div class="work-card__placeholder" role="img" aria-label="Photograph pending for {{ work.title | escape }}">
+          <span>Artwork photograph pending</span>
+        </div>
+      {%- endif -%}
+
+      {%- if work.status -%}
+        <span class="badge badge--status badge--{{ status_slug }}">{{ work.status }}</span>
+      {%- endif -%}
+      {%- if work.featured -%}
+        <span class="badge badge--featured">Featured</span>
+      {%- endif -%}
     </div>
 
     <div class="work-card__body">
-      <h3 class="work-card__title">{{ work.title }}</h3>
-      {% if work.series %}<p class="work-card__series">{{ work.series }}</p>{% endif %}
-      {% if work.size or work.medium %}
+      <p class="work-card__series">{{ series_name }}</p>
+      <h3 class="work-card__title" itemprop="name">{{ work.title }}</h3>
+      {%- if dimensions_display != blank or work.medium -%}
         <p class="work-card__meta">
-          {% if work.size %}{{ work.size }}{% endif %}{% if work.size and work.medium %} · {% endif %}{% if work.medium %}{{ work.medium }}{% endif %}
+          {%- if dimensions_display != blank %}{{ dimensions_display }}{%- endif -%}
+          {%- if dimensions_display != blank and work.medium -%} · {%- endif -%}
+          {%- if work.medium -%}<span itemprop="artMedium">{{ work.medium }}</span>{%- endif -%}
         </p>
-      {% endif %}
-      {% if work.price and work.price != blank %}<p class="work-card__price">{{ work.price }}</p>{% endif %}
-      {% if work.subtitle %}<p class="work-card__desc">{{ work.subtitle }}</p>{% endif %}
+      {%- endif -%}
+
+      {%- comment -%}
+        PRICING DISPLAY: Only show a price when Available.
+        Sold / Private Collection / Archive never shows a price here.
+        That also stops the old bug where sold work leaked its price.
+      {%- endcomment -%}
+      {%- if is_available -%}
+        <p class="work-card__price">
+          {%- if has_price -%}${{ price_number }}{%- else -%}Price on request{%- endif -%}
+        </p>
+      {%- endif -%}
+
+      {%- if work.subtitle -%}<p class="work-card__desc">{{ work.subtitle }}</p>{%- endif -%}
+      <span class="work-card__cta">View artwork details <span aria-hidden="true">→</span></span>
     </div>
   </a>
+
+  {%- comment -%}
+    OFFER SCHEMA: Only emit when Available AND a numeric price exists.
+    No Offer for sold, private-collection, archive, or price-on-request
+    work. That keeps Google from showing "InStock" for a sold painting.
+  {%- endcomment -%}
+  {%- if is_available and has_price -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": {{ work.title | jsonify }},
+    "url": {{ work.url | absolute_url | jsonify }},
+    {%- if work.image %}
+    "image": {{ work.image | absolute_url | jsonify }},
+    {%- endif %}
+    {%- if work.medium %}
+    "artMedium": {{ work.medium | jsonify }},
+    "artform": "Painting",
+    {%- endif %}
+    {%- if work.width %}
+    "width": { "@type": "QuantitativeValue", "value": {{ work.width | jsonify }}, "unitCode": "INH" },
+    {%- endif %}
+    {%- if work.height %}
+    "height": { "@type": "QuantitativeValue", "value": {{ work.height | jsonify }}, "unitCode": "INH" },
+    {%- endif %}
+    {%- if work.depth %}
+    "depth": { "@type": "QuantitativeValue", "value": {{ work.depth | jsonify }}, "unitCode": "INH" },
+    {%- endif %}
+    "creator": { "@type": "Person", "name": "Robert Grantham" },
+    "offers": {
+      "@type": "Offer",
+      "price": {{ price_number | jsonify }},
+      "priceCurrency": "USD",
+      "availability": {{ availability_url | jsonify }},
+      "itemCondition": "https://schema.org/NewCondition",
+      "url": {{ work.url | absolute_url | jsonify }}
+    }
+  }
+  </script>
+  {%- endif -%}
 </article>
